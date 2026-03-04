@@ -1,0 +1,47 @@
+# [H5接入智能填充](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/scenario-fusion-h5)
+
+## 目录
+- [前提条件](#section156723761717)
+- [效果图](#section37300202917)
+- [示例代码](#section10674933162711)
+
+本章节介绍在ArkWeb的Web组件加载H5文件如何实现智能填充功能。
+
+ 
+## 前提条件
+- 设备智能填充开关必须处于打开状态，请前往“设置 > 隐私和安全 > 智能填充”页面开启开关。
+- 设备已连接互联网并且登录华为账号。
+- 该应用需已接入[智能填充服务](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/scenario-fusion-introduction-to-smart-fill#section1167564853816)。
+
+ 
+## 效果图
+
+ 
+## 示例代码
+- 通过ArkWeb的[Web组件](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web)加载H5文件。
+
+ 收起自动换行深色代码主题复制
+```
+import { webview } from '@kit.ArkWeb';
+@Entry@Componentstruct Index { controller: webview.WebviewController = new webview.WebviewController(); build() { Column() { // 在组件创建过程中加载HTML5文件。 Web({ src: $rawfile("autofill_h5.html"), controller: this.controller }) } }}
+```
+ - autofill_h5.html如下所示。其中通过给form表单的input输入框（form表单的子节点）配置[autocomplete](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/scenario-fusion-mappingrelationship#section4813203065916)属性来支持智能填充，action需要配置表单提交接口链接，当form表单提交后，页面导航发生变化时，满足历史表单输入保存的条件时会触发对应弹窗。参考下面示例：
+
+ 收起自动换行深色代码主题复制
+```
+ 智能填充H5测试
+#### 智能填充H5测试
+ 昵称: 
+
+ 姓名: 
+
+ 手机号: 
+
+ 邮箱: 
+
+ 身份证号: 
+
+ 带街道地址: 
+
+ 提交 
+```

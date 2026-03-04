@@ -1,0 +1,37 @@
+# [GetOriginShape](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tensordesc-getoriginshape)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083777294_section104864mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083777294_section104867mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083777294_section104871mcpsimp)
+- [返回值](#zh-cn_topic_0000002083777294_section104874mcpsimp)
+- [异常处理](#zh-cn_topic_0000002083777294_section104899mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083777294_section104902mcpsimp)
+
+## 函数功能
+获取TensorDesc所描述Tensor的原始Shape。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+Shape GetOriginShape() const;
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| Shape | TensorDesc描述的originShape。 |
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

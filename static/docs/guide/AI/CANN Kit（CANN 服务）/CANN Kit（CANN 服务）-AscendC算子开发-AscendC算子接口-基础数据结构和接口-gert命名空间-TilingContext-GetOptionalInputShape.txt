@@ -1,0 +1,42 @@
+# [GetOptionalInputShape](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getoptionalinputshape)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119177181_section94743mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119177181_section94746mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119177181_section94750mcpsimp)
+- [返回值](#zh-cn_topic_0000002119177181_section94773mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119177181_section94778mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119177181_section94781mcpsimp)
+
+## 函数功能
+根据算子原型定义中的输入索引获取对应的可选输入shape指针。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+const StorageShape *GetOptionalInputShape(const size_t ir_index) const;
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| ir_index | 输入 | 算子IR原型定义中的输入索引，从0开始计数。 |
+
+ 
+## 返回值
+指定的输入shape指针，shape中包含了原始shape与运行时shape。关于StorageShape类型的定义，请参见[StorageShape](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-storageshape-introduction)。
+
+ 当输入ir_index非法，或该INPUT没有实例化时，返回空指针。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+ge::graphStatus Tiling4ConcatD(TilingContext* context) { const StorageShape *shape_bias = context->GetOptionalInputShape(kBatchMatMulBiasIdx); // ... }
+```

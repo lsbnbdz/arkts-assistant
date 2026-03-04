@@ -1,0 +1,37 @@
+# [GetSize](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tensor-getsize)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083776490_section106173mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083776490_section106176mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083776490_section106180mcpsimp)
+- [返回值](#zh-cn_topic_0000002083776490_section106183mcpsimp)
+- [异常处理](#zh-cn_topic_0000002083776490_section106206mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083776490_section106209mcpsimp)
+
+## 函数功能
+获取Tensor中的数据的大小。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+size_t GetSize() const;
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| size_t | Tensor中存放的数据的大小，单位为字节。 |
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

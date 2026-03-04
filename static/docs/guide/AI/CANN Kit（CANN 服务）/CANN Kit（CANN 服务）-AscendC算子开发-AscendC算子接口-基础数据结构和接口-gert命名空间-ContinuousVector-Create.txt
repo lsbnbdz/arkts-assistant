@@ -1,0 +1,42 @@
+# [Create](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-continuousvector-create)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083617346_section88941mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083617346_section88944mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083617346_section88950mcpsimp)
+- [返回值](#zh-cn_topic_0000002083617346_section88987mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083617346_section88990mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083617346_section88993mcpsimp)
+
+## 函数功能
+创建一个ContinuousVector实例，ContinuousVector不支持动态扩容。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+template static std::unique_ptr Create(size_t capacity, size_t &total_size)template static std::unique_ptr Create(const size_t capacity)
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| T | 输入 | 实例中包含的元素类型。 |
+| capacity | 输入 | 实例的最大容量。 |
+| total_size | 输出 | 本实例的总长度。 |
+
+ 
+## 返回值
+指向本实例的指针。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+size_t capacity = 100U; auto cv_holder = ContinuousVector::Create(capacity); // 创建了一个可以存放100个int64_t数据的内存。
+```

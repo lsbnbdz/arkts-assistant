@@ -1,0 +1,66 @@
+# [PipeBarrier(ISASI)](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-pipebarrier)
+
+## 目录
+- [功能说明](#section8129154714436)
+- [函数原型](#section284055474417)
+- [参数说明](#section16571144205020)
+- [返回值](#section1162611384511)
+- [支持的型号](#section1742420195112)
+- [注意事项](#section59511612165120)
+- [约束说明](#section10366101775216)
+- [调用示例](#section174889430512)
+
+## 功能说明
+阻塞相同流水，具有数据依赖的相同流水之间需要插入此同步。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+template __aicore__ inline void PipeBarrier()
+```
+ 
+## 参数说明
+ **表1**模板参数说明展开
+| 参数名 | 描述 |
+| --- | --- |
+| pipe | 模板参数，表示阻塞的流水类别。 支持的流水参考表2。 如果不关注流水类别，希望阻塞所有流水，可以传入PIPE_ALL。 |
+
+ **表2**指令流水类型和相关说明展开
+| 流水类型 | 含义 |
+| --- | --- |
+| PIPE_S | 标量流水线，使用Tensor GetValue函数时为此流水 |
+| PIPE_M | 矩阵计算流水 |
+| PIPE_MTE1 | L1->L0A、L1->L0B数据搬运流水 |
+| PIPE_MTE2 | GM->L1、GM->L0A、GM->L0B、GM->UB数据搬运流水 |
+| PIPE_MTE3 | UB->GM、UB->L1数据搬运流水 |
+| PIPE_FIX | L0C->GM、L0C->L1数据搬运流水 |
+
+ 
+## 返回值
+无
+
+ 
+## 支持的型号
+KirinX90系列处理器
+
+ 
+## 注意事项
+无
+
+ 
+## 约束说明
+Scalar流水之间的同步由硬件自动保证，调用PipeBarrier<PIPE_S>()会引发硬件错误。
+
+ 
+## 调用示例
+如下示例，Mul指令的输入dst0Local是Add指令的输出，两个矢量运算指令产生依赖，需要插入PipeBarrier保证两条指令的执行顺序。
+
+ 注：仅作为示例参考，开启自动同步的情况下，编译器自动插入PIPE_V同步，无需开发者手动插入。
+
+ **图1**Mul指令和Add指令是串行关系，必须等待Add指令执行完成后，才能执行Mul指令。
+ 收起自动换行深色代码主题复制
+```
+AscendC::LocalTensor src0Local;AscendC::LocalTensor src1Local;AscendC::LocalTensor src2Local;AscendC::LocalTensor dst0Local;AscendC::LocalTensor dst1Local;
+AscendC::Add(dst0Local, src0Local, src1Local, 512);AscendC::PipeBarrier();AscendC::Mul(dst1Local, dst0Local, src2Local, 512);
+```

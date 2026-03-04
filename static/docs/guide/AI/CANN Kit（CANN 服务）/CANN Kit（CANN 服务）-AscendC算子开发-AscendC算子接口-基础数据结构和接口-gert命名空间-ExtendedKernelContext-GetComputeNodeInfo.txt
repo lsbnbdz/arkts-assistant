@@ -1,0 +1,41 @@
+# [GetComputeNodeInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getcomputenodeinfo)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119256553_section89916mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119256553_section89920mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119256553_section89924mcpsimp)
+- [返回值](#zh-cn_topic_0000002119256553_section89927mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119256553_section89932mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119256553_section89935mcpsimp)
+
+## 函数功能
+获取本kernel对应的计算节点的信息。
+
+ 图执行时本质上是执行图上的一个个结点的kernel在执行。本方法能够从KernelContext中获取保存的ComputeNodeInfo，而ComputeNodeInfo中包含InputDesc等信息。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+const ComputeNodeInfo *GetComputeNodeInfo() const
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+计算节点的信息。
+
+ 关于ComputeNodeInfo的定义，请参见[ComputeNodeInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-computenodeinfo-introduction)。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+// 假设已存在KernelContext *context auto extend_context = reinterpret_cast(context); auto compute_node_info = extend_context->GetComputeNodeInfo();
+```

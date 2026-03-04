@@ -1,0 +1,20 @@
+# [IPCKit](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-ipckit)
+
+## 目录
+- [概述](#概述)
+- [文件汇总](#文件汇总)
+
+## 概述
+PhonePC/2in1TabletTVWearableIPC头文件包含入口，方便开发者引用。
+
+ **系统能力：** SystemCapability.Communication.IPC.Core
+
+ **起始版本：** 12
+
+ 
+## 文件汇总
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| ipc_kit.h | IPC头文件包含入口，方便开发者引用。 |

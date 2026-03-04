@@ -1,0 +1,22 @@
+# [日志中频繁打印BusinessError: The Worker instance is not running, maybe worker is terminated when PostMessage错误信息，应该如何排查？](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/graphics-accelerate-launch-faq-5)
+
+频繁打印该错误信息的原因是**Worker线程崩溃**。
+
+ 开发者可以查找类似如下worker.onerror日志的报错信息。
+
+ 收起自动换行深色代码主题复制
+```
+TuanjieMainWorker Error TypeError: undefined is not callable entry|entry|1.0.0|src/main/ets/workers/TuanjieMainWorkerHandler.ts
+```
+ 
+
+ 根据worker.onerror日志，排查是否会同时出现如下现象：
+
+ - 在onDestroy生命周期中销毁三方SDK
+- 在三方SDK销毁后继续向Worker线程发送消息
+- 在处理消息过程中还继续使用三方SDK，且没有处理异常
+
+ 秒级启动后再上滑移除游戏App，游戏不会销毁Worker线程和团结引擎，但若同时出现上述现象就会导致Worker线程崩溃，最终导致日志中频繁打印如下错误信息：收起自动换行深色代码主题复制
+```
+BusinessError: The Worker instance is not running, maybe worker is terminated when PostMessage
+```

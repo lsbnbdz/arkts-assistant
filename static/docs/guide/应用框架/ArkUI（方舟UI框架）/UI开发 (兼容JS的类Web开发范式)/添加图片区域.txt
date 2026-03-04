@@ -1,0 +1,16 @@
+添加图片区域通常用[image](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-components-basic-image)组件来实现，使用的方法和text组件类似。
+
+    图片资源建议放在js\default\common目录下，common目录需自行创建，详细的目录结构见[目录结构](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/js-framework-file#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84)。代码示例如下：
+
+    收起自动换行深色代码主题复制
+```
+<!-- xxx.hml --><image class="img" src="{{middleImage}}"></image>
+```
+    收起自动换行深色代码主题复制
+```
+/* xxx.css */.img {    margin-top: 30px;  margin-bottom: 30px;  height: 385px;}
+```
+    收起自动换行深色代码主题复制
+```
+// xxx.jsexport default {  data: {    middleImage: '/common/ice.png',  },}
+```

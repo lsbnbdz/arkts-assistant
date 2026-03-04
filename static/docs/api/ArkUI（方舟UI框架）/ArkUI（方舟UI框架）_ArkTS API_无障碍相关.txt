@@ -1,0 +1,1 @@
+[无障碍控制操作](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-universal-accessibility-event)  [无障碍悬浮事件](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-universal-accessibility-hover-event)

@@ -1,0 +1,4 @@
+# [结构体](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/background-tasks-struct)
+
+- **[TransientTask_DelaySuspendInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-transienttask-transienttask-delaysuspendinfo)**
+ - **[TransientTask_TransientTaskInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-transienttask-transienttask-transienttaskinfo)**

@@ -1,0 +1,35 @@
+# [GetDynamicInputDesc](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getdynamicinputdesc)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119257085_section89643mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119257085_section89646mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119257085_section89650mcpsimp)
+- [返回值](#zh-cn_topic_0000002119257085_section89680mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119257085_section89685mcpsimp)
+
+## 函数功能
+根据算子原型定义中的输入索引获取对应动态输入的tensor描述信息。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+const CompileTimeTensorDesc *GetDynamicInputDesc(const size_t ir_index, const size_t relative_index) const
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| ir_index | 输入 | 算子IR原型定义中的输入索引，从0开始计数。 |
+| relative_index | 输入 | 该输入实例化后的相对index，例如某个DYNAMIC_INPUT实例化了3个输入，那么relative_index的有效范围是[0,2]。 |
+
+ 
+## 返回值
+CompileTimeTensorDesc指针，index或relative_index非法时，返回空指针。
+
+ 关于CompileTimeTensorDesc的定义，请参见[CompileTimeTensorDesc](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-compiletimetensordesc)。
+
+ 
+## 约束说明
+无

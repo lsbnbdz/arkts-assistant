@@ -1,0 +1,37 @@
+# [GetAddr](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tensor-getaddr)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119176529_section93820mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119176529_section93823mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119176529_section93829mcpsimp)
+- [返回值](#zh-cn_topic_0000002119176529_section93832mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119176529_section93835mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119176529_section93838mcpsimp)
+
+## 函数功能
+获取Tensor的数据地址。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+const void *GetAddr() constvoid *GetAddr()
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+返回数据地址。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+Tensor tensor{{{8, 3, 224, 224}, {16, 3, 224, 224}}, // shape {ge::FORMAT_ND, ge::FORMAT_FRACTAL_NZ, {}}, // format kFollowing, // placement ge::DT_FLOAT16, // dt nullptr}; auto addr = tensor.GetAddr();
+```

@@ -1,0 +1,119 @@
+## 目录
+- [直接导入](#直接导入)
+  - [具名导入](#具名导入)
+  - [默认导入](#默认导入)
+  - [命名空间导入](#命名空间导入)
+- [间接导入](#间接导入)
+  - [转为具名变量导出再导入](#转为具名变量导出再导入)
+  - [转为命名空间导出再导入](#转为命名空间导出再导入)
+- [动态导入](#动态导入)
+  - [直接导入](#直接导入-1)
+  - [间接导入](#间接导入-1)
+
+在ES6(ECMAScript 6.0)模块设计中，使用import语法加载其他文件导出的内容是ECMA规范所定义的语法规则。为支持开发者使用该功能导入Native模块（so）导出的内容，ArkTS进行了相关适配，并提供了以下几种支持写法。
+
+## 直接导入
+在Native模块的index.d.ts文件中导出，并在文件内直接导入。
+
+### 具名导入
+收起自动换行深色代码主题复制
+```
+// libentry.so对应的index.d.tsexport const add: (a: number, b: number) => number;
+```
+ 收起自动换行深色代码主题复制
+```
+// test.etsimport { add } from 'libentry.so'add(2, 3);
+```
+   
+### 默认导入
+收起自动换行深色代码主题复制
+```
+// libentry.so对应的index.d.tsexport const add: (a: number, b: number) => number;
+```
+ 收起自动换行深色代码主题复制
+```
+// test.etsimport entry from 'libentry.so'entry.add(2, 3);
+```
+   
+### 命名空间导入
+收起自动换行深色代码主题复制
+```
+// libentry.so对应的index.d.tsexport const add: (a: number, b: number) => number;
+```
+ 收起自动换行深色代码主题复制
+```
+// test.etsimport * as entry from 'libentry.so'entry.add(2, 3);
+```
+   
+## 间接导入
+  
+### 转为具名变量导出再导入
+收起自动换行深色代码主题复制
+```
+// libentry.so对应的index.d.tsexport const add: (a: number, b: number) => number;
+```
+ 收起自动换行深色代码主题复制
+```
+// test1.ets// 将libentry.so的API封装后导出import { add } from 'libentry.so';export { add };
+```
+ 收起自动换行深色代码主题复制
+```
+// test2.ets// 从中间模块导入APIimport { add } from './test1';const result = add(2, 3);
+```
+   
+### 转为命名空间导出再导入
+收起自动换行深色代码主题复制
+```
+// libentry.so对应的index.d.tsexport const add: (a: number, b: number) => number;
+```
+ 收起自动换行深色代码主题复制
+```
+// test1.etsexport * from 'libentry.so'
+```
+ 收起自动换行深色代码主题复制
+```
+// test2.etsimport { add } from './test1'add(2, 3);
+```
+ 注意 不支持Native模块导出和导入同时使用命名空间。
+
+   反例：
+
+ 收起自动换行深色代码主题复制
+```
+// test1.etsexport * from 'libentry.so'
+```
+ 收起自动换行深色代码主题复制
+```
+// test2.etsimport * as add from './test1'// 无法获取add对象
+```
+   
+## 动态导入
+  
+### 直接导入
+收起自动换行深色代码主题复制
+```
+// libentry.so对应的index.d.tsexport const add: (a: number, b: number) => number;
+```
+ 收起自动换行深色代码主题复制
+```
+// test.etsimport('libentry.so').then((entry:ESObject) => {    entry.default.add(2, 3);})
+```
+   
+### 间接导入
+收起自动换行深色代码主题复制
+```
+// test1.etsimport entry from 'libentry.so'export { entry }
+// test2.etsimport('./test1').then((ns:ESObject) => {    ns.entry.add(2, 3);})
+```
+ 注意 不支持动态加载时，导出文件使用命名空间。
+
+   反例：
+
+ 收起自动换行深色代码主题复制
+```
+// test1.etsexport * from 'libentry.so'
+```
+ 收起自动换行深色代码主题复制
+```
+// test2.etsimport('./test1').then((ns:ESObject) => {    // 无法获取ns对象})
+```

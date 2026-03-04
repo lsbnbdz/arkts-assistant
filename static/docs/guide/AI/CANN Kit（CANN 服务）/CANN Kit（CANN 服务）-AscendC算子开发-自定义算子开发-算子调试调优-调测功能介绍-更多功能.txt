@@ -1,0 +1,7 @@
+# [更多功能](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-more-functions)
+
+- **[printf/PRINTF功能](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-commissioning-function-printf)**
+ - **[DumpTensor功能](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-commissioning-function-dumptensor)**
+ - **[DumpAccChkPoint功能](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-commissioning-function-dumpaccchkpoint)**
+ - **[assert功能](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-commissioning-function-assert)**
+ - **[gdb调试](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-gdb)**

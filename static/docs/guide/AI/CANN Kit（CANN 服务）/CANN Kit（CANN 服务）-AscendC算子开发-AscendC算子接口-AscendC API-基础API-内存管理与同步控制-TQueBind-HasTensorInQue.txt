@@ -1,0 +1,45 @@
+# [HasTensorInQue](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-hastensorinque)
+
+## 目录
+- [功能说明](#zh-cn_topic_0000002127521045_section28078mcpsimp)
+- [函数原型](#zh-cn_topic_0000002127521045_section28081mcpsimp)
+- [参数说明](#zh-cn_topic_0000002127521045_section28084mcpsimp)
+- [支持的型号](#zh-cn_topic_0000002127521045_section28087mcpsimp)
+- [注意事项](#zh-cn_topic_0000002127521045_section28095mcpsimp)
+- [返回值](#zh-cn_topic_0000002127521045_section28098mcpsimp)
+- [调用示例](#zh-cn_topic_0000002127521045_section28103mcpsimp)
+
+## 功能说明
+查询队列中目前是否已有入队的Tensor。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+__aicore__ inline bool HasTensorInQue()
+```
+ 
+## 参数说明
+无
+
+ 
+## 支持的型号
+Kirin9020系列处理器
+
+ KirinX90系列处理器
+
+ 
+## 注意事项
+无
+
+ 
+## 返回值
+- true：表示Queue中存在已入队的Tensor。
+- false：表示Queue为完全空闲。
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+// 根据HasTensorInQue判断当前Queue中是否有已入队的Tensor，当前Queue的深度为4，无内存EnQue动作，返回为false AscendC::TPipe pipe; AscendC::TQueBind que; int num = 4; int len = 1024; pipe.InitBuffer(que, num, len); bool ret = que.HasTensorInQue();
+```

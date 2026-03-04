@@ -1,0 +1,40 @@
+# [VerifyAllAttr](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-verifyallattr)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083616642_section102122mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083616642_section102125mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083616642_section102129mcpsimp)
+- [返回值](#zh-cn_topic_0000002083616642_section102153mcpsimp)
+- [异常处理](#zh-cn_topic_0000002083616642_section102176mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083616642_section102179mcpsimp)
+
+## 函数功能
+根据disableCommonVerifier值，校验Operator中的属性是否有效，校验Operator的输入输出是否有效。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+graphStatus VerifyAllAttr(bool disable_common_verifier = false);
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| disable_common_verifier | 输入 | 当false时，只校验属性有效性，当true时，增加校验Operator所有输入输出有效性。 默认值为false。 |
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| graphStatus | 推导成功，返回GRAPH_SUCCESS，否则，返回GRAPH_FAILED。 |
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

@@ -1,0 +1,46 @@
+# [跑步](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/health-running)
+
+## 目录
+- [关联的统计数据说明](#section14722145315514)
+- [关联的明细数据说明](#section18343416165212)
+
+跑步相关锻炼记录类型如下：
+
+ 展开
+| 锻炼记录子类型常量 | 描述 | 数据来源 |
+| --- | --- | --- |
+| exerciseSequenceHelper.running.EXERCISE_TYPE | 户外跑步 | 手机、手表、手环 |
+| exerciseSequenceHelper.indoorRunning.EXERCISE_TYPE | 室内跑步/跑步机 | 手机、手表、手环 |
+| exerciseSequenceHelper.trailRunning.EXERCISE_TYPE | 越野跑 | 手机、手表、手环 |
+
+ 
+## 关联的统计数据说明
+ - 字段定义：[exerciseSequenceHelper.running.SummaryFields](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-exercisedequencehelper#section526104111405)
+ 
+ 展开
+| 字段列表 | 描述 | 类型 | 可选/必选 |
+| --- | --- | --- | --- |
+| distance | 距离统计 | DistanceSummary | M |
+| calorie | 热量统计 | CalorieSummary | M |
+| speed | 速度统计 | SpeedSummary | M |
+| exerciseHeartRate | 运动心率统计 | ExerciseHeartRateSummary | O |
+| step | 步数统计 | StepSummary | O |
+| cadence | 步频统计 | CadenceSummary | O |
+| altitude | 海拔统计 | AltitudeSummary | O |
+| location | 位置统计 | LocationSummary | O |
+| runningForm | 跑姿统计 | RunningFormSummary | O |
+| runningFeature | 跑步特征数据 | RunningFeature | O |
+
+ 
+## 关联的明细数据说明
+ - 字段定义：[exerciseSequenceHelper.running.DetailFields](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-exercisedequencehelper#section9261114111400)
+ 
+ 展开
+| 字段列表 | 描述 | 类型 | 可选/必选 |
+| --- | --- | --- | --- |
+| exerciseHeartRate | 运动心率详情 | ExerciseHeartRate[] | O |
+| speed | 速度详情 | Speed[] | O |
+| cadence | 步频详情 | Cadence[] | O |
+| runningForm | 跑姿详情 | RunningForm[] | O |
+| location | 位置详情 | Location[] | O |
+| altitude | 海拔详情 | Altitude[] | O |

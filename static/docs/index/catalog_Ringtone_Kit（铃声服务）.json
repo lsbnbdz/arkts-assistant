@@ -1,0 +1,103 @@
+{
+  "ringtone-kit": {
+    "title": "设置铃声",
+    "headings": [
+      "设置铃声"
+    ],
+    "preview": "设置铃声 1. 导入ringtone模块和相关公共模块。 收起自动换行深色代码主题复制 2. 调用ringtone.getSupportedRingtoneTypes接口，查询支持设置的铃声类型。 收起自动换行深色代码主题复制 3. 调用ringtone.getSupportedDataTypes接口，查询支持的数据类型。当前支持格式：MP3，OGG，FLAC，AAC，MP2，M4A。 收起自动换行深色代码主题复制 4. 调用ringtone.startRingtoneSetting接口拉起设置弹窗，用户设置铃声后返回设置的铃声类型。",
+    "char_count": 2543,
+    "image_count": 0,
+    "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ringtone-preparations",
+    "path": "",
+    "rel_path": "guide/媒体/Ringtone Kit（铃声服务）/Ringtone Kit（铃声服务）-设置铃声.txt",
+    "catalog": "Ringtone Kit（铃声服务）",
+    "objectId": "ringtone-kit",
+    "nodeName": "document",
+    "keywords": [
+      "audio",
+      "ringtone",
+      "List",
+      "Ringtone",
+      "button",
+      "Text",
+      "设置铃声",
+      "Path",
+      "get",
+      "Supported",
+      "Types",
+      "let",
+      "收起自动",
+      "换行深色",
+      "代码主题",
+      "Kit",
+      "铃声服务",
+      "媒体"
+    ]
+  },
+  "ringtone-kit-1": {
+    "title": "Ringtone Kit（铃声服务）",
+    "headings": [
+      "Ringtone Kit（铃声服务）"
+    ],
+    "preview": "Ringtone Kit（铃声服务） - **Ringtone Kit简介** - **设置铃声**",
+    "char_count": 312,
+    "image_count": 0,
+    "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ringtone-kit-guide",
+    "path": "",
+    "rel_path": "guide/媒体/Ringtone Kit（铃声服务）/Ringtone Kit（铃声服务）.txt",
+    "catalog": "Ringtone Kit（铃声服务）",
+    "objectId": "ringtone-kit-1",
+    "nodeName": "document",
+    "keywords": [
+      "Ringtone",
+      "Kit",
+      "铃声服务",
+      "ringtone",
+      "简介",
+      "设置铃声",
+      "kit",
+      "introduction",
+      "preparations",
+      "媒体"
+    ]
+  },
+  "ringtone-kit-ringtone-kit": {
+    "title": "Ringtone Kit简介",
+    "headings": [
+      "Ringtone Kit简介",
+      "场景介绍",
+      "约束与限制",
+      "设备限制",
+      "支持的国家/地区",
+      "使用限制",
+      "模拟器支持情况"
+    ],
+    "preview": "Ringtone Kit简介 Ringtone Kit（铃声服务）是一个用于设置铃声的工具库。通过使用Ringtone Kit，开发者可以在HarmonyOS应用中提供铃声设置的功能，为用户提供简单一致、安全高品质的铃声设置体验。 场景介绍 Ringtone Kit支持将音频文件设置成多种铃声类型，满足各类铃声需求场景。 - 多种铃声类型：可设置来电铃声、通知铃声、信息铃声、闹钟铃声。 - 支持双卡铃声：可对双卡分别设置不同来电铃声和信息铃声。 - 铃声快捷管理：点击我的铃声按钮快速跳转“设置-声音与振动”管理铃声。",
+    "char_count": 745,
+    "image_count": 0,
+    "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ringtone-introduction",
+    "path": "",
+    "rel_path": "guide/媒体/Ringtone Kit（铃声服务）/Ringtone Kit（铃声服务）-Ringtone Kit简介.txt",
+    "catalog": "Ringtone Kit（铃声服务）",
+    "objectId": "ringtone-kit-ringtone-kit",
+    "nodeName": "document",
+    "keywords": [
+      "Kit",
+      "Ringtone",
+      "简介",
+      "Harmony",
+      "OS",
+      "铃声服务",
+      "是一个用",
+      "于设置铃",
+      "声的工具",
+      "通过使用",
+      "开发者可",
+      "以在",
+      "应用中提",
+      "供铃声设",
+      "置的功能",
+      "媒体"
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+# [Reset](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-reset)
+
+## 目录
+- [功能说明](#zh-cn_topic_0000002091040656_section27256mcpsimp)
+- [函数原型](#zh-cn_topic_0000002091040656_section27259mcpsimp)
+- [支持的型号](#zh-cn_topic_0000002091040656_section27262mcpsimp)
+- [注意事项](#zh-cn_topic_0000002091040656_section27268mcpsimp)
+- [返回值](#zh-cn_topic_0000002091040656_section27271mcpsimp)
+- [调用示例](#zh-cn_topic_0000002091040656_section27274mcpsimp)
+
+## 功能说明
+完成TbufPool资源的释放与eventId等变量的初始化操作。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+__aicore__ inline void Reset()
+```
+ 
+## 支持的型号
+Kirin9020系列处理器
+
+ KirinX90系列处理器
+
+ 
+## 注意事项
+切换TBufPool资源池时调用该接口，调用后对应资源池及资源池分配的Buffer不能继续使用。
+
+ 
+## 返回值
+无
+
+ 
+## 调用示例
+参考[InitBufPool](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-initbufpool)。

@@ -1,0 +1,4 @@
+# [通知订阅扩展能力](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/notification-subscriber-extension)
+
+- **[通知订阅扩展能力概述](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/notification-subscriber-extension-ability)**
+ - **[通知订阅扩展能力开发步骤](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ion-subscriber-extension-ability-development-steps)**

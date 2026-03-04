@@ -1,0 +1,42 @@
+# [GetRequiredInputShape](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-infershapecontext-getrequiredinputshape)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083616630_section90482mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083616630_section90485mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083616630_section90489mcpsimp)
+- [返回值](#zh-cn_topic_0000002083616630_section90512mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083616630_section90517mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083616630_section90520mcpsimp)
+
+## 函数功能
+根据算子原型定义中的输入索引获取对应的必选输入shape指针。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+const Shape *GetRequiredInputShape(const size_t ir_index) const;
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| ir_index | 输入 | 必选输入在算子IR原型定义中的索引，从0开始计数。 |
+
+ 
+## 返回值
+返回指定输入的shape指针，若输入的ir_index非法，返回空指针。
+
+ 关于Shape类型的定义，请参见[Shape](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-shape)。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+ge::graphStatus InferShapeForXXX(InferShapeContext *context) { auto in_shape = context->GetRequiredInputShape(2); // ... }
+```

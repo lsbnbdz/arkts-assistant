@@ -1,0 +1,273 @@
+# [Class (WebContextMenuParam)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-webcontextmenuparam)
+
+## 目录
+- [constructor9+](#constructor9)
+- [x9+](#x9)
+- [y9+](#y9)
+- [getLinkUrl9+](#getlinkurl9)
+- [getUnfilteredLinkUrl9+](#getunfilteredlinkurl9)
+- [getSourceUrl9+](#getsourceurl9)
+- [existsImageContents9+](#existsimagecontents9)
+- [getMediaType9+](#getmediatype9)
+- [getSelectionText9+](#getselectiontext9)
+- [getSourceType9+](#getsourcetype9)
+- [getInputFieldType9+](#getinputfieldtype9)
+- [isEditable9+](#iseditable9)
+- [getEditStateFlags9+](#geteditstateflags9)
+- [getPreviewWidth13+](#getpreviewwidth13)
+- [getPreviewHeight13+](#getpreviewheight13)
+- [getContextMenuMediaType22+](#getcontextmenumediatype22)
+
+实现长按页面元素或鼠标右键弹出来的菜单信息。示例代码参考[onContextMenuShow事件](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-events#oncontextmenushow9)。
+
+ 说明 - 该组件首批接口从API version 8开始支持。后续版本如有新增内容，则采用上角标单独标记该内容的起始版本。
+- 本Class首批接口从API version 9开始支持。
+- 示例效果请以真机运行为准。
+
+ 
+## constructor9+
+PhonePC/2in1TabletTVWearableconstructor()
+
+ WebContextMenuParam的构造函数。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ 
+## x9+
+PhonePC/2in1TabletTVWearablex(): number
+
+ 弹出菜单的x坐标。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| number | 显示正常返回非负整数，否则返回-1。 单位：vp。 |
+
+ 
+## y9+
+PhonePC/2in1TabletTVWearabley(): number
+
+ 弹出菜单的y坐标。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| number | 显示正常返回非负整数，否则返回-1。 单位：vp。 |
+
+ 
+## getLinkUrl9+
+PhonePC/2in1TabletTVWearablegetLinkUrl(): string
+
+ 获取经过安全检查的url链接地址。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| string | 如果长按位置是链接，返回经过安全检查的url链接。 |
+
+ 
+## getUnfilteredLinkUrl9+
+PhonePC/2in1TabletTVWearablegetUnfilteredLinkUrl(): string
+
+ 获取原始url链接地址。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| string | 如果长按位置是链接，返回原始的url链接。 |
+
+ 
+## getSourceUrl9+
+PhonePC/2in1TabletTVWearablegetSourceUrl(): string
+
+ 获取sourceUrl链接。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| string | 如果选中的元素有src属性，返回src的url。返回url的最大上限为2M，超出上限时返回空字符串。 |
+
+ 
+## existsImageContents9+
+PhonePC/2in1TabletTVWearableexistsImageContents(): boolean
+
+ 是否存在图像内容。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| boolean | 长按位置中有图片返回true，否则返回false。 |
+
+ 
+## getMediaType9+
+PhonePC/2in1TabletTVWearablegetMediaType(): ContextMenuMediaType
+
+ 获取网页元素媒体类型。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| ContextMenuMediaType | 网页元素媒体类型。 |
+
+ 
+## getSelectionText9+
+PhonePC/2in1TabletTVWearablegetSelectionText(): string
+
+ 获取选中文本。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| string | 菜单上下文选中文本内容，不存在则返回空。 |
+
+ 
+## getSourceType9+
+PhonePC/2in1TabletTVWearablegetSourceType(): ContextMenuSourceType
+
+ 获取菜单事件来源。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| ContextMenuSourceType | 菜单事件来源。 |
+
+ 
+## getInputFieldType9+
+PhonePC/2in1TabletTVWearablegetInputFieldType(): ContextMenuInputFieldType
+
+ 获取网页元素输入框类型。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| ContextMenuInputFieldType | 输入框类型。 |
+
+ 
+## isEditable9+
+PhonePC/2in1TabletTVWearableisEditable(): boolean
+
+ 获取网页元素是否可编辑标识。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| boolean | 网页元素可编辑返回true，不可编辑返回false。 |
+
+ 
+## getEditStateFlags9+
+PhonePC/2in1TabletTVWearablegetEditStateFlags(): number
+
+ 获取网页元素可编辑标识。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| number | 网页元素可编辑标识，参照 ContextMenuEditStateFlags 。 |
+
+ 
+## getPreviewWidth13+
+PhonePC/2in1TabletTVWearablegetPreviewWidth(): number
+
+ 获取预览图的宽。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| number | 预览图的宽。 单位：vp。 |
+
+ 
+## getPreviewHeight13+
+PhonePC/2in1TabletTVWearablegetPreviewHeight(): number
+
+ 获取预览图的高。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| number | 预览图的高。 单位：vp。 |
+
+ 
+## getContextMenuMediaType22+
+PhonePC/2in1TabletTVWearablegetContextMenuMediaType(): ContextMenuDataMediaType
+
+ 在上报上下文菜单事件时，获取用户点击的网页元素类型。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| ContextMenuDataMediaType | 网页元素媒体类型。 |

@@ -1,0 +1,113 @@
+## 目录
+- [导入模块](#导入模块)
+- [shortcutManager.setShortcutVisibleForSelf](#shortcutmanagersetshortcutvisibleforself)
+- [shortcutManager.getAllShortcutInfoForSelf](#shortcutmanagergetallshortcutinfoforself)
+- [ShortcutInfo](#shortcutinfo)
+- [ShortcutWant](#shortcutwant)
+- [ParameterItem](#parameteritem)
+
+本模块提供应用对于[快捷方式](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/typical-scenario-configuration)的管理能力，包括设置快捷方式是否显示等。
+
+    说明      本模块首批接口从API version 20开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+
+## 导入模块
+          支持设备PhonePC/2in1TabletWearable收起自动换行深色代码主题复制
+```
+import { shortcutManager } from '@kit.AbilityKit';
+```
+             
+## shortcutManager.setShortcutVisibleForSelf
+          支持设备PhonePC/2in1TabletWearablesetShortcutVisibleForSelf(id: string, visible: boolean) : Promise<void>
+
+     设置当前应用指定的快捷方式是否显示，使用Promise异步回调。
+
+     系统能力： SystemCapability.BundleManager.BundleFramework.Launcher
+
+     参数：
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| id | string | 是 | 快捷方式的ID，通过 module.json5配置文件 中的shortcuts标签下的shortcutId字段获取，取值为长度不超过63字节的字符串。 |
+| visible | boolean | 是 | 快捷方式是否显示。true：快捷方式显示；false：快捷方式不显示。 |
+
+          返回值：
+
+|  |
+|  |
+|  |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
+
+          错误码：
+
+     以下错误码的详细介绍请参见[包管理子系统通用错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-bundle)。
+
+|  |
+|  |
+|  |
+| 17700070 | The specified shortcut id is illegal. |
+
+          示例：
+
+     收起自动换行深色代码主题复制
+```
+import { shortcutManager } from '@kit.AbilityKit';import { BusinessError } from '@kit.BasicServicesKit';
+// 请替换为module.json5配置文件中的shortcuts标签下实际配置的shortcutId字段shortcutManager.setShortcutVisibleForSelf("shortcut_id", false)  .then(() => {    console.info('setShortcutVisibleForSelf success');  }).catch((err: BusinessError) => {  console.error(`setShortcutVisibleForSelf errData is errCode:${err.code}  message:${err.message}`);});
+```
+             
+## shortcutManager.getAllShortcutInfoForSelf
+          支持设备PhonePC/2in1TabletWearablegetAllShortcutInfoForSelf(): Promise<Array<ShortcutInfo>>
+
+     查询当前应用[配置文件](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/module-configuration-file#shortcuts%E6%A0%87%E7%AD%BE)中定义的所有快捷方式信息，使用Promise异步回调。
+
+     系统能力： SystemCapability.BundleManager.BundleFramework.Launcher
+
+     返回值：
+
+|  |
+|  |
+|  |
+| Promise<Array< ShortcutInfo >> | Promise对象，返回应用配置文件中定义的所有快捷方式信息。 |
+
+          示例：
+
+     收起自动换行深色代码主题复制
+```
+import { shortcutManager } from '@kit.AbilityKit';import { BusinessError } from '@kit.BasicServicesKit';
+shortcutManager.getAllShortcutInfoForSelf()  .then((data: shortcutManager.ShortcutInfo[]) => {    console.info('getAllShortcutInfoForSelf shortcut data is' + JSON.stringify(data));  }).catch((err: BusinessError) => {    console.error(`getAllShortcutInfoForSelf errData is errCode:${err.code}  message:${err.message}`);  });
+```
+             
+## ShortcutInfo
+          支持设备PhonePC/2in1TabletWearabletype ShortcutInfo = _ShortcutInfo
+
+     应用[module.json5配置文件](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/module-configuration-file#shortcuts%E6%A0%87%E7%AD%BE)中定义的快捷方式信息。
+
+     系统能力： SystemCapability.BundleManager.BundleFramework.Launcher
+
+|  |
+|  |
+|  |
+| _ShortcutInfo | 应用module.json5配置文件中定义的快捷方式信息。 |
+
+## ShortcutWant
+          支持设备PhonePC/2in1TabletWearabletype ShortcutWant = _ShortcutWant
+
+     快捷方式内定义的目标[wants](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/module-configuration-file#wants%E6%A0%87%E7%AD%BE)信息集合。
+
+     系统能力： SystemCapability.BundleManager.BundleFramework.Launcher
+
+|  |
+|  |
+|  |
+| _ShortcutWant | 快捷方式内定义的目标 wants 信息集合。 |
+
+## ParameterItem
+          支持设备PhonePC/2in1TabletWearabletype ParameterItem = _ParameterItem
+
+     快捷方式配置信息中的自定义数据。
+
+     系统能力： SystemCapability.BundleManager.BundleFramework.Launcher
+
+|  |
+|  |
+|  |
+| _ParameterItem | 快捷方式配置信息中的自定义数据。 |

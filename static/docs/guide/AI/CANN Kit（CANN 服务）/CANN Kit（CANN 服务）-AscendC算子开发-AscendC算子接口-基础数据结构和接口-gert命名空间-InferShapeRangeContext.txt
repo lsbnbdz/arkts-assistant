@@ -1,0 +1,11 @@
+# [InferShapeRangeContext](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-infershaperangecontext)
+
+- **[GetInputShapeRange](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getinputshaperange)**
+ - **[GetInputTensorRange](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getinputtensorrange)**
+ - **[GetOptionalInputTensorRange](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getoptionalinputtensorrange)**
+ - **[GetDynamicInputTensorRange](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getdynamicinputtensorrange)**
+ - **[GetOptionalInputShapeRange](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getoptionalinputshaperange)**
+ - **[GetDynamicInputShapeRange](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getdynamicinputshaperange)**
+ - **[GetRequiredInputShapeRange](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getrequiredinputshaperange)**
+ - **[GetRequiredInputTensorRange](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getrequiredinputtensorrange)**
+ - **[GetOutputShapeRange](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getoutputshaperange)**

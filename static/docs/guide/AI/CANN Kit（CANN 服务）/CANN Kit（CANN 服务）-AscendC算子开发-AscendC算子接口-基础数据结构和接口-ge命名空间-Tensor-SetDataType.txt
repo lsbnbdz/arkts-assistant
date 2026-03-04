@@ -1,0 +1,40 @@
+# [SetDataType](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tensor-setdatatype)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119256825_section106446mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119256825_section106449mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119256825_section106453mcpsimp)
+- [返回值](#zh-cn_topic_0000002119256825_section106479mcpsimp)
+- [异常处理](#zh-cn_topic_0000002119256825_section106502mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119256825_section106505mcpsimp)
+
+## 函数功能
+设置Tensor的Datatype。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+graphStatus SetDataType(const ge::DataType &dtype);
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| dtype | 输入 | 需设置的DataType值。 关于DataType类型，请参见DataType。 |
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| graphStatus | 设置成功返回GRAPH_SUCCESS，否则，返回GRAPH_FAILED。 |
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

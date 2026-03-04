@@ -1,0 +1,158 @@
+## 目录
+- [border](#border)
+- [borderStyle](#borderstyle)
+- [borderWidth](#borderwidth)
+- [borderColor](#bordercolor)
+- [borderRadius](#borderradius)
+- [示例](#示例)
+  - [示例1（基本样式用法）](#示例1基本样式用法)
+  - [示例2（边框宽度类型和边框颜色）](#示例2边框宽度类型和边框颜色)
+
+设置组件边框样式。
+
+ 说明 从API version 7开始支持。后续版本如有新增内容，则采用上角标单独标记该内容的起始版本。
+
+## border
+支持设备PhonePC/2in1TabletTVWearableborder(value: BorderOptions): T
+
+ 设置边框样式。
+
+ 卡片能力： 从API version 9开始，该接口支持在ArkTS卡片中使用。
+
+ 元服务API： 从API version 11开始，该接口支持在元服务中使用。
+
+ 系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+ 参数：
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | BorderOptions | 是 | 统一边框样式设置接口。 说明： 边框宽度默认值为0，即不显示边框。 从API version 9开始，父节点的border显示在子节点内容之上。  |
+
+  返回值：
+
+|  |
+|  |
+|  |
+| T | 返回当前组件。 |
+
+  说明 color、radius缺省时，为了保证[borderColor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-universal-attributes-border#bordercolor)、[borderRadius](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-universal-attributes-border#borderradius)生效，需要将[borderColor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-universal-attributes-border#bordercolor)、[borderRadius](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-universal-attributes-border#borderradius)设置在[border](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-universal-attributes-border#border)后。
+
+## borderStyle
+支持设备PhonePC/2in1TabletTVWearableborderStyle(value: BorderStyle | EdgeStyles): T
+
+ 设置元素的边框线条样式。
+
+ 卡片能力： 从API version 9开始，该接口支持在ArkTS卡片中使用。
+
+ 元服务API： 从API version 11开始，该接口支持在元服务中使用。
+
+ 系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+ 参数：
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | BorderStyle | EdgeStyles 9+ | 是 | 设置元素的边框样式。 默认值：BorderStyle.Solid  |
+
+  返回值：
+
+|  |
+|  |
+|  |
+| T | 返回当前组件。 |
+
+## borderWidth
+支持设备PhonePC/2in1TabletTVWearableborderWidth(value: Length | EdgeWidths | LocalizedEdgeWidths): T
+
+ 设置边框的宽度。
+
+ 卡片能力： 从API version 9开始，该接口支持在ArkTS卡片中使用。
+
+ 元服务API： 从API version 11开始，该接口支持在元服务中使用。
+
+ 系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+ 参数：
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Length | EdgeWidths 9+ | LocalizedEdgeWidths 12+ | 是 | 设置元素的边框宽度，不支持百分比。 |
+
+  返回值：
+
+|  |
+|  |
+|  |
+| T | 返回当前组件。 |
+
+## borderColor
+支持设备PhonePC/2in1TabletTVWearableborderColor(value: ResourceColor | EdgeColors | LocalizedEdgeColors): T
+
+ 设置边框的颜色。
+
+ 卡片能力： 从API version 9开始，该接口支持在ArkTS卡片中使用。
+
+ 元服务API： 从API version 11开始，该接口支持在元服务中使用。
+
+ 系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+ 参数：
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | ResourceColor | EdgeColors 9+ | LocalizedEdgeColors 12+ | 是 | 设置元素的边框颜色。 默认值：Color.Black  |
+
+  返回值：
+
+|  |
+|  |
+|  |
+| T | 返回当前组件。 |
+
+## borderRadius
+支持设备PhonePC/2in1TabletTVWearableborderRadius(value: Length | BorderRadiuses | LocalizedBorderRadiuses): T
+
+ 设置边框的圆角半径。圆角大小受组件尺寸限制，最大值为组件宽或高的一半。
+
+ 卡片能力： 从API version 9开始，该接口支持在ArkTS卡片中使用。
+
+ 元服务API： 从API version 11开始，该接口支持在元服务中使用。
+
+ 系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+ 参数：
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | Length | BorderRadiuses 9+ | LocalizedBorderRadiuses 12+ | 是 | 设置元素的边框圆角半径，支持百分比，百分比依据组件宽度，最大值为组件宽或高的一半。设置圆角后，可搭配 .clip属性 进行裁剪，避免子组件超出组件自身。 |
+
+  返回值：
+
+|  |
+|  |
+|  |
+| T | 返回当前组件。 |
+
+## 示例
+支持设备PhonePC/2in1TabletTVWearable  
+### 示例1（基本样式用法）
+设置边框的宽度、颜色、圆角半径以及点、线样式。
+
+ 收起自动换行深色代码主题复制
+```
+// xxx.ets@Entry@Componentstruct BorderExample {  build() {    Column() {      Flex({ justifyContent: FlexAlign.SpaceAround, alignItems: ItemAlign.Center }) {        // 线段        Text('dashed')          .borderStyle(BorderStyle.Dashed).borderWidth(5).borderColor(0xAFEEEE).borderRadius(10)          .width(120).height(120).textAlign(TextAlign.Center).fontSize(16)        // 点线        Text('dotted')          .border({ width: 5, color: 0x317AF7, radius: 10, style: BorderStyle.Dotted })          .width(120).height(120).textAlign(TextAlign.Center).fontSize(16)      }.width('100%').height(150)
+      Text('.border')        .fontSize(50)        .width(300)        .height(300)        .border({          width: { left: 3, right: 6, top: 10, bottom: 15 },          color: { left: '#e3bbbb', right: Color.Blue, top: Color.Red, bottom: Color.Green },          radius: { topLeft: 10, topRight: 20, bottomLeft: 40, bottomRight: 80 },          style: {            left: BorderStyle.Dotted,            right: BorderStyle.Dotted,            top: BorderStyle.Solid,            bottom: BorderStyle.Dashed          }        }).textAlign(TextAlign.Center)    }  }}
+```
+
+### 示例2（边框宽度类型和边框颜色）
+border属性的width、radius、color属性值使用LocalizedEdgeWidths类型和LocalizedEdgeColors类型。
+
+ 收起自动换行深色代码主题复制
+```
+// xxx.etsimport { LengthMetrics } from '@kit.ArkUI';@Entry@Componentstruct BorderExample {  build() {    Column() {      Flex({ justifyContent: FlexAlign.SpaceAround, alignItems: ItemAlign.Center }) {        // 线段        Text('dashed')          .borderStyle(BorderStyle.Dashed)          .borderWidth(5)          .borderColor(0xAFEEEE)          .borderRadius(10)          .width(120)          .height(120)          .textAlign(TextAlign.Center)          .fontSize(16)        // 点线        Text('dotted')          .border({ width: 5, color: 0x317AF7, radius: 10, style: BorderStyle.Dotted })          .width(120)          .height(120)          .textAlign(TextAlign.Center)          .fontSize(16)      }.width('100%').height(150)
+      Text('.border')        .fontSize(50)        .width(300)        .height(300)        .border({          width: {            start: LengthMetrics.vp(3),            end: LengthMetrics.vp(6),            top: LengthMetrics.vp(10),            bottom: LengthMetrics.vp(15)          },          color: { start: '#e3bbbb', end: Color.Blue, top: Color.Red, bottom: Color.Green },          radius: {            topStart: LengthMetrics.vp(10),            topEnd: LengthMetrics.vp(20),            bottomStart: LengthMetrics.vp(40),            bottomEnd: LengthMetrics.vp(80)          },          style: {            left: BorderStyle.Dotted,            right: BorderStyle.Dotted,            top: BorderStyle.Solid,            bottom: BorderStyle.Dashed          }        })        .textAlign(TextAlign.Center)    }  }}
+```
+ 从左至右显示语言示例图
+
+从右至左显示语言示例图

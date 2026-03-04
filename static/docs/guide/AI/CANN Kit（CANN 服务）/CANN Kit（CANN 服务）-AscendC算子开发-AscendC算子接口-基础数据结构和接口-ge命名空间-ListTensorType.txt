@@ -1,0 +1,37 @@
+# [ListTensorType](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-listtensortype)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083617358_section98008mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083617358_section98011mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083617358_section98015mcpsimp)
+- [返回值](#zh-cn_topic_0000002083617358_section98040mcpsimp)
+- [异常处理](#zh-cn_topic_0000002083617358_section98043mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083617358_section98046mcpsimp)
+
+## 函数功能
+ListTensorType类用以定义输入或者输出支持的数据类型，是TensorType的封装，用于标识支持多个数据类型的情况。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+explicit ListTensorType(const TensorType &type)
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| type | 输入 | 数据类型，具体参见TensorType。 |
+
+ 
+## 返回值
+无
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

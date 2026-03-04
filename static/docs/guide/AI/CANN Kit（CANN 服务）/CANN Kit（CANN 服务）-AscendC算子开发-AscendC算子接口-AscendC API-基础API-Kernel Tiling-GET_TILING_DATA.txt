@@ -1,0 +1,44 @@
+# [GET_TILING_DATA](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-get-tiling-data)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002092324448_section32094mcpsimp)
+- [函数原型](#zh-cn_topic_0000002092324448_section32101mcpsimp)
+- [参数说明](#zh-cn_topic_0000002092324448_section32104mcpsimp)
+- [支持的型号](#zh-cn_topic_0000002092324448_section32134mcpsimp)
+- [约束说明](#zh-cn_topic_0000002092324448_section32141mcpsimp)
+- [调用示例](#zh-cn_topic_0000002092324448_section32146mcpsimp)
+
+## 函数功能
+用于获取算子kernel入口函数传入的tiling信息，并填入注册的Tiling结构体中，此函数会以宏展开的方式进行编译。对应的算子host实现中需要定义TilingData结构体，实现并注册计算TilingData的Tiling函数，具体请参考[Host侧tiling实现](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tiling-implementation-on-the-host)。如果开发者通过[TilingData结构注册](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tilingdata-structure-registration)注册了多个TilingData结构体，使用该接口返回默认注册的结构体。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+GET_TILING_DATA(tiling_data, tiling_arg)
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| tiling_data | 输出 | 返回默认Tiling结构体变量。 |
+| tiling_arg | 输入 | 此参数为算子入口函数处传入的tiling参数。 |
+
+ 
+## 支持的型号
+Kirin9020系列处理器
+
+ KirinX90系列处理器
+
+ 
+## 约束说明
+- 本函数需在算子kernel代码处使用，并且传入的tiling_data参数不需要声明类型。
+- 暂不支持kernel直调工程。
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+extern "C" __global__ __aicore__ void add_custom(__gm__ uint8_t *x, __gm__ uint8_t *y, __gm__ uint8_t *z, __gm__ uint8_t *tiling) { GET_TILING_DATA(tilingData, tiling); KernelAdd op; op.Init(x, y, z, tilingData.blkDim, tilingData.totalSize, tilingData.splitTile); op.Process(); }
+```

@@ -1,0 +1,3 @@
+# [错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ipc-arkts-errcode)
+
+- **[RPC错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-rpc)**

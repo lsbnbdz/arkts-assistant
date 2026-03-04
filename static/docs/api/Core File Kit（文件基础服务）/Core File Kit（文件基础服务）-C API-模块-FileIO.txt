@@ -1,0 +1,19 @@
+# [FileIO](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-fileio)
+
+## 目录
+- [概述](#概述)
+- [文件汇总](#文件汇总)
+
+## 概述
+PhonePC/2in1TabletTVWearable提供文件基础操作的能力。
+
+ **起始版本：** 12
+
+ 
+## 文件汇总
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| error_code.h | 提供文件管理模块的错误码定义。 |
+| oh_fileio.h | fileio模块接口定义，使用fileio提供的native接口，进行文件基础操作。 |

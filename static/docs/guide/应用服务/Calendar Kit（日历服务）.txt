@@ -1,0 +1,7 @@
+# [Calendar Kit（日历服务）](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/calendar-kit)
+
+- **[Calendar Kit简介](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/calendarmanager-overview)**
+ - **[日历账户管理](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/calendarmanager-calendar-developer)**
+ - **[日程管理](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/calendarmanager-event-developer)**
+ - **[注册并管理一键服务日程](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/calendar-service)**
+ - **[日历服务实践案例](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/calendarmanager-practice-developer)**

@@ -1,0 +1,435 @@
+# [窗口方向](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-device-window-direction)
+
+## 目录
+- [概述](#section171912388324)
+  - [屏幕和窗口的区别](#section14401655183514)
+  - [设备的sensor](#section17747155702218)
+  - [屏幕侧的rotation](#section15598121101615)
+  - [屏幕侧的orientation](#section1068917714184)
+  - [窗口侧的orientation](#section1895441982811)
+  - [窗口侧的orientation和屏幕侧的orientation的区别](#section1528019445520)
+  - [窗口的orientation和屏幕rotation的关系](#section11774145414383)
+- [使用窗口属性控制显示方向](#section8706181135512)
+  - [设置窗口旋转方向](#section76240597554)
+  - [常见窗口旋转策略设置场景](#section623217421556)
+  - [应用子窗旋转场景](#section1193015522379)
+  - [兼容多设备上的旋转策略](#section16257518182319)
+- [使用屏幕属性控制显示方向](#section1790992213133)
+  - [查询屏幕显示方向](#section1122583313311)
+  - [监听屏幕显示（横竖）方向变化](#section2043391063614)
+  - [获取设备握持方向](#section14986108377)
+- [开发案例](#section078883710338)
+  - [视频类应用横竖屏开发](#section6952163023410)
+  - [游戏类应用横屏开发](#section764984164712)
+- [常见问题](#section1236212577516)
+  - [window.getLastWindow的方式获取窗口出现延迟](#section181875085313)
+  - [竖屏时进入任务中心，进入横屏的应用，在onpageshow时获取的display信息不符合期望](#section1596131711718)
+  - [如何获取屏幕的宽度、高度、分辨率和横竖屏等信息](#section1371316521580)
+
+## 概述
+在HarmonyOS设备中涉及屏幕、窗口、rotation、orientation等多个显示方向相关术语，下面内容帮助开发梳理相关概念和使用场景。
+
+ 
+### 屏幕和窗口的区别
+- 屏幕（Display）指物理或逻辑的显示设备，是显示内容的整体区域。例如：物理屏幕：显示器、手机屏幕、投影仪等硬件设备。逻辑屏幕：操作系统虚拟的多屏幕环境（如扩展桌面）。
+- 窗口（Window）是运行在屏幕上的一个可交互的图形界面区域，属于软件层面。例如：应用程序窗口（如浏览器、文件夹窗口）。对话框、工具栏等子窗口。
+
+ 
+### 设备的sensor
+设备的顺时针旋转角度可以通过计算重力传感器的数据来精确获取。
+
+ 
+### 屏幕侧的rotation
+显示设备的屏幕顺时针旋转角度。使用场景：适用于和硬件设备角度强关联的场景，如相机预览角度补偿。
+
+ [rotation](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-display#display)的取值有4种，分别对应下图所示的4个方向（以手机为例）。如果需要更精准的角度信息，则需要配合设备sensor获取。
+
+ 
+
+ 展开
+| 值 | 含义 |
+| --- | --- |
+| 0 | 显示设备屏幕顺时针旋转为0°。 |
+| 1 | 显示设备屏幕顺时针旋转为90°。 |
+| 2 | 显示设备屏幕顺时针旋转为180°。 |
+| 3 | 显示设备屏幕顺时针旋转为270°。 |
+
+ 
+### 屏幕侧的orientation
+显示设备的屏幕横竖方向，适用于感知横竖屏状态的场景，如视频类应用根据屏幕方向进行锁定。开发者可参考[orientation](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-display#orientation10)。
+
+ 展开
+| 名称 | 值 | 说明 |
+| --- | --- | --- |
+| PORTRAIT | 0 | 表示设备当前以竖屏方式显示。 |
+| LANDSCAPE | 1 | 表示设备当前以横屏方式显示。 |
+| PORTRAIT_INVERTED | 2 | 表示设备当前以反向竖屏方式显示。 |
+| LANDSCAPE_INVERTED | 3 | 表示设备当前以反向横屏方式显示。 |
+
+ 
+### 窗口侧的orientation
+代表的是窗口旋转策略。其中有18种旋转策略，开发者可参考[orientation](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-window-e#orientation9)。
+
+ 展开
+| 名称 | 值 | 说明 |
+| --- | --- | --- |
+| UNSPECIFIED | 0 | 表示未定义方向模式，由系统判定。 |
+| PORTRAIT | 1 | 表示竖屏显示模式。 |
+| LANDSCAPE | 2 | 表示横屏显示模式。 |
+| PORTRAIT_INVERTED | 3 | 表示反向竖屏显示模式。 |
+| LANDSCAPE_INVERTED | 4 | 表示反向横屏显示模式。 |
+| AUTO_ROTATION | 5 | 跟随传感器自动旋转，可以旋转到竖屏、横屏、反向竖屏、反向横屏四个方向。 |
+
+ 
+### 窗口侧的orientation和屏幕侧的orientation的区别
+屏幕侧的orientation表示屏幕当前横竖显示方向，屏幕的横竖显示方向只能获取，不能设置，客观体现了当前屏幕的显示状态。
+
+ 窗口侧的orientation代表的是窗口旋转策略，窗口旋转策略可以由开发者设置，系统会根据开发者的预设策略进行相应的旋转。
+
+ 对于开发者而言，控制应用的显示方向应该通过设置窗口侧的orientation(窗口旋转策略)实现。
+
+ 
+### 窗口的orientation和屏幕rotation的关系
+需要开发者注意的是，窗口的orientation和屏幕rotation并没有直接关联关系，在使用上也不能相互替代，否则在多设备适配场景下可能会出现兼容性问题。以三折叠手机不同形态下的orientation与rotation映射关系为例说明。在rotation为0度的情况下，窗口的orientation可能是竖屏也可能是横屏。
+
+ 
+
+ 
+## 使用窗口属性控制显示方向
+横竖屏切换功能是指应用内同时支持竖屏和横屏显示。当不同页面需要采用不同显示方向时，需在应用逻辑中动态调整窗口方向以实现该效果。例如，在包含视频播放功能的应用中，首页通常采用竖屏展示，而视频详情页则切换为横屏模式，以提供更佳的观看体验。
+
+ 
+### 设置窗口旋转方向
+1. **通过module.json5文件中“orientation”字段进行设置**此字段配置的是应用启动时的窗口显示方向，如果应用启动时需要默认以横屏或者竖屏方式显示，需要在此字段进行相应的配置。 其支持的参数可以参考module.json5配置项中的[orientation字段](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/module-configuration-file#abilities%E6%A0%87%E7%AD%BE)。 收起自动换行深色代码主题复制 ``` { "module": { // ... "abilities": [ { "name": "EntryAbility", // ... "orientation": "portrait", // ... } ], // ... }} ``` [module.json5](https://gitcode.com/harmonyos_samples/BestPracticeSnippets/blob/master/ArkUI/orientationDevelopment/entry/src/main/configportrait/module.json5#L2-L63) 应用可根据业务需求配置默认旋转策略： - 如果应用是竖屏应用，建议配置portrait为默认旋转策略。 - 如果应用是横屏应用，例如游戏类应用，进入游戏时，默认就是横屏，此时有以下两种情况：仅支持横屏，建议配置landscape为默认旋转策略。支持在横屏和反向横屏中切换，建议配置auto_rotation_landscape为默认旋转策略。 - 如果应用为可旋转应用，建议配置auto_rotation_restricted为默认旋转策略。 - 如果应用在直板机和折叠机折叠态为竖屏应用，在平板和折叠机展开态默认为可旋转应用，推荐配置follow_desktop为默认旋转策略。
+2. **在代码中通过调用窗口window的setPreferredOrientation方法进行设置**应用启动之后，还需要改变显示方向的场景（例如视频播放竖屏切换横屏），开发者可通过window的[setPreferredOrientation()](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-window-window#setpreferredorientation9)方法实现。 收起自动换行深色代码主题复制 ``` setWindowOrientation(orientation: window.Orientation): void { this.mainWindow.setPreferredOrientation(orientation) .then(() => { hilog.info(0x0000, 'testLog', `Succeeded in setting window orientation.`); // Update window orientation. this.mainWindowInfo.orientation = orientation; }) .catch((err: BusinessError) => { hilog.error(0x0000, 'testLog', `Failed to set window orientation. Code: ${err.code}, message: ${err.message}`); });} ``` [WindowUtil.ets](https://gitcode.com/harmonyos_samples/ResponsiveLayout/blob/master/entry/src/main/ets/utils/WindowUtil.ets#L168-L178)
+3. **不同的页面设置不同的旋转策略**通过window.setPreferredOrientation()实现横竖屏切换。window的横竖屏会影响到所有页面，当发生不同或相同页面跳转和页面返回时，都需要管理横竖屏的状态。 同一应用内的A、B页面设置不同的旋转策略，开发者可以在打开页面时设置旋转策略，关闭页面时恢复之前的旋转策略。 收起自动换行深色代码主题复制 ``` @StorageLink('mainWindow') mainWindow?: window.Window = undefined;public lastOrientation?: window.Orientation; aboutToAppear(): void { if (this.mainWindow === undefined) { return; } this.lastOrientation = this.mainWindow!.getPreferredOrientation(); this.mainWindow!.setPreferredOrientation(window.Orientation.LANDSCAPE);} aboutToDisappear(): void { this.mainWindow!.setPreferredOrientation(this.lastOrientation)} ``` [ScreenRotationA.ets](https://gitcode.com/harmonyos_samples/BestPracticeSnippets/blob/master/ArkUI/orientationDevelopment/entry/src/main/ets/pages/ScreenRotationA.ets#L6-L19)
+4. **不同窗口模式对窗口方向的支持情况**- 悬浮窗口开启横向悬浮窗 视频或者游戏类应用在横屏模式下开启悬浮窗后，页面没有适配横屏，导致内容显示不全或者观看体验不好。 悬浮窗默认是竖向的，但是对于横向游戏和视频应用，横向的悬浮窗体验会更好。开发者可以通过在module.json5配置文件中abilities标签下的preferMultiWindowOrientation属性增加“landscape”或者“landscape_auto”配合API以声明应用支持横向悬浮窗或上下分屏模式。 收起自动换行深色代码主题复制 ``` { "module": { // ... "abilities": [ { "name": "EntryAbility", // ... "preferMultiWindowOrientation": "landscape_auto", // ... } ], // ... }} ``` [module.json5](https://gitcode.com/harmonyos_samples/BestPracticeSnippets/blob/master/ArkUI/orientationDevelopment/entry/src/main/configlandscapeauto/module.json5#L2-L63) 该场景下多窗布局动态可变为横向，需要配合API（[enableLandscapeMultiWindow()](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-window-window#enablelandscapemultiwindow12)/ [disableLandscapeMultiWindow()](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-window-window#disablelandscapemultiwindow12)）使用。 收起自动换行深色代码主题复制 ``` private windowClass = (this.getUIContext().getHostContext() as common.UIAbilityContext).windowStage.getMainWindowSync() aboutToAppear(): void { this.windowClass.enableLandscapeMultiWindow();} aboutToDisappear(): void { this.windowClass.disableLandscapeMultiWindow();} ``` [ScreenRotationB.ets](https://gitcode.com/harmonyos_samples/BestPracticeSnippets/blob/master/ArkUI/orientationDevelopment/entry/src/main/ets/pages/ScreenRotationB.ets#L6-L14) 优化后效果如下图所示。 - 自由窗口当前规格，自由窗口不支持设置窗口旋转策略，2in1设备上调用不生效，自由多窗模式下调用不生效，子窗调用后不生效。
+
+ 
+### 常见窗口旋转策略设置场景
+1. **跟随系统自动旋转**设置[窗口侧的orientation](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-device-window-direction#section1895441982811)的值为AUTO_ROTATION，开发者可参考[设置窗口旋转方向](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-device-window-direction#section76240597554)。 收起自动换行深色代码主题复制 ``` { "module": { // ... "abilities": [ { "name": "EntryAbility", // ... "orientation": "auto_rotation", // ... } ], // ... }} ``` [module.json5](https://gitcode.com/harmonyos_samples/BestPracticeSnippets/blob/master/ArkUI/orientationDevelopment/entry/src/main/configautorotation/module.json5#L2-L63) 开发者也可参考以下表格不同的自动旋转策略特性。 展开 | 旋转策略 | 受控制中心的旋转开关控制 | 横屏 | 反向横屏 | 竖屏 | 反向竖屏 | | --- | --- | --- | --- | --- | --- | | AUTO_ROTATION | × | √ | √ | √ | √ | | AUTO_ROTATION_PORTRAIT | × | × | × | √ | √ | | AUTO_ROTATION_LANDSCAPE | × | √ | √ | × | × | | AUTO_ROTATION_RESTRICTED | √ | √ | √ | √ | √ | | AUTO_ROTATION_PORTRAIT_RESTRICTED | √ | × | × | √ | √ | | AUTO_ROTATION_LANDSCAPE_RESTRICTED | √ | √ | √ | × | × |
+2. **锁定窗口旋转方向**开发者可通过在module.json5文件中给[abilities](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/module-configuration-file#abilities%E6%A0%87%E7%AD%BE)标签配置orientation固定屏幕方向属性值。 展开 | 值 | 模式 | | --- | --- | | PORTRAIT | 表示竖屏显示模式。 | | LANDSCAPE | 表示横屏显示模式。 | | PORTRAIT_INVERTED | 表示反向竖屏显示模式。 | | LANDSCAPE_INVERTED | 表示反向横屏显示模式。 | | LOCKED | 表示锁定模式，锁定当前窗口显示模式。 |
+3. **监听窗口横竖屏方向**- 如果开发者希望监听窗口方向来调整UI，建议使用横纵断点方式判断页面布局。当开发者设置旋转策略后，窗口会根据实际场景完成对应的旋转，窗口旋转后窗口尺寸会落入新的断点区间，开发者可监听纵向断点变化并刷新界面布局，可参考[响应式布局](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-device-responsive-layout)。 - 可以利用窗口尺寸变化的监听on('windowSizeChange')，窗口旋转后，在回调中更新横纵断点。收起自动换行深色代码主题复制 ``` public onWindowSizeChange: (windowSize: window.Size) => void = (windowSize: window.Size) => { this.mainWindowInfo.windowSize = windowSize; this.mainWindowInfo.widthBp = this.uiContext!.getWindowWidthBreakpoint(); this.mainWindowInfo.heightBp = this.uiContext!.getWindowHeightBreakpoint();};// ...updateWindowInfo(): void { try { // ... // Register for window size change monitoring, update window size and width/height breakpoint. this.mainWindow.on('windowSizeChange', this.onWindowSizeChange); // ... } catch (error) { let err = error as BusinessError; hilog.error(0x0000, `TestLog`, `Failed to update window info. Code: ${err.code}, message: ${err.message}`); }} ``` [WindowUtil.ets](https://gitcode.com/harmonyos_samples/ResponsiveLayout/blob/master/entry/src/main/ets/utils/WindowUtil.ets#L39-L239) - 可以通过以下方式订阅系统环境变量的变化，但通过以下方式只能监听到窗口方向为水平还是垂直，无法监听到是否为反向横屏或反向竖屏：使用ApplicationContext订阅回调。在onConfigurationUpdate()回调方法中订阅或监听系统环境变量的变化，包括语言、颜色模式和屏幕方向。开发者可参考[获取/设置环境变量](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/subscribe-system-environment-variable-changes)。
+4. **横竖屏无缝切换（性能优化）**在窗口旋转时，屏幕尺寸变化会导致界面重新布局。为提高横竖屏切换的流畅度，需进行性能优化。 - 使用自定义组件冻结旋转时，由于整窗一起旋转会导致页面重新布局，但是实际上需要展示的可能只有播放内容。对于其他的组件，可以使用自定义组件冻结功能，避免旋转导致的UI更新操作。例如，视频播放底下的详情内容，可能是单独的组件。 收起自动换行深色代码主题复制 ``` @Component({ freezeWhenInactive: true }) // Added custom component freezing functionstruct VideoDetailView { build() { Scroll() { // ... } }} ``` [VideoPlayView.ets](https://gitcode.com/harmonyos_samples/LandscapePortraitToggle/blob/master/entry/src/main/ets/views/VideoPlayView.ets#L276-L289) - 对图片使用autoResize如果当前旋转页面存在图片，未经合理的裁剪，图片过大，可以对图片设置autoResize属性，使图片裁剪到合适的大小进行绘制。该属性的作用是将组件显示区域作为绘制的图源尺寸，可以减少内存占用，例如，原图是1920*1080，但是显示区域是200*100，则在解码时会降低采样编码到200*100尺寸。 收起自动换行深色代码主题复制 ``` @Builderfunction ImageItem(imageSrc: ResourceStr) { Stack({}) { Image(imageSrc) .width('100%') .height('100%') .autoResize(true)// Use auto_resize attributes on images .borderRadius(8) .objectFit(ImageFit.Fill) .backgroundColor('#1AFFFFFF') }} ``` [VideoPlayView.ets](https://gitcode.com/harmonyos_samples/LandscapePortraitToggle/blob/master/entry/src/main/ets/views/VideoPlayView.ets#L293-L305) - 排查一些耗时操作排查当前页面是否存在冗余的OnAreaChange事件、blur模糊或linearGradient属性。这些属性较为耗时，应根据是否必须使用来决定是否进行优化。
+
+ 
+### 应用子窗旋转场景
+ 在应用旋转场景中，应用主窗的尺寸由系统控制，而应用子窗的尺寸和位置由应用控制。因此，建议应用开发者在有应用子窗的旋转场景中，同步调整应用子窗的尺寸和位置，避免因旋转过程中应用子窗的尺寸和位置保持不变而导致如下图所示的应用子窗显示截断问题（直板机默认的旋转策略为UNSPECIFIED，旋转锁定按钮关闭的情况下不允许应用旋转，可以通过module.json5配置文件中[abilities](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/module-structure#abilities%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%86%85%E9%83%A8%E7%BB%93%E6%9E%84)标签的"orientation"字段配置应用的旋转策略为AUTO_ROTATION，使应用跟随设备方向旋转）。
+
+ 展开
+| 旋转前竖屏显示 | 旋转后横屏显示（调整前） |
+| :-: | :-: |
+| | |
+
+ **实现方案**
+
+ 系统为设备窗口尺寸变化监听、设置应用子窗尺寸和位置提供了如下接口：
+
+ 1. [on('windowSizeChange')](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-window-window#onwindowsizechange7)接口用于开启窗口尺寸变化的监听，当窗口发生旋转后，会触发其中的回调。
+2. [resize()](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-window-window#resize9)接口用于改变当前窗口的大小，可以在窗口发生旋转后及时调整子窗的宽高。
+3. [moveWindowTo()](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-window-window#movewindowto9)接口用于移动窗口位置，可以在窗口发生旋转后及时调整子窗的位置。
+
+ 为实现根据应用旋转方向设置应用子窗尺寸，开发者可使用on('windowSizeChange')接口监听窗口尺寸的变化，并在回调函数中通过resize()接口和moveWindowTo()接口分别调整应用子窗的尺寸和位置。
+
+ 需要指出的是，开发者可以使用[setFollowParentWindowLayoutEnabled()](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-window-window#setfollowparentwindowlayoutenabled17)接口设置子窗或模态窗口的布局信息是否跟随主窗，如果设置为跟随主窗，那么子窗的旋转便不再需要额外适配。
+
+ 收起自动换行深色代码主题复制
+```
+import { window } from '@kit.ArkUI';import { BusinessError } from '@kit.BasicServicesKit';import { hilog } from '@kit.PerformanceAnalysisKit';
+const SUB_WINDOW_LEFT_OFFSET: number = 50;const SUB_WINDOW_TOP_OFFSET: number = 500;const TAG: string = 'subWindowAdaptWhenRotate';const DOMAIN: number = 0x0000;
+@Entry@Componentstruct Index { public mainWindow: window.Window | undefined = undefined; public subWindow: window.Window | undefined = undefined;
+ aboutToAppear(): void { // create subWindow this.createSubWindow();
+ this.mainWindow = AppStorage.get('mainWindow'); if (!this.mainWindow) { return; } this.mainWindow.on('windowSizeChange', () => { this.adjustSubwindowSizeAndPosition(); }) }
+ private adjustSubwindowSizeAndPosition(): void { if (!this.subWindow) { hilog.error(DOMAIN, TAG, 'subWindow is null'); return; } let subwindowRect: window.Rect | null = null; try { subwindowRect = this.subWindow.getWindowProperties().windowRect; } catch (error) { hilog.warn(0x000, 'testTag', `getWindowProperties failed, code: ${error.code}, message: ${error.message}`); } let newWidth: number = subwindowRect!.height; let newHeight: number = subwindowRect!.width; let newX: number = subwindowRect!.top; let newY: number = subwindowRect!.left; this.subWindow.resize(newWidth, newHeight) .then(() => { hilog.info(DOMAIN, TAG, 'Succeeded in changing the window size') }).catch((err: BusinessError) => { hilog.error(DOMAIN, TAG, `Failed to change the window size. Cause code: ${err.code}, message: ${err.message}`); });
+ this.subWindow.moveWindowTo(newX, newY) .then(() => { hilog.info(DOMAIN, TAG, 'Succeeded in moving the window'); }).catch((err: BusinessError) => { hilog.error(DOMAIN, TAG, `Failed to move the window. Cause code: ${err.code}, message: ${err.message}`); });
+ }
+ // ...}
+```
+[Index.ets](https://gitcode.com/harmonyos_samples/BestPracticeSnippets/blob/master/SubwindowAdaptWhenRotate/entry/src/main/ets/pages/Index.ets#L17-L134) **实现效果**
+
+ 根据示例代码为不同旋转方向设置不同的应用子窗尺寸和位置的实际效果如下图所示，应用子窗的尺寸和位置在竖屏显示和横屏显示下是不同的。
+
+ 展开
+| 旋转前竖屏显示 | 旋转后横屏显示 |
+| :-: | :-: |
+| | |
+
+ 
+### 兼容多设备上的旋转策略
+**方案一: 设置跟随产品定义的桌面旋转策略**
+
+ 通过修改[module.json5配置文件](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/module-configuration-file#abilities%E6%A0%87%E7%AD%BE)中的orientation属性，设置FOLLOW_DESKTOP，跟随桌面的旋转模式。
+
+ 当前HarmonyOS主流设备桌面的横竖屏旋转策略如下表所示：
+
+ 展开
+| 产品类型 | 手机 | 阔折叠（Pura X） | 双折叠（Mate X系列） | 三折叠（Mate XT系列） | 平板 | 电脑 |
+| --- | --- | --- | --- | --- | --- | --- |
+| 是否支持横竖屏旋转 | 不支持 | 内屏：不支持 外屏：不支持 | 内屏：支持 外屏：不支持 | F态（单屏显示）：不支持 M态（双屏显示）：支持 G态（三屏显示）：支持 | 支持 | 应用无法配置窗口旋转策略 |
+
+ **方案二: 设置根据窗口大小推荐的应用旋转策略**1. 窗口旋转功能通常需要足够的空间来适应变化前后的横竖屏布局，以窗口高度和宽度中的较小值为基准，确保无论横屏还是竖屏，窗口均有足够的显示区域，避免内容挤压或溢出。在横屏显示的条件下，为保证展示的列表数量、文本信息量和输入的舒适度，推荐横屏时窗口宽度和高度均大于348vp。因此应用窗口宽度和高度的最小值大于348vp时，该窗口符合支持旋转的标准要求。 说明当窗口的宽度/高度最小值低于此值时，可能导致UI元素错位、文字截断或操作困难等问题。
+2. 当前HarmonyOS主流设备窗口全屏时尺寸和支持横竖屏旋转策略如下表所示：
+
+ 展开
+| 产品类型 | 窗口全屏时尺寸（vp） | 以348vp为阈值，是否支持横竖屏旋转 | 应用是否默认支持横竖屏旋转 |
+| --- | --- | --- | --- |
+| 手机（Mate60为例） | 374 * 827 | 支持 | 不支持 |
+| 阔折叠（Pura X为例） | 内屏：440 * 797 外屏：326 * 326 | 内屏：支持 外屏：不支持 | 内屏：不支持 外屏：不支持 |
+| 双折叠（Mate X系列，Mate X5为例） | 内屏：711 * 798 外屏：345 * 801 | 内屏：支持 外屏：不支持 | 内屏：不支持 外屏：不支持 |
+| 三折叠（Mate XT为例） | F态（单屏显示）：350 * 776 M态（双屏显示）：712 * 776 G态（三屏显示）：776 * 1107 | F态（单屏显示）：支持 M态（双屏显示）：支持 G态（三屏显示）：支持 | F态（单屏显示）：不支持 M态（双屏显示）：不支持 G态（三屏显示）：支持 |
+| 平板（MatePad Pro为例） | 711 * 1137 | 支持 | 支持 |
+| PC/2in1 | / | 应用无法配置窗口旋转策略 | 应用无法配置窗口旋转策略 |
+
+ 说明不同产品类型对应的窗口全屏时尺寸，可以在应用EntryAbility生命周期函数[onWindowStageCreate()](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-app-ability-uiability#onwindowstagecreate)中，通过调用[window.getWindowProperties().windowRect](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-window-i#windowproperties)获取窗口尺寸、调用[uicontext.px2vp()](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-uicontext-uicontext#px2vp12)将结果转化为vp后查看。
+
+ 1. 348vp为符合支持旋转的标准阈值。该阈值可作为基础参考值，应用实际的横竖屏旋转策略需要根据应用实际需求决定，以横纵向断点作为条件判断。例如：如果需要Pura X外屏也支持旋转，可以同时设置“横向断点sm，纵向断点md”条件下支持旋转；如果需要双折叠外屏也支持旋转，可以同时设置“横向断点sm，纵向断点lg”条件下支持旋转。不同设备和状态对应的断点区间，请参考[断点的定义](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-device-responsive-layout#section186821126131515)。
+2. 如果应用旋转策略与348vp无关，则需要根据支持旋转产品类型，以横纵向断点作为条件判断，注意需要考虑到不同折叠状态和不同的横竖屏状态。例如：应用在双折叠外屏、三折叠M态和G态、平板上支持旋转，其他情况不旋转。其在不同横竖屏状态下对应的横纵向断点如下表： 展开 | 产品类型 | 横屏 | 竖屏 | | --- | --- | --- | | 双折叠内屏 | 横向断点md，纵向断点md | 横向断点md，纵向断点md | | 三折叠M态 | 横向断点md，纵向断点md | 横向断点md，纵向断点md | | 三折叠G态 | 横向断点lg，纵向断点sm | 横向断点md，纵向断点lg | | 平板 | 横向断点lg，纵向断点sm | 横向断点md，纵向断点lg | 结合表中所有条件，整理支持横竖屏旋转的条件为“(横向断点 === md && 纵向断点 !== sm) || (横向断点 === lg && 纵向断点 === sm)”。
+3. 通过调用[window.setPreferredOrientation()](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-window-window#setpreferredorientation9)，设置AUTO_ROTATION_RESTRICTED，实现窗口支持横竖屏旋转，且受控制中心的旋转开关控制。说明仅主窗口支持设置旋转显示方向，PC/2in1、子窗口、自由多窗下调用window.setPreferredOrientation()接口不生效。
+
+ 收起自动换行深色代码主题复制
+```
+import { BusinessError } from '@kit.BasicServicesKit';import { hilog } from '@kit.PerformanceAnalysisKit';import { UIAbility } from '@kit.AbilityKit';import { window } from '@kit.ArkUI';
+export default class EntryAbility extends UIAbility { windowObj?: window.Window; uiContext?: UIContext; onWindowSizeChange: (data: window.Size) => void = () => { this.setDefaultOrientation(); }
+ setDefaultOrientation(): void { try { let windowRect: window.Rect = this.windowObj!.getWindowProperties().windowRect; let windowWidthVp: number = this.uiContext!.px2vp(windowRect.width); let windowHeightVp: number = this.uiContext!.px2vp(windowRect.height);
+ // If this condition is met, the window can be rotated. if (Math.min(windowWidthVp, windowHeightVp) > 348) { this.windowObj?.setPreferredOrientation(window.Orientation.AUTO_ROTATION_RESTRICTED) .catch((err: BusinessError) => { hilog.error(0x000, 'testTag', `setPreferredOrientation failed, code=${err.code}, message=${err.message}`) }) } // Otherwise, the window is displayed in portrait mode. else { this.windowObj?.setPreferredOrientation(window.Orientation.PORTRAIT) .catch((err: BusinessError) => { hilog.error(0x000, 'testTag', `setPreferredOrientation failed, code=${err.code}, message=${err.message}`) }) } } catch (error) { let err = error as BusinessError; hilog.warn(0x000, 'testTag', `getWindowProperties failed, code=${err.code}, message=${err.message}`); } }
+ onWindowStageCreate(windowStage: window.WindowStage): void { // Main window is created, set main page for this ability hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageCreate'); windowStage.getMainWindow().then((windowObj) => { this.windowObj = windowObj; }).catch((err: BusinessError) => { hilog.error(0x0000, 'testTag', `Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`); }); windowStage.loadContent('pages/Index', (err) => { if (err.code) { hilog.error(0x0000, 'testTag', 'Failed to load the content. Cause: %{public}s', JSON.stringify(err) ?? ''); return; } try { this.uiContext = this.windowObj!.getUIContext(); this.setDefaultOrientation(); this.windowObj!.on('windowSizeChange', this.onWindowSizeChange); hilog.info(0x0000, 'testTag', 'Succeeded in loading the content.'); } catch (error) { let err = error as BusinessError; hilog.warn(0x000, 'testTag', `getUIContext failed, code=${err.code}, message=${err.message}`); }
+ }); }}
+```
+[EntryAbility1.ets](https://gitcode.com/harmonyos_samples/BestPracticeSnippets/blob/master/bptaMultiWindow/entry/src/main/ets/entryability/EntryAbility1.ets#L21-L87) **在配置文件中设置多设备不同的旋转策略**
+
+ 在module.json5文件中的"orientation"字段设置为"follow_desktop"，表示跟随桌面的旋转模式。
+
+ 
+## 使用屏幕属性控制显示方向
+不建议使用屏幕属性控制显示方向，屏幕属性与硬件特征强相关，很难实现软件与硬件解耦，请开发者优先考虑使用窗口属性控制显示方向。如果窗口属性不能满足场景诉求，再考虑使用屏幕属性，同时也要充分考虑不同硬件的差异问题。
+
+ 
+### 查询屏幕显示方向
+- 通过Display属性查询屏幕显示方向收起自动换行深色代码主题复制 ``` try { let displayClass: display.Display | null = display.getDefaultDisplaySync();} catch (error) { let err = error as BusinessError; hilog.error(0x0000, 'testLog', `Failed to query display orientation. Code: ${err.code}, message: ${err.message}`);} ``` [WindowUtil.ets](https://gitcode.com/harmonyos_samples/ResponsiveLayout/blob/master/entry/src/main/ets/utils/WindowUtil.ets#L314-L319)
+- 通过Resourcemanager属性查询屏幕显示方向收起自动换行深色代码主题复制 ``` let info: resourceManager.Direction | undefined = this.uiContext?.getHostContext()?.resourceManager.getConfigurationSync().direction;hilog.info(0x0000, 'testLog', `The Orientation is ${info}`); ``` [WindowUtil.ets](https://gitcode.com/harmonyos_samples/ResponsiveLayout/blob/master/entry/src/main/ets/utils/WindowUtil.ets#L325-L327)
+- 通过媒体查询能力查询屏幕显示方向在多线程场景中，MediaQuery对象要用UIContext中的getMediaQuery方法获取，不可以通过import 获取。 收起自动换行深色代码主题复制 ``` @Entry@Componentstruct MediaQueryPage { @State color: string = '#DB7093'; @State text: string = 'Portrait'; // The condition is true when the device is in landscape orientation listener: mediaquery.MediaQueryListener = this.getUIContext().getMediaQuery().matchMediaSync('(orientation: landscape)'); // When the media query conditions are met, a callback is triggered onPortrait(mediaQueryResult: mediaquery.MediaQueryResult) { if (mediaQueryResult.matches as boolean) { // If the device is in landscape orientation, change the corresponding page layout this.color = '#FFD700'; this.text = 'Landscape'; } else { this.color = '#DB7093'; this.text = 'Portrait'; } } aboutToAppear() { // Bind the current application instance // Bind a callback function this.listener.on('change', (mediaQueryResult: mediaquery.MediaQueryResult) => { this.onPortrait(mediaQueryResult) }); } aboutToDisappear() { // Unbind the callback function registered in the listener this.listener.off('change'); } // Change the horizontal and vertical screen status functions of the device private changeOrientation(isLandscape: boolean) { // Obtain the context of the UIAbility instance let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext; // Call this API to manually change the horizontal and vertical screen status of the device window.getLastWindow(context).then((lastWindow) => { lastWindow.setPreferredOrientation(isLandscape ? window.Orientation.LANDSCAPE : window.Orientation.PORTRAIT) }); } build() { Column({ space: 50 }) { Text(this.text) .fontSize(50) .fontColor(this.color) Text('Landscape') .fontSize(50) .fontColor(this.color) .backgroundColor(Color.Orange) .onClick(() => { this.changeOrientation(true); }) Text('Portrait') .fontSize(50) .fontColor(this.color) .backgroundColor(Color.Orange) .onClick(() => { this.changeOrientation(false); }) } .width('100%') .height('100%') }} ``` [MediaQueryPage.ets](https://gitcode.com/harmonyos_samples/BestPracticeSnippets/blob/master/ArkUI/orientationDevelopment/entry/src/main/ets/pages/MediaQueryPage.ets#L5-L70)
+
+ 说明通过Resourcemanager和媒体查询能力查询屏幕方向，只能查询横竖屏，不能查询到是否为反向横屏、反向竖屏。开发者可通过display.getDefaultDisplaySync().orientation来获取。
+
+ 
+### 监听屏幕显示（横竖）方向变化
+应用设置屏幕自动旋转：在模块配置文件module.json5中给EntryAbility设置"orientation": “auto_rotation_restricted”，再打开手机自动旋转即可。 应用中获取window实例，用setPreferredOrientation设置窗口显示方向的属性。通过display.on可以监听屏幕状态改变。点击设置了具体方向后，再加上传感器模式判断屏幕方向。
+
+ 收起自动换行深色代码主题复制
+```
+import { display, window } from '@kit.ArkUI';
+const TAG = 'foo';const ORIENTATION: Array = ['垂直', '平', '反向垂直', '反向水平'];
+@Entry@Componentstruct OrientationPage { @State rotation: number = 0; @State message: string = ORIENTATION[this.rotation]; @Watch('setWindowLayOut') @State isLandscape: boolean = false;
+ aboutToAppear() { this.setOrientation(1); let callback = async () => { let getDefaultDisplay = display.getDefaultDisplaySync(); this.rotation = getDefaultDisplay.rotation; this.message = ORIENTATION[this.rotation]; }; try { display.on('change', callback); } catch (exception) { hilog.error(0x0000, TAG, 'Failed to register callback. Code: ' + JSON.stringify(exception)); } }
+ setOrientation(type: number) { try { window.getLastWindow(getContext(this), (err, data) => { //获取window实例 if (err.code) { hilog.error(0x0000, TAG, 'Failed to obtain the top window. Cause: ' + JSON.stringify(err)); return; } let windowClass = data; hilog.info(0x0000, TAG, 'Succeeded in obtaining the top window. Data: ' + JSON.stringify(data)); let orientation: number; if (type === 1) { orientation = window.Orientation.AUTO_ROTATION; } else { orientation = window.Orientation.UNSPECIFIED; } try { windowClass.setPreferredOrientation(orientation, (err) => { if (err.code) { hilog.error(0x0000, TAG, 'Failed to set window orientation. Cause: ' + JSON.stringify(err)); return; } hilog.info(0x0000, 'Succeeded in setting window orientation.'); }); } catch (exception) { hilog.error(0x0000, TAG, 'Failed to set window orientation. Cause: ' + JSON.stringify(exception)); } }); } catch (exception) { hilog.error(0x0000, TAG, 'Failed to obtain the top window. Cause: ' + JSON.stringify(exception)); } }
+ setWindowLayOut() { window.getLastWindow(getContext(this)).then((windowClass) => { if (this.isLandscape) { hilog.info(0x0000, 'OrientationPage', '设置屏幕横屏'); windowClass.setPreferredOrientation(window.Orientation.AUTO_ROTATION_LANDSCAPE); } else { hilog.info(0x0000, 'OrientationPage', '设置屏幕竖屏'); windowClass.setPreferredOrientation(window.Orientation.AUTO_ROTATION_PORTRAIT); } }); }
+ build() { Row() { Column() { Text(`${this.rotation}`) .fontSize(25) Text(`${this.message}`) .fontSize(25) Button('全屏') .width(140) .onClick(() => { this.isLandscape = !this.isLandscape; }) } .width('100%') } .height('100%') }}
+```
+[OrientationPage.ets](https://gitcode.com/harmonyos_samples/BestPracticeSnippets/blob/master/ArkUI/orientationDevelopment/entry/src/main/ets/pages/OrientationPage.ets#L2-L90) 
+### 获取设备握持方向
+建议使用Windows的窗口旋转策略实现自动旋转。如果系统策略无法满足要求，可自定义开发设备角度检测。目前只能监听到屏幕的显示方向，并不能直接判断横竖握持方向。可以通过sensor获取设备角度，但是不能据此推断设备显示方向，因为不同设备0度对应的显示方向是不同的。
+
+ 通过sensor角度，先记录0度时的手机方向，再根据旋转判断设备方向。
+
+ 收起自动换行深色代码主题复制
+```
+queryDegree(): void { try { sensor.on(sensor.SensorId.GRAVITY, (data: sensor.GravityResponse) => { let degree: number = this.getCalDegree(data.x, data.y, data.z); }) } catch (error) { let err = error as BusinessError; hilog.error(0x0000, 'TestLog', `Failed to query degree. Code: ${err.code}, message: ${err.message}`); }}
+getCalDegree(x: number, y: number, z: number): number { let degree: number = 0; // three is Effective Delta Angle Threshold Coefficient. if ((x * x + y * y) * 3 < z * z) { return degree; } degree = 90 - (Number)(Math.round(Math.atan2(y, -x) / Math.PI * 180)); return degree >= 0 ? degree % 360 : degree % 360 + 360;}
+```
+[WindowUtil.ets](https://gitcode.com/harmonyos_samples/ResponsiveLayout/blob/master/entry/src/main/ets/utils/WindowUtil.ets#L332-L351) 
+## 开发案例
+ 
+### 视频类应用横竖屏开发
+为了实现应用的横竖屏功能，需要从以下技术方面进行考虑：
+
+ 1. 设置窗口的旋转策略
+2. 监听屏幕的窗口变化
+3. 进行布局适配
+
+ **设置窗口的旋转策略**
+
+ 首先，需要对应用启动时的旋转策略进行设置，具体可以参考[配置module.json5的Orientation字段](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-landscape-and-portrait-development#section1188593118171)。这里我们以实现了一多开发为例，为满足直板机和平板设备不同的策略，设置为follow_desktop，这个字段主要解决在不同设备上默认旋转策略不同的问题。
+
+ 在具体需要实现横竖屏切换的页面上，例如视频播放页面支持横屏，但是首页的内容仅支持竖屏的，那么就需要在进入对应的页面时，采用window窗口提供的设置窗口方向的能力，通过[setPreferredOrientation()](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-window-window#setpreferredorientation9)将窗口显示的方向修改为横屏或竖屏的状态。在使用时，需根据应用自身的旋转策略选择相应的参数，可以封装如下方法，进行旋转策略的设置。
+
+ 具体如下：通过getContext获取对应的UIAbilityContext，并通过context获取对应的windowStage实例，然后通过windowStage.getMainWindowSync同步方法拿到对应的窗口实例win，然后调用[setPreferredOrientation()](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-window-window#setpreferredorientation9)方法设置窗口方向。
+
+ 收起自动换行深色代码主题复制
+```
+import { BusinessError, settings } from '@kit.BasicServicesKit'import Logger from '../utils/Logger'import { common } from '@kit.AbilityKit'
+const TAG = 'VideoPlayViewLogTag';
+@Componentexport struct VideoPlayView { private context = this.getUIContext().getHostContext() as common.UIAbilityContext; // ... private windowClass = (this.context as common.UIAbilityContext).windowStage.getMainWindowSync(); // ... setOrientation(orientation: number) { this.windowClass.setPreferredOrientation(orientation).then(() => { Logger.info('setWindowOrientation: ' + orientation + ' Succeeded.') }).catch((err: BusinessError) => { Logger.info('setWindowOrientation: ' + orientation + ' Failed. Cause: ' + JSON.stringify(err)) }) }
+```
+[VideoPlayView.ets](https://gitcode.com/harmonyos_samples/LandscapePortraitToggle/blob/master/entry/src/main/ets/views/VideoPlayView.ets#L18-L142) 以视频播放为例，不仅支持通过系统控制横竖屏，也支持用户在系统锁定旋转的情况下，手动设置横屏状态，即需要满足以下条件：
+
+ 1. **应用跟随传感器旋转；**
+2. **受到控制中心的旋转锁定按钮控制；**
+3. **支持用户在应用页面中临时调用设置方向的能力，例如点击全屏按钮进行切换。**
+
+ 要实现以上效果，可以使用窗口的能力设置orientation的枚举类型进行相应的旋转。为了提供临时设置方向的能力，当用户手动点击全屏按钮时，需要手动触发横竖屏切换。如果此时关闭了旋转锁定，窗口需要能够跟随传感器旋转。因此，可以使用以下枚举中的能力，临时调用旋转，并让其后续支持跟随传感器。
+
+ 展开
+| orientation枚举值 | 枚举数值 | 效果描述 |
+| --- | --- | --- |
+| USER_ROTATION_PORTRAIT | 13 | 调用时临时旋转到竖屏，之后跟随传感器自动旋转，受控制中心的旋转开关控制，且可旋转方向受系统判定。 |
+| USER_ROTATION_LANDSCAPE | 14 | 调用时临时旋转到横屏，之后跟随传感器自动旋转，受控制中心的旋转开关控制，且可旋转方向受系统判定。 |
+
+ 分析旋转方向：一般情况下，视频播放应用的旋转方向不会旋转到反向竖屏（由UX需求决定），仅支持旋转到竖屏、横屏和反向横屏。点击切换按钮时，默认旋转到横屏状态，并支持跟随传感器旋转到反向横屏。
+
+ 
+
+ 
+
+ 在需要用户点击的地方，需要根据进入全屏和退出全屏分别执行相应的逻辑，需要使用的方向状态如下：
+
+ 设置为横屏时，对应窗口方向为横屏状态：this.setOrientation(window.Orientation.USER_ROTATION_LANDSCAPE)，例如进入播放页时，进行竖屏 -> 横屏切换；
+
+ 收起自动换行深色代码主题复制
+```
+Image($r('app.media.icon_zoom_in')) // ... .onClick(() => { if (this.isExpandedOrHalfFolded()) { this.isLandscape = true } else { this.setOrientation(window.Orientation.USER_ROTATION_LANDSCAPE) } })
+```
+[VideoPlayView.ets](https://gitcode.com/harmonyos_samples/LandscapePortraitToggle/blob/master/entry/src/main/ets/views/VideoPlayView.ets#L242-L261) 设置为竖屏时，对应窗口方向为竖屏状态：this.setOrientation(window.Orientation.USER_ROTATION_PORTRAIT)，例如在返回竖屏状态时，进行横屏 -> 竖屏切换。
+
+ 收起自动换行深色代码主题复制
+```
+Image($r('app.media.icon_back')) // ... .onClick(() => { // ... this.setOrientation(window.Orientation.USER_ROTATION_PORTRAIT) // ... })
+```
+[VideoPlayView.ets](https://gitcode.com/harmonyos_samples/LandscapePortraitToggle/blob/master/entry/src/main/ets/views/VideoPlayView.ets#L185-L204) 说明需要注意，调用setPreferredOrientation()方法会改变窗口的显示方向。因此，如果在进入视频播放页时手动调用了旋转到横屏的方法，那么在退出页面时也必须手动调用该方法，以恢复窗口到竖屏状态。
+
+ **监听窗口变化**
+
+ 当传感器变化或用户手动设置窗口方向时，窗口显示和尺寸会发生变化。此时，可以通过获取窗口的宽高并进行对比，判断当前是竖屏还是横屏状态，然后利用这些数据对布局进行适配。
+
+ 监听窗口尺寸的变化可以通过window.[on('windowSizeChange')](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-window-window#onwindowsizechange7)进行实现。具体的措施如下：在需要进行横竖屏切换的页面进行窗口监听，一般建议是在aboutToAppear中执行：
+
+ 收起自动换行深色代码主题复制
+```
+aboutToAppear(): void { try { // ... this.windowClass.on('windowSizeChange', (size) => { // ... })
+ // ... } catch (err) { let error = err as BusinessError; Logger.error(TAG, `aboutToAppear err, error code: ${error.code}, error message: ${error.message}`); }}
+```
+[VideoPlayView.ets](https://gitcode.com/harmonyos_samples/LandscapePortraitToggle/blob/master/entry/src/main/ets/views/VideoPlayView.ets#L42-L117) 并在aboutToDisappear中取消监听：
+
+ 收起自动换行深色代码主题复制
+```
+aboutToDisappear(): void { // ... this.windowClass.off('windowSizeChange')}
+```
+[VideoPlayView.ets](https://gitcode.com/harmonyos_samples/LandscapePortraitToggle/blob/master/entry/src/main/ets/views/VideoPlayView.ets#L146-L153) 需要注意的是，当用户手动触发setOrientation设置为横屏状态时，即使当前手机处于垂直方向，窗口的状态也是横屏方向，即如下所示：
+
+ 
+
+ 
+
+ 此时，窗口的宽是竖屏状态下的高，高变为竖屏状态的宽。所以在监听窗口变化时，可以通过窗口的宽高大小关系来确定当前窗口的方向，并决定实际的横竖屏状态。
+
+ 收起自动换行深色代码主题复制
+```
+this.windowClass.on('windowSizeChange', (size) => { let viewWidth = this.getUIContext().px2vp(size.width) let viewHeight = this.getUIContext().px2vp(size.height) // ... if (viewWidth > viewHeight) { if (display.getFoldStatus() === display.FoldStatus.FOLD_STATUS_EXPANDED || display.getFoldStatus() === display.FoldStatus.FOLD_STATUS_HALF_FOLDED) { this.xComponentHeight = viewWidth * this.aspect this.xComponentWidth = viewWidth } else { this.xComponentWidth = viewHeight / this.aspect this.xComponentHeight = viewHeight this.isLandscape = true } this.windowClass.setSpecificSystemBarEnabled('navigationIndicator', false).catch((error: BusinessError) => { Logger.error(TAG, `setSpecificSystemBarEnabled err, error code: ${error.code}, error message: ${error.message}`); }) // hide bottom navigation bar } else { this.xComponentHeight = viewWidth * this.aspect this.xComponentWidth = viewWidth this.windowClass.setSpecificSystemBarEnabled('navigationIndicator', true).catch((error: BusinessError) => { Logger.error(TAG, `setSpecificSystemBarEnabled err, error code: ${error.code}, error message: ${error.message}`); }) // show bottom navigation bar this.isLandscape = false } // ...})
+```
+[VideoPlayView.ets](https://gitcode.com/harmonyos_samples/LandscapePortraitToggle/blob/master/entry/src/main/ets/views/VideoPlayView.ets#L51-L98) **进行布局适配**
+
+ 对应视频播放这类应用，属于只有播放窗口需要进行横竖屏，所以只需要对视频播放的组件内容进行横屏并进入全屏。可以利用UI状态更新的特点，来让播放窗口变为全屏，将播窗的尺寸定义为@State状态，并设置到XComponent组件上。
+
+ 收起自动换行深色代码主题复制
+```
+@State xComponentWidth: number = this.getUIContext().px2vp(display.getDefaultDisplaySync().width);@State xComponentHeight: number = this.getUIContext().px2vp(display.getDefaultDisplaySync().width * this.aspect);
+```
+[VideoPlayView.ets](https://gitcode.com/harmonyos_samples/LandscapePortraitToggle/blob/master/entry/src/main/ets/views/VideoPlayView.ets#L30-L31) 将状态变量与播放窗口绑定。
+
+ 收起自动换行深色代码主题复制
+```
+XComponent({ id: 'video_player_id', type: XComponentType.SURFACE, controller: this.xComponentController }) .onLoad(() => { // ... }) .width(this.xComponentWidth) .height(this.xComponentHeight)
+```
+[VideoPlayView.ets](https://gitcode.com/harmonyos_samples/LandscapePortraitToggle/blob/master/entry/src/main/ets/views/VideoPlayView.ets#L160-L178) 并且在之前监听窗口变化的回调中，对XComponentWidth和XComponentHeight进行动态修改，以适应窗口变化时横屏和竖屏的视频窗口布局。需要注意的是，在横屏时，视频播放的宽高应该和窗口的宽高一样，并且需要进入全屏状态。而竖屏时，视频播放的宽应该等于窗口的宽，但是高度应该是按照播放窗口比例乘以窗口的宽进行设置，并退出全屏状态。
+
+ 
+
+ 具体实现如下，进入视频详情页面内需要监听窗口尺寸的变化，并根据当前状态，实现对横竖屏状态的监听。根据状态变化修改对应XComponent的宽高，实现全屏或者隐藏状态栏和导航条的逻辑。
+
+ 说明需要注意的是，对于视频全屏效果，建议采用沉浸式开发。沉浸式效果的实现，可以参考[开发应用沉浸式效果](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-develop-apply-immersive-effects)。
+
+ 收起自动换行深色代码主题复制
+```
+this.windowClass.on('windowSizeChange', (size) => { let viewWidth = this.getUIContext().px2vp(size.width) let viewHeight = this.getUIContext().px2vp(size.height) // ... if (viewWidth > viewHeight) { if (display.getFoldStatus() === display.FoldStatus.FOLD_STATUS_EXPANDED || display.getFoldStatus() === display.FoldStatus.FOLD_STATUS_HALF_FOLDED) { this.xComponentHeight = viewWidth * this.aspect this.xComponentWidth = viewWidth } else { this.xComponentWidth = viewHeight / this.aspect this.xComponentHeight = viewHeight this.isLandscape = true } this.windowClass.setSpecificSystemBarEnabled('navigationIndicator', false).catch((error: BusinessError) => { Logger.error(TAG, `setSpecificSystemBarEnabled err, error code: ${error.code}, error message: ${error.message}`); }) // hide bottom navigation bar } else { this.xComponentHeight = viewWidth * this.aspect this.xComponentWidth = viewWidth this.windowClass.setSpecificSystemBarEnabled('navigationIndicator', true).catch((error: BusinessError) => { Logger.error(TAG, `setSpecificSystemBarEnabled err, error code: ${error.code}, error message: ${error.message}`); }) // show bottom navigation bar this.isLandscape = false } // ...})
+```
+[VideoPlayView.ets](https://gitcode.com/harmonyos_samples/LandscapePortraitToggle/blob/master/entry/src/main/ets/views/VideoPlayView.ets#L51-L98) 说明上述代码完成的是直板机上的旋转逻辑，在进入页面时进行窗口变化的监听，需要在退出页面时关闭监听功能。另外，对于在平板下，如果旋转行为仅触发页面旋转，不触发视频播放窗口的全屏，需要进行特殊处理。
+
+ 因此，需要对旋转行为进行限制，只有在直板机设备发生旋转时，将播放窗口全屏，对应平板上，在某些特定情况下，不需要视频播放窗口全屏，而是直接将布局进行旋转。
+
+ - 采用响应式布局中[断点](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-device-responsive-layout#section1532120147301)的方式进行判断
+
+ **锁定屏幕功能**
+
+ 某些视频应用支持屏幕锁定功能，在全屏状态下，实现对功能按钮的隐藏，并临时锁定屏幕的旋转，避免用户误触其他操作按钮。屏幕锁定后，应用可以在横屏和反向横屏之间翻转，不可由横屏旋转为竖屏，解锁后，如果当前屏幕处于竖屏，则应该恢复到竖屏显示。
+
+ 
+
+ 
+
+ 实现上述功能可以考虑以下实现：
+
+ 1. 判断当前控制中心的开关状态，如果是已经锁定情况下，则不需要进行额外处理
+2. 锁定时设置旋转策略为AUTO_ROTATION_LANDSCAPE，即支持横屏和反向横屏旋转，不受控制中心控制
+3. 解锁时需要回到支持三向旋转，即支持横屏、竖屏、反向横屏，并受到控制中心控制
+
+ 可以由上述推断功能实现得到如下代码：
+
+ 收起自动换行深色代码主题复制
+```
+Image(this.isVideoLock ? $r('app.media.icon_lock') : $r('app.media.icon_lock_open')) // ... .onClick(() => { this.isVideoLock = !this.isVideoLock // ... if (this.isVideoLock) { this.setOrientation(window.Orientation.AUTO_ROTATION_LANDSCAPE) } else { this.setOrientation(window.Orientation.AUTO_ROTATION_UNSPECIFIED) } })
+```
+[VideoPlayView.ets](https://gitcode.com/harmonyos_samples/LandscapePortraitToggle/blob/master/entry/src/main/ets/views/VideoPlayView.ets#L210-L236) 若应用需要在折叠屏不同折叠状态下设置不同的旋转策略，可以封装如下方法isExpandedOrHalfFolded()方法，判断当前折叠状态。
+
+ 收起自动换行深色代码主题复制
+```
+isExpandedOrHalfFolded(): boolean { let isExpandedOrHalfFolded: boolean = false; try { isExpandedOrHalfFolded = display.getFoldStatus() === display.FoldStatus.FOLD_STATUS_EXPANDED || display.getFoldStatus() === display.FoldStatus.FOLD_STATUS_HALF_FOLDED } catch (err) { let error = err as BusinessError; Logger.error(TAG, `isExpandedOrHalfFolded err, error code: ${error.code}, error message: ${error.message}`); } return isExpandedOrHalfFolded;}
+```
+[VideoPlayView.ets](https://gitcode.com/harmonyos_samples/LandscapePortraitToggle/blob/master/entry/src/main/ets/views/VideoPlayView.ets#L121-L131) 当要对设备控制中心状态进行监听时，可以通过settings.registerKeyObserver监听控制中心变化，其中orientationLockState是当前设备控制中心的状态。当设备控制中心的状态为“0”时，即代表旋转功能被系统锁定。此时在处理锁定功能代码中不需要进行旋转逻辑的处理，因为在控制中心旋转开关关闭的情况下，屏幕的旋转行为会受到限制，所以首先要考虑对控制中心的旋转锁定状态进行判断，可以参考如下代码实现对设备控制中心的状态监听：
+
+ 收起自动换行深色代码主题复制
+```
+settings.registerKeyObserver(this.context, settings.general.ACCELEROMETER_ROTATION_STATUS, settings.domainName.DEVICE_SHARED, () => { this.orientationLockState = settings.getValueSync(this.context, settings.general.ACCELEROMETER_ROTATION_STATUS, settings.domainName.DEVICE_SHARED) })
+```
+[VideoPlayView.ets](https://gitcode.com/harmonyos_samples/LandscapePortraitToggle/blob/master/entry/src/main/ets/views/VideoPlayView.ets#L104-L109) 排除了当前设备后，即可以进行通过应用内锁定按钮进行逻辑判断。锁定状态下，调用setOrientation设置为Landscape，此时可以在横屏和反向横屏旋转。解锁后，恢复到三向（横屏、竖屏、反向横屏）旋转策略：
+
+ 收起自动换行深色代码主题复制
+```
+if (this.isVideoLock) { this.setOrientation(window.Orientation.AUTO_ROTATION_LANDSCAPE)} else { this.setOrientation(window.Orientation.AUTO_ROTATION_UNSPECIFIED)}
+```
+[VideoPlayView.ets](https://gitcode.com/harmonyos_samples/LandscapePortraitToggle/blob/master/entry/src/main/ets/views/VideoPlayView.ets#L230-L234) 
+### 游戏类应用横屏开发
+对于游戏类应用，以横屏游戏居多，此类应用不需要在应用内进行开关控制，所以只需要在module.json5配置文件中进行相应的配置即可。一般有以下几种情况：
+
+ **默认仅为横屏**
+
+ 如果该应用默认为横屏状态，那么则需要在module.json5中的“orientation”字段进行配置为landscape。
+
+ 
+
+ **支持横屏和反向横屏**
+
+ 如果应用需要根据设备方向，决定是横屏还是反向横屏，则可以对module.json5配置中“orientation”设置为auto_rotation_landscape。
+
+ 
+
+ 
+
+ 说明如果需要跟随控制中心的旋转锁定，则可以选择配置为"auto_rotation_landscape_restricted"
+
+ **支持竖屏切换横屏**
+
+ 此类适用于一些游戏大厅等应用，由于游戏大厅内，主页可能为竖屏，部分应用为横屏。从竖屏进入横屏时，需要调用设置窗口旋转的方法进行控制。具体案例可以参考视频播放的横竖屏切换。
+
+ 
+## 常见问题
+ 
+### window.getLastWindow的方式获取窗口出现延迟
+1. 由于getLastWindow底层原因，需要经过查找获取实例，一定程度上会有性能损耗，可能会出现已经发生横屏或者竖屏切换的情况下，状态栏还没切换的情况。
+2. 使用windowStage.getMainWindowSync的同步方法获取窗口实例。收起自动换行深色代码主题复制 ``` try { this.windowUtil = new WindowUtil(windowStage.getMainWindowSync());} catch (error) { let err = error as BusinessError; hilog.error(0x0000, 'TestLog', `Failed to get main window. Code: ${err.code}, message: ${err.message}`);} ``` [EntryAbility.ets](https://gitcode.com/harmonyos_samples/ResponsiveLayout/blob/master/entry/src/main/ets/entryability/EntryAbility.ets#L46-L51)
+
+ 
+### 竖屏时进入任务中心，进入横屏的应用，在onpageshow时获取的display信息不符合期望
+目前display接口规则还不够清晰，建议使用window的getWindowProperties()接口处理。
+
+ 
+### 如何获取屏幕的宽度、高度、分辨率和横竖屏等信息
+引入屏幕属性模块，可以通过调用[display.getDefaultDisplaySync()](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-display#displaygetdefaultdisplaysync9)方法获取display对象后，从而获取到屏幕的宽度、高度、分辨率和横竖屏等信息。

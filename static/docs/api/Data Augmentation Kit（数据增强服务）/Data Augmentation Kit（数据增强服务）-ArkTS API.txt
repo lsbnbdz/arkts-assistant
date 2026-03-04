@@ -1,0 +1,6 @@
+# [ArkTS API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-arkts)
+
+- **[rag（检索增强生成）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-rag-api)**
+ - **[retrieval（检索器）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-retrieval-api)**
+ - **[knowledgeProcessor（知识加工）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-knowledgeprocessor-api)**
+ - **[localChatModel（端侧问答模型）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-localchatmodel-api)**

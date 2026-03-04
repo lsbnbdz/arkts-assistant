@@ -1,0 +1,11 @@
+# [双目指令](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-vector-calculation-binocular)
+
+- **[Add](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-add)**
+ - **[Sub](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-cannkit-sub)**
+ - **[Mul](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-vector-calculation-binocular-mul)**
+ - **[Div](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-vector-calculation-binocular-div)**
+ - **[Max](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-vector-calculation-binocular-max)**
+ - **[Min](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-vector-calculation-binocular-min)**
+ - **[And](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-vector-calculation-binocular-and)**
+ - **[Or](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-vector-calculation-binocular-or)**
+ - **[更多样例](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkitvectorcalculation-binocularinstructions)**

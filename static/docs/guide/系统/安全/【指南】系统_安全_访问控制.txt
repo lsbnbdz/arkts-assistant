@@ -1,0 +1,1 @@
+[用户身份认证访问控制简介](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/huks-identity-authentication-overview)  [开发指导](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/huks-identity-authentication-dev)

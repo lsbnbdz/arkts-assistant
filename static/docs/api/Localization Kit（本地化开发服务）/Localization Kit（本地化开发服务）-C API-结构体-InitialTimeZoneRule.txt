@@ -1,0 +1,31 @@
+# [InitialTimeZoneRule](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-i18n-initialtimezonerule)
+
+## 目录
+- [概述](#概述)
+- [汇总](#汇总)
+  - [成员变量](#成员变量)
+
+收起自动换行深色代码主题复制
+```
+typedef struct InitialTimeZoneRule {...} InitialTimeZoneRule
+```
+ 
+## 概述
+PhonePC/2in1TabletTVWearable起始时区规则。
+
+ **起始版本：** 22
+
+ **相关模块：** [i18n](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-i18n)
+
+ **所在头文件：** [timezone.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-timezone-h)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| int32_t rawOffset | 时区的原始偏移量。 |
+| int32_t dstSavings | 夏令时的偏移量。 |

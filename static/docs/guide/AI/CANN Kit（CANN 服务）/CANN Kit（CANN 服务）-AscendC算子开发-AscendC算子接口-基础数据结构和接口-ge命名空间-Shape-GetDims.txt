@@ -1,0 +1,37 @@
+# [GetDims](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getdims)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119176597_section104281mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119176597_section104284mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119176597_section104288mcpsimp)
+- [返回值](#zh-cn_topic_0000002119176597_section104291mcpsimp)
+- [异常处理](#zh-cn_topic_0000002119176597_section104314mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119176597_section104317mcpsimp)
+
+## 函数功能
+获取Shape所有维度组成的向量。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+std::vector GetDims() const
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| std::vector | Shape的所有维度组成的向量。 |
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

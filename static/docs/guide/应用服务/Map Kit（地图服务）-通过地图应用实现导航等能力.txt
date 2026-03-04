@@ -1,0 +1,118 @@
+# [通过地图应用实现导航等能力](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/map-petalmaps)
+
+## 目录
+- [场景介绍](#section1045991317315)
+- [接口说明](#section116043716599)
+- [地图应用使用的坐标类型](#section128689184916)
+- [开发步骤](#section1197220413445)
+  - [打开地图应用首页](#section19358151974410)
+  - [打开地图应用进行地点搜索](#section21255341458)
+  - [打开地图应用查看地点详情](#section18701134217444)
+  - [打开地图应用规划路线](#section95400034511)
+  - [打开地图应用进行导航](#section2056410160459)
+  - [打开地图应用打车页面](#section298319302496)
+
+## 场景介绍
+ 从5.0.3(15)开始，支持地图应用首页、搜索地点、查看地点详情、规划路线和进行导航功能；从6.0.1(21)开始，支持地图应用发起打车功能。
+
+ 本章节将向您介绍如何打开地图应用实现如下能力：
+
+ - 打开地图应用首页
+ - 打开地图应用搜索地点
+ - 打开地图应用查看地点详情
+ - 打开地图应用规划路线
+ - 打开地图应用进行导航
+ - 打开地图应用发起打车
+ 
+ 
+## 接口说明
+ 调用地图应用的功能主要通过[petalMaps](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-petal-maps)命名空间下的[openMapHomePage](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-petal-maps#section1117619561413)、[openMapTextSearch](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-petal-maps#section2098315915160)、[openMapPoiDetail](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-petal-maps#section14159526181316)、[openMapRoutePlan](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-petal-maps#section1765318218173)、[openMapNavi](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-petal-maps#section16894648175)、[openMapTaxi](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-petal-maps#section147354416415)等接口实现，更多接口及使用方法请参见[接口文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-petal-maps)。
+
+ 展开
+| 接口说明 | 描述 |
+| --- | --- |
+| TextSearchParams | 文本搜索的参数。 |
+| PoiDetailParams | POI详情的参数。 |
+| RoutePlanParams | 路线规划的参数。 |
+| NaviParams | 导航的参数。 |
+| TaxiParams | 打车的参数。 |
+| openMapHomePage(context: common.Context): Promise | 打开地图应用首页。 |
+| openMapTextSearch(context: common.Context, textSearchParams: TextSearchParams): Promise | 打开地图应用搜索地点。 |
+| openMapPoiDetail(context: common.Context, poiDetailParams: PoiDetailParams): Promise | 打开地图应用查看地点详情。 |
+| openMapRoutePlan(context: common.Context, routePlanParams: RoutePlanParams): Promise | 打开地图应用规划路线。 |
+| openMapNavi(context: common.Context, naviParams: NaviParams): Promise | 打开地图应用进行导航。 |
+| openMapTaxi(context: common.Context, taxiParams: TaxiParams): Promise | 打开地图应用打车页面。 |
+
+ 
+## 地图应用使用的坐标类型
+ 在国内站点，中国大陆使用GCJ02坐标系，中国台湾使用WGS84坐标系。
+
+ 在海外站点，统一使用WGS84坐标系。坐标系转换参考：[坐标纠偏](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/map-convert-coordinate)。
+
+ 
+## 开发步骤
+ 导入相关模块
+
+ 收起自动换行深色代码主题复制
+```
+import { petalMaps } from '@kit.MapKit'
+```
+ 
+### 打开地图应用首页
+ 通过[openMapHomePage](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-petal-maps#section1117619561413)，打开地图应用首页。
+
+ 收起自动换行深色代码主题复制
+```
+try { await petalMaps.openMapHomePage(this.getUIContext().getHostContext());} catch (e) { console.error(`code:${e.code}, message:${e.message}`);}
+```
+ **图1**打开地图应用首页 
+
+ 
+
+ 
+### 打开地图应用进行地点搜索
+ 通过[openMapTextSearch](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-petal-maps#section2098315915160)，传入搜索目标名称，打开地图应用进行地点搜索。 收起自动换行深色代码主题复制
+```
+try { let params: petalMaps.TextSearchParams = { destinationName: '云谷' }; await petalMaps.openMapTextSearch(this.getUIContext().getHostContext(), params);} catch (e) { console.error(`code:${e.code}, message:${e.message}`);}
+```
+ **图2**打开地图应用进行地点搜索 
+
+ 
+
+ 
+### 打开地图应用查看地点详情
+ 通过[openMapPoiDetail](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-petal-maps#section14159526181316)，传入地点的经纬度，打开地图应用查看地点详情。 收起自动换行深色代码主题复制
+```
+try { let params: petalMaps.PoiDetailParams = { destinationPosition: { latitude: 32.02065982629459, longitude: 118.788899213002 }, destinationPoiId: '563233191438217472' }; await petalMaps.openMapPoiDetail(this.getUIContext().getHostContext(), params);} catch (e) { console.error(`code:${e.code}, message:${e.message}`);}
+```
+ **图3**打开地图应用查看地点详情 
+
+ 
+
+ 
+### 打开地图应用规划路线
+ 通过[openMapRoutePlan](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-petal-maps#section1765318218173)，传入终点经纬度，打开地图应用规划路线。 收起自动换行深色代码主题复制
+```
+try { let params: petalMaps.RoutePlanParams = { destinationPosition: { latitude: 31.983015468224288, longitude: 118.78058590757131 } }; await petalMaps.openMapRoutePlan(this.getUIContext().getHostContext(), params);} catch (e) { console.error(`code:${e.code}, message:${e.message}`);}
+```
+ **图4**打开地图应用规划路线 
+
+ 
+
+ 
+### 打开地图应用进行导航
+ 通过[openMapNavi](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-petal-maps#section16894648175)，传入终点经纬度，打开地图应用发起导航。 收起自动换行深色代码主题复制
+```
+try { let params: petalMaps.NaviParams = { destinationPosition: { latitude: 31.983015468224288, longitude: 118.78058590757131 } }; await petalMaps.openMapNavi(this.getUIContext().getHostContext(), params);} catch (e) { console.error(`code:${e.code}, message:${e.message}`);}
+```
+ **图5**打开地图应用进行导航 
+
+ 
+
+ 
+### 打开地图应用打车页面
+ 通过[openMapTaxi](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-petal-maps#section147354416415)，传入终点经纬度，打开地图应用发起打车。 收起自动换行深色代码主题复制
+```
+try { let params: petalMaps.TaxiParams = { destinationPosition: { latitude: 31.983015468224288, longitude: 118.78058590757131 } }; await petalMaps.openMapTaxi(this.getUIContext().getHostContext(), params);} catch (e) { console.error(`code:${e.code}, message:${e.message}`);}
+```
+ **图6**打开地图应用进行打车

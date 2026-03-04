@@ -1,0 +1,37 @@
+# [构造函数和析构函数](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-shape-construction-and-destructor)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083777118_section104176mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083777118_section104179mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083777118_section104187mcpsimp)
+- [返回值](#zh-cn_topic_0000002083777118_section104211mcpsimp)
+- [异常处理](#zh-cn_topic_0000002083777118_section104214mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083777118_section104217mcpsimp)
+
+## 函数功能
+Shape构造函数和析构函数。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+Shape();~Shape() = default;explicit Shape(const std::vector &dims);
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| dims | 输入 | Shape的取值内容。 Shape表征张量数据的维度大小，用std::vector表征每一个维度的具体大小。 |
+
+ 
+## 返回值
+Shape构造函数返回Shape类型的对象。
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

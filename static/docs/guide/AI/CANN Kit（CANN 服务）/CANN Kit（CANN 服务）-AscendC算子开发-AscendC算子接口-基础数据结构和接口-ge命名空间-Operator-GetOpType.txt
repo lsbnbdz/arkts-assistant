@@ -1,0 +1,42 @@
+# [GetOpType](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getoptype)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083617418_section100173mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083617418_section100176mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083617418_section100184mcpsimp)
+- [返回值](#zh-cn_topic_0000002083617418_section100207mcpsimp)
+- [异常处理](#zh-cn_topic_0000002083617418_section100231mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083617418_section100234mcpsimp)
+
+## 函数功能
+获取算子类型。
+
+ 
+## 函数原型
+注意数据类型为string的接口后续版本会废弃，建议使用数据类型为非string的接口。
+
+ 收起自动换行深色代码主题复制
+```
+std::string GetOpType() const;graphStatus GetOpType(AscendString &type) const;
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| type | 输出 | 算子类型。 |
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| graphStatus | GRAPH_FAILED：失败。 GRAPH_SUCCESS：成功。 |
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

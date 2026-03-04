@@ -1,0 +1,5 @@
+# [IME Kit（输入法开发服务）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ime-api)
+
+- **[ArkTS API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ime-arkts)**
+ - **[C API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ime-c)**
+ - **[错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ime-arkts-errcode)**

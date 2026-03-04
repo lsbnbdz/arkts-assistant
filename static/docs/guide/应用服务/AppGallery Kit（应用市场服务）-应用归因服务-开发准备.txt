@@ -1,0 +1,6 @@
+# [开发准备](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/store-attribution-preparations)
+
+- **[注册企业账号](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/store-attribution-config-agc)**
+ - **[管理归因角色](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/store-attribution-register)**
+ - **[管理转化事件](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/store-attribution-trigger)**
+ - **[管理归因策略](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/appgallery-attribution-strategy)**

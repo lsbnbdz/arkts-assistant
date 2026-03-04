@@ -1,0 +1,39 @@
+# [MutableFormat](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-mutableformat)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083616910_section94333mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083616910_section94336mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083616910_section94340mcpsimp)
+- [返回值](#zh-cn_topic_0000002083616910_section94343mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083616910_section94348mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083616910_section94351mcpsimp)
+
+## 函数功能
+获取Tensor的format，包含运行时format和原始format。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+StorageFormat &MutableFormat()
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+format引用。
+
+ 关于StorageFormat类型的定义，请参见[StorageFormat](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-storageformat-constructor)。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+Tensor tensor{{{8, 3, 224, 224}, {16, 3, 224, 224}}, // shape {ge::FORMAT_ND, ge::FORMAT_FRACTAL_NZ, {}}, // format kFollowing, // placement ge::DT_FLOAT16, // dt nullptr}; auto fmt = tensor.MutableFormat(); 
+```

@@ -1,0 +1,2 @@
+- **[连接迁移通知 (C/C++)](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/networkboost-nethandovercallback-c)**
+ - **[迁移模式设置 (C/C++)](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/networkboost-reporthandovermode-c)**

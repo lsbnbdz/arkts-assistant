@@ -1,0 +1,39 @@
+# [SetOriginShape](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-setoriginshape)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119176989_section105434mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119176989_section105438mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119176989_section105442mcpsimp)
+- [返回值](#zh-cn_topic_0000002119176989_section105465mcpsimp)
+- [异常处理](#zh-cn_topic_0000002119176989_section105468mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119176989_section105471mcpsimp)
+
+## 函数功能
+向TensorDesc中设置Tensor的原始Shape。
+
+ 该Shape是指原始网络模型的Shape。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+void SetOriginShape(const Shape &originShape);
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| originShape | 输入 | 向TensorDesc设置原始的originShape对象。 |
+
+ 
+## 返回值
+无
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

@@ -1,0 +1,39 @@
+# [GetOriginFormat](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tensordesc-getoriginformat)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083776794_section104817mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083776794_section104821mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083776794_section104826mcpsimp)
+- [返回值](#zh-cn_topic_0000002083776794_section104829mcpsimp)
+- [异常处理](#zh-cn_topic_0000002083776794_section104857mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083776794_section104860mcpsimp)
+
+## 函数功能
+获取TensorDesc所描述Tensor的原始Format。
+
+ 该Format是指原始网络模型的Format。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+Format GetOriginFormat() const;
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| Format | TensorDesc所描述的Tensor的originFormat信息。 关于Format数据类型的定义，请参见Format。 |
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

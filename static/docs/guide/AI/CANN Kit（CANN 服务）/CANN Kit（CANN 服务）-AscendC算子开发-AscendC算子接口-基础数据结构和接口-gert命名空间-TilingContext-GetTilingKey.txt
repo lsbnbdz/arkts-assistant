@@ -1,0 +1,37 @@
+# [GetTilingKey](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-gettilingkey)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083616958_section94981mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083616958_section94984mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083616958_section94988mcpsimp)
+- [返回值](#zh-cn_topic_0000002083616958_section94991mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083616958_section94994mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083616958_section94997mcpsimp)
+
+## 函数功能
+获取tiling key。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+uint64_t GetTilingKey() const;
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+返回tiling key。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+ge::graphStatus Tiling4XXX(TilingContext* context) { auto tiling_key = context->GetTilingKey(); // ... }
+```

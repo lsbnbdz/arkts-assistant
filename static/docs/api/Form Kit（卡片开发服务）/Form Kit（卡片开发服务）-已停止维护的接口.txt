@@ -1,0 +1,6 @@
+# [已停止维护的接口](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/form-arkts-dep)
+
+- **[@ohos.application.formBindingData (卡片数据绑定类)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-application-formbindingdata)**
+ - **[@ohos.application.formError (formError)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-application-formerror)**
+ - **[@ohos.application.formInfo (formInfo)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-application-forminfo)**
+ - **[@ohos.application.formProvider (formProvider)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-application-formprovider)**

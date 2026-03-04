@@ -1,0 +1,198 @@
+# [Class (WebSchemeHandlerRequest)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webschemehandlerrequest)
+
+## 目录
+- [getHeader12+](#getheader12)
+- [getRequestUrl12+](#getrequesturl12)
+- [getRequestMethod12+](#getrequestmethod12)
+- [getReferrer12+](#getreferrer12)
+- [isMainFrame12+](#ismainframe12)
+- [hasGesture12+](#hasgesture12)
+- [getHttpBodyStream12+](#gethttpbodystream12)
+- [getRequestResourceType12+](#getrequestresourcetype12)
+- [getFrameUrl12+](#getframeurl12)
+
+通过WebSchemeHandler拦截到的请求。
+
+ 说明 - 本模块首批接口从API version 9开始支持。后续版本如有新增内容，则采用上角标单独标记该内容的起始版本。
+- 本Class首批接口从API version 12开始支持。
+- 示例效果请以真机运行为准。
+
+ 
+## getHeader12+
+PhonePC/2in1TabletTVWearablegetHeader(): Array<WebHeader>
+
+ 获取资源请求头信息。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| Array< WebHeader > | 返回资源请求头信息。 |
+
+ **示例：**
+
+ 完整示例代码参考[onRequestStart](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webschemehandler#onrequeststart12)。
+
+ 
+## getRequestUrl12+
+PhonePC/2in1TabletTVWearablegetRequestUrl(): string
+
+ 获取资源请求的URL信息。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| string | 返回资源请求的URL信息。 |
+
+ **示例：**
+
+ 完整示例代码参考[onRequestStart](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webschemehandler#onrequeststart12)。
+
+ 
+## getRequestMethod12+
+PhonePC/2in1TabletTVWearablegetRequestMethod(): string
+
+ 获取请求方法。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| string | 返回请求方法。 |
+
+ **示例：**
+
+ 完整示例代码参考[onRequestStart](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webschemehandler#onrequeststart12)。
+
+ 
+## getReferrer12+
+PhonePC/2in1TabletTVWearablegetReferrer(): string
+
+ 获取referrer。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| string | 获取到的referrer。 |
+
+ **示例：**
+
+ 完整示例代码参考[onRequestStart](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webschemehandler#onrequeststart12)。
+
+ 
+## isMainFrame12+
+PhonePC/2in1TabletTVWearableisMainFrame(): boolean
+
+ 判断资源请求是否为主frame。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| boolean | 判断资源请求是否为主frame，如果资源请求是主frame则返回true，否则返回false。 |
+
+ **示例：**
+
+ 完整示例代码参考[onRequestStart](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webschemehandler#onrequeststart12)。
+
+ 
+## hasGesture12+
+PhonePC/2in1TabletTVWearablehasGesture(): boolean
+
+ 获取资源请求是否与手势（如点击）相关联。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| boolean | 返回资源请求是否与手势（如点击）相关联，如果返回资源请求与手势相关联则返回true，否则返回false。 |
+
+ **示例：**
+
+ 完整示例代码参考[onRequestStart](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webschemehandler#onrequeststart12)。
+
+ 
+## getHttpBodyStream12+
+PhonePC/2in1TabletTVWearablegetHttpBodyStream(): WebHttpBodyStream | null
+
+ 获取资源请求中的WebHttpBodyStream。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| WebHttpBodyStream | null | 返回资源请求中的WebHttpBodyStream，如果没有则返回null。 |
+
+ **示例：**
+
+ 完整示例代码参考[onRequestStart](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webschemehandler#onrequeststart12)。
+
+ 
+## getRequestResourceType12+
+PhonePC/2in1TabletTVWearablegetRequestResourceType(): WebResourceType
+
+ 获取资源请求的资源类型。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| WebResourceType | 返回资源请求的资源类型。 |
+
+ **示例：**
+
+ 完整示例代码参考[onRequestStart](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webschemehandler#onrequeststart12)。
+
+ 
+## getFrameUrl12+
+PhonePC/2in1TabletTVWearablegetFrameUrl(): string
+
+ 获取触发此请求的Frame的URL。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| string | 返回触发此请求的Frame的URL。 |
+
+ **示例：**
+
+ 完整示例代码参考[onRequestStart](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webschemehandler#onrequeststart12)。

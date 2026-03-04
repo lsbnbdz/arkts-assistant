@@ -1,0 +1,44 @@
+# [CreateFrom](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-createfrom)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083776834_section96886mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083776834_section96893mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083776834_section96899mcpsimp)
+- [返回值](#zh-cn_topic_0000002083776834_section96922mcpsimp)
+- [异常处理](#zh-cn_topic_0000002083776834_section96948mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083776834_section96951mcpsimp)
+
+## 函数功能
+将传入的DT类型（支持int64_t、float、std::string类型）的参数转换为对应T类型（支持INT、FLOAT、STR类型）的参数。
+
+ - 支持将int64_t类型转换为INT类型。
+- 支持将float类型转换为FLOAT类型。
+- 支持将std::string类型转换为STR类型。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+templatestatic T CreateFrom(DT &&val)
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| val | 输入 | DT类型的参数。 |
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| INTFLOATSTR | T类型的参数。 |
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

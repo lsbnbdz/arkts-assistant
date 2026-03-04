@@ -1,0 +1,32 @@
+# [GetString](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getstring)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119256993_section96712mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119256993_section96715mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119256993_section96719mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119256993_section96722mcpsimp)
+- [返回值](#zh-cn_topic_0000002119256993_section96725mcpsimp)
+
+## 函数功能
+获取字符串地址。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+const char_t *GetString() const;
+```
+ 
+## 约束说明
+无
+
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| char_t | 字符串地址。 |

@@ -1,0 +1,37 @@
+# [读取锻炼记录](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/health-wearable-exercisesequence-manage)
+
+## 目录
+- [场景介绍](#zh-cn_topic_0000002360645741_section14160161816615)
+- [约束与限制](#section9536115118596)
+- [接口说明](#zh-cn_topic_0000002360645741_section125701062528)
+- [开发前检查](#zh-cn_topic_0000002360645741_section056221011249)
+- [开发步骤](#zh-cn_topic_0000002360645741_section12532109253)
+
+## 场景介绍
+ 读取最新一条锻炼记录。
+
+ 
+## 约束与限制
+ 从5.1.1(19) Release版本开始支持。
+
+ 
+## 接口说明
+ 展开
+| 接口名 | 描述 |
+| --- | --- |
+| readData(request: ExerciseSequenceReadRequest): Promise | 查询最新一条锻炼记录。 |
+
+ 说明 当前ExerciseSequenceReadRequest里的时间参数暂不生效，仅支持返回手表侧最新一条数据。
+
+ 
+## 开发前检查
+ - 完成[申请运动健康服务](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/health-apply)与[配置Client ID](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/health-configuration-client-id)。
+ - 接口首次调用前，需先使用[init](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-healthstore#section1571935817328)方法进行初始化。
+ - 需先通过[用户授权](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/health-add-permissions#section0247115178)接口引导用户授权，用户授权对应数据类型权限后，才有权限调用接口操作相关数据类型数据。
+ - 错误码请参考[ArkTS API错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-healthservice)，常见问题请参考[Health Service Kit常见问题](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/health-faqs)。
+ 
+ 
+## 开发步骤
+ 1. 导入运动健康服务功能模块及相关公共模块。 收起自动换行深色代码主题复制 ``` import { healthStore } from '@kit.HealthServiceKit';import { hilog } from '@kit.PerformanceAnalysisKit'; ```
+ 2. 创建查询请求。 收起自动换行深色代码主题复制 ``` // 查询跑步记录const sequenceReadRequest: healthStore.ExerciseSequenceReadRequest = { startTime: 1698040800000, endTime: 1698042600000, exerciseType: healthStore.exerciseSequenceHelper.running.EXERCISE_TYPE, count: 1, sortOrder: 1, readOptions: { withPartialDetails: ['exerciseHeartRate', 'altitude'] }}; ```
+ 3. 调用[readData](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-healthstore#zh-cn_topic_0000001768344397_section410015582312)方法执行查询请求，并处理返回结果。 收起自动换行深色代码主题复制 ``` try { const runningSequences = await healthStore.readData(sequenceReadRequest); hilog.info(0x0000, 'testTag', 'Succeeded in reading data.'); runningSequences.forEach((runningSequence) => { hilog.info(0x0000, 'testTag', `the start time is ${runningSequence.startTime}.`); hilog.info(0x0000, 'testTag', `the end time is ${runningSequence.endTime}.`); Object.keys(runningSequence.summaries).forEach((key) => { Object.keys(runningSequence.summaries[key]).forEach((fieldName) => { hilog.info(0x0000, 'testTag', `the summaries of ${key} field ${fieldName} is ${runningSequence.summaries[key][fieldName]}.`); }); }); });} catch (err) { hilog.error(0x0000, 'testTag', `Failed to read data. Code: ${err.code}, message: ${err.message}`);} ```

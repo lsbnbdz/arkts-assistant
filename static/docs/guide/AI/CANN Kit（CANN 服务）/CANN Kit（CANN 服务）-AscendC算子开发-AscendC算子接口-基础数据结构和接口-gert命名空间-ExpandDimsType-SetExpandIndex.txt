@@ -1,0 +1,40 @@
+# [SetExpandIndex](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-setexpandindex)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119257077_section89341mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119257077_section89344mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119257077_section89348mcpsimp)
+- [返回值](#zh-cn_topic_0000002119257077_section89372mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119257077_section89375mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119257077_section89378mcpsimp)
+
+## 函数功能
+将第index轴设置为补维轴。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+void SetExpandIndex(const AxisIndex index)
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| index | 输入 | 第index根轴为补维轴。 收起自动换行深色代码主题复制 ``` using AxisIndex = uint64_t; ``` |
+
+ 
+## 返回值
+无
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+ExpandDimsType type1("1001"); type1.SetExpandIndex(1); // 补维规则mask_=1101
+```

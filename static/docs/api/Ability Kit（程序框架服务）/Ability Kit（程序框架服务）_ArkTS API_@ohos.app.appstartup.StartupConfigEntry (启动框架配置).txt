@@ -1,0 +1,77 @@
+## 目录
+- [导入模块](#导入模块)
+- [StartupConfigEntry](#startupconfigentry)
+  - [onConfig](#onconfig)
+  - [onRequestCustomMatchRule20+](#onrequestcustommatchrule20)
+
+本模块提供[应用启动框架](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/app-startup)配置的能力。
+
+    说明      本模块首批接口从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+
+      本模块接口仅可在Stage模型下使用。
+
+## 导入模块
+          支持设备PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+import { StartupConfigEntry } from '@kit.AbilityKit';
+```
+             
+## StartupConfigEntry
+         支持设备PhonePC/2in1TabletTVWearable         
+### onConfig
+          支持设备PhonePC/2in1TabletTVWearableonConfig?(): StartupConfig
+
+     在回调[AbilityStage.onCreate](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-app-ability-abilitystage#oncreate)前，若该AbilityStage对应的HAP中启动框架配置文件中[定义了启动框架配置](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/app-startup#%E5%AE%9A%E4%B9%89%E5%90%AF%E5%8A%A8%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE)，则会触发该回调。
+
+     开发者可以在该回调中设置启动框架配置信息，详细使用方法可参考[设置启动参数](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/app-startup#%E8%AE%BE%E7%BD%AE%E5%90%AF%E5%8A%A8%E5%8F%82%E6%95%B0)章节。
+
+     系统能力：SystemCapability.Ability.AppStartup
+
+     返回值：
+
+|  |
+|  |
+|  |
+| StartupConfig | 启动框架配置信息。 |
+
+          示例：
+
+     收起自动换行深色代码主题复制
+```
+import { StartupConfig, StartupConfigEntry, StartupListener } from '@kit.AbilityKit';import { BusinessError } from '@kit.BasicServicesKit';import { hilog } from '@kit.PerformanceAnalysisKit';
+export default class MyStartupConfigEntry extends StartupConfigEntry {  onConfig() {    hilog.info(0x0000, 'testTag', `onConfig`);    let onCompletedCallback = (error: BusinessError<void>) => {      hilog.info(0x0000, 'testTag', `onCompletedCallback`);      if (error) {        hilog.info(0x0000, 'testTag', 'onCompletedCallback: %{public}d, message: %{public}s', error.code, error.message);      } else {        hilog.info(0x0000, 'testTag', `onCompletedCallback: success.`);      }    }    let startupListener: StartupListener = {      'onCompleted': onCompletedCallback    }    let config: StartupConfig = {      'timeoutMs': 10000,      'startupListener': startupListener    }    return config;  }}
+```
+             
+### onRequestCustomMatchRule20+
+          支持设备PhonePC/2in1TabletTVWearableonRequestCustomMatchRule(want: Want): string
+
+     在回调[AbilityStage.onCreate](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-app-ability-abilitystage#oncreate)前，若该AbilityStage对应的HAP中启动框架配置文件中[定义了启动框架配置](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/app-startup#%E5%AE%9A%E4%B9%89%E5%90%AF%E5%8A%A8%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE)，则会在[StartupConfigEntry.onConfig](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-app-appstartup-startupconfigentry#onconfig)后触发该回调。
+
+     开发者可以在该回调中，可以根据调用方传入启动UIAbility的Want中的不同参数来返回不同的自定义匹配规则。启动框架会将其与启动任务配置的matchRules中customization字段进行匹配。若匹配成功，任务将在自动模式执行。详细匹配规则请参考[添加任务匹配规则](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/app-startup#%E6%B7%BB%E5%8A%A0%E4%BB%BB%E5%8A%A1%E5%8C%B9%E9%85%8D%E8%A7%84%E5%88%99)章节。
+
+     该接口通常用于无法直接通过uri、action或意图名称规则来匹配启动任务的场景，可以使用本接口对匹配规则进一步细化。
+
+     系统能力：SystemCapability.Ability.AppStartup
+
+     参数：
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| want | Want | 是 | 启动UIAbility的Want信息。 |
+
+          返回值：
+
+|  |
+|  |
+|  |
+| string | 返回自定义匹配规则值，用于匹配启动任务是否自动执行。 |
+
+          示例：
+
+     收起自动换行深色代码主题复制
+```
+import { StartupConfig, StartupConfigEntry, StartupListener, Want } from '@kit.AbilityKit';import { BusinessError } from '@kit.BasicServicesKit';import { hilog } from '@kit.PerformanceAnalysisKit';
+export default class MyStartupConfigEntry extends StartupConfigEntry {
+  // ...
+  onRequestCustomMatchRule(want: Want): string {    if (want?.parameters?.customParam == 'param1') {      return 'customRule1';    }    return '';  }}
+```

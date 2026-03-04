@@ -1,0 +1,53 @@
+# [SetInput](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-setinput)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083776590_section100707mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083776590_section100714mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083776590_section100736mcpsimp)
+- [返回值](#zh-cn_topic_0000002083776590_section100794mcpsimp)
+- [异常处理](#zh-cn_topic_0000002083776590_section100817mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083776590_section100820mcpsimp)
+
+## 函数功能
+设置算子Input，即由哪个算子的输出连到本算子。
+
+ 有如下几种SetInput方法：
+
+ - 如果指定srcOprt第0个Output为当前算子Input，使用第一个函数原型设置当前算子Input，不需要指定srcOprt的Output名称。
+- 如果指定srcOprt的其它Output为当前算子Input，使用第二个函数原型设置当前算子Input，需要指定srcOprt的Output名称。
+- 如果指定srcOprt的其它Output为当前算子Input，使用第三个函数原型设置当前算子Input，需要指定srcOprt的第index个Output。
+
+ 
+## 函数原型
+注意数据类型为string的接口后续版本会废弃，建议使用数据类型为非string的接口。
+
+ 收起自动换行深色代码主题复制
+```
+Operator &SetInput(const std::string &dst_name, const Operator &src_oprt);Operator &SetInput(const char_t *dst_name, const Operator &src_oprt);Operator &SetInput(const std::string &dst_name, const Operator &src_oprt, const std::string &name);Operator &SetInput(const char_t *dst_name, const Operator &src_oprt, const char_t *name);Operator &SetInput(const std::string &dst_name, const Operator &src_oprt, uint32_t index);Operator &SetInput(const char_t *dst_name, const Operator &src_oprt, uint32_t index);Operator &SetInput(uint32_t dst_index, const Operator &src_oprt, uint32_t src_index);Operator &SetInput(const char_t *dst_name, uint32_t dst_index, const Operator &src_oprt, const char_t *name);Operator &SetInput(const char_t *dst_name, uint32_t dst_index, const Operator &src_oprt);
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| dst_name | 输入 | 当前算子Input名称。 |
+| src_oprt | 输入 | Input名称为dst_name的输入算子对象。 |
+| src_index | 输入 | src_oprt的第src_index个输出。 |
+| name | 输入 | srcOprt的Output名称。 |
+| index | 输入 | srcOprt的第index个Output。 |
+| dst_index | 输入 | 名称为dst_name的第dst_index个动态输入。 |
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| Operator& | 当前算子本身。 |
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

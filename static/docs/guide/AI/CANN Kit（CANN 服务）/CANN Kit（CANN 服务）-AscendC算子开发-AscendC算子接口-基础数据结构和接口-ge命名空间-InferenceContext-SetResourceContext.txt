@@ -1,0 +1,35 @@
+# [SetResourceContext](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-setresourcecontext)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119257025_section97629mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119257025_section97633mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119257025_section97637mcpsimp)
+- [返回值](#zh-cn_topic_0000002119257025_section97669mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119257025_section97672mcpsimp)
+
+## 函数功能
+为标识为key的资源，设置资源上下文对象，并交由资源上下文管理器管理。
+
+ 此接口一般由写类型的资源类算子调用，如stack push等。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+graphStatus SetResourceContext(const ge::AscendString &key, ResourceContext *resource_context)
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| key | 输入 | 资源唯一标识。 |
+| resource_context | 输入 | 资源上下文对象指针，可参见GetResourceContext接口的返回值。 |
+
+ 
+## 返回值
+graphStatus：GRAPH_SUCCESS，代表成功；GRAPH_FAILED，代表失败。
+
+ 
+## 约束说明
+若使用[Create](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-create)接口创建InferenceContext时未传入resource context管理器指针，则该接口返回失败。

@@ -1,0 +1,39 @@
+# [InferShapeAndType](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-infershapeandtype)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119176669_section98835mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119176669_section98841mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119176669_section98845mcpsimp)
+- [返回值](#zh-cn_topic_0000002119176669_section98848mcpsimp)
+- [异常处理](#zh-cn_topic_0000002119176669_section98871mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119176669_section98874mcpsimp)
+
+## 函数功能
+推导Operator输出的shape和DataType。
+
+ 关于DataType数据类型的定义，请参见[DataType](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-ge-datatype)。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+graphStatus InferShapeAndType();
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| graphStatus | 推导成功，返回GRAPH_SUCCESS，否则，返回GRAPH_FAILED。 |
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

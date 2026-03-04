@@ -1,0 +1,42 @@
+# [GetListInt](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getlistint)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119176349_section91867mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119176349_section91870mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119176349_section91874mcpsimp)
+- [返回值](#zh-cn_topic_0000002119176349_section91897mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119176349_section91902mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119176349_section91905mcpsimp)
+
+## 函数功能
+获取list int类型的属性值。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+const TypedContinuousVector *GetListInt(const size_t index) const
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| index | 输入 | 属性在IR原型定义中以及在OP_IMPL注册中的索引。 |
+
+ 
+## 返回值
+指向属性值的指针。
+
+ 关于TypedContinuousVector类型的定义，请参见[TypedContinuousVector](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-typedcontinuousvector)。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+const RuntimeAttrs * runtime_attrs = kernel_context->GetAttrs(); const TypedContinuousVector *attr0 = runtime_attrs->GetListInt(0);
+```

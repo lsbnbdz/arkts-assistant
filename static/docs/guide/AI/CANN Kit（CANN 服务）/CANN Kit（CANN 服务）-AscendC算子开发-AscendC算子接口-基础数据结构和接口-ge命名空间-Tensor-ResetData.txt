@@ -1,0 +1,34 @@
+# [ResetData](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-resetdata)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119176569_section107113mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119176569_section107116mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119176569_section107120mcpsimp)
+- [返回值](#zh-cn_topic_0000002119176569_section107123mcpsimp)
+- [异常处理](#zh-cn_topic_0000002119176569_section107126mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119176569_section107129mcpsimp)
+
+## 函数功能
+释放Tensor中数据内存。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+std::unique_ptr ResetData();
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+返回释放后的内存地址和删除器。
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

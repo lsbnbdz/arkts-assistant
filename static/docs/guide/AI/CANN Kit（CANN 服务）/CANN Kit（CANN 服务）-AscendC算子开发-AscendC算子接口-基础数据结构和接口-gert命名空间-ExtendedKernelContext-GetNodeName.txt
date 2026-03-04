@@ -1,0 +1,37 @@
+# [GetNodeName](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getnodename)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083617370_section89896mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083617370_section89899mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083617370_section89903mcpsimp)
+- [返回值](#zh-cn_topic_0000002083617370_section89906mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083617370_section89909mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083617370_section89912mcpsimp)
+
+## 函数功能
+获取算子的名称。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+const char *GetNodeName() const
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+算子的名称。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+// 假设已存在KernelContext *context auto extend_context = reinterpret_cast(context); auto node_name = extend_context->GetNodeName();
+```

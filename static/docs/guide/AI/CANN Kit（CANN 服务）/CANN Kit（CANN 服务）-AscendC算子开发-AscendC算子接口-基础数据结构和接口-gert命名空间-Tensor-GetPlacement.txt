@@ -1,0 +1,39 @@
+# [GetPlacement](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-ge-tensor-getplacement)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083617042_section94419mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083617042_section94422mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083617042_section94426mcpsimp)
+- [返回值](#zh-cn_topic_0000002083617042_section94429mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083617042_section94434mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083617042_section94437mcpsimp)
+
+## 函数功能
+获取tensor的placement。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+TensorPlacement GetPlacement() const
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+返回tensor的placement。
+
+ 关于TensorPlacement类型的定义，请参见[TensorPlacement](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tensorplacement)。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+Tensor tensor{{{8, 3, 224, 224}, {16, 3, 224, 224}}, // shape {ge::FORMAT_ND, ge::FORMAT_FRACTAL_NZ, {}}, // format kFollowing, // placement ge::DT_FLOAT16, // dt nullptr}; auto placement = tensor.GetPlacement(); // kFollowing
+```

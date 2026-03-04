@@ -1,0 +1,6 @@
+系统提供网络质量评估、网络场景识别、弱信号预测等网络质量的相关能力，应用可以根据网络质量信息快速调整应用数传策略（缓存、调速等），实现网络自适应。同时应用还可以通过系统的传输体验反馈接口将应用传输体验告知系统，系统综合决策后进行网络加速，从而提升用户的上网体验。
+
+ - **[网络质量评估](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/networkboost-qoscallback)**
+ - **[网络场景识别](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/networkboost-scenecallback)**
+ - **[应用传输体验反馈](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/networkboost-appreportqoe)**
+ - **[弱网感知判决](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/networkboost-weaksignaljudge)**

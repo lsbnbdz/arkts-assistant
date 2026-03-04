@@ -1,0 +1,62 @@
+# [识别目标形状](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arengine-c-get-plane-shape)
+
+## 概要
+ 从5.0.0(12)开始，AR Engine支持识别目标形状的能力。
+
+ 本章节介绍如何对目标物体进行形状识别，可识别的形状包括矩形和圆形。
+
+ 
+## 引入AR Engine
+ 开发者可参考管理AR会话章节的[引入AR Engine](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arengine-c-arsession#section1410827131110)。
+
+ 
+## 创建AR会话
+ 创建AR会话并配置为目标形状识别模式。
+
+ 收起自动换行深色代码主题复制
+```
+AREngine_ARSession *arSession = nullptr;// 创建AR会话。HMS_AREngine_ARSession_Create(nullptr, nullptr, &arSession);AREngine_ARConfig *arConfig = nullptr;// 创建AR会话配置器。HMS_AREngine_ARConfig_Create(arSession, &arConfig);// 设置语义识别模式为目标形状识别。HMS_AREngine_ARConfig_SetSemanticMode(arSession, arConfig, ARENGINE_SEMANTIC_MODE_TARGET);// 配置器设置给AR会话。HMS_AREngine_ARSession_Configure(arSession, arConfig);
+```
+ 
+## 创建可跟踪对象列表
+ 创建一个可跟踪对象列表targetList，用于存放AR Engine运行过程中检测到的所有可跟踪对象。
+
+ 收起自动换行深色代码主题复制
+```
+AREngine_ARTrackableList *targetList = nullptr;HMS_AREngine_ARTrackableList_Create(arSession, &targetList);
+```
+ 
+## 获取当前环境中的可跟踪对象
+ 调用[HMS_AREngine_ARSession_GetAllTrackables](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arengine-capi-arengine#gac5b39338f95317671d8de6d4f409cf9c)函数，检测当前环境中的所有可跟踪对象，并将结果存放在targetList中。
+
+ 收起自动换行深色代码主题复制
+```
+HMS_AREngine_ARSession_GetAllTrackables(arSession, ARENGINE_TRACKABLE_TARGET, targetList);
+```
+ 
+## 获取可跟踪对象数量
+ 调用[HMS_AREngine_ARTrackableList_GetSize](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arengine-capi-arengine#gad9729d4436f3d969286f31b33d07513e)函数获取当前可跟踪对象数量，结果存放在targetSize中。
+
+ 收起自动换行深色代码主题复制
+```
+int32_t targetSize = 0;HMS_AREngine_ARTrackableList_GetSize(arSession, targetList, &targetSize);
+```
+ 当targetSize等于0时，代表当前环境中无可跟踪对象。
+
+ 当targetSize等于1时，代表当前环境中仅存在1个可跟踪对象。
+
+ 当targetSize大于1时，代表当前环境中存在多个可跟踪对象。
+
+ 
+## 遍历并识别物体形状
+ 1. 当环境中存在一个或多个可跟踪对象时，依次遍历targetList中所有可跟踪对象进行目标形状识别。 收起自动换行深色代码主题复制 ``` for (int i = 0; i < targetSize; ++i) { // 遍历可跟踪对象，进行形状识别。} ```
+ 2. 对于第i个对象，创建并获取对象实例。 收起自动换行深色代码主题复制 ``` AREngine_ARTrackable *target = nullptr;HMS_AREngine_ARTrackableList_AcquireItem(arSession, targetList, i, &target); ```
+ 3. 获取该实例跟踪状态，当且仅当其跟踪状态为ARENGINE_TRACKING_STATE_TRACKING时，才可进行形状识别。 收起自动换行深色代码主题复制 ``` AREngine_ARTrackingState outTrackingState;HMS_AREngine_ARTrackable_GetTrackingState(arSession, target, &outTrackingState); if (AREngine_ARTrackingState::ARENGINE_TRACKING_STATE_TRACKING != outTrackingState) { continue;} ```
+ 4. 获取该实例目标形状，识别结果存放在label中。 收起自动换行深色代码主题复制 ``` AREngine_ARTargetShapeLabel label = ARENGINE_TARGET_SHAPE_UNKNOWN;HMS_AREngine_ARTarget_GetShapeType(arSession, reinterpret_cast(target), &label); ``` 其中，[AREngine_ARTargetShapeLabel](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arengine-capi-arengine#gaed68dc13cc314da98d79c88b12d3ae49)为枚举类型，描述了目标物体形状。
+ 
+ 
+## 销毁可跟踪对象列表
+ 收起自动换行深色代码主题复制
+```
+HMS_AREngine_ARTrackableList_Destroy(targetList);
+```

@@ -1,0 +1,125 @@
+# [控件交互](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/map-controls-and-interaction)
+
+## 目录
+- [场景介绍](#section1575812294573)
+- [接口说明](#section1880231055910)
+- [开发步骤](#section1410092635811)
+  - [缩放控件](#section553mcpsimp)
+  - [比例尺](#section18193132811916)
+  - [指南针](#section37222564580)
+  - [地图Logo](#section7664121217221)
+
+## 场景介绍
+ 本章节将向您介绍如何使用地图的控件。
+
+ 控件是指浮在地图组件上的一系列用于操作地图的组件，例如缩放按钮、定位按钮、比例尺等。
+
+ 
+
+ 
+
+ 
+## 接口说明
+ 以下是地图的控件相关接口，该功能有2种实现方式：
+
+ - 地图初始化时，可在初始化参数[MapOptions](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-common#section816451553012)中设置是否启用控件功能，详细讲解见[显示地图](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/map-presenting)章节。
+ - 通过调用[MapComponentController](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-mapcomponentcontroller#section816451553012)提供的set方法实现相关控件的开启或关闭。
+ 
+ 展开
+| 接口名 | 描述 |
+| --- | --- |
+| setZoomControlsEnabled(enabled: boolean): void | 设置是否启用缩放控制器。 |
+| setMyLocationEnabled(myLocationEnabled: boolean): void | 设置是否启用我的位置图层。 |
+| setMyLocationControlsEnabled(enabled: boolean): void | 设置是否启用我的位置按钮。 |
+| setScaleControlsEnabled(enabled: boolean): void | 设置是否启用比例尺。 |
+| setScalePosition(point: mapCommon.MapPoint): void | 设置比例尺控件的位置。 |
+| setAlwaysShowScaleEnabled(enabled: boolean): void | 设置是否始终显示比例尺。 |
+| setCompassControlsEnabled(enabled: boolean): void | 设置是否启用指南针。 |
+| setLogoAlignment(alignment: mapCommon.LogoAlignment): void | 设置地图Logo的对齐方式。 |
+
+ 
+## 开发步骤
+ mapController对象在初始化地图时获取，初始化地图功能在[显示地图](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/map-presenting)章节中有详细讲解。
+
+ 
+### 缩放控件
+ Map Kit提供了内置的缩放控件，默认情况下是开启的。
+
+ 收起自动换行深色代码主题复制
+```
+this.mapController.setZoomControlsEnabled(true);
+```
+ 
+
+ 
+
+ 
+### 比例尺
+ Map Kit提供了内置的比例尺控件，默认情况下是关闭的。
+
+ 收起自动换行深色代码主题复制
+```
+// 开启比例尺控件 this.mapController.setScaleControlsEnabled(true);
+```
+ 
+
+ 
+
+ **调整比例尺位置：**
+
+ 可通过[setScalePosition](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-mapcomponentcontroller#section8413193042817)方法设置比例尺控件的位置。 收起自动换行深色代码主题复制
+```
+let point: mapCommon.MapPoint = { // 以当前地图组件左上角为原点，向右移动1000px positionX: 1000, // 以当前地图组件左上角为原点，向下移动1000px positionY: 1000};this.mapController.setScalePosition(point);
+```
+ 
+
+ 
+
+ **获取当前层级的比例尺大小：**
+
+ 可通过[getScaleLevel](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-mapcomponentcontroller#section19511102142917)方法获取当前层级比例尺大小。 收起自动换行深色代码主题复制
+```
+let level = this.mapController.getScaleLevel();
+```
+ **获取比例尺控件宽高：**
+
+ 可通过[getScaleControlsHeight](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-mapcomponentcontroller#section155328471187)和[getScaleControlsWidth](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-mapcomponentcontroller#section192221515111317)方法获取当前比例尺控件宽高。 收起自动换行深色代码主题复制
+```
+// 获取比例尺控件的高度let height = this.mapController.getScaleControlsHeight();// 获取比例尺控件的宽度let width = this.mapController.getScaleControlsWidth();
+```
+ **设置比例尺控件常显：**
+
+ 可通过[setAlwaysShowScaleEnabled](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-mapcomponentcontroller#section3541416552)方法设置比例尺控件常显，通过[isAlwaysShowScaleEnabled](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-mapcomponentcontroller#section197705711554)方法查询比例尺控件是否常显。 收起自动换行深色代码主题复制
+```
+// 设置比例尺控件常显this.mapController.setAlwaysShowScaleEnabled(true);// 查询比例尺控件是否常显let scaleEnabled: boolean = this.mapController.isAlwaysShowScaleEnabled();
+```
+ 
+### 指南针
+ Map Kit提供了内置的指南针控件，默认情况下是开启的，控件位置默认显示在地图的右上角。如果是启用状态，当地图不是指向正北方向或者发生倾斜时，地图右上角会显示一个指南针图标，点击指南针可使地图旋转为正北方向并且取消倾斜；当地图为正北方向且未发生倾斜时，指南针图标隐藏。如果是禁用状态，将不会显示指南针图标。
+
+ 收起自动换行深色代码主题复制
+```
+// 开启指南针控件this.mapController.setCompassControlsEnabled(true);
+```
+ 
+
+ 
+
+ **调整指南针位置：**
+
+ 可通过[setCompassPosition](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-mapcomponentcontroller#section285112882417)方法设置指南针控件的位置。 收起自动换行深色代码主题复制
+```
+let point: mapCommon.MapPoint = { // 以当前地图组件左上角为原点，向右移动1000px positionX: 1000, // 以当前地图组件左上角为原点，向下移动1000px positionY: 1000};this.mapController.setCompassPosition(point);
+```
+ 
+
+ 
+
+ 
+### 地图Logo
+ Map Kit提供了调整地图Logo对齐方式的方法[setLogoAlignment](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-mapcomponentcontroller#section2538830161810)和调整地图边界与Logo之间的间距的方法[setLogoPadding](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-mapcomponentcontroller#section115618542213)。需注意，地图Logo不允许被遮挡，可通过[setLogoPadding](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-mapcomponentcontroller#section115618542213)方法设置地图边界区域，来避免logo被遮挡。
+
+ 收起自动换行深色代码主题复制
+```
+// 将Logo放置在右下角位置this.mapController.setLogoAlignment(mapCommon.LogoAlignment.BOTTOM_END);// 设置地图边界与Logo之间的间距，单位：pxlet padding: mapCommon.Padding = { right: 50, bottom: 50};this.mapController.setLogoPadding(padding);
+```

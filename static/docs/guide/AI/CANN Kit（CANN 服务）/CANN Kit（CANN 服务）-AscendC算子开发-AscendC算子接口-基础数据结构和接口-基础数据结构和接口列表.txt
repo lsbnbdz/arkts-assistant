@@ -1,0 +1,100 @@
+# [基础数据结构和接口列表](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-basic-data-structure-and-api-list)
+
+## 目录
+- [gert命名空间](#zh-cn_topic_0000002119176709_section86724mcpsimp)
+- [ge命名空间](#zh-cn_topic_0000002119176709_section86910mcpsimp)
+
+本文档提供了进行算子开发和图开发时依赖的基础数据结构和接口说明，按照命名空间进行分类：
+
+ - ge（Graph Engine）ge是Graph Engine的缩写，代表一个通用的命名空间，专注于构图和图编译处理。此命名空间提供了一套丰富的API，用于构建和管理复杂的图结构。它的核心优势在于其通用性和灵活性，能够满足各种图处理需求，无论是在设计阶段还是在编译过程中。
+- gert（GE Runtime）gert是GE Runtime的缩写，这个命名空间专门为运行时环境而设计，提供了一系列的高性能数据结构，以确保在执行时能够提供最佳性能。
+
+ 
+## gert命名空间
+ **表1**gert命名空间展开
+| 分类 | 数据结构/接口名称 | 功能描述 |
+| --- | --- | --- |
+| 类和结构体 | AnchorInstanceInfo | 用来描述一个算子的IR定义原型的输入信息与实际输入之间的关系。 |
+| CompileTimeTensorDesc | 用于描述编译时的Tensor描述信息，包含dtype信息以及format信息。 |
+| ComputeNodeInfo | 用于将算子的相关编译信息进行序列化保存，以便可以在图执行阶段能够高效地获取这些信息。 |
+| ContinuousVectorVector | 在内存中开辟一块连续的空间，用于存储数据的描述信息以及实际的数据元素，元素类型为ContinuousVector结构。 |
+| ContinuousVector | 本类是一个POD类，在内存中开辟一块连续的空间用于存储描述信息以及实际内存数据。 |
+| ExpandDimsType | ExpandDimsType类基于补维后的shape，描述了补维规则。 |
+| ExtendedKernelContext | InferShapeContext、TilingContext等的基类，ExtendedKernelContext中提供的方法如获取算子type、name、属性等接口均可以在InferShape、Tiling时调用。 |
+| InferDataTypeContext | 用于datatype推导的上下文结构。 |
+| InferShapeContext | 用于shape推导的上下文结构。 |
+| InferShapeRangeContext | 用于shape range推导的上下文结构。 |
+| OpImplRegisterV2 | OpImplRegisterV2类作为注册接口类，提供了一系列算子原型注册接口，供开发者注册指定算子类型的Tiling函数、InferShape函数、私有属性等信息。开发者调用算子原型注册接口进行注册时会间接使用到该类。 |
+| Range | Range类用于描述一个对象的上下界。 |
+| RuntimeAttrs | 用于保存算子属性。 |
+| Shape | Shape结构体用于描述一个tensor的shape。 |
+| StorageFormat | StorageFormat格式包括原始格式、运行时格式、补维规则。 |
+| StorageShape | 该类描述了tensor的shape，包含两个信息：origin_shape以及storage_shape。 |
+| TilingData | 用于存储Tensor数据。 |
+| TensorPlacementUtils | 提供一组函数，用于判断TensorPlacement的位置。 |
+| Tensor | Tensor类用来描述一个tensor对象的信息以及行为，包含：shape信息、format信息、datatype信息以及tensor数据内容tensordata。 |
+| TilingContext | 用于算子Tiling的上下文结构。 |
+| TilingData | 用于存储Tiling数据。 |
+| TypedContinuousVector | 本类继承自ContinuousVector类，与ContinuousVector类不同的是MutableData和GetData返回的是指定类型的地址，而不是void *。因此称为Typed。 |
+| 枚举 | TensorPlacement | 表达Tensor存储位置的枚举值。 |
+
+ 
+## ge命名空间
+ **表2**ge命名空间展开
+| 分类 | 数据结构/接口名称 | 功能描述 |
+| --- | --- | --- |
+| 类和结构体 | Allocator | 支持使用开发者注册的外置allocator功能，所在头文件位于CANN软件安装后文件存储路径下的“include/ge/ge_allocator.h”路径。 |
+| AscendString | 用于存储字符串。 头文件位于CANN软件安装后文件存储路径下的include/graph/ascend_string.h库文件：libgraph.so |
+| AttrValue | 用于存储属性值。 头文件位于CANN软件安装后文件存储路径下的include/graph/attr_value.h库文件：libgraph_base.so |
+| AutoMappingSubgraphIOIndexFuncRegister | 内部关联接口，插件适配API调用时间接调用，开发者不直接感知。 |
+| FrameworkRegistry | 内部关联接口，插件适配API调用时间接调用，开发者不直接感知。 |
+| InferenceContext | 获取推理上下文对象，并设置相应对象的形状和数据类型，主要用于资源类算子。 |
+| InferFormatFuncRegister | 算子InferFormat函数注册接口，此接口被其他头文件引用，一般不用由算子开发者直接调用。 |
+| InferShapeFuncRegister | 算子InferShape函数注册接口，此接口被其他头文件引用，一般不用由算子开发者直接调用。 |
+| InferValueRangeFuncRegister | 算子InferValueRangeFuncRegister函数注册接口，此接口被其他头文件引用，一般不由算子开发者直接调用。 |
+| ListTensorType | ListTensorType类用以定义输入或者输出支持的数据类型，是TensorType的封装，用于标识支持多个数据类型的情况。 |
+| MemBlock | 配合Allocator类使用，支持使用开发者注册的外置allocator功能，所在头文件位于CANN软件安装后文件存储路径下的“include/ge/ge_allocator.h”路径。 |
+| OperatorCreatorRegister | 算子注册接口，注册一个算子原型，此接口被其他头文件引用，一般不用由算子开发者直接调用。 |
+| OperatorFactory | 内部关联接口，此接口被其他头文件引用，一般不用由算子开发者直接调用。 |
+| Operator | 算子类。 头文件位于CANN软件安装后文件存储路径下的include/graph/operator.h库文件：libgraph.so |
+| OpReceiver | 用于算子编写适配插件进行AI框架适配时，进行映射关系注册。 |
+| OpRegistrationData | 用于算子编写适配插件进行AI框架适配时，进行映射关系注册。 |
+| Promote | Promote类用于表示输出数据类型为输入或属性指定的数据类型间的提升类型。 |
+| ShapeAndType | 可设置、获取相应对象的形状和数据类型。 |
+| Shape | 用于存储Tensor的shape信息。 头文件位于CANN软件安装后文件存储路径下的include/graph/tensor.h库文件：libgraph_base.so |
+| TensorDescInfo | 存储Tensor描述信息。 |
+| TensorDesc | 用于存取、管理Tensor描述信息。 头文件位于CANN软件安装后文件存储路径下的include/graph/tensor.h库文件：libgraph_base.so |
+| TensorType | TensorType类用以定义输入或者输出支持的数据类型。 |
+| Tensor | Tensor结构。 头文件位于CANN软件安装后文件存储路径下的include/graph/tensor.h库文件：libgraph_base.so |
+| TypeUtils | 类型转换工具类。 |
+| VerifyFuncRegister | 算子verifyFunc函数注册接口，此接口被其他头文件引用，一般不用由算子开发者直接调用。 |
+| 函数 | ConvertToAscendString | 模板函数，接受一个模板参数T，并将其转换为AscendString类型。这个函数的主要功能是将不同类型的字符串转换为AscendString类型。 |
+| ConvertToListAscendString | 定义了一个模板函数ConvertToListAscendString，用于将不同类型的字符串列表转换为AscendString类型的列表。 |
+| GetC0Format | 根据实际format获取C0 format的值。 |
+| GetC0Value | 从实际format中解析出c0 format信息。 |
+| GetFormatFromC0 | 根据传入的format和c0format信息得到实际的format。 |
+| GetFormatFromSub | 根据传入的主format和子format信息得到实际的format。 |
+| GetFormatFromSubAndC0 | 根据传入的主format，子format和c0format信息得到实际的format。 |
+| GetFormatName | 根据传入的format类型，获取format的字符串描述。 |
+| GetPrimaryFormat | 从实际format中解析出主format信息。 |
+| GetSizeByDataType | 根据传入的data_type，获取该data_type所占用的内存大小。 |
+| GetSizeInBytes | 根据传入的element_count和data_type，获取element_count个该data_type所占用的内存总大小。 |
+| GetSubFormat | 从实际format中解析出子format信息。 |
+| HasC0Format | 判断实际format中是否包含C0 format。 |
+| HasSubFormat | 判断实际format中是否包含子format。 |
+| 类型定义 | ge::graphStatus | 返回码状态说明。 |
+| 枚举 | DataType | 数据类型枚举值。 |
+| Format | 数据格式枚举值 |
+| 宏 | BROADCAST_INFER | 提供公共函数宏封装，供算子开发者开发InferShape函数。该函数基于2个输入的shape，设置输出的shape。该宏只是设置shape，未设置dtype。 |
+| COMMON_INFER_FUNC_REG | 注册算子的InferShape函数。 |
+| DECLARE_ERRORNO | 错误码及描述注册宏。 |
+| ELMTWISE_INFER_SHAPEANDTYPE | 提供公共函数宏封装，供算子开发者开发InferShape函数。该函数基于输入的shape和dtype，设置输出的shape和dtype。 |
+| IMPLEMT_COMMON_INFERFUNC | 封装算子的Common_InferShape函数。 |
+| IMPLEMT_INFERFORMAT_FUNC | 封装算子的inferFormat函数。 |
+| IMPLEMT_INFERFUNC | 封装算子的InferShape函数。 |
+| IMPLEMT_VERIFIER | 封装算子的Verify函数。 |
+| INFER_FORMAT_FUNC_REG | 注册算子的InferFormat实现。 |
+| INFER_FUNC_REG | 注册算子的InferShape函数。 |
+| 原型定义接口（REG_OP） | 原型定义接口。 |
+| 原型定义衍生接口说明 | 原型定义衍生接口。 |
+| VERIFY_FUNC_REG | 注册算子的Verify函数。 |

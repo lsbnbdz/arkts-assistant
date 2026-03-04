@@ -1,0 +1,34 @@
+{
+  "doc-75wsk": {
+    "title": "调测调优",
+    "headings": [
+      "调测调优"
+    ],
+    "preview": "调测调优 - **Performance Analysis Kit（性能分析服务）** - **Test Kit（应用测试服务）** - **调试命令**",
+    "char_count": 417,
+    "image_count": 0,
+    "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/system-debug-optimize",
+    "path": "",
+    "rel_path": "guide/系统/调测调优/调测调优.txt",
+    "catalog": "调测调优",
+    "objectId": "doc-75wsk",
+    "nodeName": "document",
+    "keywords": [
+      "调测调优",
+      "Kit",
+      "服务",
+      "Performance",
+      "Analysis",
+      "Test",
+      "kit",
+      "性能分析",
+      "应用测试",
+      "调试命令",
+      "system",
+      "debug",
+      "optimize",
+      "performance",
+      "analysis"
+    ]
+  }
+}

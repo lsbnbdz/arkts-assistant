@@ -1,0 +1,25 @@
+## 目录
+- [接口说明](#接口说明)
+- [开发步骤](#开发步骤)
+
+调用者需感知用户注册凭据（人脸、指纹、口令）的变化，可使用该接口查询当前用户注册凭据的状态。
+
+## 接口说明
+          具体参数、返回值、错误码等描述，请参考对应的[API文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-useriam-userauth#userauthgetenrolledstate12)。
+
+| 接口名称 | 功能描述 |
+| --- | --- |
+| getEnrolledState(authType : UserAuthType): EnrolledState | 根据指定的认证类型，查询用户注册凭据的状态，用于感知注册凭据变化。 |
+
+## 开发步骤
+                       [申请权限](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/prerequisites#%E7%94%B3%E8%AF%B7%E6%9D%83%E9%99%90)：ohos.permission.ACCESS_BIOMETRIC。
+
+             指定认证类型（[UserAuthType](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-useriam-userauth#userauthtype8)），调用[getEnrolledState](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-useriam-userauth#userauthgetenrolledstate12)接口查询用户注册凭据的状态。
+
+          以查询用户人脸注册凭据的状态为例：
+
+     收起自动换行深色代码主题复制
+```
+import { BusinessError } from  '@kit.BasicServicesKit';import { userAuth } from '@kit.UserAuthenticationKit';
+try {  let enrolledState = userAuth.getEnrolledState(userAuth.UserAuthType.FACE);  console.info(`get current enrolled state success, enrolledState: ${JSON.stringify(enrolledState)}`);} catch (error) {  const err: BusinessError = error as BusinessError;  console.error(`get current enrolled state failed, Code is ${err?.code}, message is ${err?.message}`);}
+```

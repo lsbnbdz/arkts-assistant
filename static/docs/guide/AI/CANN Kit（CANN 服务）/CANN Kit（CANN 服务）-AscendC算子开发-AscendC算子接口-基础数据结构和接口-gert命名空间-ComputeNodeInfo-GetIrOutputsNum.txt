@@ -1,0 +1,37 @@
+# [GetIrOutputsNum](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getiroutputsnum)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083776518_section88087mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083776518_section88090mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083776518_section88094mcpsimp)
+- [返回值](#zh-cn_topic_0000002083776518_section88097mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083776518_section88100mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083776518_section88103mcpsimp)
+
+## 函数功能
+获取算子IR原型定义中的输出个数。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+size_t GetIrOutputsNum() const
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+IR原型中定义的输出个数，size_t类型。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+size_t index = compute_node_info->GetIrOutputsNum();
+```

@@ -1,0 +1,48 @@
+# [DeQue](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tque-deque)
+
+## 目录
+- [功能说明](#zh-cn_topic_0000002091939862_section27572mcpsimp)
+- [函数原型](#zh-cn_topic_0000002091939862_section27575mcpsimp)
+- [参数说明](#zh-cn_topic_0000002091939862_section27589mcpsimp)
+- [支持的型号](#zh-cn_topic_0000002091939862_section27592mcpsimp)
+- [注意事项](#zh-cn_topic_0000002091939862_section27600mcpsimp)
+- [返回值](#zh-cn_topic_0000002091939862_section27603mcpsimp)
+- [调用示例](#zh-cn_topic_0000002091939862_section27608mcpsimp)
+
+## 功能说明
+将Tensor从队列中取出，用于后续处理。
+
+ 
+## 函数原型
+- 无需指定源和目的位置收起自动换行深色代码主题复制 ``` template __aicore__ inline LocalTensor DeQue() ```
+- 需要指定源和目的位置通过[TQueBind](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tquebind)绑定VECIN和VECOUT可实现VECIN和VECOUT内存复用，如下接口用于存在Vector计算的场景下实现复用，在出队时需要指定源和目的位置，不存在Vector计算的场景下可直接调用LocalTensor DeQue()出队接口。收起自动换行深色代码主题复制 ``` template __aicore__ inline LocalTensor DeQue() ```
+
+ **图1**将LocalTensor通过EnQue放入A1/B1的Queue中后再通过DeQue搬出
+ 
+## 参数说明
+无
+
+ 
+## 支持的型号
+Kirin9020系列处理器
+
+ KirinX90系列处理器
+
+ 
+## 注意事项
+无
+
+ 
+## 返回值
+从队列中取出的[LocalTensor](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-localtensor)。
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+// 接口: DeQue Tensor AscendC::TPipe pipe; AscendC::TQue que; int num = 4; int len = 1024; pipe.InitBuffer(que, num, len); AscendC::LocalTensor tensor1 = que.AllocTensor(); que.EnQue(tensor1); AscendC::LocalTensor tensor2 = que.DeQue(); // 将tensor从VECOUT的Queue中搬出 
+```
+ 收起自动换行深色代码主题复制
+```
+// 接口: DeQue Tensor，指定特定的Src/Dst position AscendC::TPipe pipe; AscendC::TQueBind que; int num = 4; int len = 1024; pipe.InitBuffer(que, num, len); AscendC::LocalTensor tensor1 = que.AllocTensor(); que.EnQue(tensor1); // 将tensor从VECIN的Queue中搬出 AscendC::LocalTensor tensor2 = que.DeQue();
+```

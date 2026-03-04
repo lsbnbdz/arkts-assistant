@@ -1,0 +1,37 @@
+# [GetRealDimCnt](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getrealdimcnt)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083617170_section104947mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083617170_section104950mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083617170_section104954mcpsimp)
+- [返回值](#zh-cn_topic_0000002083617170_section104957mcpsimp)
+- [异常处理](#zh-cn_topic_0000002083617170_section104980mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083617170_section104983mcpsimp)
+
+## 函数功能
+获取TensorDesc所描述Tensor的实际维度个数。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+int64_t GetRealDimCnt() const;
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| int64_t | TensorDesc所描述的实际维度个数。 |
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

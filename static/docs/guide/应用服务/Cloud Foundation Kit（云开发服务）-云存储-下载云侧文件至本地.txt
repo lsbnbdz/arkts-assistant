@@ -1,0 +1,28 @@
+# [下载云侧文件至本地](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cloudfoundation-storage-download-file)
+
+文件上传至云侧后，开发者可以将云侧文件下载到本地设备中。
+
+ 
+## 约束与限制
+ 支持Phone、Tablet设备。并且从5.1.0(18)版本开始，新增支持Wearable设备；从5.1.1(19)版本开始，新增支持TV设备。
+
+ 
+## 前提条件
+ - 已[初始化存储实例](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cloudfoundation-storage-initialize-bucket)。
+ - 已[上传指定文件至云侧](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cloudfoundation-storage-upload-file)。
+ 
+ 
+## 操作步骤
+ 1. 调用[StorageBucket.downloadFile](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/cloudfoundation-cloudstorage#section02263293319)接口创建下载任务，监听下载任务的progress、completed、failed等事件。
+ 2. 启动下载任务。 说明 下载成功后，文件将保存在[context.cacheDir](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-inner-application-context#%E5%B1%9E%E6%80%A7)目录下。
+ 
+ 完整示例代码如下：
+
+ 收起自动换行深色代码主题复制
+```
+import { cloudStorage } from '@kit.CloudFoundationKit';import { BusinessError, request } from '@kit.BasicServicesKit';import { hilog } from '@kit.PerformanceAnalysisKit';import { GlobalContext } from '../common/GlobalContext';
+let storageBucket: cloudStorage.StorageBucket = cloudStorage.bucket();
+@Componentexport struct testPage { build() { }
+ // 下载云侧文件至本地 download() { // 获取云存储默认实例中fileName文件，保存至本地 storageBucket.downloadFile(GlobalContext.getContext(), { localPath: `screenshot.jpg`, // 文件将会保存在context.cacheDir目录下 cloudPath: `screenshot/screenshot_20250115_155321.jpg` // 云侧文件路径，支持传入“文件目录/文件名”，或仅传入文件名 }).then((task: request.agent.Task) => { task.on('progress', (progress) => { hilog.info(0x0000, 'testTag', `on progress ${JSON.stringify(progress)} `); }); task.on('completed', (progress) => { hilog.info(0x0000, 'testTag', `on completed ${JSON.stringify(progress)} `); }); task.on('failed', (progress) => { hilog.info(0x0000, 'testTag', `on failed ${JSON.stringify(progress)} `); }); task.on('response', (response) => { hilog.info(0x0000, 'testTag', `on response ${JSON.stringify(response)} `); }); task.start((err: BusinessError) => { if (err) { hilog.error(0x0000, 'testTag', `Failed to start a file download task, code: ${err.code}, message: ${err.message}`); } else { hilog.info(0x0000, 'testTag', `Succeeded in starting a file download task. result: ${task.tid}`); } }); }).catch((err: BusinessError) => { hilog.error(0x0000, 'testTag', `Failed to download file, code: ${err.code}, message: ${err.message}`); }) }}
+```
+ 说明 如果本地已存在同名文件，将出现错误，可以通过设置[DownloadParams.overwrite](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/cloudfoundation-cloudstorage#section14137913019)来决定是否覆盖本地文件。

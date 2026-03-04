@@ -1,0 +1,42 @@
+# [GetInputShape](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-infershapecontext-getinputshape)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083776790_section90264mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083776790_section90267mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083776790_section90271mcpsimp)
+- [返回值](#zh-cn_topic_0000002083776790_section90294mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083776790_section90299mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083776790_section90302mcpsimp)
+
+## 函数功能
+根据算子输入索引获取对应的输入shape指针。这里的输入索引是指算子实例化后实际的索引，不是原型定义中的索引。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+const Shape *GetInputShape(const size_t index) const;
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| index | 输入 | 算子输入索引，从0开始计数。 |
+
+ 
+## 返回值
+输入shape指针，index非法时，返回空指针。
+
+ 关于Shape类型的定义，请参见[Shape](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-shape)。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+ge::graphStatus InferShapeForReshape(InferShapeContext *context) { const gert::Shape *x_shape = context->GetInputShape(0); // 获取第0个输入的shape const gert::Tensor *shape_tensor = context->GetInputTensor(1); // 获取第1个输入的tensor 数据依赖 gert::Shape *output_shape = context->GetOutputShape(0); if (x_shape == nullptr || shape_tensor == nullptr || output_shape == nullptr) { // 防御式编程，不应该出现的场景，打印错误并返回失败 return ge::GRAPH_FAILED; } // ... }
+```

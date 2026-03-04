@@ -1,0 +1,11 @@
+# [内存管理与同步控制](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-memory-management-and-synchronization)
+
+- **[TPipe](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tpipe)**
+ - **[GetTPipePtr](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-gettpipeptr)**
+ - **[TBufPool](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tbufpool)**
+ - **[TQue](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tque)**
+ - **[TQueBind](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tquebind)**
+ - **[TBuf](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tbuf)**
+ - **[workspace](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-workspace-api)**
+ - **[核内同步](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-nuclear-synchronization)**
+ - **[TPosition](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tposition)**

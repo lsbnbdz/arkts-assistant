@@ -1,0 +1,8 @@
+# [附录](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-featured-topics)
+
+- **[Tensor基础知识参考](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tensor-basics)**
+ - **[如何使用double buffer优化性能](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-double-buffer)**
+ - **[如何申请workspace作为临时内存](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-workspace)**
+ - **[如何升级工程到最新版本](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-project-upgrade)**
+ - **[算子工程创建工具参数说明](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-creating-operator-project-msopgen)**
+ - **[调测工具样例与参数说明](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-commissioning-tool-parameter)**

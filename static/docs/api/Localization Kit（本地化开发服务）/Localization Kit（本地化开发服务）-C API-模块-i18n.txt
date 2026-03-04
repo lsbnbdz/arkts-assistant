@@ -1,0 +1,19 @@
+# [i18n](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-i18n)
+
+## 目录
+- [概述](#概述)
+- [文件汇总](#文件汇总)
+
+## 概述
+PhonePC/2in1TabletTVWearable提供国际化能力C API的接口。
+
+ **起始版本：** 22
+
+ 
+## 文件汇总
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| errorcode.h | 提供国际化接口返回的错误码。 |
+| timezone.h | 提供获取时区信息的能力。 |

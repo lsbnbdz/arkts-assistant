@@ -1,0 +1,1 @@
+[绑定手势方法](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-gesture-settings)  [设置组件绑定的手势](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-uigestureevent)  [手势处理器](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-gesturehandler)

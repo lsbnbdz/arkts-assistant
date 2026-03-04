@@ -1,0 +1,23 @@
+## 目录
+- [场景介绍](#section175232481311)
+- [开发步骤](#section6557950133014)
+
+## 场景介绍
+          从5.1.0(18)版本开始，导航组件新增支持菜单栏设置信息提醒能力。
+
+     当应用开发者需要在导航组件菜单项右上角附加消息提醒时，可以通过设置标题栏菜单中的[badge](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ui-design-hdsnavigation#section7349101217489)配置，实现信息提醒能力。
+
+## 开发步骤
+                导入相关模块。       
+
+       收起自动换行深色代码主题复制
+```
+import { HdsNavigation, HdsNavigationAttribute } from '@kit.UIDesignKit';
+```
+
+创建一级导航组件，通过配置titleBar中menu的badge属性，设置信息提醒样式。       
+
+       收起自动换行深色代码主题复制
+```
+@Entry@Componentstruct Index {  build() {    HdsNavigation() { // 创建HdsNavigation组件    }.titleBar({      content: { // HdsNavigation标题栏内容设置        menu: { // HdsNavigation标题栏菜单区域内容设置          value: [{            content: { // 第一个菜单项内容设置              label: 'menu1',              icon: 'resources/base/media/startIcon.png',              isEnabled: true,            },            badge: { // 第一个菜单项信息提醒设置              count: 1,            }          },{            content: { // 第二个菜单项内容设置              label: 'menu2',              icon: 'resources/base/media/startIcon.png',              isEnabled: true,            },            badge: { // 第二个菜单项信息提醒设置              count: 100,            }          }]        },        title: { mainTitle: 'MainTitle', subTitle: 'SubTitle' },      }    })  }}
+```

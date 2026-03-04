@@ -1,0 +1,39 @@
+# [GetStorageFormat](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tensor-getstorageformat)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083617030_section94179mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083617030_section94182mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083617030_section94186mcpsimp)
+- [返回值](#zh-cn_topic_0000002083617030_section94189mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083617030_section94195mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083617030_section94198mcpsimp)
+
+## 函数功能
+获取运行时Tensor的format。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+ge::Format GetStorageFormat() const
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+返回运行时format。
+
+ 关于ge::Format类型的定义，请参见[Format](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-ge-format)。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+Tensor t = {{}, {}, {}, {}, nullptr}; t.SetOriginFormat(ge::FORMAT_NHWC); t.SetStorageFormat(ge::FORMAT_NC1HWC0); auto fmt = t.GetStorageFormat(); // ge::FORMAT_NC1HWC0
+```

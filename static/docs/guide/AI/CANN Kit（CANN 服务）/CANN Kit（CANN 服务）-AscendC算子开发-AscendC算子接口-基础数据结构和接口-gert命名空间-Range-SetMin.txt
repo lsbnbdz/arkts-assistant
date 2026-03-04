@@ -1,0 +1,40 @@
+# [SetMin](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-setmin)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083616670_section91638mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083616670_section91641mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083616670_section91644mcpsimp)
+- [返回值](#zh-cn_topic_0000002083616670_section91667mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083616670_section91670mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083616670_section91673mcpsimp)
+
+## 函数功能
+设置最小的T对象指针。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+void SetMin(T *min)
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| min | 输入 | 最小的T对象指针。 |
+
+ 
+## 返回值
+无
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+Range range; int min = -1; range.SetMin(&min);
+```

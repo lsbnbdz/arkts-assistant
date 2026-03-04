@@ -1,0 +1,4 @@
+# [标量三目指令](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-scalar-ternary-instruction)
+
+- **[Axpy](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-axpy)**
+ - **[更多样例](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/scalar-ternaryinstructions-more-examples)**

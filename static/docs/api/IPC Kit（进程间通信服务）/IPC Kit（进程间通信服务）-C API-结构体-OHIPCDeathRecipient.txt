@@ -1,0 +1,18 @@
+# [OHIPCDeathRecipient](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-ohipcremoteobject-ohipcdeathrecipient)
+
+## 目录
+- [概述](#概述)
+
+收起自动换行深色代码主题复制
+```
+typedef struct OHIPCDeathRecipient OHIPCDeathRecipient
+```
+ 
+## 概述
+PhonePC/2in1TabletTVWearable死亡通知对象。
+
+ **起始版本：** 12
+
+ **相关模块：** [OHIPCRemoteObject](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-ohipcremoteobject)
+
+ **所在头文件：** [ipc_cremote_object.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-ipc-cremote-object-h)

@@ -1,0 +1,42 @@
+# [GetIrInputInstanceInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getirinputinstanceinfo)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119176373_section89731mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119176373_section89734mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119176373_section89738mcpsimp)
+- [返回值](#zh-cn_topic_0000002119176373_section89761mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119176373_section89767mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119176373_section89770mcpsimp)
+
+## 函数功能
+根据算子原型定义中的输入索引获取对应输入的实例化信息。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+const AnchorInstanceInfo * GetIrInputInstanceInfo (const size_t ir_index) const
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| ir_index | 输入 | 算子IR原型定义中的输入索引，从0开始计数。 |
+
+ 
+## 返回值
+指定输入的实例化信息。
+
+ 关于AnchorInstanceInfo的定义，请参见[AnchorInstanceInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-anchorinstanceinfo)。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+// 假设已存在KernelContext *context auto extend_context = reinterpret_cast(context); for (size_t idx = 0; idx < extend_context->GetComputeNodeInfo()->GetIrInputsNum(); ++idx) { auto input_td = extend_context->GetIrInputInstanceInfo(idx); // ... }
+```

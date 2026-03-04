@@ -1,0 +1,10 @@
+# [上传软件包时提示“上传的软件包与声明支持设备不一致”](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/scan-faq-4)
+
+**问题现象**
+
+ 在进行应用上架操作中，上传软件包时，AGC平台提示“上传的软件包与声明支持设备不一致，请重新上传或修改可支持设备”。
+
+ **解决措施**
+
+ 1. 检查工程“entry”路径下，“module.json5”文件中的“deviceTypes”是否和AGC平台上应用支持的设备勾选的应用基本信息中支持的设备保持一致。如支持设备勾选手机，那么“module.json5”中“deviceTypes”需配置为“phone”。
+2. 如还未解决，请通过[在线提单](https://developer.huawei.com/consumer/cn/support/feedback/#/)提交问题，华为支持人员会及时处理。

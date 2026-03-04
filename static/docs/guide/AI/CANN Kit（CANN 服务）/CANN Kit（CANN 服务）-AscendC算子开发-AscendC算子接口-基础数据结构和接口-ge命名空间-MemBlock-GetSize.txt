@@ -1,0 +1,37 @@
+# [GetSize](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-memblock-getsize)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119177121_section98185mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119177121_section98188mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119177121_section98192mcpsimp)
+- [返回值](#zh-cn_topic_0000002119177121_section98195mcpsimp)
+- [异常处理](#zh-cn_topic_0000002119177121_section98218mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119177121_section98221mcpsimp)
+
+## 函数功能
+获取device内存对应的大小。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+size_t GetSize() const
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| size_t | device内存大小。 |
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

@@ -1,0 +1,8 @@
+# [播放](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/media-playback-arkts)
+
+- **[使用AVPlayer播放音频(ArkTS)](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/using-avplayer-for-playback)**
+ - **[使用AVPlayer播放视频(ArkTS)](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/video-playback)**
+ - **[使用AVPlayer设置播放URL(ArkTS)](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/playback-url-setting-method)**
+ - **[使用AVPlayer播放流媒体(ArkTS)](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/streaming-media-playback-development-guide)**
+ - **[使用AVPlayer添加视频外挂字幕(ArkTS)](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/video-subtitle)**
+ - **[使用SoundPool播放短音频(ArkTS)](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/using-soundpool-for-playback)**

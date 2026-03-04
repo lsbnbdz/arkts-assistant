@@ -1,0 +1,1 @@
+[开通Device Security服务](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/devicesecurity-deviceverify-activateservice)  [基于服务账号生成鉴权令牌](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/devicesecurity-deviceverify-token)  [（可选）申请使用受限权限](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/devicesecurity-prepare-declarepermissions)

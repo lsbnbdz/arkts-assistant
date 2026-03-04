@@ -1,0 +1,37 @@
+# [GetMax](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getmax)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119257169_section91735mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119257169_section91738mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119257169_section91741mcpsimp)
+- [返回值](#zh-cn_topic_0000002119257169_section91744mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119257169_section91747mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119257169_section91750mcpsimp)
+
+## 函数功能
+获取最大的T对象指针。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+const T *GetMax() const; T *GetMax();
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+返回最大的T对象指针。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+int min = -1; int max = 1024; Range range(&min,&max); auto ret = range.GetMax(); // ret指针指向max
+```

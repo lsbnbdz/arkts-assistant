@@ -1,0 +1,39 @@
+# [血压](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/health-blood-pressure)
+
+## 目录
+- [OAuth权限](#section1451346172216)
+- [采样明细数据](#section666566121010)
+  - [明细字段说明](#section6919163211212)
+  - [数据开放说明](#section0543481336)
+
+此数据记录用户在某时刻的血压数据。
+
+ Harmony SDK类型常量：[samplePointHelper.bloodPressure.DATA_TYPE](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-samplepointhelper#section1144555923610)
+
+ 说明 Wearable设备暂不支持该数据类型。
+
+ 
+## OAuth权限
+ 联盟卡片申请的权限名称：健康数据 > 血压数据
+
+ 
+## 采样明细数据
+ 
+### 明细字段说明
+ 字段定义：[samplePointHelper.bloodPressure.Fields](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-samplepointhelper#section1044675919367)
+
+ 展开
+| 字段列表 | 描述 | 类型 | 可选/必选 | 单位 | 取值范围 |
+| --- | --- | --- | --- | --- | --- |
+| bloodPressureSystolic | 收缩压，即高压 | number | M | mmHg | (0, ∞) |
+| bloodPressureDiastolic | 舒张压，即低压 | number | M | mmHg | (0, ∞) |
+| sphygmus | 脉搏 | number | O | 次/分钟 | (0, ∞) |
+| measurementAnomalyFlag | 测量异常事件 | number | O | - | (0, ∞) 取值参考如下： 1：正常 2：测量时未和心脏平齐 3：测量时有轻微抖动 4：测量前没有至少5min休息 |
+| beforeMeasureActivity | 测量前活动 | number | O | - | (0, ∞) 取值参考如下： 1：剧烈运动 2：吸烟 3：进食 4：饮酒 5：喝咖啡 6：无活动 7：起床后 8：睡前 100：自定义 |
+
+ 
+### 数据开放说明
+ 展开
+| 开放API | 查询及时性 | 数据源 |
+| --- | --- | --- |
+| healthStore.readData | 分钟级 | 血压计、血压表等 |

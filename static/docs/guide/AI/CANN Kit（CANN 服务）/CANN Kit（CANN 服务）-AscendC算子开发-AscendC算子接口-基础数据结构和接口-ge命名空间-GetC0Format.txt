@@ -1,0 +1,54 @@
+# [GetC0Format](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getc0format)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119256545_section107751mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119256545_section107762mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119256545_section107766mcpsimp)
+- [返回值](#zh-cn_topic_0000002119256545_section107789mcpsimp)
+- [异常处理](#zh-cn_topic_0000002119256545_section107794mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119256545_section107797mcpsimp)
+
+## 函数功能
+根据实际format获取C0 format的值。C0值是AI处理器特有数据格式所需要的参数。例如NC1HWC0，最后一维即表示C0值，C0值在不同的AI处理器中数值不同，通过C0 format来承载。
+
+ 实际format为4字节大小，第1个字节的高四位为预留字段，低四位为c0 format，第2-3字节为子format信息，第4字节为主format信息，如下所示：
+
+ /*
+
+ * ---------------------------------------------------
+
+ * | 4 bits | 4bits | 2 bytes | 1 byte |
+
+ * |------------|-------------|----------------|--------|
+
+ * | reserved | c0 -format | sub-format | format |
+
+ * ---------------------------------------------------
+
+ */
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+inline int32_t GetC0Format(int32_t format)
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| format | 输入 | 实际format（4字节大小，第1个字节的高四位为预留字段，低四位为c0 format段，第2-3字节为子format信息，第4字节为主format信息）。 |
+
+ 
+## 返回值
+- 如果包含c0 format，返回c0 format的值。
+- 如果不包含c0 format，返回0。
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

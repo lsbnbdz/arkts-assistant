@@ -1,0 +1,1 @@
+[密钥导出(ArkTS)](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/huks-export-key-arkts)  [密钥导出(C/C++)](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/huks-export-key-ndk)

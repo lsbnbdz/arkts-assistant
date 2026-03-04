@@ -1,0 +1,23 @@
+## 目录
+- [场景介绍](#section175232481311)
+- [开发步骤](#section150772054916)
+
+## 场景介绍
+          从6.0.0(20) Beta1版本开始，导航组件新增支持半模态样式和半模态样式下的标题栏模糊。
+
+     用于半模态弹窗中使用导航组件场景。通过设置[HdsNavigationTitleMode](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ui-design-hdsnavigation#section26841314155317)为MODAL可以实现标题栏半模态样式及动态模糊。
+
+## 开发步骤
+                  导入相关模块。      
+
+      收起自动换行深色代码主题复制
+```
+import { HdsNavigation, HdsNavigationAttribute, HdsNavigationTitleMode } from '@kit.UIDesignKit';
+```
+
+创建一级导航组件，通过设置titleMode属性为HdsNavigationTitleMode.MODAL实现标题栏半模态样式。      
+
+      收起自动换行深色代码主题复制
+```
+@Entry@Componentstruct Index {  build() {    HdsNavigation() { // 创建HdsNavigation组件    }    .titleBar({      content: {        title: {mainTitle: 'MainTitle', subTitle: 'SubTitle'},      }    })    .titleMode(HdsNavigationTitleMode.MODAL) // 设置HdsNavigation显示模式为半模态样式  }}
+```

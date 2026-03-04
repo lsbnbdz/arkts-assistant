@@ -1,0 +1,6 @@
+# [界面布局响应式变化](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-device-responsive)
+
+- **[响应式布局](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-device-responsive-layout)**
+ - **[页面布局场景](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-device-page-layout)**
+ - **[组件布局场景](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-device-component-layout)**
+ - **[屏幕类型布局场景](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-device-screen-layout)**

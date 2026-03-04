@@ -1,0 +1,40 @@
+# [GetOutputShapeRange](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getoutputshaperange)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119256341_section90926mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119256341_section90929mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119256341_section90933mcpsimp)
+- [返回值](#zh-cn_topic_0000002119256341_section90956mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119256341_section90959mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119256341_section90962mcpsimp)
+
+## 函数功能
+根据算子输出索引获取对应的输出shape range指针。这里的输出索引是指算子实例化后实际的索引，不是原型定义中的索引。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+Range *GetOutputShapeRange(const size_t index);
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| index | 输入 | 算子输出索引，从0开始计数。 |
+
+ 
+## 返回值
+输出shape range指针，index非法时，返回空指针。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+ge::graphStatus InferShapeRangeForXXX(gert::InferShapeRangeContext *context) { const auto x_shape_range = context->GetInputShapeRange(0); if (x_shape_range == nullptr) { // 防御式编程 .... } const auto min_shape = x_shape_range->GetMin(); const auto max_shape = x_shape_range->GetMax(); auto y_shape_range = context->GetOutputShapeRange(0); if (y_shape_range == nullptr) { // 防御式编程 .... } if (y_shape_range->GetMin() == nullptr || y_shape_range->GetMax() == nullptr) { // 防御式编程 .... } // shape range推导逻辑 ..... }
+```

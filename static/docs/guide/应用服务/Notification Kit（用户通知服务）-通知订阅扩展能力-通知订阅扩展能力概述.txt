@@ -1,0 +1,34 @@
+# [通知订阅扩展能力概述](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/notification-subscriber-extension-ability)
+
+## 目录
+- [NotificationSubscriberExtensionAbility 开发概述](#notificationsubscriberextensionability-开发概述)
+  - [功能简介](#功能简介)
+  - [前提条件](#前提条件)
+  - [应用场景](#应用场景)
+  - [约束条件](#约束条件)
+  - [运作机制](#运作机制)
+
+## NotificationSubscriberExtensionAbility 开发概述
+ 
+### 功能简介
+ [NotificationSubscriberExtensionAbility](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-notificationsubscriberextensionability)提供扩展能力，允许第三方应用接收系统通知并将其同步到穿戴设备上。该能力主要用于支持手机与第三方穿戴设备之间的通知协同。一定时间内无通知发布[NotificationSubscriberExtensionAbility](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-notificationsubscriberextensionability)会被销毁。
+
+ 
+### 前提条件
+ - 用户已通过手机中与穿戴设备配套的应用程序连接穿戴设备。
+ - 用户已在手机的穿戴应用中，通过[OpenSubscriptionSettings](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-notificationextensionsubscription#notificationextensionsubscriptionopensubscriptionsettings)接口拉起的半模态弹窗中，开启了“允许获取本机通知”与“已获取的本机通知”的开关。
+ 
+ 
+### 应用场景
+ - [使用场景]：手机通知同步到穿戴设备
+ - [传输方式]：支持低功耗蓝牙（Bluetooth Low Energy）和传统蓝牙两种同步方式
+ 
+ 
+### 约束条件
+ 1. 本示例仅支持标准系统上运行，支持设备：手机和平板。
+ 2. 本示例为Stage模型，支持API22及以上版本SDK。
+ 3. 本示例需要使用DevEco Studio 6.0.2 Release (Build Version: 6.0.2.640, built on January 21, 2026)及以上版本才可编译运行。
+ 4. 三方穿戴应用需申请[ohos.permission.SUBSCRIBE_NOTIFICATION](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/restricted-permissions#ohospermissionsubscribe_notification)权限，权限为system_basic级别。
+ 
+ 
+### 运作机制

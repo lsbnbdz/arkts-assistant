@@ -1,0 +1,90 @@
+知识加工是指根据实际业务数据生成知识库的能力，主要包含以下两个方面：
+
+         通过配置schema生成知识加工的产物（如倒排表、向量库、向量表），这些产物最终用于知识问答过程中的检索。schema的配置应基于实际业务使用的数据库及数据表结构。知识加工和检索对中文处理进行了优化，因此中文问答的效果优于英文。     通过调用获取知识加工状态的接口，查询当前的加工状态。        知识加工生成的知识表结构如下：
+
+|  列名 |  类型 |  定义 |
+| --- | --- | --- |
+|  reference_id |  UNINDEXED |  关联id，与业务表主键id对应。 |
+|  chunk_id |  UNINDEXED |  用于标识每一个切分后的Chunk。一个Chunk代表需要进行知识加工的文本的一个切片。 |
+|  chunk_source |  UNINDEXED |  每个Chunk在业务表中的字段归属。 |
+|  chunk_text |  TEXT |  倒排索引字段，每个Chunk的文本内容 |
+
+|  列名 |  类型 |  含义 |
+| --- | --- | --- |
+|  id |  INTEGER |  自增主键。 |
+|  reference_id |  INTEGER |  关联id，与业务表主键id对应。 |
+|  chunk_id |  TEXT |  用于标识每一个切分后的Chunk。一个Chunk代表需要进行知识加工的文本的一个切片。 |
+|  chunk_source |  TEXT |  每个Chunk在业务表中的字段归属。 |
+|  repr |  FLOATVECTOR(128) |  chunk_id对应的文本的向量表征。 |
+|  Scalar |  TEXT |  Schema中定义的所有标量字段，类型均为TEXT。 |
+
+## 触发知识加工的时机
+          触发知识加工包含下列两种情况。
+
+           通过[步骤1](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/data-augmentation-knowledge-processing#li1041155415158)、[步骤2](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/data-augmentation-knowledge-processing#li7681121661620)配置knowledge_schema.json和开库参数后，每次开库都会启动一次知识加工任务。      当已经成功开库并且存在一个活跃的数据库连接时，数据源表发生数据变更（插入、更新、删除）时会自动触发加工任务。                  
+## 约束限制
+                知识加工使用的表不支持同时进行端端同步、端云同步以及搜索。      知识加工schema不支持升级。      知识加工schema中version字段值为正整数，最大值为2147483647。      知识加工schema中dbName字段值的最小长度为1，最大长度为120，支持数字、大小写字母、下划线和字符“.”。      知识加工schema中tableName字段值的最小长度为1，最大长度为120，支持数字、大小写字母和下划线_。      知识加工schema中columnName字段值的最小长度为1，最大长度为255。      知识加工schema中referenceFields仅支持一个字段，且字段为整数类型，字段值最小长度为1，最大长度为255。      知识加工schema中每个知识字段的type值支持的类型有Text（纯文本知识加工字段）、Scalar（标量字段）和Json（Json格式的知识加工字段）。      知识加工schema中类型为Scalar的知识字段必须包含description字段，字段值最小长度为1，最大长度为255。Scalar字段不会进行知识加工，内容与业务表对应字段保持一致。      知识加工schema中类型为Json的知识字段必须包含parser字段，用于指定文件路径的解析器。每个Json字段允许定义的parser数量范围是[1, 5]，最多支持提取5个不同的本地文件路径。      知识加工schema中parser字段值的每个对象必填type和path，其中type为File，path的长度范围是[1，255]。path必须是合法的Json路径表达式，用于表示知识加工需要解析的文件路径。      知识加工schema中的pipelineHandlers字段用于定义知识加工时各处理模块（Handler）的执行顺序。Handler可自定义，可配置，通过合理修改Handler的流程，可以控制原始数据如何被解析、切分、表征，最终写入倒排表与向量表，具体位置可以参考开发步骤1中的示例。配置为一个映射（unordered_map<string, vector<string>>），每个键为当前Handler，值为其后续执行的Handler列表，参考示例：       收起自动换行深色代码主题复制
+```
+"pipelineHandlers": {  "FileParserHandler": ["SplitTextHandler"],    "SplitTextHandler": ["TextEmbeddingHandler"],  "TextEmbeddingHandler": ["ImageEmbeddingHandler"],  "ImageEmbeddingHandler": []}
+```
+       其中，所有的Handler名称必须是系统支持的类型，当前支持的包括：FileParserHandler、SplitTextHandler、TextEmbeddingHandler、ImageEmbeddingHandler。推荐的标准流程为：
+
+               FileParserHandler → SplitTextHandler → TextEmbeddingHandler → ImageEmbeddingHandler。              Handler之间不能出现循环依赖，否则系统会在加载schema时报错。每个Handler的下游可以为空数组，表示加工流程在此结束。如果配置顺序错误（如跳过某些处理器、顺序不通或形成闭环），可能导致文件未处理、加工流程中断或初始化失败。可根据实际场景适当简化，例如仅配置倒排时只配SplitTextHandler。各Handler功能与依赖说明如下：
+
+               FileParserHandler：提取字段中所指向本地文件的文本内容，支持格式：doc、docx、ppt、pptx、xls、xlsx、html、txt、pdf、png、jpg、jpeg。文本类文件会提取正文内容，图片文件会通过OCR提取可识别文本。不依赖其他Handler。         推荐组合：建议放在SplitTextHandler之前，使提取出的文件内容能被切分、表征。
+
+         不配置影响：字段内文件不会被解析，倒排和向量中均无这些内容（不影响图片向量表征）。
+
+        SplitTextHandler：对文本字段进行两级切分：第一级chunk：用于倒排索引；第二级segment：用于向量表征（Embedding）。         推荐组合：必须在TextEmbeddingHandler之前；否则向量表征阶段缺少segment，后续表征失败。
+
+         不配置影响：倒排表和向量表都无文本内容，检索无法返回文本相关内容。
+
+        TextEmbeddingHandler：对SplitTextHandler产生的segment进行文本向量表征，生成供向量检索使用的数据。依赖SplitTextHandler的结果。         推荐组合：放在SplitTextHandler之后、ImageEmbeddingHandler 之前。
+
+         不配置影响：文本表征结果不会进入向量表，影响语义搜索。
+
+        ImageEmbeddingHandler：根据字段中的图像路径加载图片，并对图像特征进行向量表征。图片处理不依赖SplitTextHandler，也不会参与文本倒排表。无依赖（独立于文本处理流程）。         推荐组合：放在TextEmbeddingHandler之后，避免图片路径字段被误当作文本参与表征，产生噪声。
+
+         不配置影响：图像表征结果不会进入向量表，影响图片相关搜索。
+
+             知识加工schema中的knowledgeProcess字段为可选项，用于设置知识加工参数配置，包括三个字段：表征模型设置（embeddingModelCfg），文本切分设置（chunkSplitter）和文件预处理限制（perRecordLimit），可以参考开发步骤1中的示例。配置knowledgeProcess字段无需配置全部的三个字段，但其下每个字段（embeddingModelCfg、chunkSplitter、perRecordLimit）一旦出现，对应的子字段内部的内容均为必填，不允许部分配置。               知识加工schema中，若knowledgeProcess中配置了embeddingModelCfg字段，则必须包含modelVersion字段，类型为字符串，表示所使用的向量表征模型版本。字段值最大长度为100，若为空字符串会使用默认版本。该字段值需与实际部署或支持的模型版本匹配，且知识加工的表征模型版本需要和推理的版本一致，当前默认值为"default"。        知识加工schema中，若knowledgeProcess字段中配置了chunkSplitter字段，则需同时配置以下三个子字段，均为必填项：                   chunkSize：每个Chunk的最大长度，整数类型，取值范围为[100, 5000]，默认值为3072；          segmentSize：Chunk内部分段的最大长度，是向量表征的单位，整数类型，取值范围为[128, 512]，默认值为300；          overlapRatio：相邻Chunk之间的重叠比例，浮点数类型，取值范围为(0.0, 0.3]，默认值为0.1。                       这些参数用于控制文本切分策略，影响切分粒度、上下文连续性。如果未配置，则系统将使用上述默认值。
+
+               知识加工schema中，若knowledgeProcess中配置了perRecordLimit字段，则需同时配置以下三个字段，均为必填项：                   parseFileMaxCnt：每条记录最多允许解析的文件数，整数类型，取值范围为[0, 200]，默认值为10；          textEmbeddingMaxCnt：每条记录最多进行向量表征的文本段数量，整数类型，取值范围为[0, 200]，默认值为50，超出限制的文本段不会被表征；          imageEmbeddingMaxCnt：每条记录最多进行处理的图片数量，整数类型，取值范围为[0, 200]，默认值为10。                       这些参数用于限制单条记录在知识加工过程中的最大处理规模。如果未配置，则系统将采用默认值。设定过小可能导致信息加工不全，设定过大则可能导致系统资源消耗过大。
+
+      知识加工schema文件名必须为knowledge_schema.json，文件内容必须是合法的Json字符串，放置在src/main/resources/rawfile/arkdata/knowledge/路径下。      知识加工支持处理如下文件类型：               文本和网页类型：txt、html；        办公文件类型：doc、docx、ppt、pptx、xls、xlsx、pdf，仅支持纯文本的基本处理，复杂或特定内容可由应用侧自行解析处理后转成txt格式进行后续加工；        图片类型：jpeg、jpg、png。                         
+## 接口说明
+          知识加工关键接口如下表所示，具体API说明详见[API参考](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-knowledgeprocessor-api#section10914338105311)。
+
+|  接口名 |  描述 |
+| --- | --- |
+|  getKnowledgeProcessor(context: common.BaseContext, config: KnowledgeProcessorConfig): Promise<KnowledgeProcessor> |  获取知识加工对象，进行获取知识加工状态等操作。 |
+|  getStatus(): Promise<ProcessorStatus> |  获取知识加工状态。 |
+|  getRdbStore(context: Context, config: StoreConfig): Promise<RdbStore> |  创建或打开已有的关系型数据库，按照步骤2配置开库参数后，调用该接口可触发知识加工。 |
+
+## 开发步骤
+                配置知识加工schema文件knowledge_schema.json，下文是配置示例，实际文件内容请根据业务需要进行配置。知识加工产物命名规则如下：       
+
+               倒排库与数据源库是同一个数据库。        倒排表名相较于数据源表名增加了"_inverted"后缀（email->email_inverted）。        向量库名相较于数据源库名增加了"_vector"后缀（testmail_store.db->testmail_store_vector.db）。        向量表名相较于数据源表名增加了"_vector"后缀（email->email_vector）。         收起自动换行深色代码主题复制
+```
+// 文件路径：src/main/resources/rawfile/arkdata/knowledge/knowledge_schema.json// 项目中没有该目录请递归创建// 实际使用时请去除注释，示例中增加注释仅作字段说明用{  "knowledgeSource": [{    "version": 1,    "dbName": "testmail_store.db",  // 存储原始数据的数据库文件名    "tables": [{      "tableName": "email",  // 用于知识加工的表名      "referenceFields": ["id"],  // 知识数据源引用字段，用于关联知识库中的数据      "knowledgeFields": [{  // 关注的知识字段        "columnName": "subject",  // 关注的字段名称        "type": ["Text"]  // 关注的字段类型，Text则表示要做向量和倒排      },      {        "columnName": "content",        "type": ["Text"]      },      {        "columnName": "image_text",        "type": ["Text"]      },      {        "columnName": "attachment_names",        "type": ["Text"]      },      {        "columnName": "inline_files",        "type": ["Json"],        "parser": [          {            "type": "File",            "path": "$[*].uri"  // path字段的值为Json路径表达式          }        ]      },      {        "columnName": "sender",        "type": ["Scalar"],  // Scalar表示标量字段，不做加工，直接写到向量数据表中对应的列，用于标量检索过滤        "description": "sender"      },      {        "columnName": "receivers",        "type": ["Scalar"],        "description": "receivers"      },      {        "columnName": "received_date",        "type": ["Scalar"],        "description": "received_date"      }],      "pipelineHandlers": {        "FileParserHandler": ["SplitTextHandler"],  // 表示文件解析完成后交由文本切分处理器SplitTextHandler进行处理        "SplitTextHandler": ["TextEmbeddingHandler"],        "TextEmbeddingHandler": ["ImageEmbeddingHandler"],        "ImageEmbeddingHandler": []      }    }],    "knowledgeProcess": {      "embeddingModelCfg":      {        "modelVersion": "default"  // 向量表征模型，"default" 表示默认版本      },      "chunkSplitter":      {        "chunkSize": 3072,        "segmentSize": 300,        "overlapRatio": 0.1      },      "perRecordLimit":      {        "parseFileMaxCnt": 10,        "textEmbeddingMaxCnt": 50,        "imageEmbeddingMaxCnt": 10      }    }  }]}
+```
+
+配置数据源库[开库参数](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-data-relationalstore-i#storeconfig)，根据业务需要预置数据。下文是示例代码片段，仅供参考，具体实现方式请根据业务需要调整。       
+
+               schema示例中inline_files列配置的type为Json，且其path字段为指向uri的路径表达式，那么知识加工会去数据库中的inline_files字段解析uri对应的值作为文件路径。插入数据的SQL语句inline_files列的值应配置为示例代码中所示的文件路径的对象数组形式。加工时会根据获取的文件路径进行知识构建。        注意                     relationalStore开库参数配置中的name字段需要与[1](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/data-augmentation-knowledge-processing#li1041155415158)中"dbName"字段保持一致，并且enableSemanticIndex字段需要设置为true才会触发知识加工。           建表语句中的表名需要与[1](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/data-augmentation-knowledge-processing#li1041155415158)中"tableName"字段保持一致，列名与"columnName"字段保持一致。                                         收起自动换行深色代码主题复制
+```
+import { relationalStore } from '@kit.ArkData';
+// relationalStore开库参数配置const storeConfig: relationalStore.StoreConfig = {  name: 'testmail_store.db',  // 注意与步骤1中"dbName"字段保持一致  securityLevel: relationalStore.SecurityLevel.S3,  enableSemanticIndex: true,  // 注意该项设为true才会触发知识加工  tokenizer: relationalStore.Tokenizer.CUSTOM_TOKENIZER};
+// 建表语句，注意表名应与步骤1中"tableName"字段保持一致，列名与"columnName"字段保持一致const createTableSql = "CREATE TABLE IF NOT EXISTS email(id integer primary key, subject text, " +  "content text, image_text text, attachment_names text, inlineFiles text, sender text, " +  "receivers text, received_date text);";
+// 插入数据语句，请按实际业务需要实现，下文仅作参考const sql = `insert or replace into email VALUES(0, 'Subject of an email', 'Content of an email',  'Convert image to text through OCR', 'attachment_name_1.txt',  '[{"uri":"/data/storage/el2/base/haps/entry/files/capture_1.png"},{"uri":"/data/storage/el2/base/haps/entry/files/capture_2.jpeg"}]',  'zhangsan(zhangsan@xxx.com)', 'lisi(lisi@xxx.com), wangwu(wangwu@xxx.com)', 'Convert time to timestamp');`;
+```
+
+可根据业务需要，调用[getStatus()](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-knowledgeprocessor-api#section1172685711116)接口，查询当前的知识加工状态。       
+
+       收起自动换行深色代码主题复制
+```
+import { relationalStore } from '@kit.ArkData';import { knowledgeProcessor } from '@kit.DataAugmentationKit';import { UIAbility, common } from '@kit.AbilityKit';
+// relationalStore开库参数配置const storeConfig: relationalStore.StoreConfig = {  name: 'testmail_store.db',  // 注意与步骤1中"dbName"字段保持一致  securityLevel: relationalStore.SecurityLevel.S3,  enableSemanticIndex: true,  tokenizer: relationalStore.Tokenizer.CUSTOM_TOKENIZER};
+let knowledgeSourceConfig: knowledgeProcessor.KnowledgeSourceConfig = {  rdbSource: storeConfig,}let knowledgeProcessorConfig: knowledgeProcessor.KnowledgeProcessorConfig = {  sourceConfig: knowledgeSourceConfig,}
+// 获取知识加工状态的异步函数，业务自行按需调用async function getStatus() {  const context = AppStorage.get<common.UIAbilityContext>("Context") as common.UIAbilityContext;  try {    // 获取知识加工对象    const processor = await knowledgeProcessor.getKnowledgeProcessor(context, knowledgeProcessorConfig);    // 获取知识加工状态    const status: knowledgeProcessor.ProcessorStatus = await processor.getStatus();    return status;  } catch (err) {    console.error("Error: " + err.message + " code: " + err.code);    return undefined;  }}
+```

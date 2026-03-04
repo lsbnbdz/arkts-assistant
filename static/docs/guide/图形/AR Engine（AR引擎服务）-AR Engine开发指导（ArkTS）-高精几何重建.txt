@@ -1,0 +1,63 @@
+# [高精几何重建](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arengine-volume-measurement)
+
+## 概要
+ 从6.0.0(20)开始，AR Engine支持高精几何重建能力。
+
+ 本章节通过AR Engine高精几何重建能力来识别空间中的立方体物体或者嵌入式立方体空间，计算出被识别物体或空间的长、宽、高以及体积。可以用于测量立方体体积以及嵌入式空间的大小。
+
+ 注意 本功能仅提供能力，接入该功能不构成对产品的质量保证或任何承诺，详见[AR Engine高精几何重建功能技术局限性及免责声明](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arengine-appendix#section68356131976)。
+
+ 
+## 接口说明
+ 高精几何重建主要依赖[ARSemanticDenseData](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arengine-api-arengine#section137161158185414)，以下接口为高精几何重建的相关接口。详细接口和说明，请参考[AR Engine API参考](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arengine-arkts-api)。
+
+ 展开
+| 接口名 | 描述 |
+| --- | --- |
+| ARSession.getFrame | 获取AR Engine处理后的一帧数据。 |
+| ARFrame.acquireSemanticDense | 返回当前帧的高精几何重建对象数据。 |
+| ARSemanticDenseData.acquireCubeData | 返回一个高精几何重建对象的立方体数据信息的列表。 |
+| ARSemanticDenseData.release | 释放高精几何重建对象数据。 |
+
+ 
+## 开发步骤
+ 对于使用ArkTS的任何AR应用，首先需要创建一个AR会话[ARViewContext](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arengine-api-arviewcontroller#section12681656121519)，用于管理AR Engine的系统状态。AR会话[ARViewContext](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arengine-api-arviewcontroller#section12681656121519)的创建可以参考[管理AR会话](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arengine-arsession)章节。
+
+ 
+### 导入模块
+ 高精几何重建能力所需要导入的模块如下： 收起自动换行深色代码主题复制
+```
+import { arEngine, ARView, arViewController } from '@kit.AREngine';import { Node, Scene } from '@kit.ArkGraphics3D';import { BusinessError } from '@kit.BasicServicesKit';
+```
+ 
+### 定义变量
+ 定义变量cubeVertexData接收立方体顶点数据，定义变量cubeConfidence接收识别出立方体的置信度数据，定义变量cubeLabel接收立方体的语义信息。
+
+ 收起自动换行深色代码主题复制
+```
+let cubeVertexData: Array;let cubeConfidence: number;let cubeLabel: arEngine.ARSemanticPlaneLabel;
+```
+ 
+### 显示预览流
+ 首先初始化AR会话和AR场景，可以参考[初始化AR会话和AR场景](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arengine-arsession#section3391814131611)章节。
+
+ 更改semanticDenseMode为[ARSemanticDenseMode](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arengine-api-arengine#section162053411246).CUBE_VOLUME，启用体积测量识别能力。
+
+ 在设备界面上显示识别到的几何数据信息，使用重复调用函数方法在设备界面上实时更新识别到的几何数据信息。 收起自动换行深色代码主题复制
+```
+@Builderexport function ARSemanticDenseBuilder(): void { ARSemanticDense();}
+@Componentstruct ARSemanticDense { @State arContext?: arViewController.ARViewContext = undefined;
+ build(): void { NavDestination() { RelativeContainer() { if (this.arContext) { ARView({ context: this.arContext }) .height('100%') .width('100%') .alignRules({ center: { anchor: '__container__', align: VerticalAlign.Center }, middle: { anchor: '__container__', align: HorizontalAlign.Center } }) } } } .onAppear(() => { this.initARView(); }) .onWillDisappear(() => { this.stopARView(); }) .onShown(() => { this.resumeARView(); }) .onHidden(() => { this.pauseARView(); }) .hideTitleBar(true) .hideBackButton(true) .hideToolBar(true) }
+ private initARView(): void { Scene.load().then((scene: Scene) => { let viewContext: arViewController.ARViewContext = new arViewController.ARViewContext(); viewContext.scene = scene; viewContext.callback = new ARViewCallbackImpl(); viewContext.config = { type: arEngine.ARType.WORLD, planeFindingMode: arEngine.ARPlaneFindingMode.HORIZONTAL_AND_VERTICAL, powerMode: arEngine.ARPowerMode.NORMAL, semanticDenseMode: arEngine.ARSemanticDenseMode.CUBE_VOLUME, // 开启体积测量 poseMode: arEngine.ARPoseMode.GRAVITY, depthMode: arEngine.ARDepthMode.DISABLED, meshMode: arEngine.ARMeshMode.DISABLED, focusMode: arEngine.ARFocusMode.AUTO } viewContext.init().then(() => { this.arContext = viewContext; console.info('Succeeded in initializing ARView.'); }).catch((err: BusinessError) => { console.error(`Failed to init ARView. Code is ${err.code}, message is ${err.message}.`); }) }) }
+ private stopARView(): void { // ... } private resumeARView(): void { // ... } private pauseARView(): void { // ... }}
+```
+ 
+### 获取立方体体积数据
+ 调用[ARViewCallback](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arengine-api-arviewcontroller#section9396615174614)，使用其中的[onFrameUpdate](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arengine-api-arviewcontroller#section52341758194715)方法进行帧数据更新，通过[ARSession.getFrame](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arengine-api-arengine#section114051108916)方法获取当前帧，通过[ARFrame.acquireSemanticDense](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arengine-api-arengine#section945690181710)获得当前帧的高精几何重建对象数据，通过[ARSemanticDenseData.acquireCubeData](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arengine-api-arengine#section1458368561)从高精几何重建对象数据中获取识别到的立方体体积数据，相关变量定义参考[定义变量](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arengine-volume-measurement#section57509123317)。 收起自动换行深色代码主题复制
+```
+class ARViewCallbackImpl extends arViewController.ARViewCallback { onAnchorAdd(ctx: arViewController.ARViewContext, node: Node, anchor: arEngine.ARAnchor): void { // ... }
+ onAnchorUpdate(ctx: arViewController.ARViewContext, node: Node, anchor: arEngine.ARAnchor): void { // ... }
+ onFrameUpdate(ctx: arViewController.ARViewContext, sysBootTs: number): void { if (!ctx.session) { return; }
+ let arSession: arEngine.ARSession = ctx.session;
+ try { let frame: arEngine.ARFrame = arSession.getFrame(); if (frame) { let semanticData : arEngine.ARSemanticDenseData = frame.acquireSemanticDense(); if(semanticData){ if(semanticData.cubeDataSize>0){ // 获取第一个Cube的体积数据 let semanticCubeData: arEngine.ARSemanticDenseCubeData = semanticData.acquireCubeData()[0]; cubeVertexData = semanticCubeData.vertexData; cubeConfidence = semanticCubeData.confidence; cubeLabel = semanticCubeData.label; } semanticData.release(); } } } catch (error) { const err: BusinessError = error as BusinessError; console.error(`Failed to update data. Code is ${err.code}, message is ${err.message}.`); } }}
+```

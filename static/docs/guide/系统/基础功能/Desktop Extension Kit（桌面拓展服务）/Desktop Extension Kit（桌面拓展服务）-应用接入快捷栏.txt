@@ -1,0 +1,45 @@
+# [应用接入快捷栏](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/desktop-quickbar-extension-guide)
+
+从6.0.2(22)开始，支持应用接入快捷栏。
+
+ 
+## 场景介绍
+ 快捷栏指的是PC/2in1设备的屏幕底部的图标区域，具体如下图。
+
+ 
+
+ 应用接入快捷栏之后，快捷栏的应用图标菜单会显示应用自定义的菜单项，应用可以添加、删除、更新、查询菜单项，具体效果如下图。
+
+ 
+
+ 
+## 接口说明
+ 以下列出应用接入快捷栏菜单的相关API，具体API说明详见[接口文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/desktop-quickbar-extension-manager)。
+
+ 说明 DeskTop Extension Kit相关API仅在2in1设备上生效。
+
+ **表1**应用接入快捷栏菜单相关功能接口介绍 展开
+| 接口名 | 描述 |
+| --- | --- |
+| getCustomCategories(context: common.Context): Promise | 获取所有在快捷栏菜单定义的分组。 |
+| addCustomCategory(context: common.Context, categoryName: string): Promise | 添加快捷栏菜单分组。 |
+| updateCustomCategory(context: common.Context, category: CustomCategory): Promise | 更新快捷栏菜单分组。 |
+| deleteCustomCategory(context: common.Context, categoryId: number): Promise | 删除快捷栏菜单分组。 |
+| getTasksFromCategory(context: common.Context, categoryId: number): Promise | 获取某个快捷栏菜单的分组下的所有任务。 |
+| addQuickTask(context: common.Context, categoryId: number, taskInfo: QuickTaskInfo): Promise | 添加快捷栏菜单任务。 |
+| updateQuickTask(context: common.Context, task: QuickTask): Promise | 更新快捷栏菜单任务。 |
+| deleteQuickTask(context: common.Context, taskId: number): Promise | 删除快捷栏菜单任务。 |
+
+ 
+## 开发步骤
+ 1. 导入相关模块。 收起自动换行深色代码主题复制 ``` import { quickBarManager } from '@kit.DeskTopExtensionKit';import { UIExtensionContentSession, Want, UIAbility } from '@kit.AbilityKit';import { image } from '@kit.ImageKit';import { resourceManager } from '@kit.LocalizationKit'; ```
+ 2. 新建一个TestAbility.ets文件（例如在entry/src/main/ets/entryability文件夹下），同时新建一个TestIndex的页面（例如在entry/src/main/ets/pages目录下），点击图标菜单任务后可跳转到该页面。 收起自动换行深色代码主题复制 ``` let TAG = 'TestAbility';export default class TestAbility extends UIAbility { onCreate() { console.info(TAG, `onCreate`); } onSessionCreate(want: Want, session: UIExtensionContentSession) { console.info(TAG, `onSessionCreate, want: ${want.abilityName}`); // pages/TestIndex为点击菜单任务拉起的页面 session.loadContent('pages/TestIndex'); } onForeground() { console.info(TAG, `onForeground`); } onBackground() { console.info(TAG, `onBackground`); } onSessionDestroy(session: UIExtensionContentSession) { console.info(TAG, `onSessionDestroy`); } onDestroy() { console.info(TAG, `onDestroy`); }} ```
+ 3. 在TestAbility所在模块下的module.json5文件中配置的Ability的信息。 收起自动换行深色代码主题复制 ``` { "name": "TestAbility", "srcEntry": "./ets/entryability/TestAbility.ets", "description": "$string:EntryAbility_desc", "icon": "$media:layered_image", "label": "$string:EntryAbility_label", "startWindowIcon": "$media:startIcon", "startWindowBackground": "$color:start_window_background", "exported": true, "skills": [ { "entities": [ "entity.system.home" ], "actions": [ "action.system.home" ] } ],} ```
+ 4. 在页面组件内(如：TestIndex.ets)中调用接口完成如下步骤。调用[addCustomCategory](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/desktop-quickbar-extension-manager#section665018220561)接口添加一个快捷栏菜单分组，添加分组后才可以往分组里添加任务。 收起自动换行深色代码主题复制 ``` let context: Context | undefined = this.getUIContext().getHostContext();if (context === undefined) { return;}try { const res = await quickBarManager.addCustomCategory(context, '最近任务'); console.info(`customCategory info: ${JSON.stringify(res)}`);} catch (error) { console.error(`addCustomCategory failed. error code: ${error.code}, error message: ${error.message}`);} ```
+ 5. 添加分组后可以调用[addQuickTask](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/desktop-quickbar-extension-manager#section13991750101114)接口在分组中添加快捷栏菜单任务。打开应用图标在快捷栏的右键菜单，即可看到添加后对应的菜单项。 收起自动换行深色代码主题复制 ``` let context: Context | undefined = this.getUIContext().getHostContext();if (context === undefined) { return;}// 获取resourceManager资源管理器const resourceMgr: resourceManager.ResourceManager = context.resourceManager;// 创建任务的pixelMap，需在资源rawfile文件夹中预置testImage.png图片const fileData = resourceMgr.getRawFileContentSync('testImage.png');const imageSource = image.createImageSource(fileData.buffer);const imagePixelMap = await imageSource.createPixelMap();let parameters: quickBarManager.ParameterItem = { key: 'testKey', value: 'testValue'}// 构建task任务信息const task: quickBarManager.QuickTaskInfo = { taskName: '测试任务名称', abilityName: 'TestAbility', // 参数可选 moduleName: 'entry', // 参数可选 taskIcon: imagePixelMap, // 参数可选 taskDetail: '任务的描述', // 参数可选 parameters: [parameters]} try { // 获取所有的分组信息，将任务添加到想要的分组中 const categoryList = await quickBarManager.getCustomCategories(context); // 选择添加任务到第一个分组中 const res = await quickBarManager.addQuickTask(context, categoryList[0].categoryId, task); console.info(`quickTask info: ${JSON.stringify(res)}`);} catch (error) { console.error(`addQuickTask failed. error code: ${error.code}, error message: ${error.message}`);} ```
+ 6. 调用[getCustomCategories](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/desktop-quickbar-extension-manager#section161446211272)接口获取定义所有分组信息。 收起自动换行深色代码主题复制 ``` let context: Context | undefined = this.getUIContext().getHostContext();if (context === undefined) { return;}try { const res = await quickBarManager.getCustomCategories(context); console.info(`customCategoryList info: ${JSON.stringify(res)}`);} catch (error) { console.error(`getCustomCategories failed. error code: ${error.code}, error message: ${error.message}`);} ```
+ 7. 调用[getTasksFromCategory](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/desktop-quickbar-extension-manager#section103873266327)接口获取分组下的所有任务信息，此处获取了第一个分组下的所有任务。 收起自动换行深色代码主题复制 ``` let context: Context | undefined = this.getUIContext().getHostContext();if (context === undefined) { return;}try { // 获取所有的分组信息，用于获取分组下所有的任务 const category = await quickBarManager.getCustomCategories(context); // 选择获取第一个分组下的所有任务 const res = await quickBarManager.getTasksFromCategory(context, category[0].categoryId); console.info(`quickTaskList info: ${JSON.stringify(res)}`);} catch (error) { console.error(`getTasksFromCategory failed. error code: ${error.code}, error message: ${error.message}`);} ```
+ 8. 调用[updateCustomCategory](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/desktop-quickbar-extension-manager#section1623472312366)接口更新快捷栏菜单分组信息，此处更新了分组的名称。 收起自动换行深色代码主题复制 ``` let context: Context | undefined = this.getUIContext().getHostContext();if (context === undefined) { return;}const category: quickBarManager.CustomCategory = { categoryId: 1, categoryName: 'demo'}try { await quickBarManager.updateCustomCategory(context, category);} catch (error) { console.error(`updateCustomCategory failed. error code: ${error.code}, error message: ${error.message}`);} ```
+ 9. 调用[updateQuickTask](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/desktop-quickbar-extension-manager#section1427319917408)接口更新快捷栏菜单任务信息，此处更新了任务的图标信息。 收起自动换行深色代码主题复制 ``` let context: Context | undefined = this.getUIContext().getHostContext();if (context === undefined) { return;}// 获取resourceManager资源管理器const resourceMgr: resourceManager.ResourceManager = context.resourceManager;// 创建任务的pixelMap，需在资源rawfile文件夹中预置testUpdateImage.png图片const fileData = resourceMgr.getRawFileContentSync('testUpdateImage.png');const imageSource = image.createImageSource(fileData.buffer);const imagePixelMap = await imageSource.createPixelMap();let parameters: quickBarManager.ParameterItem = { key: 'testKey', value: 'testValue'}// 构建task任务信息const taskInfo: quickBarManager.QuickTaskInfo = { taskName: '测试任务名称', abilityName: 'TestAbility', // 参数可选 moduleName: 'entry', // 参数可选 taskIcon: imagePixelMap, // 参数可选 taskDetail: '任务的描述', // 参数可选 parameters: [parameters]} const task: quickBarManager.QuickTask = { taskId: 1, categoryId: 1, taskInfo: taskInfo} try { await quickBarManager.updateQuickTask(context,task);} catch (error) { console.error(`updateQuickTask failed. error code: ${error.code}, error message: ${error.message}`);} ```
+ 10. 调用[deleteQuickTask](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/desktop-quickbar-extension-manager#section1259314566431)接口删除不需要的快捷栏菜单任务，此处删除了taskId为1的任务。 收起自动换行深色代码主题复制 ``` let context: Context | undefined = this.getUIContext().getHostContext();if (context === undefined) { return;}try { // 删除taskId为1的任务 await quickBarManager.deleteQuickTask(context, 1);} catch (error) { console.error(`deleteQuickTask failed. error code: ${error.code}, error message: ${error.message}`);} ```
+ 11. 调用[deleteCustomCategory](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/desktop-quickbar-extension-manager#section11581123516468)接口删除不需要的快捷栏菜单分组，此处删除了categoryId为1的分组，它的所有任务也会被一起删除。 收起自动换行深色代码主题复制 ``` let context: Context | undefined = this.getUIContext().getHostContext();if (context === undefined) { return;}try { // 删除categoryId为1的分组 await quickBarManager.deleteCustomCategory(context, 1);} catch (error) { console.error(`deleteCustomCategory failed. error code: ${error.code}, error message: ${error.message}`);} ```

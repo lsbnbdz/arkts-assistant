@@ -1,0 +1,37 @@
+# [应用内通知设置快捷入口](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/notification-shortcut-settings)
+
+## 目录
+- [场景介绍](#section136601639144412)
+- [开发步骤](#section198187920449)
+- [功能验证](#section37882377919)
+
+## 场景介绍
+ 
+
+ 应用内的通知设置功能页面入口通常较深，用户难以找到，导致应用的通知关闭率上升。
+
+ 为改善这一情况，我们在通知消息的左滑菜单和系统的应用通知设置页面中，添加了快速进入应用内通知设置功能页面的入口，直接引导用户跳转至应用内的通知分类管理页面，提升用户通知管理的体验，降低应用通知关闭率。
+
+ 
+
+ **设置 > 通知和状态栏 > XX应用页面**
+
+ 
+
+ **通知中心页面**
+
+ 
+
+ 
+## 开发步骤
+ 详情请参考[应用链接说明](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/app-uri-config)。其中[linkFeature](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/app-uri-config#linkfeature%E6%A0%87%E7%AD%BE%E8%AF%B4%E6%98%8E)使用AppNotificationMgmt即可。
+
+ 
+
+ 
+## 功能验证
+- 场景1在手机的“设置 > 通知状态栏”页面，选择当前应用，进入应用详情页。点击“前往XX应用管理通知”的选项，即可跳转至应用内对应的通知设置页面。
+
+ 
+
+ - 场景2在手机通知中心页面，左滑应用已发布的通知。点击“前往XX应用管理通知”的选项，即可跳转至应用内对应的通知设置页面。

@@ -1,0 +1,141 @@
+# [开发指导(ArkTS)](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/gameservice-nearbytransfer-access-procedure)
+
+## 业务流程
+ 
+
+ 1. 发送端和接收端调用[create](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-nearbytransfer#section131971556806)创建游戏近场快传服务。
+ 2. 创建成功后，游戏客户端调用以下接口注册监听。 - 注册连接通知监听接口：[on](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-nearbytransfer#section17453143012584)('connectNotify') - （发送端选择绑定接收端情况下需调用）注册发现结果事件监听接口：[on](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-nearbytransfer#section766518402463)('discovery') - 注册收到包信息监听接口：[on](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-nearbytransfer#section1959517425315)('receivePackageInfo') - 注册传输通知监听接口：[on](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-nearbytransfer#section05583466314)('transferNotify') - 注册错误事件监听接口：[on](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-nearbytransfer#section122432503314)('error')
+ 3. 接收端调用[publishNearbyGame](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-nearbytransfer#section225333655719)发布自身近场快传服务。
+ 4. 绑定接收端，支持如下两种方式。 - 自动绑定： 发送端调用[autoBindNearbyGame](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-nearbytransfer#section52391745713)自动绑定附近设备（搜索并绑定附近10米内第一个发现的近场快传服务）。 说明 自动绑定操作2分钟内有效，超时需重新调用接口。 - 选择绑定： 发送端调用[discoveryNearbyGame](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-nearbytransfer#section16687197125918)发现附近设备，发现操作完成后将收到discovery事件回调，获得可绑定的设备列表供玩家选择，调用[bindNearbyGame](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-nearbytransfer#section13279659901)接口绑定玩家选定的接收端设备。 说明 发现操作2分钟内有效，超时需重新调用接口。
+ 5. 接收端收到UIAbility的[onCollaborate](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-app-ability-uiability#oncollaborate18)回调后调用[acceptCollaboration](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-nearbytransfer#section106164517195)接受协同。
+ 6. 接收端收到建链成功connectNotify事件回调。
+ 7. 接收端调用[sendPackageInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-nearbytransfer#section12490112992612)发送自身文件信息，如版本信息、包信息。
+ 8. 发送端收到receivePackageInfo事件回调。
+ 9. 发送端比较版本并调用[replyPackageInfoResult](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-nearbytransfer#section78288285293)上报对比结果。
+ 10. 如发送端对比结果为需要发送，则调用[transferPackageData](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-nearbytransfer#section1227711101118)向接收端发送需要传输的资源包。
+ 11. 接收端可在transferNotify回调中获取当前已传输的包体大小、包体总大小、传输速率、传输剩余时间等信息，传输完成可获取已接收资源包的存储目录，对传输完成的资源文件做处理。
+ 12. 处理传输完成的资源文件后，可调用[destroy](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-nearbytransfer#section13373155416)销毁服务。 说明 - destroy接口会清除已接收数据，请确保对已接收数据做好处理或转移后再调用该接口。 - 每次调用[create](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-nearbytransfer#section131971556806)接口会自动清理自身历史数据。
+ 
+ 
+## 接口说明
+ 具体API说明详见[接口文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-nearbytransfer)。
+
+ 展开
+| 接口名 | 描述 |
+| --- | --- |
+| create(createParameters: CreateParameters): Promise | 创建游戏近场快传服务。 |
+| on(type: 'connectNotify', callback: Callback): void | 订阅连接通知事件。 |
+| off(type: 'connectNotify', callback?: Callback): void | 取消订阅连接通知事件。 |
+| on(type: 'discovery', callback: Callback): void | 订阅发现结果事件。 |
+| off(type: 'discovery', callback?: Callback): void | 取消订阅发现结果事件。 |
+| on(type: 'receivePackageInfo', callback: Callback): void | 订阅收到包信息事件。 |
+| off(type: 'receivePackageInfo', callback?: Callback): void | 取消订阅收到包信息事件。 |
+| on(type: 'transferNotify', callback: Callback): void | 订阅传输通知事件。 |
+| off(type: 'transferNotify', callback?: Callback): void | 取消订阅传输通知事件。 |
+| on(type: 'error', callback: Callback): void | 订阅错误事件。 |
+| off(type: 'error', callback?: Callback): void | 取消订阅错误事件。 |
+| publishNearbyGame(): Promise | 发布近场快传服务。 |
+| autoBindNearbyGame(): Promise | 自动绑定近场快传服务。 |
+| discoveryNearbyGame(): Promise | 发现近场快传服务。 |
+| bindNearbyGame(bindParameters: BindParameters): Promise | 绑定指定近场快传服务。 |
+| acceptCollaboration(acceptParameters: Record): Promise | 接受协同。 |
+| sendPackageInfo(packageInfo: PackageInfo): Promise | 接收端发送自身文件信息。 |
+| replyPackageInfoResult(packageInfoResult: PackageInfoResult): Promise | 上报包信息对比结果。 |
+| transferPackageData(packageData: PackageData): Promise | 传输包数据。 |
+| destroy(): Promise | 销毁游戏近场快传服务。 |
+
+ 
+## 接入步骤
+ 
+### 导入模块
+ 导入Game Service Kit及公共模块。
+
+ 收起自动换行深色代码主题复制
+```
+import { abilityAccessCtrl, AbilityConstant, UIAbility, common } from "@kit.AbilityKit";import { hilog } from '@kit.PerformanceAnalysisKit';import { gameNearbyTransfer } from '@kit.GameServiceKit';import { BusinessError } from '@kit.BasicServicesKit';
+```
+ 
+### 申请权限
+ 申请ohos.permission.DISTRIBUTED_DATASYNC权限用于设备发现，详情可参考[向用户申请授权](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/request-user-authorization)。
+
+ 收起自动换行深色代码主题复制
+```
+let atManager = abilityAccessCtrl.createAtManager();let uiAbilityContext = this.getUIContext()?.getHostContext() as common.UIAbilityContext;try { atManager.requestPermissionsFromUser(uiAbilityContext, ['ohos.permission.DISTRIBUTED_DATASYNC']).then((data) => { hilog.info(0x0000, 'nearby', '%{public}s', 'data: ' + JSON.stringify(data)); }).catch((err: object) => { hilog.error(0x0000, 'nearby', '%{public}s', 'err: ' + JSON.stringify(err)); })} catch (err) { hilog.error(0x0000, '[nearby]', '%{public}s', 'error' + (err as Error).message);}
+```
+ 
+### 创建游戏近场快传服务并注册相关回调
+ 导入相关模块后，需先调用[create](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-nearbytransfer#section131971556806)接口创建游戏近场快传服务，然后注册各回调事件。
+
+ 说明 [create](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-nearbytransfer#section131971556806)接口是调用其他接口的前提，如果未创建游戏近场快传服务或创建失败，将无法调用其他接口。
+
+ 收起自动换行深色代码主题复制
+```
+public create() { let uiAbilityContext = this.getUIContext()?.getHostContext() as common.UIAbilityContext; let initParam: gameNearbyTransfer.CreateParameters = { abilityName: uiAbilityContext.abilityInfo.name, context: uiAbilityContext, moduleName: uiAbilityContext.abilityInfo.moduleName, needShowSystemUI: false // 是否展示系统UI，true为展示，false为不展示，默认为false }; try { gameNearbyTransfer.create(initParam).then((createResult) => { hilog.info(0x0000, '[nearby]', '%{public}s', 'create success' + createResult.localDeviceName); this.registerCallback(); }).catch((err: BusinessError) => { hilog.error(0x0000, '[nearby]', '%{public}s', 'create error' + (err as Error).message); }) } catch (err) { hilog.error(0x0000, '[nearby]', '%{public}s', 'error' + (err as Error).message); }}
+// 注册监听public registerCallback() { try { gameNearbyTransfer.on('connectNotify', connectNotifyCallBack); gameNearbyTransfer.on('receivePackageInfo', receivePackageInfoCallBack); gameNearbyTransfer.on('transferNotify', transferNotifyCallBack); gameNearbyTransfer.on('error', errorCallBack); } catch (err) { hilog.error(0x0000, '[nearby]', '%{public}s', 'error' + (err as Error).message); }}
+function connectNotifyCallBack(callback: gameNearbyTransfer.ConnectNotification) { // 连接状态回调，接收端收到建链成功回调后，在此处调用sendPackageInfo接口发送自身文件信息，如版本信息、包信息}
+function receivePackageInfoCallBack(callback: gameNearbyTransfer.PackageInfo) { // 接收包信息回调，发送端收到接收端发送的版本信息后进行对比，根据对比结果决定是否需要传输资源包数据。}
+function transferNotifyCallBack(callback: gameNearbyTransfer.TransferNotification) { // 传输回调，处理传输进度信息}
+function errorCallBack(callback: gameNearbyTransfer.ReturnResult) { // 异常信息回调，处理相关异常信息}
+```
+ 
+### 接收端接受协同
+ 接收端实现[onCollaborate](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-app-ability-uiability#oncollaborate18)回调，回调中调用[acceptCollaboration](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-nearbytransfer#section106164517195)接口接受协同。
+
+ 收起自动换行深色代码主题复制
+```
+export default class EntryAbility extends UIAbility { // 协同回调 onCollaborate(wantParam: Record): AbilityConstant.CollaborateResult { try { gameNearbyTransfer.acceptCollaboration(wantParam); } catch (err) { hilog.error(0x0000, '[nearby]', '%{public}s', 'error' + (err as Error).message); } hilog.info(0x0000, '[nearby]', '%{public}s', 'onCollaborate: accept collaborate'); return AbilityConstant.CollaborateResult.ACCEPT; }}
+```
+ 
+### 接收端发布自身游戏近场快传服务
+ 接收端调用[publishNearbyGame](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-nearbytransfer#section225333655719)接口发布自身游戏近场快传服务。
+
+ 收起自动换行深色代码主题复制
+```
+try { gameNearbyTransfer.publishNearbyGame().then(() => { hilog.info(0x0000, '[nearby]', '%{public}s', 'publishNearbyGame success'); }).catch((err: BusinessError) => { hilog.error(0x0000, '[nearby]', '%{public}s', 'publishNearbyGame error' + (err as Error).message); })} catch (err) { hilog.error(0x0000, '[nearby]', '%{public}s', 'error' + (err as Error).message);}
+```
+ 
+### 发送端绑定接收端游戏近场快传服务
+ 发送端绑定接收端游戏近场快传服务支持如下两种方式：
+
+ - 方式一：自动绑定 发送端调用[autoBindNearbyGame](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-nearbytransfer#section52391745713)接口自动绑定接收端近场快传服务。 收起自动换行深色代码主题复制 ``` try { gameNearbyTransfer.autoBindNearbyGame().then(() => { hilog.info(0x0000, '[nearby]', '%{public}s', 'autoBindNearbyGame success'); }).catch((err: BusinessError) => { hilog.error(0x0000, '[nearby]', '%{public}s', 'autoBindNearbyGame error' + (err as Error).message); })} catch (err) { hilog.error(0x0000, '[nearby]', '%{public}s', 'error' + (err as Error).message);} ```
+ 
+ - 方式二：选择绑定 发送端调用[on](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-nearbytransfer#section766518402463)('discovery')接口注册“发现设备”结果事件监听。 收起自动换行深色代码主题复制 ``` try { gameNearbyTransfer.on('discovery', discoveryCallBack);} catch (err) { hilog.error(0x0000, '[nearby]', '%{public}s', 'error' + (err as Error).message)} function discoveryCallBack(callback: gameNearbyTransfer.DiscoveryResult) { // 获取到发现的设备 展示设备列表 callback.nearbyGameDevices.forEach((device: gameNearbyTransfer.NearbyGameDevice, index: number) => { });} ``` 发送端调用[discoveryNearbyGame](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-nearbytransfer#section16687197125918)发现附近设备。 收起自动换行深色代码主题复制 ``` try { gameNearbyTransfer.discoveryNearbyGame().then(() => { hilog.info(0x0000, '[nearby]', '%{public}s', 'discoveryNearbyGame success'); }).catch((err: BusinessError) => { hilog.error(0x0000, '[nearby]', '%{public}s', 'discoveryNearbyGame error' + (err as Error).message); })} catch (err) { hilog.error(0x0000, '[nearby]', '%{public}s', 'error' + (err as Error).message);} ``` “发现设备”操作完成后将收到discovery事件回调，获得发现的设备列表供玩家选择，调用[bindNearbyGame](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-nearbytransfer#section13279659901)接口绑定玩家选定的接收端设备。 收起自动换行深色代码主题复制 ``` public bindNearbyGame(deviceInfo: gameNearbyTransfer.NearbyGameDevice) { try { let bindInfo: gameNearbyTransfer.BindParameters = { deviceId: deviceInfo.deviceId, networkId: deviceInfo.networkId }; gameNearbyTransfer.bindNearbyGame(bindInfo).then(() => { hilog.info(0x0000, '[nearby]', '%{public}s', 'bindNearbyGame success'); }).catch((err: BusinessError) => { hilog.error(0x0000, '[nearby]', '%{public}s', 'bindNearbyGame error' + (err as Error).message); }) } catch (err) { hilog.error(0x0000, '[nearby]', '%{public}s', 'bindNearbyGame error' + (err as Error).message); }} ```
+ 
+ 
+### 接收端发送自身文件信息
+ 收到建链成功回调后，接收端调用[sendPackageInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-nearbytransfer#section12490112992612)接口发送自身文件，如版本信息、包信息。
+
+ 收起自动换行深色代码主题复制
+```
+function connectNotifyCallBack(callback: gameNearbyTransfer.ConnectNotification) { if (callback.connectState == gameNearbyTransfer.ConnectState.CONNECTED) { // 连接成功回调，判断当前是否为接收端。若当前设备为接收端，请设置为true，否则请设置为false。 let isReceive = true; if (!isReceive) { return; } // 接收端收到连接回调后需要处理,发送资源包信息给发送端 let packageInfo: gameNearbyTransfer.PackageInfo = { name: 'com.huawei.xxxx', files: [], version: '1.1.0', extraData: 'extraData' }; let fileInfo: gameNearbyTransfer.FileInfo = { path: "/xxx/xxxx/files/data.zip", // 使用沙箱路径，详情请参见应用沙箱目录。 hash: 'fileHash' // 可选 }; packageInfo.files?.push(fileInfo); try { gameNearbyTransfer.sendPackageInfo(packageInfo).then(() => { hilog.info(0x0000, '[nearby]', '%{public}s', 'sendPackageInfo success'); }).catch((err: BusinessError) => { hilog.error(0x0000, '[nearby]', '%{public}s', 'sendPackageInfo error' + (err as Error).message); }); } catch (err) { hilog.error(0x0000, '[nearby]', '%{public}s', 'error' + (err as Error).message); } }}
+```
+ 
+### 发送端对比后传输资源包
+ 发送端收到接收端发送的版本信息后进行对比，调用[replyPackageInfoResult](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-nearbytransfer#section78288285293)上报对比结果，根据对比结果决定是否需要调用[transferPackageData](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-nearbytransfer#section1227711101118)接口发送资源包数据。
+
+ 收起自动换行深色代码主题复制
+```
+function receivePackageInfoCallBack(callback: gameNearbyTransfer.PackageInfo) { // 比较版本,决定是否需要发送资源包,也可以比较文件hash let packageInfoResult: gameNearbyTransfer.PackageInfoResult = { packageInfoResultCode: gameNearbyTransfer.PackageInfoResultCode.PACKAGE_AVAILABLE_COMPARED }; try { // 上报对比结果 gameNearbyTransfer.replyPackageInfoResult(packageInfoResult).then(() => { let packageData: gameNearbyTransfer.PackageData = { name: 'com.huawei.gamenearbydemo', version: '1.0.0', files: [{ srcPath: '/data/xxxx/a.zip', // srcPath是需要发送文件的沙箱路径，详情请参见应用沙箱目录。 destPath: 'xxxx/a.zip' // destPath是接收文件的自定义路径，完整的沙箱路径是fileStoragePath+destPath，详情请参见应用沙箱目录。 }] } try { // 发送资源包 gameNearbyTransfer.transferPackageData(packageData).then(() => { // 发送成功 }).catch((err: BusinessError) => { // 发送异常 hilog.error(0x0000, '[nearby]', '%{public}s', 'error' + (err as Error).message); }); } catch (err) { hilog.error(0x0000, '[nearby]', '%{public}s', 'error' + (err as Error).message); } }).catch((err: BusinessError) => { // 上报异常 hilog.error(0x0000, '[nearby]', '%{public}s', 'error' + (err as Error).message); }); } catch (err) { hilog.error(0x0000, '[nearby]', '%{public}s', 'error' + (err as Error).message); }}
+```
+ 
+### 处理资源包传输进度信息
+ 发送端和接收端在传输回调中处理传输进度信息。
+
+ 收起自动换行深色代码主题复制
+```
+function transferNotifyCallBack(callback: gameNearbyTransfer.TransferNotification) { if (callback.transferState == gameNearbyTransfer.TransferState.SEND_PROCESS) { // 处理发送进度,如显示进度条和速率 } if (callback.transferState == gameNearbyTransfer.TransferState.SEND_FINISH) { // 发送完成 } if (callback.transferState == gameNearbyTransfer.TransferState.RECEIVE_PROCESS) { // 处理接收进度,如显示进度条和速率 } if (callback.transferState == gameNearbyTransfer.TransferState.RECEIVE_FINISH) { // 接收完成,获取到资源包存储的沙箱路径 let fileStoragePath = callback.fileStoragePath; // 对fileStoragePath下的文件做处理 }}
+```
+ 
+### 处理已接收资源包后销毁服务
+ 对已接收数据做好处理或转移后，调用[destroy](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-nearbytransfer#section13373155416)接口销毁服务。若服务销毁后再次使用近场快传服务，需重新[创建游戏近场快传服务并注册相关回调](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/gameservice-nearbytransfer-access-procedure#section8810153223912)。
+
+ 收起自动换行深色代码主题复制
+```
+public destroy() { // 取消回调注册 this.unregisterCallback(); // 销毁服务 try { gameNearbyTransfer.destroy().then(() => { hilog.info(0x0000, '[nearby]', '%{public}s', 'destroy success'); }).catch((err: Error) => { hilog.error(0x0000, '[nearby]', '%{public}s', 'destroy error' + (err as Error).message); }); } catch (err) { hilog.error(0x0000, '[nearby]', '%{public}s', 'error' + (err as Error).message); }}
+public unregisterCallback() { try { gameNearbyTransfer.off('connectNotify', connectNotifyCallBack); gameNearbyTransfer.off('receivePackageInfo', receivePackageInfoCallBack); gameNearbyTransfer.off('transferNotify', transferNotifyCallBack); gameNearbyTransfer.off('error', errorCallBack); // 发送端选择手动绑定接收端且已订阅discovery事件 gameNearbyTransfer.off('discovery', discoveryCallBack); } catch (err) { hilog.error(0x0000, '[nearby]', '%{public}s', 'error' + (err as Error).message); }}
+function connectNotifyCallBack(callback: gameNearbyTransfer.ConnectNotification) { // 连接状态回调，接收端收到建链成功回调后，在此处调用sendPackageInfo接口发送自身文件信息，如版本信息、包信息}
+function receivePackageInfoCallBack(callback: gameNearbyTransfer.PackageInfo) { // 接收包信息回调，发送端收到接收端发送的版本信息后进行对比，根据对比结果决定是否需要传输资源包数据。}
+function transferNotifyCallBack(callback: gameNearbyTransfer.TransferNotification) { // 传输回调，处理传输进度信息}
+function errorCallBack(callback: gameNearbyTransfer.ReturnResult) { // 异常信息回调，处理相关异常信息}
+function discoveryCallBack(callback: gameNearbyTransfer.DiscoveryResult) { // 获取到发现的设备 展示设备列表 callback.nearbyGameDevices.forEach((device: gameNearbyTransfer.NearbyGameDevice, index: number) => { });}
+```

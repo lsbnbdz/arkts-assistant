@@ -1,0 +1,42 @@
+# [SetBlockDim](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-setblockdim)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083616946_section95001mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083616946_section95004mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083616946_section95008mcpsimp)
+- [返回值](#zh-cn_topic_0000002083616946_section95040mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083616946_section95045mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083616946_section95048mcpsimp)
+
+## 函数功能
+设置blockDim，即参与计算的Vector或者Cube核数。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+ge::graphStatus SetBlockDim(const uint32_t block_dim);
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| block_dim | 输入 | blockDim是逻辑核的概念，取值范围为[1, 65535]。为了充分利用硬件资源，一般设置为物理核的核数或其倍数。对于耦合架构和分离架构，blockDim在运行时的意义和设置规则有一些区别，具体说明如下。 耦合架构：由于其Vector、Cube单元是集成在一起的，blockDim用于设置启动多个AICore核实例执行，不区分Vector、Cube。AI Core的核数可以通过GetCoreNumAiv或者GetCoreNumAic获取。分离架构针对仅包含Vector计算的算子，blockDim用于设置启动多少个Vector（AIV）实例执行，比如某款AI处理器上有40个Vector核，建议设置为40。针对仅包含Cube计算的算子，blockDim用于设置启动多少个Cube（AIC）实例执行，比如某款AI处理器上有20个Cube核，建议设置为20。针对Vector/Cube融合计算的算子，启动时，按照AIV和AIC组合启动，blockDim用于设置启动多少个组合执行，比如某款AI处理器上有40个Vector核和20个Cube核，一个组合是2个Vector核和1个Cube核，建议设置为20，此时会启动20个组合，即40个Vector核和20个Cube核。说明该场景下，设置的blockDim逻辑核的核数不能超过物理核（2个Vector核和1个Cube核组合为1个物理核）的核数。 AIC/AIV的核数分别通过GetCoreNumAic和GetCoreNumAiv接口获取。 |
+
+ 
+## 返回值
+设置成功时返回“ge::GRAPH_SUCCESS”。
+
+ 关于graphStatus的定义，请参见[ge::graphStatus](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-gegraphstatus)。
+
+ 
+## 约束说明
+当前支持的Kirin9020和KirinX90系列处理器是分离架构。
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+ge::graphStatus Tiling4XXX(TilingContext* context) { auto ret = context->SetBlockDim(32); // ... }
+```

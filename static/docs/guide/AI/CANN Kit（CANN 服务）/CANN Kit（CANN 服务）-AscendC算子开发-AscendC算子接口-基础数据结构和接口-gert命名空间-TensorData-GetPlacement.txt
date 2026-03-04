@@ -1,0 +1,43 @@
+# [GetPlacement](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getplacement)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119176617_section93387mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119176617_section93391mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119176617_section93395mcpsimp)
+- [返回值](#zh-cn_topic_0000002119176617_section93398mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119176617_section93403mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119176617_section93406mcpsimp)
+
+## 函数功能
+获取tensor的placement，tensor数据所在的设备位置。
+
+ 收起自动换行深色代码主题复制
+```
+// tensor数据所在的设备位置 enum TensorPlacement { kOnDeviceHbm, // < Tensor位于Device上的HBM内存 kOnHost, // < Tensor位于Host kFollowing, // < Tensor位于Host，且数据紧跟在结构体后面 kTensorPlacementEnd };
+```
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+TensorPlacement GetPlacement() const
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+tensor的placement。
+
+ 关于TensorPlacement类型的定义，请参见[TensorPlacement](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tensorplacement)。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+std::vector a = {10};auto addr = reinterpret_cast(a.data()); TensorData td(addr, HostAddrManager, 100U, kOnHost); auto td_place = td.GetPlacement(); // kOnHost
+```

@@ -1,0 +1,32 @@
+# [GenSimplifiedKey](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-gensimplifiedkey)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119177217_section91332mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119177217_section91335mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119177217_section91339mcpsimp)
+- [返回值](#zh-cn_topic_0000002119177217_section91364mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119177217_section91367mcpsimp)
+
+## 函数功能
+注册生成二进制简化匹配key的函数。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+OpImplRegisterV2 &GenSimplifiedKey(GenSimplifiedKeyKernelFunc gen_simplifiedkey_func);
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| gen_simplifiedkey_func | 输入 | 要注册的自定义GenSimplifiedKey函数，类型为GenSimplifiedKeyKernelFunc。 GenSimplifiedKeyKernelFunc类型定义如下。 收起自动换行深色代码主题复制 ``` using GenSimplifiedKeyKernelFunc = UINT32 (*)(TilingContext *, ge::char_t *); ``` |
+
+ 
+## 返回值
+返回算子的OpImplRegisterV2对象，该对象新增注册了生成二进制简化匹配key函数。
+
+ 
+## 约束说明
+无

@@ -1,0 +1,5 @@
+# [头文件](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/background-tasks-headerfile)
+
+- **[background_process_manager.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-background-process-manager-h)**
+ - **[transient_task_api.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-transient-task-api-h)**
+ - **[transient_task_type.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-transient-task-type-h)**

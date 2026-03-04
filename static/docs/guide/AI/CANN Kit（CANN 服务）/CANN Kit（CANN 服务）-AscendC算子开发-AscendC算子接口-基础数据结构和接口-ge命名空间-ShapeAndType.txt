@@ -1,0 +1,7 @@
+# [ShapeAndType](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-shapeandtype)
+
+- **[构造函数和析构函数](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-shapeandtype-construction-and-destructor)**
+ - **[SetShape](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-setshape)**
+ - **[GetShape](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-shapeandtype-getshape)**
+ - **[SetType](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-settype)**
+ - **[GetDataType](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-shapeandtype-getdatatype)**

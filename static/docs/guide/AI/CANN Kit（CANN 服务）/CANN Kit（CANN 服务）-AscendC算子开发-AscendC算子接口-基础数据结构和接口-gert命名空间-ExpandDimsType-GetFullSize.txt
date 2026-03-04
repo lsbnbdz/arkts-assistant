@@ -1,0 +1,37 @@
+# [GetFullSize](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getfullsize)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119176537_section89321mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119176537_section89324mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119176537_section89328mcpsimp)
+- [返回值](#zh-cn_topic_0000002119176537_section89331mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119176537_section89334mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119176537_section89337mcpsimp)
+
+## 函数功能
+获取补维后的dim数。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+AxisIndex GetFullSize() const
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+返回补维规则的长度，或者说是补维规则描述的维度。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+ExpandDimsType type1("1001"); auto dim_num = type1.GetFullSize(); // dim_num=4
+```

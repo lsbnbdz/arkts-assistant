@@ -1,0 +1,34 @@
+# [构造函数和析构函数](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-frameworkregistry-construction)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083776822_section97075mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083776822_section97078mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083776822_section97081mcpsimp)
+- [返回值](#zh-cn_topic_0000002083776822_section97084mcpsimp)
+- [异常处理](#zh-cn_topic_0000002083776822_section97087mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083776822_section97090mcpsimp)
+
+## 函数功能
+FrameworkRegistry构造函数和析构函数。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+FrameworkRegistry(const FrameworkRegistry &) = delete;FrameworkRegistry& operator = (const FrameworkRegistry &) = delete;~FrameworkRegistry();static FrameworkRegistry& Instance();
+```
+ 
+## 参数说明
+NA
+
+ 
+## 返回值
+Instance()返回FrameworkRegistry的单例对象。
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

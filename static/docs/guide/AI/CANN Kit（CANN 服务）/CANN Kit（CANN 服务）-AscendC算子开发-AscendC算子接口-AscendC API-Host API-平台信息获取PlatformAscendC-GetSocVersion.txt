@@ -1,0 +1,37 @@
+# [GetSocVersion](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getsocversion)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002090011132_section76618mcpsimp)
+- [函数原型](#zh-cn_topic_0000002090011132_section76621mcpsimp)
+- [参数说明](#zh-cn_topic_0000002090011132_section76625mcpsimp)
+- [返回值](#zh-cn_topic_0000002090011132_section76648mcpsimp)
+- [约束说明](#zh-cn_topic_0000002090011132_section76675mcpsimp)
+- [调用示例](#zh-cn_topic_0000002090011132_section76678mcpsimp)
+
+## 函数功能
+获取当前硬件平台版本型号。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+SocVersion GetSocVersion(void) const;
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+当前硬件平台版本型号的枚举类。该枚举类和AI处理器型号的对应关系请通过CANN DDK包里的ddk/ai_ddk_lib/include/tiling/platform/platform_ascendc.h头文件获取。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+ge::graphStatus TilingXXX(gert::TilingContext* context) { auto ascendcPlatform = platform_ascendc::PlatformAscendC(context->GetPlatformInfo()); auto socVersion = ascendcPlatform.GetSocVersion(); // 根据所获得的版本型号自行设计Tiling策略 if (socVersion == platform_ascendc::SocVersion::KIRIN9020) { // ... } return ret; }
+```

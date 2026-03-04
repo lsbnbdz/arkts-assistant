@@ -1,0 +1,1 @@
+[安全控件通用属性](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-securitycomponent-attributes)  [PasteButton](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-security-components-pastebutton)  [SaveButton](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-security-components-savebutton)

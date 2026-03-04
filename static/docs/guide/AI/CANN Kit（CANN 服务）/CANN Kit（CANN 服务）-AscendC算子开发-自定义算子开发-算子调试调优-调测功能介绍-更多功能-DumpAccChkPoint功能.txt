@@ -1,0 +1,37 @@
+# [DumpAccChkPoint功能](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-commissioning-function-dumpaccchkpoint)
+
+## 目录
+- [功能介绍](#zh-cn_topic_0000002119118729_section2913mcpsimp)
+- [使用方法（命令行）](#zh-cn_topic_0000002119118729_section2928mcpsimp)
+- [接口说明](#zh-cn_topic_0000002119118729_section2959mcpsimp)
+
+## 功能介绍
+使用工具进行算子调测时，支持指定偏移位置的Tensor打印。**该功能与**[DumpTensor功能](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-commissioning-function-dumptensor)**类似**，其使用更加灵活。
+
+ 当Tensor数据较大时，可通过DumpAccChkPoint指定偏移位置，截取指定长度的元素值打印。
+
+ 说明- simulator调测场景下的Dump偏移位置Tensor，受dump mode参数控制。
+
+ - 固定为每个核分配的打印数据的最大可使用空间为1M，目前该大小不支持修改，若打印超过1M，打印内容不再显示，请开发者控制待打印的数据量。
+
+ 
+## 使用方法（命令行）
+1. 在核函数代码中按需在需要打印Tensor偏移数据的地方调用DumpAccChkPoint接口，接口说明参见表1，样例如下。收起自动换行深色代码主题复制 ``` DumpAccChkPoint(srcLocal, 5, 32, dataLen); ```
+2. simulator调测场景执行如下命令，使能Dump开关。收起自动换行深色代码主题复制 ``` ascendebug kernel --backend simulator --dump-mode acc_chk ... {其他simulator调测参数} ``` --dump-mode取acc_chk，开启偏移位置打印Tensor模式，其他参数参考[NPU调测参数](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-cli-parameters#section1351011652416)按需配置。
+3. 查看dump结果。Dump偏移位置Tensor数据存放在${root}/${work_dir}/npu路径下，其目录结构、结果说明与[DumpTensor功能](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-commissioning-function-dumptensor)类似。
+
+ 
+## 接口说明
+ **表1**DumpAccChkPoint接口说明表
+| |
+| |
+| void DumpAccChkPoint(const LocalTensor &tensor, uint32_t desc, uint32_t offset, uint32_t dumpNum)void DumpAccChkPoint(const GlobalTensor &tensor, uint32_t desc, uint32_t offset, uint32_t dumpNum) |
+| 支持指定偏移位置的Tensor打印。 |
+| tensor | 开发者需要Dump的Tensor。多个DumpTensor调用时，不可重复。 待dump的Tensor位于Unified Buffer/L1 Buffer/L0C Buffer时使用LocalTensor类型的Tensor参数输入。待dump的Tensor位于Global Memory时使用GlobalTensor类型的Tensor参数输入。当前支持的数据类型为uint8_t、int8_t、int16_t、uint16_t、int32_t、uint32_t、float、half。 |
+| desc | 开发者自定义附加信息（行号或其他自定义数字）。 |
+| offset | 偏移元素个数。 |
+| dumpNum | 需要Dump的元素个数。 |
+| NA | - |
+| NA | - |
+| 当前接口仅支持位于Unified Buffer/L1 Buffer/L0C Buffer/Global Memory的数据Dump。偏移量需符合UB读取数据32B对齐的限制，即offset*sizeof(T)需按32B对齐。每次Dump的大小(dataNum*sizeof(T))需要32B对齐。 |
+| 收起自动换行深色代码主题复制 ``` DumpAccChkPoint(srcLocal, 7, 32 , 128); ``` |

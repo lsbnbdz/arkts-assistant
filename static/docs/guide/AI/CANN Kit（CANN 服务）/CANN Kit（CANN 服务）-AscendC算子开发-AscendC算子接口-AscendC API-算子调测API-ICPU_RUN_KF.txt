@@ -1,0 +1,49 @@
+# [ICPU_RUN_KF](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-icpu-run-kf)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119256665_section66253mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119256665_section66256mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119256665_section66259mcpsimp)
+- [返回值](#zh-cn_topic_0000002119256665_section66296mcpsimp)
+- [支持的型号](#zh-cn_topic_0000002119256665_section66299mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119256665_section66306mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119256665_section66309mcpsimp)
+
+## 函数功能
+进行核函数的CPU侧运行验证时，CPU调测总入口，完成CPU侧的算子程序调用。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+#define ICPU_RUN_KF(func, blkdim, ...)
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| func | 输入 | 算子的kernel函数指针。 |
+| blkdim | 输入 | 算子的核心数，corenum。 |
+| ... | 输入 | 所有的入参和出参，依次填入。 |
+
+ 
+## 返回值
+无
+
+ 
+## 支持的型号
+Kirin9020系列处理器
+
+ KirinX90系列处理器
+
+ 
+## 约束说明
+除了func、blkdim以外，其他的变量都必须是通过GmAlloc分配的共享内存的指针，传入的参数的数量和顺序都必须和kernel保持一致。
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+ICPU_RUN_KF(sort_kernel0, coreNum, (uint8_t*)x, (uint8_t*)y);
+```

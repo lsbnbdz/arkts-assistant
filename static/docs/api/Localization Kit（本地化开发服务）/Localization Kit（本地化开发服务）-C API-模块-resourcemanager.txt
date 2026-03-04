@@ -1,0 +1,19 @@
+# [resourcemanager](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-resourcemanager)
+
+## 目录
+- [概述](#概述)
+- [文件汇总](#文件汇总)
+
+## 概述
+PhonePC/2in1TabletTVWearable提供c相关获取资源的接口。
+
+ **起始版本：** 12
+
+ 
+## 文件汇总
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| ohresmgr.h | 提供资源管理native侧获取资源的能力。 |
+| resmgr_common.h | 提供接口所需要的枚举类型和结构体。 |

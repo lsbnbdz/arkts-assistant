@@ -1,0 +1,7 @@
+# [结构体](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ipc-struct)
+
+- **[OHIPCParcel](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-ohipcparcel-ohipcparcel)**
+ - **[OH_IPC_MessageOption](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-ohipcremoteobject-oh-ipc-messageoption)**
+ - **[OHIPCRemoteProxy](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-ohipcparcel-ohipcremoteproxy)**
+ - **[OHIPCRemoteStub](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-ohipcparcel-ohipcremotestub)**
+ - **[OHIPCDeathRecipient](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-ohipcremoteobject-ohipcdeathrecipient)**

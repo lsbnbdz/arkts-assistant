@@ -1,0 +1,25 @@
+# [调试命令](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/debugging-commands)
+
+- **[SDK命令行工具简介](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/command-line-tools-overview)**
+ - **[hdc](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/hdc)**
+ - **[aa工具](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/aa-tool)**
+ - **[bm工具](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/bm-tool)**
+ - **[打包拆包工具](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/packing-unpacking)**
+ - **[扫描工具](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/app-check-tool)**
+ - **[cem工具](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cem-tool)**
+ - **[anm工具](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/anm-tool)**
+ - **[edm工具](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/edm-tool)**
+ - **[restool工具](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/restool)**
+ - **[param工具](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/param-tool)**
+ - **[power-shell工具](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/power-shell)**
+ - **[atm工具](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/atm-tool)**
+ - **[network-cfg工具](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/network-cfg)**
+ - **[hilog](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/hilog)**
+ - **[hilogtool](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/hilog-tool)**
+ - **[hidumper](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/hidumper-tool)**
+ - **[hitrace](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/hitrace)**
+ - **[hiperf](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/hiperf)**
+ - **[hiprofiler](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/hiprofiler)**
+ - **[uinput](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/uinput)**
+ - **[命令行工具](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/command-line-utilities)**
+ - **[二进制签名工具](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/binary-sign-tool)**

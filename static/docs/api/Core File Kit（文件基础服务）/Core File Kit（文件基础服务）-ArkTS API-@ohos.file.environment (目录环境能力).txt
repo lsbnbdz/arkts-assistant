@@ -1,0 +1,123 @@
+# [@ohos.file.environment (目录环境能力)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-file-environment)
+
+## 目录
+- [导入模块](#导入模块)
+- [Environment.getUserDownloadDir](#environmentgetuserdownloaddir)
+- [Environment.getUserDesktopDir](#environmentgetuserdesktopdir)
+- [Environment.getUserDocumentDir](#environmentgetuserdocumentdir)
+
+该模块提供环境目录能力，获取内存存储根目录、公共文件根目录的JS接口。
+
+ 说明 本模块首批接口从API version 11开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+
+ 
+## 导入模块
+ PC/2in1TV收起自动换行深色代码主题复制
+```
+import { Environment } from '@kit.CoreFileKit';
+```
+ 
+## Environment.getUserDownloadDir
+ PC/2in1TVgetUserDownloadDir(): string
+
+ 获取当前用户预授权下载目录的沙箱路径。
+
+ **系统能力**：SystemCapability.FileManagement.File.Environment.FolderObtain
+
+ **设备行为差异**：该接口在2in1中可正常调用，在其他设备类型中返回801错误码。
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| string | 返回当前用户预授权下载目录的沙箱路径。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[基础文件IO错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-filemanagement#%E5%9F%BA%E7%A1%80%E6%96%87%E4%BB%B6io%E9%94%99%E8%AF%AF%E7%A0%81)和[通用错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)。
+
+ 展开
+| |
+| |
+| |
+| 801 | Capability not supported. |
+| 13900042 | Unknown error. |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+import { BusinessError } from '@kit.BasicServicesKit';function getUserDownloadDirExample() { try { let path = Environment.getUserDownloadDir(); console.info(`Succeeded in getUserDownloadDir, path is ${path}`); } catch (err) { console.error(`Failed to getUserDownloadDir. Code: ${err.code}, message: ${err.message}`); }}
+```
+ 
+## Environment.getUserDesktopDir
+ PC/2in1TVgetUserDesktopDir(): string
+
+ 获取当前用户预授权桌面目录的沙箱路径。
+
+ **系统能力**：SystemCapability.FileManagement.File.Environment.FolderObtain
+
+ **设备行为差异**：该接口在2in1中可正常调用，在其他设备类型中返回801错误码。
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| string | 返回当前用户预授权桌面目录的沙箱路径。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[基础文件IO错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-filemanagement#%E5%9F%BA%E7%A1%80%E6%96%87%E4%BB%B6io%E9%94%99%E8%AF%AF%E7%A0%81)和[通用错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)。
+
+ 展开
+| |
+| |
+| |
+| 801 | Capability not supported. |
+| 13900042 | Unknown error. |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+import { BusinessError } from '@kit.BasicServicesKit';function getUserDesktopDirExample() { try { let path = Environment.getUserDesktopDir(); console.info(`Succeeded in getUserDesktopDir, path is ${path}`); } catch (err) { console.error(`Failed to getUserDesktopDir. Code: ${err.code}, message: ${err.message}`); }}
+```
+ 
+## Environment.getUserDocumentDir
+ PC/2in1TVgetUserDocumentDir(): string
+
+ 获取当前用户预授权文档目录的沙箱路径。
+
+ **系统能力**：SystemCapability.FileManagement.File.Environment.FolderObtain
+
+ **设备行为差异**：该接口在2in1中可正常调用，在其他设备类型中返回801错误码。
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| string | 返回当前用户预授权文档目录的沙箱路径。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[基础文件IO错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-filemanagement#%E5%9F%BA%E7%A1%80%E6%96%87%E4%BB%B6io%E9%94%99%E8%AF%AF%E7%A0%81)和[通用错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)。
+
+ 展开
+| |
+| |
+| |
+| 801 | Capability not supported. |
+| 13900042 | Unknown error. |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+import { BusinessError } from '@kit.BasicServicesKit';function getUserDocumentDirExample() { try { let path = Environment.getUserDocumentDir(); console.info(`Succeeded in getUserDocumentDir, path is ${path}`); } catch (err) { console.error(`Failed to getUserDocumentDir. Code: ${err.code}, message: ${err.message}`); }}
+```

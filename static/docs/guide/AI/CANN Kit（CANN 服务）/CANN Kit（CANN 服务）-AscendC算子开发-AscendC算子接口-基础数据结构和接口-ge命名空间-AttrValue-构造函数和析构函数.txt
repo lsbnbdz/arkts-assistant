@@ -1,0 +1,34 @@
+# [构造函数和析构函数](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-attrvalue-construction-and-destructor)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119256997_section96864mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119256997_section96867mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119256997_section96873mcpsimp)
+- [返回值](#zh-cn_topic_0000002119256997_section96876mcpsimp)
+- [异常处理](#zh-cn_topic_0000002119256997_section96879mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119256997_section96882mcpsimp)
+
+## 函数功能
+AttrValue构造函数和析构函数。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+AttrValue();~AttrValue() = default;
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+AttrValue构造函数返回AttrValue类型的对象。
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

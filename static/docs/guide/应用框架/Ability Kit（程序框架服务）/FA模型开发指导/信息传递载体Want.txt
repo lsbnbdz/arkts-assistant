@@ -1,0 +1,1 @@
+请参见[Stage模型](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ability-terminology#stage%E6%A8%A1%E5%9E%8B)的"[信息传递载体Want](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/want-overview)"。

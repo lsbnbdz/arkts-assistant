@@ -1,0 +1,40 @@
+# [SetMax](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-setmax)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119176849_section91677mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119176849_section91680mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119176849_section91683mcpsimp)
+- [返回值](#zh-cn_topic_0000002119176849_section91706mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119176849_section91709mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119176849_section91712mcpsimp)
+
+## 函数功能
+设置最大的T对象指针。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+void SetMax(T *max)
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| max | 输入 | 最大的T对象指针。 |
+
+ 
+## 返回值
+无
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+Range range; int max = 1024; range.SetMax(&max);
+```

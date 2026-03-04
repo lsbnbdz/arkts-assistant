@@ -1,0 +1,67 @@
+# [Duplicate](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-data-duplicate)
+
+## 目录
+- [功能说明](#zh-cn_topic_0000002105556742_section249715012508)
+- [函数原型](#zh-cn_topic_0000002105556742_section34985013503)
+- [参数说明](#zh-cn_topic_0000002105556742_section204992055020)
+- [支持的型号](#zh-cn_topic_0000002105556742_section3523190205012)
+- [注意事项](#zh-cn_topic_0000002105556742_section195235010506)
+- [返回值](#zh-cn_topic_0000002105556742_section35256095016)
+- [调用示例](#zh-cn_topic_0000002105556742_section135254013502)
+- [样例模板](#zh-cn_topic_0000002105556742_section1553420013509)
+
+## 功能说明
+将一个变量或一个立即数，复制多次并填充到向量，其中PAR表示矢量计算单元一个迭代能够处理的元素个数：
+
+ 
+
+ 
+## 函数原型
+tensor前n个数据计算：收起自动换行深色代码主题复制
+```
+template void Duplicate(const LocalTensor& dstLocal, const T& scalarValue, const int32_t& calCount)
+```
+ 
+## 参数说明
+ **表1**参数说明展开
+| 参数名称 | 输入/输出 | 含义 |
+| --- | --- | --- |
+| dstLocal | 输出 | 目的操作数。 类型为LocalTensor，支持的TPosition为VECIN/VECCALC/VECOUT。 LocalTensor的起始地址需要32字节对齐。 Kirin9020系列处理器，支持的数据类型为：uint8/int8/uint16_t/int16_t/half/uint32_t/int32_t/float16/float KirinX90系列处理器，支持的数据类型为：uint8/int8/uint16_t/int16_t/half/uint32_t/int32_t/float16/float |
+| scalarValue | 输入 | 被复制的源操作数，支持输入变量和立即数，数据类型需与dstLocal中元素的数据类型保持一致。 |
+| calCount | 输入 | 输入数据元素个数。 |
+
+ 
+## 支持的型号
+Kirin9020系列处理器
+
+ KirinX90系列处理器
+
+ 
+## 注意事项
+- 操作数地址偏移对齐要求请参见[通用约束](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-general-constraints)。
+- 开发者输入立即数需自行保证不超出dstLocal中元素数据类型对应的大小范围。
+
+ 
+## 返回值
+无
+
+ 
+## 调用示例
+本样例中只展示Compute流程中的部分代码。如果开发者需要运行样例代码，请将该代码段拷贝并替换[样例模板](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-data-duplicate#zh-cn_topic_0000002105556742_section1553420013509)中的Compute函数粗体部分即可。
+
+ tensor前n个数据计算样例：收起自动换行深色代码主题复制
+```
+half inputVal(18.0); AscendC::Duplicate(dstLocal, inputVal, srcDataSize);
+```
+ 结果示例如下。
+
+ 收起自动换行深色代码主题复制
+```
+输入数据：[0 1.0 2.0 ... 254.0 255.0] // 不关心输入数据，会被Duplicate盖掉 输出数据：[18.0 18.0 18.0 ... 18.0 18.0]
+```
+ 
+## 样例模板
+收起自动换行深色代码主题复制
+```
+#include "kernel_operator.h" class KernelDuplicate { public: __aicore__ inline KernelDuplicate() {} __aicore__ inline void Init(__gm__ uint8_t* src, __gm__ uint8_t* dstGm) { srcGlobal.SetGlobalBuffer((__gm__ half*)src); dstGlobal.SetGlobalBuffer((__gm__ half*)dstGm); pipe.InitBuffer(inQueueSrc, 1, srcDataSize * sizeof(half)); pipe.InitBuffer(outQueueDst, 1, dstDataSize * sizeof(half)); } __aicore__ inline void Process() { CopyIn(); Compute(); CopyOut(); } private: __aicore__ inline void CopyIn() { AscendC::LocalTensor srcLocal = inQueueSrc.AllocTensor(); AscendC::DataCopy(srcLocal, srcGlobal, srcDataSize); inQueueSrc.EnQue(srcLocal); } __aicore__ inline void Compute() { AscendC::LocalTensor srcLocal = inQueueSrc.DeQue(); AscendC::LocalTensor dstLocal = outQueueDst.AllocTensor(); half inputVal(18.0); AscendC::Duplicate(dstLocal, inputVal, srcDataSize); outQueueDst.EnQue(dstLocal); inQueueSrc.FreeTensor(srcLocal); } __aicore__ inline void CopyOut() { AscendC::LocalTensor dstLocal = outQueueDst.DeQue(); AscendC::DataCopy(dstGlobal, dstLocal, dstDataSize); outQueueDst.FreeTensor(dstLocal); } private: AscendC::TPipe pipe; AscendC::TQue inQueueSrc; AscendC::TQue outQueueDst; AscendC::GlobalTensor srcGlobal, dstGlobal; int srcDataSize = 256; int dstDataSize = 256; }; extern "C" __global__ __aicore__ void duplicate_kernel(__gm__ uint8_t* src, __gm__ uint8_t* dstGm) { KernelDuplicate op; op.Init(src, dstGm); op.Process(); }
+```

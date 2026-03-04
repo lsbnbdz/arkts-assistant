@@ -1,0 +1,44 @@
+# [GetBlockNum](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getblocknum)
+
+## 目录
+- [功能说明](#zh-cn_topic_0000002083617230_section29267mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083617230_section29270mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083617230_section29273mcpsimp)
+- [返回值](#zh-cn_topic_0000002083617230_section29276mcpsimp)
+- [支持的型号](#zh-cn_topic_0000002083617230_section29279mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083617230_section29286mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083617230_section29289mcpsimp)
+
+## 功能说明
+获取当前任务配置的核数，用于代码内部的多核逻辑控制等。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+__aicore__ inline int64_t GetBlockNum()
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+当前任务配置的核数。
+
+ 
+## 支持的型号
+Kirin9020系列处理器
+
+ KirinX90系列处理器
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+#include "kernel_operator.h" // 在核内做简单的tiling计算时使用block_num，复杂tiling建议在host侧完成 __aicore__ inline void InitTilingParam(int32_t& totalSize, int32_t& loopSize) { loopSize = totalSize / AscendC::GetBlockNum(); };
+```

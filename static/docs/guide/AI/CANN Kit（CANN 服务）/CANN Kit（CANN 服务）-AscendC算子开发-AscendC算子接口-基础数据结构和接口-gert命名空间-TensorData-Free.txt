@@ -1,0 +1,41 @@
+# [Free](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-free)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083776810_section93452mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083776810_section93455mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083776810_section93459mcpsimp)
+- [返回值](#zh-cn_topic_0000002083776810_section93462mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083776810_section93468mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083776810_section93471mcpsimp)
+
+## 函数功能
+释放tensor。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+ge::graphStatus Free()
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+成功时返回：ge::GRAPH_SUCCESS。
+
+ 失败时返回manager函数返回的状态码。
+
+ 关于ge::graphStatus类型的定义，请参见[ge::graphStatus](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-gegraphstatus)。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+std::vector a = {10};auto addr = reinterpret_cast(a.data()); TensorData td(addr, nullptr); td.Free();
+```

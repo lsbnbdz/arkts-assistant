@@ -1,0 +1,8 @@
+# [头文件](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkweb-headerfile)
+
+- **[arkweb_error_code.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-arkweb-error-code-h)**
+ - **[arkweb_interface.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-arkweb-interface-h)**
+ - **[arkweb_net_error_list.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-arkweb-net-error-list-h)**
+ - **[arkweb_scheme_handler.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-arkweb-scheme-handler-h)**
+ - **[arkweb_type.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-arkweb-type-h)**
+ - **[native_interface_arkweb.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-native-interface-arkweb-h)**

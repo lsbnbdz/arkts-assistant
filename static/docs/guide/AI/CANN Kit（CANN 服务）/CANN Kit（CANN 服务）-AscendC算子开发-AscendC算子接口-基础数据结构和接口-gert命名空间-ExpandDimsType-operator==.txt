@@ -1,0 +1,40 @@
+# [operator==](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-expanddimstype-operator)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083776526_section89281mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083776526_section89284mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083776526_section89288mcpsimp)
+- [返回值](#zh-cn_topic_0000002083776526_section89311mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083776526_section89314mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083776526_section89317mcpsimp)
+
+## 函数功能
+判断本补维规则对象与另一个对象是否一致。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+bool operator==(const ExpandDimsType &other) const
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| other | 输入 | 另一个补维规则对象。 |
+
+ 
+## 返回值
+true表示一致，false表示不一致。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+ExpandDimsType type1("1001"); ExpandDimsType type2("1001"); bool is_same_type = type1 == type2; // true
+```

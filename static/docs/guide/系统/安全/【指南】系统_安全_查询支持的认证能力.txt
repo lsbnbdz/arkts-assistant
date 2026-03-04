@@ -1,0 +1,27 @@
+## 目录
+- [接口说明](#接口说明)
+- [开发步骤](#开发步骤)
+
+不同的设备对于认证能力（人脸、指纹、口令）的支持性各有差异，开发者在发起认证前应当先查询当前设备支持的用户认证能力。
+
+## 接口说明
+          具体参数、返回值、错误码等描述，请参考对应的[API文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-useriam-userauth#userauthgetavailablestatus9)。
+
+| 接口名称 | 功能描述 |
+| --- | --- |
+| getAvailableStatus(authType : UserAuthType, authTrustLevel : AuthTrustLevel): void | 根据指定的认证类型、认证等级，检测当前设备是否支持相应的认证能力。 |
+
+## 开发步骤
+                       [申请权限](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/prerequisites#%E7%94%B3%E8%AF%B7%E6%9D%83%E9%99%90)：ohos.permission.ACCESS_BIOMETRIC。
+
+             指定认证类型（[UserAuthType](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-useriam-userauth#userauthtype8)）和认证等级（[AuthTrustLevel](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-useriam-userauth#authtrustlevel8)），调用[getAvailableStatus](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-useriam-userauth#userauthgetavailablestatus9)接口查询当前的设备是否支持相应的认证能力。
+
+       认证可信等级的详细介绍请参见[认证可信等级划分原则](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/user-authentication-overview#%E7%94%9F%E7%89%A9%E8%AE%A4%E8%AF%81%E5%8F%AF%E4%BF%A1%E7%AD%89%E7%BA%A7%E5%88%92%E5%88%86%E5%8E%9F%E5%88%99)。
+
+          以查询设备是否支持认证可信等级≥ATL3的人脸认证功能为例：
+
+     收起自动换行深色代码主题复制
+```
+import { BusinessError } from  '@kit.BasicServicesKit';import { userAuth } from '@kit.UserAuthenticationKit';
+// 查询认证能力是否支持。try {    userAuth.getAvailableStatus(userAuth.UserAuthType.FACE, userAuth.AuthTrustLevel.ATL3);    console.info('current auth trust level is supported');} catch (error) {    const err: BusinessError = error as BusinessError;    console.error(`current auth trust level is not supported. Code is ${err?.code}, message is ${err?.message}`);}
+```

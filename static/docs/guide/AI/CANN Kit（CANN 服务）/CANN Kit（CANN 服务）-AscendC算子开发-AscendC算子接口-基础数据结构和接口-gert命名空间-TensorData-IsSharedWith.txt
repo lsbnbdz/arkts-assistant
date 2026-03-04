@@ -1,0 +1,42 @@
+# [IsSharedWith](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-issharedwith)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083616854_section93524mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083616854_section93527mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083616854_section93531mcpsimp)
+- [返回值](#zh-cn_topic_0000002083616854_section93554mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083616854_section93558mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083616854_section93561mcpsimp)
+
+## 函数功能
+判断当前TensorData对象与另一个对象是否共享一块内存以及使用同一个内存管理函数。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+bool IsSharedWith(const TensorData &other) const
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| other | 输入 | 另一个TensorData对象。 |
+
+ 
+## 返回值
+true代表两个对象共享一块内存以及使用同一个内存管理函数。
+
+ false反之。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+auto addr = reinterpret_cast(0x10); TensorData td1(addr, HostAddrManager, 100U, kOnHost); TensorData td2(addr, HostAddrManager, 100U, kOnHost); bool is_shared_td = td1.IsSharedWith(td2); // true
+```

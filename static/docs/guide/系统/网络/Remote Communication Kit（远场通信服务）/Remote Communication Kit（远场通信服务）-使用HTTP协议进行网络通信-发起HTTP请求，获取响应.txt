@@ -1,0 +1,8 @@
+# [发起HTTP请求，获取响应](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/remote-communication-netinit)
+
+- **[发送网络请求（ArkTS）](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/remote-communication-netsend-arkts)**
+ - **[取消网络请求（ArkTS）](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/remote-communication-netcancle-arkts)**
+ - **[关闭会话（ArkTS）](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/remote-communication-netclose-arkts)**
+ - **[发送网络请求（C++）](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/remote-communication-netsend-c)**
+ - **[取消网络请求（C++）](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/remote-communication-netcancle-c)**
+ - **[关闭会话（C++）](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/remote-communication-netclose-c)**

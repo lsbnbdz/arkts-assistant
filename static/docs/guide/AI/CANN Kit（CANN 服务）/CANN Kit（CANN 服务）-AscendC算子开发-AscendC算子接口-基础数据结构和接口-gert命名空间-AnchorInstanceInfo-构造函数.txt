@@ -1,0 +1,41 @@
+# [构造函数](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-anchorinstanceinfo-constructor)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083777026_section87378mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083777026_section87381mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083777026_section87387mcpsimp)
+- [返回值](#zh-cn_topic_0000002083777026_section87421mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083777026_section87424mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083777026_section87427mcpsimp)
+
+## 函数功能
+提供了默认的构造函数以及指定了两个数据成员信息的构造函数。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+AnchorInstanceInfo()AnchorInstanceInfo(const uint32_t instance_start, const uint32_t instantiation_num)
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| instance_start | 输入 | 指定了本对象的instance_start_。 |
+| instantiation_num | 输入 | 指定了本对象的instantiation_num_。 |
+
+ 
+## 返回值
+返回一个AnchorInstanceInfo对象。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+AnchorInstanceInfo anchor_0(0, 10); // IR定义的第一个输入是动态输入，且有10个实际输入。
+```

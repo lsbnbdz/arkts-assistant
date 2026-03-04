@@ -1,0 +1,40 @@
+# [SetPlacement](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-ge-tensor-setplacement)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083776826_section94441mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083776826_section94444mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083776826_section94448mcpsimp)
+- [返回值](#zh-cn_topic_0000002083776826_section94473mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083776826_section94476mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083776826_section94479mcpsimp)
+
+## 函数功能
+设置tensor的placement。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+void SetPlacement(const TensorPlacement placement)
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| placement | 输入 | 需要设置的tensor的placement。 关于TensorPlacement类型的定义，请参见TensorPlacement。 |
+
+ 
+## 返回值
+无
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+Tensor tensor{{{8, 3, 224, 224}, {16, 3, 224, 224}}, // shape {ge::FORMAT_ND, ge::FORMAT_FRACTAL_NZ, {}}, // format kFollowing, // placement ge::DT_FLOAT16, // dt nullptr}; tensor.SetPlacement(TensorPlacement::kOnDeviceHbm); auto placement = tensor.GetPlacement(); // kOnDeviceHbm
+```

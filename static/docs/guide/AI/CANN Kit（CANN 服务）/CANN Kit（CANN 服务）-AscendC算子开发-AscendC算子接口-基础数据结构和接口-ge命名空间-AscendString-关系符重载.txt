@@ -1,0 +1,8 @@
+# [关系符重载](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-reloading-relational-operators)
+
+对于AscendString对象大小比较的使用场景（例如map数据结构的key进行排序），通过重载以下关系符实现。
+
+ 收起自动换行深色代码主题复制
+```
+ bool operator<(const AscendString& d) const; bool operator>(const AscendString& d) const; bool operator<=(const AscendString& d) const; bool operator>=(const AscendString& d) const; bool operator==(const AscendString& d) const; bool operator!=(const AscendString& d) const;
+```

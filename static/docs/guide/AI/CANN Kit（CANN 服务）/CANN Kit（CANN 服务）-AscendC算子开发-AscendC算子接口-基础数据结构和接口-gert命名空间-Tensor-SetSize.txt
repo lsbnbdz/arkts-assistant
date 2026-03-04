@@ -1,0 +1,40 @@
+# [SetSize](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tensor-setsize)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119176633_section93862mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119176633_section93865mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119176633_section93869mcpsimp)
+- [返回值](#zh-cn_topic_0000002119176633_section93892mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119176633_section93895mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119176633_section93898mcpsimp)
+
+## 函数功能
+设置Tensor的内存大小。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+void SetSize(const size_t size)
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| size | 输入 | Tensor的内存大小，单位是字节。 |
+
+ 
+## 返回值
+无
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+StorageShape sh({1, 2, 3}, {1, 2, 3}); Tensor t = {sh, {}, {}, ge::DT_FLOAT, nullptr}; t.SetSize(0U); 
+```

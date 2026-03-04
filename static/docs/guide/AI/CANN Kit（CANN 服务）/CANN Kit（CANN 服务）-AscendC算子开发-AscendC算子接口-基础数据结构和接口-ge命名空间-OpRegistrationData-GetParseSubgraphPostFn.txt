@@ -1,0 +1,26 @@
+# [GetParseSubgraphPostFn](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getparsesubgraphpostfn)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119256913_section103459mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119256913_section103462mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119256913_section103475mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119256913_section103502mcpsimp)
+
+## 函数功能
+根据算子类型，获取算子注册的子图中输入输出节点跟算子的输入输出的对应关系实现的函数对象。
+
+ 
+## 函数原型
+注意GetParseSubgraphPostFn()函数后续版本将废弃，建议使用GetParseSubgraphPostFn(ParseSubgraphFuncV2 &func)函数。
+
+ - **ParseSubgraphFunc GetParseSubgraphPostFn() const**该函数会返回ParseSubgraphFunc类型的函数对象，ParseSubgraphFunc函数的声明如下。 收起自动换行深色代码主题复制 ``` using ParseSubgraphFunc = std::function ```
+- **Status GetParseSubgraphPostFn(ParseSubgraphFuncV2 &func) const**该函数会返回ParseSubgraphFuncV2类型的函数对象，ParseSubgraphFuncV2函数的声明如下。 收起自动换行深色代码主题复制 ``` using ParseSubgraphFuncV2 = std::function ```
+
+ 
+## 参数说明
+- GetParseSubgraphPostFn()函数无
+- GetParseSubgraphPostFn(ParseSubgraphFuncV2 &func)函数 展开 | 参数 | 输入/输出 | 说明 | | --- | --- | --- | | func | 输出 | 实现算子注册的子图中输入输出节点跟算子的输入输出对应关系的函数对象。 |
+
+ 
+## 约束说明
+无

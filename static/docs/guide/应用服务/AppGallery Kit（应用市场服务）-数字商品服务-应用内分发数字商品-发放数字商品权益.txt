@@ -1,0 +1,41 @@
+# [发放数字商品权益](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/store-iap-distribute-delivering)
+
+## 目录
+- [场景介绍](#section3361619164413)
+- [业务流程及开发步骤](#section1565413214612)
+  - [消耗型/非消耗型商品](#section11425856171915)
+  - [自动续期订阅商品](#section3412191542012)
+  - [非续期订阅商品](#section1698504812311)
+- [单机应用权益发放](#section82941432162019)
+  - [非消耗型商品](#section8811175032017)
+  - [自动续期订阅商品](#section189603114213)
+
+## 场景介绍
+- 消耗型商品若应用提供消耗型商品，需要按照[确保权益发放处理](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/store-iap-distribute-delivering#section11425856171915)消耗型商品的权益发放。
+- 非消耗型商品若应用提供非消耗型商品，且为单机应用，则需要按照[单机应用权益发放](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/store-iap-distribute-delivering#section82941432162019)（非消耗型商品）处理非消耗型商品的权益发放。其他场景建议按照消耗型/非消耗型商品的[确保权益发放处理](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/store-iap-distribute-delivering#section11425856171915)。
+- 订阅型商品若应用为非单机应用，则建议按照[确保权益发放处理](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/store-iap-distribute-delivering#section3412191542012)自动续期订阅商品的权益发放。若为单机应用，则需要按照[单机应用权益发放](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/store-iap-distribute-delivering#section82941432162019)（自动续期订阅商品）处理自动续期订阅商品的权益发放。
+- 非续期订阅商品若应用提供非续期订阅商品，需要按照[确保权益发放处理](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/store-iap-distribute-delivering#section1698504812311)非续期订阅商品的权益发放。
+
+ 
+## 业务流程及开发步骤
+ 
+### 消耗型/非消耗型商品
+详细开发流程请参考[消耗型/非消耗型商品权益发放](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/iap-delivering-products)。
+
+ 
+### 自动续期订阅商品
+详细开发流程请参考[自动续期订阅商品权益发放](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/iap-delivering-subscriptions)。
+
+ 
+### 非续期订阅商品
+详细开发流程请参考[非续期订阅商品权益发放](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/iap-delivering-nonrenewable)。
+
+ 
+## 单机应用权益发放
+ 
+### 非消耗型商品
+详细开发流程请参考[单机应用权益发放](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/iap-delivering-products#section12848165791915)（非消耗型）。
+
+ 
+### 自动续期订阅商品
+详细开发流程请参考[单机应用权益发放](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/iap-delivering-subscriptions#section1369619716116)（自动续期订阅型）。

@@ -1,0 +1,40 @@
+# [AppendDim](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-appenddim)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083617326_section92585mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083617326_section92588mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083617326_section92592mcpsimp)
+- [返回值](#zh-cn_topic_0000002083617326_section92615mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083617326_section92618mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083617326_section92621mcpsimp)
+
+## 函数功能
+向后扩展一个dim值，如果扩展的dim数量超出Shape的最大限制，那么本函数不做任何事情。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+Shape& AppendDim(const int64_t value)
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| value | 输入 | 扩展的dim值。 |
+
+ 
+## 返回值
+this引用。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+Shape shape0({3, 256, 256}); shape0.AppendDim(1024); // 3,256,256,1024
+```

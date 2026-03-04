@@ -1,0 +1,45 @@
+# [VacantInQue](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tque-vacantinque)
+
+## 目录
+- [功能说明](#zh-cn_topic_0000002127459341_section27612mcpsimp)
+- [函数原型](#zh-cn_topic_0000002127459341_section27615mcpsimp)
+- [参数说明](#zh-cn_topic_0000002127459341_section27618mcpsimp)
+- [支持的型号](#zh-cn_topic_0000002127459341_section27621mcpsimp)
+- [注意事项](#zh-cn_topic_0000002127459341_section27629mcpsimp)
+- [返回值](#zh-cn_topic_0000002127459341_section27632mcpsimp)
+- [调用示例](#zh-cn_topic_0000002127459341_section27637mcpsimp)
+
+## 功能说明
+查询队列是否已满。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+__aicore__ inline bool VacantInQue()
+```
+ 
+## 参数说明
+无
+
+ 
+## 支持的型号
+Kirin9020系列处理器
+
+ KirinX90系列处理器
+
+ 
+## 注意事项
+无
+
+ 
+## 返回值
+- true：表示Queue未满，可以继续EnQue操作。
+- false：表示Queue已满，不可以继续入队。
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+// 根据VacantInQue判断当前Queue是否已满，设置当前队列深度为4 AscendC::TPipe pipe; AscendC::TQue que; int num = 10; int len = 1024; pipe.InitBuffer(que, num, len); bool ret = que.VacantInQue(); // 返回为true AscendC::LocalTensor tensor1 = que.AllocTensor(); AscendC::LocalTensor tensor2 = que.AllocTensor(); AscendC::LocalTensor tensor3 = que.AllocTensor(); AscendC::LocalTensor tensor4 = que.AllocTensor(); AscendC::LocalTensor tensor5 = que.AllocTensor(); que.EnQue(tensor1);// 将tensor1加入VECOUT的Queue中 que.EnQue(tensor2);// 将tensor2加入VECOUT的Queue中 que.EnQue(tensor3);// 将tensor3加入VECOUT的Queue中 que.EnQue(tensor4);// 将tensor4加入VECOUT的Queue中 ret = que.VacantInQue(); // 返回为false, 继续入队操作（EnQue）将报错
+```

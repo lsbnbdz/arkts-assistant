@@ -1,0 +1,5 @@
+# [Data Augmentation Kit（数据增强服务）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/data-augmentation-api)
+
+- **[ArkTS API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-arkts)**
+ - **[ArkTS API错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-error-code)**
+ - **[C API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-capi)**

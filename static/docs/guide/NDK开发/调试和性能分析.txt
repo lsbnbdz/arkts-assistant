@@ -1,0 +1,5 @@
+# [调试和性能分析](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/debugging-profiling)
+
+- **[调试和性能分析概述](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/debug-performance-profiling-overview)**
+ - **[C/C++内存错误检测](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/debug-asan)**
+ - **[LLDB高性能调试器](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/debug-lldb)**

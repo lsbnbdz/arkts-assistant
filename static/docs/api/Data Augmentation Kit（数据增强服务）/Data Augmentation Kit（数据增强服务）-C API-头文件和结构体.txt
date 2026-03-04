@@ -1,0 +1,8 @@
+# [头文件和结构体](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-capi-header-struct)
+
+- **[aip_error_code.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-aip-error-code)**
+ - **[aip_retrieval.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-aip-retrieval)**
+ - **[aip_retrieval_condition.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-aip-retrieval-condition)**
+ - **[aip_retrieval_condition_vector.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-aip-retrieval-condition-vector)**
+ - **[aip_retrieval_query.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-aip-retrieval-query)**
+ - **[aip_retrieval_record.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-aip-retrieval-record)**

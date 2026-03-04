@@ -1,0 +1,44 @@
+# [GetTensorCountInQue](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tque-gettensorcountinque)
+
+## 目录
+- [功能说明](#zh-cn_topic_0000002092099666_section27670mcpsimp)
+- [函数原型](#zh-cn_topic_0000002092099666_section27673mcpsimp)
+- [参数说明](#zh-cn_topic_0000002092099666_section27676mcpsimp)
+- [支持的型号](#zh-cn_topic_0000002092099666_section27679mcpsimp)
+- [注意事项](#zh-cn_topic_0000002092099666_section27687mcpsimp)
+- [返回值](#zh-cn_topic_0000002092099666_section27690mcpsimp)
+- [调用示例](#zh-cn_topic_0000002092099666_section27693mcpsimp)
+
+## 功能说明
+查询队列中已入队的Tensor数量。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+__aicore__ inline int32_t GetTensorCountInQue()
+```
+ 
+## 参数说明
+无
+
+ 
+## 支持的型号
+Kirin9020系列处理器
+
+ KirinX90系列处理器
+
+ 
+## 注意事项
+无
+
+ 
+## 返回值
+队列中已入队的Tensor数量。
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+// 通过GetTensorCountInQue查询Queue中已入队的Tensor数量，当前通过AllocTensor接口分配了内存，并加入Queue中，num为1。 AscendC::TPipe pipe; AscendC::TQue que; int num = 4; int len = 1024; pipe.InitBuffer(que, num, len); AscendC::LocalTensor tensor1 = que.AllocTensor(); que.EnQue(tensor1);// 将tensor加入VECOUT的Queue中 int32_t numb = que.GetTensorCountInQue();
+```

@@ -1,0 +1,16 @@
+# [ArkTS API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/core-file-arkts)
+
+- **[@ohos.application.BackupExtensionAbility (备份恢复扩展能力)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-application-backupextensionability)**
+ - **[@ohos.file.cloudSync (端云同步能力)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-file-cloudsync)**
+ - **[@ohos.file.cloudSyncManager (端云同步管理能力)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-file-cloudsyncmanager)**
+ - **[@ohos.file.environment (目录环境能力)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-file-environment)**
+ - **[@ohos.file.fileuri (文件URI)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-file-fileuri)**
+ - **[@ohos.file.fs (文件管理)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-file-fs)**
+ - **[@ohos.file.hash (文件哈希处理)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-file-hash)**
+ - **[@ohos.file.picker (选择器)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-file-picker)**
+ - **[@ohos.file.securityLabel (数据标签)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-file-securitylabel)**
+ - **[@ohos.file.statvfs (文件系统空间统计)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-file-statvfs)**
+ - **[@ohos.file.storageStatistics (应用空间统计)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-file-storage-statistics)**
+ - **[@ohos.fileshare (文件分享)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-fileshare)**
+ - **[@ohos.file.BackupExtensionContext (备份恢复扩展能力)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-file-backupextensioncontext)**
+ - **[已停止维护的接口](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/core-file-arkts-dep)**

@@ -1,0 +1,1 @@
+[密钥证明介绍及算法规格](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/huks-key-attestation-overview)  [开发指导](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/huks-key-attestation-dev)

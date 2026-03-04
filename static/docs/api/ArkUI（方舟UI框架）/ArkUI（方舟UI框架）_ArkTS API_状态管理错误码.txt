@@ -1,0 +1,57 @@
+## 目录
+- [130000 addMonitor/clearMonitor非法目标对象](#section130000-addmonitorclearmonitor非法目标对象)
+- [130001 addMonitor/clearMonitor非法路径](#section130001-addmonitorclearmonitor非法路径)
+- [130002 addMonitor/clearMonitor非法回调方法](#section130002-addmonitorclearmonitor非法回调方法)
+
+说明      以下仅介绍本模块特有错误码，通用错误码请参考[通用错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)。
+
+## 130000 addMonitor/clearMonitor非法目标对象
+          支持设备PhonePC/2in1TabletTVWearable错误信息
+
+     The target is not a custom component instance or V2 class instance.
+
+     错误描述
+
+     [addMonitor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-statemanagement#addmonitor20)/[clearMonitor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-statemanagement#clearmonitor20)的目标对象参数不合法。
+
+     可能原因
+
+     目标对象不满足以下情况：
+
+           [@ObservedV2](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-new-observedv2-and-trace)装饰的class(至少有一个[@Trace](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-new-observedv2-and-trace)装饰的变量)。      [@ComponentV2](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-new-componentv2)装饰的自定义组件的实例。          处理步骤
+
+     确保addMonitor/clearMonitor的目标对象合法，详情请参见[addMonitor/clearMonitor开发指南](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-new-addmonitor-clearmonitor#%E9%99%90%E5%88%B6%E6%9D%A1%E4%BB%B6)。
+
+## 130001 addMonitor/clearMonitor非法路径
+          支持设备PhonePC/2in1TabletTVWearable错误信息
+
+     The path is invalid.
+
+     错误描述
+
+     addMonitor/clearMonitor的路径参数不合法。
+
+     可能原因
+
+     路径不是string或者不是数组类型。
+
+     处理步骤
+
+     确保addMonitor/clearMonitor的路径合法，详情可见[addMonitor/clearMonitor开发指南](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-new-addmonitor-clearmonitor#%E9%99%90%E5%88%B6%E6%9D%A1%E4%BB%B6)。
+
+## 130002 addMonitor/clearMonitor非法回调方法
+          支持设备PhonePC/2in1TabletTVWearable错误信息
+
+     monitorCallback is not a function or an anonymous function.
+
+     错误描述
+
+     addMonitor/clearMonitor的回调方法参数不合法。
+
+     可能原因
+
+     回调方法不是function类型，或者是匿名function。
+
+     处理步骤
+
+     确保addMonitor/clearMonitor的回调方法合法，详情可见[addMonitor/clearMonitor开发指南](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-new-addmonitor-clearmonitor#%E9%99%90%E5%88%B6%E6%9D%A1%E4%BB%B6)。

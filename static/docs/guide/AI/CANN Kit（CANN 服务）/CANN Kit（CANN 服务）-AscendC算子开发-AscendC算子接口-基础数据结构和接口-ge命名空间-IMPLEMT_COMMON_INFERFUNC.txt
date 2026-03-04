@@ -1,0 +1,34 @@
+# [IMPLEMT_COMMON_INFERFUNC](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-implemt-common-inferfunc)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119177197_section108535mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119177197_section108542mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119177197_section108546mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119177197_section108549mcpsimp)
+- [返回值](#zh-cn_topic_0000002119177197_section108572mcpsimp)
+
+## 函数功能
+封装算子的Common_InferShape函数。
+
+ 与[IMPLEMT_INFERFUNC](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-implemt-inferfunc)的区别是，此函数自动生成的一个类型为Operator类的对象op，可直接调用[Operator](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-operator-construction-and-destructor)接口进行InferShape的实现。若InferShape方法具有通用性，可被多个算子的原型实现调用，可选择此接口实现。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+IMPLEMT_COMMON_INFERFUNC(func_name)
+```
+ 
+## 约束说明
+无
+
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| func_name | 输入 | InferShape函数名，开发者自定义。 |
+
+ 
+## 返回值
+无

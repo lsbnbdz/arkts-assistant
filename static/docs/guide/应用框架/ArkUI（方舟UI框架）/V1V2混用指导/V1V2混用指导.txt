@@ -1,0 +1,1 @@
+[自定义组件混用场景指导](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-custom-component-mixed-scenarios)  [状态管理V1V2混用文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-v1-v2-mixusage)

@@ -1,0 +1,3 @@
+# [开发函数](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cloudfoundation-develop-function)
+
+- **[Node.js](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cloudfoundation-develop-function-nodejs)**

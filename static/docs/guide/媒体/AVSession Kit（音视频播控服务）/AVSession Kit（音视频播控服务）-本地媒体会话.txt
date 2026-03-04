@@ -1,0 +1,7 @@
+# [本地媒体会话](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/local-avsession)
+
+- **[本地媒体会话概述](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/local-avsession-overview)**
+ - **[媒体会话提供方](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/using-avsession-developer)**
+ - **[媒体会话提供方(C/C++)](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/using-ohavsession-developer)**
+ - **[应用接入AVSession场景介绍](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/avsession-access-scene)**
+ - **[后台播放](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/avsession-background-scene)**

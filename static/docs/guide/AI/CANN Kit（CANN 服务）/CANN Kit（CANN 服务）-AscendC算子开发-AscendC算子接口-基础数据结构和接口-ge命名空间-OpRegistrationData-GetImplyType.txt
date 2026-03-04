@@ -1,0 +1,24 @@
+# [GetImplyType](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getimplytype)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083777090_section103292mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083777090_section103295mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083777090_section103299mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083777090_section103302mcpsimp)
+
+## 函数功能
+获取算子执行方式。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+domi::ImplyType GetImplyType () const
+```
+ 
+## 参数说明
+无
+
+ 
+## 约束说明
+无

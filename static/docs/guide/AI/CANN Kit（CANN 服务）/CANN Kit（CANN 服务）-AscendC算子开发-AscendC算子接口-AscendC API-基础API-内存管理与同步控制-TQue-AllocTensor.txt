@@ -1,0 +1,44 @@
+# [AllocTensor](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tque-alloctensor)
+
+## 目录
+- [功能说明](#zh-cn_topic_0000002127459337_section27401mcpsimp)
+- [函数原型](#zh-cn_topic_0000002127459337_section27404mcpsimp)
+- [参数说明](#zh-cn_topic_0000002127459337_section27407mcpsimp)
+- [支持的型号](#zh-cn_topic_0000002127459337_section27410mcpsimp)
+- [注意事项](#zh-cn_topic_0000002127459337_section27418mcpsimp)
+- [返回值](#zh-cn_topic_0000002127459337_section27421mcpsimp)
+- [调用示例](#zh-cn_topic_0000002127459337_section27424mcpsimp)
+
+## 功能说明
+从队列中分配Tensor，Tensor所占大小为InitBuffer时设置的每块内存长度。注意，分配的Tensor内容并非全0，可能会是随机值。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+template __aicore__ inline LocalTensor AllocTensor()
+```
+ 
+## 参数说明
+无
+
+ 
+## 支持的型号
+Kirin9020系列处理器
+
+ KirinX90系列处理器
+
+ 
+## 注意事项
+无
+
+ 
+## 返回值
+LocalTensor对象。
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+// 使用AllocTensor分配Tensor AscendC::TPipe pipe; AscendC::TQue que; int num = 4; int len = 1024; pipe.InitBuffer(que, num, len); // InitBuffer分配内存块数为4，每块大小为1024Bytes AscendC::LocalTensor tensor1 = que.AllocTensor(); // AllocTensor分配Tensor长度为1024Bytes
+```

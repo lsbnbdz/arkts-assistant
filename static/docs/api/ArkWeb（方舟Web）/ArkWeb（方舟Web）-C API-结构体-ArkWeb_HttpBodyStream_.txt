@@ -1,0 +1,18 @@
+# [ArkWeb_HttpBodyStream_](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-httpbodystream)
+
+## 目录
+- [概述](#概述)
+
+收起自动换行深色代码主题复制
+```
+typedef struct ArkWeb_HttpBodyStream_ ArkWeb_HttpBodyStream
+```
+ 
+## 概述
+PhonePC/2in1TabletTVWearable请求的上传数据。使用OH_ArkWebHttpBodyStream_接口来读取上传的数据。
+
+ **起始版本：** 12
+
+ **相关模块：** [Web](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web)
+
+ **所在头文件：** [arkweb_scheme_handler.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-arkweb-scheme-handler-h)

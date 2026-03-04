@@ -1,0 +1,37 @@
+# [IsScalar](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-isscalar)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119177125_section92400mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119177125_section92403mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119177125_section92406mcpsimp)
+- [返回值](#zh-cn_topic_0000002119177125_section92409mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119177125_section92412mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119177125_section92415mcpsimp)
+
+## 函数功能
+判断本shape是否为标量，所谓标量，是指GetDimNum()为0。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+bool IsScalar() const
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+true为标量，false为非标量。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+Shape shape0({3, 256, 256}); Shape shape2; shape0.IsScalar(); // false shape2.IsScalar(); // true
+```

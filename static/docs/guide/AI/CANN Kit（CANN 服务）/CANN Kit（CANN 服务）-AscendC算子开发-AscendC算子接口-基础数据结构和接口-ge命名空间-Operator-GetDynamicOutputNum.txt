@@ -1,0 +1,37 @@
+# [GetDynamicOutputNum](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getdynamicoutputnum)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083776626_section99440mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083776626_section99443mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083776626_section99451mcpsimp)
+- [返回值](#zh-cn_topic_0000002083776626_section99474mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083776626_section99498mcpsimp)
+
+## 函数功能
+获取算子的动态Output的实际个数。
+
+ 
+## 函数原型
+注意数据类型为string的接口后续版本会废弃，建议使用数据类型为非string的接口。
+
+ 收起自动换行深色代码主题复制
+```
+int32_t GetDynamicOutputNum(const std::string &name) const;int32_t GetDynamicOutputNum(const char_t *name) const;
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| name | 输入 | 算子的动态Output名。 |
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| int | 实际动态Output的个数。 当name非法，或者算子无动态Output时，返回0。 |
+
+ 
+## 约束说明
+无

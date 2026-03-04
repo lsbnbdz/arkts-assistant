@@ -1,0 +1,44 @@
+# [SetData](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tensor-setdata)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119176477_section106355mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119176477_section106358mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119176477_section106378mcpsimp)
+- [返回值](#zh-cn_topic_0000002119176477_section106416mcpsimp)
+- [异常处理](#zh-cn_topic_0000002119176477_section106439mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119176477_section106442mcpsimp)
+
+## 函数功能
+向Tensor中设置数据。
+
+ 
+## 函数原型
+注意数据类型为string的接口后续版本会废弃，建议使用数据类型为非string的接口。
+
+ 收起自动换行深色代码主题复制
+```
+graphStatus SetData(std::vector &&data);graphStatus SetData(const std::vector &data);graphStatus SetData(const uint8_t *data, size_t size);graphStatus SetData(const std::string &data);graphStatus SetData(const char_t *data);graphStatus SetData(const std::vector &data);graphStatus SetData(const std::vector &datas);graphStatus SetData(uint8_t *data, size_t size, const Tensor::DeleteFunc &deleter_func);
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| data/datas | 输入 | 需设置的数据。 |
+| size | 输入 | 数据的长度，单位为字节。 |
+| deleter_func | 输入 | 用于释放data数据。 using DeleteFunc = std::function; |
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| graphStatus | 设置成功返回GRAPH_SUCCESS，否则，返回GRAPH_FAILED。 |
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

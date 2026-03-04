@@ -1,0 +1,42 @@
+# [CalcTotalSize](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-calctotalsize)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119256961_section95696mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119256961_section95699mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119256961_section95703mcpsimp)
+- [返回值](#zh-cn_topic_0000002119256961_section95733mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119256961_section95738mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119256961_section95741mcpsimp)
+
+## 函数功能
+通过最大容量计算TilingData实例所占用的内存空间。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+static ge::graphStatus CalcTotalSize(const size_t cap_size, size_t &total_size);
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| cap_size | 输入 | 最大容量，单位为字节。 |
+| total_size | 输出 | 内存空间，单位为字节。 |
+
+ 
+## 返回值
+- 成功返回：ge::GRAPH_SUCCESS。
+- 失败返回：ge::GRAPH_FAILED。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+auto td_buf = TilingData::CreateCap(100U); auto td = reinterpret_cast(td_buf.get()); size_t total_size = 0U; auto ret = td->CalcTotalSize(td->GetCapacity, total_size); // total_size = 100 + sizeof(TilingData)
+```

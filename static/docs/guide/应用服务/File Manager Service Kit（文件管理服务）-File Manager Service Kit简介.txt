@@ -1,0 +1,31 @@
+# [File Manager Service Kit简介](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/filemanagerservice-introduction)
+
+## 目录
+- [场景介绍](#section1215151264615)
+- [约束与限制](#section38071716125219)
+  - [支持的国家和地区](#section15225152852014)
+  - [支持的设备](#section13291941162014)
+- [模拟器支持情况](#section17282950152419)
+
+File Manager Service Kit（文件管理服务）为开发者提供文件管理相关能力，开发者通过File Manager Service Kit完成文件删除到回收站、获取文件图标等功能，满足用户对文件管理的多样性诉求。
+
+ 
+## 场景介绍
+File Manager Service Kit提供以下功能：
+
+ - 删除文件到回收站：删除公共目录的文件到回收站。
+- 获取文件图标：根据文件类型获取对应的文件图标。
+
+ 
+## 约束与限制
+ 
+### 支持的国家和地区
+当前仅支持在中国境内（香港特别行政区、澳门特别行政区、中国台湾除外）提供服务。
+
+ 
+### 支持的设备
+本Kit仅适用于手机、平板和PC/2in1。
+
+ 
+## 模拟器支持情况
+从5.1.0(18)版本开始，支持模拟器运行调试。

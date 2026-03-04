@@ -1,0 +1,5 @@
+# [在授权时上报1001502003错误](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/health-faqs-3)
+
+参考[配置Client ID](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/health-configuration-client-id)，请登录[AppGallery Connect](https://developer.huawei.com/consumer/cn/service/josp/agc/index.html)平台，确认代码中配置的包名与client ID是匹配的。若仍无法解决通过[在线提单](https://developer.huawei.com/consumer/cn/support/feedback/#/)提交问题，华为支持人员会及时处理。
+
+ 更多错误码请参考[ArkTS API错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-healthservice)。

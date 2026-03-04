@@ -1,0 +1,32 @@
+# [SetInferShape](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-setinfershape)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002125626605_section73736mcpsimp)
+- [函数原型](#zh-cn_topic_0000002125626605_section73739mcpsimp)
+- [参数说明](#zh-cn_topic_0000002125626605_section73743mcpsimp)
+- [返回值](#zh-cn_topic_0000002125626605_section73767mcpsimp)
+- [约束说明](#zh-cn_topic_0000002125626605_section73772mcpsimp)
+
+## 函数功能
+注册Shape推导函数。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+OpDef &SetInferShape(gert::OpImplRegisterV2::InferShapeKernelFunc func);
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| func | 输入 | Shape推导函数。InferShapeKernelFunc类型定义如下。 收起自动换行深色代码主题复制 ``` using InferShapeKernelFunc = UINT32 (*)(InferShapeContext *); ``` |
+
+ 
+## 返回值
+[OpDef](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-opdef)算子定义。
+
+ 
+## 约束说明
+无

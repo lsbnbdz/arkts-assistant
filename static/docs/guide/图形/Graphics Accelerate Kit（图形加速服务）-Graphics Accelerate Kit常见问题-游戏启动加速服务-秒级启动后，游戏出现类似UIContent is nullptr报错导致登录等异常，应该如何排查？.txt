@@ -1,0 +1,8 @@
+# [秒级启动后，游戏出现类似UIContent is nullptr报错导致登录等异常，应该如何排查？](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/graphics-accelerate-launch-faq-7)
+
+该报错的原因是游戏秒级启动后，UIAbilityContext值未更新。
+
+ 排查点：
+
+ 1. 游戏启动后进入onCreate生命周期，是否更新UIAbilityContext值。以[Codelab](https://developer.huawei.com/consumer/cn/codelabsPortal/carddetails/tutorials_LaunchAcceleration-ArkTS)示例工程为例，AbilityContext需要在isFirstLaunchFlag判断外设置。
+2. 针对依赖UIAbilityContext的三方SDK，每次启动是否同步更新UIAbilityContext值。

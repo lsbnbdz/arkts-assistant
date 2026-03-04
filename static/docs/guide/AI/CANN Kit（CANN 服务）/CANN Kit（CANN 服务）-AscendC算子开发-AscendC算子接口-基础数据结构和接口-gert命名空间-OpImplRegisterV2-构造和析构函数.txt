@@ -1,0 +1,33 @@
+# [构造和析构函数](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-opimpiregisterv2-construction)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119257177_section90967mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119257177_section90970mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119257177_section90973mcpsimp)
+- [返回值](#zh-cn_topic_0000002119257177_section91003mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119257177_section91006mcpsimp)
+
+## 函数功能
+OpImplRegisterV2类作为注册接口类，提供了一系列算子原型注册接口，供开发者注册指定算子类型的Tiling函数、Infershape函数、私有属性等信息。开发者调用算子原型注册接口进行注册时会间接使用到该类。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+// 指定算子类型为op_type，构造一个用于算子注册的OpImplRegisterV2对象，并对其注册数据进行默认初始化。 explicit OpImplRegisterV2(const ge::char_t *op_type); // 移动构造和拷贝构造函数，二者功能均能将另一个OpImplRegisterV2对象register_data的OpImplFunctions数据注册到OpImplRegistry单例所管理的map中，并且生成一个新的默认初始化的OpImplRegisterV2对象。 OpImplRegisterV2(OpImplRegisterV2 &®ister_data) noexcept; OpImplRegisterV2(const OpImplRegisterV2 ®ister_data); OpImplRegisterV2 &operator=(const OpImplRegisterV2 &) = delete; OpImplRegisterV2 &operator=(OpImplRegisterV2 &&) = delete; ~OpImplRegisterV2();
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| op_type | 输入 | 指定的算子类型。 |
+| register_data | 输入 | 另一个注册对象，类型为OpImplRegisterV2的引用。 |
+
+ 
+## 返回值
+一个用于算子注册的OpImplRegisterV2对象。
+
+ 
+## 约束说明
+无

@@ -1,0 +1,37 @@
+# [GetInputsNum](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getinputsnum)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119256861_section88047mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119256861_section88050mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119256861_section88054mcpsimp)
+- [返回值](#zh-cn_topic_0000002119256861_section88057mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119256861_section88060mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119256861_section88063mcpsimp)
+
+## 函数功能
+获取算子在网络中的实际输入个数。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+size_t GetInputsNum() const
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+算子的实际输入个数。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+size_t index = compute_node_info->GetInputsNum();
+```

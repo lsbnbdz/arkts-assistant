@@ -1,0 +1,37 @@
+# [MutableData](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-continuousvector-mutabledata)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119256281_section89138mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119256281_section89141mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119256281_section89145mcpsimp)
+- [返回值](#zh-cn_topic_0000002119256281_section89148mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119256281_section89151mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119256281_section89154mcpsimp)
+
+## 函数功能
+获取首个元素的指针地址，[GetData(), reinterpret_cast<T *>(GetData()) + GetSize()]中的数据即为当前容器中保存的数据。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+void *MutableData()
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+首个元素的指针地址。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+size_t capacity = 100U; auto cv_holder = ContinuousVector::Create(capacity); auto cv = reinterpret_cast(cv_holder.get()); auto cap = cv->MutableData(); 
+```

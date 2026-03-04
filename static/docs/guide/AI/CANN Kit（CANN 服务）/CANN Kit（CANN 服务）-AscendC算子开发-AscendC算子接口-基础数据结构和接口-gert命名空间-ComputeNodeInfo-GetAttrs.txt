@@ -1,0 +1,37 @@
+# [GetAttrs](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-computenodeinfo-getattrs)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083776802_section88268mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083776802_section88271mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083776802_section88275mcpsimp)
+- [返回值](#zh-cn_topic_0000002083776802_section88278mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083776802_section88281mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083776802_section88284mcpsimp)
+
+## 函数功能
+获取算子的属性值，仅在算子IR原型定义和调用IMPL_OP宏注册的属性值会被返回，其他属性值被丢弃。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+const RuntimeAttrs *GetAttrs() const
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+所有IR原型定义的属性值以及通过IMPL_OP宏注册的属性值，为const类型的对象，属性值按照IR原型定义的顺序依次保存。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+auto ret = bg::CreateComputeNodeInfo(node, buffer_pool); ASSERT_NE(ret, nullptr); auto compute_node_info = reinterpret_cast(ret.get()); auto attrs = compute_node_info->GetAttrs();
+```

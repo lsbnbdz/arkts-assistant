@@ -1,0 +1,42 @@
+# [GetSubgraphNames](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getsubgraphnames)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083616626_section100108mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083616626_section100111mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083616626_section100119mcpsimp)
+- [返回值](#zh-cn_topic_0000002083616626_section100142mcpsimp)
+- [异常处理](#zh-cn_topic_0000002083616626_section100166mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083616626_section100169mcpsimp)
+
+## 函数功能
+获取一个算子的子图名称列表。
+
+ 
+## 函数原型
+注意数据类型为string的接口后续版本会废弃，建议使用数据类型为非string的接口。
+
+ 收起自动换行深色代码主题复制
+```
+std::vector GetSubgraphNames() const;graphStatus GetSubgraphNames(std::vector &names) const;
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| names | 输出 | 获取一个算子的子图名称列表。 |
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| graphStatus | GRAPH_FAILED：失败。 GRAPH_SUCCESS：成功。 |
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

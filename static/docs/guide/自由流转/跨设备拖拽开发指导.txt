@@ -1,0 +1,26 @@
+# [跨设备拖拽开发指导](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/distributed-drag-guide)
+
+## 目录
+- [约束与限制](#section17575828642)
+- [接口说明](#section184815911712)
+- [开发示例](#section1653575873018)
+
+在开发跨设备拖拽的功能时，系统将自动完成键鼠穿越和跨设备的数据传递，应用可按照文中的开发示例，完成拖拽事件的开发。
+
+ 
+## 约束与限制
+需同时满足以下条件，才能使用该功能：
+
+ - **设备限制**HarmonyOS NEXT Developer Preview0及以上版本的平板或2in1设备。
+- **使用限制**双端设备需要登录同一华为账号。双端设备需要打开Wi-Fi和蓝牙开关，并接入同一个局域网。打开键鼠穿越开关。应用本身预置的资源文件（即应用在安装前的HAP包中已经存在的资源文件）不支持跨设备拖拽。
+
+ 
+## 接口说明
+在开发具体功能前，请先查阅参考文档，获取详细的接口说明。
+
+ - [拖拽控制](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-universal-attributes-drag-drop)：设置组件是否可以响应拖拽事件的属性。组件均需要设置draggable属性才能响应拖拽事件。当前部分组件默认支持拖拽控制。应用使用这些组件时，只需要将draggable设置为true，系统将根据组件的支持情况，自动实现onDragStart的写信息或onDrop的读信息。
+- [拖拽事件](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-universal-events-drag-drop)：组件被鼠标选中后拖拽时触发的事件。应用应根据实际需求，实现组件拖入或拖出。
+
+ 
+## 开发示例
+拖拽事件通过鼠标左键来操作和响应，开发示例请参考：[拖拽事件](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-universal-events-drag-drop)。

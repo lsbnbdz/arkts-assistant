@@ -1,0 +1,34 @@
+# [BreakConnect](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-breakconnect)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083616706_section98773mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083616706_section98776mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083616706_section98780mcpsimp)
+- [返回值](#zh-cn_topic_0000002083616706_section98783mcpsimp)
+- [异常处理](#zh-cn_topic_0000002083616706_section98786mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083616706_section98789mcpsimp)
+
+## 函数功能
+删除当前算子与前一个算子之间的所有连接关系，删除当前算子与下一个算子之间的所有连接关系。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+void BreakConnect() const;
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+无
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

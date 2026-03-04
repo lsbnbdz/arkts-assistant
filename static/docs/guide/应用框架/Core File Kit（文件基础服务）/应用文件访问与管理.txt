@@ -1,0 +1,1 @@
+[应用文件访问(ArkTS)](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/app-file-access)  [应用文件访问(C/C++)](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/native-fileio-guidelines)  [应用及文件系统空间统计](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/app-fs-space-statistics)

@@ -1,0 +1,31 @@
+## 目录
+- [场景介绍](#section134272461689)
+- [接口说明](#section8302193612126)
+- [开发步骤](#section76881218191312)
+
+## 场景介绍
+          Enterprise Data Guard Kit为应用提供下发管控策略的能力，相关策略会被分发到HarmonyOS系统中执行。
+
+## 接口说明
+          详细接口说明可参考[接口文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataguard-fileguard)。
+
+|  接口名 |  描述 |
+| --- | --- |
+|  updatePolicy(policy: string, callback: AsyncCallback<void>): void |  使用Callback方式更新安全管控策略。 |
+|  updatePolicy(policy: string): Promise<void> |  使用Promise方式更新安全管控策略。 |
+
+## 开发步骤
+                导入模块。       收起自动换行深色代码主题复制
+```
+import { fileGuard } from '@kit.EnterpriseDataGuardKit';
+```
+      初始化[FileGuard](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataguard-fileguard#section18457214114215)对象guard，调用接口updatePolicy，更新安全管控策略。               通过回调函数方式，更新安全管控策略。              收起自动换行深色代码主题复制
+```
+import { BusinessError } from '@kit.BasicServicesKit';
+function updatePolicyCallback() {  let guard: fileGuard.FileGuard = new fileGuard.FileGuard();  let policy: string = '{' +    '"net_intercept_toggle":0,' +    '"boundary":["10.10.0.0-10.10.255.255.255","0.0.0.0-1.1.1.1"],' +    '"netsegment_trustlist":["10.10.0.0-10.10.255.255.255"],' +    '"netsegment_blocklist":["0.0.0.0-1.1.1.1"],' +    '"default_policy":0' +    '}';  guard.updatePolicy(policy, (err: BusinessError) => {    if (err) {      console.error(`Failed to update policy. Code: ${err.code}, message: ${err.message}.`);    } else {      console.info(`Succeeded in updating policy.`);    }  });}
+```
+               通过Promise方式，更新安全管控策略。              收起自动换行深色代码主题复制
+```
+import { BusinessError } from '@kit.BasicServicesKit';
+function updatePolicyPromise() {  let guard: fileGuard.FileGuard = new fileGuard.FileGuard();  let policy: string = '{' +    '"net_intercept_toggle":0,' +    '"boundary":["10.10.0.0-10.10.255.255.255","0.0.0.0-1.1.1.1"],' +    '"netsegment_trustlist":["10.10.0.0-10.10.255.255.255"],' +    '"netsegment_blocklist":["0.0.0.0-1.1.1.1"],' +    '"default_policy":0' +    '}';  guard.updatePolicy(policy).then(() => {    console.info(`Succeeded in updating policy.`);  }).catch((err: BusinessError) => {    console.error(`Failed to update policy. Code: ${err.code}, message: ${err.message}.`);  });}
+```

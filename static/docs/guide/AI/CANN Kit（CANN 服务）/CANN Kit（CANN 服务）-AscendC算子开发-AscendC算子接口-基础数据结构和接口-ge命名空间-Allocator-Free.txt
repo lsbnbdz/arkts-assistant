@@ -1,0 +1,37 @@
+# [Free](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-allocator-free)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083617310_section96547mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083617310_section96550mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083617310_section96554mcpsimp)
+- [返回值](#zh-cn_topic_0000002083617310_section96577mcpsimp)
+- [异常处理](#zh-cn_topic_0000002083617310_section96580mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083617310_section96583mcpsimp)
+
+## 函数功能
+根据指定的MemBlock释放内存到内存池。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+virtual void Free(MemBlock *block) = 0;
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| block | 输入 | 内存block指针。 |
+
+ 
+## 返回值
+无
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+虚函数开发者必须实现。

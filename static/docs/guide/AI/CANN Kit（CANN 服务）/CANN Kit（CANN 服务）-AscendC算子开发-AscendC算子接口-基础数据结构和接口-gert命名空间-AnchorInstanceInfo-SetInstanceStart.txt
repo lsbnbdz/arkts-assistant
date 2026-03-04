@@ -1,0 +1,40 @@
+# [SetInstanceStart](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-setinstancestart)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083777046_section87475mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083777046_section87478mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083777046_section87482mcpsimp)
+- [返回值](#zh-cn_topic_0000002083777046_section87505mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083777046_section87508mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083777046_section87511mcpsimp)
+
+## 函数功能
+设置算子某个IR输入在实际输入中的起始序号（index）。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+void SetInstanceStart(const uint32_t instance_start)
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| instance_start | 输入 | 首个实例化Anchor的index。 |
+
+ 
+## 返回值
+无
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+const auto &ir_inputs = node->GetOpDesc()->GetIrInputs(); // 算子IR定义的所有输入 for (size_t i = 0; i < ir_inputs.size(); ++i) { auto ins_info = compute_node_info.MutableInputInstanceInfo(i); // 获取第i个IR输入对应的AnchorInstanceInfo对象 GE_ASSERT_NOTNULL(ins_info); size_t input_index = ir_index_to_instance_index_pair_map[i].first; // 获取统计后的算子IR输入对应的实际输入index ins_info->SetInstanceStart(input_index); // 将该信息保存到IR输入对应的AnchorInstanceInfo对象中 }
+```

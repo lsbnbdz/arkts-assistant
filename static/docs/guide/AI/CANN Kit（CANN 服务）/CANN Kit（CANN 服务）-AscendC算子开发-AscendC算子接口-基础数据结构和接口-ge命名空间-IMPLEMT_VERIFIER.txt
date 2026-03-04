@@ -1,0 +1,33 @@
+# [IMPLEMT_VERIFIER](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-implemt-verifier)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119176345_section108679mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119176345_section108682mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119176345_section108686mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119176345_section108689mcpsimp)
+- [返回值](#zh-cn_topic_0000002119176345_section108719mcpsimp)
+
+## 函数功能
+封装算子的Verify函数。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+IMPLEMT_VERIFIER(op_name, func_name)
+```
+ 
+## 约束说明
+无
+
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| op_name | 输入 | 算子类型。 |
+| func_name | 输入 | Verify函数名，开发者自定义。 |
+
+ 
+## 返回值
+无

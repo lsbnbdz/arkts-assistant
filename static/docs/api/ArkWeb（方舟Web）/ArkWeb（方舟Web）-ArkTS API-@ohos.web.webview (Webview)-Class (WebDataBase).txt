@@ -1,0 +1,140 @@
+# [Class (WebDataBase)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webdatabase)
+
+## 目录
+- [导入模块](#导入模块)
+- [getHttpAuthCredentials](#gethttpauthcredentials)
+- [saveHttpAuthCredentials](#savehttpauthcredentials)
+- [existHttpAuthCredentials](#existhttpauthcredentials)
+- [deleteHttpAuthCredentials](#deletehttpauthcredentials)
+
+Web组件数据库管理对象。
+
+ 说明 - 本模块首批接口从API version 9开始支持。后续版本如有新增内容，则采用上角标单独标记该内容的起始版本。
+ - 本Class首批接口从API version 9开始支持。
+ - 示例效果请以真机运行为准。
+ - 目前调用WebDataBase下的方法，都需要先加载Web组件。
+ 
+ 
+## 导入模块
+ PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+import { webview } from '@kit.ArkWeb';
+```
+ 
+## getHttpAuthCredentials
+ PhonePC/2in1TabletTVWearablestatic getHttpAuthCredentials(host: string, realm: string): Array<string>
+
+ 检索给定主机和域的HTTP身份验证凭据，该方法为同步方法。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| host | string | 是 | HTTP身份验证凭据应用的主机。 |
+| realm | string | 是 | HTTP身份验证凭据应用的域。 |
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| Array | 包含用户名和密码的数组，检索失败返回空数组。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[通用错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)。
+
+ 展开
+| |
+| |
+| |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+// xxx.etsimport { webview } from '@kit.ArkWeb';import { BusinessError } from '@kit.BasicServicesKit';
+@Entry@Componentstruct WebComponent { controller: webview.WebviewController = new webview.WebviewController(); host: string = "www.spincast.org"; realm: string = "protected example"; username_password: string[] = [];
+ build() { Column() { Button('getHttpAuthCredentials') .onClick(() => { try { this.username_password = webview.WebDataBase.getHttpAuthCredentials(this.host, this.realm); console.info('num: ' + this.username_password.length); } catch (error) { console.error(`ErrorCode: ${(error as BusinessError).code}, Message: ${(error as BusinessError).message}`); } }) Web({ src: 'www.example.com', controller: this.controller }) } }}
+```
+ 
+## saveHttpAuthCredentials
+ PhonePC/2in1TabletTVWearablestatic saveHttpAuthCredentials(host: string, realm: string, username: string, password: string): void
+
+ 保存给定主机和域的HTTP身份验证凭据，该方法为同步方法。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| host | string | 是 | HTTP身份验证凭据应用的主机。 |
+| realm | string | 是 | HTTP身份验证凭据应用的域。 |
+| username | string | 是 | 用户名。 |
+| password | string | 是 | 密码。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[通用错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)。
+
+ 展开
+| |
+| |
+| |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+// xxx.etsimport { webview } from '@kit.ArkWeb';import { BusinessError } from '@kit.BasicServicesKit';
+@Entry@Componentstruct WebComponent { controller: webview.WebviewController = new webview.WebviewController(); host: string = "www.spincast.org"; realm: string = "protected example";
+ build() { Column() { Button('saveHttpAuthCredentials') .onClick(() => { try { webview.WebDataBase.saveHttpAuthCredentials(this.host, this.realm, "Stromgol", "Laroche"); } catch (error) { console.error(`ErrorCode: ${(error as BusinessError).code}, Message: ${(error as BusinessError).message}`); } }) Web({ src: 'www.example.com', controller: this.controller }) } }}
+```
+ 
+## existHttpAuthCredentials
+ PhonePC/2in1TabletTVWearablestatic existHttpAuthCredentials(): boolean
+
+ 判断是否存在任何已保存的HTTP身份验证凭据，该方法为同步方法。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| boolean | 是否存在任何已保存的HTTP身份验证凭据。 存在返回true，不存在返回false。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+// xxx.etsimport { webview } from '@kit.ArkWeb';import { BusinessError } from '@kit.BasicServicesKit';
+@Entry@Componentstruct WebComponent { controller: webview.WebviewController = new webview.WebviewController();
+ build() { Column() { Button('existHttpAuthCredentials') .onClick(() => { try { let result = webview.WebDataBase.existHttpAuthCredentials(); } catch (error) { console.error(`ErrorCode: ${(error as BusinessError).code}, Message: ${(error as BusinessError).message}`); } }) Web({ src: 'www.example.com', controller: this.controller }) } }}
+```
+ 
+## deleteHttpAuthCredentials
+ PhonePC/2in1TabletTVWearablestatic deleteHttpAuthCredentials(): void
+
+ 清除所有已保存的HTTP身份验证凭据，该方法为同步方法。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+// xxx.etsimport { webview } from '@kit.ArkWeb';import { BusinessError } from '@kit.BasicServicesKit';
+@Entry@Componentstruct WebComponent { controller: webview.WebviewController = new webview.WebviewController();
+ build() { Column() { Button('deleteHttpAuthCredentials') .onClick(() => { try { webview.WebDataBase.deleteHttpAuthCredentials(); } catch (error) { console.error(`ErrorCode: ${(error as BusinessError).code}, Message: ${(error as BusinessError).message}`); } }) Web({ src: 'www.example.com', controller: this.controller }) } }}
+```

@@ -1,0 +1,34 @@
+# [AddChangedResourceKey](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-addchangedresourcekey)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083777262_section97716mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083777262_section97720mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083777262_section97724mcpsimp)
+- [返回值](#zh-cn_topic_0000002083777262_section97747mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083777262_section97750mcpsimp)
+
+## 函数功能
+在写类型的资源算子（如stack push）推导过程中，若资源shape变化了，调用该接口通知框架。
+
+ 框架依据变化的资源key，触发对应读算子（如stack pop）的重新推导。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+graphStatus AddChangedResourceKey(const ge::AscendString &key)
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| key | 输入 | 资源唯一标识。 |
+
+ 
+## 返回值
+graphStatus：GRAPH_SUCCESS，代表成功；GRAPH_FAILED，代表失败。
+
+ 
+## 约束说明
+无

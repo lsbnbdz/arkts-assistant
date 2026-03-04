@@ -1,0 +1,37 @@
+# [GetCoreNum](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getcorenum)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002125530801_section76575mcpsimp)
+- [函数原型](#zh-cn_topic_0000002125530801_section76578mcpsimp)
+- [参数说明](#zh-cn_topic_0000002125530801_section76582mcpsimp)
+- [返回值](#zh-cn_topic_0000002125530801_section76605mcpsimp)
+- [约束说明](#zh-cn_topic_0000002125530801_section76611mcpsimp)
+- [调用示例](#zh-cn_topic_0000002125530801_section76614mcpsimp)
+
+## 函数功能
+获取当前硬件平台的核数。若AI Core的架构为Cube、Vector分离架构，返回AI Core上的Vector核数；非分离架构返回AI Core的核数。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+uint32_t GetCoreNum(void) const;
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+针对Kirin9020系列处理器，Cube、Vector分离架构，返回AI Core上的Vector核数。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+ge::graphStatus TilingXXX(gert::TilingContext* context) { auto ascendcPlatform = platform_ascendc::PlatformAscendC(context->GetPlatformInfo()); auto coreNum = ascendcPlatform.GetCoreNum(); // ... 根据核数自行设计Tiling策略 context->SetBlockDim(coreNum); return ret; }
+```

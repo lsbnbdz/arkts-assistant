@@ -1,0 +1,4 @@
+# [算子部署](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-deploying-operators)
+
+- **[算子入图（GE图）开发](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-operator-development-in-graph-mode)**
+ - **[AI框架算子适配](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-ai-framework-operator-adaptation)**

@@ -1,0 +1,24 @@
+# [GetFusionParseParamFn](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getfusionparseparamfn)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083776726_section103427mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083776726_section103430mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083776726_section103434mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083776726_section103437mcpsimp)
+
+## 函数功能
+获取解析融合算子属性的函数。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+FusionParseParamFunc GetFusionParseParamFn() const
+```
+ 
+## 参数说明
+无
+
+ 
+## 约束说明
+GetFusionParseParamFn接口后续版本将会废弃，请使用[GetFusionParseParamByOpFn](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getfusionparseparambyopfn)接口获取融合算子的属性。

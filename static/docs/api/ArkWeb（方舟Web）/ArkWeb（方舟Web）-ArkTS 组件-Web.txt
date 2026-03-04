@@ -1,0 +1,30 @@
+# [Web](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-basic-components-web)
+
+- **[组件描述](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web)**
+ - **[属性](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-attributes)**
+ - **[事件](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-events)**
+ - **[Class (ClientAuthenticationHandler)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/s-basic-components-web-clientauthenticationhandler)**
+ - **[Class (ConsoleMessage)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-consolemessage)**
+ - **[Class (ControllerHandler)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-controllerhandler)**
+ - **[Class (DataResubmissionHandler)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-dataresubmissionhandler)**
+ - **[Class (EventResult)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-eventresult)**
+ - **[Class (FileSelectorParam)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-fileselectorparam)**
+ - **[Class (FileSelectorResult)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-fileselectorresult)**
+ - **[Class (FullScreenExitHandler)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-fullscreenexithandler)**
+ - **[Class (HttpAuthHandler)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-httpauthhandler)**
+ - **[Class (JsGeolocation)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-jsgeolocation)**
+ - **[Class (JsResult)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-jsresult)**
+ - **[Class (PermissionRequest)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-permissionrequest)**
+ - **[Class (ScreenCaptureHandler)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-screencapturehandler)**
+ - **[Class (SslErrorHandler)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-sslerrorhandler)**
+ - **[Class (WebContextMenuParam)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-webcontextmenuparam)**
+ - **[Class (WebContextMenuResult)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-webcontextmenuresult)**
+ - **[Class (WebCookie)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-webcookie)**
+ - **[Class (WebKeyboardController)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-webkeyboardcontroller)**
+ - **[Class (WebResourceError)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-webresourceerror)**
+ - **[Class (WebResourceRequest)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-webresourcerequest)**
+ - **[Class (WebResourceResponse)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-webresourceresponse)**
+ - **[Interfaces（其他）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-i)**
+ - **[Enums](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-e)**
+ - **[Types](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-t)**
+ - **[Class (WebController)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-webcontroller)**

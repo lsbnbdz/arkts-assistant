@@ -1,0 +1,39 @@
+# [MutableTensorData](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-mutabletensordata)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083776830_section94505mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083776830_section94508mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083776830_section94512mcpsimp)
+- [返回值](#zh-cn_topic_0000002083776830_section94515mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083776830_section94520mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083776830_section94523mcpsimp)
+
+## 函数功能
+获取tensor中的数据。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+TensorData &MutableTensorData()
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+可写的tensor data引用。
+
+ 关于TensorData类型的定义，请参见[TensorData](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tensordata)。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+Tensor t = {{}, {}, {}, {}, nullptr}; const Tensor &ct = t; std::vector a = {10};t.MutableTensorData() = TensorData{reinterpret_cast(a.data()), nullptr}; // 设置新tensordata auto td = t.GetTensorData(); // TensorData{a, nullptr}
+```

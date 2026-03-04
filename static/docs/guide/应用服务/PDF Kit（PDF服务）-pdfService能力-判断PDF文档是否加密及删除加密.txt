@@ -1,0 +1,27 @@
+# [判断PDF文档是否加密及删除加密](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/pdf-isencrypt-removesecurity)
+
+## 目录
+- [接口说明](#section1089901643513)
+- [示例代码](#section346019565214)
+
+PDF Kit支持判断PDF文档是否加密及删除PDF加密锁。
+
+ 
+## 接口说明
+ 展开
+| 接口名 | 描述 |
+| --- | --- |
+| isEncrypted(path: string): boolean | 判断当前文档是否已加密。 |
+| removeSecurity(): boolean | 删除文档加密锁。 |
+
+ 
+## 示例代码
+ 1. 调用isEncrypted方法，判断PDF文档是否加密。
+ 2. 如果是加密PDF文档，调用removeSecurity方法移除PDF文档的加密锁。
+ 
+ 收起自动换行深色代码主题复制
+```
+import { pdfService } from '@kit.PDFKit';import { hilog } from '@kit.PerformanceAnalysisKit';
+@Entry@Componentstruct PdfPage { private pdfDocument: pdfService.PdfDocument = new pdfService.PdfDocument(); private context = this.getUIContext().getHostContext() as Context;
+ build() { Column() { // 判断文档是否加密，并删除加密 Button('isEncryptedAndRemoveSecurity').onClick(async () => { // 确保沙箱目录有input.pdf文档 let filePath = this.context.filesDir + '/input.pdf'; let isEncrypt = this.pdfDocument.isEncrypted(filePath); if (isEncrypt) { let hasRemoveEncrypt = this.pdfDocument.removeSecurity(); hilog.info(0x0000, 'PdfPage', 'isEncryptedAndRemoveSecurity %{public}s!', hasRemoveEncrypt ? 'success' : 'fail'); } }) } }}
+```

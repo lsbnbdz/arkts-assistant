@@ -1,0 +1,42 @@
+# [operator==](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-range-operator)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083777386_section91597mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083777386_section91600mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083777386_section91604mcpsimp)
+- [返回值](#zh-cn_topic_0000002083777386_section91627mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083777386_section91631mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083777386_section91634mcpsimp)
+
+## 函数功能
+判断与另外一个range对象是否相等，如果两个range的上下界的地址相同，或者上下界的值相同，这两个对象相等。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+bool operator==(const Range&rht) const
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| rht | 输入 | 另一个Range对象。 |
+
+ 
+## 返回值
+true：相等。
+
+ false：不相等。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+int min = 0; int max = 1024; int max2 = 1024; Range range1(&min, &max); // 上界为1024Bytes，下界为0 Range range2(&min, &max); // 上界为1024Bytes，下界为0 Range range3(&min, &max2); // 上界为1024Bytes，下界为0 auto ret1 = range1 == range2; // true auto ret2 = range1 == range3; // true
+```

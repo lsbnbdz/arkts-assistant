@@ -1,0 +1,38 @@
+# [构造函数和析构函数](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-shapeandtype-construction-and-destructor)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119256529_section103935mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119256529_section103938mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119256529_section103954mcpsimp)
+- [返回值](#zh-cn_topic_0000002119256529_section103984mcpsimp)
+- [异常处理](#zh-cn_topic_0000002119256529_section103987mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119256529_section103990mcpsimp)
+
+## 函数功能
+ShapeAndType构造函数和析构函数。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+ShapeAndType();~ShapeAndType();ShapeAndType(const Shape &shape, DataType data_type);
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| shape | 输入 | 需设置的shape。 |
+| data_type | 输入 | 需设置的dataType。 |
+
+ 
+## 返回值
+ShapeAndType构造函数返回ShapeAndType类型的对象。
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

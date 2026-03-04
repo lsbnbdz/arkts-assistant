@@ -1,0 +1,37 @@
+# [SetSize](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tensordesc-setsize)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083617246_section105564mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083617246_section105567mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083617246_section105571mcpsimp)
+- [返回值](#zh-cn_topic_0000002083617246_section105594mcpsimp)
+- [异常处理](#zh-cn_topic_0000002083617246_section105597mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083617246_section105600mcpsimp)
+
+## 函数功能
+向TensorDesc中设置Tensor的数据大小。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+void SetSize(int64_t size);
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| size | 输入 | 需设置的Tensor的数据大小信息。 |
+
+ 
+## 返回值
+无
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

@@ -1,0 +1,42 @@
+# [GetAttrPointer](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getattrpointer)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119177213_section91780mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119177213_section91783mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119177213_section91787mcpsimp)
+- [返回值](#zh-cn_topic_0000002119177213_section91817mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119177213_section91820mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119177213_section91823mcpsimp)
+
+## 函数功能
+获取指定索引的算子属性，返回指向此属性的指针。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+template const T *GetAttrPointer(size_t index) const
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| T | 指定的输出类型 | 属性类型。 |
+| index | 输入 | 属性在IR原型定义中的索引。 |
+
+ 
+## 返回值
+指向属性的指针。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+#include "register/op_def_registry.h"
+namespace optiling {static ge::graphStatus TilingFunc(gert::TilingContext* context){ const gert::RuntimeAttrs* runtime_attrs = context->GetAttrs(); const gert::ContinuousVector attr0 = runtime_attrs->GetAttrPointer(0); return ge::GRAPH_SUCCESS;}}
+```

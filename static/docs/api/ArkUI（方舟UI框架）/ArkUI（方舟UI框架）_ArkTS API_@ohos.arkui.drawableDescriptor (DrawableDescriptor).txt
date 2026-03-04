@@ -1,0 +1,266 @@
+## 目录
+- [导入模块](#导入模块)
+- [DrawableDescriptor](#drawabledescriptor)
+  - [getPixelMap](#getpixelmap)
+- [PixelMapDrawableDescriptor12+](#pixelmapdrawabledescriptor12)
+  - [constructor12+](#constructor12)
+- [LayeredDrawableDescriptor](#layereddrawabledescriptor)
+  - [constructor12+](#constructor12-1)
+  - [getForeground](#getforeground)
+  - [getBackground](#getbackground)
+  - [getMask](#getmask)
+  - [getMaskClipPath](#getmaskclippath)
+- [AnimatedDrawableDescriptor12+](#animateddrawabledescriptor12)
+  - [constructor12+](#constructor12-2)
+- [AnimationOptions12+](#animationoptions12)
+
+本模块提供获取pixelMap的能力，包括前景、背景、蒙版和分层图标。
+
+    说明      本模块首批接口从API version 10开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+
+      示例效果请以真机运行为准，当前DevEco Studio预览器不支持。
+
+## 导入模块
+          支持设备PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+import { DrawableDescriptor, LayeredDrawableDescriptor } from '@kit.ArkUI';
+```
+             
+## DrawableDescriptor
+          支持设备PhonePC/2in1TabletTVWearable支持传入png、jpg、bmp、svg、gif、webp、astc、sut格式的资源类型。
+
+### getPixelMap
+          支持设备PhonePC/2in1TabletTVWearablegetPixelMap(): image.PixelMap
+
+     获取pixelMap。
+
+     元服务API： 从API version 11开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+     返回值：
+
+|  |
+|  |
+|  |
+| image.PixelMap | PixelMap |
+
+          示例：
+
+     收起自动换行深色代码主题复制
+```
+import { DrawableDescriptor, LayeredDrawableDescriptor } from '@kit.ArkUI'import { image } from '@kit.ImageKit'let resManager = this.getUIContext().getHostContext()?.resourceManager;// $r('app.media.app_icon')需要替换为开发者所需的图像资源文件。let pixmap: DrawableDescriptor = (resManager?.getDrawableDescriptor($r('app.media.icon')  .id)) as DrawableDescriptor; // 当传入资源id或name为普通图片时，生成DrawableDescriptor对象。let pixmapNew: image.PixelMap | undefined = pixmap?.getPixelMap();
+```
+             
+## PixelMapDrawableDescriptor12+
+          支持设备PhonePC/2in1TabletTVWearable支持通过传入pixelMap创建PixelMapDrawableDescriptor对象。继承自[DrawableDescriptor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-arkui-drawabledescriptor#drawabledescriptor)。
+
+### constructor12+
+          支持设备PhonePC/2in1TabletTVWearableconstructor(src?: image.PixelMap)
+
+     PixelMapDrawableDescriptor的构造函数。
+
+     元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+     参数：
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| src | image.PixelMap | 否 | PixelMap类型参数，存储 PixelMap 图片数据。 |
+
+## LayeredDrawableDescriptor
+          支持设备PhonePC/2in1TabletTVWearable当传入资源id或name为包含前景和背景资源的json文件时，生成LayeredDrawableDescriptor对象。继承自[DrawableDescriptor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-arkui-drawabledescriptor#drawabledescriptor)。
+
+     drawable.json位于项目工程entry/src/main/resources/base/media目录下。定义请参考：
+
+     收起自动换行深色代码主题复制
+```
+{  "layered-image":  {    "background" : "$media:background",    "foreground" : "$media:foreground"  }}
+```
+     示例：
+
+                  使用json文件创建LayeredDrawableDescriptor。
+
+       收起自动换行深色代码主题复制
+```
+// xxx.etsimport { DrawableDescriptor, LayeredDrawableDescriptor } from '@kit.ArkUI';
+@Entry@Componentstruct Index {  private resManager = this.getUIContext().getHostContext()?.resourceManager;  // $r('app.media.drawable')需要替换为开发者所需的图像资源文件。  private layeredDrawableDescriptor: DrawableDescriptor | undefined =    this.resManager?.getDrawableDescriptor($r('app.media.drawable').id);
+  build() {    Row() {      Column() {        Image((this.layeredDrawableDescriptor instanceof LayeredDrawableDescriptor) ?          this.layeredDrawableDescriptor : undefined)        Image((this.layeredDrawableDescriptor instanceof LayeredDrawableDescriptor) ?          this.layeredDrawableDescriptor?.getForeground()?.getPixelMap() : undefined)      }.height('50%')    }.width('50%')  }}
+```
+             使用PixelMapDrawableDescriptor创建LayeredDrawableDescriptor。
+
+       收起自动换行深色代码主题复制
+```
+import { DrawableDescriptor, LayeredDrawableDescriptor, PixelMapDrawableDescriptor } from '@kit.ArkUI';import { image } from '@kit.ImageKit';
+@Entry@Componentstruct Index {  @State fore1: image.PixelMap | undefined = undefined;  @State back1: image.PixelMap | undefined = undefined;
+  @State foregroundDraw:DrawableDescriptor|undefined=undefined;  @State backgroundDraw:DrawableDescriptor|undefined=undefined;  @State maskDraw:DrawableDescriptor|undefined=undefined;  @State maskPixel: image.PixelMap | undefined = undefined;  @State draw : LayeredDrawableDescriptor | undefined = undefined;  async aboutToAppear() {    // $r('app.media.foreground')需要替换为开发者所需的图像资源文件。    this.fore1 = await this.getPixmapFromMedia($r('app.media.foreground'));    // $r('app.media.background')需要替换为开发者所需的图像资源文件。    this.back1 = await this.getPixmapFromMedia($r('app.media.background'));    // $r('app.media.ohos_icon_mask')需要替换为开发者所需的图像资源文件。    this.maskPixel = await this.getPixmapFromMedia($r('app.media.ohos_icon_mask'));    // 使用PixelMapDrawableDescriptor创建LayeredDrawableDescriptor    this.foregroundDraw = new PixelMapDrawableDescriptor(this.fore1);    this.backgroundDraw = new PixelMapDrawableDescriptor(this.back1);    this.maskDraw = new PixelMapDrawableDescriptor(this.maskPixel);
+    this.draw = new LayeredDrawableDescriptor(this.foregroundDraw,this.backgroundDraw,this.maskDraw);  }  build() {    Row() {      Column() {          Image(this.draw)            .width(300)            .height(300)      }.height('100%').justifyContent(FlexAlign.Center)    }.width('100%').height("100%").backgroundColor(Color.Pink)  }  // 根据资源，通过图片框架获取pixelMap  private async getPixmapFromMedia(resource: Resource) {    let unit8Array = await this.getUIContext().getHostContext()?.resourceManager?.getMediaContent(resource.id);    let imageSource = image.createImageSource(unit8Array?.buffer.slice(0, unit8Array.buffer.byteLength));    let createPixelMap: image.PixelMap = await imageSource.createPixelMap({      desiredPixelFormat: image.PixelMapFormat.BGRA_8888    });    await imageSource.release();    return createPixelMap;  }}
+```
+                  
+### constructor12+
+          支持设备PhonePC/2in1TabletTVWearableconstructor(foreground?: DrawableDescriptor, background?: DrawableDescriptor, mask?: DrawableDescriptor)
+
+     LayeredDrawableDescriptor的构造函数。
+
+     元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+     参数：
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| foreground | DrawableDescriptor | 否 | 分层图标的前景图片选项。 |
+| background | DrawableDescriptor | 否 | 分层图标的背景图片选项。 |
+| mask | DrawableDescriptor | 否 | 分层图标的遮罩选项。 |
+
+### getForeground
+          支持设备PhonePC/2in1TabletTVWearablegetForeground(): DrawableDescriptor
+
+     获取前景的DrawableDescriptor对象。
+
+     元服务API： 从API version 11开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+     返回值：
+
+|  |
+|  |
+|  |
+| DrawableDescriptor | DrawableDescriptor对象。 |
+
+          示例：
+
+     收起自动换行深色代码主题复制
+```
+import { DrawableDescriptor, LayeredDrawableDescriptor } from '@kit.ArkUI';
+@Entry@Componentstruct Index {  @State drawableDescriptor: DrawableDescriptor | undefined = undefined;
+  private getForeground(): DrawableDescriptor | undefined {    let resManager = this.getUIContext().getHostContext()?.resourceManager;    // $r('app.media.drawable')需要替换为开发者所需的图像资源文件。    let drawable: DrawableDescriptor | undefined = resManager?.getDrawableDescriptor($r('app.media.drawable').id);    if (!drawable) {      return undefined;    }    if (drawable instanceof LayeredDrawableDescriptor) {      let layeredDrawableDescriptor = (drawable as LayeredDrawableDescriptor).getForeground();      return layeredDrawableDescriptor;    }    return undefined;  }
+  aboutToAppear(): void {    this.drawableDescriptor = this.getForeground();  }
+  build() {    RelativeContainer() {      if (this.drawableDescriptor) {        Image(this.drawableDescriptor)          .width(100)          .height(100)          .borderWidth(1)          .backgroundColor(Color.Green);      }    }    .height('100%')    .width('100%')  }}
+```
+             
+### getBackground
+          支持设备PhonePC/2in1TabletTVWearablegetBackground(): DrawableDescriptor
+
+     获取背景的DrawableDescriptor对象。
+
+     元服务API： 从API version 11开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+     返回值：
+
+|  |
+|  |
+|  |
+| DrawableDescriptor | DrawableDescriptor对象。 |
+
+          示例：
+
+     收起自动换行深色代码主题复制
+```
+import { DrawableDescriptor, LayeredDrawableDescriptor } from '@kit.ArkUI';
+@Entry@Componentstruct Index {  @State drawableDescriptor: DrawableDescriptor | undefined = undefined;
+  private getBackground(): DrawableDescriptor | undefined {    let resManager = this.getUIContext().getHostContext()?.resourceManager;    // $r('app.media.drawable')需要替换为开发者所需的图像资源文件。    let drawable: DrawableDescriptor | undefined = resManager?.getDrawableDescriptor($r('app.media.drawable').id);    if (!drawable) {      return undefined;    }    let layeredDrawableDescriptor = (drawable as LayeredDrawableDescriptor).getBackground();    return layeredDrawableDescriptor;  }
+  aboutToAppear(): void {    this.drawableDescriptor = this.getBackground();  }
+  build() {    RelativeContainer() {      if (this.drawableDescriptor) {        Image(this.drawableDescriptor)          .width(100)          .height(100)      }    }    .height('100%')    .width('100%')  }}
+```
+             
+### getMask
+          支持设备PhonePC/2in1TabletTVWearablegetMask(): DrawableDescriptor
+
+     获取蒙版的DrawableDescriptor对象。
+
+     元服务API： 从API version 11开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+     返回值：
+
+|  |
+|  |
+|  |
+| DrawableDescriptor | DrawableDescriptor对象。 |
+
+          示例：
+
+     收起自动换行深色代码主题复制
+```
+import { DrawableDescriptor, LayeredDrawableDescriptor } from '@kit.ArkUI';
+@Entry@Componentstruct Index {  @State drawableDescriptor: DrawableDescriptor | undefined = undefined;
+  private getMask(): DrawableDescriptor | undefined {    let resManager = this.getUIContext().getHostContext()?.resourceManager;    // $r('app.media.drawable')需要替换为开发者所需的图像资源文件。    let drawable: DrawableDescriptor | undefined = resManager?.getDrawableDescriptor($r('app.media.drawable').id);    if (!drawable) {      return undefined;    }    let layeredDrawableDescriptor = (drawable as LayeredDrawableDescriptor).getMask();    return layeredDrawableDescriptor;  }
+  aboutToAppear(): void {    this.drawableDescriptor = this.getMask();  }
+  build() {    RelativeContainer() {      if (this.drawableDescriptor) {        Image(this.drawableDescriptor)          .width(100)          .height(100)      }    }    .height('100%')    .width('100%')  }}
+```
+             
+### getMaskClipPath
+          支持设备PhonePC/2in1TabletTVWearablestatic getMaskClipPath(): string
+
+     LayeredDrawableDescriptor的静态方法，获取系统内置的裁切路径参数。
+
+     元服务API： 从API version 11开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+     返回值：
+
+|  |
+|  |
+|  |
+| string | 返回裁切路径的命令字符串。 |
+
+          示例：
+
+     收起自动换行深色代码主题复制
+```
+// xxx.etsimport { DrawableDescriptor, LayeredDrawableDescriptor } from '@kit.ArkUI';
+@Entry@Componentstruct Index {build() {  Row() {    Column() {      // $r('app.media.icon')需要替换为开发者所需的图像资源文件。      Image($r('app.media.icon'))        .width('200px').height('200px')        .clipShape(new Path({commands:LayeredDrawableDescriptor.getMaskClipPath()}))      Text(`获取系统内置的裁剪路径参数：`)        .fontWeight(800)      Text(JSON.stringify(LayeredDrawableDescriptor.getMaskClipPath()))        .padding({ left: 20, right: 20 })    }.height('100%').justifyContent(FlexAlign.Center)  }.width('100%')}}
+```
+             
+## AnimatedDrawableDescriptor12+
+          支持设备PhonePC/2in1TabletTVWearable使用Image组件播放PixelMap数组时传入AnimatedDrawableDescriptor对象，该对象继承自[DrawableDescriptor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-arkui-drawabledescriptor#drawabledescriptor)。
+
+### constructor12+
+          支持设备PhonePC/2in1TabletTVWearableconstructor(pixelMaps: Array<image.PixelMap>, options?: AnimationOptions)
+
+     AnimatedDrawableDescriptor的构造函数。
+
+     元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+     参数：
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| pixelMaps | Array< image.PixelMap > | 是 | PixelMap 数组类型参数，存储 PixelMap 图片数据。 |
+| options | AnimationOptions | 否 | 动画控制选项。 |
+
+## AnimationOptions12+
+          支持设备PhonePC/2in1TabletTVWearable用于控制通过Image组件显示的PixelMap数组动画的播放行为。
+
+     元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+| 名称 | 类型 | 只读 | 可选 | 说明 |
+| --- | --- | --- | --- | --- |
+| duration | number | 否 | 是 |  设置图片数组播放总时间。默认每张图片播放1秒。 取值范围：[0, +∞) |
+| iterations | number | 否 | 是 | 设置图片数组播放次数。默认为1，值为-1时表示无限播放，值为0时表示不播放，值大于0时表示播放次数。 |
+
+          示例：
+
+     该示例通过[AnimatedDrawableDescriptor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-arkui-drawabledescriptor#animateddrawabledescriptor12)对象和[AnimationOptions](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-arkui-drawabledescriptor#animationoptions12)接口实现了多张图片的动画播放效果。
+
+     收起自动换行深色代码主题复制
+```
+import { AnimationOptions, AnimatedDrawableDescriptor } from '@kit.ArkUI';import { image } from '@kit.ImageKit';
+@Entry@Componentstruct Example {  pixelMaps: Array<image.PixelMap> = [];  options: AnimationOptions = { duration: 1000, iterations: -1 };  @State animated: AnimatedDrawableDescriptor = new AnimatedDrawableDescriptor(this.pixelMaps, this.options);
+  async aboutToAppear() {    // $r('app.media.icon')需要替换为开发者所需的图像资源文件。    this.pixelMaps.push(await this.getPixmapFromMedia($r('app.media.icon')));    // $r('app.media.cloud1')需要替换为开发者所需的图像资源文件。    this.pixelMaps.push(await this.getPixmapFromMedia($r('app.media.cloud1')));    this.animated = new AnimatedDrawableDescriptor(this.pixelMaps, this.options);  }
+  build() {    Column() {      Row() {        Image(this.animated)      }    }  }
+  private async getPixmapFromMedia(resource: Resource) {    let unit8Array = await this.getUIContext().getHostContext()?.resourceManager?.getMediaContent(resource.id);    let imageSource = image.createImageSource(unit8Array?.buffer.slice(0, unit8Array.buffer.byteLength));    let createPixelMap: image.PixelMap = await imageSource.createPixelMap({      desiredPixelFormat: image.PixelMapFormat.RGBA_8888    });    await imageSource.release();    return createPixelMap;  }}
+```

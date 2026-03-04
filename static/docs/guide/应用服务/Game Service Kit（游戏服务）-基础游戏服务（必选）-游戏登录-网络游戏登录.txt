@@ -1,0 +1,5 @@
+# [网络游戏登录](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/gameservice-gameplayer-network)
+
+- **[网络游戏登录概述](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/gameservice-network-introduction)**
+ - **[使用华为账号登录（必选）](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/gameservice-gameplayer-huawei)**
+ - **[使用游戏官方账号登录](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/gameservice-gameplayer-official)**

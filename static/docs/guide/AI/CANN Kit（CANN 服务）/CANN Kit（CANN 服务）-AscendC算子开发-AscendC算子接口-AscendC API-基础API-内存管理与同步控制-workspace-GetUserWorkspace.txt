@@ -1,0 +1,39 @@
+# [GetUserWorkspace](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getuserworkspace)
+
+## 目录
+- [功能说明](#zh-cn_topic_0000002092433666_section28779mcpsimp)
+- [函数原型](#zh-cn_topic_0000002092433666_section28788mcpsimp)
+- [参数说明](#zh-cn_topic_0000002092433666_section28791mcpsimp)
+- [支持的型号](#zh-cn_topic_0000002092433666_section28815mcpsimp)
+- [注意事项](#zh-cn_topic_0000002092433666_section28821mcpsimp)
+- [返回值](#zh-cn_topic_0000002092433666_section28824mcpsimp)
+
+## 功能说明
+获取开发者使用的[workspace](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getsysworkspaceptr)指针。如果使用了[Matmul](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-matmul1)等需要系统workspace的高阶API，kernel侧需要通过[SetSysWorkSpace](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-setsysworkspace)设置系统workspace，此时开发者workspace需要通过该接口获取。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+__aicore__ inline GM_ADDR GetUserWorkspace(GM_ADDR workspace)
+```
+ 
+## 参数说明
+ **表1**接口参数说明展开
+| 参数名称 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| workspace | 输入 | 传入workspace的指针，包括系统workspace和开发者使用的workspace。 |
+
+ 
+## 支持的型号
+Kirin9020系列处理器
+
+ KirinX90系列处理器
+
+ 
+## 注意事项
+无
+
+ 
+## 返回值
+开发者使用workspace指针。

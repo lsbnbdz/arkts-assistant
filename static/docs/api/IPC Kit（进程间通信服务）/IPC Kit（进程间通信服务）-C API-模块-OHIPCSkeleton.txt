@@ -1,0 +1,20 @@
+# [OHIPCSkeleton](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-ohipcskeleton)
+
+## 目录
+- [概述](#概述)
+- [文件汇总](#文件汇总)
+
+## 概述
+PhonePC/2in1TabletTVWearable提供IPC框架token ID、凭据、PID/UID、线程池配置等等功能C接口。
+
+ **系统能力：** SystemCapability.Communication.IPC.Core
+
+ **起始版本：** 12
+
+ 
+## 文件汇总
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| ipc_cskeleton.h | 提供IPC框架token ID、凭据、PID/UID、线程池配置等等功能C接口。 |

@@ -1,0 +1,27 @@
+# [数据类型转换说明](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arengine-arraybuffer-info)
+
+在开发AR应用时，部分数据类型需要转换才能使用，以下进行汇总及示例。
+
+ 
+## ArrayBuffer
+ 在一些不支持接收ArrayBuffer数据类型的方法中，需要将其反序列化为int32或者float32类型，涉及转换的接口列表如下：
+
+ 展开
+| 接口名 | 描述 |
+| --- | --- |
+| ImageComponent | 参数buffer为ArrayBuffer类型，可转换为int32。 |
+| ARPlane.getPolygonXZ | 返回值为ArrayBuffer类型，可转换为float32。 |
+| ARSceneMesh.getVertices | 返回值为ArrayBuffer类型，可转换为float32。 |
+| ARSceneMesh.getVertexNormals | 返回值为ArrayBuffer类型，可转换为float32。 |
+| ARSceneMesh.getTriangleIndices | 返回值为ArrayBuffer类型，可转换为int32。 |
+| ARSemanticDensePointData | 参数id为ArrayBuffer类型，可转换为int32。 |
+| ARSemanticDensePointData | 参数position为ArrayBuffer类型，可转换为float32。 |
+| ARSemanticDensePointData | 参数color为ArrayBuffer类型，可转换为int32。 |
+
+ 转换的示例如下：
+
+ 收起自动换行深色代码主题复制
+```
+// ArrayBuffer转float32function arrayBufferFloat32ToNumber(buffer: ArrayBuffer): number[] { let view: Float32Array = new Float32Array(buffer); let numberArray: number[] = Array.from(view); return numberArray;}
+// ArrayBuffer转int32function arrayBufferInt32ToNumber(buffer: ArrayBuffer): number[] { let view: Int32Array = new Int32Array(buffer); let numberArray: number[] = Array.from(view); return numberArray;}
+```

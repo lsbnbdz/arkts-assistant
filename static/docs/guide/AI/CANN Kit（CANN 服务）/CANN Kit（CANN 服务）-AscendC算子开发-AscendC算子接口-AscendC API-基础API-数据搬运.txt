@@ -1,0 +1,4 @@
+# [数据搬运](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-vectorcalculation-data-movement)
+
+- **[DataCopy](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-datacopy)**
+ - **[DataCopyPad](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-datacopypad)**

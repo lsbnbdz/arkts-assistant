@@ -1,0 +1,1 @@
+[密钥生成介绍及算法规格](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/huks-key-generation-overview)  [开发指导](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/huks-key-generation-dev)

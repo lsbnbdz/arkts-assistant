@@ -1,0 +1,24 @@
+# [开发准备](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-preparations)
+
+## 目录
+- [环境准备](#section7838141513128)
+- [Tools下载](#section152959341125)
+
+## 环境准备
+- 使用Ubuntu 64位运行[Tools下载](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-preparations#section152959341125)中的tools_omg模型转换工具。
+- 推荐使用[Ubuntu 22.04](https://mirrors.ustc.edu.cn/ubuntu-releases/22.04/)及以上版本、MacOS 10.14及以上版本、Windows 10及以上版本安装应用开发环境[DevEco Studio](https://developer.huawei.com/consumer/cn/deveco-studio/)。
+- 准备训练好的tools_omg模型转换工具生成的[离线模型](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-overall-parameter)或者从[Model Zoo](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-model-zoo)中选择合适的模型。
+
+ 
+## Tools下载
+ 展开
+| Tools名称 | Tools说明 | Tools下载 | SHA256校验码 |
+| --- | --- | --- | --- |
+| 轻量化工具 包名：tools_dopt | 对原始模型进行轻量化，以减少模型体积及加快模型推理速度。 | DDK-tools-6.0.1.0 | 1b2822fb9e5fe7443782915c6f34b4a2ce5c028207e7782514bd93970ff8e48a |
+| OMG工具 包名：tools_omg | 模型转换工具。 |
+| AscendC工具 包名：tools_ascendc | 为AscendC算子开发提供的算子功能、性能调测集成工具。 |
+| 平台插件包 包名： kirin9020 kirinx90 kirin9030 | AscendC工具提供不同平台的差异化能力，使用AscendC工具前需要将对应的平台安装到platform目录下。 | kirin9020-plugin-6.0.1.0 | b0657b18d30d59fff6d6a64eb7af93e63668a921936e66a48e692ab943eb2687 |
+| kirinx90-plugin-6.0.1.0 | a3bd6872367ca370d20d392840ae5dd19c517206c48a459b531b96e0f18000a7 |
+| kirin9030-plugin-6.0.1.0 | 3b32effc5af9804628cb9287e88cc28ed381877adb15dd85bf8d66e3be805251 |
+
+ 开源软件声明：[CANN Kit 6.0.1.0 Open Source Software Notice.doc](https://alliance-communityfile-drcn.dbankcdn.com/FileServer/getFile/cmtyPub/011/111/111/0000000000011111111.20260302181306.32251674163358688167046298113314:50001231000000:2800:940934E47D5BE19E965A183554D230B965B0C4DE5D8FA36F04E7C2705FB00C8B.doc?needInitFileName=true)。

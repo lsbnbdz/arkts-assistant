@@ -1,0 +1,44 @@
+# [Trap](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-trap)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083617402_section29964mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083617402_section29967mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083617402_section29970mcpsimp)
+- [返回值](#zh-cn_topic_0000002083617402_section29973mcpsimp)
+- [支持的型号](#zh-cn_topic_0000002083617402_section29976mcpsimp)
+- [注意事项](#zh-cn_topic_0000002083617402_section29981mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083617402_section29984mcpsimp)
+
+## 函数功能
+当软件产生异常后，使用该指令使kernel中止运行。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+__aicore__ inline void Trap()
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+无
+
+ 
+## 支持的型号
+Kirin9020系列处理器
+
+ KirinX90系列处理器
+
+ 
+## 注意事项
+该接口在kernel需要调试时使用。
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+AscendC::Trap();
+```

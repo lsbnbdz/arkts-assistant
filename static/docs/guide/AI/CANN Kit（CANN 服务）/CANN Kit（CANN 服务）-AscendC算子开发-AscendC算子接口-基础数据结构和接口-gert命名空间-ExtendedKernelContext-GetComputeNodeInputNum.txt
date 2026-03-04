@@ -1,0 +1,37 @@
+# [GetComputeNodeInputNum](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getcomputenodeinputnum)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083777286_section89817mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083777286_section89820mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083777286_section89824mcpsimp)
+- [返回值](#zh-cn_topic_0000002083777286_section89827mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083777286_section89830mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083777286_section89833mcpsimp)
+
+## 函数功能
+获取算子的输入个数。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+size_t GetComputeNodeInputNum() const
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+算子的输入个数。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+// 假设已存在KernelContext *context auto extend_context = reinterpret_cast(context); for (size_t idx = 0; idx < extend_context->GetComputeNodeInputNum(); ++idx) { auto input_td = extend_context->GetInputDesc(idx); // ... }
+```

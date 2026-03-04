@@ -1,0 +1,37 @@
+# [OpReceiver](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-opreceiver)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119256697_section102470mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119256697_section102473mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119256697_section102479mcpsimp)
+- [返回值](#zh-cn_topic_0000002119256697_section102502mcpsimp)
+- [异常处理](#zh-cn_topic_0000002119256697_section102505mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119256697_section102508mcpsimp)
+
+## 函数功能
+OpReceiver构造函数，接收自定义算子的注册信息。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+OpReceiver(OpRegistrationData ®_data);~OpReceiver();
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| reg_data | 输入 | 需要注册的算子信息。 |
+
+ 
+## 返回值
+OpReceiver构造函数返回OpReceiver类型的对象。
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

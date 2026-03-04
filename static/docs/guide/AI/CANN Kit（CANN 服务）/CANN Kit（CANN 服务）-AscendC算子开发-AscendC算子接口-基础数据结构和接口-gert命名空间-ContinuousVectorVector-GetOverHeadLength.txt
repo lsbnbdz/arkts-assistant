@@ -1,0 +1,40 @@
+# [GetOverHeadLength](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getoverheadlength)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083776854_section88897mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083776854_section88900mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083776854_section88904mcpsimp)
+- [返回值](#zh-cn_topic_0000002083776854_section88927mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083776854_section88930mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083776854_section88933mcpsimp)
+
+## 函数功能
+获取数据描述信息的长度。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+static size_t GetOverHeadLength(const size_t capacity)
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| capacity | 输入 | 实例的最大容量。 |
+
+ 
+## 返回值
+数据描述信息的长度。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+size_t capacity = 100U; auto length = ContinuousVectorVector::GetOverHeadLength(capacity);
+```

@@ -1,0 +1,40 @@
+# [SetData](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-setdata)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119177065_section93778mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119177065_section93781mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119177065_section93785mcpsimp)
+- [返回值](#zh-cn_topic_0000002119177065_section93810mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119177065_section93813mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119177065_section93816mcpsimp)
+
+## 函数功能
+设置Tensor的数据。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+void SetData(TensorData &&data)
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| data | 输入 | 需要设置的数据。 关于TensorData类型的定义，请参见TensorData。 |
+
+ 
+## 返回值
+无
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+Tensor t = {{}, {}, {}, {}, nullptr}; void *a = &t; TensorData td(a, nullptr); t.SetData(std::move(td));
+```

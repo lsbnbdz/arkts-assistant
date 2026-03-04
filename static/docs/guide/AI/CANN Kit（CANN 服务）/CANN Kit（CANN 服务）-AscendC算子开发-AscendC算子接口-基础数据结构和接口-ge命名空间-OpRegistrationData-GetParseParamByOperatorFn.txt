@@ -1,0 +1,24 @@
+# [GetParseParamByOperatorFn](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getparseparambyoperatorfn)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083616586_section103413mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083616586_section103416mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083616586_section103420mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083616586_section103423mcpsimp)
+
+## 函数功能
+获取解析算子属性的函数。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+ParseParamByOpFunc GetParseParamByOperatorFn() const
+```
+ 
+## 参数说明
+无
+
+ 
+## 约束说明
+无

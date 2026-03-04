@@ -1,0 +1,3 @@
+通过测试无障碍功能，您可以从用户的角度体验您的应用，并发现原本可能忽略的易用性问题。无障碍功能测试可以挖掘出改进机会，使您的应用变得功能更强大且更多样，造福于所有用户，包括残障用户。
+
+    [测试屏幕朗读功能](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/test-screen-reader)

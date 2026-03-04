@@ -1,0 +1,41 @@
+# [SetShapeDim](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-setshapedim)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083776650_section106986mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083776650_section106989mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083776650_section106993mcpsimp)
+- [返回值](#zh-cn_topic_0000002083776650_section107023mcpsimp)
+- [异常处理](#zh-cn_topic_0000002083776650_section107046mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083776650_section107049mcpsimp)
+
+## 函数功能
+设置shape第idx维度。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+graphStatus SetShapeDim(const size_t idx, const int64_t dim_value);
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| idx | 输入 | 维度的索引，索引从0开始。 |
+| dim_value | 输入 | 需设置的值。 |
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| graphStatus | 设置成功返回GRAPH_SUCCESS，否则，返回GRAPH_FAILED。 |
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

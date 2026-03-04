@@ -1,0 +1,6 @@
+# [通用收银台接入](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/payment-common-pay-connect)
+
+- **[业务规则说明](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/payment-common-pay-introduction)**
+ - **[混合支付场景](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/payment-common-pay-mix)**
+ - **[纯外部支付场景](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/payment-common-pay-external)**
+ - **[拉起三方支付收银台](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/payment-launch-third-party-payment)**

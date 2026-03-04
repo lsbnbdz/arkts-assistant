@@ -1,0 +1,38 @@
+# [AutoMappingSubgraphIOIndexFuncRegister](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-automappingsubgraphioindexfuncregister)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083616842_section97025mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083616842_section97028mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083616842_section97032mcpsimp)
+- [返回值](#zh-cn_topic_0000002083616842_section97064mcpsimp)
+- [异常处理](#zh-cn_topic_0000002083616842_section97067mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083616842_section97070mcpsimp)
+
+## 函数功能
+FrameworkRegistry类的封装，通过类的构造函数调用FrameworkRegistry类的AddAutoMappingSubgraphIOIndexFunc函数完成映射函数的注册。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+AutoMappingSubgraphIOIndexFuncRegister(domi::FrameworkType framework, AutoMappingSubgraphIOIndexFunc fun)
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| framework | 输入 | 网络类型，FrameworkType类型定义请参考FrameworkType。 |
+| fun | 输入 | 自动映射输入输出函数，函数类型详见AutoMappingSubgraphIndex。 |
+
+ 
+## 返回值
+无
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

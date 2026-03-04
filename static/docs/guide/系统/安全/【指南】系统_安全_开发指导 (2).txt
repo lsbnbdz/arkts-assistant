@@ -1,0 +1,1 @@
+[加解密(ArkTS)](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/huks-encryption-decryption-arkts)  [加解密(C/C++)](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/huks-encryption-decryption-ndk)

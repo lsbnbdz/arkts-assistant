@@ -1,0 +1,37 @@
+# [GetDimNum](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-shape-getdimnum)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119257153_section104321mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119257153_section104324mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119257153_section104328mcpsimp)
+- [返回值](#zh-cn_topic_0000002119257153_section104331mcpsimp)
+- [异常处理](#zh-cn_topic_0000002119257153_section104354mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119257153_section104357mcpsimp)
+
+## 函数功能
+获取Shape的维度个数。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+size_t GetDimNum() const
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| size_t | Tensor Shape的维度个数。 |
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

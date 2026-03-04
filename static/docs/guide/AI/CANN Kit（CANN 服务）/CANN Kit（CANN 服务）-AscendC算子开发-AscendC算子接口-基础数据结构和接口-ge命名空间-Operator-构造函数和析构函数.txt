@@ -1,0 +1,40 @@
+# [构造函数和析构函数](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-operator-construction-and-destructor)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083616906_section98652mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083616906_section98655mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083616906_section98673mcpsimp)
+- [返回值](#zh-cn_topic_0000002083616906_section98703mcpsimp)
+- [异常处理](#zh-cn_topic_0000002083616906_section98706mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083616906_section98709mcpsimp)
+
+## 函数功能
+Operator构造函数和析构函数。
+
+ 
+## 函数原型
+注意数据类型为string的接口后续版本会废弃，建议使用数据类型为非string的接口。
+
+ 收起自动换行深色代码主题复制
+```
+Operator()explicit Operator(const std::string &type);explicit Operator(const char_t *type);Operator(const std::string &name, const std::string &type);Operator(const AscendString &name, const AscendString &type);Operator(const char_t *name, const char_t *type);virtual ~Operator() = default;
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| type | 输入 | 算子类型。 |
+| name | 输入 | 算子名称。 |
+
+ 
+## 返回值
+Operator构造函数返回Operator类型的对象。
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

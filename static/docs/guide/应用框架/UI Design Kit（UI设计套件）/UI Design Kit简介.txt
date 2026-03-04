@@ -1,0 +1,68 @@
+## 目录
+- [场景介绍](#section18156101713589)
+- [与相关能力的区别](#section48361310429)
+- [基础概念](#section1045372713205)
+- [约束与限制](#section156120533610)
+  - [支持的国家和地区](#section979782133818)
+  - [支持的设备](#section10745455192819)
+  - [模拟器支持情况](#section1860110511617)
+
+UI Design Kit（UI设计套件）是华为提供的符合华为HarmonyOS Design System定义的UI界面开发套件集合，包含HarmonyOS Design System设计定义的扩展UI组件及其多样化的组件样式、丰富多样的UI界面场景下的光影效果，支撑应用实现跟随HarmonyOS Design System高端精致设计效果UI界面，达成应用界面与华为HarmonyOS多设备UI设计风格完美融合（参见[HarmonyOS设计理念](https://developer.huawei.com/consumer/cn/doc/design-guides/design-concepts-0000001795698445)）。
+
+    功能范围：
+
+    提供HarmonyOS设计风格控件能力，遵循[HarmonyOS设计规范](https://developer.huawei.com/consumer/cn/doc/design-guides/general_overview-0000001929599380)。
+
+    满足HarmonyOS人机交互设计，达成全场景人机交互体验一致，遵循[HarmonyOS设计规范](https://developer.huawei.com/consumer/cn/doc/design-guides/general_overview-0000001929599380)。
+
+    提供HarmonyOS视觉风格匹配的开发能力，遵循[HarmonyOS设计规范](https://developer.huawei.com/consumer/cn/doc/design-guides/general_overview-0000001929599380)。
+
+## 场景介绍
+          UI Design Kit提供了应用图标处理能力，帮助开发者实现[UX体验标准](https://developer.huawei.com/consumer/cn/doc/design-guides/ux-guidelines-general-0000001760708152#section1353515481417)的应用图标，支持在线主题图标默认跟随主题换肤，支持应用列表、应用详情页等图标展示场景，具体如下：
+
+           [（推荐）分层图标处理](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ui-design-layered-process)：对前后景图标进行合成、剪切、缩放、描边处理，支持批量处理。      [单层图标处理](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ui-design-normal-process)：对图标进行剪切、缩放、描边处理，支持批量处理。          UI Design Kit提供了HarmonyOS Design System设计定义的扩展UI组件接口及其多样化的组件样式，具体如下：
+
+           [组件导航](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ui-design-navigation)：提供HdsNavigation组件作为路由导航的根视图容器与HdsNavDestination作为HdsNavigation子页面的根容器，实现页面间以及组件内部的页面跳转，支持在不同组件间传递跳转参数，提供灵活的跳转操作，从而更便捷地实现对不同页面的访问和复用，UX风格跟随版本演进。      [侧边栏样式](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ui-design-sidebar)：提供可以显示和隐藏的侧边栏容器，支持应用使用侧边栏组件实现自定义侧边栏和内容区，UX风格跟随版本演进。      [侧边栏菜单样式](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ui-design-side-menu)：提供一种菜单栏样式组件，支持应用设置侧边栏对应的一级菜单和二级菜单，并显示其新消息数量，UX风格跟随版本演进。      [底部页签](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ui-design-hds-tabs)：提供一种通过页签进行内容视图切换的容器组件，支持分割线动态显隐、页签栏模糊效果、页签图标出血、页签半屏居中对齐布局等页签增强样式，UX风格跟随版本演进。      [即时操作](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ui-design-snackbar)：提供即时通知的非模态弹窗，支持文本图标展示和按钮操作区，为应用提供简短通知和操作，UX风格跟随版本演进。      [核心操作栏](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ui-design-actionbar)：提供多按钮操作组件，支持有主按钮展开和收起的多按钮操作动效，支持无主按钮的多按钮操作区，UX风格跟随版本演进。      [列表](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ui-design-list-item-card)：提供附带横滑删除动效的列表卡片组件，支持自研和三方应用使用列表卡片组件，实现多设备上的系统列表卡片样式以及横滑删除效果，UX风格跟随版本演进。          UI Design Kit提供了应用加载自定义Symbol的能力，具体如下：
+
+           [资源注册](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ui-design-custom-symbol-res-register)：注册应用预置的自定义Symbol的图标资源与动效参数资源，配合ArkUI SymbolGlyph与SymbolSpan组件，展示应用侧预置的Symbol图标，UX风格跟随系统级Symbol规格。          UI Design Kit提供了由HarmonyOS Design System设计定义的丰富多样UI界面场景下的光影效果能力，具体如下：
+
+           [点光源效果](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ui-design-visual-effect-point-light)：提供点光源接口，用于设置组件的发光效果以及被照亮的受光效果，提升组件交互沉浸感，UX风格跟随版本演进。      [按压阴影](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ui-design-visual-effect-background-color)： 提供按压阴影接口，用于设置组件按压交互时的背景色变化效果，UX风格跟随版本演进。      [双边边缘流光](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ui-design-visual-effect-double-edge-streamer)：提供双边边缘流光接口，用于设置组件的边缘发光效果，支持配置两条边缘流光的起始、终止位置和边缘颜色效果，UX风格跟随版本演进。      [背景流光](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ui-design-visual-effect-background-streamer)：提供背景流光接口，用于设置组件的背景流动发光效果，支持配置背景色及渐变背景色，UX风格跟随版本演进。      [自带背景的双边流光](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ui-design-visual-effect-background-streamer2)：通过通用视效组件HdsVisualComponent提供的自带背景的双边流光效果场景接口，支持设置两条边缘流光的起始、终止位置、边缘颜色效果以及与流光相叠加的背景板颜色，用于胶囊组件、屏幕边缘发光等，UX风格跟随版本演进。      [应用内多窗](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ui-design-multiwindowentryinapp)：提供单应用多窗口的交互入口组件，用于支持自研和三方应用使用HDS的应用内多窗组件实现多窗并行的体验，并且可以设置图标大小颜色、背板大小颜色、文字大小颜色等，UX风格跟随版本演进。                  
+## 与相关能力的区别
+                UI Design Kit提供的[组件导航](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ui-design-navigation)与ArkUI [Navigation](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-navigation-navigation)能力的区别：继承ArkUI [Navigation](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-navigation-navigation)的页面跳转能力及基础样式，扩展支持标题栏随内容区滚动的动态模糊样式，菜单栏新增信息提醒能力，支持标题栏自定义区域设置及标题栏动态显隐功能，新增半模态样式，支持文字型及图片型图标类型设置。具体支持能力及规格参考UI Design Kit API参考文档的[HdsNavigation](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ui-design-hdsnavigation)章节与[HdsNavDestination](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ui-design-hdsnavdestination)章节。      自定义Symbol能力与系统级Symbol能力的区别：自定义Symbol能力允许应用根据自身业务诉求在应用HAP包中预置Symbol图标与动效参数资源，通过资源注册与SymbolGlyph、SymbolSpan组件使用，快速实现应用Symbol图标自定义，无需同系统级Symbol一样提前预置进手机ROM，不强依赖手机ROM版本发布。      UI Design Kit提供的[列表](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ui-design-list-item-card)与ArkUI [ListItem](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-container-listitem)能力的区别：增加定制化新样式，统一组件风格样式以提升高端精致视觉体验，同时适配多设备系统列表样式，封装ListItem横滑与删除动效。具体支持能力及规格参考UI Design Kit API参考文档的[HdsListItem](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ui-design-hdslistitem)章节与[HdsListItemCard](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ui-design-hdslistitemcard)章节。      UI Design Kit提供的[底部页签](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ui-design-hds-tabs)与ArkUI [Tabs](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-container-tabs)能力的区别：支持分割线动态显隐、页签栏模糊效果、页签图标出血、页签半屏居中对齐布局等页签增强样式。具体支持能力及规格参考UI Design Kit API参考文档的[HdsTabs](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ui-design-hdstabs)章节。                  
+## 基础概念
+          在开发前，需要先了解以下基础概念：
+
+           分层图标：由前景图片和后景图片组成的格式为JSON的图标资源，应用图标必须为分层图标，具体可参考[应用图标规范](https://developer.huawei.com/consumer/cn/doc/design-guides/application-icon-0000001953444009)。      单层图标：HarmonyOS支持的图片资源，且支持解码为[PixelMap](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-image-pixelmap)的图片。      Symbol图标：Symbol图标是一种支持多种渲染模式以及多种动效模式的矢量类型图标，响应多种字重以及字号大小变化。                  
+## 约束与限制
+                
+|  组件 |  约束与限制 |
+| --- | --- |
+|  HdsNavigation |  横屏，导航栏的显示模式为Stack时，不支持合并工具栏到菜单栏。 标题栏布局方式默认采用层叠布局，标题栏在内容区上层。 |
+|  HdsNavDestination |  横屏，导航栏的显示模式为Stack时，不支持合并工具栏到菜单栏。 标题栏布局方式默认采用层叠布局，标题栏在内容区上层。 |
+
+|  接口 |  约束 |
+| --- | --- |
+|  图标批量处理接口 |  最大支持设置10个并发数。 最大支持一次性处理500个图标。 |
+|  Symbol资源注册接口 |  只支持Phone、Tablet、PC/2in1、TV设备。 只支持应用注册一组图标资源与动效参数资源。 最大支持10个自定义Symbol图标资源与动效参数资源注册。 |
+
+### 支持的国家和地区
+          UI Design Kit当前仅支持中国境内（不包含中国香港、中国澳门、中国台湾）。
+
+### 支持的设备
+                
+|  UI Design Kit提供的能力 |  支持的设备类型 |
+| --- | --- |
+|  应用展示图标HarmonyOS设计风格化处理 |  Phone、Tablet、PC/2in1、TV |
+|  组件导航 |  Phone、Tablet、PC/2in1、TV |
+|  侧边栏样式 |  Phone、Tablet、PC/2in1、TV |
+|  侧边栏菜单样式 |  Phone、Tablet、PC/2in1、TV |
+|  底部页签 |  Phone、Tablet、PC/2in1 |
+|  即时操作 |  Phone、Tablet、PC/2in1、TV |
+|  核心操作栏 |  Phone、Tablet、PC/2in1、TV |
+|  列表 |  Phone、Tablet、PC/2in1、Wearable、TV |
+|  应用加载自定义Symbol |  Phone、Tablet、PC/2in1、TV |
+|  HDS视效 |  Phone、Tablet、PC/2in1 |
+|  应用内多窗 |  Phone、Tablet |
+
+### 模拟器支持情况
+          本Kit支持模拟器开发，但与真机存在部分能力差异，详情请参见“[模拟器与真机的差异](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ide-emulator-specification#section69899863016)”。

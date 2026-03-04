@@ -1,0 +1,37 @@
+# [SetSize](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-memblock-setsize)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119256585_section98225mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119256585_section98228mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119256585_section98232mcpsimp)
+- [返回值](#zh-cn_topic_0000002119256585_section98255mcpsimp)
+- [异常处理](#zh-cn_topic_0000002119256585_section98258mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119256585_section98261mcpsimp)
+
+## 函数功能
+设置device内存地址大小。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+void SetSize(const size_t mem_size)
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| mem_size | 输入 | device内存大小。 |
+
+ 
+## 返回值
+无
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

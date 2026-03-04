@@ -1,0 +1,47 @@
+# [开发准备](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arengine-preparations)
+
+## 软件要求
+ - 推荐使用Windows 10及以上版本、MacOS 11及以上版本安装应用开发环境DevEco Studio。
+ - 推荐DevEco Studio版本：DevEco Studio 6.0.0 Release及以上。
+ - 推荐HarmonyOS SDK版本：HarmonyOS 6.0.0 Release SDK及以上。
+ 
+ 
+## 硬件要求
+ 开发者可根据实际的开发语言，选择对应接口判断当前设备是否支持AR Engine。接口的调用参考如下方式：
+
+ ArkTS（[ARViewContext.init](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arengine-api-arviewcontroller#section07524457283)）： 收起自动换行深色代码主题复制
+```
+import { arViewController, ARView } from '@kit.AREngine';import { BusinessError } from '@kit.BasicServicesKit';@Componentstruct ARTest { @State arContext?: arViewController.ARViewContext = undefined; build() { NavDestination() { RelativeContainer() { if (this.arContext) { ARView({ context: this.arContext }) } } } .onAppear(() => { this.initARView() }) .onWillDisappear(() => { await this.arContext?.destroy(); }) }
+ private initARView(): void { let context = new arViewController.ARViewContext() context.init().then(() => { this.arContext = context; console.info(`Succeeded in initializing ARView.`); }).catch((err: BusinessError) => { console.error(`Failed to init context. Code is ${err.code}, message is ${err.message}`); }); }}
+```
+ C/C++（[HMS_AREngine_ARSession_Create](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arengine-capi-arengine#ga47713cb18234569e03b5216b6c8442d3)）： 收起自动换行深色代码主题复制
+```
+#include "ar/ar_engine_core.h" 
+bool isSupportAREngine() { AREngine_ARSession *arSession = nullptr; if(HMS_AREngine_ARSession_Create(nullptr, nullptr, &arSession) == ARENGINE_ERROR_DEVICE_NOT_SUPPORTED){ return false; } return true;}
+```
+ 若对应接口返回错误码为801或ARENGINE_ERROR_DEVICE_NOT_SUPPORTED，则表示AR Engine不支持当前设备。
+
+ 
+## 环境搭建
+ 请参考[应用开发准备](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/application-dev-overview)完成基本准备工作。
+
+ 
+## 申请权限
+ 在开发AR应用时，需要先申请相机相关权限，确保应用拥有访问相机硬件及其他功能的权限，需要的权限如下表。在申请权限前，请保证符合[权限使用的基本原则](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/app-permission-mgmt-overview#%E6%9D%83%E9%99%90%E4%BD%BF%E7%94%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8E%9F%E5%88%99)。
+
+ - 使用相机拍摄前，需要申请**ohos.permission.CAMERA**相机权限。
+ - 当需要使用加速计感知设备运动状态时，需要申请**ohos.permission.ACCELEROMETER**加速计权限。
+ - 当需要陀螺仪感知设备位姿信息时，需要申请**ohos.permission.GYROSCOPE**陀螺仪权限。
+ 
+ 
+## 前置准备
+ 推荐使用[组件导航(Navigation) (推荐)](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-navigation-navigation)作为页面路由，使用[Navigation](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-basic-components-navigation)的[页面生命周期](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-navigation-navigation#%E9%A1%B5%E9%9D%A2%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F)所示方法。
+
+ 开发者需先创建首页，通过首页选择进入AR Engine场景。
+
+ 1. 导入所需模块。 收起自动换行深色代码主题复制 ``` import { abilityAccessCtrl, PermissionRequestResult } from '@kit.AbilityKit';import { BusinessError } from '@kit.BasicServicesKit'; ```
+ 2. 创建一个基础的页面，具体可参考[组件导航(Navigation) (推荐)](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-navigation-navigation)。 收起自动换行深色代码主题复制 ``` @Entry@Componentstruct Selector { pageInfo: NavPathStack = new NavPathStack(); build(): void { Navigation(this.pageInfo) { } .mode(NavigationMode.Stack) .hideTitleBar(true) .hideBackButton(true) .hideToolBar(true) }} ```
+ 3. 创建sampleButton，封装Button及权限校验功能，使用@Builder装饰，并配置routerMap进行页面跳转。 收起自动换行深色代码主题复制 ``` @Entry@Componentstruct Selector { pageInfo: NavPathStack = new NavPathStack(); private hasPermission: boolean = false; @State context: Context = this.getUIContext().getHostContext() as Context; build(): void { // ... } @Builder sampleButton(sampleName: string): void { Button(sampleName, { type: ButtonType.Normal, stateEffect: true }) .borderRadius(8) .width('50%') .height('5%') .onClick(async () => { if (!this.hasPermission) { this.hasPermission = await requestPermissionOnSetting(this.context); if (!this.hasPermission) { return; } } this.pageInfo.clear(); this.pageInfo.pushDestinationByName(sampleName, null).catch((error: BusinessError) => { console.error(`[pushDestinationByName]failed. Code: ${error.code}.`); }); }) }} ```
+ 4. 创建requestPermissionOnSetting方法用于校验在进入AR场景时是否已经获取相机权限。 收起自动换行深色代码主题复制 ``` struct Selector { // ...} async function requestPermissionOnSetting(context: Context): Promise { let requestResult: boolean = false; let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager(); await atManager.requestPermissionOnSetting(context, ['ohos.permission.CAMERA']) .then((data: abilityAccessCtrl.GrantStatus[]) => { console.info('data:' + JSON.stringify(data)); if (data[0] === abilityAccessCtrl.GrantStatus.PERMISSION_GRANTED) { requestResult = true; } }) .catch((err: BusinessError) => { console.error('data:' + JSON.stringify(err)); }) return requestResult;} ```
+ 5. 在页面上创建按钮，用于进入AR场景。 收起自动换行深色代码主题复制 ``` build(): void { Navigation(this.pageInfo) { Column() { this.sampleButton('ARWorld'); // 进入ARWorld场景 } .justifyContent(FlexAlign.SpaceEvenly) .width('100%') .height('100%') } .mode(NavigationMode.Stack) .hideTitleBar(true) .hideBackButton(true) .hideToolBar(true)} ```
+ 6. 在onAppear中配置应用首次启动时的权限校验方法requestPermissionOnFirstStartup。 收起自动换行深色代码主题复制 ``` struct Selector { // ... build(): void { Navigation(this.pageInfo) { Column() { this.sampleButton('ARWorld'); } .justifyContent(FlexAlign.SpaceEvenly) .width('100%') .height('100%') } .onAppear(() => { this.requestPermissionOnFirstStartup(); }) .mode(NavigationMode.Stack) .hideTitleBar(true) .hideBackButton(true) .hideToolBar(true) } @Builder sampleButton(sampleName: string): void { // ... } private requestPermissionOnFirstStartup(): void { abilityAccessCtrl.createAtManager() .requestPermissionsFromUser(this.context, ['ohos.permission.CAMERA']) .then((data: PermissionRequestResult) => { let grantStatus: number[] = data.authResults; if (grantStatus[0] === 0) { this.hasPermission = true; console.info('Succeeded in getting requestPermission.'); } else { this.hasPermission = false; console.error('Failed to get requestPermission, user rejected.'); } }) .catch((err: BusinessError) => { console.error(`Failed to request permissions from user. Code is ${err.code}, message is ${err.message}.`); }) }} ```

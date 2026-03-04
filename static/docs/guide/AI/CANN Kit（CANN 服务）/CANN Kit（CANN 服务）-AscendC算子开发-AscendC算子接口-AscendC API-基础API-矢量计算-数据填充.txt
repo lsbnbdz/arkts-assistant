@@ -1,0 +1,4 @@
+# [数据填充](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-data-filling)
+
+- **[Duplicate](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-data-duplicate)**
+ - **[CreateVecIndex](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-data-createvecindex)**

@@ -1,0 +1,20 @@
+# [OHIPCParcel](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-ohipcparcel)
+
+## 目录
+- [概述](#概述)
+- [文件汇总](#文件汇总)
+
+## 概述
+PhonePC/2in1TabletTVWearable提供IPC序列化/反序列化C接口。
+
+ **系统能力：** SystemCapability.Communication.IPC.Core
+
+ **起始版本：** 12
+
+ 
+## 文件汇总
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| ipc_cparcel.h | 提供IPC序列化/反序列化C接口。 |

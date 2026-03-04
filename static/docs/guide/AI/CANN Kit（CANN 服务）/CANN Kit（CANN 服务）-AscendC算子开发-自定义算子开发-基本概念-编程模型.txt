@@ -1,0 +1,6 @@
+# [编程模型](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-programming-model)
+
+- **[SPMD模型](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-spmd-model)**
+ - **[核函数](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-kernel-function)**
+ - **[硬件架构抽象](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-hardware-architecture-abstraction)**
+ - **[编程范式](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-programming-paradigm)**

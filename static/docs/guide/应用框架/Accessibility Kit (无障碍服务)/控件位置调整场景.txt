@@ -1,0 +1,16 @@
+## 目录
+- [设计场景](#section1080367123114)
+- [开发实例](#section1323772017315)
+
+## 设计场景
+移动过程中需要实时播报即将移动到的位置，新位置的播报会打断老位置的播报，放置到确定位置后，需要再播报已经放置的位置信息，尽量保证视障用户耳朵听到的信息和我们通过眼睛看到的信息是一致的。
+
+## 开发实例
+例如，网页书签被托起时，会播报已托起，移动的过程中，根据即将放置的位置播报“移至第几行，第几列”，放置后播报“已放至第几行，第几列”。应用可调用主动播报的接口来进行主动播报。
+
+收起自动换行深色代码主题复制
+```
+import accessibility from '@ohos.accessibility';
+@Entry@Componentexport struct Rule_2_1_11 {  title: string = 'Rule 2.1.11';  eventInfo: accessibility.EventInfo = ({    type: 'announceForAccessibility',    bundleName: 'com.example.pagesrouter',    triggerAction: 'common',    textAnnouncedForAccessibility: '移至第几行，第几列'  });
+  build() {    NavDestination() {      Column() {        Blank()        Button('button')          .accessibilityText('主动播报')          .align(Alignment.Center)          .fontSize(20)          .id('button1')          .onClick(() => {            accessibility.sendAccessibilityEvent(this.eventInfo).then(() => {              console.info(`Succeeded in send event, eventInfo is ${JSON.stringify(this.eventInfo)}`);            });          })        Blank()      }      .width('100%')      .height('100%')    }    .title(this.title)  }}
+```

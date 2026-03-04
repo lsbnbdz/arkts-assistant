@@ -1,0 +1,35 @@
+# [户外探险](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/health-adventures)
+
+## 目录
+- [关联的统计数据说明](#section247983115320)
+- [关联的明细数据说明](#section109731818534)
+
+户外探险相关锻炼记录类型如下：
+
+ 展开
+| 锻炼记录子类型常量 | 描述 | 数据来源 |
+| --- | --- | --- |
+| exerciseSequenceHelper.adventures.EXERCISE_TYPE | 户外探险 | 部分专业手表 |
+
+ 
+## 关联的统计数据说明
+ - 字段定义：[exerciseSequenceHelper.adventures.SummaryFields](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-exercisedequencehelper#section373012655417)
+ 
+ 展开
+| 字段列表 | 描述 | 类型 | 可选/必选 |
+| --- | --- | --- | --- |
+| calorie | 热量统计 | CalorieSummary | M |
+| distance | 距离统计 | DistanceSummary | M |
+| step | 步数统计 | StepSummary | O |
+| cadence | 步频统计 | CadenceSummary | O |
+| altitude | 海拔统计 | AltitudeSummary | O |
+
+ 
+## 关联的明细数据说明
+ - 字段定义：[exerciseSequenceHelper.adventures.DetailFields](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-exercisedequencehelper#section1073012655420)
+ 
+ 展开
+| 字段列表 | 描述 | 类型 | 可选/必选 |
+| --- | --- | --- | --- |
+| markPoint | 标记点采样详情 | MarkPoint[] | O |
+| altitude | 海拔详情 | Altitude[] | O |

@@ -1,0 +1,29 @@
+# [GetOmOptype](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getomoptype)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119176337_section103306mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119176337_section103309mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119176337_section103317mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119176337_section103341mcpsimp)
+
+## 函数功能
+获取模型的算子类型。
+
+ 
+## 函数原型
+注意数据类型为string的接口后续版本会废弃，建议使用数据类型为非string的接口。
+
+ 收起自动换行深色代码主题复制
+```
+std::string GetOmOptype () const;Status GetOmOptype(ge::AscendString &om_op_type) const;
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| om_op_type | 输出 | 模型的算子类型。 |
+
+ 
+## 约束说明
+无

@@ -1,0 +1,43 @@
+# [SetOutputDataType](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-setoutputdatatype)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119256613_section90210mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119256613_section90213mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119256613_section90217mcpsimp)
+- [返回值](#zh-cn_topic_0000002119256613_section90250mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119256613_section90256mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119256613_section90259mcpsimp)
+
+## 函数功能
+根据输出索引，设置指定输出的数据类型。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+ge::graphStatus SetOutputDataType(const size_t index, const ge::DataType datatype);
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| index | 输入 | 算子IR原型定义中的输出索引，从0开始计数。 |
+| datatype | 输入 | 需要设置的输出数据类型。 关于DataType的说明，请参见DataType。 |
+
+ 
+## 返回值
+返回设置的结果状态，状态说明请参见[ge::graphStatus](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-gegraphstatus)。
+
+ index非法时，返回失败。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+ge::graphStatus InferDataTypeForXXX(InferDataTypeContext *context) { auto ret = context->SetOutputDataType(0, ge::DataType::DT_FLOAT); // ... }
+```

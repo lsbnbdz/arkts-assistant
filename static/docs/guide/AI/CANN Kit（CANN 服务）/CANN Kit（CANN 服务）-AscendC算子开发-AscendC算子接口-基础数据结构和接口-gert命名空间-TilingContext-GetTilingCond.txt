@@ -1,0 +1,41 @@
+# [GetTilingCond](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-gettilingcond)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119256673_section95115mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119256673_section95118mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119256673_section95122mcpsimp)
+- [返回值](#zh-cn_topic_0000002119256673_section95125mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119256673_section95130mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119256673_section95133mcpsimp)
+
+## 函数功能
+获取tiling cond。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+int32_t GetTilingCond() const;
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+tiling cond:
+
+ 若返回值大于等于0，代表此tiling cond为有效的tiling cond。
+
+ 若返回值为-1，代表此tiling cond为无效的tiling cond。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+ge::graphStatus Tiling4XXX(TilingContext* context) { auto tiling_cond = context->GetTilingCond(); // ... }
+```

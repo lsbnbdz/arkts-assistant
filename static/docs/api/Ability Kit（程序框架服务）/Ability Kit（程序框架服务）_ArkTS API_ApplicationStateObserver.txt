@@ -1,0 +1,131 @@
+## 目录
+- [导入模块](#导入模块)
+- [ApplicationStateObserver.onForegroundApplicationChanged](#applicationstateobserveronforegroundapplicationchanged)
+- [ApplicationStateObserver.onAbilityStateChanged](#applicationstateobserveronabilitystatechanged)
+- [ApplicationStateObserver.onProcessCreated](#applicationstateobserveronprocesscreated)
+- [ApplicationStateObserver.onProcessDied](#applicationstateobserveronprocessdied)
+- [ApplicationStateObserver.onProcessStateChanged](#applicationstateobserveronprocessstatechanged)
+- [ApplicationStateObserver.onAppStarted](#applicationstateobserveronappstarted)
+- [ApplicationStateObserver.onAppStopped](#applicationstateobserveronappstopped)
+- [ProcessData](#processdata)
+
+应用状态监听器，可以作为入参传入[on('applicationState')](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-app-ability-appmanager#appmanageronapplicationstate14)方法，监听应用的生命周期变化。
+
+ 说明 本模块首批接口从API version 14开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+
+## 导入模块
+支持设备PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+import { appManager } from '@kit.AbilityKit';
+```
+   
+## ApplicationStateObserver.onForegroundApplicationChanged
+支持设备PhonePC/2in1TabletTVWearableonForegroundApplicationChanged(appStateData: AppStateData): void
+
+ 应用前后台状态发生变化时执行的回调函数。
+
+ 系统能力：SystemCapability.Ability.AbilityRuntime.Core
+
+ 参数：
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| appStateData | AppStateData | 是 | 应用状态信息。 |
+
+## ApplicationStateObserver.onAbilityStateChanged
+支持设备PhonePC/2in1TabletTVWearableonAbilityStateChanged(abilityStateData: AbilityStateData): void
+
+ Ability状态发生变化时执行的回调函数。
+
+ 系统能力：SystemCapability.Ability.AbilityRuntime.Core
+
+ 参数：
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| abilityStateData | AbilityStateData | 是 | Ability状态信息。 |
+
+## ApplicationStateObserver.onProcessCreated
+支持设备PhonePC/2in1TabletTVWearableonProcessCreated(processData: ProcessData): void
+
+ 进程创建时执行的回调函数。
+
+ 系统能力：SystemCapability.Ability.AbilityRuntime.Core
+
+ 参数：
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| processData | ProcessData | 是 | 进程数据信息。 |
+
+## ApplicationStateObserver.onProcessDied
+支持设备PhonePC/2in1TabletTVWearableonProcessDied(processData: ProcessData): void
+
+ 进程销毁时执行的回调函数。
+
+ 系统能力：SystemCapability.Ability.AbilityRuntime.Core
+
+ 参数：
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| processData | ProcessData | 是 | 进程数据信息。 |
+
+## ApplicationStateObserver.onProcessStateChanged
+支持设备PhonePC/2in1TabletTVWearableonProcessStateChanged(processData: ProcessData): void
+
+ 进程状态更新时执行的回调函数。
+
+ 系统能力：SystemCapability.Ability.AbilityRuntime.Core
+
+ 参数：
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| processData | ProcessData | 是 | 进程数据信息。 |
+
+## ApplicationStateObserver.onAppStarted
+支持设备PhonePC/2in1TabletTVWearableonAppStarted(appStateData: AppStateData): void
+
+ 应用第一个进程创建时执行的回调函数。
+
+ 系统能力：SystemCapability.Ability.AbilityRuntime.Core
+
+ 参数：
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| appStateData | AppStateData | 是 | 应用状态信息。 |
+
+## ApplicationStateObserver.onAppStopped
+支持设备PhonePC/2in1TabletTVWearableonAppStopped(appStateData: AppStateData): void
+
+ 应用最后一个进程销毁时执行的回调函数。
+
+ 系统能力：SystemCapability.Ability.AbilityRuntime.Core
+
+ 参数：
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| appStateData | AppStateData | 是 | 应用状态信息。 |
+
+## ProcessData
+支持设备PhonePC/2in1TabletTVWearabletype ProcessData = _ProcessData.default
+
+ 进程数据信息。
+
+ 系统能力：SystemCapability.Ability.AbilityRuntime.Core
+
+|  |
+|  |
+|  |
+| _ProcessData.default | 进程数据信息。 |
+
+  示例：
+
+ 收起自动换行深色代码主题复制
+```
+import { appManager } from '@kit.AbilityKit';
+let applicationStateObserver: appManager.ApplicationStateObserver = {  onForegroundApplicationChanged(appStateData) {    console.log(`onForegroundApplicationChanged, appStateData: ${JSON.stringify(appStateData)}.`);  },  onAbilityStateChanged(abilityStateData) {    console.log(`onAbilityStateChanged, abilityStateData: ${JSON.stringify(abilityStateData)}.`);  },  onProcessCreated(processData) {    console.log(`onProcessCreated, processData: ${JSON.stringify(processData)}.`);  },  onProcessDied(processData) {    console.log(`onProcessDied, processData: ${JSON.stringify(processData)}.`);  },  onProcessStateChanged(processData) {    console.log(`onProcessStateChanged, processData: ${JSON.stringify(processData)}.`);  },  onAppStarted(appStateData) {    console.log(`onAppStarted, appStateData: ${JSON.stringify(appStateData)}.`);  },  onAppStopped(appStateData) {    console.log(`onAppStopped, appStateData: ${JSON.stringify(appStateData)}.`);  }};let observerCode = appManager.on('applicationState', applicationStateObserver);
+```

@@ -1,0 +1,12 @@
+# [游戏上划退出后，场景切换阶段存在振动，应该如何避免？](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/graphics-accelerate-launch-faq-2)
+
+开发步骤如下：
+
+ 1. 通过globalThis定义全局作用域的变量isCacheStatus，在onCreate生命周期函数中赋值false，[isLaunchMirrorEnabled](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/graphics-accelerate-launchacceleration#zh-cn_topic_0000002214513333_zh-cn_topic_0000002137922672_section81101219425)接口返回true时赋值true。
+ 2. 在函数[startVibration](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-vibrator#vibratorstartvibration9)前增加isCacheStatus校验，若当前处于缓存态，则不进行振动操作。
+ 
+ 以团结工程为例，修改如下： 收起自动换行深色代码主题复制
+```
+// TuanjiePlayerAbilityBase.etsimport { launchAcceleration } from '@kit.GraphicsAccelerateKit';onCreate(): void { globalThis.isCacheStatus = false; // ......}onWindowStageWillDestroy(): void { if (launchAcceleration.isLaunchMirrorEnabled()) { globalThis.isCacheStatus = true; // ...... }}
+// TuanjieVibrate.etsstatic vibrate(vibrateMs: number) { if (globalThis.isCacheStatus) { console.info('globalThis.isCacheStatus true, vibration returned.'); return; } // ......}
+```

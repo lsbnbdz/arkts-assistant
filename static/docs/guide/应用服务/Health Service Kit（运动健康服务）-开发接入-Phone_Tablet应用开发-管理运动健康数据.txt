@@ -1,0 +1,6 @@
+# [管理运动健康数据](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/health-data-manage)
+
+- **[运动健康采样数据](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/health-samplepoint-manage)**
+ - **[锻炼记录](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/health-exercisesequence-manage)**
+ - **[健康记录](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/health-healthsequence-manage)**
+ - **[实时三环数据](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/health-three-ring-read)**

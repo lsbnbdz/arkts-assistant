@@ -1,0 +1,40 @@
+# [SetFormat](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tensor-setformat)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083616806_section106607mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083616806_section106610mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083616806_section106614mcpsimp)
+- [返回值](#zh-cn_topic_0000002083616806_section106640mcpsimp)
+- [异常处理](#zh-cn_topic_0000002083616806_section106663mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083616806_section106666mcpsimp)
+
+## 函数功能
+设置Tensor的Format。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+graphStatus SetFormat(const ge::Format &format);
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| format | 输入 | 需设置的Format值。 关于Format类型，请参见Format。 |
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| graphStatus | 设置成功返回GRAPH_SUCCESS，否则，返回GRAPH_FAILED。 |
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

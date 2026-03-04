@@ -1,0 +1,11 @@
+# [自定义算子开发](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-custom-operator-development)
+
+- **[AscendC简介](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-introduction-to-ascend-c)**
+ - **[环境准备](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-environment-preparation)**
+ - **[快速入门](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-operator-development)**
+ - **[基本概念](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-basic-concepts)**
+ - **[算子实现](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-operator-implementation)**
+ - **[算子调试调优](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-usage-of-the-commissioning-tool)**
+ - **[算子部署](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-deploying-operators)**
+ - **[附录](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-featured-topics)**
+ - **[算子开发常见问题](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-faqs-operator-development)**

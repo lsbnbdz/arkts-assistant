@@ -1,0 +1,15 @@
+# [概述](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/gestures-share-overview)
+
+## 目录
+- [场景介绍](#section1936087195916)
+- [业务流程](#section10776491597)
+
+## 场景介绍
+Share Kit新推出隔空传送分享，支持用户通过“一抓一放”实现跨端传输。
+
+ 
+
+ 
+
+ 
+## 业务流程

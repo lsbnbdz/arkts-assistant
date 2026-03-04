@@ -1,0 +1,12 @@
+# [TypeUtils](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-typeutils)
+
+- **[DataTypeToAscendString](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-datatypetoascendstring)**
+ - **[AscendStringToDataType](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-ascendstringtodatatype)**
+ - **[FormatToAscendString](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-formattoascendstring)**
+ - **[AscendStringToFormat](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-ascendstringtoformat)**
+ - **[DataTypeToSerialString](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-datatypetoserialstring)**
+ - **[SerialStringToDataType](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-serialstringtodatatype)**
+ - **[FormatToSerialString](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-formattoserialstring)**
+ - **[SerialStringToFormat](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-serialstringtoformat)**
+ - **[DataFormatToFormat](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-dataformattoformat)**
+ - **[GetDataTypeLength](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getdatatypelength)**

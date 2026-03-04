@@ -1,0 +1,42 @@
+# [GetRequiredInputTensor](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getrequiredinputtensor)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083776850_section94701mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083776850_section94704mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083776850_section94708mcpsimp)
+- [返回值](#zh-cn_topic_0000002083776850_section94731mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083776850_section94736mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083776850_section94739mcpsimp)
+
+## 函数功能
+根据算子原型定义中的输入索引获取对应的必选输入tensor指针。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+const Tensor *GetRequiredInputTensor(const size_t ir_index) const;
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| ir_index | 输入 | 必选输入在算子IR原型定义中的索引，从0开始计数。 |
+
+ 
+## 返回值
+指定的输入tensor指针，当输入ir_index非法时，返回空指针。
+
+ 关于Tensor类型的定义，请参见[Tensor](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tensor)。
+
+ 
+## 约束说明
+如果输入没有被设置为数据依赖，调用此接口获取tensor时，只能在tensor中获取到正确的shape、format、datatype信息。无法获取到真实的tensor数据地址（获取到的地址为nullptr）。
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+ge::graphStatus InferShape4ConcatD(TilingContext* context) { auto in_tensor = context->GetRequiredInputTensor(0U); // ... }
+```

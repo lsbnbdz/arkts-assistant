@@ -1,0 +1,45 @@
+# [GetCoreMemSize](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getcorememsize)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002089851296_section76872mcpsimp)
+- [函数原型](#zh-cn_topic_0000002089851296_section76876mcpsimp)
+- [参数说明](#zh-cn_topic_0000002089851296_section76880mcpsimp)
+- [返回值](#zh-cn_topic_0000002089851296_section76910mcpsimp)
+- [约束说明](#zh-cn_topic_0000002089851296_section76913mcpsimp)
+- [调用示例](#zh-cn_topic_0000002089851296_section76916mcpsimp)
+
+## 函数功能
+获取硬件平台存储空间的内存大小，例如L1、L0_A、L0_B、L2等，支持的存储空间类型定义如下。
+
+ 收起自动换行深色代码主题复制
+```
+enum class CoreMemType { L0_A = 0, L0_B = 1, L0_C = 2, L1 = 3, L2 = 4, UB = 5, HBM = 6, RESERVED };
+```
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+void GetCoreMemSize(const CoreMemType &memType, uint64_t &size) const;
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| memType | 输入 | 硬件存储空间类型。 |
+| size | 输出 | 对应类型的存储空间大小，单位：字节。 |
+
+ 
+## 返回值
+无
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+ge::graphStatus TilingXXX(gert::TilingContext* context) { auto ascendcPlatform = platform_ascendc::PlatformAscendC(context->GetPlatformInfo()); uint64_t ub_size, l1_size; ascendcPlatform.GetCoreMemSize(platform_ascendc::CoreMemType::UB, ub_size); ascendcPlatform.GetCoreMemSize(platform_ascendc::CoreMemType::L1, l1_size); // ... return ret; }
+```

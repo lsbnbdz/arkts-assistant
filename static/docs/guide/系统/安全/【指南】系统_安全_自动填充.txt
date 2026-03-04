@@ -1,0 +1,1 @@
+[账号密码填充](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/passwordvault-autofill-acc-password)  [强密码填充](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/passwordvault-autofill-strong-password)  [为应用添加自动生成高强度密码的建议](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/passwordvault-custom-strong-password-rules)

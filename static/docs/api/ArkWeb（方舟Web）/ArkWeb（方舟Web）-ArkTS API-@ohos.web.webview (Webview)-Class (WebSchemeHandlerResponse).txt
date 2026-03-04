@@ -1,0 +1,402 @@
+# [Class (WebSchemeHandlerResponse)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webschemehandlerresponse)
+
+## 目录
+- [导入模块](#导入模块)
+- [constructor12+](#constructor12)
+- [setUrl12+](#seturl12)
+- [setNetErrorCode12+](#setneterrorcode12)
+- [setStatus12+](#setstatus12)
+- [setStatusText12+](#setstatustext12)
+- [setMimeType12+](#setmimetype12)
+- [setEncoding12+](#setencoding12)
+- [setHeaderByName12+](#setheaderbyname12)
+- [getUrl12+](#geturl12)
+- [getNetErrorCode12+](#getneterrorcode12)
+- [getStatus12+](#getstatus12)
+- [getStatusText12+](#getstatustext12)
+- [getMimeType12+](#getmimetype12)
+- [getEncoding12+](#getencoding12)
+- [getHeaderByName12+](#getheaderbyname12)
+
+请求的响应，可以为被拦截的请求创建一个Response并填充自定义的内容返回给Web组件。
+
+ 说明 - 本模块首批接口从API version 9开始支持。后续版本如有新增内容，则采用上角标单独标记该内容的起始版本。
+ - 本Class首批接口从API version 12开始支持。
+ - 示例效果请以真机运行为准。
+ 
+ 
+## 导入模块
+ PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+import { webview } from '@kit.ArkWeb';
+```
+ 
+## constructor12+
+ PhonePC/2in1TabletTVWearableconstructor()
+
+ Response的构造函数。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+// xxx.etsimport { webview, WebNetErrorList } from '@kit.ArkWeb';import { BusinessError } from '@kit.BasicServicesKit';
+@Entry@Componentstruct WebComponent { controller: webview.WebviewController = new webview.WebviewController(); schemeHandler: webview.WebSchemeHandler = new webview.WebSchemeHandler();
+ build() { Column() { Button('response').onClick(() => { let response = new webview.WebSchemeHandlerResponse(); try { response.setUrl("http://www.example.com") response.setStatus(200) response.setStatusText("OK") response.setMimeType("text/html") response.setEncoding("utf-8") response.setHeaderByName("header1", "value1", false) response.setNetErrorCode(WebNetErrorList.NET_OK) console.info("[schemeHandler] getUrl:" + response.getUrl()) console.info("[schemeHandler] getStatus:" + response.getStatus()) console.info("[schemeHandler] getStatusText:" + response.getStatusText()) console.info("[schemeHandler] getMimeType:" + response.getMimeType()) console.info("[schemeHandler] getEncoding:" + response.getEncoding()) console.info("[schemeHandler] getHeaderByValue:" + response.getHeaderByName("header1")) console.info("[schemeHandler] getNetErrorCode:" + response.getNetErrorCode())
+ } catch (error) { console.error(`ErrorCode: ${(error as BusinessError).code}, Message: ${(error as BusinessError).message}`); } }) Web({ src: 'https://www.example.com', controller: this.controller }) } }}
+```
+ 
+## setUrl12+
+ PhonePC/2in1TabletTVWearablesetUrl(url: string): void
+
+ 给当前的Response设置重定向或因HSTS而更改后的URL，设置了url后会触发请求的跳转。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| url | string | 是 | 即将要跳转的URL。 |
+
+ **示例：**
+
+ 完整示例代码参考[constructor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webschemehandlerresponse#constructor12)。
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[通用错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)。
+
+ 展开
+| |
+| |
+| |
+| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. |
+
+ 
+## setNetErrorCode12+
+ PhonePC/2in1TabletTVWearablesetNetErrorCode(code: WebNetErrorList): void
+
+ 给当前的Response设置网络错误码。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| code | WebNetErrorList | 是 | 网络错误码。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[通用错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)。
+
+ 展开
+| |
+| |
+| |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+
+ **示例：**
+
+ 完整示例代码参考[constructor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webschemehandlerresponse#constructor12)。
+
+ 
+## setStatus12+
+ PhonePC/2in1TabletTVWearablesetStatus(code: number): void
+
+ 给当前的Response设置HTTP状态码。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| code | number | 是 | Http状态码。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[通用错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)。
+
+ 展开
+| |
+| |
+| |
+| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. |
+
+ **示例：**
+
+ 完整示例代码参考[constructor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webschemehandlerresponse#constructor12)。
+
+ 
+## setStatusText12+
+ PhonePC/2in1TabletTVWearablesetStatusText(text: string): void
+
+ 给当前的Response设置状态文本。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| text | string | 是 | 状态文本。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[通用错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)。
+
+ 展开
+| |
+| |
+| |
+| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. |
+
+ **示例：**
+
+ 完整示例代码参考[constructor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webschemehandlerresponse#constructor12)。
+
+ 
+## setMimeType12+
+ PhonePC/2in1TabletTVWearablesetMimeType(type: string): void
+
+ 给当前的Response设置媒体类型。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | string | 是 | 媒体类型。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[通用错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)。
+
+ 展开
+| |
+| |
+| |
+| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. |
+
+ **示例：**
+
+ 完整示例代码参考[constructor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webschemehandlerresponse#constructor12)。
+
+ 
+## setEncoding12+
+ PhonePC/2in1TabletTVWearablesetEncoding(encoding: string): void
+
+ 给当前的Response设置字符集。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| encoding | string | 是 | 字符集。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[通用错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)。
+
+ 展开
+| |
+| |
+| |
+| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. |
+
+ **示例：**
+
+ 完整示例代码参考[constructor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webschemehandlerresponse#constructor12)。
+
+ 
+## setHeaderByName12+
+ PhonePC/2in1TabletTVWearablesetHeaderByName(name: string, value: string, overwrite: boolean): void
+
+ 给当前的Response设置头信息。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 头部（header）的名称。 |
+| value | string | 是 | 头部（header）的值。 |
+| overwrite | boolean | 是 | 如果为true，将覆盖现有的头部，否则不覆盖。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[通用错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)。
+
+ 展开
+| |
+| |
+| |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+
+ **示例：**
+
+ 完整示例代码参考[constructor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webschemehandlerresponse#constructor12)。
+
+ 
+## getUrl12+
+ PhonePC/2in1TabletTVWearablegetUrl(): string
+
+ 获取重定向或由于HSTS而更改后的URL。
+
+ 风险提示：如果想获取url来做JavascriptProxy通信接口认证，请使用[getLastJavascriptProxyCallingFrameUrl12+](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webviewcontroller#getlastjavascriptproxycallingframeurl12)
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| string | 获取经过重定向或由于HSTS而更改后的URL。 |
+
+ **示例：**
+
+ 完整示例代码参考[constructor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webschemehandlerresponse#constructor12)。
+
+ 
+## getNetErrorCode12+
+ PhonePC/2in1TabletTVWearablegetNetErrorCode(): WebNetErrorList
+
+ 获取Response的网络错误码。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| WebNetErrorList | 获取Response的网络错误码。 |
+
+ **示例：**
+
+ 完整示例代码参考[constructor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webschemehandlerresponse#constructor12)。
+
+ 
+## getStatus12+
+ PhonePC/2in1TabletTVWearablegetStatus(): number
+
+ 获取Response的Http状态码。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| number | 获取Response的Http状态码。 |
+
+ **示例：**
+
+ 完整示例代码参考[constructor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webschemehandlerresponse#constructor12)。
+
+ 
+## getStatusText12+
+ PhonePC/2in1TabletTVWearablegetStatusText(): string
+
+ 获取Response的状态文本。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| string | 状态文本。 |
+
+ **示例：**
+
+ 完整示例代码参考[constructor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webschemehandlerresponse#constructor12)。
+
+ 
+## getMimeType12+
+ PhonePC/2in1TabletTVWearablegetMimeType(): string
+
+ 获取Response的媒体类型。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| string | 媒体类型。 |
+
+ **示例：**
+
+ 完整示例代码参考[constructor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webschemehandlerresponse#constructor12)。
+
+ 
+## getEncoding12+
+ PhonePC/2in1TabletTVWearablegetEncoding(): string
+
+ 获取Response的字符集。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| string | 字符集。 |
+
+ **示例：**
+
+ 完整示例代码参考[constructor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webschemehandlerresponse#constructor12)。
+
+ 
+## getHeaderByName12+
+ PhonePC/2in1TabletTVWearablegetHeaderByName(name: string): string
+
+ 按名称获取Response头部字段值。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 头部（header）的名称。 |
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| string | 头部（header）的值。 |
+
+ **示例：**
+
+ 完整示例代码参考[constructor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webschemehandlerresponse#constructor12)。

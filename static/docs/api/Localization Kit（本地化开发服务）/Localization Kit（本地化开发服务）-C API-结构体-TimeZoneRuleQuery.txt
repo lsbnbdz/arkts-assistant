@@ -1,0 +1,34 @@
+# [TimeZoneRuleQuery](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-i18n-timezonerulequery)
+
+## 目录
+- [概述](#概述)
+- [汇总](#汇总)
+  - [成员变量](#成员变量)
+
+收起自动换行深色代码主题复制
+```
+typedef struct TimeZoneRuleQuery {...} TimeZoneRuleQuery
+```
+ 
+## 概述
+PhonePC/2in1TabletTVWearable用于传入查询的信息，并接收查询的结果。
+
+ **起始版本：** 22
+
+ **相关模块：** [i18n](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-i18n)
+
+ **所在头文件：** [timezone.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-timezone-h)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| double base | 查询的基准时间。 |
+| int32_t prevRawOffset | 上一次的时区原始偏移量。 |
+| int32_t prevDSTSavings | 上一次的夏令时偏移量。 |
+| bool inclusive | 查询结果是否包含基准时间。true：查询结果包含基准时间；false：查询结果不包含基准时间。 |
+| double result | 查询结果。 |

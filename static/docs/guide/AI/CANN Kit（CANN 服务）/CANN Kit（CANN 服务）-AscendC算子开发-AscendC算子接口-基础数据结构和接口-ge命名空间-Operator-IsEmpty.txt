@@ -1,0 +1,37 @@
+# [IsEmpty](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-isempty)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119257065_section98793mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119257065_section98796mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119257065_section98800mcpsimp)
+- [返回值](#zh-cn_topic_0000002119257065_section98803mcpsimp)
+- [异常处理](#zh-cn_topic_0000002119257065_section98828mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119257065_section98831mcpsimp)
+
+## 函数功能
+判断operator对象是否为空，空表示不可用。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+bool IsEmpty() const;
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| bool | true：为空。false：非空。 |
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

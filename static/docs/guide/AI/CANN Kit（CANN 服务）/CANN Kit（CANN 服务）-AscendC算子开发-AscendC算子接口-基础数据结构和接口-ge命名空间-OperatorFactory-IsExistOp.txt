@@ -1,0 +1,37 @@
+# [IsExistOp](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-isexistop)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083776614_section98588mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083776614_section98591mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083776614_section98599mcpsimp)
+- [返回值](#zh-cn_topic_0000002083776614_section98622mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083776614_section98647mcpsimp)
+
+## 函数功能
+查询指定的算子类型是否支持。
+
+ 
+## 函数原型
+注意数据类型为string的接口后续版本会废弃，建议使用数据类型为非string的接口。
+
+ 收起自动换行深色代码主题复制
+```
+static bool IsExistOp(const std::string &operator_type)static bool IsExistOp(const char_t *const operator_type)
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| operator_type | 输入 | 算子类型。 |
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| bool | true：支持此算子。false：不支持此算子。 |
+
+ 
+## 约束说明
+无

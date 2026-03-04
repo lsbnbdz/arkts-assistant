@@ -1,0 +1,29 @@
+# [构造函数](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-constructor)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083617138_section91755mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083617138_section91758mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083617138_section91770mcpsimp)
+- [返回值](#zh-cn_topic_0000002083617138_section91773mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083617138_section91776mcpsimp)
+
+## 函数功能
+RuntimeAttrs类的构造函数。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+RuntimeAttrs() = delete;RuntimeAttrs(const RuntimeAttrs &) = delete;RuntimeAttrs(RuntimeAttrs &&) = delete;RuntimeAttrs &operator=(const RuntimeAttrs &) = delete;RuntimeAttrs &operator=(RuntimeAttrs &&) = delete;
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+无
+
+ 
+## 约束说明
+POD类型，当前不允许通过调用构造函数显式构造，可通过显式申请内存构造。

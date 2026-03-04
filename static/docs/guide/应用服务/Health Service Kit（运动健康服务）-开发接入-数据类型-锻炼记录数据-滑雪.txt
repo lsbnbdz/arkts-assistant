@@ -1,0 +1,144 @@
+# [滑雪](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/health-skiing)
+
+## 目录
+- [冬季两项](#section48931290496)
+  - [冬季两项相关锻炼记录类型如下：](#section15323275414)
+  - [冬季两项关联的统计数据说明](#section1862814595413)
+  - [冬季两项关联的明细数据说明](#section427295535410)
+- [滑雪](#section186771759194919)
+  - [滑雪相关锻炼记录类型如下：](#section1224254175812)
+  - [滑雪关联的统计数据说明](#section10249546587)
+  - [滑雪关联的明细数据说明](#section325205418581)
+- [单板滑雪](#section9689713105018)
+  - [单板滑雪相关锻炼记录类型如下：](#section154219578585)
+  - [单板滑雪关联的统计数据说明](#section7427573582)
+  - [单板滑雪关联的明细数据说明](#section1543155714585)
+- [滑雪橇](#section1687532445019)
+  - [滑雪橇相关锻炼记录类型如下：](#section5892359195813)
+  - [滑雪橇关联的统计数据说明](#section118921659145817)
+  - [滑雪橇关联的明细数据说明](#section689315916584)
+
+## 冬季两项
+ 
+### 冬季两项相关锻炼记录类型如下：
+ 展开
+| 锻炼记录子类型常量 | 描述 | 数据来源 |
+| --- | --- | --- |
+| exerciseSequenceHelper.biathlon.EXERCISE_TYPE | 冬季两项 | 手环、手表 |
+
+ 
+### 冬季两项关联的统计数据说明
+ - 字段定义：[exerciseSequenceHelper.biathlon.SummaryFields](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-exercisedequencehelper#section09958585584)
+ 
+ 展开
+| 字段列表 | 描述 | 类型 | 可选/必选 |
+| --- | --- | --- | --- |
+| calorie | 热量统计 | CalorieSummary | M |
+| exerciseHeartRate | 运动心率统计 | ExerciseHeartRateSummary | O |
+
+ 
+### 冬季两项关联的明细数据说明
+ - 字段定义：[exerciseSequenceHelper.biathlon.DetailFields](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-exercisedequencehelper#section1999614584588)
+ 
+ 展开
+| 字段列表 | 描述 | 类型 | 可选/必选 |
+| --- | --- | --- | --- |
+| exerciseHeartRate | 运动心率详情 | ExerciseHeartRate[] | O |
+| speed | 速度详情 | Speed[] | O |
+
+ 
+## 滑雪
+ 
+### 滑雪相关锻炼记录类型如下：
+ 展开
+| 锻炼记录子类型常量 | 描述 | 数据来源 |
+| --- | --- | --- |
+| exerciseSequenceHelper.skiing.EXERCISE_TYPE | 滑雪 | 手环、手表 |
+
+ 
+### 滑雪关联的统计数据说明
+ - 字段定义：[exerciseSequenceHelper.skiing.SummaryFields](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-exercisedequencehelper#section1489344132719)
+ 
+ 展开
+| 字段列表 | 描述 | 类型 | 可选/必选 |
+| --- | --- | --- | --- |
+| distance | 距离统计 | DistanceSummary | M |
+| calorie | 热量统计 | CalorieSummary | M |
+| skiingFeature | 滑雪特征数据 | SkiingFeature | M |
+| altitude | 海拔统计 | AltitudeSummary | O |
+| exerciseHeartRate | 运动心率统计 | ExerciseHeartRateSummary | O |
+
+ 
+### 滑雪关联的明细数据说明
+ - 字段定义：[exerciseSequenceHelper.skiing.DetailFields](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-exercisedequencehelper#section1189414114274)
+ 
+ 展开
+| 字段列表 | 描述 | 类型 | 可选/必选 |
+| --- | --- | --- | --- |
+| exerciseHeartRate | 运动心率详情 | ExerciseHeartRate[] | O |
+| speed | 速度详情 | Speed[] | O |
+| location | 位置详情 | Location[] | O |
+| altitude | 海拔详情 | Altitude[] | O |
+
+ 
+## 单板滑雪
+ 
+### 单板滑雪相关锻炼记录类型如下：
+ 展开
+| 锻炼记录子类型常量 | 描述 | 数据来源 |
+| --- | --- | --- |
+| exerciseSequenceHelper.snowboarding.EXERCISE_TYPE | 单板滑雪 | 手环、手表 |
+
+ 
+### 单板滑雪关联的统计数据说明
+ - 字段定义：[exerciseSequenceHelper.snowboarding.SummaryFields](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-exercisedequencehelper#section1118934512270)
+ 
+ 展开
+| 字段列表 | 描述 | 类型 | 可选/必选 |
+| --- | --- | --- | --- |
+| distance | 距离统计 | DistanceSummary | M |
+| calorie | 热量统计 | CalorieSummary | M |
+| snowboardingFeature | 单板滑雪特征数据 | SnowboardingFeature | M |
+| altitude | 海拔统计 | AltitudeSummary | O |
+| exerciseHeartRate | 运动心率统计 | ExerciseHeartRateSummary | O |
+
+ 
+### 单板滑雪关联的明细数据说明
+ - 字段定义：[exerciseSequenceHelper.snowboarding.DetailFields](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-exercisedequencehelper#section2190345162720)
+ 
+ 展开
+| 字段列表 | 描述 | 类型 | 可选/必选 |
+| --- | --- | --- | --- |
+| exerciseHeartRate | 运动心率详情 | ExerciseHeartRate[] | O |
+| speed | 速度详情 | Speed[] | O |
+| location | 位置详情 | Location[] | O |
+| altitude | 海拔详情 | Altitude[] | O |
+
+ 
+## 滑雪橇
+ 
+### 滑雪橇相关锻炼记录类型如下：
+ 展开
+| 锻炼记录子类型常量 | 描述 | 数据来源 |
+| --- | --- | --- |
+| exerciseSequenceHelper.sled.EXERCISE_TYPE | 滑雪橇 | 手环、手表 |
+
+ 
+### 滑雪橇关联的统计数据说明
+ - 字段定义：[exerciseSequenceHelper.sled.SummaryFields](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-exercisedequencehelper#section76951643152711)
+ 
+ 展开
+| 字段列表 | 描述 | 类型 | 可选/必选 |
+| --- | --- | --- | --- |
+| calorie | 热量统计 | CalorieSummary | M |
+| exerciseHeartRate | 运动心率统计 | ExerciseHeartRateSummary | O |
+
+ 
+### 滑雪橇关联的明细数据说明
+ - 字段定义：[exerciseSequenceHelper.sled.DetailFields](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-exercisedequencehelper#section46961443152712)
+ 
+ 展开
+| 字段列表 | 描述 | 类型 | 可选/必选 |
+| --- | --- | --- | --- |
+| exerciseHeartRate | 运动心率详情 | ExerciseHeartRate[] | O |
+| speed | 速度详情 | Speed[] | O |

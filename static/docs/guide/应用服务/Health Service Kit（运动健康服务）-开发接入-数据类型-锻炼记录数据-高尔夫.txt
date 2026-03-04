@@ -1,0 +1,73 @@
+# [高尔夫](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/health-golf)
+
+## 目录
+- [高尔夫练习场](#section9689713105018)
+  - [高尔夫练习场相关锻炼记录类型如下：](#section154219578585)
+  - [高尔夫练习场关联的统计数据说明](#section7427573582)
+  - [高尔夫练习场关联的明细数据说明](#section1543155714585)
+- [高尔夫场地模式](#section1687532445019)
+  - [高尔夫场地模式相关锻炼记录类型如下：](#section5892359195813)
+  - [高尔夫场地模式关联的统计数据说明](#section118921659145817)
+  - [高尔夫场地模式关联的明细数据说明](#section689315916584)
+
+## 高尔夫练习场
+ 
+### 高尔夫练习场相关锻炼记录类型如下：
+ 展开
+| 锻炼记录子类型常量 | 描述 | 数据来源 |
+| --- | --- | --- |
+| exerciseSequenceHelper.golfPractice.EXERCISE_TYPE | 高尔夫练习场 | 手环、手表 |
+
+ 
+### 高尔夫练习场关联的统计数据说明
+ - 字段定义：[exerciseSequenceHelper.golfPractice.SummaryFields](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-exercisedequencehelper#section1865814260106)
+ 
+ 展开
+| 字段列表 | 描述 | 类型 | 可选/必选 |
+| --- | --- | --- | --- |
+| golfPracticeFeature | 高尔夫练习场特征数据 | GolfPracticeFeature | M |
+| calorie | 热量统计 | CalorieSummary | M |
+| exerciseHeartRate | 运动心率统计 | ExerciseHeartRateSummary | O |
+
+ 
+### 高尔夫练习场关联的明细数据说明
+ 字段定义：[exerciseSequenceHelper.golfPractice.DetailFields](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-exercisedequencehelper#section10659112619104)
+
+ 展开
+| 字段列表 | 描述 | 类型 | 可选/必选 |
+| --- | --- | --- | --- |
+| exerciseHeartRate | 运动心率详情 | ExerciseHeartRate[] | O |
+
+ 
+## 高尔夫场地模式
+ 
+### 高尔夫场地模式相关锻炼记录类型如下：
+ 展开
+| 锻炼记录子类型常量 | 描述 | 数据来源 |
+| --- | --- | --- |
+| exerciseSequenceHelper.golfCourseModel.EXERCISE_TYPE | 高尔夫场地模式 | 手环、手表 |
+
+ 
+### 高尔夫场地模式关联的统计数据说明
+ 字段定义：[exerciseSequenceHelper.golfCourseModel.SummaryFields](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-exercisedequencehelper#section5482191718102)
+
+ 展开
+| 字段列表 | 描述 | 类型 | 可选/必选 |
+| --- | --- | --- | --- |
+| golfCourseModelFeature | 高尔夫场地模式特征数据 | GolfCourseModelFeature | M |
+| calorie | 热量统计 | CalorieSummary | M |
+| step | 步数统计 | StepSummary | M |
+| exerciseHeartRate | 运动心率统计 | ExerciseHeartRateSummary | O |
+| distance | 距离统计 | DistanceSummary | O |
+| cadence | 步频统计 | CadenceSummary | O |
+| altitude | 海拔统计 | AltitudeSummary | O |
+
+ 
+### 高尔夫场地模式关联的明细数据说明
+ 字段定义：[exerciseSequenceHelper.golfCourseModel.DetailFields](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-exercisedequencehelper#section1848281791014)
+
+ 展开
+| 字段列表 | 描述 | 类型 | 可选/必选 |
+| --- | --- | --- | --- |
+| exerciseHeartRate | 运动心率详情 | ExerciseHeartRate[] | O |
+| altitude | 海拔详情 | Altitude[] | O |

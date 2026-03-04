@@ -1,0 +1,19 @@
+# [多设备界面开发案例](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-device-ui-development)
+
+- **[多设备长视频界面](https://developer.huawei.com/consumer/cn/doc/best-practices/multi-video-app)**
+ - **[多设备股票类界面](https://developer.huawei.com/consumer/cn/doc/best-practices/multi-ticket-class)**
+ - **[多设备商务办公界面](https://developer.huawei.com/consumer/cn/doc/best-practices/multi-business-office)**
+ - **[多设备音乐界面](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-music-app-overview)**
+ - **[多设备购物比价界面](https://developer.huawei.com/consumer/cn/doc/best-practices/multi-shopping-price-comparison)**
+ - **[多设备旅行订票界面](https://developer.huawei.com/consumer/cn/doc/best-practices/multi-travel-accommodation)**
+ - **[多设备地图导航界面](https://developer.huawei.com/consumer/cn/doc/best-practices/multi-travel-navigation)**
+ - **[多设备便捷生活界面](https://developer.huawei.com/consumer/cn/doc/best-practices/multi-convenient-life)**
+ - **[多设备银行理财界面](https://developer.huawei.com/consumer/cn/doc/best-practices/multi-financial-app)**
+ - **[多设备社区评论界面](https://developer.huawei.com/consumer/cn/doc/best-practices/multi-community-app)**
+ - **[多设备新闻阅读界面](https://developer.huawei.com/consumer/cn/doc/best-practices/multi-news-read)**
+ - **[多设备移动支付界面](https://developer.huawei.com/consumer/cn/doc/best-practices/multi-mobile-payment)**
+ - **[多设备即时通讯界面](https://developer.huawei.com/consumer/cn/doc/best-practices/multi-communication-app)**
+ - **[多设备图片美化界面](https://developer.huawei.com/consumer/cn/doc/best-practices/multi-picture-app)**
+ - **[多设备游戏界面](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi_game)**
+ - **[多设备设置界面](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-settings-application-page)**
+ - **[多设备短视频界面](https://developer.huawei.com/consumer/cn/doc/best-practices/multi-short-video-app)**

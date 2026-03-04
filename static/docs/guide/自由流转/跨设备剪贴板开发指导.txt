@@ -1,0 +1,38 @@
+# [跨设备剪贴板开发指导](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/distributed-pasteboard-guide)
+
+## 目录
+- [约束与限制](#section17575828642)
+- [接口说明](#section184815911712)
+- [开发示例](#section1653575873018)
+
+在开发跨设备剪贴板的功能时，系统将自动完成跨设备的数据传递，应用可按照本设备上的开发示例，完成跨设备剪贴板的开发。
+
+ 
+## 约束与限制
+ 展开
+| 设备版本 | 使用限制 |
+| --- | --- |
+| HarmonyOS NEXT Developer Preview0及以上 | 双端设备需要打开跨设备剪贴板开关。双端设备需要登录同一华为账号。双端设备需要打开Wi-Fi和蓝牙开关。双端设备在过程中需解锁、亮屏。 |
+
+ 
+## 接口说明
+在开发具体功能前，请先查阅[参考文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-pasteboard)，获取详细的接口说明。
+
+ 展开
+| 接口 | 说明 |
+| --- | --- |
+| getSystemPasteboard(): SystemPasteboard | 获取系统剪贴板对象。 |
+| createData(mimeType: string, value: ValueType): PasteData | 构建一个自定义类型的剪贴板内容对象。 |
+| setData(data: PasteData): Promise | 将数据写入系统剪贴板，使用Promise异步回调。 |
+| getData(callback: AsyncCallback): void | 读取系统剪贴板内容，使用callback异步回调。 应用使用自定义控件后台访问剪贴板需要申请ohos.permission.READ_PASTEBOARD。 |
+| getRecordCount(): number | 获取剪贴板内容中条目的个数。 |
+| getPrimaryMimeType(): string | 获取剪贴板内容中首个条目的数据类型。 |
+| getPrimaryText(): string | 获取首个条目的纯文本内容。 |
+
+ 
+## 开发示例
+说明跨设备复制的数据两分钟内有效。
+
+ - 设备A复制数据，写入到剪贴板服务。收起自动换行深色代码主题复制 ``` import pasteboard from '@ohos.pasteboard';import { BusinessError } from '@ohos.base'; export async function setPasteDataTest(): Promise { let text: string = 'hello world'; let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, text); let systemPasteBoard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard(); await systemPasteBoard.setData(pasteData).catch((err: BusinessError) => { console.error(`Failed to set pastedata. Code: ${err.code}, message: ${err.message}`); });} ```
+
+ - 设备B粘贴数据，读取剪贴板内容。收起自动换行深色代码主题复制 ``` import pasteboard from '@ohos.pasteboard';import { BusinessError } from '@ohos.base'; export async function getPasteDataTest(): Promise { let systemPasteBoard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard(); systemPasteBoard.getData((err: BusinessError, data: pasteboard.PasteData) => { if (err) { console.error(`Failed to get pastedata. Code: ${err.code}, message: ${err.message}`); return; } // 对pastedata进行处理，获取类型，个数等 let recordCount: number = data.getRecordCount(); // 获取剪贴板内record的个数 let types: string = data.getPrimaryMimeType(); // 获取剪贴板内数据的类型 });} ```

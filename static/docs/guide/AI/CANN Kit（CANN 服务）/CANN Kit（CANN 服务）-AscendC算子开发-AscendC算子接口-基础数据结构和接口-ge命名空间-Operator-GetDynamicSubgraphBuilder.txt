@@ -1,0 +1,40 @@
+# [GetDynamicSubgraphBuilder](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getdynamicsubgraphbuilder)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119177149_section99626mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119177149_section99629mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119177149_section99637mcpsimp)
+- [返回值](#zh-cn_topic_0000002119177149_section99667mcpsimp)
+- [异常处理](#zh-cn_topic_0000002119177149_section99670mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119177149_section99673mcpsimp)
+
+## 函数功能
+根据子图名称和子图索引获取算子对应的动态输入子图的构建函数对象。
+
+ 
+## 函数原型
+注意数据类型为string的接口后续版本会废弃，建议使用数据类型为非string的接口。
+
+ 收起自动换行深色代码主题复制
+```
+SubgraphBuilder GetDynamicSubgraphBuilder(const std::string &name, uint32_t index) const;SubgraphBuilder GetDynamicSubgraphBuilder(const char_t *name, uint32_t index) const;
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| name | 输入 | 子图名。 |
+| index | 输入 | 同名子图的索引。 |
+
+ 
+## 返回值
+SubgraphBuilder对象。
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

@@ -1,0 +1,40 @@
+# [Init](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-continuousvector-init)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083616914_section88997mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083616914_section89000mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083616914_section89004mcpsimp)
+- [返回值](#zh-cn_topic_0000002083616914_section89027mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083616914_section89030mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083616914_section89033mcpsimp)
+
+## 函数功能
+使用最大容量初始化本实例。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+void Init(size_t capacity)
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| capacity | 输入 | 初始化本实例的容量。 |
+
+ 
+## 返回值
+无
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+size_t capacity = 100U; size_t total_size = capacity * sizeof(int64_t) + sizeof(ContinuousVector); auto holder = std::unique_ptr(new (std::nothrow) uint8_t[total_size]); reinterpret_cast(holder.get())->Init(capacity); // 100U
+```

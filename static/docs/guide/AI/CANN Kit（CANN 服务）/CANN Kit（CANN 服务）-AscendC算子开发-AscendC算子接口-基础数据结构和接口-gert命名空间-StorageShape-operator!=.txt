@@ -1,0 +1,41 @@
+# [operator!=](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-storageshape-operatorb)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119257145_section93136mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119257145_section93139mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119257145_section93142mcpsimp)
+- [返回值](#zh-cn_topic_0000002119257145_section93165mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119257145_section93169mcpsimp)
+
+## 函数功能
+判断shape是否不相等。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+bool operator!=(const StorageShape &other) const
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| other | 输入 | 另一个shape。 |
+
+ 
+## 返回值
+true：不相等。
+
+ false：相等。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+StorageShape shape0({3, 256, 256}, {256, 256, 3}); StorageShape shape1({3, 256, 256}, {3, 256, 256}); bool is_diff_shape = shape0 != shape1; // true
+```

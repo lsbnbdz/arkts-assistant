@@ -1,0 +1,13 @@
+# [接入流程](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/health-application-access)
+
+展开
+| 步骤 | 说明 |
+| --- | --- |
+| 开发准备 | 参见注册账号和实名认证成为开发者并完成实名认证，同时需完成HarmonyOS应用/元服务创建。申请运动健康服务：申请Health Service Kit服务，选择产品类型并开通对应数据的读写权限。a.根据应用开发者申请资质说明进行自评。满足各项要求后，进行权限申请。 b.根据您的数据使用场景选择权限，并按申请运动健康服务指引，提供申请资料和企业介绍。预计15个工作日完成权限审批。 |
+| 应用开发 | 根据需求完成应用开发。 |
+| 申请验证 | 开发测试工作完成后，提交验证申请。按照申请验证提供相关佐证视频和自检CheckList。平台收到申请后，将15个工作日内完成验收并开通验证权限。至此，您的应用可正式大规模商用。 |
+
+ 说明- 开发者可实名认证为个人开发者或者企业开发者，认证前，请先了解二者的[权益区别](https://developer.huawei.com/consumer/cn/doc/start/dbiae-0000001336403980)。
+- 提交运动健康服务测试权限申请前，请先查阅[开发者申请资质说明](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/health-application-qualifications)和[申请被驳回的常见问题](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/health-apply#zh-cn_topic_0000001050706470_section9767143253016)。
+- 运动健康服务测试阶段有100位用户数量的限制，申请验证并通过后将解除该限制。
+- 开发者等级（是否为优质/重点/战略合作伙伴）将根据实际项目合作情况而定。

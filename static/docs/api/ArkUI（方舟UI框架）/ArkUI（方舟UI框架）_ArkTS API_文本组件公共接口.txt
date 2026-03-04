@@ -1,0 +1,1151 @@
+## 目录
+- [CaretStyle10+](#caretstyle10)
+- [LayoutManager12+](#layoutmanager12)
+  - [导入对象](#导入对象)
+  - [getLineCount12+](#getlinecount12)
+  - [getGlyphPositionAtCoordinate12+](#getglyphpositionatcoordinate12)
+  - [getLineMetrics12+](#getlinemetrics12)
+  - [getRectsForRange14+](#getrectsforrange14)
+- [PositionWithAffinity12+](#positionwithaffinity12)
+- [TextMenuItemId12+](#textmenuitemid12)
+  - [属性](#属性)
+  - [of](#of)
+  - [equals](#equals)
+- [TextMenuItem对象说明12+](#textmenuitem12对象说明)
+- [EditMenuOptions](#editmenuoptions)
+  - [onCreateMenu12+](#oncreatemenu12)
+  - [onMenuItemClick12+](#onmenuitemclick12)
+  - [onPrepareMenu20+](#onpreparemenu20)
+- [OnPrepareMenuCallback20+](#onpreparemenucallback20)
+- [TextRange12+](#textrange12)
+- [EditableTextOnChangeCallback12+](#editabletextonchangecallback12)
+- [TextDataDetectorType枚举说明11+](#textdatadetectortype11枚举说明)
+- [TextDeleteDirection枚举说明12+](#textdeletedirection12枚举说明)
+- [SuperscriptStyle枚举说明20+](#superscriptstyle20枚举说明)
+- [MenuType枚举说明13+](#menutype13枚举说明)
+- [KeyboardAppearance枚举说明15+](#keyboardappearance15枚举说明)
+- [InsertValue对象说明12+](#insertvalue12对象说明)
+- [DeleteValue对象说明12+](#deletevalue12对象说明)
+- [TextDataDetectorConfig对象说明11+](#textdatadetectorconfig11对象说明)
+- [PreviewText12+](#previewtext12)
+- [FontSettingOptions对象说明12+](#fontsettingoptions12对象说明)
+- [OnDidChangeCallback12+](#ondidchangecallback12)
+- [StyledStringChangedListener12+](#styledstringchangedlistener12)
+- [StyledStringChangeValue12+](#styledstringchangevalue12)
+- [AutoCapitalizationMode枚举说明20+](#autocapitalizationmode20枚举说明)
+- [TextBaseController12+](#textbasecontroller12)
+  - [setSelection12+](#setselection12)
+  - [closeSelectionMenu12+](#closeselectionmenu12)
+  - [getLayoutManager12+](#getlayoutmanager12)
+- [TextEditControllerEx12+](#texteditcontrollerex12)
+  - [isEditing12+](#isediting12)
+  - [stopEditing12+](#stopediting12)
+  - [getCaretOffset12+](#getcaretoffset12)
+  - [setCaretOffset12+](#setcaretoffset12)
+  - [getPreviewText12+](#getpreviewtext12)
+- [StyledStringController12+](#styledstringcontroller12)
+  - [setStyledString12+](#setstyledstring12)
+  - [getStyledString12+](#getstyledstring12)
+- [DecorationStyleResult12+](#decorationstyleresult12)
+- [LineMetrics12+](#linemetrics12)
+- [Affinity12+](#affinity12)
+- [TextBox14+](#textbox14)
+- [Paragraph20+](#paragraph20)
+- [RectHeightStyle14+](#rectheightstyle14)
+- [RectWidthStyle14+](#rectwidthstyle14)
+- [TextChangeOptions对象说明15+](#textchangeoptions15对象说明)
+- [EditableTextChangeValue15+](#editabletextchangevalue15)
+- [TextMenuShowMode16+](#textmenushowmode16)
+- [TextMenuOptions对象说明16+](#textmenuoptions16对象说明)
+- [ShaderStyle20+](#shaderstyle20)
+- [LinearGradientStyle20+](#lineargradientstyle20)
+  - [属性](#属性-1)
+  - [constructor20+](#constructor20)
+- [RadialGradientStyle20+](#radialgradientstyle20)
+  - [属性](#属性-2)
+  - [constructor20+](#constructor20-1)
+- [ColorShaderStyle20+](#colorshaderstyle20)
+  - [属性](#属性-3)
+  - [constructor20+](#constructor20-2)
+- [IMEClient对象说明20+](#imeclient20对象说明)
+- [MaxLinesOptions对象说明20+](#maxlinesoptions20对象说明)
+- [MaxLinesMode20+](#maxlinesmode20)
+- [LineSpacingOptions对象说明20+](#linespacingoptions20对象说明)
+- [TextVerticalAlign20+](#textverticalalign20)
+- [ContentTransition20+](#contenttransition20)
+- [NumericTextTransition20+](#numerictexttransition20)
+  - [属性](#属性-4)
+  - [constructor20+](#constructor20-3)
+- [NumericTextTransitionOptions对象说明20+](#numerictexttransitionoptions20对象说明)
+- [FlipDirection20+](#flipdirection20)
+- [TextLayoutOptions对象说明20+](#textlayoutoptions对象说明20)
+
+说明      文本类组件公共接口。
+
+      本模块首批接口从API version 10开始支持，后续版本的新增接口，采用上角标单独标记接口的起始版本。
+
+## CaretStyle10+
+          支持设备PhonePC/2in1TabletTVWearable元服务API： 从API version 11开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+| 名称 | 类型 | 只读 | 可选 | 说明 |
+| --- | --- | --- | --- | --- |
+| width | Length | 否 | 是 |  光标尺寸，不支持百分比。 默认值：'2vp' |
+| color | ResourceColor | 否 | 是 |  光标颜色。 默认值：'#ff007dff' |
+
+## LayoutManager12+
+          支持设备PhonePC/2in1TabletTVWearable布局管理器对象。
+
+     说明       文本内容变更后，需等待布局完成才可获取到最新的布局信息。
+
+### 导入对象
+          以Text组件为例，完整示例请参考Text组件的[示例10获取文本信息](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-basic-components-text#%E7%A4%BA%E4%BE%8B10%E8%8E%B7%E5%8F%96%E6%96%87%E6%9C%AC%E4%BF%A1%E6%81%AF)。
+
+     收起自动换行深色代码主题复制
+```
+controller: TextController = new TextController();let layoutManager: LayoutManager = this.controller.getLayoutManager();
+```
+             
+### getLineCount12+
+          支持设备PhonePC/2in1TabletTVWearablegetLineCount(): number
+
+     获取组件内容的总行数。
+
+     元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+     返回值：
+
+|  |
+|  |
+|  |
+| number | 组件内容的总行数。 |
+
+### getGlyphPositionAtCoordinate12+
+          支持设备PhonePC/2in1TabletTVWearablegetGlyphPositionAtCoordinate(x: number, y: number): PositionWithAffinity
+
+     获取较为接近给定坐标的字形的位置信息。
+
+     元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+     参数：
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| x | number | 是 |  相对于组件的横坐标。 单位：px |
+| y | number | 是 |  相对于组件的纵坐标。 单位：px |
+
+          返回值：
+
+|  |
+|  |
+|  |
+| PositionWithAffinity | 字形位置信息。 |
+
+### getLineMetrics12+
+          支持设备PhonePC/2in1TabletTVWearablegetLineMetrics(lineNumber: number): LineMetrics
+
+     获取指定行的行信息、文本样式信息、以及字体属性信息。
+
+     元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+     参数：
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| lineNumber | number | 是 | 行号，从0开始。 |
+
+          返回值：
+
+|  |
+|  |
+|  |
+| LineMetrics |  行信息、文本样式信息、以及字体属性信息。 当行号小于0或超出实际行，返回无效值。 |
+
+### getRectsForRange14+
+          支持设备PhonePC/2in1TabletTVWearablegetRectsForRange(range: TextRange, widthStyle: RectWidthStyle, heightStyle: RectHeightStyle): Array<TextBox>
+
+     获取给定的矩形区域宽度以及矩形区域高度的规格下，文本中任意区间范围内的字符或占位符所占的绘制区域信息。
+
+     元服务API： 从API version 14开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+     参数：
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| range | TextRange | 是 | 需要获取的区域的文本区间。 |
+| widthStyle | RectWidthStyle | 是 | 返回的矩形区域的宽度的规格。 |
+| heightStyle | RectHeightStyle | 是 | 返回的矩形区域的高度的规格。 |
+
+          返回值：
+
+|  |
+|  |
+|  |
+| Array< TextBox > | 矩形区域数组。 |
+
+## PositionWithAffinity12+
+          支持设备PhonePC/2in1TabletTVWearable位置以及亲和度。
+
+     元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+| 名称 | 类型 | 只读 | 可选 | 说明 |
+| --- | --- | --- | --- | --- |
+| position | number | 否 | 否 | 字形相对于组件内容的索引，整数。 |
+| affinity | Affinity | 否 | 否 | 位置亲和度。 |
+
+## TextMenuItemId12+
+          支持设备PhonePC/2in1TabletTVWearable自定义菜单项的Id值。用于识别菜单选项，内置菜单项Id值见下列属性表格。
+
+     元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+### 属性
+          支持设备PhonePC/2in1TabletTVWearable系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+| 名称 | 类型 | 只读 | 可选 | 说明 |
+| --- | --- | --- | --- | --- |
+| CUT | TextMenuItemId | 是 | 否 |  默认裁剪。 元服务API： 从API version 12开始，该接口支持在元服务中使用。 |
+| COPY | TextMenuItemId | 是 | 否 |  默认复制。 元服务API： 从API version 12开始，该接口支持在元服务中使用。 |
+| PASTE | TextMenuItemId | 是 | 否 |  默认粘贴。 元服务API： 从API version 12开始，该接口支持在元服务中使用。 |
+| SELECT_ALL | TextMenuItemId | 是 | 否 |  默认全选。 元服务API： 从API version 12开始，该接口支持在元服务中使用。 |
+| COLLABORATION_SERVICE | TextMenuItemId | 是 | 否 |  互通服务。 元服务API： 从API version 12开始，该接口支持在元服务中使用。 |
+| CAMERA_INPUT | TextMenuItemId | 是 | 否 |  拍摄输入。 元服务API： 从API version 12开始，该接口支持在元服务中使用。 |
+| AI_WRITER 13+ | TextMenuItemId | 是 | 否 |  可对选中的文本进行润色、摘要提取、排版等。该菜单项依赖大模型能力，否则不生效。 元服务API： 从API version 13开始，该接口支持在元服务中使用。 |
+| TRANSLATE 15+ | TextMenuItemId | 是 | 否 |  对选中的文本提供翻译服务。 元服务API： 从API version 15开始，该接口支持在元服务中使用。 |
+| SHARE 18+ | TextMenuItemId | 是 | 否 |  对选中的文本提供分享服务，拉起分享窗口分享选中文本内容。 元服务API： 从API version 18开始，该接口支持在元服务中使用。 |
+| SEARCH 18+ | TextMenuItemId | 是 | 否 |  对选中的文本提供搜索服务，拉起浏览器搜索选中文本内容。 元服务API： 从API version 18开始，该接口支持在元服务中使用。 |
+| url 20+ | TextMenuItemId | 是 | 否 |  对选中的URL提供跳转服务，拉起浏览器搜索或者应用页面。 元服务API： 从API version 20开始，该接口支持在元服务中使用。 |
+| email 20+ | TextMenuItemId | 是 | 否 |  对选中的邮箱地址提供跳转服务，拉起邮箱应用。 元服务API： 从API version 20开始，该接口支持在元服务中使用。 |
+| phoneNumber 20+ | TextMenuItemId | 是 | 否 |  对选中的电话号码跳转服务，拉起电话拨号页面。 元服务API： 从API version 20开始，该接口支持在元服务中使用。 |
+| address 20+ | TextMenuItemId | 是 | 否 |  对选中的地址提供跳转服务，拉起地图应用。 元服务API： 从API version 20开始，该接口支持在元服务中使用。 |
+| dateTime 20+ | TextMenuItemId | 是 | 否 |  对选中的日期和时间提供跳转服务，拉起新建日程页面。 元服务API： 从API version 20开始，该接口支持在元服务中使用。 |
+| askAI 20+ | TextMenuItemId | 是 | 否 |  对选中的文本提供AI问询能力。 元服务API： 从API version 20开始，该接口支持在元服务中使用。 |
+
+### of
+          支持设备PhonePC/2in1TabletTVWearablestatic of(id: ResourceStr): TextMenuItemId
+
+     根据id创建TextMenuItemId。
+
+     元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+     参数：
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| id | ResourceStr | 是 | 菜单的id。 |
+
+          返回值：
+
+|  |
+|  |
+|  |
+| TextMenuItemId | TextMenuItemId的对象。 |
+
+### equals
+          支持设备PhonePC/2in1TabletTVWearableequals(id: TextMenuItemId): boolean
+
+     判断TextMenuItemId是否相等。
+
+     元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+     参数：
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| id | TextMenuItemId | 是 | TextMenuItemId的id。 |
+
+          返回值：
+
+|  |
+|  |
+|  |
+| boolean |  两个TextMenuItemId是否相等。 true表示相等，false表示不相等。 |
+
+## TextMenuItem12+对象说明
+          支持设备PhonePC/2in1TabletTVWearable系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+| 名称 | 类型 | 只读 | 可选 | 说明 |
+| --- | --- | --- | --- | --- |
+| content | ResourceStr | 否 | 否 |  菜单名称。 元服务API： 从API version 12开始，该接口支持在元服务中使用。 |
+| icon | ResourceStr | 否 | 是 |  菜单图标。 不支持网络图片。 元服务API： 从API version 12开始，该接口支持在元服务中使用。 |
+| id | TextMenuItemId | 否 | 否 |  菜单id。 元服务API： 从API version 12开始，该接口支持在元服务中使用。 |
+| labelInfo 15+ | ResourceStr | 否 | 是 |  快捷键提示。 该字段仅2in1设备支持。 元服务API： 从API version 15开始，该接口支持在元服务中使用。 |
+
+## EditMenuOptions
+          支持设备PhonePC/2in1TabletTVWearable元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+### onCreateMenu12+
+          支持设备PhonePC/2in1TabletTVWearableonCreateMenu(menuItems: Array<TextMenuItem>): Array<TextMenuItem>
+
+     在菜单创建时触发该回调，可在该回调中进行菜单数据设置。
+
+     元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+     参数：
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| menuItems | Array< TextMenuItem > | 是 |  将要显示的菜单项。 说明： 对默认菜单项的名称、图标、快捷键提示修改不生效。 |
+
+          返回值：
+
+|  |
+|  |
+|  |
+| Array< TextMenuItem > | 处理后的菜单项。 |
+
+### onMenuItemClick12+
+          支持设备PhonePC/2in1TabletTVWearableonMenuItemClick(menuItem: TextMenuItem, range: TextRange): boolean
+
+     菜单项功能函数。
+
+     元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+     参数：
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| menuItem | TextMenuItem | 是 | 菜单项。 |
+| range | TextRange | 是 | 选中的文本信息。 |
+
+          返回值：
+
+|  |
+|  |
+|  |
+| boolean |  菜单项的执行逻辑。 返回为true，拦截系统默认逻辑，仅执行自定义逻辑。 返回为false，先执行自定义逻辑，再执行系统逻辑。 |
+
+### onPrepareMenu20+
+          支持设备PhonePC/2in1TabletTVWearableonPrepareMenu?: OnPrepareMenuCallback
+
+     当文本选择区域变化后显示菜单之前触发该回调，可在该回调中进行菜单数据设置。
+
+     元服务API： 从API version 20开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+     返回值：
+
+|  |
+|  |
+|  |
+| OnPrepareMenuCallback | 当文本选择区域变化后显示菜单之前触发该回调，可在该回调中进行菜单数据设置。 |
+
+## OnPrepareMenuCallback20+
+          支持设备PhonePC/2in1TabletTVWearabletype OnPrepareMenuCallback = (menuItems: Array<TextMenuItem>) => Array<TextMenuItem>
+
+     当文本选择区域变化后显示菜单之前触发该回调，可在该回调中进行菜单数据设置。
+
+     元服务API： 从API version 20开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+     参数：
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| menuItems | Array< TextMenuItem > | 是 |  将要显示的菜单项。 说明： 对默认菜单项的名称、图标、快捷键提示修改不生效。 |
+
+          返回值：
+
+|  |
+|  |
+|  |
+| Array< TextMenuItem > | 处理后的菜单项。 |
+
+## TextRange12+
+          支持设备PhonePC/2in1TabletTVWearable文本范围。
+
+     元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+| 名称 | 类型 | 只读 | 可选 | 说明 |
+| --- | --- | --- | --- | --- |
+| start | number | 否 | 是 | 起始索引。 |
+| end | number | 否 | 是 | 结束索引。 |
+
+## EditableTextOnChangeCallback12+
+          支持设备PhonePC/2in1TabletTVWearabletype EditableTextOnChangeCallback = (value: string, previewText?: PreviewText, options?: TextChangeOptions) => void
+
+     输入内容发生变化时，触发该回调。
+
+     元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+     参数：
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | string | 是 | 文本框内正式上屏的文本内容。 |
+| previewText | PreviewText | 否 | 预上屏文本信息，包含预上屏起始位置和文本内容。 |
+| options 15+ | TextChangeOptions | 否 | 文本内容变化信息，包含变化前后的选区范围、变化前的文本内容和预上屏文本信息。 |
+
+## TextDataDetectorType11+枚举说明
+          支持设备PhonePC/2in1TabletTVWearable元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+| 名称 | 值 | 说明 |
+| --- | --- | --- |
+| PHONE_NUMBER | 0 | 电话号码 |
+| URL | 1 | 链接 |
+| EMAIL | 2 | 邮箱 |
+| ADDRESS | 3 | 地址 |
+| DATE_TIME 12+ | 4 | 时间 |
+
+## TextDeleteDirection12+枚举说明
+          支持设备PhonePC/2in1TabletTVWearable定义删除文本方向。
+
+     元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+| 名称 | 值 | 说明 |
+| --- | --- | --- |
+| BACKWARD | 0 | 向后删除。 |
+| FORWARD | 1 | 向前删除。 |
+
+## SuperscriptStyle20+枚举说明
+          支持设备PhonePC/2in1TabletTVWearable定义文本上下角标样式。
+
+     元服务API： 从API version 20开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+| 名称 | 值 | 说明 |
+| --- | --- | --- |
+| NORMAL | 0 | 普通文本样式。 |
+| SUPERSCRIPT | 1 | 上标文本样式。 |
+| SUBSCRIPT | 2 | 下标文本样式。 |
+
+## MenuType13+枚举说明
+          支持设备PhonePC/2in1TabletTVWearable菜单类型。
+
+     元服务API： 从API version 13开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+| 名称 | 值 | 说明 |
+| --- | --- | --- |
+| SELECTION_MENU | 0 | 文本选择菜单。 |
+| PREVIEW_MENU | 1 | 图片预览菜单。 |
+
+## KeyboardAppearance15+枚举说明
+          支持设备PhonePC/2in1TabletTVWearable键盘外观。
+
+     元服务API： 从API version 15开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+| 名称 | 值 | 说明 |
+| --- | --- | --- |
+| NONE_IMMERSIVE | 0 | 默认外观模式，不采用沉浸式风格。 |
+| IMMERSIVE | 1 | 沉浸式模式，跟随系统。 |
+| LIGHT_IMMERSIVE | 2 | 浅色沉浸式风格。 |
+| DARK_IMMERSIVE | 3 | 深色沉浸式风格。 |
+
+## InsertValue12+对象说明
+          支持设备PhonePC/2in1TabletTVWearable元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+| 名称 | 类型 | 只读 | 可选 | 说明 |
+| --- | --- | --- | --- | --- |
+| insertOffset | number | 否 | 否 | 插入的值的位置信息。 |
+| insertValue | string | 否 | 否 | 插入的值。 |
+
+## DeleteValue12+对象说明
+          支持设备PhonePC/2in1TabletTVWearable元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+| 名称 | 类型 | 只读 | 可选 | 说明 |
+| --- | --- | --- | --- | --- |
+| deleteOffset | number | 否 | 否 | 删除的值的位置信息。 |
+| direction | TextDeleteDirection | 否 | 否 | 删除值的方向。 |
+| deleteValue | string | 否 | 否 | 删除的值。 |
+
+## TextDataDetectorConfig11+对象说明
+          支持设备PhonePC/2in1TabletTVWearable该配置只支持[Text](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-basic-components-text)组件和[RichEditor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-basic-components-richeditor)组件。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+| 名称 | 类型 | 只读 | 可选 | 说明 |
+| --- | --- | --- | --- | --- |
+| types | TextDataDetectorType [] | 否 | 否 |  设置文本识别的实体类型。设置types为null或者[]时，识别所有类型的实体，否则只识别指定类型的实体。 元服务API： 从API version 12开始，该接口支持在元服务中使用。 |
+| onDetectResultUpdate | Callback<string> | 否 | 是 |  文本识别成功后，触发onDetectResultUpdate回调。 元服务API： 从API version 12开始，该接口支持在元服务中使用。 |
+| color 12+ | ResourceColor | 否 | 是 |  设置文本识别成功后的实体颜色。 默认值：'#ff0a59f7' 元服务API： 从API version 12开始，该接口支持在元服务中使用。 |
+| decoration 12+ | DecorationStyleInterface | 否 | 是 |  设置文本识别成功后的实体装饰线样式。 默认值： { type: TextDecorationType.Underline, color: 与实体颜色一致, style: TextDecorationStyle.SOLID } 元服务API： 从API version 12开始，该接口支持在元服务中使用。 |
+| enablePreviewMenu 20+ | boolean | 否 | 是 |  设置是否开启文本识别长按显示预览菜单。true表示开启，false表示未开启。 默认值：false 当copyOptions设置为None时，若enablePreviewMenu设置为true，长按AI实体也不能显示预览菜单。 元服务API： 从API version 20开始，该接口支持在元服务中使用。 |
+
+## PreviewText12+
+          支持设备PhonePC/2in1TabletTVWearable预上屏信息。
+
+     元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+| 名称 | 类型 | 只读 | 可选 | 说明 |
+| --- | --- | --- | --- | --- |
+| offset | number | 否 | 否 | 预上屏内容的起始位置。 |
+| value | string | 否 | 否 | 预上屏的内容。 |
+
+## FontSettingOptions12+对象说明
+          支持设备PhonePC/2in1TabletTVWearable字体配置项，比如通过设置应用内组件的字体粗细，进行可变字重调节。
+
+     卡片能力： 从API version 12开始，该接口支持在ArkTS卡片中使用。
+
+     元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+| 名称 | 类型 | 只读 | 可选 | 说明 |
+| --- | --- | --- | --- | --- |
+| enableVariableFontWeight | boolean | 否 | 是 |  是否支持可变字重调节。 默认值：false 值为true，表示支持字重调节，值为false，表示不支持字重调节。 |
+
+## OnDidChangeCallback12+
+          支持设备PhonePC/2in1TabletTVWearabletype OnDidChangeCallback = (rangeBefore: TextRange, rangeAfter: TextRange) => void
+
+     文本变换后回调。
+
+     元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+     参数：
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| rangeBefore | TextRange | 是 | 文本变化前将要被替换的文本范围。 |
+| rangeAfter | TextRange | 是 | 文本变化后新增内容的文本范围。 |
+
+## StyledStringChangedListener12+
+          支持设备PhonePC/2in1TabletTVWearable属性字符串的文本内容变化监听器。
+
+     元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+| 名称 | 类型 | 只读 | 可选 | 说明 |
+| --- | --- | --- | --- | --- |
+| onWillChange | Callback< StyledStringChangeValue , boolean> | 否 | 是 | 文本内容将要变化回调函数。 |
+| onDidChange | OnDidChangeCallback | 否 | 是 | 文本内容完成变化回调函数。 |
+
+## StyledStringChangeValue12+
+          支持设备PhonePC/2in1TabletTVWearable属性字符串的文本变化信息。
+
+     元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+| 名称 | 类型 | 只读 | 可选 | 说明 |
+| --- | --- | --- | --- | --- |
+| range | TextRange | 否 | 否 | 即将被替换的属性字符串子串在原字符串中的范围。 |
+| replacementString | StyledString | 否 | 否 | 用于替换的属性字符串。 |
+| previewText | StyledString | 否 | 是 | 预览样式字符串。 |
+
+## AutoCapitalizationMode20+枚举说明
+          支持设备PhonePC/2in1TabletTVWearable自动大小写模式类型，只提供接口能力，具体实现以输入法应用为主。
+
+     元服务API： 从API version 20开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+| 名称 | 值 | 说明 |
+| --- | --- | --- |
+| NONE | 0 | 默认状态无效。 |
+| WORDS | 1 | 按单词自动大小写。 |
+| SENTENCES | 2 | 按句子自动大小写。 |
+| ALL_CHARACTERS | 3 | 按全字符自动大小写。 |
+
+## TextBaseController12+
+          支持设备PhonePC/2in1TabletTVWearable文本选择控制器。
+
+     元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+### setSelection12+
+          支持设备PhonePC/2in1TabletTVWearablesetSelection(selectionStart: number, selectionEnd: number, options?: SelectionOptions): void
+
+     支持设置组件内的内容选中，选中部分背板高亮。
+
+     selectionStart和selectionEnd均为-1时表示全选。
+
+     未获焦时调用该接口不产生选中效果。
+
+     从API version 12开始，在2in1设备中，无论options取何值，调用setSelection接口都不会弹出菜单，此外，如果组件中已经存在菜单，调用setSelection接口会关闭菜单。
+
+     在非2in1设备中，options取值为MenuPolicy.DEFAULT时，遵循以下规则：
+
+                  组件内有手柄菜单时，接口调用后不关闭菜单，并且调整菜单位置。
+
+             组件内有不带手柄的菜单时，接口调用后不关闭菜单，并且菜单位置不变。
+
+             组件内无菜单时，接口调用后也无菜单显示。
+
+          元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+     参数：
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| selectionStart | number | 是 |  选中开始位置。 取值小于0时，按0处理。 |
+| selectionEnd | number | 是 |  选中结束位置。 取值大于文本长度时，按当前文本长度处理。 |
+| options | SelectionOptions | 否 | 选择项配置。 |
+
+### closeSelectionMenu12+
+          支持设备PhonePC/2in1TabletTVWearablecloseSelectionMenu(): void
+
+     关闭自定义选择菜单或系统默认选择菜单。
+
+     元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+### getLayoutManager12+
+          支持设备PhonePC/2in1TabletTVWearablegetLayoutManager(): LayoutManager
+
+     获取布局管理器对象。
+
+     元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+     返回值：
+
+|  |
+|  |
+|  |
+| LayoutManager | 布局管理器对象。 |
+
+## TextEditControllerEx12+
+          支持设备PhonePC/2in1TabletTVWearable文本扩展编辑控制器。
+
+     继承自[TextBaseController](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-text-common#textbasecontroller12)。
+
+     元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+### isEditing12+
+          支持设备PhonePC/2in1TabletTVWearableisEditing(): boolean
+
+     获取当前富文本的编辑状态。
+
+     元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+     返回值：
+
+|  |
+|  |
+|  |
+| boolean | true为编辑态，false为非编辑态。 |
+
+### stopEditing12+
+          支持设备PhonePC/2in1TabletTVWearablestopEditing(): void
+
+     退出编辑态。
+
+     元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+### getCaretOffset12+
+          支持设备PhonePC/2in1TabletTVWearablegetCaretOffset(): number
+
+     返回当前光标所在位置。
+
+     元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+     返回值：
+
+|  |
+|  |
+|  |
+| number | 当前光标所在位置。 |
+
+### setCaretOffset12+
+          支持设备PhonePC/2in1TabletTVWearablesetCaretOffset(offset: number): boolean
+
+     设置光标位置。
+
+     元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+     参数：
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| offset | number | 是 | 光标偏移位置。超出所有内容范围时，设置失败。 |
+
+          返回值：
+
+|  |
+|  |
+|  |
+| boolean |  光标是否设置成功。 true表示光标设置成功，false表示设置失败。 |
+
+### getPreviewText12+
+          支持设备PhonePC/2in1TabletTVWearablegetPreviewText?(): PreviewText
+
+     获取预上屏信息。
+
+     元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+     返回值：
+
+|  |
+|  |
+|  |
+| PreviewText | 预上屏信息。 |
+
+## StyledStringController12+
+          支持设备PhonePC/2in1TabletTVWearable定义StyledString控制器。
+
+     元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+### setStyledString12+
+          支持设备PhonePC/2in1TabletTVWearablesetStyledString(styledString: StyledString): void
+
+     设置富文本组件显示的属性字符串。
+
+     元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+     参数：
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| styledString | StyledString | 是 |  属性字符串。 说明： StyledString的子类MutableStyledString也可以作为入参值。 |
+
+### getStyledString12+
+          支持设备PhonePC/2in1TabletTVWearablegetStyledString(): MutableStyledString
+
+     获取富文本组件显示的属性字符串。
+
+     元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+     返回值：
+
+|  |
+|  |
+|  |
+| MutableStyledString | 富文本组件显示的属性字符串。 |
+
+## DecorationStyleResult12+
+          支持设备PhonePC/2in1TabletTVWearable后端返回的文本装饰线样式信息。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+| 名称 | 类型 | 只读 | 可选 | 说明 |
+| --- | --- | --- | --- | --- |
+| type | TextDecorationType | 否 | 否 |  装饰线类型。 元服务API： 从API version 12开始，该接口支持在元服务中使用。 |
+| color | ResourceColor | 否 | 否 |  装饰线颜色。 元服务API： 从API version 12开始，该接口支持在元服务中使用。 |
+| style | TextDecorationStyle | 否 | 是 |  装饰线样式。 元服务API： 从API version 12开始，该接口支持在元服务中使用。 |
+| thicknessScale 20+ | number | 否 | 是 |  装饰线粗细缩放比例。 默认值：1.0 取值范围：[0, +∞) 说明： 负值按默认值处理。 元服务API： 从API version 20开始，该接口支持在元服务中使用。 |
+
+## LineMetrics12+
+          支持设备PhonePC/2in1TabletTVWearabletype LineMetrics = LineMetrics
+
+     用于描述文本布局中单行文字的度量信息。
+
+     元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+|  |
+|  |
+|  |
+| LineMetrics | 用于描述文本布局中单行文字的度量信息。 |
+
+## Affinity12+
+          支持设备PhonePC/2in1TabletTVWearabletype Affinity = Affinity
+
+     位置亲和度枚举。
+
+     元服务API： 从API version 12开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+|  |
+|  |
+|  |
+| Affinity | 位置亲和度枚举。 |
+
+## TextBox14+
+          支持设备PhonePC/2in1TabletTVWearabletype TextBox = TextBox
+
+     文本矩形区域。
+
+     元服务API： 从API version 14开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+|  |
+|  |
+|  |
+| TextBox | 文本矩形区域。 |
+
+## Paragraph20+
+          支持设备PhonePC/2in1TabletTVWearabletype Paragraph = Paragraph
+
+     保存文本内容及样式的载体，支持排版与绘制操作。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+|  |
+|  |
+|  |
+| Paragraph | 保存文本内容及样式的载体，支持排版与绘制操作。 |
+
+## RectHeightStyle14+
+          支持设备PhonePC/2in1TabletTVWearabletype RectHeightStyle = RectHeightStyle
+
+     矩形区域高度规格枚举。
+
+     元服务API： 从API version 14开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+|  |
+|  |
+|  |
+| RectHeightStyle | 矩形区域高度规格枚举。 |
+
+## RectWidthStyle14+
+          支持设备PhonePC/2in1TabletTVWearabletype RectWidthStyle = RectWidthStyle
+
+     矩形区域宽度规格枚举。
+
+     元服务API： 从API version 14开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+|  |
+|  |
+|  |
+| RectWidthStyle | 矩形区域宽度规格枚举。 |
+
+## TextChangeOptions15+对象说明
+          支持设备PhonePC/2in1TabletTVWearable变化前的文本信息，以及变化后的选区范围。
+
+     元服务API： 从API version 15开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+| 名称 | 类型 | 只读 | 可选 | 说明 |
+| --- | --- | --- | --- | --- |
+| rangeBefore | TextRange | 否 | 否 | 变化前的选区范围。 |
+| rangeAfter | TextRange | 否 | 否 | 变化后的选区范围。 |
+| oldContent | string | 否 | 否 | 变化前的文本内容。 |
+| oldPreviewText | PreviewText | 否 | 否 | 变化前的预上屏信息。 |
+
+## EditableTextChangeValue15+
+          支持设备PhonePC/2in1TabletTVWearable文本变化的详细信息，包括预上屏。
+
+     元服务API： 从API version 15开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+| 名称 | 类型 | 只读 | 可选 | 说明 |
+| --- | --- | --- | --- | --- |
+| content | string | 否 | 否 | 当前的文本内容。 |
+| previewText | PreviewText | 否 | 是 | 预上屏的内容信息。 |
+| options | TextChangeOptions | 否 | 是 | 变化的文本内容信息。 |
+
+## TextMenuShowMode16+
+          支持设备PhonePC/2in1TabletTVWearable菜单的显示模式。
+
+     元服务API： 从API version 16开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+| 名称 | 值 | 说明 |
+| --- | --- | --- |
+| DEFAULT | 0 |  显示在当前窗口中。 |
+| PREFER_WINDOW | 1 |  优先显示在独立窗口中，若不支持独立窗口，则显示在当前窗口中。 说明： 除应用主窗口、应用子窗口、系统模态窗口及系统桌面类型的窗口外，其他类型的窗口不支持将文本选择菜单显示在独立窗口中。 在预览器中不支持将文本选择菜单显示在独立窗口中。 在UIExtension中不支持将文本选择菜单显示在独立窗口中。 当文本类组件已经显示在子窗类型的Popup、Dialog、Toast、Menu中时，不支持将其对应的文本选择菜单显示在独立窗口中。 当TextInput、TextArea可支持拉起AutoFill时，不支持将其对应的文本选择菜单显示在独立窗口中。 |
+
+## TextMenuOptions16+对象说明
+          支持设备PhonePC/2in1TabletTVWearable菜单选项。
+
+     元服务API： 从API version 16开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+| 名称 | 类型 | 只读 | 可选 | 说明 |
+| --- | --- | --- | --- | --- |
+| showMode | TextMenuShowMode | 否 | 是 |  菜单的显示模式。 默认值：TextMenuShowMode.DEFAULT |
+
+## ShaderStyle20+
+          支持设备PhonePC/2in1TabletTVWearable文本着色器效果基类。
+
+     元服务API： 从API version 20开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+## LinearGradientStyle20+
+          支持设备PhonePC/2in1TabletTVWearable显示为线性渐变。LinearGradientStyle继承自[ShaderStyle](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-text-common#shaderstyle20)。
+
+     元服务API： 从API version 20开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+### 属性
+          支持设备PhonePC/2in1TabletTVWearable元服务API： 从API version 20开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+| 名称 | 类型 | 只读 | 可选 | 说明 |
+| --- | --- | --- | --- | --- |
+| options | LinearGradientOptions | 否 | 否 | 显示为线性渐变效果。 |
+
+### constructor20+
+          支持设备PhonePC/2in1TabletTVWearableconstructor(options: LinearGradientOptions)
+
+     用于创建LinearGradientStyle对象的构造函数。
+
+     元服务API： 从API version 20开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+     参数：
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | LinearGradientOptions | 是 | 显示为线性渐变效果。 |
+
+## RadialGradientStyle20+
+          支持设备PhonePC/2in1TabletTVWearable显示为径向渐变。RadialGradientStyle继承自[ShaderStyle](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-text-common#shaderstyle20)。
+
+     元服务API： 从API version 20开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+### 属性
+          支持设备PhonePC/2in1TabletTVWearable元服务API： 从API version 20开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+| 名称 | 类型 | 只读 | 可选 | 说明 |
+| --- | --- | --- | --- | --- |
+| options | RadialGradientOptions | 否 | 否 | 显示为径向渐变效果。 |
+
+### constructor20+
+          支持设备PhonePC/2in1TabletTVWearableconstructor(options: RadialGradientOptions)
+
+     用于创建RadialGradientOptions对象的构造函数。
+
+     元服务API： 从API version 20开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+     参数：
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | RadialGradientOptions | 是 | 显示为径向渐变效果。 |
+
+## ColorShaderStyle20+
+          支持设备PhonePC/2in1TabletTVWearable显示为纯色。ColorShaderStyle继承自[ShaderStyle](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-text-common#shaderstyle20)。
+
+     元服务API： 从API version 20开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+### 属性
+          支持设备PhonePC/2in1TabletTVWearable元服务API： 从API version 20开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+| 名称 | 类型 | 只读 | 可选 | 说明 |
+| --- | --- | --- | --- | --- |
+| color | ResourceColor | 否 | 否 | 显示为纯色效果。 |
+
+### constructor20+
+          支持设备PhonePC/2in1TabletTVWearableconstructor(color: ResourceColor)
+
+     用于创建ResourceColor对象的构造函数。
+
+     元服务API： 从API version 20开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+     参数：
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| color | ResourceColor | 是 | 显示为纯色效果。 |
+
+## IMEClient20+对象说明
+          支持设备PhonePC/2in1TabletTVWearable输入控件绑定输入法客户端类型。
+
+     元服务API： 从API version 20开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+| 名称 | 类型 | 只读 | 可选 | 说明 |
+| --- | --- | --- | --- | --- |
+| nodeId | number | 否 | 否 | 当前输入控件的组件UniqueId。取值范围大于等于0。 |
+
+## MaxLinesOptions20+对象说明
+          支持设备PhonePC/2in1TabletTVWearable配置TextArea组件，文本超长时的显示效果。
+
+     元服务API： 从API version 20开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+| 名称 | 类型 | 只读 | 可选 | 说明 |
+| --- | --- | --- | --- | --- |
+| overflowMode | MaxLinesMode | 否 | 是 | overflowMode可配置TextArea组件的非内联模式。当超出设置的maxLines最大行数时，会启用滚动效果。需同时配置 textOverflow ，且仅当textOverflow为None或Clip时，MaxLinesMode才能生效。默认情况下，MaxLinesMode的值为Clip，超出maxLines后文本会被截断。 |
+
+## MaxLinesMode20+
+          支持设备PhonePC/2in1TabletTVWearableTextArea组件在文本超长时显示效果。默认值为CLIP，按最大行截断显示。
+
+     元服务API： 从API version 20开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+| 名称 | 值 | 说明 |
+| --- | --- | --- |
+| CLIP | 0 | 文本超长时按最大行截断显示。 |
+| SCROLL | 1 | 文本超长时可滚动显示。 |
+
+## LineSpacingOptions20+对象说明
+          支持设备PhonePC/2in1TabletTVWearable设置文本的行间距，是否仅在行与行之间生效。
+
+     元服务API： 从API version 20开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+     参数：
+
+| 名称 | 类型 | 只读 | 可选 | 说明 |
+| --- | --- | --- | --- | --- |
+| onlyBetweenLines | boolean | 否 | 是 |  文本的行间距是否仅在行与行之间生效。 当设置为true时，行间距仅适用于行与行之间，首行上方和尾行下方无额外的行间距。当设置为false时，首行上方和尾行下方均会存在行间距。 默认值：false |
+
+## TextVerticalAlign20+
+          支持设备PhonePC/2in1TabletTVWearable文本垂直对齐的方式。默认值BASELINE，沿基线对齐。
+
+     元服务API： 从API version 20开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+| 名称 | 值 | 说明 |
+| --- | --- | --- |
+| BASELINE | 0 | 对齐文本基线。 |
+| BOTTOM | 1 | 对齐文本底部。 |
+| CENTER | 2 | 垂直居中对齐。 |
+| TOP | 3 | 对齐文本顶部。 |
+
+## ContentTransition20+
+          支持设备PhonePC/2in1TabletTVWearable文本动效基类。
+
+     元服务API： 从API version 20开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+## NumericTextTransition20+
+          支持设备PhonePC/2in1TabletTVWearable数字翻牌动效。仅限正整数，不支持小数和负数。不支持渐变色和Text跑马灯模式。不支持选中，[copyOption](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-basic-components-text#copyoption9)属性无效。当文本存在子组件时或通过属性字符串设置时，数字翻牌失效。
+
+     NumericTextTransition继承自[ContentTransition](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-text-common#contenttransition20)。
+
+     元服务API： 从API version 20开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+### 属性
+          支持设备PhonePC/2in1TabletTVWearable元服务API： 从API version 20开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+| 名称 | 类型 | 只读 | 可选 | 说明 |
+| --- | --- | --- | --- | --- |
+| flipDirection | FlipDirection | 否 | 是 |  翻牌方向。 默认值：FlipDirection.DOWN |
+| enableBlur | boolean | 否 | 是 |  是否开启翻牌模糊效果。 默认值：false true：开启翻牌模糊效果。 false：不开启翻牌模糊效果。 |
+
+### constructor20+
+          支持设备PhonePC/2in1TabletTVWearableconstructor(options?: NumericTextTransitionOptions)
+
+     用于创建NumericTextTransition对象的构造函数。
+
+     元服务API： 从API version 20开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+     参数：
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | NumericTextTransitionOptions | 否 | 设置数字翻牌动效。 |
+
+## NumericTextTransitionOptions20+对象说明
+          支持设备PhonePC/2in1TabletTVWearable数字翻牌的参数。
+
+     元服务API： 从API version 20开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+| 名称 | 类型 | 只读 | 可选 | 说明 |
+| --- | --- | --- | --- | --- |
+| flipDirection | FlipDirection | 否 | 是 |  翻牌方向。 默认值：FlipDirection.DOWN |
+| enableBlur | boolean | 否 | 是 |  是否开启翻牌模糊效果。 默认值：false true：开启翻牌模糊效果。 false：不开启翻牌模糊效果。 |
+
+## FlipDirection20+
+          支持设备PhonePC/2in1TabletTVWearable翻牌方向。默认值为DOWN。
+
+     元服务API： 从API version 20开始，该接口支持在元服务中使用。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+| 名称 | 值 | 说明 |
+| --- | --- | --- |
+| DOWN | 0 | 内容往下翻。 |
+| UP | 1 | 内容往上翻。 |
+
+## TextLayoutOptions对象说明20+
+          支持设备PhonePC/2in1TabletTVWearable文本布局选项。
+
+     系统能力： SystemCapability.ArkUI.ArkUI.Full
+
+| 名称 | 类型 | 只读 | 可选 | 说明 |
+| --- | --- | --- | --- | --- |
+| constraintWidth | LengthMetrics | 否 | 是 | 设置被计算文本布局宽度。若不设置则宽度为单行布局所占最大宽度值。 |

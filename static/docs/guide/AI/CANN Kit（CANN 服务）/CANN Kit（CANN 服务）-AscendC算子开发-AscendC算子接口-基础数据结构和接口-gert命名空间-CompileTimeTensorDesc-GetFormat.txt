@@ -1,0 +1,37 @@
+# [GetFormat](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-compiletimetensordesc-getformat)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083777042_section87702mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083777042_section87705mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083777042_section87711mcpsimp)
+- [返回值](#zh-cn_topic_0000002083777042_section87714mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083777042_section87717mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083777042_section87720mcpsimp)
+
+## 函数功能
+获取CompileTimeTensorDesc所描述的Tensor的数据排布格式。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+const StorageFormat &GetFormat() const
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+返回数据排布格式。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+auto dtype_ = ge::DataType::DT_INT32; StorageFormat fmt_(ge::Format::FORMAT_NC, ge::FORMAT_NCHW, {}); ExpandDimsType type_("1001"); gert::CompileTimeTensorDesc td; td.SetDataType(dtype_); auto dtype = td.GetDataType(); // ge::DataType::DT_INT32; td.SetStorageFormat(fmt_.GetFormat()); auto storage_fmt = td.GetFormat(); // ge::FORMAT_NCHWtd.SetOriginFormat(fmt_.GetOriginFormat()); auto origin_fmt = td.GetOriginFormat(); // ge::Format::FORMAT_NC td.SetExpandDimsType(type_);auto type = td.GetExpandDimsType(); // type_("1001")
+```

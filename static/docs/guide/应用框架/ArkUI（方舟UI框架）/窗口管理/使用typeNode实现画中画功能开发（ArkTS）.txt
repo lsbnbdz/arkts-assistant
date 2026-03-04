@@ -1,0 +1,317 @@
+## 目录
+- [约束与限制](#section2012665982815)
+- [应用使用typeNode自由节点（不添加到布局）实现画中画功能](#section7627141117162)
+- [应用使用router导航时通过typeNode实现画中画功能](#section1236517470234)
+- [应用使用Navigation导航时通过typeNode实现画中画功能](#section173761626124613)
+- [应用使用单界面Ability时通过typeNode实现画中画功能](#section8907336134011)
+
+说明从API version 12开始，支持使用typeNode实现画中画功能开发。在API version 20之前，支持在Phone、Tablet设备使用typeNode实现画中画功能开发；从API version 20开始，支持在Phone、PC/2in1、Tablet设备使用typeNode实现画中画功能开发。  该方式适用于任意场景下应用接入画中画功能，以下根据实际开发场景提供四个示例，分别介绍对应场景下画中画功能的实现步骤：
+
+ [应用使用typeNode自由节点（不添加到布局）实现画中画功能](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/pipwindow-typenode#section7627141117162)。[应用使用router导航时通过typeNode实现画中画功能](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/pipwindow-typenode#section1236517470234)。[应用使用Navigation导航时通过typeNode实现画中画功能](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/pipwindow-typenode#section173761626124613)。[应用使用单界面Ability时通过typeNode实现画中画功能](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/pipwindow-typenode#section8907336134011)。 本文以视频播放为例，介绍通过typeNode实现画中画功能的基本开发步骤。
+
+ 示例中的视频播放器简易实现参考：
+
+ 收起自动换行深色代码主题复制
+```
+// model/AVPlayer.ets// 简易播放器实现import { BusinessError } from '@kit.BasicServicesKit';import { common } from '@kit.AbilityKit';import { media } from '@kit.MediaKit';
+export class AVPlayer {  private avPlayer?: media.AVPlayer;  surfaceID: string = '';    setAVPlayerCallback() {    this.avPlayer?.on('seekDone', (seekDoneTime: number) => {      console.info(`AVPlayer seek succeeded, seek time is ${seekDoneTime}`);    })    this.avPlayer?.on('stateChange', async (state, reason) => {      if (!this.avPlayer) {        return;      }      switch (state) {        case 'idle':          this.avPlayer.release();          break;        case 'initialized':          this.avPlayer.surfaceId = this.surfaceID;          this.avPlayer.prepare().then(() => {            console.info('AVPlayer prepare succeeded.');          }, (err: BusinessError) => {            console.error(`Invoke prepare failed, code is ${err.code}, message is ${err.message}`);          });          break;        case 'prepared':          this.avPlayer.play();          break;        case 'stopped':          this.avPlayer.reset();          break;        default:          break;      }    })  }
+  async avPlayerFdSrc() {        try {      this.avPlayer = await media.createAVPlayer();    } catch(err) {      console.error(`create AVPlayer failed`);    };    this.setAVPlayerCallback();    let uiContext = AppStorage.get('UIContext') as UIContext;    let context = uiContext.getHostContext() as common.UIAbilityContext;    let fileDescriptor = await context.resourceManager.getRawFd('xxx.mp4');        if (this.avPlayer) {      this.avPlayer.fdSrc = fileDescriptor;    }  }}
+```
+ 
+## 约束与限制
+构造PiPConfiguration参数时，建议传入contentWidth和contentHeight参数用以计算画中画初始比例，否则系统将以16:9的比例呈现画中画窗口。contentNode支持XComponentType.SURFACE类型，且创建typeNode时必须指定为"XComponent"类型。  
+## 应用使用typeNode自由节点（不添加到布局）实现画中画功能
+创建画中画控制器，注册生命周期事件以及控制事件回调。
+
+通过主窗口UIContext创建typeNode节点。通过create(config: PiPConfiguration, contentNode: typeNode.XComponent)接口创建画中画控制器实例。通过画中画控制器实例的setAutoStartEnabled接口设置是否需要在应用返回桌面时自动启动画中画。通过画中画控制器实例的on('stateChange')接口注册生命周期事件回调。通过画中画控制器实例的on('controlEvent')接口注册控制事件回调。 
+
+启动画中画。
+
+创建画中画控制器实例后，通过startPiP接口启动画中画。
+
+更新媒体源尺寸信息。
+
+画中画媒体源更新后（如切换视频），通过画中画控制器实例的updateContentSize接口更新媒体源尺寸信息，以调整画中画窗口比例。
+
+关闭画中画。
+
+当不再需要显示画中画时，可根据业务需要，通过画中画控制器实例的stopPiP接口关闭画中画。
+
+收起自动换行深色代码主题复制
+```
+// EntryAbility.etsimport { UIAbility } from '@kit.AbilityKit';import { window } from '@kit.ArkUI';import { PipManager } from '../model/PipManager';
+export default class EntryAbility extends UIAbility {  onWindowStageCreate(windowStage: window.WindowStage): void {    windowStage.loadContent('pages/Index', (err) => {      // ...    });    windowStage.getMainWindow().then((window) => {      let ctx = window.getUIContext();      AppStorage.setOrCreate('UIContext', ctx);      // 通过主窗口UIContext创建typeNode节点      PipManager.getInstance().makeTypeNode(ctx);    })  }}
+```
+  收起自动换行深色代码主题复制
+```
+// Index.ets// 该页面用于展示应用布局文件，创建的typeNode节点不会添加到该布局中import { PipManager } from '../model/PipManager';
+const TAG = 'Index'@Entry@Componentstruct Index {  build() {    Column() {      Text('This is MainPage')        .fontSize(30)        .fontWeight(FontWeight.Bold)        .margin({ bottom: 20 })
+      Text('This is not typeNode')        .size({ width: '100%', height: '800px' })        .fontSize(30)        .textAlign(TextAlign.Center)        .fontWeight(FontWeight.Bold)        .backgroundColor('#4d5b5858')
+      Row({ space: 20 }) {        Button('startPip') // 启动画中画          .onClick(() => {            PipManager.getInstance().startPip();          })
+        Button('stopPip') // 停止画中画          .onClick(() => {            PipManager.getInstance().stopPip();          })
+        Button('updateSize') // 更新视频尺寸          .onClick(() => {            PipManager.getInstance().updateContentSize(900, 1600);          })      }      .backgroundColor('#4da99797')      .size({ width: '100%', height: 60 })      .justifyContent(FlexAlign.SpaceAround)    }    .justifyContent(FlexAlign.Center)    .width('100%')    .height('100%')  }
+  aboutToDisappear(): void {    PipManager.getInstance().unregisterPipStateChangeListener(); // 解注册画中画生命周期及状态回调  }
+  onPageShow(): void {    console.info(TAG, 'onPageShow')    PipManager.getInstance().init(this.getUIContext().getHostContext() as Context); // 创建画中画控制器    PipManager.getInstance().setAutoStart(true); // 设置应用退后台时自动启动画中画  }
+  onPageHide(): void {    console.info(TAG, 'onPageHide')    PipManager.getInstance().setAutoStart(false);  }}
+```
+ 收起自动换行深色代码主题复制
+```
+// model/PipManager.ets// 画中画控制器单例import { PiPWindow, typeNode } from '@kit.ArkUI'; // 引入PiPWindow模块import { BusinessError } from '@kit.BasicServicesKit';import { AVPlayer} from '../model/AVPlayer'
+// 自定义XComponentControllerclass CustomXComponentController extends XComponentController {  // 监听onSurfaceCreated，并将surfaceId设置给播放器  onSurfaceCreated(surfaceId: string): void {    console.log(TAG, `onSurfaceCreated surfaceId: ${surfaceId}`);    if (PipManager.getInstance().player.surfaceID === surfaceId) {      return;    }    PipManager.getInstance().player.surfaceID = surfaceId;    PipManager.getInstance().player.avPlayerFdSrc();  }
+  onSurfaceDestroyed(surfaceId: string): void {    console.log(TAG, `onSurfaceDestroyed surfaceId: ${surfaceId}`);  }}
+const TAG = 'PipManager';
+export class PipManager {  player: AVPlayer;  private static instance: PipManager = new PipManager();  private pipController?: PiPWindow.PiPController = undefined;  private mXComponentController: XComponentController;  private xComponent: typeNode.XComponent| null = null; // typeNode节点
+  public static getInstance(): PipManager {    return PipManager.instance;  }
+  constructor() {    this.player = new AVPlayer();    this.mXComponentController = new CustomXComponentController();  }
+  onActionEvent(control: PiPWindow.ControlEventParam) {    switch (control.controlType) {      case PiPWindow.PiPControlType.VIDEO_PLAY_PAUSE:        if (control.status === PiPWindow.PiPControlStatus.PAUSE) {          //停止视频        } else if (control.status === PiPWindow.PiPControlStatus.PLAY) {          //播放视频        }        break;      case PiPWindow.PiPControlType.VIDEO_NEXT:        // 切换到下一个视频        break;      case PiPWindow.PiPControlType.VIDEO_PREVIOUS:        // 切换到上一个视频        break;      case PiPWindow.PiPControlType.FAST_FORWARD:        // 视频进度快进        break;      case PiPWindow.PiPControlType.FAST_BACKWARD:        // 视频进度后退        break;      default:        break;    }    console.info('onActionEvent, controlType:' + control.controlType + ', status' + control.status);  }
+  // 监听画中画生命周期  onStateChange(state: PiPWindow.PiPState, reason: string) {    let curState: string = '';    switch (state) {      case PiPWindow.PiPState.ABOUT_TO_START:        curState = "ABOUT_TO_START";        break;      case PiPWindow.PiPState.STARTED:        curState = "STARTED";        break;      case PiPWindow.PiPState.ABOUT_TO_STOP:        curState = "ABOUT_TO_STOP";        break;      case PiPWindow.PiPState.STOPPED:        curState = "STOPPED";        break;      case PiPWindow.PiPState.ABOUT_TO_RESTORE:        curState = "ABOUT_TO_RESTORE";        break;      case PiPWindow.PiPState.ERROR:        curState = "ERROR";        break;      default:        break;    }    console.info(`[${TAG}] onStateChange: ${curState}, reason: ${reason}`);  }
+  // 解注册监听  unregisterPipStateChangeListener() {    console.info(TAG, 'aboutToDisappear');    this.pipController?.off('stateChange');    this.pipController?.off('controlEvent');  }
+  getXComponentController(): CustomXComponentController {    return this.mXComponentController;  }
+  // 步骤1：创建画中画控制器，注册生命周期事件以及控制事件回调  init(ctx: Context) {    if (this.pipController !== null && this.pipController != undefined) {      return;    }    console.info(TAG, 'onPageShow');    if (!PiPWindow.isPiPEnabled()) {      console.error(TAG, `picture in picture disabled for current OS`);      return;    }
+    let config: PiPWindow.PiPConfiguration = {      context: ctx,      componentController: this.getXComponentController(),      templateType: PiPWindow.PiPTemplateType.VIDEO_PLAY,      contentWidth: 1920, // 使用typeNode启动画中画时，contentWidth需设置为大于0的值，否则将设置为16:9默认比例      contentHeight: 1080, // 使用typeNode启动画中画时，contentHeight需设置为大于0的值，否则将设置为16:9默认比例    };    // 通过create接口创建画中画控制器实例        PiPWindow.create(config, this.xComponent).then((controller: PiPWindow.PiPController) => {      this.pipController = controller;      // 通过画中画控制器实例的setAutoStartEnabled接口设置是否需要在应用返回桌面时自动启动画中画      this.pipController.setAutoStartEnabled(true);      // 通过画中画控制器实例的on('stateChange')接口注册生命周期事件回调      this.pipController.on('stateChange', (state: PiPWindow.PiPState, reason: string) => {        this.onStateChange(state, reason);      });      // 通过画中画控制器实例的on('controlEvent')接口注册控制事件回调      this.pipController.on('controlEvent', (control: PiPWindow.ControlEventParam) => {        this.onActionEvent(control);      });    }).catch((err: BusinessError) => {      console.error(TAG, `Failed to create pip controller. Cause:${err.code}, message:${err.message}`);    });  }
+  // 步骤2：创建画中画控制器实例后，通过startPiP接口启动画中画  startPip() {    this.pipController?.startPiP().then(() => {      console.info(TAG, `Succeeded in starting pip.`);    }).catch((err: BusinessError) => {      console.error(TAG, `Failed to start pip. Cause:${err.code}, message:${err.message}`);    });  }
+  // 步骤3：更新媒体源尺寸信息  updateContentSize(width: number, height: number) {    if (this.pipController) {      this.pipController.updateContentSize(width, height);    }  }
+  // 步骤4：关闭画中画  stopPip() {    if (this.pipController === null || this.pipController === undefined) {      return;    }    let promise: Promise<void> = this.pipController.stopPiP();    promise.then(() => {      console.info(TAG, `Succeeded in stopping pip.`);    }).catch((err: BusinessError) => {      console.error(TAG, `Failed to stop pip. Cause:${err.code}, message:${err.message}`);    });  }
+  setAutoStart(autoStart: boolean): void {    this.pipController?.setAutoStartEnabled(autoStart);  }
+  // 创建typeNode节点  makeTypeNode(ctx: UIContext) {    if (this.xComponent === null || this.xComponent === undefined) {      // 创建typeNode      // let xc_options: XComponentOptions = {      //   type: XComponentType.TEXTURE, // 类型设置为TEXTURE      //   controller: PipManager.getInstance().getXComponentController(), // 设置XComponentController      // }      // this.xComponent = typeNode.createNode(ctx, "XComponent", xc_options);
+      // 创建XComponent类型的typeNode      this.xComponent = typeNode.createNode(ctx, "XComponent", {        type: XComponentType.SURFACE, // 类型设置为SURFACE        controller: PipManager.getInstance().getXComponentController(), // 设置XComponentController      });    }  }}
+```
+ 以上示例代码对应的示意图如下所示：
+
+## 应用使用router导航时通过typeNode实现画中画功能
+ 创建画中画控制器，注册生命周期事件以及控制事件回调。
+
+创建自定义NodeController，实现makeNode方法，在该方法中创建typeNode。通过create(config: PiPConfiguration, contentNode: typeNode.XComponent)接口创建画中画控制器实例。通过画中画控制器实例的setAutoStartEnabled接口设置是否需要在应用返回桌面时自动启动画中画。通过画中画控制器实例的on('stateChange')接口注册生命周期事件回调。通过画中画控制器实例的on('controlEvent')接口注册控制事件回调。 
+
+启动画中画。
+
+创建画中画控制器实例后，通过startPiP接口启动画中画，在画中画ABOUT_TO_START生命周期将typeNode节点从布局移除，并返回上级界面（可选）。如果启动画中画时返回了上级界面，需要在画中画ABOUT_TO_RESTORE（还原）时重新跳转到原界面。
+
+更新媒体源尺寸信息。
+
+画中画媒体源更新后（如切换视频），通过画中画控制器实例的updateContentSize接口更新媒体源尺寸信息，以调整画中画窗口比例。
+
+关闭画中画。
+
+当不再需要显示画中画时，可根据业务需要，通过画中画控制器实例的stopPiP接口关闭画中画，在画中画ABOUT_TO_STOP生命周期将typeNode节点重新添加到布局中。
+
+收起自动换行深色代码主题复制
+```
+// EntryAbility.etsimport { UIAbility } from '@kit.AbilityKit';import { window } from '@kit.ArkUI';
+export default class EntryAbility extends UIAbility {  onWindowStageCreate(windowStage: window.WindowStage): void {    windowStage.loadContent('pages/Index', (err) => {     // ...    });  }}
+```
+ 收起自动换行深色代码主题复制
+```
+// pages/Index.etsimport { PipManager } from '../model/PipManager';import { PiPWindow, router, Router } from '@kit.ArkUI'; // 引入PiPWindow模块
+const TAG = 'Index'@Entry@Componentstruct Index {  private page1: string = 'pages/Page1';  private pageRouter: Router | null = null;
+  // 画中画生命周期事件监听，用于页面及节点操作  private callback: Function = (state: PiPWindow.PiPState) => {    console.info(TAG, `pipStateChange: state ${state}`);    if (state === PiPWindow.PiPState.ABOUT_TO_START) {      // 返回到上级页面（可选）      this.pageRouter?.back();    } else if (state === PiPWindow.PiPState.ABOUT_TO_STOP) {      // 重新将typeNode节点添加到布局中，例如还原场景      PipManager.getInstance().addNode();    } else if (state === PiPWindow.PiPState.ABOUT_TO_RESTORE) {      // 如果在ABOUT_TO_START时返回了上级界面，需要还原时push到原界面      this.jumpNext();    }  };
+  aboutToAppear(): void {    this.pageRouter = this.getUIContext().getRouter();    PipManager.getInstance().registerLifecycleCallback(this.callback);  }
+  aboutToDisappear(): void {    PipManager.getInstance().unregisterPipStateChangeListener();    PipManager.getInstance().unRegisterLifecycleCallback(this.callback);  }
+  jumpNext(): void {    let topPage = this.pageRouter?.getState();    if (topPage !== undefined && (this.page1.toString() === topPage.path + topPage.name)) {      console.info(TAG, `page1 aready at top`)      return;    }    this.pageRouter?.pushUrl({      url: this.page1 // 目标url    }, router.RouterMode.Standard, (err) => {      if (err) {        console.error(TAG, `Invoke pushUrl failed, code is ${err.code}: ${err.message}`);        return;      }      console.info(TAG, 'Invoke pushUrl succeeded.');    });  }
+  build() {    Row() {      Column() {        Text('Main Page')          .fontSize(50)          .fontWeight(FontWeight.Bold)
+        Button('Jump Next')          .onClick(() => {            this.jumpNext();          })          .margin({ top: 16, bottom: 16 })      }      .width('100%')    }    .height('100%')  }}
+```
+ 收起自动换行深色代码主题复制
+```
+// pages/Page1.etsimport { PipManager } from '../model/PipManager';
+const TAG = 'Page1';
+@Entry@Componentexport struct Page1 {  build() {    Column() {      Text('This is Page1')        .fontSize(30)        .fontWeight(FontWeight.Bold)        .margin({bottom: 20})
+      // 将typeNode添加到页面布局中      NodeContainer(PipManager.getInstance().getNodeController())        .size({ width: '100%', height: '800px' })
+      Row({ space: 20 }) {        Button('startPip')// 启动画中画          .onClick(() => {            PipManager.getInstance().startPip();          })
+        Button('stopPip')// 停止画中画          .onClick(() => {            PipManager.getInstance().stopPip();          })
+        Button('updateSize')// 更新视频尺寸          .onClick(() => {            // 此处设置的宽高应为媒体内容宽高，需要通过媒体相关接口或回调获取            // 例如使用AVPlayer播放视频时，可通过videoSizeChange回调获取媒体源更新后的尺寸            PipManager.getInstance().updateContentSize(900, 1600);          })      }      .backgroundColor('#4da99797')      .size({ width: '100%', height: 60 })      .justifyContent(FlexAlign.SpaceAround)    }    .justifyContent(FlexAlign.Center)    .width('100%')    .height('100%')  }
+  onPageShow(): void {    console.info(TAG, 'onPageShow')    PipManager.getInstance().initPipController(this.getUIContext().getHostContext() as Context);    PipManager.getInstance().setAutoStart(true);  }
+  onPageHide(): void {    console.info(TAG, 'onPageHide')    PipManager.getInstance().setAutoStart(false);    PipManager.getInstance().removeNode();  }}
+```
+ 收起自动换行深色代码主题复制
+```
+// model/PipManager.etsimport { PiPWindow, typeNode } from '@kit.ArkUI'; // 引入PiPWindow模块import { BusinessError } from '@kit.BasicServicesKit';import { XCNodeController } from './XCNodeController';import { AVPlayer } from './AVPlayer';
+export class CustomXComponentController extends XComponentController {  onSurfaceCreated(surfaceId: string): void {    console.log(TAG, `onSurfaceCreated surfaceId: ${surfaceId}`);    if (PipManager.getInstance().player.surfaceID === surfaceId) {      return;    }    // 将surfaceId设置给媒体源    PipManager.getInstance().player.surfaceID = surfaceId;    PipManager.getInstance().player.avPlayerFdSrc();  }
+  onSurfaceDestroyed(surfaceId: string): void {    console.log(TAG, `onSurfaceDestroyed surfaceId: ${surfaceId}`);  }}
+const TAG = 'PipManager';
+export class PipManager {  private static instance: PipManager = new PipManager();  private pipController?: PiPWindow.PiPController = undefined;  private xcNodeController: XCNodeController;  private mXComponentController: XComponentController;  private lifeCycleCallback: Set<Function> = new Set();  player: AVPlayer;
+  public static getInstance(): PipManager {    return PipManager.instance;  }
+  constructor() {    this.xcNodeController = new XCNodeController();    this.player = new AVPlayer();    this.mXComponentController = new CustomXComponentController();  }
+  public registerLifecycleCallback(callBack: Function) {    this.lifeCycleCallback.add(callBack);  }
+  public unRegisterLifecycleCallback(callBack: Function): void {    this.lifeCycleCallback.delete(callBack);  }
+  getNode(): typeNode.XComponent | null {    return this.xcNodeController.getNode();  }
+  onActionEvent(control: PiPWindow.ControlEventParam) {    switch (control.controlType) {      case PiPWindow.PiPControlType.VIDEO_PLAY_PAUSE:        if (control.status === PiPWindow.PiPControlStatus.PAUSE) {          //停止视频        } else if (control.status === PiPWindow.PiPControlStatus.PLAY) {          //播放视频        }        break;      case PiPWindow.PiPControlType.VIDEO_NEXT:        // 切换到下一个视频        break;      case PiPWindow.PiPControlType.VIDEO_PREVIOUS:        // 切换到上一个视频        break;      case PiPWindow.PiPControlType.FAST_FORWARD:        // 视频进度快进        break;      case PiPWindow.PiPControlType.FAST_BACKWARD:        // 视频进度后退        break;      default:        break;    }    console.info('onActionEvent, controlType:' + control.controlType + ', status' + control.status);  }
+  onStateChange(state: PiPWindow.PiPState, reason: string) {    let curState: string = '';    this.xcNodeController.setCanAddNode(      state === PiPWindow.PiPState.ABOUT_TO_STOP || state === PiPWindow.PiPState.STOPPED)    if (this.lifeCycleCallback !== null) {      this.lifeCycleCallback.forEach((fun) => {        fun(state)      });    }    switch (state) {      case PiPWindow.PiPState.ABOUT_TO_START:        curState = "ABOUT_TO_START";        // 将typeNode节点从布局移除        this.xcNodeController.removeNode();        break;      case PiPWindow.PiPState.STARTED:        curState = "STARTED";        break;      case PiPWindow.PiPState.ABOUT_TO_STOP:        curState = "ABOUT_TO_STOP";        break;      case PiPWindow.PiPState.STOPPED:        curState = "STOPPED";        break;      case PiPWindow.PiPState.ABOUT_TO_RESTORE:        curState = "ABOUT_TO_RESTORE";        break;      case PiPWindow.PiPState.ERROR:        curState = "ERROR";        break;      default:        break;    }    console.info(`[${TAG}] onStateChange: ${curState}, reason: ${reason}`);  }
+  unregisterPipStateChangeListener() {    console.info(`${TAG} aboutToDisappear`)    this.pipController?.off('stateChange');    this.pipController?.off('controlEvent');  }
+  getXComponentController(): CustomXComponentController {    return this.mXComponentController;  }
+  // 步骤1：创建画中画控制器，注册生命周期事件以及控制事件回调  initPipController(ctx: Context) {    if (this.pipController !== null && this.pipController != undefined) {      return;    }    console.info(`${TAG} onPageShow`)    if (!PiPWindow.isPiPEnabled()) {      console.error(TAG, `picture in picture disabled for current OS`);      return;    }    let config: PiPWindow.PiPConfiguration = {      context: ctx,      componentController: this.getXComponentController(),      templateType: PiPWindow.PiPTemplateType.VIDEO_PLAY,      contentWidth: 1920, // 使用typeNode启动画中画时，contentWidth需设置为大于0的值，否则创建画中画失败      contentHeight: 1080, // 使用typeNode启动画中画时，contentHeight需设置为大于0的值，否则创建画中画失败    };    // 通过create接口创建画中画控制器实例        PiPWindow.create(config, this.xComponent).then((controller: PiPWindow.PiPController) => {      this.pipController = controller;      // 通过画中画控制器实例的setAutoStartEnabled接口设置是否需要在应用返回桌面时自动启动画中画      this.pipController.setAutoStartEnabled(true)      // 通过画中画控制器实例的on('stateChange')接口注册生命周期事件回调      this.pipController.on('stateChange', (state: PiPWindow.PiPState, reason: string) => {        this.onStateChange(state, reason);      });      // 通过画中画控制器实例的on('controlEvent')接口注册控制事件回调      this.pipController.on('controlEvent', (control: PiPWindow.ControlEventParam) => {        this.onActionEvent(control);      });    }).catch((err: BusinessError) => {      console.error(TAG, `Failed to create pip controller. Cause:${err.code}, message:${err.message}`);    });  }
+  // 步骤2：启动画中画  startPip() {    this.pipController?.startPiP().then(() => {      console.info(TAG, `Succeeded in starting pip.`);    }).catch((err: BusinessError) => {      console.error(TAG, `Failed to start pip. Cause:${err.code}, message:${err.message}`);    });  }
+  // 步骤3：更新媒体源尺寸信息  updateContentSize(width: number, height: number) {    if (this.pipController) {      this.pipController.updateContentSize(width, height);    }  }
+  // 步骤4：关闭画中画  stopPip() {    if (this.pipController) {      let promise: Promise<void> = this.pipController.stopPiP();      promise.then(() => {        console.info(TAG, `Succeeded in stopping pip.`);      }).catch((err: BusinessError) => {        console.error(TAG, `Failed to stop pip. Cause:${err.code}, message:${err.message}`);      });    }  }
+  getNodeController(): XCNodeController {    console.info(TAG, `getNodeController.`);    return this.xcNodeController;  }
+  setAutoStart(autoStart: boolean): void {    this.pipController?.setAutoStartEnabled(autoStart);  }
+  removeNode(): void {    this.xcNodeController.removeNode();  }
+  addNode(): void {    this.xcNodeController.addNode();  }}
+```
+ 收起自动换行深色代码主题复制
+```
+// model/XCNodeController.etsimport { FrameNode, NodeController, typeNode } from '@kit.ArkUI';import { PipManager } from './PipManager';
+const TAG = 'XCNodeController';// 创建自定义NodeControllerexport class XCNodeController extends NodeController {  xComponent: typeNode.XComponent | null = null;  private node: FrameNode | null = null;  private canAddNode: boolean = true;
+  // 设置是否可以添加节点  setCanAddNode(canAddNode: boolean) {    this.canAddNode = canAddNode;  }
+  // 实现makeNode方法，当自定义NodeController被添加到布局时，该方法会被调用  makeNode(context: UIContext): FrameNode | null {    this.node = new FrameNode(context);    this.node.commonAttribute    if (this.xComponent === null || this.xComponent === undefined) {      // 创建typeNode      // let xc_options: XComponentOptions = {      //   type: XComponentType.TEXTURE, // 类型设置为TEXTURE      //   controller: PipManager.getInstance().getXComponentController(), // 设置XComponentController      // }      // this.xComponent = typeNode.createNode(context, "XComponent", xc_options);
+      // 创建XComponent类型的typeNode      this.xComponent = typeNode.createNode(context, "XComponent", {        type: XComponentType.SURFACE, // 类型设置为SURFACE        controller: PipManager.getInstance().getXComponentController(), // 设置XComponentController      });    }    if (this.canAddNode) {            try {        this.xComponent.getParent()?.removeChild(this.xComponent);      } catch (error) {        console.error(TAG, 'Failed to removeChild');      }      try {        this.node.appendChild(this.xComponent);      } catch (error) {        console.error(TAG, 'Failed to appendChild');      }    }    return this.node;  }
+  // 重新添加typeNode节点  addNode() {    if (this.node !== null && this.node !== undefined) {      console.info(TAG, "addNode");            try {        this.node.appendChild(this.xComponent);      } catch (error) {        console.error(TAG, 'Failed to appendChild');      }    }  }
+  // 移除typeNode节点  removeNode() {    if (this.node !== null && this.node !== undefined) {      console.info(TAG, "removeNode");            try {        this.node.removeChild(this.xComponent);      } catch (error) {        console.error(TAG, 'Failed to removeChild');      }    }  }
+  getNode(): typeNode.XComponent | null {    console.info(TAG, "getNode is null:"+ (this.xComponent === null || this.xComponent === undefined))    return this.xComponent;  }}
+```
+ 以上示例代码对应的示意图如下所示：
+
+## 应用使用Navigation导航时通过typeNode实现画中画功能
+创建画中画控制器，注册生命周期事件以及控制事件回调。
+
+创建自定义NodeController，实现makeNode方法，在该方法中创建typeNode。通过create(config: PiPConfiguration, contentNode: typeNode.XComponent)接口创建画中画控制器实例。通过画中画控制器实例的setAutoStartEnabled接口设置是否需要在应用返回桌面时自动启动画中画。通过画中画控制器实例的on('stateChange')接口注册生命周期事件回调。通过画中画控制器实例的on('controlEvent')接口注册控制事件回调。 
+
+启动画中画。
+
+创建画中画控制器实例后，通过startPiP接口启动画中画，在画中画ABOUT_TO_START生命周期将typeNode节点从布局移除，并返回上级界面（可选）。如果启动画中画时返回了上级界面，需要在画中画ABOUT_TO_RESTORE（还原）时重新跳转到原界面。
+
+更新媒体源尺寸信息。
+
+画中画媒体源更新后（如切换视频），通过画中画控制器实例的updateContentSize接口更新媒体源尺寸信息，以调整画中画窗口比例。
+
+关闭画中画。
+
+当不再需要显示画中画时，可根据业务需要，通过画中画控制器实例的stopPiP接口关闭画中画，在画中画ABOUT_TO_STOP生命周期将typeNode节点重新添加到布局中。
+
+收起自动换行深色代码主题复制
+```
+// EntryAbility.etsimport { UIAbility } from '@kit.AbilityKit';import { window } from '@kit.ArkUI';
+export default class EntryAbility extends UIAbility {  onWindowStageCreate(windowStage: window.WindowStage): void {    windowStage.loadContent('pages/Index', (err) => {      // ...    });  }}
+```
+ 收起自动换行深色代码主题复制
+```
+// pages/Index.etsimport { PipManager } from '../model/PipManager';import { Page1 } from "../pages/Page1"import { PiPWindow } from '@kit.ArkUI';
+const TAG = 'Index1';
+@Entry@Componentstruct Index {  @Provide('pageInfos') pageInfos: NavPathStack = new NavPathStack();  // 画中画生命周期事件监听，用于页面及节点操作  private callback: Function = (state: PiPWindow.PiPState) => {    console.info(TAG, `pipStateChange: state ${state}`);    if (state === PiPWindow.PiPState.ABOUT_TO_START) {      // 返回到上级页面（可选）      this.pageInfos.pop();    } else if (state === PiPWindow.PiPState.ABOUT_TO_STOP) {      // 重新将typeNode节点添加到布局中，例如还原场景      PipManager.getInstance().addNode();    } else if (state === PiPWindow.PiPState.ABOUT_TO_RESTORE) {      // 如果在ABOUT_TO_START时返回了上级界面，需要还原时push到原界面      this.jumpNext();    }  };
+  jumpNext() {    if (this.pageInfos.getAllPathName()[0] === 'Page1') {      console.log(TAG, 'Page1 already at top');      return;    }    this.pageInfos.pushPath({ name: 'Page1' });  }
+  aboutToAppear(): void {    PipManager.getInstance().registerLifecycleCallback(this.callback);  }
+  aboutToDisappear(): void {    PipManager.getInstance().unregisterPipStateChangeListener();    PipManager.getInstance().unRegisterLifecycleCallback(this.callback);  }
+  @Builder  PageMap(name: string) {    if (name === 'Page1') {      Page1();    }  }
+  build() {    Navigation(this.pageInfos) {      Column() {        Text("This is Main Page")        Column()          .height('200px')        Row({ space: 12 }) {          Button("Jump Page1")            .width('80%')            .height(40)            .margin(20)            .onClick(() => {              this.jumpNext();            })        }      }      .height("100%")      .width("100%")      .justifyContent(FlexAlign.Center)      .backgroundColor("#DCDCDC")    }.title('MainTitle')    .navDestination(this.PageMap)  }}
+```
+ 收起自动换行深色代码主题复制
+```
+// pages/Page1.etsimport { PipManager } from '../model/PipManager';
+const TAG = 'Page1';
+@Entry@Componentexport struct Page1 {  build() {    NavDestination() {      Column() {        Text('This is Page1')          .fontSize(30)          .fontWeight(FontWeight.Bold)          .margin({bottom: 20})
+        // 将typeNode添加到页面布局中        NodeContainer(PipManager.getInstance().getNodeController())          .size({ width: '100%', height: '800px' })
+        Row({ space: 20 }) {          Button('startPip') // 启动画中画            .onClick(() => {              PipManager.getInstance().startPip();            })          Button('stopPip') // 停止画中画            .onClick(() => {              PipManager.getInstance().stopPip();            })          Button('updateSize') // 更新视频尺寸            .onClick(() => {              // 此处设置的宽高应为媒体内容宽高，需要通过媒体相关接口或回调获取              // 例如使用AVPlayer播放视频时，可通过videoSizeChange回调获取媒体源更新后的尺寸              PipManager.getInstance().updateContentSize(900, 1600);            })        }        .backgroundColor('#4da99797')        .size({ width: '100%', height: 60 })        .justifyContent(FlexAlign.SpaceAround)      }      .justifyContent(FlexAlign.Center)      .width('100%')      .height('100%')    }    .title('page1')    .onShown(()=>{      console.info(TAG, 'onShown')      PipManager.getInstance().init(this.getUIContext().getHostContext() as Context);      PipManager.getInstance().setAutoStart(true);    })    .onHidden(()=>{      console.info(TAG, 'onHidden')      PipManager.getInstance().setAutoStart(false);      PipManager.getInstance().removeNode();    })  }}
+```
+ 收起自动换行深色代码主题复制
+```
+// model/XCNodeController.etsimport { FrameNode, NodeController, typeNode } from '@kit.ArkUI';import { PipManager } from './PipManager';
+const TAG = 'XCNodeController';
+// 创建自定义NodeControllerexport class XCNodeController extends NodeController {  xComponent: typeNode.XComponent| null = null;  private node: FrameNode | null = null;  private canAddNode: boolean = true;
+  // 设置是否可以添加节点  setCanAddNode(canAddNode: boolean) {    this.canAddNode = canAddNode;  }
+  // 实现makeNode方法，当自定义NodeController被添加到布局时，该方法会被调用  makeNode(context: UIContext): FrameNode | null {    console.info(TAG, "makeNode");    this.node = new FrameNode(context);    if (this.xComponent === null || this.xComponent === undefined) {      // 创建typeNode      // let xc_options: XComponentOptions = {      //   type: XComponentType.TEXTURE, // 类型设置为TEXTURE      //   controller: PipManager.getInstance().getXComponentController(), // 设置XComponentController      // }      // this.xComponent = typeNode.createNode(context, "XComponent", xc_options);
+      // 创建XComponent类型的typeNode      this.xComponent = typeNode.createNode(context, "XComponent", {        type: XComponentType.SURFACE, // 类型设置为SURFACE        controller: PipManager.getInstance().getXComponentController(), // 设置XComponentController      });    }    if (this.canAddNode) {            try {        this.xComponent.getParent()?.removeChild(this.xComponent);      } catch (error) {        console.error(TAG, 'Failed to removeChild');      }      try {        this.node.appendChild(this.xComponent);      } catch (error) {        console.error(TAG, 'Failed to appendChild');      }    }    return this.node;  }
+  // 重新添加typeNode节点  addNode() {    if (this.node !== null && this.node !== undefined) {      console.info(TAG, "addNode id:"+(this.node?.getUniqueId())+" "+this.xComponent?.getUniqueId());      try {        this.node.appendChild(this.xComponent);      } catch (error) {        console.error(TAG, 'Failed to appendChild');      }    }  }
+  // 移除typeNode节点  removeNode() {    if (this.node !== null && this.node !== undefined) {      console.info(TAG, "removeNode");            try {        this.node.removeChild(this.xComponent);      } catch (error) {        console.error(TAG, 'Failed to removeChild');      }    }  }
+  getNode(): typeNode.XComponent | null {    console.info(TAG, "getNode is null:"+ (this.xComponent === null || this.xComponent === undefined))    return this.xComponent;  }}
+```
+ 收起自动换行深色代码主题复制
+```
+// model/PipManager.etsimport { PiPWindow, typeNode } from '@kit.ArkUI';import { BusinessError } from '@kit.BasicServicesKit';import { XCNodeController } from './XCNodeController';import { AVPlayer } from './AVPlayer'
+export class CustomXComponentController extends XComponentController {  onSurfaceCreated(surfaceId: string): void {    console.log(TAG, `onSurfaceCreated surfaceId: ${surfaceId}`);    if (PipManager.getInstance().player.surfaceID === surfaceId) {      return;    }    // 将surfaceId设置给媒体源    PipManager.getInstance().player.surfaceID = surfaceId;    PipManager.getInstance().player.avPlayerFdSrc();  }
+  onSurfaceDestroyed(surfaceId: string): void {    console.log(TAG, `onSurfaceDestroyed surfaceId: ${surfaceId}`);  }}
+const TAG = 'PipManager';
+export class PipManager {  private static instance: PipManager = new PipManager();  private pipController?: PiPWindow.PiPController = undefined;  private xcNodeController: XCNodeController;  private mXComponentController: XComponentController;  private lifeCycleCallback: Set<Function> = new Set();  player: AVPlayer;
+  public static getInstance(): PipManager {    return PipManager.instance;  }
+  constructor() {    this.xcNodeController = new XCNodeController();    this.player = new AVPlayer();    this.mXComponentController = new CustomXComponentController();  }
+  public registerLifecycleCallback(callBack: Function) {    this.lifeCycleCallback.add(callBack);  }
+  public unRegisterLifecycleCallback(callBack: Function): void {    this.lifeCycleCallback.delete(callBack);  }
+  getNode(): typeNode.XComponent | null {    return this.xcNodeController.getNode();  }
+  onActionEvent(control: PiPWindow.ControlEventParam) {    switch (control.controlType) {      case PiPWindow.PiPControlType.VIDEO_PLAY_PAUSE:        if (control.status === PiPWindow.PiPControlStatus.PAUSE) {          //停止视频        } else if (control.status === PiPWindow.PiPControlStatus.PLAY) {          //播放视频        }        break;      case PiPWindow.PiPControlType.VIDEO_NEXT:        // 切换到下一个视频        break;      case PiPWindow.PiPControlType.VIDEO_PREVIOUS:        // 切换到上一个视频        break;      case PiPWindow.PiPControlType.FAST_FORWARD:        // 视频进度快进        break;      case PiPWindow.PiPControlType.FAST_BACKWARD:        // 视频进度后退        break;      default:        break;    }    console.info('onActionEvent, controlType:' + control.controlType + ', status' + control.status);  }
+  onStateChange(state: PiPWindow.PiPState, reason: string) {    let curState: string = '';    this.xcNodeController.setCanAddNode(      state === PiPWindow.PiPState.ABOUT_TO_STOP || state === PiPWindow.PiPState.STOPPED)    if (this.lifeCycleCallback !== null) {      this.lifeCycleCallback.forEach((fun) => {        fun(state);      });    }    switch (state) {      case PiPWindow.PiPState.ABOUT_TO_START:        curState = "ABOUT_TO_START";        // 将typeNode节点从布局移除        this.xcNodeController.removeNode();        break;      case PiPWindow.PiPState.STARTED:        curState = "STARTED";        break;      case PiPWindow.PiPState.ABOUT_TO_STOP:        curState = "ABOUT_TO_STOP";        break;      case PiPWindow.PiPState.STOPPED:        curState = "STOPPED";        break;      case PiPWindow.PiPState.ABOUT_TO_RESTORE:        curState = "ABOUT_TO_RESTORE";        break;      case PiPWindow.PiPState.ERROR:        curState = "ERROR";        break;      default:        break;    }    console.info(`[${TAG}] onStateChange: ${curState}, reason: ${reason}`);  }
+  unregisterPipStateChangeListener() {    console.info(`${TAG} aboutToDisappear`);    this.pipController?.off('stateChange');    this.pipController?.off('controlEvent');  }
+  getXComponentController(): CustomXComponentController {    return this.mXComponentController;  }
+  // 步骤1：创建画中画控制器，注册生命周期事件以及控制事件回调  init(ctx: Context) {    if (this.pipController !== null && this.pipController != undefined) {      return;    }    console.info(`${TAG} onPageShow`)    if (!PiPWindow.isPiPEnabled()) {      console.error(TAG, `picture in picture disabled for current OS`);      return;    }
+    let config: PiPWindow.PiPConfiguration = {      context: ctx,      componentController: this.getXComponentController(),      templateType: PiPWindow.PiPTemplateType.VIDEO_PLAY,      contentWidth: 1920, // 使用typeNode启动画中画时，contentWidth需设置为大于0的值，否则创建画中画失败      contentHeight: 1080, // 使用typeNode启动画中画时，contentHeight需设置为大于0的值，否则创建画中画失败    };    // 通过create接口创建画中画控制器实例        PiPWindow.create(config, this.xcNodeController.getNode()).then((controller: PiPWindow.PiPController) => {      this.pipController = controller;      // 通过画中画控制器实例的setAutoStartEnabled接口设置是否需要在应用返回桌面时自动启动画中画      this.pipController?.setAutoStartEnabled(true);      // 通过画中画控制器实例的on('stateChange')接口注册生命周期事件回调      this.pipController.on('stateChange', (state: PiPWindow.PiPState, reason: string) => {        this.onStateChange(state, reason);      });      // 通过画中画控制器实例的on('controlEvent')接口注册控制事件回调      this.pipController.on('controlEvent', (control: PiPWindow.ControlEventParam) => {        this.onActionEvent(control);      });    }).catch((err: BusinessError) => {      console.error(TAG, `Failed to create pip controller. Cause:${err.code}, message:${err.message}`);    });  }
+  // 步骤2：启动画中画  startPip() {    this.pipController?.startPiP().then(() => {      console.info(TAG, `Succeeded in starting pip.`);    }).catch((err: BusinessError) => {      console.error(TAG, `Failed to start pip. Cause:${err.code}, message:${err.message}`);    });  }
+  // 步骤3：更新媒体源尺寸信息  updateContentSize(width: number, height: number) {    if (this.pipController) {      this.pipController.updateContentSize(width, height);    }  }
+  // 步骤4：关闭画中画  stopPip() {    if (this.pipController === null || this.pipController === undefined) {      return;    }    let promise: Promise<void> = this.pipController.stopPiP();    promise.then(() => {      console.info(TAG, `Succeeded in stopping pip.`);    }).catch((err: BusinessError) => {      console.error(TAG, `Failed to stop pip. Cause:${err.code}, message:${err.message}`);    });  }
+  getNodeController(): XCNodeController {    console.info(TAG, `getNodeController.`);    return this.xcNodeController;  }
+  setAutoStart(autoStart: boolean): void {    this.pipController?.setAutoStartEnabled(autoStart);  }
+  removeNode() {    this.xcNodeController.removeNode();  }
+  addNode(): void {    this.xcNodeController.addNode();  }}
+```
+ 以上示例代码对应的示意图如下所示：
+
+## 应用使用单界面Ability时通过typeNode实现画中画功能
+创建画中画控制器，注册生命周期事件以及控制事件回调。
+
+创建自定义NodeController，实现makeNode方法，在该方法中创建typeNode。通过create(config: PiPConfiguration, contentNode: typeNode.XComponent)接口创建画中画控制器实例。通过画中画控制器实例的setAutoStartEnabled接口设置是否需要在应用返回桌面时自动启动画中画。通过画中画控制器实例的on('stateChange')接口注册生命周期事件回调。通过画中画控制器实例的on('controlEvent')接口注册控制事件回调。 
+
+启动画中画。
+
+创建画中画控制器实例后，通过startPiP接口启动画中画，在画中画ABOUT_TO_START生命周期将typeNode节点从布局移除。
+
+更新媒体源尺寸信息。
+
+画中画媒体源更新后（如切换视频），通过画中画控制器实例的updateContentSize接口更新媒体源尺寸信息，以调整画中画窗口比例。
+
+关闭画中画。
+
+当不再需要显示画中画时，可根据业务需要，通过画中画控制器实例的stopPiP接口关闭画中画，在画中画ABOUT_TO_STOP生命周期将typeNode节点重新添加到布局中。
+
+收起自动换行深色代码主题复制
+```
+// EntryAbility.etsimport { UIAbility } from '@kit.AbilityKit';import { window } from '@kit.ArkUI';
+export default class EntryAbility extends UIAbility {  onWindowStageCreate(windowStage: window.WindowStage): void {    windowStage.loadContent('pages/Index', (err) => {      // ...    });  }}
+```
+ 收起自动换行深色代码主题复制
+```
+// pages/Index.etsimport { PipManager } from '../model/PipManager';import { PiPWindow } from '@kit.ArkUI'; // 引入PiPWindow模块
+const TAG = 'Index'@Entry@Componentstruct Index {  private callback: Function = (state: PiPWindow.PiPState) => {    if (state === PiPWindow.PiPState.ABOUT_TO_STOP) {      // 画中画关闭或还原时触发ABOUT_TO_STOP生命周期，此时需要重新添加节点      PipManager.getInstance().addNode();    }  };
+  build() {    Column() {      Text('This is MainPage')        .fontSize(30)        .fontWeight(FontWeight.Bold)        .margin({ bottom: 20 })
+      // 将typeNode添加到页面布局中      NodeContainer(PipManager.getInstance().getNodeController())        .size({ width: '100%', height: '800px' })
+      Row({ space: 20 }) {        Button('startPip') // 启动画中画          .onClick(() => {            PipManager.getInstance().startPip();          })
+        Button('stopPip') // 停止画中画          .onClick(() => {            PipManager.getInstance().stopPip();          })
+        Button('updateSize') // 更新视频尺寸          .onClick(() => {            // 此处设置的宽高应为媒体内容宽高，需要通过媒体相关接口或回调获取            // 例如使用AVPlayer播放视频时，可通过videoSizeChange回调获取媒体源更新后的尺寸            PipManager.getInstance().updateContentSize(900, 1600);          })      }      .backgroundColor('#4da99797')      .size({ width: '100%', height: 60 })      .justifyContent(FlexAlign.SpaceAround)    }    .justifyContent(FlexAlign.Center)    .width('100%')    .height('100%')  }
+  aboutToAppear(): void {    PipManager.getInstance().registerLifecycleCallback(this.callback);  }
+  aboutToDisappear(): void {    PipManager.getInstance().unregisterPipStateChangeListener();    PipManager.getInstance().unRegisterLifecycleCallback(this.callback);  }
+  onPageShow(): void {    console.info(TAG, 'onPageShow')    PipManager.getInstance().init(this.getUIContext().getHostContext() as Context);    PipManager.getInstance().setAutoStart(true);  }
+  onPageHide(): void {    console.info(TAG, 'onPageHide')    PipManager.getInstance().setAutoStart(false);  }}
+```
+ 收起自动换行深色代码主题复制
+```
+// model/XCNodeController.etsimport { FrameNode, NodeController, typeNode } from '@kit.ArkUI';import { PipManager } from './PipManager';
+const TAG = 'XCNodeController';
+// 创建自定义NodeControllerexport class XCNodeController extends NodeController {  xComponent: typeNode.XComponent | null = null;  private node: FrameNode | null = null;  private canAddNode: boolean = true;
+  // 设置是否可以添加节点  setCanAddNode(canAddNode: boolean) {    this.canAddNode = canAddNode;  }
+  // 实现makeNode方法，当自定义NodeController被添加到布局时，该方法会被调用  makeNode(context: UIContext): FrameNode | null {    this.node = new FrameNode(context);    this.node.commonAttribute    if (this.xComponent === null || this.xComponent === undefined) {      // 创建typeNode      // let xc_options: XComponentOptions = {      //   type: XComponentType.TEXTURE, // 类型设置为TEXTURE      //   controller: PipManager.getInstance().getXComponentController(), // 设置XComponentController      // }      // this.xComponent = typeNode.createNode(context, "XComponent", xc_options);
+      // 创建XComponent类型的typeNode      this.xComponent = typeNode.createNode(context, "XComponent", {        type: XComponentType.SURFACE, // 类型设置为SURFACE        controller: PipManager.getInstance().getXComponentController(), // 设置XComponentController      });    }    if (this.canAddNode) {            try {        this.xComponent.getParent()?.removeChild(this.xComponent);      } catch (error) {        console.error(TAG, 'Failed to removeChild');      }      try {        this.node.appendChild(this.xComponent);      } catch (error) {        console.error(TAG, 'Failed to appendChild');      }    }    return this.node;  }
+  // 重新添加typeNode节点  addNode() {    if (this.node !== null && this.node !== undefined) {      console.info(TAG, "addNode");            try {        this.node.appendChild(this.xComponent);      } catch (error) {        console.error(TAG, 'Failed to appendChild');      }    }  }
+  // 移除typeNode节点  removeNode() {    if (this.node !== null && this.node !== undefined) {      console.info(TAG, "removeNode");            try {        this.node.removeChild(this.xComponent);      } catch (error) {        console.error(TAG, 'Failed to removeChild');      }    }  }
+  getNode(): typeNode.XComponent | null {    console.info(TAG, "getNode is null: "+ (this.xComponent === null || this.xComponent === undefined));    return this.xComponent;  }}
+```
+ 收起自动换行深色代码主题复制
+```
+// model/PipManager.etsimport { PiPWindow, typeNode } from '@kit.ArkUI'; // 引入PiPWindow模块import { BusinessError } from '@kit.BasicServicesKit';import { XCNodeController } from './XCNodeController';import { AVPlayer} from '../model/AVPlayer'
+// 自定义XComponentControllerexport class CustomXComponentController extends XComponentController {  onSurfaceCreated(surfaceId: string): void {    console.log(TAG, `onSurfaceCreated surfaceId: ${surfaceId}`);    if (PipManager.getInstance().player.surfaceID === surfaceId) {      return;    }    PipManager.getInstance().player.surfaceID = surfaceId;    PipManager.getInstance().player.avPlayerFdSrc();  }
+  onSurfaceDestroyed(surfaceId: string): void {    console.log(TAG, `onSurfaceDestroyed surfaceId: ${surfaceId}`);  }}
+const TAG = 'PipManager';
+export class PipManager {  private static instance: PipManager = new PipManager();  private pipController?: PiPWindow.PiPController = undefined;  private xcNodeController: XCNodeController;  private mXComponentController: XComponentController;  private lifeCycleCallback: Set<Function> = new Set();  player: AVPlayer;
+  public static getInstance(): PipManager {    return PipManager.instance;  }
+  constructor() {    this.xcNodeController = new XCNodeController();    this.player = new AVPlayer();    this.mXComponentController = new CustomXComponentController();  }
+  public registerLifecycleCallback(callBack: Function) {    this.lifeCycleCallback.add(callBack);  }
+  public unRegisterLifecycleCallback(callBack: Function): void {    this.lifeCycleCallback.delete(callBack);  }
+  getNode(): typeNode.XComponent | null {    return this.xcNodeController.getNode();  }
+  onActionEvent(control: PiPWindow.ControlEventParam) {    switch (control.controlType) {      case PiPWindow.PiPControlType.VIDEO_PLAY_PAUSE:        if (control.status === PiPWindow.PiPControlStatus.PAUSE) {          //停止视频        } else if (control.status === PiPWindow.PiPControlStatus.PLAY) {          //播放视频        }        break;      case PiPWindow.PiPControlType.VIDEO_NEXT:        // 切换到下一个视频        break;      case PiPWindow.PiPControlType.VIDEO_PREVIOUS:        // 切换到上一个视频        break;      case PiPWindow.PiPControlType.FAST_FORWARD:        // 视频进度快进        break;      case PiPWindow.PiPControlType.FAST_BACKWARD:        // 视频进度后退        break;      default:        break;    }    console.info('onActionEvent, controlType:' + control.controlType + ', status' + control.status);  }
+  onStateChange(state: PiPWindow.PiPState, reason: string) {    let curState: string = '';    this.xcNodeController.setCanAddNode(      state === PiPWindow.PiPState.ABOUT_TO_STOP || state === PiPWindow.PiPState.STOPPED);    if (this.lifeCycleCallback !== null) {      this.lifeCycleCallback.forEach((fun) => {        fun(state);      });    }    switch (state) {      case PiPWindow.PiPState.ABOUT_TO_START:        curState = "ABOUT_TO_START";        // 将typeNode节点从布局移除        this.xcNodeController.removeNode();        break;      case PiPWindow.PiPState.STARTED:        curState = "STARTED";        break;      case PiPWindow.PiPState.ABOUT_TO_STOP:        curState = "ABOUT_TO_STOP";        break;      case PiPWindow.PiPState.STOPPED:        curState = "STOPPED";        break;      case PiPWindow.PiPState.ABOUT_TO_RESTORE:        curState = "ABOUT_TO_RESTORE";        break;      case PiPWindow.PiPState.ERROR:        curState = "ERROR";        break;      default:        break;    }    console.info(`[${TAG}] onStateChange: ${curState}, reason: ${reason}`);  }
+  unregisterPipStateChangeListener() {    console.info(`${TAG} aboutToDisappear`);    this.pipController?.off('stateChange');    this.pipController?.off('controlEvent');  }
+  getXComponentController(): CustomXComponentController {    return this.mXComponentController;  }
+  // 步骤1：创建画中画控制器，注册生命周期事件以及控制事件回调  init(ctx: Context) {    if (this.pipController !== null && this.pipController != undefined) {      return;    }    console.info(`${TAG} onPageShow`)    if (!PiPWindow.isPiPEnabled()) {      console.error(TAG, `picture in picture disabled for current OS`);      return;    }    let config: PiPWindow.PiPConfiguration = {      context: ctx,      componentController: this.getXComponentController(),      templateType: PiPWindow.PiPTemplateType.VIDEO_PLAY,      contentWidth: 1920, // 使用typeNode启动画中画时，contentWidth需设置为大于0的值，否则创建画中画失败      contentHeight: 1080, // 使用typeNode启动画中画时，contentHeight需设置为大于0的值，否则创建画中画失败    };    // 通过create接口创建画中画控制器实例        PiPWindow.create(config, this.xcNodeController.getNode()).then((controller: PiPWindow.PiPController) => {      this.pipController = controller;      // 通过画中画控制器实例的setAutoStartEnabled接口设置是否需要在应用返回桌面时自动启动画中画      this.pipController?.setAutoStartEnabled(true);      // 通过画中画控制器实例的on('stateChange')接口注册生命周期事件回调      this.pipController.on('stateChange', (state: PiPWindow.PiPState, reason: string) => {        this.onStateChange(state, reason);      });      // 通过画中画控制器实例的on('controlEvent')接口注册控制事件回调      this.pipController.on('controlEvent', (control: PiPWindow.ControlEventParam) => {        this.onActionEvent(control);      });    }).catch((err: BusinessError) => {      console.error(TAG, `Failed to create pip controller. Cause:${err.code}, message:${err.message}`);    });  }
+  // 步骤2：启动画中画  startPip() {    this.pipController?.startPiP().then(() => {      console.info(TAG, `Succeeded in starting pip.`);    }).catch((err: BusinessError) => {      console.error(TAG, `Failed to start pip. Cause:${err.code}, message:${err.message}`);    });  }
+  // 步骤3：更新媒体源尺寸信息  updateContentSize(width: number, height: number) {    if (this.pipController) {      this.pipController.updateContentSize(width, height);    }  }
+  // 步骤4：关闭画中画  stopPip() {    if (this.pipController === null || this.pipController === undefined) {      return;    }    let promise: Promise<void> = this.pipController.stopPiP();    promise.then(() => {      console.info(TAG, `Succeeded in stopping pip.`);    }).catch((err: BusinessError) => {      console.error(TAG, `Failed to stop pip. Cause:${err.code}, message:${err.message}`);    });  }
+  getNodeController(): XCNodeController {    console.info(TAG, `getNodeController.`);    return this.xcNodeController;  }
+  setAutoStart(autoStart: boolean): void {    this.pipController?.setAutoStartEnabled(autoStart);  }
+  // 将typeNode节点添加到原父节点  addNode(): void {    this.xcNodeController.addNode();  }}
+```
+ 以上示例代码对应的示意图如下所示：

@@ -1,0 +1,46 @@
+# [GetValue](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getvalue)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119257009_section96955mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119257009_section96962mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119257009_section96972mcpsimp)
+- [返回值](#zh-cn_topic_0000002119257009_section96995mcpsimp)
+- [异常处理](#zh-cn_topic_0000002119257009_section97018mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119257009_section97021mcpsimp)
+
+## 函数功能
+获取属性key-value键值对中的value值，并将value值从T类型转换为DT类型。
+
+ - 支持将INT类型转换为int64_t类型。
+- 支持将FLOAT类型转换为float类型。
+- 支持将STR类型转换为std::string类型。
+
+ 
+## 函数原型
+注意数据类型为string的接口后续版本会废弃，建议使用数据类型为非string的接口。
+
+ 收起自动换行深色代码主题复制
+```
+templategraphStatus GetValue(DT &val) constgraphStatus GetValue(AscendString &val);
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| val | 输出 | DT类型的参数。 |
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| graphStatus | 数据类型转换成功，返回GRAPH_SUCCESS， 否则，返回GRAPH_FAILED。 |
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

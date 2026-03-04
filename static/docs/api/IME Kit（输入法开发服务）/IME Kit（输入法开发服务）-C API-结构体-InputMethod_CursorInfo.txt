@@ -1,0 +1,18 @@
+# [InputMethod_CursorInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-inputmethod-inputmethod-cursorinfo)
+
+## 目录
+- [概述](#概述)
+
+收起自动换行深色代码主题复制
+```
+typedef struct InputMethod_CursorInfo InputMethod_CursorInfo
+```
+ 
+## 概述
+PhonePC/2in1TabletTVWearable光标信息。光标的坐标位置、宽度和高度。
+
+ **起始版本：** 12
+
+ **相关模块：** [InputMethod](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-inputmethod)
+
+ **所在头文件：** [inputmethod_cursor_info_capi.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-inputmethod-cursor-info-capi-h)

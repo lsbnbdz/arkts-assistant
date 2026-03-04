@@ -1,0 +1,10 @@
+# [多设备界面开发](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-device-page)
+
+- **[多设备窗口形态](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-device-window)**
+ - **[布局概述](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-device-layout-overview)**
+ - **[界面布局响应式变化](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-device-responsive)**
+ - **[界面元素自适应变化](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-device-adaptive)**
+ - **[特殊界面布局场景](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-device-hardware)**
+ - **[多设备交互](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-device-interaction)**
+ - **[多设备资源文件](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-device-resource)**
+ - **[多设备界面开发案例](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-device-ui-development)**

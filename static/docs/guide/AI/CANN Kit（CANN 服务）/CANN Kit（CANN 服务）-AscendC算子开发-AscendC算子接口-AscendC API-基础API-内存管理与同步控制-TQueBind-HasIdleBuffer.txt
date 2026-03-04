@@ -1,0 +1,45 @@
+# [HasIdleBuffer](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-hasidlebuffer)
+
+## 目录
+- [功能说明](#zh-cn_topic_0000002092001544_section28134mcpsimp)
+- [函数原型](#zh-cn_topic_0000002092001544_section28137mcpsimp)
+- [参数说明](#zh-cn_topic_0000002092001544_section28140mcpsimp)
+- [支持的型号](#zh-cn_topic_0000002092001544_section28143mcpsimp)
+- [注意事项](#zh-cn_topic_0000002092001544_section28151mcpsimp)
+- [返回值](#zh-cn_topic_0000002092001544_section28154mcpsimp)
+- [调用示例](#zh-cn_topic_0000002092001544_section28159mcpsimp)
+
+## 功能说明
+查询队列中是否有空闲的内存块。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+__aicore__ inline bool HasIdleBuffer()
+```
+ 
+## 参数说明
+无
+
+ 
+## 支持的型号
+Kirin9020系列处理器
+
+ KirinX90系列处理器
+
+ 
+## 注意事项
+无
+
+ 
+## 返回值
+- true：表示Queue中存在空闲内存。
+- false：表示Queue中不存在空闲内存。
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+// 当前Queue中已经分配了4块内存 AscendC::TPipe pipe; AscendC::TQueBind que; int num = 4; int len = 1024; pipe.InitBuffer(que, num, len); bool ret = que.HasIdleBuffer(); // 没有AllocTensor的操作，返回值为true AscendC::LocalTensor tensor1 = que.AllocTensor(); ret = que.HasIdleBuffer(); // AllocTensor了一块内存，返回值为true AscendC::LocalTensor tensor2 = que.AllocTensor(); AscendC::LocalTensor tensor3 = que.AllocTensor(); AscendC::LocalTensor tensor4 = que.AllocTensor(); ret = que.HasIdleBuffer(); // AllocTensor了四块内存，当前无空闲内存，返回值为false，继续AllocTensor会报错
+```

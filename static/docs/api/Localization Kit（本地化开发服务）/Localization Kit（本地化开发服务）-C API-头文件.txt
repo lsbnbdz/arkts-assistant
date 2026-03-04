@@ -1,0 +1,9 @@
+# [头文件](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/localization-headerfile)
+
+- **[ohresmgr.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-ohresmgr-h)**
+ - **[raw_dir.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-raw-dir-h)**
+ - **[raw_file.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-raw-file-h)**
+ - **[raw_file_manager.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-raw-file-manager-h)**
+ - **[resmgr_common.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-resmgr-common-h)**
+ - **[timezone.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-timezone-h)**
+ - **[errorcode.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-errorcode-h)**

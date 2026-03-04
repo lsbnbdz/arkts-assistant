@@ -1,0 +1,78 @@
+## 目录
+- [接口说明](#section97455586338)
+- [查询应用公私钥对是否存在](#section16550423152920)
+- [创建应用公私钥对](#section9498174318455)
+- [对应用公钥进行证明](#section0457204074616)
+- [使用应用私钥对业务请求进行签名](#section13117165144720)
+
+## 接口说明
+接口能力由[Universal Keystore Kit](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/huks-overview)提供，涉及的功能指导请参考：
+
+ [Universal Keystore Kit概述](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/huks-overview)[查询密钥是否存在(ArkTS)](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/huks-check-key-arkts)[查询密钥是否存在(C/C++)](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/huks-check-key-ndk)[生成密钥(ArkTS)](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/huks-key-generation-arkts)[生成密钥(C/C++)](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/huks-key-generation-ndk)[匿名密钥证明(ArkTS)](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/huks-key-anon-attestation-arkts)[匿名密钥证明(C/C++)](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/huks-key-anon-attestation-ndk)[签名/验签(ArkTS)](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/huks-signing-signature-verification-arkts)[签名/验签(C/C++)](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/huks-signing-signature-verification-ndk)  
+## 查询应用公私钥对是否存在
+查询用于设备真实性证明的应用公私钥对是否存在，如果应用公私钥对已存在，则不需要重复创建应用公私钥对。
+
+ 样例代码：
+
+ 收起自动换行深色代码主题复制
+```
+import { huks } from '@kit.UniversalKeystoreKit';
+let keyAlias = 'serviceKey';  //业务密钥别名let isKeyExist: Boolean; let huksOptions: huks.HuksOptions = {  properties: []}try {  huks.hasKeyItem(keyAlias, huksOptions, (error, data) => {    if (error) {      console.error(`callback: hasKeyItem failed, ` + JSON.stringify(error));    } else {      if (data !== null && data.valueOf() !== null) {        isKeyExist = data.valueOf();        console.info(`callback: hasKeyItem success, isKeyExist = ${isKeyExist}`);      }    }  });} catch (error) {  console.error(`callback: hasKeyItem input arg invalid, ` + JSON.stringify(error));}
+```
+  
+## 创建应用公私钥对
+创建一个用于证明设备真实性和应用身份的非对称算法密钥对，称为应用公私钥对（包含应用公钥和应用私钥），比如RSA、EC算法的密钥对。通过Universal Keystore Kit场景的密钥对基于硬件的安全环境进行生成和安全存储。
+
+ 安全建议：对于有用户登录的应用场景，为了提高安全性，建议为终端设备中登录的每个用户生成不同的密钥对，并在应用服务器绑定用户与应用公钥之间的关系。
+
+ 样例代码：
+
+ 收起自动换行深色代码主题复制
+```
+import { huks } from '@kit.UniversalKeystoreKit';import { BusinessError } from '@kit.BasicServicesKit';
+let keyAlias = 'serviceKey'; //业务密钥别名
+function GetGenerateProperties() {  let properties: Array<huks.HuksParam> = new Array();  let index = 0;  properties[index++] = {    tag: huks.HuksTag.HUKS_TAG_ALGORITHM,    value: huks.HuksKeyAlg.HUKS_ALG_ECC  };  properties[index++] = {    tag: huks.HuksTag.HUKS_TAG_KEY_SIZE,    value: huks.HuksKeySize.HUKS_AES_KEY_SIZE_256  };  properties[index++] = {    tag: huks.HuksTag.HUKS_TAG_PURPOSE,    value: huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_SIGN |    huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_VERIFY  };  properties[index++] = {    tag: huks.HuksTag.HUKS_TAG_DIGEST,    value: huks.HuksKeyDigest.HUKS_DIGEST_SHA256  }  return properties;}
+async function GenerateKey(keyAlias: string) {  let genProperties = GetGenerateProperties();  let options: huks.HuksOptions = {    properties: genProperties  }  await huks.generateKeyItem(keyAlias, options)    .then(() => {      console.info(`promise: generate Key success.`);    }).catch((err: BusinessError) => {      console.error(`promise: generate Key failed, error: ` + err.message);    })}
+
+```
+  
+## 对应用公钥进行证明
+应用调用Universal Keystore Kit接口对生成的应用公钥和调用的应用身份进行证明，Universal Keystore Kit会使用基于硬件的设备证书对应用公钥进行证明，证明公钥来自真实的设备。
+
+ Universal Keystore Kit返回密钥证明证书链，证书链采用X509标准格式。
+
+ 安全建议：为了在发送密钥证明证书链给应用服务器时能够防重放攻击，建议应用先从应用服务器获取一次性的挑战值Challenge。应用服务器采用安全随机数生成挑战值Challenge，并缓存到服务器中。
+
+ 样例代码：
+
+ 收起自动换行深色代码主题复制
+```
+import { huks } from '@kit.UniversalKeystoreKit';
+class HuksProperties {  tag: huks.HuksTag = huks.HuksTag.HUKS_TAG_ALGORITHM;  value: huks.HuksKeyAlg | huks.HuksKeySize | huks.HuksKeyPurpose | huks.HuksKeyDigest |  huks.HuksKeyStorageType | huks.HuksKeyPadding | huks.HuksKeyGenerateType |  huks.HuksCipherMode | Uint8Array = huks.HuksKeyAlg.HUKS_ALG_ECC;}
+let challenge = stringToUint8Array('challenge_data'); //从服务器获取的挑战字Challengelet keyAlias = 'serviceKey'; //业务密钥别名
+function stringToUint8Array(str: string): Uint8Array {  let arr: number[] = [];  for (let i = 0, j = str.length; i < j; ++i) {    arr.push(str.charCodeAt(i));  }  let tmpUint8Array = new Uint8Array(arr);  return tmpUint8Array;}
+async function anonAttestKey(): Promise<void> {  let aliasString = keyAlias;
+  let properties: HuksProperties[] = [    {      tag: huks.HuksTag.HUKS_TAG_ATTESTATION_CHALLENGE,      value: challenge    }  ];
+  let options: huks.HuksOptions = {    properties: properties  };
+  try {    let data = await huks.anonAttestKeyItem(aliasString, options);    //todo：把证书链信息（data变量）发送到云侧的服务器。如下示例代码把证书链打印到日志中，供调测使用，商用代码不需要打印。    console.info(`anonAttestKeyItem success`);    data.certChains?.forEach(cert => {      console.info(cert);    });  } catch (error) {    console.error(`promise: anonAttestKeyItem fail`);  }}
+```
+  
+## 使用应用私钥对业务请求进行签名
+在密钥证明流程处理成功后，应用在进行一些安全敏感的端云业务时，可以使用已证明的密钥对业务请求进行安全保护。
+
+ 应用可以调用Universal Keystore Kit接口使用应用私钥对业务请求数据（如HTTP请求的Body）进行签名，然后把签名数据添加到请求消息中（如HTTP的Header字段）。为了方便应用服务器查找应用公钥用于验签，可以在业务请求中携带应用公钥的密钥ID（如：通过对应用公钥计算Hash）。
+
+ 安全建议：为了在发送业务请求时能够防重放攻击，建议应用先从应用服务器获取一次性的挑战值Challenge。应用服务器采用安全随机数生成挑战值Challenge，并缓存到服务器中。
+
+ 样例代码：
+
+ 收起自动换行深色代码主题复制
+```
+import { huks } from '@kit.UniversalKeystoreKit';import { BusinessError } from '@kit.BasicServicesKit';import { util } from '@kit.ArkTS';
+let keyAlias = 'serviceKey'; //业务密钥别名let handle: number;let plaintext = '123456'; //待签名的明文数据，建议包含服务器端返回的Challengelet signature: Uint8Array; //存储签名结果数据的变量
+function StringToUint8Array(str: String) {  let arr: number[] = new Array();  for (let i = 0, j = str.length; i < j; ++i) {    arr.push(str.charCodeAt(i));  }  return new Uint8Array(arr);}
+function GetSignProperties() {  let properties: Array<huks.HuksParam> = new Array();  let index = 0;  properties[index++] = {    tag: huks.HuksTag.HUKS_TAG_ALGORITHM,    value: huks.HuksKeyAlg.HUKS_ALG_ECC  };  properties[index++] = {    tag: huks.HuksTag.HUKS_TAG_KEY_SIZE,    value: huks.HuksKeySize.HUKS_AES_KEY_SIZE_256  };  properties[index++] = {    tag: huks.HuksTag.HUKS_TAG_PURPOSE,    value: huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_SIGN  };  properties[index++] = {    tag: huks.HuksTag.HUKS_TAG_DIGEST,    value: huks.HuksKeyDigest.HUKS_DIGEST_SHA256  }  return properties;}
+async function Sign(keyAlias: string, plaintext: string) {  let signProperties = GetSignProperties();  let options: huks.HuksOptions = {    properties: signProperties,    inData: StringToUint8Array(plaintext)  }  await huks.initSession(keyAlias, options)    .then((data) => {      handle = data.handle;    }).catch((err: BusinessError) => {      console.error(`promise: init sign failed, error: ` + err.message);    })  await huks.finishSession(handle, options)    .then((data) => {      signature = data.outData as Uint8Array;
+      let base64 = new util.Base64Helper();      let signatureBase64 = base64.encodeToStringSync(signature);      //todo：把签名结果的Base64编码（signatureBase64变量）发送到云侧的服务器。如下示例代码把签名结果打印到日志中，供调测使用，商用代码不需要打印。      console.info(`sign success, result:` + signatureBase64);
+    }).catch((err: BusinessError) => {      console.error(`promise: sign failed, error: ` + err.message);    })}
+```

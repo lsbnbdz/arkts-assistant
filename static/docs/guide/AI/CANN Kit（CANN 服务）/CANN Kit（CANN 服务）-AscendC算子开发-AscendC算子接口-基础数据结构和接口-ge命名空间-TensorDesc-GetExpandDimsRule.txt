@@ -1,0 +1,40 @@
+# [GetExpandDimsRule](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getexpanddimsrule)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119177117_section104648mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119177117_section104651mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119177117_section104655mcpsimp)
+- [返回值](#zh-cn_topic_0000002119177117_section104678mcpsimp)
+- [异常处理](#zh-cn_topic_0000002119177117_section104701mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119177117_section104704mcpsimp)
+
+## 函数功能
+获取Tensor的补维规则。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+graphStatus GetExpandDimsRule(AscendString &expand_dims_rule) const;
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| expand_dims_rule | 引用输入 | 获取到的补维规则，作为出参。 |
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| graphStatus | 获取成功返回GRAPH_SUCCESS，否则，返回GRAPH_FAILED。 |
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

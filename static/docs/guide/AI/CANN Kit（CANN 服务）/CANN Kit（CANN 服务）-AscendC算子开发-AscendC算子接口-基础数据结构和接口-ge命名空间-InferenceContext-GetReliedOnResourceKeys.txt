@@ -1,0 +1,34 @@
+# [GetReliedOnResourceKeys](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getreliedonresourcekeys)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083616814_section97754mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083616814_section97758mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083616814_section97762mcpsimp)
+- [返回值](#zh-cn_topic_0000002083616814_section97765mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083616814_section97788mcpsimp)
+
+## 函数功能
+一般由框架调用。
+
+ 在结束读类型算子的推导后，可以调用该接口获取依赖的资源标识。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+const std::set& GetReliedOnResourceKeys() const
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| std::set | 依赖的资源标识集合。 |
+
+ 
+## 约束说明
+无

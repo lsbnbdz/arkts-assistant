@@ -1,0 +1,37 @@
+# [GetInstanceNum](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getinstancenum)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083617278_section87431mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083617278_section87434mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083617278_section87438mcpsimp)
+- [返回值](#zh-cn_topic_0000002083617278_section87441mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083617278_section87444mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083617278_section87447mcpsimp)
+
+## 函数功能
+获取IR定义某个输入对应的实际输入个数。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+uint32_t GetInstanceNum() const
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+IR定义某个输入对应的实际输入个数。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+AnchorInstanceInfo anchor_0(0, 10); // IR定义的第一个输入是动态输入，且有10个实际输入 auto input_num_0 = anchor_0.GetInstanceNum(); // input_num_0 = 10
+```

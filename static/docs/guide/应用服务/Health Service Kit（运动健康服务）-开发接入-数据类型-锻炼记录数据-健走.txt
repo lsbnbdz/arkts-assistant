@@ -1,0 +1,43 @@
+# [健走](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/health-walking)
+
+## 目录
+- [关联的统计数据说明](#section85891225145211)
+- [关联的详情数据说明](#section146931732105210)
+
+健走相关锻炼记录类型如下：
+
+ 展开
+| 锻炼记录子类型常量 | 描述 | 数据来源 |
+| --- | --- | --- |
+| exerciseSequenceHelper.walking.EXERCISE_TYPE | 户外步行 | 手机、手表、手环 |
+| exerciseSequenceHelper.indoorWalking.EXERCISE_TYPE | 室内步行 | 漫步机 |
+| exerciseSequenceHelper.hiking.EXERCISE_TYPE | 徒步/远足 | 手机、手表、手环 |
+
+ 
+## 关联的统计数据说明
+ - 字段定义：[exerciseSequenceHelper.walking.SummaryFields](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-exercisedequencehelper#section8498153134310)
+ 
+ 展开
+| 字段列表 | 描述 | 类型 | 可选/必选 |
+| --- | --- | --- | --- |
+| distance | 距离统计 | DistanceSummary | M |
+| calorie | 热量统计 | CalorieSummary | M |
+| speed | 速度统计 | SpeedSummary | M |
+| exerciseHeartRate | 运动心率统计 | ExerciseHeartRateSummary | O |
+| step | 步数统计 | StepSummary | O |
+| cadence | 步频统计 | CadenceSummary | O |
+| altitude | 海拔统计 | AltitudeSummary | O |
+| location | 位置统计 | LocationSummary | O |
+
+ 
+## 关联的详情数据说明
+ - 字段定义：[exerciseSequenceHelper.walking.DetailFields](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-exercisedequencehelper#section19498193114318)
+ 
+ 展开
+| 字段列表 | 描述 | 类型 | 可选/必选 |
+| --- | --- | --- | --- |
+| exerciseHeartRate | 运动心率详情 | ExerciseHeartRate[] | O |
+| speed | 速度详情 | Speed[] | O |
+| cadence | 步频详情 | Cadence[] | O |
+| location | 位置详情 | Location[] | O |
+| altitude | 海拔详情 | Altitude[] | O |

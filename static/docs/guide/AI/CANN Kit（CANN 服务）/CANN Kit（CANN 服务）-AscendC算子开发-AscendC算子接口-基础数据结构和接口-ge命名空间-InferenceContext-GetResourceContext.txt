@@ -1,0 +1,35 @@
+# [GetResourceContext](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getresourcecontext)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083616918_section97569mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083616918_section97572mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083616918_section97576mcpsimp)
+- [返回值](#zh-cn_topic_0000002083616918_section97599mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083616918_section97624mcpsimp)
+
+## 函数功能
+通过资源标识key来获取对应的资源上下文对象。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+ResourceContext *GetResourceContext(const ge::AscendString &key)
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| key | 输入 | 资源的唯一标识。由资源类算子InferShape函数指定。 |
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| ResourceContext * | 资源上下文对象。 基础定义如下，资源类算子可以基于此扩展。 收起自动换行深色代码主题复制 ``` struct ResourceContext { virtual ~ResourceContext() {}}; ``` 用于保存资源相关信息，如shape、datatype等。 |
+
+ 
+## 约束说明
+若使用[Create](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-create)接口创建InferenceContext时未传入resource context管理器指针，则该接口返回空指针，因此使用其返回值之前需要判空。

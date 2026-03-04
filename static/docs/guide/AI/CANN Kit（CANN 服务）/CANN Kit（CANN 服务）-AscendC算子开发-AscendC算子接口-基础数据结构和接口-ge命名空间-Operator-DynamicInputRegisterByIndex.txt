@@ -1,0 +1,39 @@
+# [DynamicInputRegisterByIndex](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-dynamicinputregisterbyindex)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119177021_section102249mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119177021_section102252mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119177021_section102256mcpsimp)
+- [返回值](#zh-cn_topic_0000002119177021_section102293mcpsimp)
+- [异常处理](#zh-cn_topic_0000002119177021_section102296mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119177021_section102299mcpsimp)
+
+## 函数功能
+指定位置进行算子动态输入注册。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+void DynamicInputRegisterByIndex(const char_t *name, const uint32_t num, size_t index);
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| name | 输入 | 算子的动态Input名。 |
+| num | 输入 | 添加的动态Input个数。 |
+| index | 输入 | 从index位置添加动态输入。 |
+
+ 
+## 返回值
+无
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

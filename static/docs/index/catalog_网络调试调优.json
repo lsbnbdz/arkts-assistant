@@ -1,0 +1,71 @@
+{
+  "doc-wsjvon": {
+    "title": "使用网络领航员进行网络模拟",
+    "headings": [
+      "使用网络领航员进行网络模拟",
+      "网络领航员功能简介",
+      "预置网络模拟使用简介",
+      "自定义网络模拟场景配置",
+      "网络优化建议",
+      "网络领航员代码优化建议",
+      "信息收集说明",
+      "附录"
+    ],
+    "preview": "使用网络领航员进行网络模拟 网络领航员功能简介 说明网络领航员功能从API version 20开始支持。 App上线之前需要优化和验证App在各种网络场景的体验，例如，App针对乘坐地铁时刷短视频进行优化后，卡顿情况是否有所改善，但需要在真实场景下验证。 网络领航员提供了网络模拟的能力，帮助开发者快速验证App在各种典型场景中的使用体验，提升App体验的测试验证效率，降低测试验证成本。例如，不需要真的乘坐高铁去验证高铁场景优化效果。 同时，网络领航员还提供这些网络场景下的数据传输优化建议，App接入华为Network Boost Kit，实现应用和OS跨层协同，提升应用的上网流畅度。",
+    "char_count": 11981,
+    "image_count": 0,
+    "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/network-navigator",
+    "path": "",
+    "rel_path": "guide/系统/网络/网络调试调优/网络调试调优-使用网络领航员进行网络模拟.txt",
+    "catalog": "网络调试调优",
+    "objectId": "doc-wsjvon",
+    "nodeName": "document",
+    "keywords": [
+      "App",
+      "Network",
+      "network",
+      "WLAN",
+      "网络领航",
+      "连接",
+      "此场景共",
+      "个阶段",
+      "总时长",
+      "分钟",
+      "循环执行",
+      "使用网络领航员进行网络模拟",
+      "Service",
+      "网络模拟",
+      "络模拟场",
+      "网络调试调优",
+      "网络"
+    ]
+  },
+  "doc-ywr50m": {
+    "title": "网络调试调优",
+    "headings": [
+      "网络调试调优"
+    ],
+    "preview": "网络调试调优 - **使用网络领航员进行网络模拟**",
+    "char_count": 200,
+    "image_count": 0,
+    "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/network-debug-optimize",
+    "path": "",
+    "rel_path": "guide/系统/网络/网络调试调优/网络调试调优.txt",
+    "catalog": "网络调试调优",
+    "objectId": "doc-ywr50m",
+    "nodeName": "document",
+    "keywords": [
+      "network",
+      "网络调试调优",
+      "网络调试",
+      "调优",
+      "使用网络",
+      "领航员进",
+      "行网络模",
+      "debug",
+      "optimize",
+      "navigator",
+      "网络"
+    ]
+  }
+}

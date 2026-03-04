@@ -1,0 +1,44 @@
+# [SetTilingKey](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-settilingkey)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119176729_section94938mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119176729_section94942mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119176729_section94946mcpsimp)
+- [返回值](#zh-cn_topic_0000002119176729_section94969mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119176729_section94974mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119176729_section94977mcpsimp)
+
+## 函数功能
+设置TilingKey。
+
+ 不同的kernel实现分支可以通过TilingKey来标识，host侧设置TilingKey后，可以选择对应的分支。例如，一个算子在不同的shape下，有不同的算法逻辑，kernel侧可以通过TilingKey来选择不同的算法逻辑，在host侧Tiling算法也有差异，host/kernel侧通过相同的TilingKey进行关联。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+ge::graphStatus SetTilingKey(const uint64_t tiling_key);
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| tiling_key | 输入 | 需要设置的tiling key。 |
+
+ 
+## 返回值
+成功时返回“ge::GRAPH_SUCCESS”。
+
+ 关于graphStatus定义，请参见[ge::graphStatus](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-gegraphstatus)。
+
+ 
+## 约束说明
+tiling_key的取值范围在uint64_t数据类型范围内，但不可以取值为UINT64_MAX。
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+ge::graphStatus Tiling4XXX(TilingContext* context) { auto ret = context->SetTilingKey(20); // ... }
+```

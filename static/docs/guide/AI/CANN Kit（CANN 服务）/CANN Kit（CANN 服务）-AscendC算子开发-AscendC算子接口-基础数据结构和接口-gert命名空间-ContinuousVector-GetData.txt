@@ -1,0 +1,37 @@
+# [GetData](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-continuousvector-getdata)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083776842_section89118mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083776842_section89121mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083776842_section89125mcpsimp)
+- [返回值](#zh-cn_topic_0000002083776842_section89128mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083776842_section89131mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083776842_section89134mcpsimp)
+
+## 函数功能
+获取首个元素的指针地址，[GetData(), reinterpret_cast<T *>(GetData()) + GetSize()) 中的数据即为当前容器中保存的数据。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+const void *GetData() const
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+首个元素的指针地址。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+size_t capacity = 100U; auto cv_holder = ContinuousVector::Create(capacity); auto cv = reinterpret_cast(cv_holder.get()); auto cap = cv->GetData(); 
+```

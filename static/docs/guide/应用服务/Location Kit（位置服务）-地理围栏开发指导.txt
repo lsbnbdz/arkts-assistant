@@ -1,0 +1,5 @@
+# [地理围栏开发指导](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/geofence-guidelines-index)
+
+- **[地理围栏简介](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/geofence-intro)**
+ - **[端侧GNSS围栏开发指导](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/geofence-guidelines)**
+ - **[云侧围栏开发指导](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/fenceextensionability)**

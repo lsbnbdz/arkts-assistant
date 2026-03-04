@@ -1,0 +1,12 @@
+# [摄像头被遮挡一段时间后再放开，输出的位姿有跳变](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arengine-faq-2)
+
+## 现象描述
+ 使用运动跟踪能力时，摄像头被遮挡一段时间后再放开遮挡，调用[HMS_AREngine_ARPose_GetPoseRaw](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arengine-capi-arengine#ga1ee66c006ffe8255cc04f2a24c277709)函数获取的平移分量或旋转分量存在较大跳变。
+
+ 
+## 可能原因
+ AR Engine通过摄像头采集数据感知当前设备在现实世界中的位姿，摄像头被遮挡后，AR Engine无法准确感知设备在现实世界的位姿变化，放开遮挡后，如果继续调用[HMS_AREngine_ARSession_Update](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arengine-capi-arengine#ga1d1cacf372a8011a439f0e4e76994259)，AR Engine会尝试基于遮挡前识别到的数据进行恢复，如果当前摄像头采集数据和遮挡前类似，就可能会导致错误匹配到旧的结果，从而产生数据跳变。
+
+ 
+## 处理步骤
+ 如果开发者通过[HMS_AREngine_ARCamera_GetTrackingState](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arengine-capi-arengine#ga2dc931eee56ae5ea899f8acc08eb3f36)函数获取的状态为ARENGINE_TRACKING_STATE_PAUSED，可以通过函数[HMS_AREngine_ARCamera_GetTrackingStateReason](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arengine-capi-arengine#gab5411813f2e4ac6de4ebbccfc1bbbd35)进一步获取暂停原因，如暂停原因是ARENGINE_TRACKING_STATE_REASON_INSUFFICIENT_FEATURES或ARENGINE_TRACKING_STATE_REASON_EXCESSIVE_MOTION，建议在您的应用中提示用户，并在恢复后（[HMS_AREngine_ARCamera_GetTrackingState](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arengine-capi-arengine#ga2dc931eee56ae5ea899f8acc08eb3f36)获取的状态为：ARENGINE_TRACKING_STATE_TRACKING时）重新做session初始化，见：[创建AR会话](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arengine-c-arsession#section416624191615)。

@@ -1,0 +1,48 @@
+# [CreateFollowing](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-createfollowing)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083617398_section93968mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083617398_section93971mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083617398_section93980mcpsimp)
+- [返回值](#zh-cn_topic_0000002083617398_section94058mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083617398_section94061mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083617398_section94064mcpsimp)
+
+## 函数功能
+创建一个指定数据类型以及大小的Tensor，其数据在Tensor对象后连续排布。
+
+ 
+## 函数原型
+- 传入元素个数和数据类型，创建Tensor收起自动换行深色代码主题复制 ``` static std::unique_ptr CreateFollowing(const int64_t shape_size, const ge::DataType dt, size_t &total_size) ```
+- 传入数据类型和Tensor长度，创建Tensor收起自动换行深色代码主题复制 ``` static std::unique_ptr CreateFollowing(const ge::DataType dt, const size_t tensor_size, size_t &total_size) ```
+
+ 
+## 参数说明
+ **表1**参数说明（传入元素个数和数据类型，创建Tensor）展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| shape_size | 输入 | 元素个数。 |
+| dt | 输入 | 数据类型，DataType类型。 |
+| total_size | 输出 | 创建出的Tensor在内存中的长度。包含Tensor对象的长度和Tensor数据的长度。 |
+
+ **表2**参数说明（传入数据类型和Tensor长度，创建Tensor）展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| dt | 输入 | 数据类型，DataType类型。 |
+| tensor_size | 输入 | Tensor数据的长度。单位为字节。 |
+| total_size | 输出 | 创建出的Tensor在内存中的长度。和tensor_size参数不同，total_size包含Tensor对象的长度和Tensor数据的长度。单位为字节。 |
+
+ 
+## 返回值
+创建的Tensor指针。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+size_t total_size; auto tensor_holder = Tensor::CreateFollowing(shape_size, tensor_desc.GetDataType(), total_size);
+```

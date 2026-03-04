@@ -1,0 +1,40 @@
+# [GetOriginShapeDim](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getoriginshapedim)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119256781_section106033mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119256781_section106036mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119256781_section106040mcpsimp)
+- [返回值](#zh-cn_topic_0000002119256781_section106063mcpsimp)
+- [异常处理](#zh-cn_topic_0000002119256781_section106086mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119256781_section106089mcpsimp)
+
+## 函数功能
+获取原始shape第idx维度。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+int64_t GetOriginShapeDim(const size_t idx) const;
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| idx | 输入 | 维度的索引，索引从0开始。 |
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| int64_t | 返回原始shape第idx位置的值。 |
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

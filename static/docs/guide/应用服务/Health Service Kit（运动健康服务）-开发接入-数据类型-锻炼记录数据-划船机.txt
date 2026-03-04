@@ -1,0 +1,80 @@
+# [划船机](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/health-rower)
+
+## 目录
+- [划船机](#section46694114228)
+  - [划船机相关锻炼记录类型如下：](#section15323275414)
+  - [划船机关联的统计数据说明](#section1862814595413)
+  - [划船机关联的明细数据说明](#section427295535410)
+- [赛艇](#section38261334182310)
+  - [赛艇相关锻炼记录类型如下：](#section2058561910245)
+  - [赛艇关联的统计数据说明](#section155853194244)
+  - [赛艇关联的明细数据说明](#section1058620197241)
+
+## 划船机
+ 
+### 划船机相关锻炼记录类型如下：
+ 展开
+| 锻炼记录子类型常量 | 描述 | 数据来源 |
+| --- | --- | --- |
+| exerciseSequenceHelper.rower.EXERCISE_TYPE | 划船机 | 划船机等专业设备 |
+
+ 
+### 划船机关联的统计数据说明
+ 字段定义：[exerciseSequenceHelper.rower.SummaryFields](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-exercisedequencehelper#section236214211914)
+
+ 展开
+| 字段列表 | 描述 | 类型 | 可选/必选 |
+| --- | --- | --- | --- |
+| rowerFeature | 划船机特征数据 | RowerFeature | M |
+| calorie | 热量统计 | CalorieSummary | M |
+| distance | 距离统计 | DistanceSummary | O |
+| speed | 速度统计 | SpeedSummary | O |
+| exerciseHeartRate | 运动心率统计 | ExerciseHeartRateSummary | O |
+| resistance | 阻力统计 | ResistanceSummary | O |
+| power | 功率统计 | PowerSummary | O |
+| strokeRate | 桨频统计 | StrokeRateSummary | O |
+
+ 
+### 划船机关联的明细数据说明
+ 字段定义：[exerciseSequenceHelper.rower.DetailFields](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-exercisedequencehelper#section1236362201910)
+
+ 展开
+| 字段列表 | 描述 | 类型 | 可选/必选 |
+| --- | --- | --- | --- |
+| exerciseHeartRate | 运动心率详情 | ExerciseHeartRate[] | O |
+| speed | 速度详情 | Speed[] | O |
+| power | 功率详情 | Power[] | O |
+| resistance | 阻力详情 | Resistance[] | O |
+| strokeRate | 桨频详情 | StrokeRate[] | O |
+
+ 
+## 赛艇
+ 
+### 赛艇相关锻炼记录类型如下：
+ 展开
+| 锻炼记录子类型常量 | 描述 | 数据来源 |
+| --- | --- | --- |
+| exerciseSequenceHelper.rowing.EXERCISE_TYPE | 赛艇 | 手环、手表 |
+
+ 
+### 赛艇关联的统计数据说明
+ 字段定义：[exerciseSequenceHelper.rowing.SummaryFields](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-exercisedequencehelper#section0163135162513)
+
+ 展开
+| 字段列表 | 描述 | 类型 | 可选/必选 |
+| --- | --- | --- | --- |
+| rowingFeature | 赛艇特征数据 | RowingFeature | M |
+| calorie | 热量统计 | CalorieSummary | M |
+| distance | 距离统计 | DistanceSummary | O |
+| exerciseHeartRate | 运动心率统计 | ExerciseHeartRateSummary | O |
+| strokeRate | 桨频统计 | StrokeRateSummary | O |
+
+ 
+### 赛艇关联的明细数据说明
+ 字段定义：[exerciseSequenceHelper.rowing.DetailFields](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-exercisedequencehelper#section4164193511258)
+
+ 展开
+| 字段列表 | 描述 | 类型 | 可选/必选 |
+| --- | --- | --- | --- |
+| exerciseHeartRate | 运动心率详情 | ExerciseHeartRate[] | O |
+| strokeRate | 桨频详情 | StrokeRate[] | O |

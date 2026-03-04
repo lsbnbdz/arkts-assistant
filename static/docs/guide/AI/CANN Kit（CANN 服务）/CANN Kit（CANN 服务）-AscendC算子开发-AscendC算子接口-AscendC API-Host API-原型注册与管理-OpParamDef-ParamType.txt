@@ -1,0 +1,32 @@
+# [ParamType](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-paramtype)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002089798282_section73899mcpsimp)
+- [函数原型](#zh-cn_topic_0000002089798282_section73902mcpsimp)
+- [参数说明](#zh-cn_topic_0000002089798282_section73906mcpsimp)
+- [返回值](#zh-cn_topic_0000002089798282_section73930mcpsimp)
+- [约束说明](#zh-cn_topic_0000002089798282_section73935mcpsimp)
+
+## 函数功能
+定义算子参数类型。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+OpParamDef &ParamType(Option param_type);
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| param_type | 输入 | 参数类型，Option取值为：OPTIONAL（可选）、REQUIRED（必选）。 |
+
+ 
+## 返回值
+[OpParamDef](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-opparamdef)算子定义。
+
+ 
+## 约束说明
+无

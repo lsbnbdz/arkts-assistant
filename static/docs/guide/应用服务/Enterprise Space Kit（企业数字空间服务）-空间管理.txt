@@ -1,0 +1,19 @@
+# [空间管理](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/enterprisespace-spacemanager-guide)
+
+- **[创建工作空间](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/enterprisespace-create-workspace)**
+ - **[使能工作空间](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/enterprisespace-enable-workspace)**
+ - **[查询工作空间](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/enterprisespace-query-workspace)**
+ - **[移除工作空间](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/enterprisespace-remove-workspace)**
+ - **[设置工作空间信息](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/enterprisespace-set-workspace-info)**
+ - **[设置工作空间资料照片](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/enterprisespace-set-workspace-profile-photo)**
+ - **[订阅空间事件](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/enterprisespace-subscribe-event)**
+ - **[取消订阅空间事件](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/enterprisespace-unsubscribe-event)**
+ - **[设置系统服务进程不可访问后台用户数据的功能](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/enterprisespace-set-restrict-access-bg-userdata)**
+ - **[获取系统服务进程不可访问的后台用户数据状态](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/enterprisespace-get-restricted-access-status)**
+ - **[获取不可访问后台用户数据的系统服务进程列表](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/enterprisespace-get-restricted-access-process-list)**
+ - **[新增系统服务进程不可访问后台用户数据路径列表](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/enterprisespace-add-restricted-access-process-list)**
+ - **[删除系统服务进程不可访问后台用户数据路径列表](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/enterprisespace-del-restricted-access-process-list)**
+ - **[设置工作空间策略](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/enterprisespace-set-workspace-policy)**
+ - **[查询工作空间策略](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/enterprisespace-get-workspace-policy)**
+ - **[设置深度冻结豁免名单](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/enterprisespace-set-lockdown-exemption-apps)**
+ - **[查询深度冻结豁免名单](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/enterprisespace-get-lockdown-exemption-apps)**

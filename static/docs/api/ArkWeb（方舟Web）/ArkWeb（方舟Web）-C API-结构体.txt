@@ -1,0 +1,25 @@
+# [结构体](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkweb-struct)
+
+- **[ArkWeb_AnyNativeAPI](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-anynativeapi)**
+ - **[ArkWeb_BlanklessInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-blanklessinfo)**
+ - **[ArkWeb_SchemeHandler_](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-schemehandler)**
+ - **[ArkWeb_ResourceHandler_](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-resourcehandler)**
+ - **[ArkWeb_Response_](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-response)**
+ - **[ArkWeb_ResourceRequest_](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-resourcerequest)**
+ - **[ArkWeb_RequestHeaderList_](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-requestheaderlist)**
+ - **[ArkWeb_HttpBodyStream_](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-httpbodystream)**
+ - **[ArkWeb_JavaScriptBridgeData](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-javascriptbridgedata)**
+ - **[ArkWeb_WebMessage*](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-webmessage8h)**
+ - **[ArkWeb_JavaScriptValue*](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-javascriptvalue8h)**
+ - **[ArkWeb_WebMessagePort*](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-webmessageport8h)**
+ - **[ArkWeb_JavaScriptObject](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-javascriptobject)**
+ - **[ArkWeb_ProxyMethod](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-proxymethod)**
+ - **[ArkWeb_ProxyMethodWithResult](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-proxymethodwithresult)**
+ - **[ArkWeb_ProxyObject](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-proxyobject)**
+ - **[ArkWeb_ProxyObjectWithResult](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-proxyobjectwithresult)**
+ - **[ArkWeb_ControllerAPI](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-controllerapi)**
+ - **[ArkWeb_ComponentAPI](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-componentapi)**
+ - **[ArkWeb_WebMessagePortAPI](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-webmessageportapi)**
+ - **[ArkWeb_WebMessageAPI](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-webmessageapi)**
+ - **[ArkWeb_CookieManagerAPI](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-cookiemanagerapi)**
+ - **[ArkWeb_JavaScriptValueAPI](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-javascriptvalueapi)**

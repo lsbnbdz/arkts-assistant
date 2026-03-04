@@ -1,0 +1,40 @@
+# [SetExpandDimsType](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tensor-setexpanddimstype)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119256609_section94377mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119256609_section94380mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119256609_section94384mcpsimp)
+- [返回值](#zh-cn_topic_0000002119256609_section94409mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119256609_section94412mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119256609_section94415mcpsimp)
+
+## 函数功能
+设置shape的补维规则。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+void SetExpandDimsType(const ExpandDimsType &expand_dims_type)
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| expand_dims_type | 输入 | 需要设置的补维规则。 关于ExpandDimsType类型的定义，可参见ExpandDimsType。 |
+
+ 
+## 返回值
+无
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+Tensor tensor{{{8, 3, 224, 224}, {16, 3, 224, 224}}, // shape {ge::FORMAT_ND, ge::FORMAT_FRACTAL_NZ, {}}, // format kFollowing, // placement ge::DT_FLOAT16, // dt nullptr}; ExpandDimsType type("1001"); tensor.SetExpandDimsType(type); auto expand_dims_type = tensor.GetExpandDimsType(); // type
+```

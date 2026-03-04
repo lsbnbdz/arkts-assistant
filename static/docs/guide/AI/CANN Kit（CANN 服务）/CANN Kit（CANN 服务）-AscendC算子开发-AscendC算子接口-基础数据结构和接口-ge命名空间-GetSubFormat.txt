@@ -1,0 +1,37 @@
+# [GetSubFormat](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getsubformat)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083616766_section108186mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083616766_section108189mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083616766_section108193mcpsimp)
+- [返回值](#zh-cn_topic_0000002083616766_section108216mcpsimp)
+- [异常处理](#zh-cn_topic_0000002083616766_section108219mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083616766_section108222mcpsimp)
+
+## 函数功能
+从实际format中解析出子format信息。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+inline int32_t GetSubFormat(int32_t format)
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| format | 输入 | 实际format（4字节大小，第1个字节的高四位为预留字段，低四位为c0 format段，第2-3字节为子format信息，第4字节为主format信息）。 |
+
+ 
+## 返回值
+实际format中包含的子format。
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

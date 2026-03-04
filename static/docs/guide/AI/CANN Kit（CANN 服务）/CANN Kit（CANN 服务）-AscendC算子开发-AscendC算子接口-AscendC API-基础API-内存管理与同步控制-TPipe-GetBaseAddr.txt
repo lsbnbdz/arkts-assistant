@@ -1,0 +1,47 @@
+# [GetBaseAddr](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getbaseaddr)
+
+## 目录
+- [功能说明](#zh-cn_topic_0000002091186200_section26809mcpsimp)
+- [函数原型](#zh-cn_topic_0000002091186200_section26812mcpsimp)
+- [参数说明](#zh-cn_topic_0000002091186200_section26815mcpsimp)
+- [支持的型号](#zh-cn_topic_0000002091186200_section26841mcpsimp)
+- [注意事项](#zh-cn_topic_0000002091186200_section26847mcpsimp)
+- [返回值](#zh-cn_topic_0000002091186200_section26850mcpsimp)
+- [调用示例](#zh-cn_topic_0000002091186200_section26853mcpsimp)
+
+## 功能说明
+根据传入的logicPos（逻辑抽象位置），获取该位置的基础地址，只在CPU调试场景下此接口生效，在CPU调试中通常用于将Tensor地址由CPU地址转换为NPU地址。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+inline uint8_t* GetBaseAddr(int8_t logicPos)
+```
+ 
+## 参数说明
+ 展开
+| 参数名称 | 输入/输出 | 含义 |
+| --- | --- | --- |
+| logicPos | 输入 | 逻辑位置类型。该类型具体说明请参考TPosition |
+
+ 
+## 支持的型号
+Kirin9020系列处理器
+
+ KirinX90系列处理器
+
+ 
+## 注意事项
+NA
+
+ 
+## 返回值
+逻辑位置对应的基地址。
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+auto absAddr = GetTPipePtr()->GetBaseAddr(static_cast(pos));
+```

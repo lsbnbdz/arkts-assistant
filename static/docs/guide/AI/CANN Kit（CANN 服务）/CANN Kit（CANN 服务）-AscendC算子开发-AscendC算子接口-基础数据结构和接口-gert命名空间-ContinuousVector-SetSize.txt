@@ -1,0 +1,42 @@
+# [SetSize](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-continuousvector-setsize)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119176613_section89057mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119176613_section89060mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119176613_section89064mcpsimp)
+- [返回值](#zh-cn_topic_0000002119176613_section89087mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119176613_section89091mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119176613_section89094mcpsimp)
+
+## 函数功能
+设置当前保存的元素个数。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+ge::graphStatus SetSize(const size_t size)
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| size | 输入 | 当前保存的元素个数。 |
+
+ 
+## 返回值
+成功时返回ge::GRAPH_SUCCESS。
+
+ 设置的size>capacity时，返回失败ge::GRAPH_FAILED。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+size_t capacity = 100U; auto cv_holder = ContinuousVector::Create(capacity); auto cv = reinterpret_cast(cv_holder.get()); auto ret = cv->SetSize(10U); // ge::GRAPH_SUCCESS ret = cv->GetSize(101U); // ge::GRAPH_FAILED
+```

@@ -1,0 +1,9 @@
+# [守护策略管理](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/screentimeguard-guard-strategy-manage)
+
+- **[概述](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/screentimeguard-guard-strategy-manage-overview)**
+ - **[添加策略](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/screentimeguard-add-guard-strategy)**
+ - **[修改策略](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/screentimeguard-update-guard-strategy)**
+ - **[查询策略](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/screentimeguard-query-guard-strategies)**
+ - **[删除策略](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/screentimeguard-remove-guard-strategy)**
+ - **[启动策略](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/screentimeguard-start-guard-strategy)**
+ - **[停止策略](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/screentimeguard-stop-guard-strategy)**

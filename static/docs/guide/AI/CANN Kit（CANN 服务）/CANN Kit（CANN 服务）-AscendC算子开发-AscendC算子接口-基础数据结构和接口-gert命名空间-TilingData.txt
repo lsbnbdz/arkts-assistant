@@ -1,0 +1,12 @@
+# [TilingData](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tilingdata)
+
+- **[构造函数](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tilingdata-constructor)**
+ - **[GetCapacity](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getcapacity)**
+ - **[GetDataSize](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getdatasize)**
+ - **[SetDataSize](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-setdatasize)**
+ - **[GetData](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tilingdata-getdata)**
+ - **[Append](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-append)**
+ - **[CreateCap](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-createcap)**
+ - **[CalcTotalSize](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-calctotalsize)**
+ - **[Init](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-init)**
+ - **[operator](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tilingdata-operator)**

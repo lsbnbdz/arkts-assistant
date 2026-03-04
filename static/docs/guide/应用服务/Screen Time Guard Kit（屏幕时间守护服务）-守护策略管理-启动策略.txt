@@ -1,0 +1,73 @@
+# [启动策略](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/screentimeguard-start-guard-strategy)
+
+## 目录
+- [场景介绍](#section139649362716)
+- [用户体验设计](#section922214813165)
+- [业务流程](#section5680134318336)
+- [接口说明](#section11489173117423)
+- [开发前提](#section1822994945113)
+- [开发步骤](#section178565494410)
+
+## 场景介绍
+ 当应用希望启动某个管控规则时，可以调用启动管控策略的接口。根据参数中传入的策略名，应用可以启动对应管控策略。一旦策略被创建并启用，系统将根据规则对用户的屏幕使用行为进行监管。
+
+ 
+## 用户体验设计
+ 
+
+ 
+
+ 
+## 业务流程
+ 
+
+ 流程说明：
+
+ 1. 继承TimeGuardExtensionAbility，实现onStart方法，此步非必需。
+
+ 2. 调用启动管控策略的接口，拉起健康使用设备查询开发者是否已申请权限，以及用户是否授权。
+
+ 3. 若开发者没有权限或用户未授权，则抛出相应错误码。若开发者有权限且用户已授权，则解析参数中传入的策略名称，判断策略是否存在。
+
+ 4. 若策略不存在，则抛出相应错误码；若存在，则查询该策略是否正在执行。
+
+ 5. 若查询的策略未执行，则正常启动策略，并记录启动状态；否则，抛出策略已在执行中的错误码。
+
+ 6. 策略启动后，系统时间被设置为不可修改，管控发起应用被设置为不可卸载。
+
+ 7. 当到了管控生效的时间，管控开始生效，拉起extension进程，执行TimeGuardExtensionAbility的onStart回调。
+
+ 
+## 接口说明
+ 启动策略的关键接口如下表所示，具体API说明详见[API参考](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/screentimeguard-arkts)。
+
+ 展开
+| 接口名 | 描述 |
+| --- | --- |
+| startGuardStrategy(strategyName: string): Promise | 根据策略名称，启动其管控策略。 |
+| onStart(strategyName: string): Promise | 在策略启动时执行特定逻辑。 |
+
+ 
+## 开发前提
+ 启动管控策略需要申请用户授权，请先参考[请求用户授权](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/screentimeguard-request-user-auth)章节完成用户授权。
+
+ 
+## 开发步骤
+ 1. 导入相关模块。
+
+ 收起自动换行深色代码主题复制
+```
+import { guardService, TimeGuardExtensionAbility } from '@kit.ScreenTimeGuardKit';import { hilog } from '@kit.PerformanceAnalysisKit';import { BusinessError } from '@kit.BasicServicesKit';
+```
+ 2. 继承TimeGuardExtensionAbility，重写onStart回调。
+
+ 收起自动换行深色代码主题复制
+```
+export default class EntryAbility extends TimeGuardExtensionAbility { async onStart(strategyName: string): Promise { hilog.info(0x0000, 'test --- onStart', strategyName); }}
+```
+ 3. 调用startGuardStrategy，启动管控策略。
+
+ 收起自动换行深色代码主题复制
+```
+async function testStartGuardStrategy() { try { const strategyName = "TestStrategy"; await guardService.startGuardStrategy(strategyName); } catch (err) { const message = (err as BusinessError).message; const code = (err as BusinessError).code; hilog.error(0x0000, `ScreenTimeGuard:startGuardStrategy`, `startGuardStrategy failed with error code: ${code}, message: ${message}`); }}
+```

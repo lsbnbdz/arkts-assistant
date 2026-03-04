@@ -1,0 +1,46 @@
+## 使用场景
+          ArkWeb（方舟Web）提供了Web组件，用于在应用程序中显示Web页面内容。常见使用场景包括：
+
+                  应用集成Web页面：应用可以在页面中使用Web组件，嵌入Web页面内容，以降低开发成本，提升开发、运营效率。
+
+             浏览器网页浏览场景：浏览器类应用可以使用Web组件，打开三方网页，使用无痕模式浏览Web页面，设置广告拦截等。
+
+             小程序：小程序类宿主应用可以使用Web组件，渲染小程序的页面，实现同层渲染，视频托管等小程序的功能。
+
+## 能力范围
+          Web组件为开发者提供了丰富的控制Web页面能力。包括：
+
+                  Web页面加载：声明式加载Web页面和离屏加载Web页面等。
+
+             生命周期管理：组件生命周期状态变化，通知Web页面的加载状态变化等。
+
+             常用属性与事件：User-Agent管理、Cookie与存储管理、字体与深色模式管理、权限管理等。
+
+             与应用界面交互：自定义文本选择菜单、上下文菜单、文件上传界面等与应用界面交互能力。
+
+             App通过JavaScriptProxy，与Web页面进行JavaScript交互。
+
+             安全与隐私：无痕浏览模式、广告拦截、坚盾守护模式等。
+
+             维测能力：[DevTools工具](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/web-debugging-with-devtools)调试能力，使用crashpad收集Web组件崩溃信息。
+
+             其他高阶能力：与系统组件同层渲染、Web组件的网络托管、Web组件的媒体播放托管、Web组件输入框拉起自定义输入法、[网页接入密码保险箱](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkweb-access-password-safe)等。
+
+## 需要权限
+          使用Web组件访问在线网页时需添加网络权限：ohos.permission.INTERNET，具体申请方式请参考[声明权限](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/declare-permissions)。
+
+     收起自动换行深色代码主题复制
+```
+"requestPermissions":[    {      "name" : "ohos.permission.INTERNET"    }  ]
+```
+             
+## 约束与限制
+                       可依据ArkWeb内核版本在相关网站查询W3C标准的支持情况。例如：[https://developer.mozilla.org/en-US/](https://developer.mozilla.org/en-US/) 和 [https://webassembly.org/features/](https://webassembly.org/features/) 。
+
+             Web内核版本：ArkWeb基于谷歌Chromium内核开发，系统版本与Chromium版本的对应关系如表格所示。
+
+| 系统版本 | Chromium版本 |
+| --- | --- |
+| HarmonyOS 4.0及之前 | M99 |
+| HarmonyOS 4.1-5.1 | M114 |
+| HarmonyOS 6.0 |  M132（默认，推荐使用） M114（可选，若应用需切换为此内核，请参考M114内核在HarmonyOS6.0系统上的适配指导） |

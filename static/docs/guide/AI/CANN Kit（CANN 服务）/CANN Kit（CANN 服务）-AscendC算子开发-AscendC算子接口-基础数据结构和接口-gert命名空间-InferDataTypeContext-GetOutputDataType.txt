@@ -1,0 +1,40 @@
+# [GetOutputDataType](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getoutputdatatype)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083616618_section90170mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083616618_section90173mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083616618_section90177mcpsimp)
+- [返回值](#zh-cn_topic_0000002083616618_section90200mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083616618_section90203mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083616618_section90206mcpsimp)
+
+## 函数功能
+根据算子输出索引获取对应输出的数据类型。这里的输出索引是指算子实例化后实际的索引，不是原型定义中的索引。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+ge::DataType GetOutputDataType(const size_t index) const;
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| index | 输入 | 算子输出索引，从0开始计数。 |
+
+ 
+## 返回值
+返回指定输出的数据类型，index非法时，返回DT_UNDEFINED。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+ge::graphStatus InferDataTypeForXXX(InferDataTypeContext *context) { auto data_type = context->GetOutputDataType(0); // ... }
+```

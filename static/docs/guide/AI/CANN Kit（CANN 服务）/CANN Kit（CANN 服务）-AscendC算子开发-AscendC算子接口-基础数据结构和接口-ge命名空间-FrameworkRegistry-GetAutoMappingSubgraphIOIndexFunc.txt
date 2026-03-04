@@ -1,0 +1,37 @@
+# [GetAutoMappingSubgraphIOIndexFunc](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getautomappingsubgraphioindexfunc)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119177057_section97094mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119177057_section97097mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119177057_section97100mcpsimp)
+- [返回值](#zh-cn_topic_0000002119177057_section97124mcpsimp)
+- [异常处理](#zh-cn_topic_0000002119177057_section97128mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119177057_section97131mcpsimp)
+
+## 函数功能
+根据网络类型，获取已经注册的自动映射函数。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+AutoMappingSubgraphIOIndexFunc GetAutoMappingSubgraphIOIndexFunc(domi::FrameworkType framework)
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| framework | 输入 | 网络类型，FrameworkType类型定义请参考FrameworkType。 |
+
+ 
+## 返回值
+AutoMappingSubgraphIOIndexFunc：自动映射输入输出函数，函数类型详见[AutoMappingSubgraphIndex](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-automappingsubgraphindex)。
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

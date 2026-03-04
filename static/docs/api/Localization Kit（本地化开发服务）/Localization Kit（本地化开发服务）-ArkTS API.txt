@@ -1,0 +1,7 @@
+# [ArkTS API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/localization-arkts)
+
+- **[@ohos.i18n (国际化-I18n)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-i18n)**
+ - **[@ohos.intl (国际化-Intl)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-intl)**
+ - **[@ohos.resourceManager (资源管理)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-resource-manager)**
+ - **[@ohos.sendableResourceManager (资源管理)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-sendable-resource-manager)**
+ - **[global](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/localization-global-arkts)**

@@ -1,0 +1,8 @@
+# [同步控制](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-basic-sync)
+
+KirinX90/Kirin9030处理器不支持多个NPU核之间硬同步能力（硬件同步是利用硬件自带的全核同步指令由硬件保证多核同步）。但由于KirinX90/Kirin9030处理器的NPU是单核耦合架构(AICOER: 1*AIC +1*AIV)，所以针对如下涉及多核的同步API进行软件兼容，开发者无需感知细节。
+
+ **表1**多核同步兼容说明展开
+| 基础API | 兼容说明 |
+| --- | --- |
+| SyncAll（硬同步）、CrossCoreSetFlag、CrossCoreWaitFlag | 软件兼容。 |

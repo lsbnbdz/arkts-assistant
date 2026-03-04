@@ -1,0 +1,40 @@
+# [SetNodeName](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-setnodename)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083616578_section88513mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083616578_section88516mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083616578_section88520mcpsimp)
+- [返回值](#zh-cn_topic_0000002083616578_section88543mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083616578_section88546mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083616578_section88549mcpsimp)
+
+## 函数功能
+设置该ComputeNodeInfo对应的算子的名称。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+void SetNodeName(const ge::char_t *node_name)
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| node_name | 输入 | 算子的名称。 |
+
+ 
+## 返回值
+无
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+compute_node_info->SetNodeName("Conv2d");
+```

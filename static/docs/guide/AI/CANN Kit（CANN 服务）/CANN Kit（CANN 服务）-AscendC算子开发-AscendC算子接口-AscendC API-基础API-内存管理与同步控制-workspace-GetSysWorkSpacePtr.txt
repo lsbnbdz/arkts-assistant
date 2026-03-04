@@ -1,0 +1,44 @@
+# [GetSysWorkSpacePtr](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getsysworkspaceptr)
+
+## 目录
+- [功能说明](#zh-cn_topic_0000002127913009_section28692mcpsimp)
+- [函数原型](#zh-cn_topic_0000002127913009_section28698mcpsimp)
+- [参数说明](#zh-cn_topic_0000002127913009_section28701mcpsimp)
+- [支持的型号](#zh-cn_topic_0000002127913009_section28704mcpsimp)
+- [注意事项](#zh-cn_topic_0000002127913009_section28710mcpsimp)
+- [返回值](#zh-cn_topic_0000002127913009_section28713mcpsimp)
+- [调用示例](#zh-cn_topic_0000002127913009_section28716mcpsimp)
+
+## 功能说明
+获取系统workspace指针。部分高阶API如Matmul需要使用系统workspace，相关接口需要传入系统workspace指针，此时可以通过该接口获取。使用系统workspace时，host侧开发者需要自行申请系统workspace的空间，其预留空间大小可以通过[GetLibApiWorkSpaceSize](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getlibapiworkspacesize)接口获取。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+__aicore__ inline __gm__ uint8_t* __gm__ GetSysWorkSpacePtr()
+```
+ 
+## 参数说明
+无
+
+ 
+## 支持的型号
+Kirin9020系列处理器
+
+ KirinX90系列处理器
+
+ 
+## 注意事项
+无
+
+ 
+## 返回值
+系统workspace指针。
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+// ... REGIST_MATMUL_OBJ(&pipe, GetSysWorkSpacePtr(), mm, &tiling); // 初始化 // CopyIn阶段：完成从GM到LocalMemory的搬运 mm.SetTensorA(gm_a); // 设置左矩阵A mm.SetTensorB(gm_b); // 设置右矩阵B mm.SetBias(gm_bias); // 设置Bias // Compute阶段：完成矩阵乘计算 while (mm.Iterate()) { // CopyOut阶段：完成从LocalMemory到GM的搬运 mm.GetTensorC(gm_c); } // 结束矩阵乘操作 mm.End();
+```

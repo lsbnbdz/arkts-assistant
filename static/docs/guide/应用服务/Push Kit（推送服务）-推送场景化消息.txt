@@ -1,0 +1,8 @@
+# [推送场景化消息](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/push-scenes)
+
+- **[推送通知消息](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/push-alert)**
+ - **[推送卡片刷新消息](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/push-form-update)**
+ - **[推送语音播报消息](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/push-extend-noti)**
+ - **[推送后台消息](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/push-background)**
+ - **[推送实况窗消息](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/push-update-liveview)**
+ - **[推送应用内通话消息](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/push-voip)**

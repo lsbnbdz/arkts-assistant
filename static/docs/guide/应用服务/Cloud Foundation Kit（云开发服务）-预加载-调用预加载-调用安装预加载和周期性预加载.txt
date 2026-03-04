@@ -1,0 +1,7 @@
+# [调用安装预加载和周期性预加载](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cloudfoundation-call-install-and-periodic-prefetch)
+
+在项目的EntryAbility.ets文件中导入预加载实现类[PrefetchWrapper](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cloudfoundation-prefetch-implementation-class#section1192871813236)，并在onCreate中调用PrefetchWrapper的doPrefetch方法。在应用安装后首次打开时调用安装预加载，非首次打开时调用周期性预加载。收起自动换行深色代码主题复制
+```
+import { GlobalContext } from '../common/GlobalContext';import { PrefetchWrapper } from '../prefetchUtil/PrefetchWrapper';
+onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void { GlobalContext.initContext(this.context); // 初始化全局上下文 PrefetchWrapper.getInstance().doPrefetch();}
+```

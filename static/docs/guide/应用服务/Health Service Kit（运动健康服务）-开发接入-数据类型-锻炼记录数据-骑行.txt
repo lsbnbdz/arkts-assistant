@@ -1,0 +1,47 @@
+# [骑行](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/health-cycling)
+
+## 目录
+- [关联的统计数据说明](#section13775155125211)
+- [关联的明细数据说明](#section165541956195216)
+
+骑行相关锻炼记录类型如下：
+
+ 展开
+| 锻炼记录子类型常量 | 描述 | 数据来源 |
+| --- | --- | --- |
+| exerciseSequenceHelper.cycling.EXERCISE_TYPE | 户外骑行 | 手机、手表、手环 |
+| exerciseSequenceHelper.indoorCycling.EXERCISE_TYPE | 室内单车 | 室内自行车、室内骑行台 |
+| exerciseSequenceHelper.spinning.EXERCISE_TYPE | 动感单车 | 动感单车 |
+| exerciseSequenceHelper.bmx.EXERCISE_TYPE | BMX自行车 | 越野自行车 |
+
+ 
+## 关联的统计数据说明
+ - 字段定义：[exerciseSequenceHelper.cycling.SummaryFields](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-exercisedequencehelper#section1599483720293)
+ 
+ 展开
+| 字段列表 | 描述 | 类型 | 可选/必选 |
+| --- | --- | --- | --- |
+| distance | 距离统计 | DistanceSummary | M |
+| calorie | 热量统计 | CalorieSummary | M |
+| speed | 速度统计 | SpeedSummary | M |
+| exerciseHeartRate | 运动心率统计 | ExerciseHeartRateSummary | O |
+| resistance | 阻力统计 | ResistanceSummary | O |
+| pedalingCadence | 踏频统计 | PedalingCadenceSummary | O |
+| power | 功率统计 | PowerSummary | O |
+| altitude | 海拔统计 | AltitudeSummary | O |
+| location | 位置统计 | LocationSummary | O |
+
+ 
+## 关联的明细数据说明
+ - 字段定义：[exerciseSequenceHelper.cycling.DetailFields](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-exercisedequencehelper#section988513311325)
+ 
+ 展开
+| 字段列表 | 描述 | 类型 | 可选/必选 |
+| --- | --- | --- | --- |
+| exerciseHeartRate | 运动心率详情 | ExerciseHeartRate[] | O |
+| speed | 速度详情 | Speed[] | O |
+| pedalingCadence | 踏频详情 | PedalingCadence[] | O |
+| power | 功率详情 | Power[] | O |
+| location | 位置详情 | Location[] | O |
+| altitude | 海拔详情 | Altitude[] | O |
+| resistance | 阻力详情 | Resistance[] | O |

@@ -1,0 +1,31 @@
+# [CloudDisk_PathInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-clouddisk-clouddisk-pathinfo)
+
+## 目录
+- [概述](#概述)
+- [汇总](#汇总)
+  - [成员变量](#成员变量)
+
+收起自动换行深色代码主题复制
+```
+typedef struct CloudDisk_PathInfo {...} CloudDisk_PathInfotypedef struct CloudDisk_PathInfo CloudDisk_FieldInfotypedef struct CloudDisk_PathInfo CloudDisk_SyncFolderPath
+```
+ 
+## 概述
+PC/2in1Tablet文件路径信息。
+
+ **起始版本：** 21
+
+ **相关模块：** [CloudDisk](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-clouddisk)
+
+ **所在头文件：** [oh_cloud_disk_manager.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-cloud-disk-manager-h)
+
+ 
+## 汇总
+PC/2in1Tablet 
+### 成员变量
+ PC/2in1Tablet展开
+| |
+| |
+| |
+| char *value | 文件的路径，以'\0'字符结尾。 |
+| size_t length | 文件路径的长度，不包括结尾的'\0'字符。 |

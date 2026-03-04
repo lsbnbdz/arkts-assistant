@@ -1,0 +1,37 @@
+# [GetSize](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-continuousvectorvector-getsize)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083617462_section88876mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083617462_section88879mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083617462_section88883mcpsimp)
+- [返回值](#zh-cn_topic_0000002083617462_section88886mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083617462_section88889mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083617462_section88892mcpsimp)
+
+## 函数功能
+获取当前存放的实际元素数量。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+size_t GetSize() const
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+当前存放的实际元素数量。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+// 创建ContinuousVectorVector对象cvv // ... // 增加元素 // ... auto cv = cvv->add(inner_vector_capacity); // ... // 获取当前存放的实际元素数量 auto size = cvv->GetSize();
+```

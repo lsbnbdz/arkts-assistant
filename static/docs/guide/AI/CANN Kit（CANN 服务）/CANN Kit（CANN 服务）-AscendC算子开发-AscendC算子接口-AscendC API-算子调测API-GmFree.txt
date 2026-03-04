@@ -1,0 +1,47 @@
+# [GmFree](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-gmfree)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119256797_section86283mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119256797_section86288mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119256797_section86291mcpsimp)
+- [返回值](#zh-cn_topic_0000002119256797_section86314mcpsimp)
+- [支持的型号](#zh-cn_topic_0000002119256797_section86317mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119256797_section86324mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119256797_section86327mcpsimp)
+
+## 函数功能
+进行核函数的CPU侧运行验证时，用于释放通过[GmAlloc](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-gmalloc)申请的共享内存。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+void GmFree(void *ptr)
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| ptr | 输入 | 需要释放的共享内存的指针。 |
+
+ 
+## 返回值
+无
+
+ 
+## 支持的型号
+Kirin9020系列处理器
+
+ KirinX90系列处理器
+
+ 
+## 约束说明
+传入的指针必须是之前通过GmAlloc申请过的共享内存的指针。
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+AscendC::GmFree((void*)x);
+```

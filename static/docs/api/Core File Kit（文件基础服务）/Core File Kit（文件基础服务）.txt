@@ -1,0 +1,5 @@
+# [Core File Kit（文件基础服务）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/core-file-api)
+
+- **[ArkTS API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/core-file-arkts)**
+ - **[C API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/core-file-c)**
+ - **[错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/core-file-arkts-errcode)**

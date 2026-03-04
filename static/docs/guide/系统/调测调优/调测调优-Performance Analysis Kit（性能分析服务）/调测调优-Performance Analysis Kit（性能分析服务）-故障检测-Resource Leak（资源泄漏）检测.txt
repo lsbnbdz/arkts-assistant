@@ -1,0 +1,244 @@
+# [Resource Leak（资源泄漏）检测](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/resource-leak-guidelines)
+
+## 简介
+资源泄漏是指句柄、线程或内存等资源，在应用运行过程中没有被正确释放，导致资源被长期占用且无法被其他应用使用，如果某一类资源耗尽，系统可能出现卡死或重启等异常情况。为了应对资源泄漏问题，系统会提供资源泄漏检测、判决、维测日志抓取、日志上报的能力，为开发者提供详细的维测日志以辅助故障定位。本文将主要介绍[资源泄漏检测能力](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/resource-leak-guidelines#section19499182961220)以及[资源泄漏日志的规格](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/resource-leak-guidelines#section166893320117)。
+
+ 
+## 基本概念
+资源泄漏主要分为三类：内存泄漏、句柄泄漏和线程泄漏。对于每种泄漏，系统会通过周期采样的方式对进程的资源使用情况进行检测，如果资源使用超过阈值，会抓取对应维测并上报泄漏事件。开发者可以通过Hiappevent资源泄漏事件进行订阅，订阅方法详见[资源泄漏事件](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/hiappevent-watcher-resourceleak-events)。
+
+ 
+## 实现原理
+资源泄漏具体检测方式如下：
+
+ 展开
+| 泄漏类型 | 检测机制 |
+| :-: | :-: |
+| 句柄泄漏（FD_LEAK） | 每隔60s遍历一次进程，获取进程fd句柄总数，超过阈值（5000个）时抓取详细句柄信息，同步上报泄漏。 |
+| 线程泄漏（THREAD_LEAK） | 每隔60s遍历一次进程，获取进程的总线程数，超过阈值（700个）时抓取详细线程名信息，同步上报泄漏。 |
+| 内存泄漏（MEMORY_LEAK） | JS泄漏（JS_LEAK） | 虚拟机内部进行插桩，当堆内存的使用率超过85%或者触发OOM时会抓取heapdump，同步上报该故障。 |
+| native内存泄漏（PSS_MEMORY） | 以应用进程平均动态峰值内存作为基线，以200s作为基准，当动态内存峰值超过基线值2倍时，判定泄漏，同时触发管控。 |
+| ashmem/ion/gpu等内存泄漏（KERNEL_MEMORY） | 基于ashmem/ion/gpu的基线值，超过基线值时会判定泄漏，同步抓取维测信息。 |
+
+ 说明1. 表格中所述阈值/基线均为系统默认，如果生态在开发过程中需要自行设定基线，可以使用[hidebug.setAppResourceLimit接口](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-hidebug#hidebugsetappresourcelimit12)进行设置，该接口建议在开发阶段调用，不要在正式发布阶段使用。
+
+ 2. 虚拟机内存使用率计算公式 = heapUsed / totalHeap。
+
+ heapUsed：当前虚拟机使用的堆大小，单位：KB。可通过[hidebug.getAppVMMemoryInfo()](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-hidebug#hidebuggetappvmmemoryinfo12)接口获取。
+
+ totalHeap：当前虚拟机的堆总大小，单位：KB。可通过[hidebug.getAppVMMemoryInfo()](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-hidebug#hidebuggetappvmmemoryinfo12)接口获取。
+
+ 3. 当应用上报JS_ERROR/CPP_CRASH故障，Error message包含“OutOfMemory”时，可参考[内存泄漏分析方法](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-stability-leak-way#section728319329442)辅助定位。
+
+ 
+## 约束和限制
+1. 句柄泄漏调用栈、native内存泄漏调用栈、js泄漏内存快照等维测因为开销较大，所以在[nolog版本](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/performance-analysis-kit-terminology#nolog%E7%89%88%E6%9C%AC)默认不开启；
+
+ 2. 如果开发者希望获取到nolog版本的js泄漏内存快照，可参考[资源泄漏事件订阅（ArkTS）](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/hiappevent-watcher-resourceleak-events-arkts)增加对nolog版本js内存快照的订阅。
+
+ 
+## 日志获取
+ 资源泄漏日志由LeakDetector模块进行管理，可通过以下方式获取：
+
+ - 方式一：通过[DevEco Testing进行探索测试](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/exploratory-testing)并获取日志。DevEco Testing工具会收集设备/data/log/reliability/resource_leak/路径下的资源泄漏故障日志，根据进程名、故障和时间分类显示。 展开 | 泄漏类型 | 日志文件名称 | | :-: | :-: | | 句柄泄漏（FD_LEAK） | [pid]_fd_leak.txt | | 线程泄漏（THREAD_LEAK） | [pid]_thread_leak.txt | | 内存泄漏（MEMORY_LEAK） | js泄漏（JS_LEAK） | memleak-js-[process_name]-[pid]-[tid]-[timestamp].rawheap | | native内存泄漏（PSS_MEMORY） | memleak-native-[process_name]-[pid]-sample.txt memleak-native-[process_name]-[pid]-smaps.txt memleak-native-[process_name]-[pid]-[timestamp].txt | | ashmem/ion/gpu等内存泄漏（KERNEL_MEMORY） | memleak-kernel-[module]-0-sample.txt memleak-kernel-[module]-0-[timestamp].txt | 注意1. native内存泄漏的调用栈（memleak-native-[process_name]-[pid]-[timestamp].txt）无法直接在DevEco Studio打开，需要修改后缀名为.nas，然后使用DevEco Studio-Profiler-打开并分析，详情见[内存分析及优化](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ide-insight-session-allocations-memory)。 2. js泄漏的维测日志 memleak-js-[process_name]-[pid]-[tid]-[timestamp].rawheap 为二进制内存快照文件，需要通过[translator工具](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/rawheap-translator)转换为.heapsnapshot文件，通过DevEco Studio或浏览器打开展示，详情见[Snapshot离线导入](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ide-snapshot-basic-operations#section6760173514388)。
+- 方式二：通过DevEco Studio主动采集日志。DevEco Studio的profiler模块提供[Allocation](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ide-insight-session-allocations-memory)（获取native调用栈profiler）和 **[Snapshot](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ide-arkts-memory-leak-analysis)**（获取JS层heapdump）两种采集方式：
+
+ - 方式三：通过HiAppEvent接口订阅。HiAppEvent对外提供故障订阅接口，可以订阅各类故障打点，详见[HiAppEvent介绍](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/hiappevent-intro)，其中资源泄漏的订阅方式详见[资源泄漏事件介绍](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/hiappevent-watcher-resourceleak-events)。资源泄漏故障日志存于/data/storage/el2/log/resourcelimit/路径，日志名统一为RESOURCE_OVERLIMIT_[TIMESTAMP]_[PID].log，可根据日志内容区分文件类型。
+
+ 
+## 句柄泄漏日志规格
+ 故障日志文件名：[pid]_fd_leak.txt（**方式一**）或RESOURCE_OVERLIMIT_[TIMESTAMP]_[PID].log（**方式三**）。
+
+ 
+### 日志头部信息
+ 展开
+| 字段 | 说明 |
+| --- | --- |
+| time | 故障发生时间。 |
+| pid | 发生故障进程的pid，可以用于在流水日志中搜索相关进程信息。 |
+| process | 应用进程包名。 |
+| leaked fd nums | 判定泄漏时获取的句柄数量（快照）。 |
+
+ 收起自动换行深色代码主题复制
+```
+time: 2024/06/27 11:55:28pid: 1380process: process1leaked fd nums: 5111
+```
+ 
+### 句柄类型详细信息
+ - **Leaked fd Top 10：**按照句柄名聚类，获取泄漏句柄中最多的类型。第一列为泄漏数量，第二列为泄漏类型，如下即ashmem类型的句柄存在4796个。收起自动换行深色代码主题复制 ``` FdCount FileDescriptor*****************************Leaked fd Top 10:4796 ashmem259 socket119 dmabuf48 eventfd42 sync_file17 eventpoll3 /sys/kernel/debug/tracing/trace_marker3 /dev/null2 /dev/hvgr0 ```
+- **Dir Type Top 10：**针对文件句柄类型，会单独根据文件路径聚类。如下，根据“**Leaked fd Top 10**”无法看出具体泄漏的类型，但是通过“**Dir Type Top 10**”能确定是“/data/storage/el2/database/rdb”路径下的文件句柄泄漏，且能大概感知是db泄漏。收起自动换行深色代码主题复制 ``` Dir Type Top 10:6175 /data/storage/el2/database/rdb5 /dev/urandom3 /sys/kernel/debug/tracing/trace_marker3 /dev/null1 anon_inode:[signalfd]1 /dev/binder1 /proc/1 /system/app/PhoneClone/PhoneClone.hap ``` 说明若top句柄为unknown，说明维测没有权限获取泄漏进程的句柄。
+
+ 
+### 特殊类型句柄维测信息
+ 如果**Leaked fd Top 10**的TOP句柄信息属于ashmem/socket/pipe/sync_file/dmabuf这五类特殊类型，且该类型的句柄个数超过1000个，日志中会增加整机详细的维测信息，具体如下：
+
+ - **ashmem类型句柄**ashmem（共享内存），当TOP 1的句柄类型为ashmem时，抓取整机ashmem内存的详细信息如下。 展开 | 字段 | 说明 | | --- | --- | | Process_name | 持有该ashmem内存块的应用进程包名。 | | Process_ID | 发生故障进程的pid，可以用于在流水日志中搜索相关进程信息。 | | Fd | 该进程持有的句柄。 | | Applicant_Pid | 申请该ashmem内存块的进程pid，可根据此字段识别该内存块的申请来源。 | | Ashmem_name | 共享内存的名字，开发者可通过提供的API进行设置，用来判断存储的资源类型，指向不同的领域。 | | Size | 单个ashmem块的大小，单位：B。 | 说明开发者可通过提供的API接口设置ashmem内存： JS层API：[setMemoryNameSync](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-image-pixelmap#setmemorynamesync13) NATIVE层API：[OH_PixelmapNative_SetMemoryName](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-pixelmap-native-h#oh_pixelmapnative_setmemoryname) 收起自动换行深色代码主题复制 ``` *****************************LOGGER_MEMCHECK_ASHMEM_INFOProcess ashmem detail info:---------------------------------------------------------------------------------Process_name Process_ID Fd Cnode_idx Applicant_Pid Ashmem_name Sizeprocess1 781 18 328233 781 dev/ashmem/PolicyVolumeMap 384...................... ```
+- **socket类型句柄**socket（网络通信），当TOP 1的句柄类型为socket时，抓取整机socket内存的详细信息如下。 展开 | 字段 | 说明 | | --- | --- | | ProcessName | 持有该socket内存块的应用进程包名。 | | ProcessID | 发生故障进程的pid，可以用于在流水日志中搜索相关进程信息。 | | Fd | 该进程持有的句柄。 | | inode | 文件系统对象信息。 | | PeerTid | 对端tid（对于有连接的socket为对应值，无连接为0）。 | 收起自动换行深色代码主题复制 ``` Process socket info:----------------------------------------------------ProcessName ProcessID Fd inode PeerTidprocess1 6874 3 0 0................. ```
+- **pipe类型句柄**pipe（进程间通信），当TOP 1的句柄类型为pipe时，以fd维度抓取整机pipe内存的详细信息如下。 展开 | 字段 | 说明 | | --- | --- | | ProcessName | 持有该pipe内存块的应用进程包名。 | | ProcessID | 发生故障进程的pid，可以用于在流水日志中搜索相关进程信息。 | | Fd | 该进程持有的句柄。 | | PipeName | 管道名。 | | inode | 文件系统对象信息。 | | MaxUsage | 最大使用量。 | | NumAccounted | 累计大小量。 | | RingSize | RingBuf大小，单位：KB。 | 收起自动换行深色代码主题复制 ``` Process pipe info:------------------------------------ProcessName ProcessID Fd PipeName inode MaxUsage NumAccounted RingSizeprocess1 629 7 / 11 16 16 16process1 629 8 / 11 16 16 16........ ```
+- **sync_file类型句柄**sync_file（显存），当TOP 1的句柄类型为sync_file时，以fd维度抓取整机sync_file的详细信息如下。 展开 | 字段 | 说明 | | --- | --- | | ProcessName | 持有该sync_file内存块的应用进程包名。 | | ProcessID | 发生故障进程的pid，可以用于在流水日志中搜索相关进程信息。 | | Fd | 该进程持有的句柄。 | | FenceName | sync_file名字。 | | inode | 文件系统对象信息。 | | FenceNum | fence个数。 | | TimelineName | fence的Timeline名字。 | | DriverName | 驱动名字。 | | Status | fence的状态。 | | Timestamp | fence的时间戳。 | 收起自动换行深色代码主题复制 ``` Process fence info:----------------------------------------------------ProcessName ProcessID Fd FenceName inode FenceNum TimelineName DriverName Status Timestampprocess1 1309 25 NULL 4186 1 0:online_composer_gfx_primary ukmd_release_fence_2941430 1 91607485502500process1 1309 26 NULL 4186 1 0:online_composer_gfx_primary ukmd_release_fence_2941430 1 91607485502500........ ```
+- **dmabuf类型句柄**dmabuf（也称ion内存），当TOP 1的句柄类型为dmabuf时，以fd维度抓取了整机dmabuf的详细信息如下**。** 展开 | 字段 | 说明 | | --- | --- | | Process name | 持有该ion内存块的应用进程包名。 | | Process ID | 发生故障进程的pid，可以用于在流水日志中搜索相关进程信息。 | | Fd | 该进程持有的句柄。 | | size | buffer内存大小，单位：B。 | | magic | buffer唯一标识（magic相同表示指向同一块buffer）。 | | buf->pid | 申请者的pid。 | | buf->task_comm | 申请buffer的进程名。 | 收起自动换行深色代码主题复制 ``` Process dma_heap info:---------------------------------------------------- Process name Process ID fd size magic buf->pid buf->task_comm process1 971 23 3145728 36 971 process2 process1 971 24 1048576 38 971 process2 ........ ```
+
+ 
+### 句柄栈信息
+当判定句柄泄漏后，会hook该进程的pipe/open等系统调用10分钟，抓取调用栈，并基于相同调用栈聚类。如下每一行都是一个调用栈，调用顺序为从右到左，其中num后面的数字表示调用栈总个数，bt后面为具体调用栈。具体栈信息可通过[addr2line](https://llvm.org/docs/CommandGuide/llvm-symbolizer.html)解析到对应的函数。
+
+ 收起自动换行深色代码主题复制
+```
+*****************************LOGGER_MEMCHECK_FD_STACK_INFOpid: 12326get stack time: 2024/06/17 19:16:48==============================FdTrack Stack==============================Generated by HiviewDFX @OpenHarmony==============================Sorted by num==============================num 8272 bt [/system/lib64/libfdleak_tracker.so+0x1fb58] [/system/lib/ld-musl-aarch64.so.1+0x1d3154] [/system/lib/ld-musl-aarch64.so.1+0x148940] [/system/lib64/platformsdk/libuv.so+0x1ab30] [/system/lib64/platformsdk/libuv.so+0x1cbd0] [/system/lib64/module/file/libfs.z.so+0x17109c] [/system/lib64/module/file/libfs.z.so+0x170af4] [/system/lib64/module/file/libfs.z.so+0x1701c8] [/system/lib64/platformsdk/libace_napi.z.so+0x34828] num 3968 bt [/system/lib64/libfdleak_tracker.so+0x1fb58] [/system/lib/ld-musl-aarch64.so.1+0x1d3154] [/system/lib64/platformsdk/libipc_core.z.so+0x4ac64] [/system/lib64/platformsdk/libbackup_kit_inner.z.so+0x532d4] [/system/lib64/platformsdk/libbackup_kit_inner.z.so+0x4f8fc] [/system/lib64/platformsdk/libipc_core.z.so+0x38420] [/system/lib64/platformsdk/libipc_core.z.so+0x4e99c] [/system/lib64/platformsdk/libipc_core.z.so+0x4eb34] [/system/lib64/platformsdk/libipc_core.z.so+0x4edc8] num 3968 bt [/system/lib64/libfdleak_tracker.so+0x1fb58] [/system/lib/ld-musl-aarch64.so.1+0x1d3154] [/system/lib64/platformsdk/libipc_core.z.so+0x4ac64] [/system/lib64/platformsdk/libbackup_kit_inner.z.so+0x532b0] [/system/lib64/platformsdk/libbackup_kit_inner.z.so+0x4f8fc] [/system/lib64/platformsdk/libipc_core.z.so+0x38420] [/system/lib64/platformsdk/libipc_core.z.so+0x4e99c] [/system/lib64/platformsdk/libipc_core.z.so+0x4eb34] [/system/lib64/platformsdk/libipc_core.z.so+0x4edc8] 
+```
+ 注意1. 这里统计的是10分钟内全量申请句柄的调用栈，并没有将已经close的去掉。
+
+ 2. 栈信息只有在log版本直接存在；nolog版本若未开“开发者模式”，则不抓取栈信息，如果发现不存在栈信息，需要在“开发者选项”中打开“系统资源泄漏日志”，并重启设备，来使能资源泄漏的抓栈功能。
+
+ 
+## 线程泄漏日志规格
+ 故障日志文件名：[pid]_thread_leak.txt（**方式一**）或RESOURCE_OVERLIMIT_[TIMESTAMP]_[PID].log（**方式三**）。
+
+ 
+### 日志头部信息
+ 展开
+| 字段 | 说明 |
+| --- | --- |
+| time | 检测到线程泄漏的时间。 |
+| pid | 发生故障进程的pid，用于在流水日志中查询相关进程信息。 |
+| vss | 单个进程全部可访问的地址空间，其大小可能包括还尚未在内存中驻留的部分，单位：KB。 |
+| rss | 单个进程实际占用的内存大小，包括该进程所使用共享库全部内存大小，单位：KB。 |
+| process | 发生故障的应用包名。 |
+| summary | 判定泄漏时进程线程总数。 |
+
+ 收起自动换行深色代码主题复制
+```
+time: 2024/06/27 03:45:19pid: 41897vss: 12783644rss: 2229352process: process1summary: 879
+```
+ 
+### 线程类泄漏详细信息
+ - **Top 10 Thread Name：**按照线程名聚类，获取泄漏最多的线程，第一列为泄漏数量，第二列为线程名称（若创建线程时未指定线程名，则表现为线程名和进程名相同）。收起自动换行深色代码主题复制 ``` Top 10 Thread Name:913 process13 gpu-work-client2 OS_Actor_4021 IPC_11_137951 IPC_12_137961 IPC_13_13797 ```
+
+ - **线程启动信息**：可根据线程启动时间推测。 展开 | 字段 | 说明 | | --- | --- | | tid | 检测到泄漏时未释放线程的线程号 | | thread_name | 未释放的线程名 | | start_time(jiffies) | 线程创建时间 | 收起自动换行深色代码主题复制 ``` ======================================================tid thread_name start_time(jiffies)221 process1 4688297240 IPC_3_4318 3081382...... ```
+
+ - **线程快照**：抓取判定泄漏时线程的调用栈，可由此看下线程做的任务，推测线程未退出的原因（如：__pthread_cond_timedwait表示线程正在等待唤醒）。收起自动换行深色代码主题复制 ``` ======================================================Result: 0 ( no error )Timestamp:2024-06-27 03:45:20.000Pid:41897Uid:1013Process name:process1Tid:1527, Name:xxx#00 pc 00000000001b6464 /system/lib/ld-musl-aarch64.so.1(__timedwait_cp+192)(98dc7600a0fc62125e291b93ca336154)#01 pc 00000000001b8468 /system/lib/ld-musl-aarch64.so.1(__pthread_cond_timedwait+188)(98dc7600a0fc62125e291b93ca336154)#02 pc 00000000000c108c /system/lib64/libc++.so(std::__h::condition_variable::wait(std::__h::unique_lock&)+20)(9cbc937082b3d7412696099dd58f4f78242f9512)#03 pc 000000000024654c /system/lib64/platformsdk/xxx.so(mindspore::Worker::WaitUntilActive()+204)(534ce78b66262dc14658c35fa018662f)#04 pc 000000000023da14 /system/lib64/platformsdk/xxx.so(mindspore::ActorWorker::RunWithSpin()+256)(534ce78b66262dc14658c35fa018662f)#05 pc 000000000023edb0 /system/lib64/platformsdk/xxx.so(void* std::__h::__thread_proxy[abi:v15004]>, void (mindspore::ActorWorker::*)(), mindspore::ActorWorker*>>(void*)+60)(534ce78b66262dc14658c35fa018662f)#06 pc 00000000001baac0 /system/lib/ld-musl-aarch64.so.1(start+236)(98dc7600a0fc62125e291b93ca336154)........ ```
+
+ 
+## JS内存泄漏日志规格
+ **故障日志文件名：**memleak-js-[process_name]-[pid]-[tid]-[timestamp].rawheap（**方式一**）或RESOURCE_OVERLIMIT_[TIMESTAMP]_[PID].log（**方式三**）。
+
+ - 该文件记录了对象堆内存的详细信息。
+- 日志文件需要将后缀名修改为.rawheap文件，再通过[translator工具](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/rawheap-translator)转换为.heapsnapshot文件，通过DevEco Studio或浏览器打开展示，详情见[Snapshot离线导入](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ide-snapshot-basic-operations#section6760173514388)。
+- API14后，开发者可以将日志文件后缀名修改为.rawheap后，将其导入DevEco Studio并展示，详情见[Raw Heap离线导入](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ide-snapshot-basic-operations#section6760173514388)。
+
+ 
+## native内存泄漏日志规格
+**故障日志文件名：**泄漏日志获取中方式一和方式三文件名不同，方式三为RESOURCE_OVERLIMIT_[TIMESTAMP]_[PID].log，根据内容区分，方式一如下所示：
+
+ 
+### 内存采样
+ 日志文件：memleak-native-[process_name]-[pid]-sample.txt，里面展示了进程号，进程名，基线值，内存采样的情况，可以直观的观察到内存的变化情况。 展开
+| 字段 | 说明 |
+| --- | --- |
+| SoftThreshold | 系统设定的该进程基线（也可由应用自身通过setAppResourceLimit接口设置），应用内存连续五次超过进程基线即上报内存泄漏事件，单位：KB。 |
+| HardThreshold | 系统设定的进程硬门限，应用内存连续两次超过硬门限即上报内存泄漏事件，单位：KB。 |
+| PSS | 按比例计算的驻留内存大小，共享库的内存按进程数均摊（带*的时间精准计算一次进程的PSS使用量），单位：KB。 |
+| Offset | 将共享库内存均摊后的偏差：RSS + Offset = PSS（用于矫正后续不带*号的PSS估算值），单位：KB。 |
+| RSS | 进程实际驻留在物理内存中的内存总量（包含共享库占用的全部内存），单位：KB。 |
+| SwapPSS | 进程实际交换出去（即写入swap空间）的内存总量，单位：KB。 |
+| TotalPSS | 进程PSS使用量的总和，单位：KB。 |
+| AvcMem | 进程通过Avcodec_service创建编解码实例创建的内存，由Avcodec_service上报给hiview进行统计，单位：KB。 |
+| MediaMem | 进程通过Media_service接口创建的内存，由Media_service上报给hiview进行统计，单位：KB。 |
+| GPU | 进程使用GPU内存，单位：KB。 |
+| ION | 进程使用ION内存，单位：KB。 |
+| TotalMem | 进程使用的TotalPSS+ION+GPU+AvcMem+MediaMem内存的总和，单位：KB。 |
+| Level | 当前进程的泄漏等级简写。 |
+| RunningTime | 进程当前生命周期，单位：s。 |
+| Realtime | 当前采样的真实时间。 |
+
+ 收起自动换行深色代码主题复制
+```
+/*************************************************************/* ***** READ ME ***** */*************************************************************/* RSS: Resident Set Size */* PSS: Proportional Set Size */* RSS + Offset = PSS */* TotalPSS = PSS + SwapPSS */* TotalMem = TotalPSS + Av_Mem + Media_Mem + ION + GPU */* ***** Two Modes ***** */* Estimate Mode: RSS & SwapPSS is real */* Real Mode(Realtime with *): everything is real */* Media_rss:apply mem through media_service */* Avc_rss:apply mem through avcodec_service */* ~ means negligible memory(safe to ignore in analysis) */*************************************************************/* ***** Attention ***** */* Formulas about TotalMem and sub-items may change, */* please reference current annotation formula */*************************************************************
+pid: XXXXprocessName: XXXXXXSoftThreshold: 3500(KB)HardThreshold: 1024000(KB)
+Index RSS(KB) Offset(KB) PSS(KB) SwapPSS(KB) TotalPSS(KB) MediaMem(KB) AvcMem(KB) GPU(KB) ION(KB) TotalMem(KB) Level RunningTime(s) Realtime1 14668 0 14668 5500 20168 ~ ~ ~ ~ 20168 W 112 2025/04/23 12:28:022 12732 0 12732 5476 18208 ~ ~ ~ ~ 18208 W 352 2025/04/23 12:32:013 13560 0 13560 5456 19016 ~ ~ ~ ~ 19016 W 592 2025/04/23 12:36:024 13576 0 13576 5440 19016 ~ ~ ~ ~ 19016 W 832 2025/04/23 12:40:025 13576 0 13576 5440 19016 ~ ~ ~ ~ 19016 W 1072 2025/04/23 12:44:026 13584 -8320 5264 5440 10704 ~ ~ ~ ~ 10704 W 1072 *2025/04/23 12:44:027 12984 -8320 4664 5084 9748 ~ ~ ~ ~ 9748 W 1312 2025/04/23 12:48:02
+
+```
+ 
+### 内存维测
+ 日志文件：memleak-native-[process_name]-[pid]-smaps.txt 展开
+| 字段 | 说明 |
+| --- | --- |
+| RealPssMemory | 记录了realtime时刻采集的PSS值，单位：KB。 |
+| LOGGER_MEMCHECK_MEMINFO | 下方记录了整机meminfo内存信息，如MemTotal、MemFree等。 |
+| LOGGER_MEMCHECK_SMAPS_INFO | 下方记录了该进程的smaps汇总信息。 |
+| LOGGER_MEMCHECK_SAMPLE_NMD_INFO | 下方记录了该进程的两次jemalloc的申请情况（两次记录间隔5min），系统会根据两次NMD信息抓取内存栈。 |
+| LOGGER_MEMCHECK_DETIAL_INFO | 下方记录了该进程的jemalloc快照详细信息。 |
+
+ 收起自动换行深色代码主题复制
+```
+Generated by HiviewDFX @OpenHarmonyLOGGER_MEMCHECK_GERNAL_INFO pidNumber: 2017 processName: process1 PidStartTime: 1602 RealPssMemory: 83505
+*****************************LOGGER_MEMCHECK_MEMINFOMemTotal: 11332540 kBMemFree: 1686056 kB......
+LOGGER_MEMCHECK_SMAPS_INFO-------------------------------[memory]------------------------------- Shared Shared Private Private Size Rss Pss Clean Dirty Clean Dirty Swap SwapPss Counts Name2048 0 0 0 0 0 0 0 0 1 /dev/__parameters__/param_sec_dac .......
+LOGGER_MEMCHECK_SAMPLE_NMD_INFO
+ size allocated nmalloc ndalloc
+ 8 17384 511848 509675 16 129376 338438 330352 32 1138816 1026155 990567 48 3161808 1322095 1256224 64 1869376 908151 878942......
+************ endl ************
+LOGGER_MEMCHECK_SAMPLE_NMD_INFO
+ size allocated nmalloc ndalloc
+ 8 17384 511848 509675 16 129376 338438 330352 32 1138816 1026155 990567 48 3161808 1322095 1256224 64 1869376 908151 878942......
+************ endl ************
+*****************************LOGGER_MEMCHECK_PROC_INFOASHMEM_PROCESS_INFO------------------------------------------------------------------------------------------------------------------------------------------------------------------Process_name Process_ID Fd Cnode_idx Applicant_Pid Ashmem_name Virtual_size Physical_size magicXXXXX 816 22 328234 816 dev/ashmem/PolicyVolumeMap 541 4096 7************ endl ************
+******************************LOGGER_MEMCHECK_DETIAL_INFOallocated nmalloc (#/sec) ndalloc (#/sec) nrequests (#/sec) nfill (#/sec) nflush (#/sec)small: 183785560 12591759 619 10371251 510 1289491 63 1313204 64 956094 47large: 31059968 3359 0 2946 0 3359 0 3359 0 0 0total: 214845528 12595118 619 10374197 510 1292850 63 1316563 64 956094 47
+......
+bins: size ind allocated nmalloc (#/sec) ndalloc (#/sec) nrequests (#/sec) nshards curregs curslabs nonfull_slabs regs pgs util nfills (#/sec) nflushes (#/sec) nslabs nreslabs (#/sec) n_lock_ops (#/sec) n_waiting (#/sec) n_spin_acq (#/sec) n_owner_switch (#/sec) total_wait_ns (#/sec) max_wait_ns max_n_thds8 0 198920 163820 8 138955 6 119703 5 1 24865 56 19 512 1 0.867 6526 0 4008 0 96 26995 1 10990 0 0 0 0 0 1226 0 0 0 0 016 1 1802688 1143707 56 1031039 50 221165 10 1 112668 563 309 256 1 0.781 105471 5 82548 4 1942 80503 3 191126 9 0 0 14 0 4316 0 0 0 0 032 2 9954560 1867465 91 1556385 76 267993 13 1 311080 2614 503 128 1 0.929 177825 8 136745 6 7713 176923 8 325128 15 2 0 52 0 8139 0 0 0 0 148 3 35382816 3763756 185 3026614 148 300952 14 1 737142 2953 220 256 3 0.975 371881 18 283650 13 12022 60637 2 667997 32 2 0 17 0 2725 0 0 0 0 1......
+```
+ 说明“LOGGER_MEMCHECK_SAMPLE_NMD_INFO”与“LOGGER_MEMCHECK_DETIAL_INFO”均为进程jemalloc快照，区别在于：
+
+ 1. LOGGER_MEMCHECK_SAMPLE_NMD_INFO：单次维测连续采样2次，间隔为5分钟，内容包含size、allocated、nmalloc、ndalloc等四列内存申请相关信息；
+
+ 2. LOGGER_MEMCHECK_DETIAL_INFO：单次维测仅采样1次，内容包含进程jemalloc的完整信息。
+
+ 
+### 内存栈
+ **栈信息日志文件：**memleak-native-[process_name]-[pid]-[timestamp].txt- 检测到泄漏后抓取**15min内的进程内存trace**，可将日志如下图通过Open File加载到DevEco Studio进行解析。 注意系统自动抓的调用栈（memleak-native-[process_name]-[pid]-[timestamp].txt）**无法直接在DevEco Studio打开，需要修改后缀名为.nas**。
+- **All Heap：**选择后展示抓取15分钟内的内存情况，记录了hook malloc等系统调用的堆栈。Native日志是以so+偏移的形式展示调用栈（每一行表示一次内存分配行为调用栈），需要结合符号表进一步分析。点击Call Trees可以查看抓取进程的调用栈，筛选“Created & Existing”，根据没有释放的内存占比排序，展开可查看详细进程调用信息，优先排查内存占用较高的堆栈。 说明1. 部分栈单看Existing可能感觉泄漏不大或者和检测到的内存峰值相差很多，但是栈里只是抓取的是15分钟内的堆栈信息和内存申请，很多进程泄漏是以几十甚至几百小时为单位的，长时间的泄漏达到上报时的泄漏大小。
+- **All Anonymous VM：**选择后记录了当前hook mmap系统调用的堆栈信息。同样选择“Created & Existing”，表示在hook抓取内存申请未释放的。长度越长代表在剩余内存中占用越多，优先排查。
+
+ 
+## ashmem/ion/gpu/gpu_rs内存泄漏日志规格
+ 
+### 内存采样
+ - 日志文件：memleak-kernel-[module]-0-sample.txt（**方式一**）或 RESOURCE_OVERLIMIT_[TIMESTAMP]_[PID].log（**方式三**）。 展开 | 字段 | 说明 | | --- | --- | | memoryName | 内核内存类型，如果发现进程存在泄漏（超过系统设定基线），会显示为该泄漏进程的进程名；如果memoryName打印类型为：ashmem/gpu/ion，则说明无进程泄漏。 | | softThreshold | 系统设定的软门限（超过8个采样周期，即30+分钟超过软门限后判定泄漏），单位：KB。 | | hardThreshold | 系统设定的硬门限（单次超过硬门限后判定泄漏），单位：KB。 | | topMemory | 检测到的内核内存峰值，单位：KB。 | 收起自动换行深色代码主题复制 ``` memoryName:gpusoftThreshold:2300(MB)hardThreshold:3450(MB)topMemory:4876824(KB)time(s) kernelMemory(KB)realtime247681 4876824 2024/06/24 08:27:52 ```
+
+ 
+### 内存维测
+ 日志文件：memleak-kernel-[module]-0-[timestamp].txt**（方式一）**
+
+ 展开
+| 字段 | 说明 | LOGGER_MEMCHECK_MEMINFO | 整机内存信息概览。 |
+| --- | --- | --- | --- |
+| LOGGER_MEMCHECK_PROC_INFO | ashmem/ion/gpu对应泄漏内存节点信息打印（泄漏类型不同，落盘内容不同）。 |
+| LOGGER_PROCESS_DMABUF_INFO | ion内存泄漏时获取的特殊节点内容，包含更多的内存块使用信息。 |
+| LOGGER_MEMCHECK_RENDER_SERVICE_MEM | Render_service进程的内存使用情况。 |
+
+ 检测到ashmem/gpu/ion内存泄漏时，会抓取整机ashmem/gpu/ion内存信息，ashmem/ion与句柄泄漏ashmem/dmabuf日志规格相同，参考ashmem/dmabuf类型句柄。
+
+ 日志抬头：
+
+ 收起自动换行深色代码主题复制
+```
+Generated by HiviewDFX @OpenHarmonyLOGGER_MEMCHECK_GERNAL_INFOmemoryName:ionsoftThreshold:2800(MB)hardThreshold:4200(MB)appHardThreshold:4096(MB)topMemory:0(KB)
+*****************************LOGGER_MEMCHECK_MEMINFOMemTotal: 11738500 kBMemFree: 116204 kBMemAvailable: 95232 kBBuffers: 0 kB
+```
+ 日志文件内“LOGGER_MEMCHECK_PROC_INFO”会根据内存泄漏类型不同，落盘对应的内存信息，具体如下：
+
+ - ashmem内存泄漏：收起自动换行深色代码主题复制 ``` LOGGER_MEMCHECK_PROC_INFOrealtime: 2025/05/30 19:52:42Process ashmem overview info:---------------------------------------------------------------------------------Process_name Virtual_size Physical_sizeTotal ashmem of [XXXXXX] virtual size is 541, physical size is 4096Total ashmem of [XXXXXX] virtual size is 299008, physical size is 299008Total ashmem of [XXXXXX] virtual size is 37574896, physical size is 37470208......Process ashmem detail info:---------------------------------------------------------------------------------Process_name Process_ID Fd Cnode_idx Applicant_Pid Ashmem_name Virtual_size Physical_size magicXXXXX 816 22 328234 816 dev/ashmem/PolicyVolumeMap 541 4096 7......---------------------------------------------------------------------------------*****************************LOGGER_MEMCHECK_RENDER_SERVICE_MEMget info realtime: 2025/05/30 19:52:42 -------------------------------[ability]------------------------------- ----------------------------------RenderService----------------------------------...... ```
+- ion内存泄漏：收起自动换行深色代码主题复制 ``` *****************************LOGGER_MEMCHECK_PROC_INFOMM_DMABUF_INFOrealtime: 2025/07/26 14:19:58Process pid fd size_bytes ino exp_pid exp_task_comm buf_name exp_name buf_type process1 1563 71 13926400 25690 11187 allocator_host 11563 mm_heap_helpers xcomponent process1 1563 75 1024000000 21095 11187 allocator_host 11563 mm_heap_helpers NULL process1 1563 77 1024000000 11557 11187 allocator_host 11563 mm_heap_helpers NULL process1 1563 79 1024000000 26747 11187 allocator_host 11563 mm_heap_helpers NULL ************ endl ************ *****************************LOGGER_MEMCHECK_RENDER_SERVICE_MEM get info realtime: 2025/05/30 21:17:39 -------------------------------[ability]------------------------------- ----------------------------------RenderService----------------------------------...... ``` 从HarmonyOS6.0.0开始，ion内存维测信息增加buf_name、leak_type等列，变更为以下形式：收起自动换行深色代码主题复制 ``` *****************************LOGGER_MEMCHECK_PROC_INFOMM_DMABUF_INFOProcess pid fd size_bytes ino exp_pid exp_task_comm buf_name exp_name buf_type leak_typeprocess1 65141 246 278528 432510 42829 allocator_host 65141 mm_heap_helpers NULL NULLprocess1 65141 247 266240 434225 42829 allocator_host 65141 mm_heap_helpers NULL NULLprocess1 65141 248 274432 430933 42829 allocator_host 65141 mm_heap_helpers NULL NULLprocess1 65141 250 274432 432498 42829 allocator_host 65141 mm_heap_helpers NULL NULLprocess1 65141 252 274432 430934 42829 allocator_host 65141 mm_heap_helpers NULL NULLprocess1 65141 254 274432 430935 42829 allocator_host 65141 mm_heap_helpers NULL NULLprocess1 65141 256 274432 431688 42829 allocator_host 65141 mm_heap_helpers NULL NULLprocess1 65141 258 274432 432499 42829 allocator_host 65141 mm_heap_helpers NULL NULLprocess1 65141 260 274432 426987 42829 allocator_host 65141 mm_heap_helpers NULL NULLprocess1 65141 262 274432 431689 42829 allocator_host 65141 mm_heap_helpers NULL NULLprocess1 65141 264 274432 432500 42829 allocator_host 65141 mm_heap_helpers NULL NULLprocess1 65141 266 274432 426988 42829 allocator_host 65141 mm_heap_helpers NULL NULLprocess1 65141 268 274432 430936 42829 allocator_host 65141 mm_heap_helpers NULL NULL************ endl ************ ``` 字段说明： 展开 | 字段 | 说明 | | --- | --- | | Process | 持有ION内存块的应用进程包名（16个字符截断）。 | | pid | 发生故障进程pid。 | | fd | 进程持有的句柄。 | | size_bytes | 进程持有的ION内存buffer大小，单位：B。 | | ino | 文件inode号（索引节点号）。 | | exp_pid | 从内核申请ION内存的进程pid。 | | exp_task_comm | 从内核申请ION内存的进程名。 | | buf_name | ION内存的buffer名字。 | | exp_name | ION内存的buffer扩展名。 | | buf_type | ION内存的buffer类型。 | | leak_type | ION内存泄漏维测的buffer类型。 |
+- gpu/gpu_rs内存泄漏：收起自动换行深色代码主题复制 ``` LOGGER_MEMCHECK_PROC_INFOGPU_PROCESS_INFOrender_servicectx_1 1689 1455 used summary:3362426880 grow:0 driver:10432512 kmd:3260416 jit:131072process1Channel: xx default device (Total memory: 730594) 1: 2 / 2 6: 4 / 160 7: 6 / 384 8: 163 / 20928 9: 1573 / 604160 10: 48 / 24576 11: 2 / 2048 13: 2 / 12800 15: 4 / 65536...... *****************************LOGGER_MEMCHECK_RENDER_SERVICE_MEMget info realtime: 2025/05/30 21:16:01 -------------------------------[ability]------------------------------- ----------------------------------RenderService---------------------------------- ```
+
+ 说明1. gpu_rs内存泄漏与gpu泄漏的区别在于：gpu是应用自渲染发生的泄漏，gpu_rs是通过进程render_service进行统一渲染发生的泄漏。
+
+ 2. 在资源泄漏资料中，ion、dmaheap、dmabuf 可理解为同一种内存类型，不作强区分。
+
+ 3. 当前日志规格不代表维测的最终形态，后续会根据版本问题以及用户原声增加维测信息，变更形式包括但不限于行、列、段落等。
+
+ 
+### 内存栈
+从HarmonyOS 6.0.0开始，支持抓取gpu内存申请的调用栈以分析进程gpu泄漏问题。检测到泄漏后会收集15分钟内的gpu内存申请trace，开发者可本地搭建[Smartper](https://gitcode.com/openharmony-sig/smartperf)f环境并导入Profiler日志进行解析。
+
+ 日志文件名称：memleak-kernel-[module]-[pid]-[timestamp].txt

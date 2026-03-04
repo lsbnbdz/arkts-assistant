@@ -1,0 +1,83 @@
+{
+  "doc-subg7i": {
+    "title": "媒体开发概览",
+    "headings": [
+      "媒体开发概览",
+      "媒体系统架构",
+      "媒体应用开发综述",
+      "相机预览",
+      "相机拍照",
+      "视频播放",
+      "视频录制",
+      "视频投播",
+      "音频播放",
+      "音频采集",
+      "音频录制",
+      "媒体资源的选择和保存",
+      "隐私安全",
+      "更多资源"
+    ],
+    "preview": "媒体开发概览 HarmonyOS提供丰富的一站式媒体业务开放能力，开发者能够在系统上快速开发主流的媒体业务，满足常规高频使用场景，并提供优秀的性能表现。 媒体系统架构 媒体系统架构提供用户视觉、听觉信息的处理能力，例如音视频信息的采集、编码存储、解码播放等。操作系统实现中，根据不同的媒体信息处理内容，将媒体划分为不同的模块，包括音频、视频、图片等。 媒体系统面向应用开发提供音视频应用、图库应用、相机应用的编程框架接口；面向设备开发提供对接不同硬件芯片的适配加速功能；中间以服务形式提供媒体核心功能和管理机制。",
+    "char_count": 19622,
+    "image_count": 0,
+    "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/multimedia-development-overview",
+    "path": "",
+    "rel_path": "guide/媒体/媒体开发概览.txt",
+    "catalog": "媒体",
+    "objectId": "doc-subg7i",
+    "nodeName": "document",
+    "keywords": [
+      "camera",
+      "Kit",
+      "Camera",
+      "Media",
+      "媒体开发概览",
+      "媒体系统",
+      "Audio",
+      "Image",
+      "preview",
+      "native",
+      "媒体业务",
+      "开发提供",
+      "DRM",
+      "能力",
+      "服务",
+      "媒体"
+    ]
+  },
+  "doc-f121lu": {
+    "title": "使用HDR Vivid特性开发媒体应用",
+    "headings": [
+      "使用HDR Vivid特性开发媒体应用",
+      "HDR Vivid视频",
+      "HDR Vivid图片"
+    ],
+    "preview": "使用HDR Vivid特性开发媒体应用 HDR Vivid是UWA认证的动态HDR视频标准，在HarmonyOS平台上，开发者能够利用HDR Vivid的特性，开发媒体类应用，为用户呈现高动态范围和广色域的视觉体验。作为新一代高动态范围图像标准，HDR Vivid贯穿内容创作、平台支持和设备显示，为用户带来更宽广的色彩范围、更细腻的层次表现、更显著的明暗对比，以及更智能的动态元数据处理，助力用户领略世界的真实色彩。",
+    "char_count": 1100,
+    "image_count": 0,
+    "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/multimedia-hdr-vivid",
+    "path": "",
+    "rel_path": "guide/媒体/使用HDR Vivid特性开发媒体应用.txt",
+    "catalog": "媒体",
+    "objectId": "doc-f121lu",
+    "nodeName": "document",
+    "keywords": [
+      "HDR",
+      "Image",
+      "Vivid",
+      "Kit",
+      "Camera",
+      "Media",
+      "特性开发媒体应用",
+      "转换",
+      "Harmony",
+      "OS",
+      "标准",
+      "AVC",
+      "odec",
+      "UWA",
+      "特性开发",
+      "媒体"
+    ]
+  }
+}

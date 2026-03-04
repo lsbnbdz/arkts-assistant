@@ -1,0 +1,7 @@
+# [调测接口](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-debugging-apis)
+
+- **[DumpTensor](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-commissioning-interfaces-dumptensor)**
+ - **[printf](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-commissioning-interfaces-printf)**
+ - **[assert](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-commissioning-interfaces-assert)**
+ - **[DumpAccChkPoint](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-commissioning-interfaces-dumpaccch)**
+ - **[Trap](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-trap)**

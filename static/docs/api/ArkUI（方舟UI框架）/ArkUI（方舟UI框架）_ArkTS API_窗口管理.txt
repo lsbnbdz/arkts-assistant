@@ -1,0 +1,1 @@
+[@ohos.PiPWindow (画中画窗口)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-pipwindow)  [@ohos.window.floatingBall (闪控球窗口)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-floatingball)  [@ohos.window (窗口)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-window)

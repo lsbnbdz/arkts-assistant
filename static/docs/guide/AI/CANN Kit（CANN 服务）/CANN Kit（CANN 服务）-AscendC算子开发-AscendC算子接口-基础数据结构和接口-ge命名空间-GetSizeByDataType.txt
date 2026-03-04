@@ -1,0 +1,37 @@
+# [GetSizeByDataType](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getsizebydatatype)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119177093_section108095mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119177093_section108098mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119177093_section108102mcpsimp)
+- [返回值](#zh-cn_topic_0000002119177093_section108127mcpsimp)
+- [异常处理](#zh-cn_topic_0000002119177093_section108130mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119177093_section108133mcpsimp)
+
+## 函数功能
+根据传入的data_type，获取该data_type所占用的内存大小。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+inline int GetSizeByDataType(DataType data_type)
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| data_type | 输入 | 数据类型，请参见DataType。 |
+
+ 
+## 返回值
+该data_type所占用的内存大小（单位为bytes），如果传入非法值或不支持的数据类型，返回-1。
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

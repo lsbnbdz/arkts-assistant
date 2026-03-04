@@ -1,0 +1,40 @@
+# [GetInt](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getint)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119177229_section91827mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119177229_section91830mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119177229_section91834mcpsimp)
+- [返回值](#zh-cn_topic_0000002119177229_section91857mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119177229_section91860mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119177229_section91863mcpsimp)
+
+## 函数功能
+获取int类型的属性值。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+const int64_t *GetInt(const size_t index) const
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| index | 输入 | 属性在IR原型定义中以及在OP_IMPL注册中的索引。 |
+
+ 
+## 返回值
+指向属性值的指针。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+const RuntimeAttrs * runtime_attrs = kernel_context->GetAttrs(); const int64_t *attr0 = runtime_attrs->GetInt(0);
+```

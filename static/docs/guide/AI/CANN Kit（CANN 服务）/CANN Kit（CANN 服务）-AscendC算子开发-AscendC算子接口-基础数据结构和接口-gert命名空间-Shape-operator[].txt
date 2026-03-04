@@ -1,0 +1,41 @@
+# [operator[]](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-operatorc)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083776734_section92356mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083776734_section92359mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083776734_section92365mcpsimp)
+- [返回值](#zh-cn_topic_0000002083776734_section92388mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083776734_section92393mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083776734_section92396mcpsimp)
+
+## 函数功能
+获取指定index轴的dim值。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+const int64_t &operator[](size_t idx) constint64_t &operator[](size_t idx)
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| idx | 输入 | dim的index，调用者需要保证index合法。 |
+
+ 
+## 返回值
+- const int64_t &operator[](size_t idx) const：dim值，在idx>=kMaxDimNum时，行为未定义。
+- int64_t &operator[](size_t idx)：dim值，在idx>=kMaxDimNum时，行为未定义。
+
+ 
+## 约束说明
+调用者需要保证index合法，即idx<kMaxDimNum。
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+Shape shape0({3, 256, 256}); auto dim0 = shape0[0]; // 3 auto dim5 = shape0[5]; // 5 auto invalid_dim = shape0[kMaxDimNum]; // 行为未定义
+```

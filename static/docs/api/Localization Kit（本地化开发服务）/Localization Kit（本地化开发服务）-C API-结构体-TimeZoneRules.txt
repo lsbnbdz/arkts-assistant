@@ -1,0 +1,34 @@
+# [TimeZoneRules](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-i18n-timezonerules)
+
+## 目录
+- [概述](#概述)
+- [汇总](#汇总)
+  - [成员变量](#成员变量)
+
+收起自动换行深色代码主题复制
+```
+typedef struct TimeZoneRules {...} TimeZoneRules
+```
+ 
+## 概述
+PhonePC/2in1TabletTVWearable完整的时区规则。
+
+ **起始版本：** 22
+
+ **相关模块：** [i18n](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-i18n)
+
+ **所在头文件：** [timezone.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-timezone-h)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| InitialTimeZoneRule initial | 起始时区规则。 |
+| TimeArrayTimeZoneRule* timeArrayRules | 起始时间戳数组定义的时区规则数组。 |
+| AnnualTimeZoneRule* annualRules | 每年生效的时区规则数组。 |
+| size_t numTimeArrayRules | 起始时间戳数组定义的时区规则数组的大小。 |
+| size_t numAnnualRules | 每年生效的时区规则数组的大小。 |

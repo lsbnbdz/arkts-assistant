@@ -1,0 +1,38 @@
+# [SubgraphCountRegister](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-subgraphcountregister)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083616650_section102368mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083616650_section102371mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083616650_section102375mcpsimp)
+- [返回值](#zh-cn_topic_0000002083616650_section102405mcpsimp)
+- [异常处理](#zh-cn_topic_0000002083616650_section102408mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083616650_section102411mcpsimp)
+
+## 函数功能
+子图注册。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+void SubgraphCountRegister(const char_t *ir_name, uint32_t count);
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| ir_name | 输入 | 子图名称。 |
+| count | 输入 | 动态个数子图场景（子图数量不固定），注册count个数的子图，子图名称是ir_name_0 ~ ir_name_n， n < count。 |
+
+ 
+## 返回值
+无
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

@@ -1,0 +1,44 @@
+# [GetWorkspaceSizes](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getworkspacesizes)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119256681_section95264mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119256681_section95267mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119256681_section95271mcpsimp)
+- [返回值](#zh-cn_topic_0000002119256681_section95294mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119256681_section95297mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119256681_section95300mcpsimp)
+
+## 函数功能
+获取workspace sizes指针。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+size_t *GetWorkspaceSizes(const size_t workspace_count);
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| workspace_count | 输入 | workspace的个数，传入的workspace个数不可以超过编译时指定的最大workspace个数。 |
+
+ 
+## 返回值
+workspace sizes指针。
+
+ 
+## 约束说明
+传入的workspace个数不可以超过编译时指定的最大workspace个数。
+
+ 当前Kirin9020支持的最大的workspace是8个。
+
+ 当前KirinX90支持的最大的workspace是8个。
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+ge::graphStatus Tiling4XXX(TilingContext* context) { auto ws = context->GetWorkspaceSizes(5); // ... }
+```

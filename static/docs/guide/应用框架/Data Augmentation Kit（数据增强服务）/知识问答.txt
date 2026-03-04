@@ -1,0 +1,86 @@
+## 约束限制
+                知识问答需要先对数据源库进行知识加工生成知识库，否则无法问答。      [createRagSession](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-rag-api#section14201103320529)以及[streamRun](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-rag-api#section178721756950)不支持多线程调用。      当前仅支持中文提问（可夹带英文字符），提问长度限制在1000个字符内（UTF-8下一个汉字占3个字符）。      用户问答时，RAG可使用的历史记录范围为最近8次问答内容。      RAG在检索召回时最多返回600个chunk。      RAG不提供敏感词风控检测能力，开发者需要自行对用户输入内容和RAG返回内容进行敏感词风控检测。      开发者选择的LLM应至少支持30000个Tokens，例如Qwen2.5-7B，Mistral-7B-Instruct-v0.2，Llama-3.1-8B等。当上下文长度超过30000个Tokens时，开发者需要提示用户当前历史记录拼接过长，无法正常回答，需重启服务。      LLM由开发者自行选择，问答支持的语言受选择的LLM影响。                  
+## 接口说明
+          知识问答关键接口如下表所示，具体API说明详见[API参考](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-rag-api)。
+
+|  接口名 |  描述 |
+| --- | --- |
+|  abstract streamChat(query: string, callback: Callback<LLMStreamAnswer>): Promise<LLMRequestInfo> |  继承ChatLLM类实现大模型客户端时需要实现的函数。RAG在检索前的问题预处理、检索后的回答生成时，会调用这个函数与大语言模型交互。 |
+|  createRagSession(context: common.Context, config: Config): Promise<RagSession> |  获得一个会话用于进行知识问答。 |
+|  streamRun(question: string, config: RunConfig, callback: AsyncCallback<Stream>): Promise<number> |  知识问答接口，传入问题以及问答配置项。当RAG生成问题结果时，触发callback回调函数来流式传递数据。 |
+
+        注意      上述接口需在页面或自定义组件生命周期内调用。
+
+## 开发准备
+                申请网络权限。[streamChat](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-rag-api#section157381918121212)中需要开发者实现与LLM交互的功能，因此需要为应用申请网络权限。       收起自动换行深色代码主题复制
+```
+// module.json5中配置"requestPermissions"字段// src/main/module.json5"requestPermissions": [  {    "name": "ohos.permission.INTERNET"  }],
+```
+      完成知识加工配置。请参考[知识加工](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/data-augmentation-knowledge-processing)。                  
+## 开发步骤
+          下面仅对关键步骤关键代码进行说明，详细开发案例请参考[示例代码](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/data-augmentation-rag-demo)。应用的一次流式问答过程，和RagSession、ChatLLM、知识库的交互流程，可参考[流式问答调用流程图](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/data-augmentation-rag-development#section1350294615400)。应用只需关注RagSession和ChatLLM两部分即可。
+
+           kit导入。       
+
+       收起自动换行深色代码主题复制
+```
+import { rag } from '@kit.DataAugmentationKit';
+```
+
+创建http工具类，用以和大模型交互，用户也可选择webSocket（可参考[Network Kit](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/network-api-arkts)）或者其他方式与大模型交互。       
+
+               一般包括如下三个环节：                 拼装和大模型交互的请求报文，推荐为流式交互，以获得更好用户体验。         注册大模型的数据接收及输出结束的回调函数，以达到流式访问大模型的效果。         初始化大模型以及向大模型发送请求。                      收起自动换行深色代码主题复制
+```
+import { http } from '@kit.NetworkKit';import { hilog } from '@kit.PerformanceAnalysisKit';
+const TAG = "HttpUtils";
+class HttpUtils {  httpRequest: http.HttpRequest | null = null;  url: string =    "https://******"; // 开发者需要根据选择的LLM对应修改url以及下面的model  isFinished: boolean = false;  // 拼装和大模型交互的请求报文，注意推荐为流式交互，以获得更好用户体验。  initOption(question: string) {    let option: http.HttpRequestOptions = {      // 请求方式      method: http.RequestMethod.POST,      // 请求头      header: {        "Content-Type": "application/json",        "Authorization": "sk-2***c", // 脱敏处理        "X-DashScope-SSE": "enable"      },      // 请求体      extraData: {        "model": "q******t",  // 脱敏处理        "stream": true,        "stream_options": { "include_usage": true },        "input": {          "messages": JSON.parse(question)        },        "parameters": {          "result_format": "message",          "incremental_output": true        }      }    };    return option;  }  // 拼装流式请求的option并发起流式请求  async requestInStream(question: string) {     if (this.httpRequest == null) {      this.httpRequest = http.createHttp();    }    try {      await this.httpRequest.requestInStream(this.url, this.initOption(question));      this.isFinished = false;      hilog.info(0, TAG, 'HttpUtils requestInStream leave.');    } catch (e) {      hilog.error(0, TAG, 'HttpUtils requestInStream error, err: ' + JSON.stringify(e));    }  }  // 注册数据接受、数据结束的监听  on(callback: Callback<ArrayBuffer>, endCallback: Callback<void>) {     if (this.httpRequest == null) {      this.httpRequest = http.createHttp();    }    this.httpRequest.on("dataReceive", callback);    this.httpRequest.on('dataEnd', endCallback);  }}
+export default new HttpUtils;
+```
+
+继承实现[ChatLLM](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-rag-api#section1400115191116)类及其中的[streamChat](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-rag-api#section157381918121212)函数，在此函数中与大模型进行交互，并将大模型返回结果通过callback函数返回给RagSession。       
+
+       收起自动换行深色代码主题复制
+```
+import { rag } from '@kit.DataAugmentationKit';import { hilog } from '@kit.PerformanceAnalysisKit';import HttpUtils from './HttpUtils'
+const TAG = "MyChatLLM";
+export default class MyChatLLM extends rag.ChatLLM {  async streamChat(query: string, callback: Callback<rag.LLMStreamAnswer>): Promise<rag.LLMRequestInfo> {    let ret = rag.LLMRequestStatus.LLM_SUCCESS;    try {      // 接收大模型数据的回调函数，解析数据并组装LLMStreamAnswer，通过callback回调将数据发送到RagSession      let dataCallback = async (data: ArrayBuffer) => {         hilog.debug(0, TAG, 'on callback enter. data length: %{public}d', data.byteLength);        let chunk: string = "Current chunk";  // 请开发者根据实际报文解析chunk，这里不作过多说明        let isFinished: boolean = false;  // 请开发者根据实际报文解析是否为最后一个回复，这里不作过多说明        let answer: rag.LLMStreamAnswer = {          isFinished: isFinished,          chunk: chunk        }        HttpUtils.isFinished = isFinished;        // 调用callback函数，将从大模型得到的数据传递到RagSession        callback(answer);      };
+      HttpUtils.on(dataCallback, (() => {}));      HttpUtils.requestInStream(query);    } catch (err) {      hilog.error(0, TAG, `Request llm failed, error code: ${err.code}, error message: ${err.message}`);      ret = rag.LLMRequestStatus.LLM_REQUEST_ERROR;  // 开发者可判断错误码从而返回其他大模型错误码    }    return {      chatId: 0,      status: ret,    };  }  cancel(chatId: number): void {    hilog.info(0, TAG, `The request for the large model has been canceled. chatId: ${chatId}`);  }}
+```
+
+创建[Config](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-rag-api#section1033315317182)配置中的属性。下面简要介绍几个主要参数，全量配置字段的含义见[智慧化数据检索](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/dataaugmentation-retrieval)中的说明。       
+
+               [RetrievalConfig](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-retrieval-api#section95236010016)主要配置知识库的数据库配置。[知识加工](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/data-augmentation-knowledge-processing#section13189205451011)将会生成向量及倒排两种知识库表。         收起自动换行深色代码主题复制
+```
+import { common } from '@kit.AbilityKit';import { retrieval } from '@kit.DataAugmentationKit';import { relationalStore } from '@kit.ArkData';
+let storeConfigVector: relationalStore.StoreConfig = {  name: "testmail_store_vector.db", // 知识加工后向量数据库文件名，在原数据库名基础上加_vector后缀  securityLevel: relationalStore.SecurityLevel.S3,  vector: true  // 向量数据库应设置该项为true};
+let storeConfigInvIdx: relationalStore.StoreConfig = {  name: "testmail_store.db", // 知识加工后，倒排数据库即原数据库  securityLevel: relationalStore.SecurityLevel.S3,  tokenizer: relationalStore.Tokenizer.CUSTOM_TOKENIZER};
+let context = AppStorage.get<common.UIAbilityContext>("Context") as common.UIAbilityContext;let channelConfigVector: retrieval.ChannelConfig = {  channelType: retrieval.ChannelType.VECTOR_DATABASE,  context: context,  dbConfig: storeConfigVector}let channelConfigInvIdx: retrieval.ChannelConfig = {  channelType: retrieval.ChannelType.INVERTED_INDEX_DATABASE,  context: context,  dbConfig: storeConfigInvIdx}// 最终创建成功的RetrievalConfig数据let retrievalConfig: retrieval.RetrievalConfig = {  channelConfigs: [channelConfigInvIdx, channelConfigVector]}
+```
+        [RetrievalCondition](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-retrieval-api#section4881955192413)主要配置检索条件及多路召回之后的排序配置。其中fromClause为查询目标索引名，可按照如下示例代码配置为业务数据库表及知识加工产生的数据库表联合形成的虚拟表；responseColumns为召回的字段集合，范围为fromClause配置的数据库表中的列。关于知识库的数据库表结构可参见：[表1](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/data-augmentation-knowledge-processing#table1186182016388)、[表2](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/data-augmentation-knowledge-processing#table57920393405)。         收起自动换行深色代码主题复制
+```
+import { retrieval } from '@kit.DataAugmentationKit';
+let recallConditionInvIdx: retrieval.InvertedIndexRecallCondition = {  ftsTableName: "email_inverted",  // 使用id（原始数据库表主键，配置在知识加工schema中）和reference_id（知识库表中的字段）关联原始数据库表及知识库的表，增加检索及召回数据范围  fromClause: "select email_inverted.reference_id as rowid, * from email INNER JOIN email_inverted ON email.id = email_inverted.reference_id;",  primaryKey: ["chunk_id"],  // 配置范围为fromClause配置的数据库表中的列，超出范围会导致检索失败。  responseColumns: ["reference_id", "chunk_id", "chunk_source", "chunk_text", "subject", "image_text",    "attachment_names"],  deepSize: 500,  recallName: 'invertedvectorRecall',}let floatArray = new Float32Array(128).fill(0.1);let vectorQuery: retrieval.VectorQuery = {  column: "repr",  value: floatArray,  similarityThreshold: 0.1}let recallConditionVector: retrieval.VectorRecallCondition = {  vectorQuery: vectorQuery,  // 只配置知识库的向量表作为查询目标  fromClause: "email_vector",  primaryKey: ["id"],  // 配置知识库的向量表中的列作为召回列  responseColumns: ["reference_id", "chunk_id", "chunk_source", "repr"],  recallName: "vectorRecall",  deepSize: 500}let rerankMethod: retrieval.RerankMethod = {  rerankType: retrieval.RerankType.RRF,  isSoftmaxNormalized: true,}// 最终创建成功的RetrievalCondition数据let retrievalCondition: retrieval.RetrievalCondition = {  rerankMethod: rerankMethod,  recallConditions: [recallConditionInvIdx, recallConditionVector],  resultCount: 5}
+```
+        完成Config数据的构造。[ChatLLM](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-rag-api#section1400115191116)参数则使用步骤3继承实现的ChatLLM的自定义的类的实例。         收起自动换行深色代码主题复制
+```
+import { rag } from "@kit.DataAugmentationKit";
+let config: rag.Config = {  llm: new MyChatLlm(), // 来源参考步骤3示例代码  retrievalConfig: retrievalConfig, // 来源参考当前步骤RetrievalConfig代码示例  retrievalCondition: retrievalCondition  // 来源参考当前步骤RetrievalCondition代码示例}
+```
+
+创建RagSession。       
+
+       收起自动换行深色代码主题复制
+```
+import { UIAbility } from '@kit.AbilityKit';import { rag } from '@kit.DataAugmentationKit';import { hilog } from '@kit.PerformanceAnalysisKit';import { BusinessError } from '@kit.BasicServicesKit';
+// 创建RagSession并存入APP上下文中rag.createRagSession(this.context, config).then((data) => {  // config来源参考步骤4代码示例  const session = data;  AppStorage.setOrCreate<rag.RagSession>("RagSessionObject", data);}).catch((err: BusinessError) => {  hilog.error(DOMAIN, 'testTag', `createRagSession failed, code is ${err.code},message is ${err.message}.`);})
+```
+
+使用步骤5创建的RagSession的streamRun()函数进行问答。       
+
+               answerTypes属性用来指定流式输出的数据类型（[StreamType](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-rag-api#section172106569558)），当前示例代码配置了三种数据类型，所以最终streamRun()函数的callback回调函数将会输出这三种类型的数据。        streamRun()函数以增量流式的方式输出数据，所以需要开发者自行对结果进行拼接。              收起自动换行深色代码主题复制
+```
+import { UIAbility } from '@kit.AbilityKit';import { rag } from '@kit.DataAugmentationKit';import { BusinessError } from '@kit.BasicServicesKit';import { hilog } from '@kit.PerformanceAnalysisKit';
+// 获取创建的RagSessionlet session: rag.RagSession = AppStorage.get<rag.RagSession>("RagSessionObject") as rag.RagSession;let config: rag.RunConfig = {  // 指定流式输出的输出类型  answerTypes: [ rag.StreamType.THOUGHT, rag.StreamType.REFERENCE, rag.StreamType.ANSWER ]};let outputStr: string = "";// 发起提问session.streamRun("此处填入具体问题", config, ((err: BusinessError, stream: rag.Stream) => {  // 接收答案的callback回调，处理答案信息  if (err) {    outputStr = `streamRun inner failed. code is ${err.code}, message is ${err.message}`;  } else {    outputStr += stream.answer.chunk;    if (stream.isFinished) {      outputStr += "回答结束。";    }  }})).then((data) => {  hilog.info(0, 'Index', 'runId: %{public}d', data);}).catch((e: BusinessError) => {  outputStr = `streamRun failed. code is ${e.code}, message is ${e.message}`;});
+```
+
+## 流式问答调用流程图

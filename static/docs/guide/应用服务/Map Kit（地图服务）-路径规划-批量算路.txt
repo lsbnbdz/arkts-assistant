@@ -1,0 +1,76 @@
+# [批量算路](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/map-navi-matrix)
+
+## 目录
+- [场景介绍](#section116043716599)
+- [接口说明](#section580151719517)
+- [开发步骤](#section5687134810210)
+  - [驾车批量算路](#section6999340171913)
+  - [步行批量算路](#section0606318202)
+  - [骑行批量算路](#section101731928102010)
+
+## 场景介绍
+ 多个起点到多个终点的批量算路功能，在驾车、步行、骑行模式下，快速批量计算多个起点分别到多个终点的路线距离和耗时。
+
+ 
+## 接口说明
+ 以下是路径规划功能相关接口，主要由[navi](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-navi-api)命名空间下的方法提供，更多接口及使用方法请参见[接口文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-navi-api)。
+
+ 展开
+| 接口名 | 描述 |
+| --- | --- |
+| getDrivingMatrix(params: DrivingMatrixParams): Promise | 驾车批量算路。 |
+| getDrivingMatrix(context: common.Context, params: DrivingMatrixParams): Promise | 驾车批量算路。支持传入Context上下文。 |
+| getWalkingMatrix(params: MatrixParams): Promise | 步行批量算路。 |
+| getWalkingMatrix(context: common.Context, params: MatrixParams): Promise | 步行批量算路。支持传入Context上下文。 |
+| getCyclingMatrix(params: MatrixParams): Promise | 骑行批量算路。 |
+| getCyclingMatrix(context: common.Context, params: MatrixParams): Promise | 骑行批量算路。支持传入Context上下文。 |
+| DrivingMatrixParams | 驾车批量算路的参数。 |
+| MatrixParams | 步行、骑行批量算路的参数。 |
+| MatrixResult | 批量算路的结果。 |
+
+ 
+## 开发步骤
+ 导入相关模块。 收起自动换行深色代码主题复制
+```
+import { navi } from '@kit.MapKit';import { BusinessError } from '@kit.BasicServicesKit';
+```
+ 
+### 驾车批量算路
+ 根据多组起终点坐标批量检索符合条件的驾车路径规划方案。支持以下功能：
+
+ - 支持未来出行规划。
+ - 支持根据实时路况进行合理路线规划。
+ - 支持多种路线偏好选择，如时间最短、避免经过收费的公路、避开高速公路、距离优先等。
+ 
+ 说明 限制：起点数乘以终点数需小于100。
+
+ 收起自动换行深色代码主题复制
+```
+async testDrivingMatrix() { let params: navi.DrivingMatrixParams = { // 起点的经纬度 origins: [{ latitude: 31.9844, longitude: 118.766253 }, { latitude: 31.9644, longitude: 118.746253 }], // 终点的经纬度 destinations: [{ latitude: 31.9344, longitude: 118.706253 }], // 时间预估模型 trafficMode: 2, language: 'zh_CN' }; try { const result = await navi.getDrivingMatrix(params); console.info(`Succeeded in getting driving matrix. result is ${JSON.stringify(result)}`); } catch (error) { const err: BusinessError = error as BusinessError; console.error(`Failed in getting driving matrix. Code is ${err.code}, message is ${err.message}`); }}
+```
+ 
+### 步行批量算路
+ 根据多组起终点坐标批量检索符合条件的步行路径规划方案。支持以下功能：
+
+ - 支持150km以内的步行路径规划能力。
+ - 融入出行策略（时间最短、避免轮渡）。
+ 
+ 说明 限制：起点数乘以终点数需小于100。
+
+ 收起自动换行深色代码主题复制
+```
+async testWalkingMatrix() { let params: navi.MatrixParams = { // 起点的经纬度 origins: [ { latitude: 31.9844, longitude: 118.766253 }, { latitude: 31.9644, longitude: 118.746253 }], // 终点的经纬度 destinations: [{ latitude: 31.9344, longitude: 118.706253 }], language: 'zh_CN' }; try { const result = await navi.getWalkingMatrix(params); console.info(`Succeeded in getting walking matrix. result is ${JSON.stringify(result)}`); } catch (error) { const err: BusinessError = error as BusinessError; console.error(`Failed in getting walking matrix. Code is ${err.code}, message is ${err.message}`); }}
+```
+ 
+### 骑行批量算路
+ 根据多组起终点坐标批量检索符合条件的骑行路径规划方案。支持以下功能：
+
+ - 支持500km以内的骑行路径规划能力。
+ - 融入出行策略（时间最短、避免轮渡）。
+ 
+ 说明 限制：起点数乘以终点数需小于100。
+
+ 收起自动换行深色代码主题复制
+```
+async testCyclingMatrix() { let params: navi.MatrixParams = { // 起点的经纬度 origins: [{ latitude: 31.9844, longitude: 118.766253 }, { latitude: 31.9644, longitude: 118.746253 }], // 终点的经纬度 destinations: [{ latitude: 31.9344, longitude: 118.706253 }], language: 'zh_CN' }; try { const result = await navi.getCyclingMatrix(params); console.info(`Succeeded in getting cycling matrix. result is ${JSON.stringify(result)}`); } catch (error) { const err: BusinessError = error as BusinessError; console.error(`Failed in getting cycling matrix. Code is ${err.code}, message is ${err.message}`); }}
+```

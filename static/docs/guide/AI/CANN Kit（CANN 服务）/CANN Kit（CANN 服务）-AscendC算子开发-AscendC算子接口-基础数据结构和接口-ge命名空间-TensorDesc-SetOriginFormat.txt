@@ -1,0 +1,39 @@
+# [SetOriginFormat](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tensordesc-setoriginformat)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119256917_section105390mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119256917_section105394mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119256917_section105398mcpsimp)
+- [返回值](#zh-cn_topic_0000002119256917_section105424mcpsimp)
+- [异常处理](#zh-cn_topic_0000002119256917_section105427mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119256917_section105430mcpsimp)
+
+## 函数功能
+向TensorDesc中设置Tensor的原始Format。
+
+ 该Format是指原始网络模型的Format。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+void SetOriginFormat(Format origin_format);
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| origin_format | 输入 | 需设置的原始Format信息。 关于Format数据类型的定义，请参见Format。 |
+
+ 
+## 返回值
+无
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

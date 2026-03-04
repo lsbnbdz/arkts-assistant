@@ -1,0 +1,37 @@
+# [GetOriginFormat](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getoriginformat)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083616822_section92683mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083616822_section92686mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083616822_section92690mcpsimp)
+- [返回值](#zh-cn_topic_0000002083616822_section92693mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083616822_section92696mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083616822_section92699mcpsimp)
+
+## 函数功能
+获取原始format。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+ge::Format GetOriginFormat() const
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+原始format。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+ExpandDimsType dim_type("1100"); StorageFormat format(ge::Format::FORMAT_NCHW, ge::Format::FORMAT_C1HWNC0, dim_type); auto origin_format = format.GetOriginFormat(); // Format::FORMAT_NCHW
+```

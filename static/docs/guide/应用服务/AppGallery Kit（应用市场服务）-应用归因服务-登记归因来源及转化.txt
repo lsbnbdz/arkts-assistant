@@ -1,0 +1,40 @@
+# [登记归因来源及转化](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/store-attribution-developmentguide)
+
+## 目录
+- [场景介绍](#section9414117171712)
+- [接口说明](#section6165124891419)
+- [开发步骤](#section1086012180153)
+  - [登记归因来源](#section1753254172910)
+  - [登记归因转化](#section191112563619)
+
+说明 6.0.2(22)版本开始，登记归因转化接口新增属性timestamp、serviceTag，支持设置转化事件时间及开发者关注的业务信息。
+
+ 
+## 场景介绍
+ 应用归因服务为媒体App、分发平台提供向端侧应用归因服务登记归因来源（即应用曝光点击事件）、开发者应用登记转化事件的能力。
+
+ 端侧应用归因服务根据媒体应用登记的归因来源，以及开发者应用登记的转化事件，按照系统规则，在端侧完成归因计算。
+
+ 
+## 接口说明
+ 应用归因服务场景提供以下接口，具体API说明详见[接口文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/store-attributionmanager)。
+
+ 展开
+| 接口名 | 描述 |
+| --- | --- |
+| registerSource(adSourceInfo: AdSourceInfo): Promise | 登记归因来源信息接口。 |
+| registerTrigger(adTriggerInfo: AdTriggerInfo): Promise | 登记归因转化信息接口。 |
+
+ 
+## 开发步骤
+ 
+### 登记归因来源
+ 1. 导入相关模块。 收起自动换行深色代码主题复制 ``` import { attributionManager } from '@kit.AppGalleryKit';import { hilog } from '@kit.PerformanceAnalysisKit';import { BusinessError,deviceInfo } from '@kit.BasicServicesKit'; ```
+ 2. 构造参数[AdSourceInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/store-attributionmanager#section0594928105511)。 收起自动换行深色代码主题复制 ``` const adSourceInfo: attributionManager.AdSourceInfo = { // 在应用归因云侧注册应用生态伙伴角色时，由应用归因服务分配 adTechId: '20****e8', campaignId: '', // 开发者应用上架华为应用市场的appId，不带C destinationId: '10******', sourceType: attributionManager.SourceType.IMPRESSION, // 归因监测平台id mmpIds: ['2f****5','2f7***5'], // 分发平台关注的业务信息 serviceTag: '123***2', // 用于计算签名的随机数，不带'-' nonce: '123***2', timestamp: Date.now(), // 签名值 signature: 'MEQCIEQlmZ****zKBSE8QnhLTIHZZZ****ZpRqRxHss65Ko****JgJKjdrWdkL****juEx2RmFS7da****ZRVZ8RyMyUXg=='}let osApiVersion: number = deviceInfo.sdkApiVersion;if (osApiVersion >= 22) { adSourceInfo.campaignId = '1*******9';} else { adSourceInfo.campaignId = '1****6';} ```
+ 3. 调用[attributionManager.registerSource](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/store-attributionmanager#section359424018307)方法登记归因来源信息。 收起自动换行深色代码主题复制 ``` try { attributionManager.registerSource(adSourceInfo).then(() => { hilog.info(0, 'TAG', 'Succeeded in registering source.'); }).catch((error: BusinessError) => { hilog.error(0, 'TAG', `registerSource error.code is ${error.code}, message is ${error.message}`); })} catch (error) { hilog.error(0, 'TAG', `registerSource error.code is ${error.code}, message is ${error.message}`);} ```
+ 
+ 
+### 登记归因转化
+ 1. 导入相关模块。 收起自动换行深色代码主题复制 ``` import { attributionManager } from '@kit.AppGalleryKit';import { hilog } from '@kit.PerformanceAnalysisKit';import { BusinessError,deviceInfo } from '@kit.BasicServicesKit'; ```
+ 2. 构造参数[AdTriggerInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/store-attributionmanager#section6127112918554)。 收起自动换行深色代码主题复制 ``` const adTriggerInfo: attributionManager.AdTriggerInfo = { businessScene: 5, // 转化事件编码，从应用归因云端管理平台获取 triggerData: 123}let osApiVersion: number = deviceInfo.sdkApiVersion;if (osApiVersion >= 22) { // Since API 22, added the actual occurrence time parameter. adTriggerInfo.timestamp = Date.now(); adTriggerInfo.serviceTag = 'testServiceTag';} ```
+ 3. 调用[attributionManager.registerTrigger](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/store-attributionmanager#section13414543616)方法登记转化信息。 收起自动换行深色代码主题复制 ``` try { attributionManager.registerTrigger(adTriggerInfo).then(() => { hilog.info(0, 'TAG', 'Succeeded in registering triggerdata.'); }).catch((error: BusinessError) => { hilog.error(0, 'TAG', `registerTrigger error.code is ${error.code}, message is ${error.message}`); })} catch (error) { hilog.error(0, 'TAG', `registerTrigger error.code is ${error.code}, message is ${error.message}`);} ```

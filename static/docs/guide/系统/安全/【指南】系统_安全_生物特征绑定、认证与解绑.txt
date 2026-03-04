@@ -1,0 +1,1 @@
+[开通生物特征认证能力](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/devicesecurity-trustedauth-enablebio)  [生物特征认证交易](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/devicesecurity-trustedauth-verifybybio)  [关闭指定生物类型认证能力](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/devicesecurity-trustedauth-del-bio)

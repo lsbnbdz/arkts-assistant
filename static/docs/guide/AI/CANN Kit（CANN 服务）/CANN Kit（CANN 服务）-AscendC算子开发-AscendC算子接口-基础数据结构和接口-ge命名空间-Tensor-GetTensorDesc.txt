@@ -1,0 +1,37 @@
+# [GetTensorDesc](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-gettensordesc)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119176549_section106313mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119176549_section106316mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119176549_section106320mcpsimp)
+- [返回值](#zh-cn_topic_0000002119176549_section106323mcpsimp)
+- [异常处理](#zh-cn_topic_0000002119176549_section106348mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119176549_section106351mcpsimp)
+
+## 函数功能
+获取Tensor的描述符。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+TensorDesc GetTensorDesc() const;
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| TensorDesc | 返回当前Tensor的描述符。 |
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+修改返回的TensorDesc信息，不影响Tensor对象中已有的TensorDesc信息。

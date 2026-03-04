@@ -1,0 +1,6 @@
+# [Spatial Recon Kit（空间建模服务）](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/spatial-recon-kit-guide)
+
+- **[Spatial Recon Kit简介](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/spatial-recon-introduction)**
+ - **[Spatial Recon Kit术语](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/spatial-recon-glossary)**
+ - **[加载3DGS模型](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/spatial-recon-load)**
+ - **[添加滤镜效果](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/spatial-recon-filter)**

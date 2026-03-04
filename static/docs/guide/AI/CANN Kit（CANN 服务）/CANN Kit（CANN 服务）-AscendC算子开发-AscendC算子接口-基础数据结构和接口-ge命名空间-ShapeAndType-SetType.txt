@@ -1,0 +1,37 @@
+# [SetType](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-settype)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083777150_section104085mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083777150_section104088mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083777150_section104096mcpsimp)
+- [返回值](#zh-cn_topic_0000002083777150_section104119mcpsimp)
+- [异常处理](#zh-cn_topic_0000002083777150_section104122mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083777150_section104125mcpsimp)
+
+## 函数功能
+设置ShapeAndType类的[DataType](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-ge-datatype)。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+void SetType(DataType data_type)
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| data_type | 输入 | 设置的目标data type。 |
+
+ 
+## 返回值
+无
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

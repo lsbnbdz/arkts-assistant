@@ -1,0 +1,37 @@
+# [MutableOriginShape](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-mutableoriginshape)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119256549_section93055mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119256549_section93058mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119256549_section93062mcpsimp)
+- [返回值](#zh-cn_topic_0000002119256549_section93065mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119256549_section93068mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119256549_section93071mcpsimp)
+
+## 函数功能
+获取可写的原始shape。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+Shape &MutableOriginShape()
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+可写的原始shape。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+StorageShape shape({3, 256, 256}, {256, 256, 3}); auto origin_shape = shape.MutableOriginShape(); // 3,256,256
+```

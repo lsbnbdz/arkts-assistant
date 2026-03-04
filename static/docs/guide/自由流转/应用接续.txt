@@ -1,0 +1,4 @@
+# [应用接续](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/app-continuation)
+
+- **[应用接续特性简介](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/app-continuation-overview)**
+ - **[应用接续开发指导](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/app-continuation-guide)**

@@ -1,0 +1,37 @@
+# [GetKernelName](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getkernelname)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119176377_section89939mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119176377_section89942mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119176377_section89946mcpsimp)
+- [返回值](#zh-cn_topic_0000002119176377_section89949mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119176377_section89952mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119176377_section89955mcpsimp)
+
+## 函数功能
+获取当前内核的名称。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+const char *GetKernelName() const
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+当前内核的名称。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+// 假设已存在KernelContext *context auto extend_context = reinterpret_cast(context); auto kernel_name = extend_context->GetKernelName();
+```

@@ -1,0 +1,5 @@
+# [多设备窗口形态](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-device-window)
+
+- **[窗口模式](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-device-window-mode)**
+ - **[窗口方向](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-device-window-direction)**
+ - **[窗口沉浸式](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-device-window-immersive)**

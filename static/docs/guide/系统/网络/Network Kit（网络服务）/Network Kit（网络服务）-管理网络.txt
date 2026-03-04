@@ -1,0 +1,3 @@
+- **[统计网络流量消耗](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/net-statistics)**
+ - **[使用网络防火墙](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/net-netfirewall)**
+ - **[扩展认证](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/net-eap)**

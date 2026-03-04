@@ -1,0 +1,39 @@
+# [IsValid](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-isvalid)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083776602_section105908mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083776602_section105912mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083776602_section105916mcpsimp)
+- [返回值](#zh-cn_topic_0000002083776602_section105919mcpsimp)
+- [异常处理](#zh-cn_topic_0000002083776602_section105942mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083776602_section105945mcpsimp)
+
+## 函数功能
+判断Tensor对象是否有效。
+
+ 若实际Tensor数据的大小与TensorDesc所描述的Tensor数据大小一致，则有效。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+graphStatus IsValid();
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| graphStatus | 如果Tensor对象有效，则返回GRAPH_SUCCESS，否则，返回GRAPH_FAILED。 |
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

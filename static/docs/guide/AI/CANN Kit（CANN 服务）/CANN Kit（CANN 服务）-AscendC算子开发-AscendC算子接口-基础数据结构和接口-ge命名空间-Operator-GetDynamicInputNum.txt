@@ -1,0 +1,37 @@
+# [GetDynamicInputNum](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getdynamicinputnum)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119176677_section99302mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119176677_section99305mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119176677_section99313mcpsimp)
+- [返回值](#zh-cn_topic_0000002119176677_section99336mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119176677_section99360mcpsimp)
+
+## 函数功能
+获取算子的动态Input的实际个数。
+
+ 
+## 函数原型
+注意数据类型为string的接口后续版本会废弃，建议使用数据类型为非string的接口。
+
+ 收起自动换行深色代码主题复制
+```
+int32_t GetDynamicInputNum(const std::string &name) const;int32_t GetDynamicInputNum(const char_t *name) const;
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| name | 输入 | 算子的动态Input名。 |
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| int | 实际动态Input的个数。 当name非法，或者算子无动态Input时，返回-1。 |
+
+ 
+## 约束说明
+无

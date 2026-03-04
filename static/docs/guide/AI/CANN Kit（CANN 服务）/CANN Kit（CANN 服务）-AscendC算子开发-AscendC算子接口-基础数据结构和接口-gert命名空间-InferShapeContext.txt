@@ -1,0 +1,8 @@
+# [InferShapeContext](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-infershapecontext)
+
+- **[GetInputShape](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-infershapecontext-getinputshape)**
+ - **[GetInputTensor](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-infershapecontext-getinputtensor)**
+ - **[GetOptionalInputShape](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-infershapecontext-getoptionalinputshape)**
+ - **[GetRequiredInputTensor](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-infershapecontext-getrequiredinputtensor)**
+ - **[GetRequiredInputShape](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-infershapecontext-getrequiredinputshape)**
+ - **[GetOutputShape](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-infershapecontext-getoutputshape)**

@@ -1,0 +1,42 @@
+# [operator](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tilingdata-operator)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083776710_section95935mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083776710_section95938mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083776710_section95944mcpsimp)
+- [返回值](#zh-cn_topic_0000002083776710_section95981mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083776710_section95984mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083776710_section95987mcpsimp)
+
+## 函数功能
+向后添加tiling data，若添加超过可容纳的最大长度，则忽略本次操作。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+templateTilingData &operator<<(TilingData &out, const T &data);
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| T | 输入 | 添加的tiling data的类型。 |
+| out | 输出 | TilingData类实例。 |
+| data | 输入 | 添加的tiling data的实例。 |
+
+ 
+## 返回值
+追加完data的TilingData对象。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+auto td_buf = TilingData::CreateCap(100U); auto td = reinterpret_cast(td_buf.get()); struct AppendData{ int a = 10; int b = 100; }; AppendData ad; td << ad; auto data_size = td.GetDataSize(); // 2 * sizeof(int)
+```

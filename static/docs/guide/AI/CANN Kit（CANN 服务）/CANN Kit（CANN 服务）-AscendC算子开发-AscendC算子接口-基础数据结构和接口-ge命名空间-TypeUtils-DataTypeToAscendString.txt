@@ -1,0 +1,46 @@
+# [DataTypeToAscendString](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-datatypetoascendstring)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083776654_section107134mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083776654_section107139mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083776654_section107143mcpsimp)
+- [返回值](#zh-cn_topic_0000002083776654_section107168mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083776654_section107173mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083776654_section107176mcpsimp)
+
+## 函数功能
+将DataType类型值转化为字符串表达。
+
+ 使用该接口需要包含type_utils.h头文件。
+
+ 收起自动换行深色代码主题复制
+```
+#include "graph/utils/type_utils.h"
+```
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+static AscendString DataTypeToAscendString(const DataType &data_type);
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| data_type | 输入 | 待转换的DataType，支持的DataType请参考DataType。 |
+
+ 
+## 返回值
+转换后的DataType字符串，[AscendString](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-ascendstring-construction-and-destructor)类型。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+DataType data_type = ge::DT_UINT32; auto type_str = DataTypeToAscendString(data_type); // "DT_UINT32" const char *ptr = type_str.GetString(); // 获取char*指针
+```

@@ -1,0 +1,37 @@
+# [GetDataType](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tensordesc-getdatatype)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119256561_section104606mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119256561_section104609mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119256561_section104613mcpsimp)
+- [返回值](#zh-cn_topic_0000002119256561_section104616mcpsimp)
+- [异常处理](#zh-cn_topic_0000002119256561_section104641mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119256561_section104644mcpsimp)
+
+## 函数功能
+获取TensorDesc所描述Tensor的数据类型。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+DataType GetDataType() const;
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| DataType | TensorDesc所描述的Tensor的数据类型。 |
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+由于返回的DataType信息为值拷贝，因此修改返回的DataType信息，不影响TensorDesc中已有的DataType信息。

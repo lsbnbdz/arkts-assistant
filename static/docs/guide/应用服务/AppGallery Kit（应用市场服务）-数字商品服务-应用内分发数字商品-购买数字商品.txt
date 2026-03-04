@@ -1,0 +1,29 @@
+# [购买数字商品](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/store-iap-distribute-purchase)
+
+## 目录
+- [场景介绍](#section16711857162714)
+- [业务流程及开发步骤](#section14504395385)
+  - [消耗型/非消耗型商品](#section210322119387)
+  - [自动续期订阅商品](#section169544209396)
+  - [非续期订阅商品](#section924675015272)
+
+## 场景介绍
+在应用内数字商品的购买场景中，用户会以一次性付款的方式购买消耗型商品或非消耗型商品。
+
+ 订阅是指用户在购买自动续期订阅商品后，可以在一段时间访问应用的增值功能或内容，并且会在订阅周期结束后自动续期购买下一期服务的能力。如果期间用户取消订阅，则订阅在当期结束后将不再自动续期。
+
+ 接入数字商品服务购买能力前，您需在华为[AppGallery Connect](https://developer.huawei.com/consumer/cn/service/josp/agc/index.html)网站[配置数字商品](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/store-iap-config-product)，录入商品ID和商品价格等信息。用户在开发者应用内发起购买时，使用数字商品服务的应用需要调用IAP Kit的[createPurchase](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/iap-iap#section18798154545516)接口来拉起收银台，收银台会展示商品名称、商品价格等信息，用户可在收银台完成商品购买。
+
+ 
+## 业务流程及开发步骤
+ 
+### 消耗型/非消耗型商品
+详细开发流程请参考[消耗型/非消耗型商品接入购买](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/iap-integrate-purchase)。
+
+ 
+### 自动续期订阅商品
+详细开发流程请参考[接入自动续期订阅](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/iap-integrate-subscription)。
+
+ 
+### 非续期订阅商品
+详细开发流程请参考[非续期订阅商品购买](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/iap-nonrenewable)。

@@ -1,0 +1,11 @@
+# [头文件](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ime-headerfile)
+
+- **[inputmethod_attach_options_capi.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-inputmethod-attach-options-capi-h)**
+ - **[inputmethod_controller_capi.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-inputmethod-controller-capi-h)**
+ - **[inputmethod_cursor_info_capi.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-inputmethod-cursor-info-capi-h)**
+ - **[inputmethod_inputmethod_proxy_capi.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-inputmethod-inputmethod-proxy-capi-h)**
+ - **[inputmethod_private_command_capi.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-inputmethod-private-command-capi-h)**
+ - **[inputmethod_text_avoid_info_capi.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-inputmethod-text-avoid-info-capi-h)**
+ - **[inputmethod_text_config_capi.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-inputmethod-text-config-capi-h)**
+ - **[inputmethod_text_editor_proxy_capi.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-inputmethod-text-editor-proxy-capi-h)**
+ - **[inputmethod_types_capi.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-inputmethod-types-capi-h)**

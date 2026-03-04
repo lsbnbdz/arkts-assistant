@@ -1,0 +1,32 @@
+# [原型注册接口(OP_ADD)](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-prototype-api-registration)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119256749_section73577mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119256749_section73580mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119256749_section73584mcpsimp)
+- [返回值](#zh-cn_topic_0000002119256749_section73607mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119256749_section73610mcpsimp)
+
+## 函数功能
+注册算子的原型定义。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+OP_ADD(opType)
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| opType | 输入 | 算子类型名称。 |
+
+ 
+## 返回值
+无
+
+ 
+## 约束说明
+无

@@ -1,0 +1,23 @@
+## 目录
+- [场景介绍](#section175232481311)
+- [开发步骤](#section150772054916)
+
+## 场景介绍
+          从6.0.0(20) Beta1版本开始，导航组件新增支持文本型与图片型图标类型设置。
+
+     当应用开发者需要配置图片型图标大小，或者使用普通文字型图标（胶囊型按钮）、单字图标（圆形按钮）时，可通过设置titleBar图标内容配置中的[type](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ui-design-hdsnavigation#section74312125454)属性实现该功能。
+
+## 开发步骤
+                  导入相关模块。      
+
+      收起自动换行深色代码主题复制
+```
+import { HdsNavigation, HdsNavigationAttribute, HdsNavigationTitleMode, TextStyleMode, IconStyleMode } from '@kit.UIDesignKit';
+```
+
+创建一级导航组件，通过配置titleBar中的menu上的type属性，实现文字型图标以及图片型图标大小设置。      
+
+      收起自动换行深色代码主题复制
+```
+@Entry@Componentstruct Index {  build() {    HdsNavigation() { // 创建HdsNavigation组件    }    .titleBar({      content: {        title: { mainTitle: 'MainTitle', subTitle: 'SubTitle' },        menu: { // 设置HdsNavigation菜单内容          value: [{            content: { // 设置第一个菜单项内容，设置为普通文本按钮              label: '文字按钮',              type: TextStyleMode.NORMAL,            }          }, {            content: { // 设置第二个菜单项内容，设置为单字按钮              label: '单',              type: TextStyleMode.SINGLE_CHARACTER,            }          }, {            content: { // 设置第三个菜单项内容，设置为大图标按钮              label: 'largeIcon',              icon: 'resources/base/media/app_icon.png',              type: IconStyleMode.LARGE,            }          }, {            content: { // 设置第四个菜单项内容，设置为小图标按钮              label: 'smallIcon',              icon: 'resources/base/media/app_icon.png',              type: IconStyleMode.SMALL,            }          }],          maxCount: 4 // 最大菜单显示个数配置        },      }    })    .titleMode(HdsNavigationTitleMode.MODAL)  }}
+```

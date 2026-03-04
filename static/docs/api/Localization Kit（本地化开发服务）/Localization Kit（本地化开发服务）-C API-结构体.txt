@@ -1,0 +1,15 @@
+# [结构体](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/localization-struct)
+
+- **[RawDir](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-rawfile-rawdir)**
+ - **[RawFileDescriptor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-rawfile-rawfiledescriptor)**
+ - **[RawFileDescriptor64](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-rawfile-rawfiledescriptor64)**
+ - **[RawFile](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-rawfile-rawfile)**
+ - **[RawFile64](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-rawfile-rawfile64)**
+ - **[NativeResourceManager](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-rawfile-nativeresourcemanager)**
+ - **[ResourceManager_Configuration](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-resourcemanager-resourcemanager-configuration)**
+ - **[DateTimeRule](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-i18n-datetimerule)**
+ - **[InitialTimeZoneRule](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-i18n-initialtimezonerule)**
+ - **[TimeArrayTimeZoneRule](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-i18n-timearraytimezonerule)**
+ - **[AnnualTimeZoneRule](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-i18n-annualtimezonerule)**
+ - **[TimeZoneRules](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-i18n-timezonerules)**
+ - **[TimeZoneRuleQuery](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-i18n-timezonerulequery)**

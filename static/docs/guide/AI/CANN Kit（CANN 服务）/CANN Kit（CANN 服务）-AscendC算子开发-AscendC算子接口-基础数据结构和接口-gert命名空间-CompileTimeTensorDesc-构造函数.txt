@@ -1,0 +1,29 @@
+# [构造函数](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-compiletimetensordesc-constructor)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119256833_section87556mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119256833_section87559mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119256833_section87563mcpsimp)
+- [返回值](#zh-cn_topic_0000002119256833_section87566mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119256833_section87569mcpsimp)
+
+## 函数功能
+CompileTimeTensorDesc类用于描述编译时的Tensor描述信息，包含dtype信息以及format信息。由于编译时无法确定shape，因此不包含shape信息。该函数为CompileTimeTensorDesc类的构造函数。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+CompileTimeTensorDesc()
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+返回一个CompileTimeTensorDesc对象。
+
+ 
+## 约束说明
+无

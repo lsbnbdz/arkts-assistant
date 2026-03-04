@@ -1,0 +1,48 @@
+# [构造函数与析构函数](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-construction-and-destructor-functions)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119177053_section93177mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119177053_section93184mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119177053_section93196mcpsimp)
+- [返回值](#zh-cn_topic_0000002119177053_section93254mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119177053_section93257mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119177053_section93260mcpsimp)
+
+## 函数功能
+构造一个TensorData。
+
+ - 构造方式1：指定了tensor数据的地址以及用于管理tensor数据的函数manager。
+- 构造方式2：指定了tensor数据的地址、用于管理tensor数据的函数manager、tensor数据所占内存大小、tensor数据所在的位置（host、device）。
+- 构造方式3：移动构造形式。
+
+ 说明若manager为nullptr，则认为addr就是tensor的数据地址。否则，tensor数据的地址由manager给出。
+
+ 
+## 函数原型
+- 构造函数收起自动换行深色代码主题复制 ``` TensorData(TensorAddress addr = nullptr, const TensorAddrManager manager = nullptr)TensorData(TensorAddress addr, const TensorAddrManager manager, size_t size, TensorPlacement placement)TensorData(TensorData &&other) noexcept TensorData(const TensorData &) = delete; ```
+- 析构函数收起自动换行深色代码主题复制 ``` ~TensorData() ```
+
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| addr | 输入 | tensor数据的地址。 收起自动换行深色代码主题复制 ``` using TensorAddress = void *; ``` |
+| manager | 输入 | tensor data的管理函数，若manager为空，则认为addr就是tensor的数据地址，且此数据不需要被释放。 收起自动换行深色代码主题复制 ``` using TensorAddrManager = ge::graphStatus (*)(TensorAddress addr, TensorOperateType operate_type, void **out); enum TensorOperateType { kGetTensorAddress, // < 获取Tensor的地址 kFreeTensor, // < 释放Tensor kPlusShareCount, // < 共享Tensor kTensorOperateType }; ``` |
+| size | 输入 | tensor数据所占的内存大小。 |
+| placement | 输入 | tensor数据所在的设备位置。 收起自动换行深色代码主题复制 ``` enum TensorPlacement { kOnDeviceHbm, // < Tensor位于Device上的HBM内存 kOnHost, // < Tensor位于Host kFollowing, // < Tensor位于Host，且数据紧跟在结构体后面 kTensorPlacementEnd }; ``` |
+
+ 
+## 返回值
+初始化后的TensorData对象。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+auto addr = reinterpret_cast(0x10); TensorData td(addr, HostAddrManager, 100U, kOnHost);
+```

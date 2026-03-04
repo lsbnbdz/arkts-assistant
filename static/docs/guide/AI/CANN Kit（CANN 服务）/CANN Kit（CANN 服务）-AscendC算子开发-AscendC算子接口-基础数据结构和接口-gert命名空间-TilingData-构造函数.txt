@@ -1,0 +1,29 @@
+# [构造函数](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tilingdata-constructor)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083777058_section95462mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083777058_section95465mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083777058_section95475mcpsimp)
+- [返回值](#zh-cn_topic_0000002083777058_section95478mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083777058_section95481mcpsimp)
+
+## 函数功能
+TilingData类的构造函数。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+TilingData(const TilingData &) = delete;TilingData(TilingData &&) = delete;TilingData operator=(const TilingData &) = delete;TilingData operator=(TilingData &&) = delete;
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+无
+
+ 
+## 约束说明
+无

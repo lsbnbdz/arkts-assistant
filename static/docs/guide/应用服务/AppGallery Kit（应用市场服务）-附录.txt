@@ -1,0 +1,5 @@
+# [附录](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/store-attribution-appendix)
+
+- **[标准化事件及应用归因签名](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/appgallery-attribution-appendix-triger)**
+ - **[支持的国家/地区](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/appgallery-support-regions)**
+ - **[场景值](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/appgallery-scene-list)**

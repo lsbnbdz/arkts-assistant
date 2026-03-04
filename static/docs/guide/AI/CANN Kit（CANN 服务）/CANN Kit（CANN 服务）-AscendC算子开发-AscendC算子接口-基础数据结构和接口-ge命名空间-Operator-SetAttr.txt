@@ -1,0 +1,87 @@
+# [SetAttr](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-setattr)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119176385_section100360mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119176385_section100383mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119176385_section100477mcpsimp)
+- [返回值](#zh-cn_topic_0000002119176385_section100675mcpsimp)
+- [异常处理](#zh-cn_topic_0000002119176385_section100700mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119176385_section100703mcpsimp)
+
+## 函数功能
+设置算子属性的属性值。
+
+ 算子可以包括多个属性，初次设置值后，算子属性值的类型固定，算子属性值的类型包括：
+
+ - 整型：接受int64_t、uint32_t、int32_t类型的整型值使用SetAttr(const string& name, int64_t attrValue)设置属性值，以GetAttr(const string& name, int32_t& attrValue) 、GetAttr(const string& name, uint32_t& attrValue) 取值时，开发者需保证整型数据没有截断，同理针对int32_t和uint32_t混用时需要保证不被截断。
+- 整型列表：接受std::vector、std::vector、std::vector、std::initializer_list&&表示的整型列表数据
+- 浮点数：float
+- 浮点数列表：std::vector
+- 字符串：string
+- 字符串列表：std::vector
+- 布尔：bool
+- 布尔列表：std::vector
+- Tensor：Tensor
+- Tensor列表：std::vector
+- Bytes：字节数组，SetAttr接受通过OpBytes（即vector），和（const uint8_t* data, size_t size）表示的字节数组
+- AttrValue类型
+- 整型二维列表类型：std::vector>
+- DataType列表类型：std::vector
+- DataType类型：ge::DataType
+- NamedAttrs类型： ge::NamedAttrs
+- NamedAttrs列表类型：std::vector
+
+ 
+## 函数原型
+注意数据类型为string的接口后续版本会废弃，建议使用数据类型为非string的接口。
+
+ 收起自动换行深色代码主题复制
+```
+Operator &SetAttr(const std::string &name, int64_t attr_value);Operator &SetAttr(const std::string &name, int32_t attr_value);Operator &SetAttr(const std::string &name, uint32_t attr_value);Operator &SetAttr(const std::string &name, const std::vector &attr_value);Operator &SetAttr(const std::string &name, const std::vector &attr_value);Operator &SetAttr(const std::string &name, const std::vector &attr_value);Operator &SetAttr(const std::string &name, std::initializer_list &&attr_value);Operator &SetAttr(const std::string &name, float32_t attr_value);Operator &SetAttr(const std::string &name, const std::vector &attr_value);Operator &SetAttr(const std::string &name, AttrValue &&attr_value);Operator &SetAttr(const std::string &name, const std::string &attr_value);Operator &SetAttr(const std::string &name, const std::vector &attr_value);Operator &SetAttr(const std::string &name, bool attr_value);Operator &SetAttr(const std::string &name, const std::vector &attr_value);Operator &SetAttr(const std::string &name, const Tensor &attr_value);Operator &SetAttr(const std::string &name, const std::vector &attr_value);Operator &SetAttr(const std::string &name, const OpBytes &attr_value);Operator &SetAttr(const std::string &name, const std::vector> &attr_value);Operator &SetAttr(const std::string &name, const std::vector &attr_value);Operator &SetAttr(const std::string &name, const ge::DataType &attr_value);Operator &SetAttr(const std::string &name, const ge::NamedAttrs &attr_value);Operator &SetAttr(const std::string &name, const std::vector &attr_value);Operator &SetAttr(const char_t *name, int64_t attr_value);Operator &SetAttr(const char_t *name, int32_t attr_value);Operator &SetAttr(const char_t *name, uint32_t attr_value);Operator &SetAttr(const char_t *name, const std::vector &attr_value);Operator &SetAttr(const char_t *name, const std::vector &attr_value);Operator &SetAttr(const char_t *name, const std::vector &attr_value);Operator &SetAttr(const char_t *name, std::initializer_list &&attr_value);Operator &SetAttr(const char_t *name, float32_t attr_value);Operator &SetAttr(const char_t *name, const std::vector &attr_value);Operator &SetAttr(const char_t *name, AttrValue &&attr_value);Operator &SetAttr(const char_t *name, const char_t *attr_value);Operator &SetAttr(const char_t *name, const AscendString &attr_value);Operator &SetAttr(const char_t *name, const std::vector &attr_values);Operator &SetAttr(const char_t *name, bool attr_value);Operator &SetAttr(const char_t *name, const std::vector &attr_value);Operator &SetAttr(const char_t *name, const Tensor &attr_value);Operator &SetAttr(const char_t *name, const std::vector &attr_value);Operator &SetAttr(const char_t *name, const OpBytes &attr_value);Operator &SetAttr(const char_t *name, const std::vector> &attr_value);Operator &SetAttr(const char_t *name, const std::vector &attr_value);Operator &SetAttr(const char_t *name, const ge::DataType &attr_value);Operator &SetAttr(const char_t *name, const ge::NamedAttrs &attr_value);Operator &SetAttr(const char_t *name, const std::vector &attr_value);
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| name | 输入 | 属性名称。 |
+| attr_value | 输入 | 需设置的int64_t表示的整型类型属性值。 |
+| attr_value | 输入 | 需设置的int32_t表示的整型类型属性值。 |
+| attr_value | 输入 | 需设置的uint32_t表示的整型类型属性值。 |
+| attr_value | 输入 | 需设置的vector表示的整型列表类型属性值。 |
+| attr_value | 输入 | 需设置的vector表示的整型列表类型属性值。 |
+| attr_value | 输入 | 需设置的vector表示的整型列表类型属性值。 |
+| attr_value | 输入 | 需设置的std::initializer_list&&表示的整型列表类型属性值。 |
+| attr_value | 输入 | 需设置的浮点类型的属性值。 |
+| attr_value | 输入 | 需设置的浮点列表类型的属性值。 |
+| attr_value | 输入 | 需设置的布尔类型的属性值。 |
+| attr_value | 输入 | 需设置的布尔列表类型的属性值。 |
+| attr_value | 输入 | 需设置的AttrValue类型的属性值。 |
+| attr_value | 输入 | 需设置的字符串类型的属性值。 |
+| attr_value | 输入 | 需设置的字符串列表类型的属性值。 |
+| attr_value | 输入 | 需设置的Tensor类型的属性值。 |
+| attr_value | 输入 | 需设置的Tensor列表类型的属性值。 |
+| attr_value | 输入 | 需设置的Bytes，即字节数组类型的属性值，OpBytes即vector。 |
+| data | 输入 | 需设置的Bytes，即字节数组类型的属性值，指定了字节流的首地址。 |
+| size | 输入 | 需设置的Bytes，即字节数组类型的属性值，指定了字节流的长度。 |
+| attr_value | 输入 | 需设置的量化数据的属性值。 |
+| attr_value | 输入 | 需设置的vector>表示的整型二维列表类型属性值。 |
+| attr_value | 输入 | 需设置的vector表示的DataType列表类型属性值。 |
+| attr_value | 输入 | 需设置的DataType类型的属性值。 |
+| attr_value | 输入 | 需设置的NamedAttrs类型的属性值。 |
+| attr_value | 输入 | 需设置的vector表示的NamedAttrs列表类型的属性值。 |
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| Operator& | 对象本身。 |
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

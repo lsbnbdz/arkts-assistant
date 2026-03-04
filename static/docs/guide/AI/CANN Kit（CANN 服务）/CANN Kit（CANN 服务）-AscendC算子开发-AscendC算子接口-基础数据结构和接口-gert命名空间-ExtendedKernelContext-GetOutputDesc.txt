@@ -1,0 +1,42 @@
+# [GetOutputDesc](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getoutputdesc)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119176365_section89559mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119176365_section89562mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119176365_section89566mcpsimp)
+- [返回值](#zh-cn_topic_0000002119176365_section89589mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119176365_section89594mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119176365_section89597mcpsimp)
+
+## 函数功能
+根据算子输出索引获取对应输出的tensor描述信息。这里的输出索引是指算子实例化后实际的索引，不是原型定义中的索引。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+const CompileTimeTensorDesc *GetOutputDesc(const size_t index) const
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| index | 输入 | 算子输出索引，从0开始计数。 |
+
+ 
+## 返回值
+输出TensorDesc的指针，当输入index非法时，返回空指针。
+
+ 关于CompileTimeTensorDesc的定义，请参见[CompileTimeTensorDesc](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-compiletimetensordesc)。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+// 假设已存在KernelContext *context auto extend_context = reinterpret_cast(context); for (size_t idx = 0; idx < extend_context->GetComputeNodeInfo()->GetOutputsNum(); ++idx) { auto output_td = extend_context->GetOutputDesc(idx); // ... }
+```

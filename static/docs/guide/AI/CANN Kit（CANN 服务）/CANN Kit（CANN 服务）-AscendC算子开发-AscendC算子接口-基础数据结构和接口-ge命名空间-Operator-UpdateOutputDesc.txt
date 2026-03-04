@@ -1,0 +1,43 @@
+# [UpdateOutputDesc](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-updateoutputdesc)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119176441_section101895mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119176441_section101898mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119176441_section101906mcpsimp)
+- [返回值](#zh-cn_topic_0000002119176441_section101936mcpsimp)
+- [异常处理](#zh-cn_topic_0000002119176441_section101959mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119176441_section101962mcpsimp)
+
+## 函数功能
+根据算子Output名称更新Output的TensorDesc。
+
+ 
+## 函数原型
+注意数据类型为string的接口后续版本会废弃，建议使用数据类型为非string的接口。
+
+ 收起自动换行深色代码主题复制
+```
+graphStatus UpdateOutputDesc(const std::string &name, const TensorDesc &tensor_desc);graphStatus UpdateOutputDesc(const char_t *name, const TensorDesc &tensor_desc);
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| name | 输入 | 算子Output名称。 |
+| tensor_desc | 输入 | TensorDesc对象。 |
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| graphStatus | 更新TensorDesc成功，返回GRAPH_SUCCESS， 否则，返回GRAPH_FAILED。 |
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

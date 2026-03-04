@@ -1,0 +1,37 @@
+# [GetShapeSize](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-shape-getshapesize)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083617242_section104361mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083617242_section104364mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083617242_section104368mcpsimp)
+- [返回值](#zh-cn_topic_0000002083617242_section104371mcpsimp)
+- [异常处理](#zh-cn_topic_0000002083617242_section104394mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083617242_section104397mcpsimp)
+
+## 函数功能
+获取Shape中所有dim的累乘结果。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+int64_t GetShapeSize() const
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| int64_t | 返回所有dim的累乘结果。 |
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

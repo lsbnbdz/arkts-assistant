@@ -1,0 +1,43 @@
+# [PrivacyManagerService](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/hidumper-privacymanagerservice)
+
+PrivacyManagerService是访问控制基于[hidumper](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/hidumper)增强开发的命令行能力，可显示访问控制基础信息，获取敏感权限使用记录。
+
+ 
+## 环境准备
+根据hidumper工具指导，完成[环境准备](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/hidumper#%E7%8E%AF%E5%A2%83%E8%A6%81%E6%B1%82)。
+
+ 
+## 获取帮助信息
+如果需要查看帮助信息，可以通过下列命令实现。
+
+ 收起自动换行深色代码主题复制
+```
+hidumper -s PrivacyManagerService -a '-h'
+```
+ **使用样例：**
+
+ 收起自动换行深色代码主题复制
+```
+-------------------------------[ability]-------------------------------
+
+----------------------------------PrivacyManagerService----------------------------------Privacy Dump:Usage: -h: command help -t : according to specific token id dump permission used records
+```
+ 
+## 获取敏感权限使用记录信息
+支持通过应用进程的tokenid，查看敏感权限使用记录的信息，可以通过下列命令实现。
+
+ 收起自动换行深色代码主题复制
+```
+hidumper -s PrivacyManagerService -a '-t '
+```
+ 命令所需的tokenId可以通过[atm-tool](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/atm-tool#%E6%9F%A5%E8%AF%A2%E5%91%BD%E4%BB%A4)进行查询。
+
+ **使用样例：**
+
+ 收起自动换行深色代码主题复制
+```
+hidumper -s PrivacyManagerService -a '-t 536992218'
+-------------------------------[ability]-------------------------------
+
+----------------------------------PrivacyManagerService----------------------------------Privacy Dump:{ "permissionRecord": [ { "bundleName": "com.ohos.camera", "isRemote": false, "permissionName": "ohos.permission.READ_IMAGEVIDEO", "lastAccessTime": 1508577149393, "lastAccessDuration": 0, "accessCount": 2 } ]}
+```

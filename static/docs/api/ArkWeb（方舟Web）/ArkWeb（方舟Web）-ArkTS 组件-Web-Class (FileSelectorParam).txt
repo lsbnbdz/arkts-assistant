@@ -1,0 +1,103 @@
+# [Class (FileSelectorParam)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-fileselectorparam)
+
+## 目录
+- [constructor9+](#constructor9)
+- [getTitle9+](#gettitle9)
+- [getMode9+](#getmode9)
+- [getAcceptType9+](#getaccepttype9)
+- [isCapture9+](#iscapture9)
+- [getMimeTypes18+](#getmimetypes18)
+
+Web组件获取文件对象。示例代码参考[onShowFileSelector事件](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-events#onshowfileselector9)。
+
+ 说明 - 该组件首批接口从API version 8开始支持。后续版本如有新增内容，则采用上角标单独标记该内容的起始版本。
+- 本Class首批接口从API version 9开始支持。
+- 示例效果请以真机运行为准。
+
+ 
+## constructor9+
+PhonePC/2in1TabletTVWearableconstructor()
+
+ FileSelectorParam的构造函数。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ 
+## getTitle9+
+PhonePC/2in1TabletTVWearablegetTitle(): string
+
+ 获取文件选择器标题。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| string | 返回文件选择器标题。 |
+
+ 
+## getMode9+
+PhonePC/2in1TabletTVWearablegetMode(): FileSelectorMode
+
+ 获取文件选择器的模式。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| FileSelectorMode | 返回文件选择器的模式。 |
+
+ 
+## getAcceptType9+
+PhonePC/2in1TabletTVWearablegetAcceptType(): Array<string>
+
+ 获取文件过滤类型。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| Array | 返回文件过滤类型。 |
+
+ 
+## isCapture9+
+PhonePC/2in1TabletTVWearableisCapture(): boolean
+
+ 获取是否调用多媒体能力。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| boolean | 返回是否调用多媒体能力。 true表示返回调用多媒体能力，false表示返回未调用多媒体能力。 |
+
+ 
+## getMimeTypes18+
+PhonePC/2in1TabletTVWearablegetMimeTypes(): Array<string>
+
+ 获取文件MIME类型。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| Array | 返回文件MIME类型。 |

@@ -1,0 +1,51 @@
+# [ConvertToListAscendString](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-converttolistascendstring)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119177069_section107706mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119177069_section107709mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119177069_section107718mcpsimp)
+- [返回值](#zh-cn_topic_0000002119177069_section107741mcpsimp)
+- [异常处理](#zh-cn_topic_0000002119177069_section107744mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119177069_section107747mcpsimp)
+
+## 函数功能
+定义了一个模板函数ConvertToListAscendString，用于将不同类型的字符串列表转换为AscendString类型的列表。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+template std::vector ConvertToListAscendString(T strs)
+```
+ 支持以下两种拓展：
+
+ 收起自动换行深色代码主题复制
+```
+template<> inline std::vector ConvertToListAscendString(std::vector strs)
+```
+ 对于std::vector<std::string>类型的字符串列表，先将其转换为std::vector<const char *>类型，然后再进行转换。
+
+ 收起自动换行深色代码主题复制
+```
+template<> inline std::vector ConvertToListAscendString(std::vector strs)
+```
+ 对于std::vector<ge::AscendString>类型的字符串列表，直接返回原列表。
+
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| strs | 输入 | 待转换的字符串列表。 |
+
+ 
+## 返回值
+转换后的AscendString类型字符串列表。
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

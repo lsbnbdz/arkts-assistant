@@ -1,0 +1,37 @@
+# [SetUnknownDimNumShape](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-setunknowndimnumshape)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119256889_section105705mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119256889_section105708mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119256889_section105712mcpsimp)
+- [返回值](#zh-cn_topic_0000002119256889_section105715mcpsimp)
+- [异常处理](#zh-cn_topic_0000002119256889_section105738mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119256889_section105741mcpsimp)
+
+## 函数功能
+设置tensor的shape为{-2}，用来表示tensor是完全未知的。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+graphStatus SetUnknownDimNumShape();
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| graphStatus | 函数执行结果。执行成功，则该值为GRAPH_SUCCESS(即0)，其他值则为执行失败。 |
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

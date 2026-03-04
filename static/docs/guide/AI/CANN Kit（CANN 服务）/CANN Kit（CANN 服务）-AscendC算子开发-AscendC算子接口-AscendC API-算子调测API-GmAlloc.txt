@@ -1,0 +1,47 @@
+# [GmAlloc](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-gmalloc)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119176845_section86236mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119176845_section86239mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119176845_section86242mcpsimp)
+- [返回值](#zh-cn_topic_0000002119176845_section86265mcpsimp)
+- [支持的型号](#zh-cn_topic_0000002119176845_section86269mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119176845_section86276mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119176845_section86279mcpsimp)
+
+## 函数功能
+进行核函数的CPU侧运行验证时，用于创建共享内存：在/tmp目录下创建一个共享文件，并返回该文件的映射指针。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+void *GmAlloc(size_t size)
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| size | 输入 | 开发者想要申请的共享内存大小。 |
+
+ 
+## 返回值
+返回一个void*指针，该指针表示该共享内存空间的首地址。
+
+ 
+## 支持的型号
+Kirin9020系列处理器
+
+ KirinX90系列处理器
+
+ 
+## 约束说明
+该接口在系统的/tmp目录下生成临时文件，故需要磁盘空间足够才可以正常生成共享内存。
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+constexpr int32_t len = 8 * 32 * 1024 * 8; half* x = (half*) GmAlloc(len*sizeof(half));
+```

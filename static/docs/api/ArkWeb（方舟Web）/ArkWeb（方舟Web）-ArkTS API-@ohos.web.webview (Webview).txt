@@ -1,0 +1,37 @@
+# [@ohos.web.webview (Webview)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-webview)
+
+- **[模块描述](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview)**
+ - **[Functions](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-f)**
+ - **[Class (AdsBlockManager)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-adsblockmanager)**
+ - **[Class (BackForwardCacheOptions)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-backforwardcacheoptions)**
+ - **[Class (BackForwardCacheSupportedFeatures)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/kts-apis-webview-backforwardcachesupportedfeatures)**
+ - **[Class (GeolocationPermissions)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-geolocationpermissions)**
+ - **[Class (JsMessageExt)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-jsmessageext)**
+ - **[Class (MediaSourceInfo)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-mediasourceinfo)**
+ - **[Class (NativeMediaPlayerSurfaceInfo)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-nativemediaplayersurfaceinfo)**
+ - **[Class (PdfData)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-pdfdata)**
+ - **[Class (ProxyConfig)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-proxyconfig)**
+ - **[Class (PrefetchOptions)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-prefetchoptions)**
+ - **[Class (ProxyController)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-proxycontroller)**
+ - **[Class (ProxyRule)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-proxyrule)**
+ - **[Class (WebviewController)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webviewcontroller)**
+ - **[Class (WebCookieManager)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webcookiemanager)**
+ - **[Class (WebDataBase)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webdatabase)**
+ - **[Class (WebDownloadDelegate)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webdownloaddelegate)**
+ - **[Class (WebDownloadItem)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webdownloaditem)**
+ - **[Class (WebDownloadManager)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webdownloadmanager)**
+ - **[Class (WebHttpBodyStream)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webhttpbodystream)**
+ - **[Class (WebMessageExt)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webmessageext)**
+ - **[Class (WebResourceHandler)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webresourcehandler)**
+ - **[Class (WebSchemeHandler)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webschemehandler)**
+ - **[Class (WebSchemeHandlerRequest)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webschemehandlerrequest)**
+ - **[Class (WebSchemeHandlerResponse)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webschemehandlerresponse)**
+ - **[Class (WebStorage)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webstorage)**
+ - **[Class (VerifyPinHandler)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-verifypinhandler)**
+ - **[Interface (BackForwardList)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-backforwardlist)**
+ - **[Interface (NativeMediaPlayerBridge)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-nativemediaplayerbridge)**
+ - **[Interface (NativeMediaPlayerHandler)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-nativemediaplayerhandler)**
+ - **[Interface (WebMessagePort)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webmessageport)**
+ - **[Interfaces (其他)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-i)**
+ - **[Enums](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-e)**
+ - **[Types](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-t)**

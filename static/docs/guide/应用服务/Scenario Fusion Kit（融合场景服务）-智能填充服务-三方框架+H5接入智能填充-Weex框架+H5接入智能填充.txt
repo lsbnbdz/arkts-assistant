@@ -1,0 +1,29 @@
+# [Weex框架+H5接入智能填充](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/scenario-fusion-weex)
+
+## 目录
+- [前提条件](#section156723761717)
+- [开发准备](#section421073715169)
+- [效果图](#section37300202917)
+- [示例代码](#section10674933162711)
+
+注意目前仅支持已适配HarmonyOS的三方框架应用使用。
+
+ 
+## 前提条件
+- 设备智能填充开关必须处于打开状态，请前往“设置 > 隐私和安全 > 智能填充”页面开启开关。
+- 设备已连接互联网并且登录华为账号。
+- 该应用需已接入[智能填充服务](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/scenario-fusion-introduction-to-smart-fill#section1167564853816)。
+
+ 
+## 开发准备
+配置Weex已适配HarmonyOS的工程。
+
+ 
+## 效果图
+
+ 
+## 示例代码
+在Weex的form表单中给input输入框（form表单的子节点）配置[autocomplete](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/scenario-fusion-mappingrelationship#section4813203065916)属性以实现智能填充，代码中action需要配置表单提交接口链接，当form表单提交后，页面导航发生变化时，满足历史表单输入保存的条件时会触发对应弹窗。代码如下：收起自动换行深色代码主题复制
+```
+export default { data() { return {}; }};.header { width: 100%; display: flex; justify-content: center; font-size: 40px;}.form-item { display: flex; flex-wrap: wrap; flex-direction: row; align-items: center; justify-content: flex-start; margin-top: 20px; .label { width: 30%; line-height: 1.6; text-align: right; } .input { width: 50%; .form-value { width: 100%; line-height: 1.6; border-style: solid; border-width: 1px; border-color: #333333; } }}.form-button { width: 100%; margin-top: 20px; display: flex; align-items: center; .button { background-color: blue; color: white; height: 47px; border: 0; font-size: 30px; border-radius: 15px; width: 200px; text-align: center; }}
+```

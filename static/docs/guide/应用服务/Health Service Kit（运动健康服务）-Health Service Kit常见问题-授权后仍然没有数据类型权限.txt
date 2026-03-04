@@ -1,0 +1,6 @@
+# [授权后仍然没有数据类型权限](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/health-faqs-2)
+
+鉴权时使用的权限是用户授权的权限与应用申请的权限的交集，需确认：
+
+ 1. 应用已申请了对应的数据类型权限，申请步骤请参考[申请运动健康服务](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/health-apply)，数据类型对应的权限参考[权限说明](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/health-permission-description)。
+2. 用户授权已勾选对应的权限。

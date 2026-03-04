@@ -1,0 +1,37 @@
+# [GetShape](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tensordesc-getshape)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119256481_section104987mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119256481_section104990mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119256481_section104994mcpsimp)
+- [返回值](#zh-cn_topic_0000002119256481_section104997mcpsimp)
+- [异常处理](#zh-cn_topic_0000002119256481_section105022mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119256481_section105025mcpsimp)
+
+## 函数功能
+获取TensorDesc所描述Tensor的Shape。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+Shape GetShape() const;
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| Shape | TensorDesc描述的shape。 |
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+由于返回的Shape信息为值拷贝，因此修改返回的Shape信息，不影响TensorDesc中已有的Shape信息。

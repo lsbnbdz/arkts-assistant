@@ -1,0 +1,40 @@
+# [SetExpandDimsType](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-setexpanddimstype)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083617342_section92823mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083617342_section92826mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083617342_section92830mcpsimp)
+- [返回值](#zh-cn_topic_0000002083617342_section92853mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083617342_section92856mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083617342_section92859mcpsimp)
+
+## 函数功能
+设置补维规则。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+void SetExpandDimsType(const ExpandDimsType &expand_dims_type)
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| expand_dims_type | 输入 | 补维规则。 |
+
+ 
+## 返回值
+无
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+ExpandDimsType dim_type("1100"); StorageFormat format(ge::Format::FORMAT_NCHW, ge::Format::FORMAT_C1HWNC0, dim_type); ExpandDimsType new_dim_type("1010"); format.SetExpandDimsType(new_dim_type);
+```

@@ -1,0 +1,26 @@
+## 目录
+- [场景介绍](#section134272461689)
+- [接口说明](#section8302193612126)
+- [开发步骤](#section76881218191312)
+
+## 场景介绍
+          为企业用户提供获取企业恢复密钥的能力，可以在用户忘记锁屏密码时，使用该企业恢复密钥重置用户的锁屏密码。
+
+## 接口说明
+          详细接口说明可参考[接口文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataguard-recoverykey)。
+
+|  接口名 |  描述 |
+| --- | --- |
+|  verifyUserIdentityEnterprise(userId: number, userType: number, pinCode: string): Promise<void> |  使用Promise方式验证用户锁屏密码。 |
+|  getEnterpriseRecoveryKeyForResettingPin(userId: number, userType: number): Promise<EnterpriseRecoveryKeyInfo> |  使用Promise方式获取用于重置锁屏密码的企业恢复密钥。 |
+
+## 开发步骤
+                导入模块。       收起自动换行深色代码主题复制
+```
+import { buffer } from '@kit.ArkTS';import { BusinessError, osAccount } from '@kit.BasicServicesKit';import { recoveryKey } from '@kit.EnterpriseDataGuardKit';
+```
+      先调用接口[verifyUserIdentityEnterprise](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataguard-recoverykey#section1894251193414)验证用户的锁屏密码，需提供用户ID、用户类型及用户锁屏密码，并在30秒内调用接口[getEnterpriseRecoveryKeyForResettingPin](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataguard-recoverykey#section391875210343)以获取用于重置锁屏密码的企业恢复密钥。       收起自动换行深色代码主题复制
+```
+async function getEnterpriseRecoveryKeyByPin() {  try {    let accountManager: osAccount.AccountManager = osAccount.getAccountManager();    let userId: number = await accountManager.getOsAccountLocalId();    let accountType: osAccount.OsAccountType = await accountManager.getOsAccountType();    console.info(`getOsAccountType,userId: ${userId}, accountType: ${accountType}`);
+    let userType: number = accountType.valueOf();    let pinCode: string = '111111';    recoveryKey.verifyUserIdentityEnterprise(userId, userType, pinCode).then(() => {      console.info(`Succeeded in verifing user identity.`);      recoveryKey.getEnterpriseRecoveryKeyForResettingPin(userId, userType)        .then((info: recoveryKey.EnterpriseRecoveryKeyInfo) => {          console.info(`Succeeded in getting enterprise recovery key for resetting pin.`);          console.info(`EnterpriseRecoveryKeyInfo enterpriseRecoveryKey: ${buffer.from(info.enterpriseRecoveryKey)            .toString('hex')}`);          console.info(`EnterpriseRecoveryKeyInfo exportPublicKey: ${buffer.from(info.exportPublicKey)            .toString('hex')}`);          console.info(`EnterpriseRecoveryKeyInfo iv: ${buffer.from(info.iv).toString('hex')}`);          console.info(`EnterpriseRecoveryKeyInfo tag: ${buffer.from(info.tag).toString('hex')}`);        })        .catch((err: BusinessError) => {          console.error(`Failed to get enterprise recovery key for resetting pin. Code: ${err.code}, message: ${err.message}`);        })    }).catch((error: BusinessError) => {      console.error(`Failed to verified user identity. Code: ${error.code}, message: ${error.message}`);    })  } catch (e) {    console.error(`Failed to getEnterpriseRecoveryKeyByPin. Code: ${e.code}, message: ${e.message}`);  }}
+```

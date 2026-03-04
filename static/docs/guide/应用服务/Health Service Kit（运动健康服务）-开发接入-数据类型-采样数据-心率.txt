@@ -1,0 +1,102 @@
+# [心率](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/health-heart-rate)
+
+## 目录
+- [动态心率](#section13269163142514)
+  - [OAuth权限](#section10856134181312)
+  - [采样明细数据](#section1623310403418)
+  - [采样统计数据](#section5692184320517)
+- [静息心率](#section648763610252)
+  - [OAuth权限](#section7441444111420)
+  - [采样明细数据](#section19517131615)
+  - [采样统计数据](#section1974222115219)
+
+## 动态心率
+ 此数据记录用户在一段时间内的动态心率。
+
+ - Harmony SDK类型常量：[samplePointHelper.heartRate.DATA_TYPE](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-samplepointhelper#section8922144319272)
+ 
+ 
+### OAuth权限
+ 联盟卡片申请的权限名称：健康数据 > 心率数据
+
+ 
+### 采样明细数据
+ **明细字段说明**
+
+ 字段定义：[samplePointHelper.heartRate.Fields](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-samplepointhelper#section69231443182712)
+
+ 展开
+| 字段列表 | 描述 | 类型 | 可选/必选 | 单位 | 取值范围 |
+| --- | --- | --- | --- | --- | --- |
+| bpm | 心率 | number | M | 次/分钟 | [0, ∞) |
+
+ **数据开放说明**
+
+ 展开
+| 开放API | 查询及时性 | 数据源 |
+| --- | --- | --- |
+| healthStore.readData | 小时级 | 手表、手环等 |
+
+ 
+### 采样统计数据
+ **聚合统计策略说明**
+
+ - 字段定义：[samplePointHelper.heartRate.AggregateFields](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-samplepointhelper#section1191392414619)
+ 
+ 展开
+| 字段列表 | 描述 | 聚合策略 | 类型 | 单位 |
+| --- | --- | --- | --- | --- |
+| bpm | 心率 | max | min | last | number | 次/分钟 |
+
+ **数据开放说明**
+
+ 展开
+| 开放API | 查询及时性 | 数据源 |
+| --- | --- | --- |
+| healthStore.aggregateData | 小时级 | 手表、手环等 |
+
+ 
+## 静息心率
+ 此数据记录用户一天中在静止且清醒状态下静息心率值。
+
+ Harmony SDK类型常量：[samplePointHelper.restingHeartRate.DATA_TYPE](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-samplepointhelper#section142451938435)
+
+ 
+### OAuth权限
+ 联盟卡片申请的权限名称：健康数据 > 心率数据
+
+ 
+### 采样明细数据
+ **明细字段说明**
+
+ 字段定义：[samplePointHelper.restingHeartRate.Fields](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-samplepointhelper#section12246532433)
+
+ 展开
+| 字段列表 | 描述 | 类型 | 可选/必选 | 单位 | 取值范围 |
+| --- | --- | --- | --- | --- | --- |
+| restBpm | 静息心率 | number | M | 次/分钟 | [0, ∞) |
+
+ **数据开放说明**
+
+ 展开
+| 开放API | 查询及时性 | 数据源 |
+| --- | --- | --- |
+| healthStore.readData | 小时级 | 手表、手环等 |
+
+ 
+### 采样统计数据
+ **聚合统计策略说明**
+
+ 字段定义：[samplePointHelper.restingHeartRate.AggregateFields](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-samplepointhelper#section12206132184518)
+
+ 展开
+| 字段列表 | 描述 | 聚合策略 | 类型 | 单位 |
+| --- | --- | --- | --- | --- |
+| restBpm | 静息心率 | last | number | 次/分钟 |
+
+ **数据开放说明**
+
+ 展开
+| 开放API | 查询及时性 | 数据源 |
+| --- | --- | --- |
+| healthStore.aggregateData | 小时级 | 手表、手环等 |

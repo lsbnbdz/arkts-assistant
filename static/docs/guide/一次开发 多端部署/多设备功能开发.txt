@@ -1,0 +1,5 @@
+# [多设备功能开发](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-device)
+
+- **[多设备功能开发](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-device-function)**
+ - **[相机硬件差异](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-device-camera)**
+ - **[多设备适配屏幕差异](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-device-screen-diff)**

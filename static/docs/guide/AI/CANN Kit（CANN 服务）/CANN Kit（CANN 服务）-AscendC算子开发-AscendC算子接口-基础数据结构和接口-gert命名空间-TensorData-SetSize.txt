@@ -1,0 +1,40 @@
+# [SetSize](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-setsize)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119177041_section93347mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119177041_section93350mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119177041_section93354mcpsimp)
+- [返回值](#zh-cn_topic_0000002119177041_section93377mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119177041_section93380mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119177041_section93383mcpsimp)
+
+## 函数功能
+设置tensor数据的内存大小。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+void SetSize(const size_t size)
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| size | 输入 | tensor的内存大小，单位为字节。 |
+
+ 
+## 返回值
+无
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+std::vector a = {10};auto addr = reinterpret_cast(a.data()); TensorData td(addr, HostAddrManager, 100U, kOnHost);td.SetSize(10U);
+```

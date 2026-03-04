@@ -1,0 +1,35 @@
+# [Find](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-find)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083617298_section96752mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083617298_section96755mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083617298_section96759mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083617298_section96762mcpsimp)
+- [返回值](#zh-cn_topic_0000002083617298_section96765mcpsimp)
+
+## 函数功能
+查找子串在当前字符串中的位置。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+size_t Find(const AscendString &ascend_string) const;
+```
+ 
+## 约束说明
+无
+
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| ascend_string | 输入 | 要查找的子串。 |
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| size_t | 子串的起始位置。 |

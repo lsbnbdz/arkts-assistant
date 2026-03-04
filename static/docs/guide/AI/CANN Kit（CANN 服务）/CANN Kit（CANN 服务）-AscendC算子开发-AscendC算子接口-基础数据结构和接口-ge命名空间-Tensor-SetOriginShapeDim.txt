@@ -1,0 +1,41 @@
+# [SetOriginShapeDim](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-setoriginshapedim)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119176889_section106734mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119176889_section106737mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119176889_section106741mcpsimp)
+- [返回值](#zh-cn_topic_0000002119176889_section106771mcpsimp)
+- [异常处理](#zh-cn_topic_0000002119176889_section106794mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119176889_section106797mcpsimp)
+
+## 函数功能
+设置原始shape第idx维度。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+graphStatus SetOriginShapeDim(const size_t idx, const int64_t dim_value);
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| idx | 输入 | 维度的索引，索引从0开始。 |
+| dim_value | 输入 | 需设置的值。 |
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| graphStatus | 设置成功返回GRAPH_SUCCESS，否则，返回GRAPH_FAILED。 |
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

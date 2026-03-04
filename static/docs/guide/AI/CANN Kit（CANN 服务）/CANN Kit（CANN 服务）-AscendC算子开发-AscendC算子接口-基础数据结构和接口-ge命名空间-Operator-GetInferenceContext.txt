@@ -1,0 +1,37 @@
+# [GetInferenceContext](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getinferencecontext)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083776634_section99677mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083776634_section99680mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083776634_section99684mcpsimp)
+- [返回值](#zh-cn_topic_0000002083776634_section99687mcpsimp)
+- [异常处理](#zh-cn_topic_0000002083776634_section99712mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083776634_section99715mcpsimp)
+
+## 函数功能
+获取当前算子传递InferShape推导所需要的关联信息，比如前面算子的shape和DataType信息。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+InferenceContextPtr GetInferenceContext() const;
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| InferenceContextPtr | 返回当前operator的推理上下文。 InferenceContextPtr是指向InferenceContext类的指针的别名： 收起自动换行深色代码主题复制 ``` using InferenceContextPtr = std::shared_ptr; ``` |
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

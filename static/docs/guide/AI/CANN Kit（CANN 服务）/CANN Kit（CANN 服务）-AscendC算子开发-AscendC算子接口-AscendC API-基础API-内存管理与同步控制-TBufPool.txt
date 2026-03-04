@@ -1,0 +1,7 @@
+# [TBufPool](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tbufpool)
+
+- **[简介](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tbufpool-overview)**
+ - **[构造函数](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tbufpool-constructor)**
+ - **[InitBufPool](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-initbufpool)**
+ - **[InitBuffer](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-initbuffer)**
+ - **[Reset](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-reset)**

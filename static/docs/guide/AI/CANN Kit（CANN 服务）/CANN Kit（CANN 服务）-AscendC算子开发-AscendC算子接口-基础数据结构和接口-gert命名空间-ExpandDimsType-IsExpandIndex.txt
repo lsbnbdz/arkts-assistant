@@ -1,0 +1,41 @@
+# [IsExpandIndex](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-isexpandindex)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083616802_section89382mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083616802_section89385mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083616802_section89389mcpsimp)
+- [返回值](#zh-cn_topic_0000002083616802_section89412mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083616802_section89417mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083616802_section89420mcpsimp)
+
+## 函数功能
+基于补维后的shape，判断指定的index轴是否为补维轴。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+bool IsExpandIndex(const AxisIndex index) const
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| index | 输入 | 指定轴的索引。 |
+
+ 
+## 返回值
+- true代表指定的轴为补维轴。
+- false代表指定的轴为原始轴。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+ExpandDimsType type1("1001"); bool is_expand_index0 = type1.IsExpandIndex(0); // true bool is_expand_index1 = type1.IsExpandIndex(1); // false
+```

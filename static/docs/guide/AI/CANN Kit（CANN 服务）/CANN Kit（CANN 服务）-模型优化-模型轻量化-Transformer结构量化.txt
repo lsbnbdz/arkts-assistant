@@ -1,0 +1,5 @@
+# [Transformer结构量化](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-large-language-model)
+
+- **[LLM模型一站式量化](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-large-language-one-stop)**
+ - **[插件式量化](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-plug-in-quantification)**
+ - **[量化基模外挂LoRA微调](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-external-lora-fine-tuning)**

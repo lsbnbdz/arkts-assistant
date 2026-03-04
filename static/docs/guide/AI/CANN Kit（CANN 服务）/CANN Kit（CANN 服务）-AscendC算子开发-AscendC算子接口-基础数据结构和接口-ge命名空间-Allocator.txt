@@ -1,0 +1,6 @@
+# [Allocator](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-allocator)
+
+- **[构造函数和析构函数](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-allocator-construction-and-destructor)**
+ - **[Malloc](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-malloc)**
+ - **[Free](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-allocator-free)**
+ - **[MallocAdvise](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-mallocadvise)**

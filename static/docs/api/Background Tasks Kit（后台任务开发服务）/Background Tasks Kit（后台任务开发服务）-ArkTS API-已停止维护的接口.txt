@@ -1,0 +1,5 @@
+# [已停止维护的接口](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/background-tasks-arkts-dep)
+
+- **[@ohos.backgroundTaskManager (后台任务管理)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-backgroundtaskmanager)**
+ - **[@ohos.bundleState (设备使用信息统计)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-deviceusagestatistics)**
+ - **[@ohos.reminderAgent (后台代理提醒)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-reminderagent)**

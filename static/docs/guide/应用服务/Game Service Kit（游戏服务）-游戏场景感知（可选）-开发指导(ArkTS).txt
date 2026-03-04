@@ -1,0 +1,100 @@
+# [开发指导(ArkTS)](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/gameservice-gameperformance-access-procedure)
+
+## 业务流程
+ 
+
+ 1. 游戏启动后调用[gamePerformance.init](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-gameperformance#section131971556806)接口对游戏场景感知进行初始化。
+ 2. 初始化成功后，游戏调用[gamePerformance.on](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-gameperformance#section17453143012584)接口注册设备状态变化事件监听，订阅设备状态变化通知。
+ 3. 游戏调用[gamePerformance.updateGameInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-gameperformance#section225333655719)接口向游戏场景感知上报游戏信息（包信息、配置信息、场景信息和网络信息等）。
+ 4. 游戏场景感知广播游戏信息给终端系统。
+ 5. 终端系统根据游戏信息进行系统资源调度。
+ 6. 终端系统会将设备状态变化通知游戏场景感知。
+ 7. 游戏场景感知向游戏客户端反馈设备状态变化。
+ 8. 如不再需要订阅，游戏可调用[gamePerformance.off](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-gameperformance#section3614173614593)接口取消设备状态变化事件监听。
+ 9. 游戏调用[gamePerformance.getDeviceInfoByScope](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-gameperformance#section106164517195)接口向游戏场景感知主动查询设备状态信息。
+ 
+ 说明 Mali系列GPU不支持采集GPU性能信息，调用订阅和查询设备状态信息接口时无法获取设备GPU性能信息。
+
+ 
+## 接口说明
+ 具体API说明详见[接口文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-gameperformance)。
+
+ 展开
+| 接口名 | 描述 |
+| --- | --- |
+| init(gamePackageInfo: GamePackageInfo): Promise | 游戏初始化接口，对游戏场景感知进行初始化，通过Promise对象获取返回值。 |
+| on(type: 'deviceStateChanged', callback: Callback): void | 订阅设备状态变化接口，主要用于监听deviceStateChanged（设备状态变化）事件。 |
+| on(type: 'deviceStateChanged', callback: Callback, scope: Array): void | 按需订阅设备状态变化接口。主要用于监听deviceStateChanged（设备状态变化）事件，支持传入参数指定订阅的设备状态信息类型。 |
+| updateGameInfo(gameInfo: T): Promise | 更新游戏信息接口，主要用于上报游戏信息（包信息、配置信息、场景信息和网络信息等），通过Promise对象获取返回值。 |
+| off(type: 'deviceStateChanged', callback?: Callback): void | 取消订阅设备状态变化接口，主要用于取消监听deviceStateChanged（设备状态变化）事件。 |
+| getDeviceInfoByScope(scope: Array): Promise | 查询设备状态信息接口。 |
+
+ 
+## 接入步骤
+ 
+### 导入模块
+ 导入Game Service Kit及公共模块。
+
+ 收起自动换行深色代码主题复制
+```
+import { gamePerformance } from '@kit.GameServiceKit';import { hilog } from '@kit.PerformanceAnalysisKit';import { BusinessError } from '@kit.BasicServicesKit';
+```
+ 
+### 初始化
+ 导入相关模块后，需先调用[init](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-gameperformance#section131971556806)接口对游戏场景感知进行初始化。
+
+ 说明 init接口是调用其他接口的前提，如果未初始化或初始化失败，将无法调用其他接口。
+
+ 收起自动换行深色代码主题复制
+```
+let gamePackageInfo: gamePerformance.GamePackageInfo = { messageType: 0, bundleName: "com.example.demo", // 仅示例，请替换为实际的游戏包名 appVersion: "1.0"}try { gamePerformance.init(gamePackageInfo).then(() => { // 初始化成功 hilog.info(0x0001, 'demo', `Succeeded in initializing.`); })} catch (error) { // 初始化失败 let err = error as BusinessError; hilog.error(0x0001, 'demo', `Failed to initialize. Code: ${err.code}, message: ${err.message}`);}
+```
+ 
+### 订阅设备状态变化
+ 调用[on](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-gameperformance#section17453143012584)接口可以订阅设备状态变化事件，获取设备状态变化的通知（如设备温控档位）。
+
+ 收起自动换行深色代码主题复制
+```
+function onDeviceStateChange(data:gamePerformance.DeviceInfo) { // 设备信息详情 hilog.info(0x0001, 'demo', `device state changed. tempLevel is ${data.tempLevel}`);}
+// 订阅deviceStateChanged事件try { gamePerformance.on('deviceStateChanged', onDeviceStateChange);} catch (error) { // 订阅失败 let err = error as BusinessError; hilog.error(0x0001, 'demo', `Failed to subscribe. Code: ${err.code}, message: ${err.message}`);}
+```
+ 目前支持订阅GPU和温度变化趋势两种类型的设备状态数据，也可以调用[on](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-gameperformance#section060864914495)接口按需订阅，如只订阅GPU数据：
+
+ 收起自动换行深色代码主题复制
+```
+function onDeviceStateChange(data:gamePerformance.DeviceInfo) { // data中仅含有gpuInfo hilog.info(0x0001, 'demo', `device state changed. tempLevel is ${data.tempLevel}`);}
+// 订阅deviceStateChanged事件try { let types:Array = [gamePerformance.DeviceInfoType.GPU]; gamePerformance.on('deviceStateChanged', onDeviceStateChange, types);} catch (error) { // 订阅失败 let err = error as BusinessError; hilog.error(0x0001, 'demo', `Failed to subscribe. Code: ${err.code}, message: ${err.message}`);}
+```
+ 
+### 上报游戏信息
+ 初始化成功后，可以通过调用[updateGameInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-gameperformance#section225333655719)接口上报游戏信息（包信息、配置信息、场景信息和网络信息等）。若需上报自定义数据，可调用[addGameCustomData](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-gameperformance#section72524718166)接口。
+
+ 收起自动换行深色代码主题复制
+```
+// 以更新游戏场景信息为例let gameSceneInfo: gamePerformance.GameSceneInfo = { messageType: 2, sceneID: 7, importanceLevel: 4}try { gamePerformance.updateGameInfo(gameSceneInfo).then(() => { // 更新游戏场景信息成功 hilog.info(0x0001, 'demo', `Succeeded in updating.`); });} catch (error) { // 更新游戏场景信息失败 let err = error as BusinessError; hilog.error(0x0001, 'demo', `Failed to update. Code: ${err.code}, message: ${err.message}`);}
+```
+ 
+### 取消订阅设备状态
+ 如不再需要订阅，则可以通过调用[off](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-gameperformance#section3614173614593)接口取消订阅设备状态。
+
+ 收起自动换行深色代码主题复制
+```
+function onDeviceStateChange(data:gamePerformance.DeviceInfo) { // 设备信息详情 hilog.info(0x0001, 'demo', `device state changed. tempLevel is ${data.tempLevel}`);}
+// 取消订阅deviceStateChanged事件try { gamePerformance.off('deviceStateChanged', onDeviceStateChange);} catch (error) { // 取消订阅失败 let err = error as BusinessError; hilog.error(0x0001, 'demo', `Failed to unsubscribe. Code: ${err.code}, message: ${err.message}`);}
+// 取消deviceStateChanged事件的全部订阅try { gamePerformance.off("deviceStateChanged");} catch (error) { // 取消订阅失败 let err = error as BusinessError; hilog.error(0x0001, 'demo', `Failed to unsubscribe. Code: ${err.code}, message: ${err.message}`);}
+```
+ 
+### 查询设备状态信息
+ 除订阅设备状态变化的方式外，也可以通过调用[getDeviceInfoByScope](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-gameperformance#section106164517195)接口主动查询设备状态：
+
+ 收起自动换行深色代码主题复制
+```
+// 查询设备状态try { let gpuParam: gamePerformance.DeviceInfoParameter = { deviceInfoType: gamePerformance.DeviceInfoType.GPU } let thermalParam: gamePerformance.DeviceInfoParameter = { deviceInfoType: gamePerformance.DeviceInfoType.THERMAL } let gameInfos: Array = [gpuParam, thermalParam]; gamePerformance.getDeviceInfoByScope(gameInfos).then((deviceInfo:gamePerformance.DeviceInfo) => { hilog.info(0x0001, 'demo', `Succeeded in querying device info. tempLevel is ${deviceInfo.tempLevel}`); });} catch (error) { // 查询失败 let err = error as BusinessError; hilog.error(0x0001, 'demo', `Failed to query. Code: ${err.code}, message: ${err.message}`);}
+```
+ 主动查询接口同样支持按需查询，如只查询温度变化趋势数据：
+
+ 收起自动换行深色代码主题复制
+```
+// 只查询设备温度数据try { let thermalParam: gamePerformance.DeviceInfoParameter = { deviceInfoType: gamePerformance.DeviceInfoType.THERMAL } let gameInfos: Array = [thermalParam]; gamePerformance.getDeviceInfoByScope(gameInfos).then((deviceInfo:gamePerformance.DeviceInfo) => { // 此处的查询结果中将不含有gpuInfo hilog.info(0x0001, 'demo', `Succeeded in querying device info. tempLevel is ${deviceInfo.tempLevel}`); });} catch (error) { // 查询失败 let err = error as BusinessError; hilog.error(0x0001, 'demo', `Failed to query. Code: ${err.code}, message: ${err.message}`);}
+```
+ 说明 查询温度变化趋势需要历史数据作为计算依据，调用该接口时请保证设备已启动至少一分钟，否则会返回1010300003错误。

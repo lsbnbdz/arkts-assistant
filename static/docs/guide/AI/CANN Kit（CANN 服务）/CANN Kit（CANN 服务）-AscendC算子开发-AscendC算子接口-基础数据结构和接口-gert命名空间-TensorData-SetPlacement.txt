@@ -1,0 +1,40 @@
+# [SetPlacement](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-setplacement)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119257057_section93410mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119257057_section93413mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119257057_section93417mcpsimp)
+- [返回值](#zh-cn_topic_0000002119257057_section93442mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119257057_section93445mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119257057_section93448mcpsimp)
+
+## 函数功能
+设置tensor的placement。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+void SetPlacement(const TensorPlacement placement)
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| placement | 输入 | tensor的placement。 关于TensorPlacement类型的定义，请参见TensorPlacement。 |
+
+ 
+## 返回值
+无
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+auto addr = reinterpret_cast(0x10); TensorData td(addr, nullptr); auto td_place = td.SetPlacement(kOnHost);
+```

@@ -1,0 +1,48 @@
+# [DataTypeToSerialString](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-datatypetoserialstring)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119176481_section107318mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119176481_section107326mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119176481_section107330mcpsimp)
+- [返回值](#zh-cn_topic_0000002119176481_section107355mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119176481_section107358mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119176481_section107361mcpsimp)
+
+## 函数功能
+将DataType类型值转化为字符串表达。
+
+ 从GCC 5.1版本开始，libstdc++为了更好的实现C++11规范，更改了std::string和std::list的一些接口，导致新老版本ABI不兼容。所以推荐使用[DataTypeToAscendString](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-datatypetoascendstring)替代本接口。
+
+ 使用该接口需要包含type_utils.h头文件。
+
+ 收起自动换行深色代码主题复制
+```
+#include "graph/utils/type_utils.h"
+```
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+std::string DataTypeToSerialString(const DataType data_type);
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| data_type | 输入 | 待转换的DataType，支持的DataType请参考DataType。 |
+
+ 
+## 返回值
+转换后的DataType字符串。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+DataType data_type = ge::DT_UINT32; auto type_str = DataTypeToSerialString(data_type); // "DT_UINT32"
+```

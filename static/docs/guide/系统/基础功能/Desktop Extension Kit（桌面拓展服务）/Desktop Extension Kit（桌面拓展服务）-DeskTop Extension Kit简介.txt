@@ -1,0 +1,9 @@
+# [DeskTop Extension Kit简介](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/statusbar-extension-introduction)
+
+DeskTop Extension Kit（桌面拓展服务）提供系统级统一的操作入口，支持应用快捷功能接入桌面。
+
+ 说明DeskTop Extension Kit（桌面拓展服务）只支持中国境内（香港特别行政区、澳门特别行政区、中国台湾除外）。
+
+ 
+## 场景介绍
+当应用启动时或者应用运行过程中，应用可以通过本模块提供的接口接入状态栏和快捷栏，进行快捷操作。

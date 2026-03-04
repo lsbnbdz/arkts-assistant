@@ -1,0 +1,40 @@
+# [SetDimNum](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-setdimnum)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083776730_section92458mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083776730_section92461mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083776730_section92465mcpsimp)
+- [返回值](#zh-cn_topic_0000002083776730_section92488mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083776730_section92491mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083776730_section92494mcpsimp)
+
+## 函数功能
+设置dim num。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+void SetDimNum(const size_t dim_num)
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| dim_num | 输入 | 将Shape对象的dim_num_设置为dim_num。 |
+
+ 
+## 返回值
+无
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+Shape shape0({3, 256, 256}); shape0.SetDimNum(1); auto dim_num = shape0.GetDimNum(); // 1
+```

@@ -1,0 +1,3 @@
+# [简介](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-storageshape-introduction)
+
+该类描述了tensor的shape，包含两个信息：origin_shape以及storage_shape。其中，origin_shape表示tensor的shape数学描述，storage_shape表示origin_shape实际运行时的shape格式。

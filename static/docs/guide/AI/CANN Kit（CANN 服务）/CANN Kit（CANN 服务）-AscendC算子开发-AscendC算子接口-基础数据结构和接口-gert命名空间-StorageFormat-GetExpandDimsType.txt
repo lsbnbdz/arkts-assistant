@@ -1,0 +1,37 @@
+# [GetExpandDimsType](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getexpanddimstype)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083616818_section92803mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083616818_section92806mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083616818_section92810mcpsimp)
+- [返回值](#zh-cn_topic_0000002083616818_section92813mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083616818_section92816mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083616818_section92819mcpsimp)
+
+## 函数功能
+获取补维规则。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+ExpandDimsType GetExpandDimsType() const
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+补维规则。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+ExpandDimsType dim_type("1100"); StorageFormat format(ge::Format::FORMAT_NCHW, ge::Format::FORMAT_C1HWNC0, dim_type); auto fmt_dim_type = format.GetExpandDimsType();
+```

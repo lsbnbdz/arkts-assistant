@@ -1,0 +1,37 @@
+# [GetDimNum](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getdimnum)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119177073_section92438mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119177073_section92441mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119177073_section92445mcpsimp)
+- [返回值](#zh-cn_topic_0000002119177073_section92448mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119177073_section92451mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119177073_section92454mcpsimp)
+
+## 函数功能
+获取dim_num。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+size_t GetDimNum() const
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+获取dim_num，即Shape的长度。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+Shape shape0({3, 256, 256}); auto dim_num = shape0.GetDimNum(); // 3
+```

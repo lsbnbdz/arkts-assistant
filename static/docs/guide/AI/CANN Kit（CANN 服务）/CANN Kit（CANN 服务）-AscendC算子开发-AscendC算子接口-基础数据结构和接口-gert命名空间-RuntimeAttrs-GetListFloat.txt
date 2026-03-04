@@ -1,0 +1,40 @@
+# [GetListFloat](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getlistfloat)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083616826_section92110mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083616826_section92113mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083616826_section92117mcpsimp)
+- [返回值](#zh-cn_topic_0000002083616826_section92140mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083616826_section92143mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083616826_section92146mcpsimp)
+
+## 函数功能
+获取list_float32类型的属性值。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+const TypedContinuousVector *GetListFloat(const size_t index) const
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| index | 输入 | 属性在IR原型定义中以及在OP_IMPL注册中的索引。 |
+
+ 
+## 返回值
+指向属性值的指针。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+const RuntimeAttrs * runtime_attrs = kernel_context->GetAttrs(); const TypedContinuousVector *attr0 = runtime_attrs->GetListFloat(0);
+```

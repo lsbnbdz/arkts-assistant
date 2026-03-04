@@ -1,0 +1,4 @@
+# [特殊界面布局场景](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-device-hardware)
+
+- **[折叠屏悬停态](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-folded-hover)**
+ - **[Web响应式布局](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-web-adaptation)**

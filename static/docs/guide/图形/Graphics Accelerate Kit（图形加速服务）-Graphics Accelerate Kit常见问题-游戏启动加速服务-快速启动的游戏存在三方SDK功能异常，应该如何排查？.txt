@@ -1,0 +1,3 @@
+# [快速启动的游戏存在三方SDK功能异常，应该如何排查？](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/graphics-accelerate-launch-faq-3)
+
+秒级启动使能后游戏进行上划移除操作时，系统会对游戏进程进行深度冻结和内存换出，但游戏的进程、ArkTS Runtime、AbilityStage都不会进行销毁，只有UIAbility会经历从创建到销毁的完整的生命周期，因此ArkTS定义的全局变量、静态变量、AppStorage变量、globalThis变量、单例等都不会进行销毁或重置。三方SDK的生命周期跟随进程生命周期的变化而变化，当进程不销毁时，三方SDK对象将一直存在，开发者可以通过定义全局变量标志位来控制三方SDK初始化，以避免下一次秒级启动时因重复创建而产生异常。

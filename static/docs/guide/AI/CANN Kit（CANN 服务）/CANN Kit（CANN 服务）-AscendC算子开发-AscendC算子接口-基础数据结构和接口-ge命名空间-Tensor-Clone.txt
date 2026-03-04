@@ -1,0 +1,37 @@
+# [Clone](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-clone)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119256837_section105868mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119256837_section105871mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119256837_section105875mcpsimp)
+- [返回值](#zh-cn_topic_0000002119256837_section105878mcpsimp)
+- [异常处理](#zh-cn_topic_0000002119256837_section105901mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119256837_section105904mcpsimp)
+
+## 函数功能
+拷贝Tensor。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+Tensor Clone() const;
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| Tensor | 返回拷贝的Tensor对象。 |
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

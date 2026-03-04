@@ -1,0 +1,25 @@
+# [地图选点Button](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/scenario-fusion-button-selecting-point)
+
+## 目录
+- [场景介绍](#section1375613395402)
+- [约束和限制](#section1333916387562)
+- [前提条件](#zh-cn_topic_0000001791258037_section2953162118445)
+- [开发步骤](#section3770152419275)
+
+## 场景介绍
+地图选点Button功能可以帮助开发者调用Button组件拉起Map Kit的地图选点页面，用户在地图中选择位置后，位置相关信息返回Button页面。
+
+ 运行示例代码单击“地图选点”按钮拉起地图选点页面。
+
+ 
+## 约束和限制
+地图选点Button支持Phone和Tablet设备，并且从5.0.1（13）版本开始，新增支持2in1设备。
+
+ 
+## 前提条件
+参见[开发准备](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/map-config-agc)。
+
+ 
+## 开发步骤
+1. 导入Scenario Fusion Kit模块以及相关公共模块。收起自动换行深色代码主题复制 ``` import { FunctionalButton, functionalButtonComponentManager } from '@kit.ScenarioFusionKit';import { hilog } from '@kit.PerformanceAnalysisKit'; ```
+2. 在容器中声明FunctionalButton，指定Button的openType，并设置对应的回调函数，代码如下：收起自动换行深色代码主题复制 ``` @Entry@Componentstruct Index { build() { Row() { Column() { // 声明FunctionalButton。 FunctionalButton({ params: { // OpenType.CHOOSE_LOCATION表示该按钮用于在地图上选择位置。 openType: functionalButtonComponentManager.OpenType.CHOOSE_LOCATION, label: '地图选点', // 调整按钮样式。 styleOption: { bgColor: functionalButtonComponentManager.ColorType.DEFAULT, size: functionalButtonComponentManager.SizeType.DEFAULT, plain: false, disabled: false, loading: false, hoverClass: functionalButtonComponentManager.HoverClassType.HOVER_CLASS, hoverStartTime: 0, hoverStayTime: 0, styleConfig: new functionalButtonComponentManager.ButtonConfig() .fontSize(20) }, }, // 当OpenType设置为CHOOSE_LOCATION时，回调必须为onChooseLocation。 controller: new functionalButtonComponentManager.FunctionalButtonController() .onChooseLocation((err, data) => { if (err) { // 错误日志处理。 hilog.error(0x0000, "testTag", "error: %{public}d %{public}s", err.code, err.message); return; } // 成功日志处理。 hilog.info(0x0000, "testTag", "succeeded in choosing location"); let name: string = data.name; let address: string = data.address; let longitude: number = data.longitude; let latitude: number = data.latitude; }) }) } .width('100%') } .height('100%') }} ``` 说明- openType参数填写"functionalButtonComponentManager.OpenType.CHOOSE_LOCATION"指定Button为打开地图选点类型。 - controller参数必须对应填写"new functionalButtonComponentManager.FunctionalButtonController().onChooseLocation"。 - 可使用自定义Modifier设置按钮样式，参考[示例](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/scenario-fusion-functionalbuttoncomponentmanager#section1251915241170)。 其他参数请参考：[FunctionalButton（Button组件）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/scenario-fusion-functionalbutton)。

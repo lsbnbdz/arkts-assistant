@@ -1,0 +1,4 @@
+# [模块](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/background-tasks-module)
+
+- **[BackgroundProcessManager](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-backgroundprocessmanager)**
+ - **[TransientTask](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-transienttask)**

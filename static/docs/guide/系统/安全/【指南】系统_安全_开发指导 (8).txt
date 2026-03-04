@@ -1,0 +1,1 @@
+[匿名密钥证明(ArkTS)](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/huks-key-anon-attestation-arkts)  [匿名密钥证明(C/C++)](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/huks-key-anon-attestation-ndk)

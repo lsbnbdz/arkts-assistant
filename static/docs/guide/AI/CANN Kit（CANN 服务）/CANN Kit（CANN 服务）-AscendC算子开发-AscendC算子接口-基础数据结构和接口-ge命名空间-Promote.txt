@@ -1,0 +1,37 @@
+# [Promote](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-promote)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119256901_section103895mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119256901_section103898mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119256901_section103901mcpsimp)
+- [返回值](#zh-cn_topic_0000002119256901_section103924mcpsimp)
+- [异常处理](#zh-cn_topic_0000002119256901_section103927mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119256901_section103930mcpsimp)
+
+## 函数功能
+Promote类用于表示输出数据类型为输入或属性指定的数据类型间的提升类型。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+class Promote { public: Promote(const std::initializer_list &syms); std::vector Syms() const; // 返回参与类型提升的符号名 Promote(const Promote &other) = delete; Promote &operator=(const Promote &other) = delete; Promote(Promote &&other) noexcept; Promote &operator=(Promote &&other) noexcept; private: std::shared_ptr data_; };
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| syms | 参与提升的类型符号列表。 | 符号包括输入类型的符号或者属性指定的符号。 |
+
+ 
+## 返回值
+无
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

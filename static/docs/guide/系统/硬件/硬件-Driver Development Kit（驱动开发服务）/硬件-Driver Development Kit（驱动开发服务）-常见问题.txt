@@ -1,0 +1,40 @@
+# [常见问题](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/externaldevice-faqs)
+
+## 编译或运行时无法找到头文件
+ 
+### 问题现象
+编译或运行时提示“usb/usb_ddk_api.h not found”、“hid/hid_ddk_api.h not found” 等。
+
+ 
+### 解决措施
+- 编译时报错：请确认HarmonyOS版本，是否为最新版本。
+- 运行时报错：请确认设备SDK版本为API11及以上。
+
+ 
+## 安装HAP时提示版本不匹配
+ 
+### 问题现象
+安装HAP时提示 “compileSdkVersion and releaseType of the app do not match the apiVersion and releaseType on the device”。
+
+ 
+### 解决措施
+请根据[参考信息](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/externaldevice-faqs#%E5%8F%82%E8%80%83%E4%BF%A1%E6%81%AF)提供的对应关系，检查设备SDK的API版本是否匹配。
+
+ 
+### 参考信息
+ 展开
+| 接口类型 | 支持的最小API |
+| --- | --- |
+| 应用开发接口（ArkTS接口） | API10 |
+| USB DDK接口 | API10 |
+| HID DDK接口 | API11 |
+
+ 
+## 安装HAP时提示解析本地so文件失败
+ 
+### 问题现象
+安装HAP时提示"code:9568347 error: install parse native so failed"。
+
+ 
+### 解决措施
+根据[应用调试](https://developer.huawei.com/consumer/cn/doc/harmonyos-faqs-V5/faqs-app-debugging-14-V5)中提供的解决方法，在build-profile.json5中的buildOption/externalNativeOptions内手动配置abiFilters的值。

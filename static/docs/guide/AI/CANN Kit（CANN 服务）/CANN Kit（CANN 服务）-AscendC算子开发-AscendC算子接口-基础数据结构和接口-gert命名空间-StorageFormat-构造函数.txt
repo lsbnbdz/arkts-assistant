@@ -1,0 +1,42 @@
+# [构造函数](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-storageformat-constructor)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083617410_section92626mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083617410_section92629mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083617410_section92635mcpsimp)
+- [返回值](#zh-cn_topic_0000002083617410_section92672mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083617410_section92676mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083617410_section92679mcpsimp)
+
+## 函数功能
+构造一个格式，格式包括原始格式、运行时格式、补维规则。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+StorageFormat()StorageFormat(const ge::Format origin_format, const ge::Format storage_format, const ExpandDimsType &expand_dims_type)
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| origin_format | 输入 | 原始格式。 |
+| storage_format | 输入 | 运行时格式。 |
+| expand_dims_type | 输入 | 补维规则。 |
+
+ 
+## 返回值
+返回一个指定了origin_format、storage_format和expand_dims_type的StorageFormat对象**。**
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+ExpandDimsType dim_type("1100"); StorageFormat format(ge::Format::FORMAT_NCHW, ge::Format::FORMAT_C1HWNC0, dim_type);
+```

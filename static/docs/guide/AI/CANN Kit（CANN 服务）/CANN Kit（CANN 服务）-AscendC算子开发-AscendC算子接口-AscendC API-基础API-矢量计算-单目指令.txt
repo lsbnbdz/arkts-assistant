@@ -1,0 +1,11 @@
+# [单目指令](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-vector-calculation-monocular)
+
+- **[Exp](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-vector-calculation-exp)**
+ - **[Ln](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-vector-calculation-lnln)**
+ - **[Abs](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-vector-calculation-abs)**
+ - **[Reciprocal](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-reciprocal)**
+ - **[Sqrt](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-vector-calculation-sqrt)**
+ - **[Rsqrt](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-rsqrt)**
+ - **[Not](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-vector-calculation-not)**
+ - **[Relu](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-vector-calculation-relu)**
+ - **[更多样例](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-vector-calculation-binocular-more)**

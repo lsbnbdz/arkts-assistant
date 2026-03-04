@@ -1,0 +1,171 @@
+# [混合支付场景](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/payment-common-pay-mix)
+
+## 目录
+- [场景介绍](#section44521256194011)
+- [接入流程](#section1255816408300)
+- [业务流程](#section17560656182617)
+  - [选择华为支付场景](#section161619412537)
+  - [选择三方支付场景](#section6386171815537)
+- [接口说明](#section5906121818412)
+- [开发步骤](#section9187179113620)
+  - [华为支付预下单（服务端开发）](#section126982401468)
+  - [拉起通用收银台（端侧开发）](#section19371156173617)
+  - [支付处理](#section26971137123915)
+
+## 场景介绍
+ 从5.0.2(14)版本开始，新增支持通用收银台混合支付场景。
+
+ 用户在开发者的应用/元服务中选购完商品，点击确认支付，应用/元服务拉起通用收银台支付时，用户可以在通用收银台支付方式中选择华为支付方式或第三方支付方式完成商品订单的支付。
+
+ 支持商户模型：直连商户、平台类商户、服务商
+
+ 通用收银台混合支付页面展示：
+
+ 
+| |
+| |
+| | | |
+| 支付方式选择页面 | 支付页面 | 支付结果展示页面 |
+
+ 
+## 接入流程
+ 华为支付通用收银台混合支付接入流程如下：
+
+ 展开
+| 步骤 | 说明 |
+| --- | --- |
+| 商户入网及开发准备 | 华为支付商户入网及开发准备 在准备开发前，商户需要在华为支付商户平台入网及完成开发准备操作。 支持的商户模型：直连商户、平台商户、服务商。 商户模型详细内容请参见接入模式。 三方支付商户入网（非必选） 由于三方支付直接连接第三方支付平台完成支付，故可能需要开发者在第三方支付平台注册、创建商户（建议开发者用新申请的商户号与现有商户号做区分）。 |
+| 产品开通与配置 | 接入通用收银台，商户入网后需与华为支付业务侧沟通（合作咨询可点击此处）后申请开通三方支付及完成相关支付模式配置。 |
+| 通用收银台接入 | 根据混合支付场景开发步骤完成通用收银台支付接入。 |
+
+ 
+## 业务流程
+ 混合支付模式，收银台上用户可选择华为支付或三方支付方式支付。具体接入流程如下：
+
+ 
+
+ 1. 商户客户端请求商户服务器创建订单。
+ 2. 商户服务器按照商户模型调用Payment Kit服务端[直连商户预下单](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-prepay)或[平台类商户/服务商预下单](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-agent-prepay)接口。
+ 3. Payment Kit服务端返回预支付ID（prepayId）。
+ 4. 商户服务端构建**订单支付信息**[orderStr](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-model#section159202591414)返回给商户客户端。
+ 5. 商户客户端调用[requestPayment](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-paymentservice#section295285522616)接口拉起Payment Kit通用收银台。
+ 6. Payment Kit客户端展示含华为支付方式的通用收银台，根据用户所选择的不同支付方式完成支付操作。
+ 
+ 
+### 选择华为支付场景
+ 1. 用户选择华为支付方式支付，Payment Kit客户端向Payment Kit服务端发起支付请求。
+ 2. Payment Kit服务端处理支付操作。
+ 3. Payment Kit服务端同步返回支付状态给Payment Kit客户端，Payment Kit客户端展示支付状态后返回商户客户端。
+ 4. Payment Kit服务端通过回调接口将支付结果返回给商户服务端。
+ 5. 商户服务端收到支付结果回调响应后，使用[SM2验签方式](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-rest-overview#section17670192215175)对支付结果进行验签
+ 
+ 
+### 选择三方支付场景
+ 1. 用户选择三方支付方式并确认支付。
+ 2. Payment Kit客户端将用户在通用收银台选择支付方式并确认支付后的支付信息[PayResult](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-paymentservice#zh-cn_topic_0000002043030493_section363mcpsimp)返回给商户客户端。
+ 
+ 
+
+ **基于URL跳转方式拉起收银台：**
+
+ 3-1-1. 商户客户端将支付方式通知给商户服务端。
+
+ 3-1-2. 商户服务端调用三方支付的接口获取支付信息。
+
+ 3-1-3. 三方支付服务端将支付跳转链接信息返回给商户服务端。
+
+ 3-1-4. 商户服务端将支付跳转链接信息返回给商户客户端。
+
+ 3-1-5. 商户客户端构建**订单支付跳转信息**[orderStr](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-model#section159202591414)调用Payment Kit的[requestPayment](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-paymentservice#section295285522616)接口跳转三方支付。
+
+ 3-1-6. Payment Kit客户端根据传递的支付消息拉起三方支付收银台。
+
+ 3-1-7. 三方支付客户端展示支付收银台。
+
+ 3-1-8. 用户完成支付操作。
+
+ 3-1-9. 三方支付服务端处理支付。
+
+ 3-1-10. 三方支付服务端同步返回支付状态给三方支付客户端，三方支付客户端展示支付状态后返回商户客户端。
+
+ 3-1-11. 三方支付服务端通过回调接口将支付结果返回给商户服务端。
+
+ 3-1-12. 商户服务端收到支付结果回调请求后，根据三方支付服务要求对支付结果进行验签。
+
+ 
+
+ **基于接口拉起方式拉起收银台：**
+
+ 3-2-1. 商户客户端将返回的支付方式上送给商户服务端。
+
+ 3-2-2. 商户服务端获取拉起三方收银台参数，构建[payInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-model#section1240916334438)（不同三方支付方式拉起收银台参数不同）返回。
+
+ 3-2-3. 商户服务端返回**三方支付信息**[payInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-model#section1240916334438)给商户客户端。
+
+ 3-2-4. 商户客户端使用[payInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-model#section1240916334438)调用Payment Kit的[ThirdPayClient.pay](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-third-payment-service#section5214134018367)接口拉起三方支付（可同步通过[ThirdPayClient.handlePayCallback](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-third-payment-service#section09689720416)接口调用，获取三方支付操作处理结果）。
+
+ 3-2-5. Payment Kit拉起三方支付收银台。
+
+ 3-2-6. 三方支付客户端展示支付收银台。
+
+ 3-2-7. 用户完成支付操作。
+
+ 3-2-8. 三方支付服务端处理支付。
+
+ 3-2-9. 三方支付服务端同步返回支付状态给三方支付客户端，三方支付客户端展示支付状态后返回商户客户端。
+
+ 3-2-10. 三方支付客户端将用户支付操作完成同步给Payment Kit客户端。
+
+ 3-2-11. Payment Kit客户端通过[ThirdPayClient.handlePayCallback](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-third-payment-service#section09689720416)接口，将用户支付操作结果返回给商户客户端。
+
+ 3-2-12. 三方支付服务端通过回调接口将支付结果返回给商户服务端。
+
+ 3-2-13. 商户服务端收到支付结果回调请求后，根据三方支付服务要求对支付结果进行验签，同步返回支付结果给客户端。
+
+ 
+## 接口说明
+ 混合支付场景拉起通用收银台接口通过Promise返回结果。具体API说明详见[接口文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-paymentservice)。
+
+ 展开
+| 接口名 | 描述 |
+| --- | --- |
+| requestPayment(context: common.UIAbilityContext, orderStr: string, payload: string): Promise | 支持拉起Payment Kit通用收银台（含华为支付）、跳转三方支付收银台。 |
+| pay(payInfo: string): Promise; | 拉起三方支付收银台。 |
+| handlePayCallback(want: Want): boolean; | 三方支付结果回调同步华为支付收银台。 |
+
+ 
+## 开发步骤
+ 
+### 华为支付预下单（服务端开发）
+ 1. 开发者按照商户模型调用[直连商户预下单](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-prepay)或[平台类商户/服务商预下单](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-agent-prepay)接口获取预支付ID（prepayId）。 为保证支付订单的安全性和可靠性需要对请求body和请求头PayMercAuth对象内的入参排序拼接进行签名。可参考[签名规则](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-rest-overview#section174821258151218)。
+ 2. 构建订单信息参数[orderStr](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-model#section159202591414)并返回给客户端。业务接口请求示例代码可参考[业务接口请求](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/payment-server-connect#section5626882242)。
+ 
+ 
+### 拉起通用收银台（端侧开发）
+ 商户客户端使用[orderStr](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-model#section159202591414)作为参数调用[requestPayment](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-paymentservice#section295285522616)接口拉起Payment Kit支付收银台。
+
+ 当接口通过.then()方法返回时，则表示当前接口请求响应正常，通过.catch()方法返回表示接口请求响应异常。当此次请求有异常时，可通过**error.code**获取错误码，错误码相关信息请参见[错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-error-code)。示例代码如下： 收起自动换行深色代码主题复制
+```
+import { BusinessError } from '@kit.BasicServicesKit';import { paymentService } from '@kit.PaymentKit';import { common } from '@kit.AbilityKit';
+@Entry@Componentstruct Index { context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext; requestPaymentPromise() { // used orderStr to pay for an order, use your own orderStr. const orderStr = '{"app_id":"***","merc_no":"***","prepay_id":"xxx","timestamp":"1680259863114","noncestr":"1487b8a60ed9f9ecc0ba759fbec23f4f","sign":"****","auth_id":"***"}'; paymentService.requestPayment(this.context, orderStr, "") .then((payResult: paymentService.PayResult) => { // succeeded in paying console.info('succeeded in paying, pay result: ', payResult); }) .catch((error: BusinessError) => { // failed to pay console.error(`failed to pay, error.code: ${error.code}, error.message: ${error.message}`); }); }
+ build() { Column() { Button('requestPaymentPromise') .type(ButtonType.Capsule) .width('50%') .margin(20) .onClick(() => { this.requestPaymentPromise(); }) } .width('100%') .height('100%') }}
+```
+ 
+### 支付处理
+ **场景1：用户选择华为支付****方式支付**
+
+ 用户选择华为支付方式支付，通用收银台会直接处理支付，支付成功后华为支付服务器会调用开发者提供的回调接口，将支付信息返回给开发者的服务器，回调详细信息按商户模式请参见[直连商户支付结果回调通知](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-pay-notify)或[平台类商户/服务商支付结果回调通知](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-agent-pay-notify)。
+
+ 为保证信息合法性，商户服务器需要对返回的支付信息进行[SM2验签](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-rest-overview#section17670192215175)，验签注意事项：
+
+ 1. 需直接使用通知的完整内容进行验签。
+ 2. 验签前需要对返回数据进行排序拼接，sign字段是签名值，排序拼接后的待验签内容需要排除sign字段。
+ 3. 验签公钥使用[华为支付证书](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/payment-certificates-config#section14253153941510)。
+ 
+ 说明 - 如果用户没有提前登录，系统会自动拉起华为账号登录页面让用户登录。
+ - 支付成功，不建议以客户端返回作为用户的支付结果，需以服务器接收到的结果通知或者查询API返回为准。
+ - 回调接口是开发者调用预下单时的入参字段callbackUrl。
+ 
+ **场景2：用户选择三方支付****方式支付**
+
+ 开发者需要根据[产品开通与配置](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/payment-common-pay-introduction#section3657513103713)中的所配置的支付方式，参考[拉起三方支付收银台](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/payment-launch-third-party-payment)不同方式进行三方支付收银台拉起处理。

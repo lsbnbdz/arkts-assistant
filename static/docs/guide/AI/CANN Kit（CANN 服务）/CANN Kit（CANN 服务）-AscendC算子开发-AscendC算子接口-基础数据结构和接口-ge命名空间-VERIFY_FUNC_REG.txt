@@ -1,0 +1,33 @@
+# [VERIFY_FUNC_REG](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-verify-func-reg)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083776666_section109122mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083776666_section109125mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083776666_section109129mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083776666_section109132mcpsimp)
+- [返回值](#zh-cn_topic_0000002083776666_section109163mcpsimp)
+
+## 函数功能
+注册算子的Verify函数。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+VERIFY_FUNC_REG(op_name, x)
+```
+ 
+## 约束说明
+无
+
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| op_name | 输入 | 算子类型。 |
+| x | 输入 | Verify函数名，和IMPLEMT_VERIFIER的Verify函数名保持一致。 |
+
+ 
+## 返回值
+无

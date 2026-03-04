@@ -1,0 +1,62 @@
+{
+  "test-kit": {
+    "title": "Test Kit（应用测试服务）",
+    "headings": [
+      "Test Kit（应用测试服务）"
+    ],
+    "preview": "Test Kit（应用测试服务） - **Test Kit简介**",
+    "char_count": 193,
+    "image_count": 0,
+    "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/test-kit",
+    "path": "",
+    "rel_path": "guide/系统/调测调优/Test Kit（应用测试服务）/Test Kit（应用测试服务）.txt",
+    "catalog": "Test Kit（应用测试服务）",
+    "objectId": "test-kit",
+    "nodeName": "document",
+    "keywords": [
+      "Test",
+      "Kit",
+      "应用测试服务",
+      "test",
+      "kit",
+      "应用测试",
+      "服务",
+      "简介",
+      "调测调优"
+    ]
+  },
+  "test-kit-test-kit": {
+    "title": "Test Kit简介",
+    "headings": [
+      "Test Kit简介"
+    ],
+    "preview": "Test Kit简介 Test Kit为开发者提供了自动化测试框架，框架提供单元、UI和性能测试能力，支持编写ArkTS语言的单元、UI和性能自动化测试脚本，并通过测试结果查看相应功能的实现效果。从API version 20开始，支持性能测试能力。 - 单元测试能力：提供自动化测试的基础接口和运行机制，具体使用方法请参考单元测试框架使用指导，主要能力如下：提供自动化用例定义接口，包括测试套定义、测试用例定义。提供自动化用例断言接口，支持多种方式的断言能力，支持开发者在自动化脚本中灵活使用进行用例断言。提供预置动作/清理动作执行接口，且支持测试套层级和测试用例层级的执行方式。",
+    "char_count": 1075,
+    "image_count": 0,
+    "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/test-kit-overview",
+    "path": "",
+    "rel_path": "guide/系统/调测调优/Test Kit（应用测试服务）/Test Kit（应用测试服务）-Test Kit简介.txt",
+    "catalog": "Test Kit（应用测试服务）",
+    "objectId": "test-kit-test-kit",
+    "nodeName": "document",
+    "keywords": [
+      "Test",
+      "Kit",
+      "简介",
+      "UI",
+      "提供自动",
+      "动化测试",
+      "能力",
+      "具体使用",
+      "方法请参",
+      "主要能力",
+      "支持多种",
+      "试能力",
+      "测试能力",
+      "单元测试",
+      "guidelines",
+      "应用测试服务",
+      "调测调优"
+    ]
+  }
+}

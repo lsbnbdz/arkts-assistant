@@ -1,0 +1,37 @@
+# [GetSize](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-ge-tensor-getsize)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083777306_section93842mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083777306_section93845mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083777306_section93849mcpsimp)
+- [返回值](#zh-cn_topic_0000002083777306_section93852mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083777306_section93855mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083777306_section93858mcpsimp)
+
+## 函数功能
+获取Tensor数据的内存大小。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+size_t GetSize() const
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+内存大小，单位是字节。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+StorageShape sh({1, 2, 3}, {1, 2, 3}); Tensor t = {sh, {}, {}, ge::DT_FLOAT, nullptr}; auto td_size = t.GetSize(); // 1*2*3*sizeof(float) = 24;
+```

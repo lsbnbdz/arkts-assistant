@@ -1,0 +1,37 @@
+# [GetOriginShapeDimNum](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getoriginshapedimnum)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119256941_section106093mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119256941_section106096mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119256941_section106100mcpsimp)
+- [返回值](#zh-cn_topic_0000002119256941_section106103mcpsimp)
+- [异常处理](#zh-cn_topic_0000002119256941_section106126mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119256941_section106129mcpsimp)
+
+## 函数功能
+获取原始shape的维度大小，即rank大小。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+size_t GetOriginShapeDimNum() const;
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| size_t | 返回原始shape的维度大小，即原始shape的rank，如果是unknown的rank，返回0。 |
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

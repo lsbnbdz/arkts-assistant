@@ -1,0 +1,54 @@
+# [管理用户授权](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/health-wearable-add-permissions)
+
+## 目录
+- [场景介绍](#zh-cn_topic_0000002360645757_section57658590498)
+- [约束与限制](#section9536115118596)
+- [接口说明](#zh-cn_topic_0000002360645757_section125701062528)
+- [开发前检查](#zh-cn_topic_0000002360645757_section056221011249)
+- [开发步骤](#zh-cn_topic_0000002360645757_section14776103961418)
+  - [用户授权](#zh-cn_topic_0000002360645757_section0247115178)
+  - [查询权限](#zh-cn_topic_0000002360645757_section2932421571)
+  - [取消授权](#zh-cn_topic_0000002360645757_section125616501171)
+
+## 场景介绍
+ 应用拉起华为账号同步和授权界面，由用户授权相应的数据访问权限。用户可以自主选择授权的数据类型，可以只授权部分数据权限。
+
+ 应用所能操作的用户数据，是用户授权和运动健康服务审批通过的数据权限的交集。
+
+ 
+## 约束与限制
+ 从5.1.1(19) Release版本开始支持。
+
+ 
+## 接口说明
+ 展开
+| 接口名 | 描述 |
+| --- | --- |
+| requestAuthorizations(context: common.UIAbilityContext, request: AuthorizationRequest): Promise | 用户授权，入参为UIAbility上下文和授权参数AuthorizationRequest，添加需要读写的数据类型，拉起账号授权页面，引导用户完成授权，返回结果中的数据类型列表，其对应权限在应用申请权限和用户授权权限的交集中。 |
+| getAuthorizations(request: AuthorizationRequest): Promise | 查询用户权限，入参为AuthorizationRequest，添加需要查询的数据类型，查询传入类型是否有权限，返回结果中的数据类型列表，其对应权限在应用申请权限和用户授权权限的交集中。 |
+| cancelAuthorizations(): Promise | 取消用户所有授权。 |
+
+ 
+## 开发前检查
+ - 完成[申请运动健康服务](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/health-apply)与[配置Client ID](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/health-configuration-client-id)。
+ - 接口需在页面或自定义组件生命周期内调用。接口首次调用前，需先使用[init](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-healthstore#section1571935817328)方法进行初始化。
+ - 错误码请参考[ArkTS API错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-healthservice)，常见问题请参考[Health Service Kit常见问题](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/health-faqs)。
+ 
+ 
+## 开发步骤
+ 
+### 用户授权
+ 1. 导入运动健康功能模块及相关公共模块。 收起自动换行深色代码主题复制 ``` import { healthStore } from '@kit.HealthServiceKit';import { common } from '@kit.AbilityKit';import { hilog } from '@kit.PerformanceAnalysisKit'; ```
+ 2. 创建授权请求，确保授权参数中的权限已在申请运动健康服务时勾选，权限说明请参考[权限说明](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/health-permission-description)。 收起自动换行深色代码主题复制 ``` let authorizationParameter: healthStore.AuthorizationRequest = { readDataTypes: [healthStore.exerciseSequenceHelper.DATA_TYPE, healthStore.samplePointHelper.heartRate.DATA_TYPE], writeDataTypes: [healthStore.exerciseSequenceHelper.DATA_TYPE, healthStore.samplePointHelper.heartRate.DATA_TYPE]} ```
+ 3. 调用[requestAuthorizations](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-healthstore#section19461855171619)方法执行登录授权请求，并处理返回结果。 收起自动换行深色代码主题复制 ``` try { let authorizationResponse = await healthStore.requestAuthorizations(this.getUIContext().getHostContext() as common.UIAbilityContext, authorizationParameter); hilog.info(0x0000, 'testTag', 'Succeeded in requesting authorization.'); authorizationResponse.writeDataTypes.forEach(dataType => { hilog.info(0x0000, 'testTag', `grantedWriteDataType is : ${dataType.name}`); }); authorizationResponse.readDataTypes.forEach(dataType => { hilog.info(0x0000, 'testTag', `grantedReadDataTypes is : ${dataType.name}`); });} catch (err) { hilog.error(0x0000, 'testTag', `Failed to request authorization. Code: ${err.code}, message: ${err.message}`);} ```
+ 
+ 
+### 查询权限
+ 1. 导入运动健康服务功能模块及相关公共模块。 收起自动换行深色代码主题复制 ``` import { healthStore } from '@kit.HealthServiceKit';import { hilog } from '@kit.PerformanceAnalysisKit'; ```
+ 2. 创建查询权限请求。 收起自动换行深色代码主题复制 ``` let queryAuthorizationRequest: healthStore.AuthorizationRequest = { readDataTypes: [healthStore.exerciseSequenceHelper.DATA_TYPE, healthStore.samplePointHelper.heartRate.DATA_TYPE], writeDataTypes: [healthStore.exerciseSequenceHelper.DATA_TYPE, healthStore.samplePointHelper.heartRate.DATA_TYPE]} ```
+ 3. 调用[getAuthorizations](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-healthstore#section68141073254)方法执行查询权限请求，并处理返回结果。 收起自动换行深色代码主题复制 ``` try { let queryAuthorizationResponse = await healthStore.getAuthorizations(queryAuthorizationRequest); hilog.info(0x0000, 'testTag', 'Succeeded in getting authorization.'); queryAuthorizationResponse.writeDataTypes.forEach(dataType => { hilog.info(0x0000, 'testTag', `grantedWriteDataType is : ${dataType.name}`); }); queryAuthorizationResponse.readDataTypes.forEach(dataType => { hilog.info(0x0000, 'testTag', `grantedReadDataTypes is : ${dataType.name}`); });} catch (err) { hilog.error(0x0000, 'testTag', `Failed to get authorization. Code: ${err.code}, message: ${err.message}`);} ```
+ 
+ 
+### 取消授权
+ 1. 导入运动健康服务功能模块及相关公共模块。 收起自动换行深色代码主题复制 ``` import { healthStore } from '@kit.HealthServiceKit';import { hilog } from '@kit.PerformanceAnalysisKit'; ```
+ 2. 调用[cancelAuthorizations](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-healthstore#section18660141352811)方法执行取消授权，并处理返回结果。 收起自动换行深色代码主题复制 ``` try { await healthStore.cancelAuthorizations(); hilog.info(0x0000, 'testTag', 'Succeeded in canceling authorization.');} catch (err) { hilog.error(0x0000, 'testTag', `Failed to cancel authorization. Code: ${err.code}, message: ${err.message}`);} ```

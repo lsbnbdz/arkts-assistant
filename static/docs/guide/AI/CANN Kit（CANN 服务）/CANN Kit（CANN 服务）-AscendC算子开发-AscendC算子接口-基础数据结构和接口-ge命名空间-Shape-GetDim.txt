@@ -1,0 +1,40 @@
+# [GetDim](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-shape-getdim)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119176977_section104221mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119176977_section104224mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119176977_section104228mcpsimp)
+- [返回值](#zh-cn_topic_0000002119176977_section104251mcpsimp)
+- [异常处理](#zh-cn_topic_0000002119176977_section104274mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119176977_section104277mcpsimp)
+
+## 函数功能
+获取Shape第idx维的长度。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+int64_t GetDim(size_t idx) const;
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| idx | 输入 | 维度索引，索引从0开始。 |
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| int64_t | 第idx维的长度。 |
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

@@ -1,0 +1,65 @@
+# [视频色彩空间转换](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/video-csc)
+
+开发者可以调用本模块提供的[C API接口](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-videoprocessing)，实现HDR2SDR、HDR2HDR、SDR2SDR的色彩空间转换。
+
+ 该能力常用于视频编辑和视频分享中：
+
+ - **视频编辑**
+- **视频分享**
+
+ 
+## 规格说明
+视频色彩空间转换算法为SDR2SDR时，支持的格式类型组合如下：
+
+ - 格式类型组合一： 展开 | 参数 | 输入 | 输出 | | --- | --- | --- | | ColorSpace | OH_COLORSPACE_BT601_EBU_LIMIT | OH_COLORSPACE_BT709_LIMIT | | MetadataType | OH_VIDEO_NONE | OH_VIDEO_NONE | | pixelFormat | NATIVEBUFFER_PIXEL_FMT_YCBCR_420_SP, NATIVEBUFFER_PIXEL_FMT_YCRCB_420_SP, NATIVEBUFFER_PIXEL_FMT_RGBA_8888 | NATIVEBUFFER_PIXEL_FMT_YCBCR_420_SP, NATIVEBUFFER_PIXEL_FMT_YCRCB_420_SP, NATIVEBUFFER_PIXEL_FMT_RGBA_8888 |
+- 格式类型组合二： 展开 | 参数 | 输入 | 输出 | | --- | --- | --- | | ColorSpace | OH_COLORSPACE_BT601_SMPTE_C_LIMIT | OH_COLORSPACE_BT709_LIMIT | | MetadataType | OH_VIDEO_NONE | OH_VIDEO_NONE | | pixelFormat | NATIVEBUFFER_PIXEL_FMT_YCBCR_420_SP, NATIVEBUFFER_PIXEL_FMT_YCRCB_420_SP, NATIVEBUFFER_PIXEL_FMT_RGBA_8888 | NATIVEBUFFER_PIXEL_FMT_YCBCR_420_SP, NATIVEBUFFER_PIXEL_FMT_YCRCB_420_SP, NATIVEBUFFER_PIXEL_FMT_RGBA_8888 |
+
+ 视频色彩空间转换算法为HDR2SDR时，支持的格式类型组合如下：
+
+ - 格式类型组合一： 展开 | 参数 | 输入 | 输出 | | --- | --- | --- | | ColorSpace | OH_COLORSPACE_BT2020_PQ_LIMIT | OH_COLORSPACE_BT709_LIMIT | | MetadataType | OH_VIDEO_HDR_VIVID | OH_VIDEO_NONE | | pixelFormat | NATIVEBUFFER_PIXEL_FMT_YCBCR_P010, NATIVEBUFFER_PIXEL_FMT_YCRCB_P010, NATIVEBUFFER_PIXEL_FMT_RGBA_1010102 | NATIVEBUFFER_PIXEL_FMT_YCBCR_420_SP, NATIVEBUFFER_PIXEL_FMT_YCRCB_420_SP, NATIVEBUFFER_PIXEL_FMT_RGBA_888 |
+- 格式类型组合二： 展开 | 参数 | 输入 | 输出 | | --- | --- | --- | | ColorSpace | OH_COLORSPACE_BT2020_HLG_LIMIT | OH_COLORSPACE_BT709_LIMIT | | MetadataType | OH_VIDEO_HDR_VIVID | OH_VIDEO_NONE | | pixelFormat | NATIVEBUFFER_PIXEL_FMT_YCBCR_P010, NATIVEBUFFER_PIXEL_FMT_YCRCB_P010, NATIVEBUFFER_PIXEL_FMT_RGBA_1010102 | NATIVEBUFFER_PIXEL_FMT_YCBCR_420_SP, NATIVEBUFFER_PIXEL_FMT_YCRCB_420_SP, NATIVEBUFFER_PIXEL_FMT_RGBA_8888 |
+- 格式类型组合三： 展开 | 参数 | 输入 | 输出 | | --- | --- | --- | | ColorSpace | OH_COLORSPACE_BT2020_HLG_FULL | OH_COLORSPACE_BT709_LIMIT | | MetadataType | OH_VIDEO_HDR_VIVID | OH_VIDEO_NONE | | pixelFormat | NATIVEBUFFER_PIXEL_FMT_YCBCR_P010, NATIVEBUFFER_PIXEL_FMT_YCRCB_P010, NATIVEBUFFER_PIXEL_FMT_RGBA_1010102 | NATIVEBUFFER_PIXEL_FMT_YCBCR_420_SP, NATIVEBUFFER_PIXEL_FMT_YCRCB_420_SP, NATIVEBUFFER_PIXEL_FMT_RGBA_8888 |
+- 格式类型组合四： 展开 | 参数 | 输入 | 输出 | | --- | --- | --- | | ColorSpace | OH_COLORSPACE_BT2020_HLG_FULL | OH_COLORSPACE_P3_FULL | | MetadataType | OH_VIDEO_HDR_VIVID | OH_VIDEO_NONE | | pixelFormat | NATIVEBUFFER_PIXEL_FMT_YCBCR_P010, NATIVEBUFFER_PIXEL_FMT_YCRCB_P010, NATIVEBUFFER_PIXEL_FMT_RGBA_1010102 | NATIVEBUFFER_PIXEL_FMT_YCBCR_420_SP, NATIVEBUFFER_PIXEL_FMT_YCRCB_420_SP, NATIVEBUFFER_PIXEL_FMT_RGBA_8888 |
+
+ 视频色彩空间转换算法为HDR2HDR时，支持的格式类型组合如下：
+
+ - 格式类型组合一： 展开 | 参数 | 输入 | 输出 | | --- | --- | --- | | ColorSpace | OH_COLORSPACE_BT2020_PQ_LIMIT | OH_COLORSPACE_BT2020_HLG_LIMIT | | MetadataType | OH_VIDEO_HDR_VIVID | OH_VIDEO_HDR_VIVID | | pixelFormat | NATIVEBUFFER_PIXEL_FMT_YCBCR_P010, NATIVEBUFFER_PIXEL_FMT_YCRCB_P010, NATIVEBUFFER_PIXEL_FMT_RGBA_1010102 | NATIVEBUFFER_PIXEL_FMT_YCBCR_P010, NATIVEBUFFER_PIXEL_FMT_YCRCB_P010, NATIVEBUFFER_PIXEL_FMT_RGBA_1010102 |
+- 格式类型组合二： 展开 | 参数 | 输入 | 输出 | | --- | --- | --- | | ColorSpace | OH_COLORSPACE_BT2020_PQ_LIMIT | OH_COLORSPACE_BT2020_HLG_LIMIT | | MetadataType | OH_VIDEO_HDR_HDR10 | OH_VIDEO_HDR_HLG | | pixelFormat | NATIVEBUFFER_PIXEL_FMT_YCBCR_P010, NATIVEBUFFER_PIXEL_FMT_YCRCB_P010, NATIVEBUFFER_PIXEL_FMT_RGBA_1010102 | NATIVEBUFFER_PIXEL_FMT_YCBCR_P010, NATIVEBUFFER_PIXEL_FMT_YCRCB_P010, NATIVEBUFFER_PIXEL_FMT_RGBA_1010102 |
+- 格式类型组合三： 展开 | 参数 | 输入 | 输出 | | --- | --- | --- | | ColorSpace | OH_COLORSPACE_BT2020_PQ_LIMIT | OH_COLORSPACE_BT2020_HLG_LIMIT | | MetadataType | OH_VIDEO_HDR_VIVID | OH_VIDEO_HDR_HLG | | pixelFormat | NATIVEBUFFER_PIXEL_FMT_YCBCR_P010, NATIVEBUFFER_PIXEL_FMT_YCRCB_P010, NATIVEBUFFER_PIXEL_FMT_RGBA_1010102 | NATIVEBUFFER_PIXEL_FMT_YCBCR_P010, NATIVEBUFFER_PIXEL_FMT_YCRCB_P010, NATIVEBUFFER_PIXEL_FMT_RGBA_1010102 |
+- 格式类型组合四： 展开 | 参数 | 输入 | 输出 | | --- | --- | --- | | ColorSpace | OH_COLORSPACE_BT2020_HLG_LIMIT | OH_COLORSPACE_BT2020_PQ_LIMIT | | MetadataType | OH_VIDEO_HDR_VIVID | OH_VIDEO_HDR_VIVID | | pixelFormat | NATIVEBUFFER_PIXEL_FMT_YCBCR_P010, NATIVEBUFFER_PIXEL_FMT_YCRCB_P010, NATIVEBUFFER_PIXEL_FMT_RGBA_1010102 | NATIVEBUFFER_PIXEL_FMT_YCBCR_P010, NATIVEBUFFER_PIXEL_FMT_YCRCB_P010, NATIVEBUFFER_PIXEL_FMT_RGBA_1010102 |
+
+ **支持的分辨率规格：**
+
+ 展开
+| 最小分辨率（单位：像素） | 最大分辨率（单位：像素） |
+| --- | --- |
+| 32*32 | 8192*8192 |
+
+ 
+## 约束与限制
+1. 为保障转换效率，建议并行转换不超过5个。
+2. 不允许在视频处理回调函数中，直接调用视频处理相关接口或其他耗时操作，请在应用自己的线程中调用。
+
+ 
+## 开发指导
+具体实现可参考[示例工程](https://gitcode.com/HarmonyOS_Samples/VideoProcessing)。
+
+ 
+### 在 CMake 脚本中链接动态库
+收起自动换行深色代码主题复制
+```
+target_link_libraries(sample PUBLIC libvideo_processing.so)
+```
+ 
+### 开发步骤
+1. 添加头文件。 收起自动换行深色代码主题复制 ``` #include #include #include #include #include ```
+2. （可选）初始化环境。 一般在进程内第一次使用时调用，可提前完成部分耗时操作。 收起自动换行深色代码主题复制 ``` OH_VideoProcessing_InitializeEnvironment(); ```
+3. （可选）查询能力支持。建议在使用对应能力前调用。 收起自动换行深色代码主题复制 ``` //输入输出格式VideoProcessing_ColorSpaceInfo inputFormat;VideoProcessing_ColorSpaceInfo outputFormat;inputFormat.metadataType = OH_VIDEO_HDR_HDR10;inputFormat.colorSpace = OH_COLORSPACE_BT2020_PQ_LIMIT;inputFormat.pixelFormat = NATIVEBUFFER_PIXEL_FMT_YCBCR_P010;outputFormat.metadataType = OH_VIDEO_HDR_HLG;outputFormat.colorSpace = OH_COLORSPACE_BT2020_HLG_LIMIT;outputFormat.pixelFormat = NATIVEBUFFER_PIXEL_FMT_YCBCR_P010; //能力查询bool isSupport = OH_VideoProcessing_IsColorSpaceConversionSupported(&inputFormat, &outputFormat); ```
+4. 创建色彩空间转换模块。 应用可以通过视频处理引擎模块类型来创建色彩空间转换模块。示例中的变量说明如下： - videoProcessor：色彩空间转换模块实例。 - VIDEO_PROCESSING_TYPE_COLOR_SPACE_CONVERSION：色彩空间转换类型。 - 预期返回值：VIDEO_PROCESSING_SUCCESS 收起自动换行深色代码主题复制 ``` // 通过指定视频处理引擎类型创建色彩空间转换模块实例OH_VideoProcessing* videoProcessor = nullptr;VideoProcessing_ErrorCode ret = OH_VideoProcessing_Create(&videoProcessor, VIDEO_PROCESSING_TYPE_COLOR_SPACE_CONVERSION); ```
+5. 配置异步回调函数。 收起自动换行深色代码主题复制 ``` // 回调函数声明（其中userData会传递注册回调时传入的用户数据，如：this指针）void OnError(OH_VideoProcessing* videoProcessor, VideoProcessing_ErrorCode error, void* userData);void OnState(OH_VideoProcessing* videoProcessor, VideoProcessing_State state, void* userData);void OnNewOutputBuffer(OH_VideoProcessing* videoProcessor, uint32_t index, void* userData); // 创建回调实例VideoProcessing_Callback* callback = nullptr;ret = OH_VideoProcessingCallback_Create(&callback);// 绑定回调函数OH_VideoProcessingCallback_BindOnError(callback, OnError);OH_VideoProcessingCallback_BindOnState(callback, OnState);OH_VideoProcessingCallback_BindOnNewOutputBuffer(callback, OnNewOutputBuffer);// 注册回调函数ret = OH_VideoProcessing_RegisterCallback(videoProcessor, callback, this); ```
+6. 获取Surface。 收起自动换行深色代码主题复制 ``` //获取输入surfaceOHNativeWindow *inWindow = nullptr;ret = OH_VideoProcessing_GetSurface(videoProcessor, &inWindow); ```
+7. 设置Surface。 说明 可以通过XComponent等其他方式获取OHNativeWindow实例，具体参见[NativeWindows开发指导](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/native-window-guidelines)。 视频处理引擎的SetSurface的windowOut从xcomponent的[OnSurfaceCreatedCB](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/native-window-guidelines)回调函数获取，需要对windowOut设置元数据类型、数据格式和颜色空间等参数。 收起自动换行深色代码主题复制 ``` // 设置元数据类型、数据格式、颜色空间uint8_t metadataType = OH_VIDEO_HDR_HLG;OH_NativeWindow_SetMetadataValue(windowOut, OH_HDR_METADATA_TYPE, sizeof(uint8_t),(uint8_t *)&metadataType);OH_NativeBuffer_Format format = NATIVEBUFFER_PIXEL_FMT_YCBCR_P010;OH_NativeWindow_NativeWindowHandleOpt(windowOut, SET_FORMAT, format);OH_NativeBuffer_ColorSpace colorSpace = OH_COLORSPACE_BT2020_HLG_LIMIT;OH_NativeWindow_SetColorSpace(windowOut, colorSpace);// 设置输出surfaceVideoProcessing_ErrorCode ret = OH_VideoProcessing_SetSurface(videoProcessor, windowOut); ```
+8. 调用[OH_VideoProcessing_Start()](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-video-processing-h#oh_videoprocessing_start)启动色彩空间转换处理。 收起自动换行深色代码主题复制 ``` // 开始色彩空间转换处理ret = OH_VideoProcessing_Start(videoProcessor); ```
+9. 调用[OH_VideoProcessing_Stop()](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-video-processing-h#oh_videoprocessing_stop)停止色彩空间转换处理。 收起自动换行深色代码主题复制 ``` //停止色彩空间转换处理ret = OH_VideoProcessing_Stop(videoProcessor); ```
+10. 释放处理实例。 收起自动换行深色代码主题复制 ``` OH_VideoProcessingCallback_Destroy(callback);callback = nullptr;OH_VideoProcessing_Destroy(videoProcessor);videoProcessor = nullptr; ```
+11. 释放处理资源。 收起自动换行深色代码主题复制 ``` OH_VideoProcessing_DeinitializeEnvironment(); ```

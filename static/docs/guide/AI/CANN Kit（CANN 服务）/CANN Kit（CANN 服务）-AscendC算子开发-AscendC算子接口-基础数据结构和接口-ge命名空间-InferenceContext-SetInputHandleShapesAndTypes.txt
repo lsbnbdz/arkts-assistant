@@ -1,0 +1,37 @@
+# [SetInputHandleShapesAndTypes](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-setinputhandleshapesandtypes)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083777270_section97232mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083777270_section97236mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083777270_section97242mcpsimp)
+- [返回值](#zh-cn_topic_0000002083777270_section97266mcpsimp)
+- [异常处理](#zh-cn_topic_0000002083777270_section97269mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083777270_section97272mcpsimp)
+
+## 函数功能
+在推理上下文中，设置算子输入句柄的[ShapeAndType](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-shapeandtype)。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+void SetInputHandleShapesAndTypes(std::vector> &&shapes_and_types)
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| shapes_and_types | 输入 | 算子输入句柄的ShapeAndType。 |
+
+ 
+## 返回值
+无
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

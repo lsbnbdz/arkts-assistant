@@ -1,0 +1,4 @@
+# [线程调度](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/thread-scheduling)
+
+- **[QoS 开发指导](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/qos-guidelines)**
+ - **[格物开发指导](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/gewu-ndk-api-guidelines)**

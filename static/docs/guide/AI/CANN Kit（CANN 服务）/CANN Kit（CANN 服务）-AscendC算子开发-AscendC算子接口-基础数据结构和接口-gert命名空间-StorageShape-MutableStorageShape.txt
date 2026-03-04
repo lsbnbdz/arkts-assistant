@@ -1,0 +1,37 @@
+# [MutableStorageShape](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-mutablestorageshape)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083777338_section93075mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083777338_section93078mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083777338_section93082mcpsimp)
+- [返回值](#zh-cn_topic_0000002083777338_section93085mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083777338_section93088mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083777338_section93091mcpsimp)
+
+## 函数功能
+获取可写的运行时shape。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+Shape &MutableStorageShape()
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+可写的运行时shape。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+StorageShape shape({3, 256, 256}, {256, 256, 3}); auto storage_shape = shape.MutableStorageShape(); // 256,256,3
+```

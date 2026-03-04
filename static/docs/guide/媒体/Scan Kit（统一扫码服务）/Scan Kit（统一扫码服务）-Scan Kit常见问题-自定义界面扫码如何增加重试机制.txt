@@ -1,0 +1,23 @@
+# [自定义界面扫码如何增加重试机制](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/scan-faq-17)
+
+**问题现象**
+
+ 调用customScan.[init](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/scan-customscan-api#section447114223245)成功后，调用customScan.[start](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/scan-customscan-api#section747366165913)启动相机流时抛出1000500001内部错误。
+
+ **解决措施**
+
+ 可以尝试增加扫码相机流重试机制。
+
+ 先暂停并释放相机流（customScan.[stop](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/scan-customscan-api#section6949611114915)、customScan.[release](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/scan-customscan-api#section1109456134917)），再重启相机流（customScan.[init](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/scan-customscan-api#section447114223245)、customScan.[start](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/scan-customscan-api#section747366165913)）。
+
+ 示例代码（仅供参考）：
+
+ 收起自动换行深色代码主题复制
+```
+import { customScan, scanBarcode, scanCore } from '@kit.ScanKit';import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';import { hilog } from '@kit.PerformanceAnalysisKit';
+@Entry@Componentstruct Index { @State viewControl: customScan.ViewControl = { width: 1080, height: 1080, surfaceId: '' }; private retryScanTimes = 0; private options: scanBarcode.ScanOptions = { scanTypes: [scanCore.ScanType.ALL], enableMultiMode: true, enableAlbum: true }; private customScanCallbackScan: AsyncCallback = (error: BusinessError, result: scanBarcode.ScanResult[]) => { if (error && error.code !== 0) { hilog.error(0x0001, '[Scan Sample]', `An error is returned by customScan.start->CallbackScan. Code: ${error.code}`); // start回调，出现1000500001内部错误时触发重启相机流 if (error.code === scanCore.ScanErrorCode.INTERNAL_ERROR) { this.retryCamera(error); } } else { hilog.info(0x0001, '[Scan Sample]', `customScan start callbackScan result size: ${result.length}`)} // 识码处理逻辑 // ... }
+ // 重启相机流 retryCamera(error: BusinessError) { if (this.retryScanTimes < 3 && error.code === scanCore.ScanErrorCode.INTERNAL_ERROR) { this.retryScanTimes++; let timeId = setTimeout(async () => { hilog.info(0x0001, '[Scan Sample]', `Retry camera start. Times: ${this.retryScanTimes}.`); // 先暂停并释放相机流 await this.releaseCamera(); // 重启相机流 this.startCamera(); hilog.info(0x0001, '[Scan Sample]', 'Retry camera end.'); clearTimeout(timeId); }, 100) } }
+ // 启动相机流 startCamera() { try { customScan.init(this.options); hilog.info(0x0001, '[Scan Sample]', 'customScan->init end'); try { customScan.start(this.viewControl, this.customScanCallbackScan); hilog.info(0x0001, '[Scan Sample]', 'customScan->start end'); } catch (error) { hilog.error(0x0001, '[Scan Sample]', `Failed to customScan->start. Code: ${error.code}, message: ${error.message}`); } } catch (error) { hilog.error(0x0001, '[Scan Sample]', `Failed to customScan->init. Code: ${error.code}, message: ${error.message}`); } }
+ // 暂停并释放相机流 async releaseCamera() { try { await customScan.stop(); hilog.info(0x0001, '[Scan Sample]', 'customScan->stop end'); try { await customScan.release(); hilog.info(0x0001, '[Scan Sample]', 'customScan->release end'); } catch (error) { hilog.error(0x0001, '[Scan Sample]', `Failed to customScan->release. Code: ${error.code}, message: ${error.message}`); } } catch (error) { hilog.error(0x0001, '[Scan Sample]', `Failed to customScan->stop. Code: ${error.code}, message: ${error.message}`); } }
+ build() { }}
+```

@@ -1,0 +1,44 @@
+# [FreeAllEvent](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-freeallevent)
+
+## 目录
+- [功能说明](#zh-cn_topic_0000002127680761_section28163mcpsimp)
+- [函数原型](#zh-cn_topic_0000002127680761_section28166mcpsimp)
+- [参数说明](#zh-cn_topic_0000002127680761_section28169mcpsimp)
+- [支持的型号](#zh-cn_topic_0000002127680761_section28172mcpsimp)
+- [注意事项](#zh-cn_topic_0000002127680761_section28180mcpsimp)
+- [返回值](#zh-cn_topic_0000002127680761_section28183mcpsimp)
+- [调用示例](#zh-cn_topic_0000002127680761_section28186mcpsimp)
+
+## 功能说明
+释放对应队列中的所有事件，防止出现同步事件未匹配的情况，是一种额外的保护机制。建议优先保证AllocTensor/FreeTensor EnQue/DeQue配对使用，配对使用情况下不需要调用该接口。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+__aicore__ inline void FreeAllEvent()
+```
+ 
+## 参数说明
+无
+
+ 
+## 支持的型号
+Kirin9020系列处理器
+
+ KirinX90系列处理器
+
+ 
+## 注意事项
+无
+
+ 
+## 返回值
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+// 接口: DeQue Tensor AscendC::TPipe pipe; AscendC::TQueBind que; int num = 4; int len = 1024; pipe.InitBuffer(que, num, len); AscendC::LocalTensor tensor1 = que.AllocTensor(); que.EnQue(tensor1); tensor1 = que.DeQue(); // 将tensor从VECOUT的Queue中搬出 que.FreeTensor(tensor1); que.FreeAllEvent();
+```

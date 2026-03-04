@@ -1,0 +1,3 @@
+# [商户侧没有传营销信息，支付回调里面为什么会有营销信息？](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/payment-faq-17)
+
+营销活动不需要商户侧传递，拉起收银台前华为支付会根据用户和商户去获取华为支付侧配置的营销活动信息展示在收银台，若用户使用了营销活动，支付结果就会返回营销信息。

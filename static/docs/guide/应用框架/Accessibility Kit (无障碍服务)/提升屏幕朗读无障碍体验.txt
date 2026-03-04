@@ -1,0 +1,11 @@
+屏幕朗读软件（Screen Reader）主要帮助视障人士使用移动智能设备，通过语音输出，获取屏幕或界面中的信息。视障用户无法通过视觉直接感知和理解用户界面。他/她们需要在屏幕上使用手指探索或手势逐步在界面上进行导航，同时通过设备的朗读反馈来理解界面信息和潜在的交互功能。因此，让用户能够快速、准确地感知界面内容并进行正确交互是无障碍开发的关键。视障用户需要先通过手势使某个UI对象获得焦点，同时系统朗读出该对象的内容和功能，然后视障用户双击屏幕点击或选择该对象。
+
+ 因此，进行开发时应遵循以下原则：
+
+ 确保视障用户可以通过手势快速、符合使用逻辑顺序地导航至页面内所有有效UI对象。确保用户在当前获焦的UI对象下接收到适当的语音朗读反馈，朗读内容应简洁清晰地告知用户当前所在UI对象内容、功能、以及可执行的操作。 同时，进行开发时，组件可以设置相应的无障碍属性和事件来更好地使用无障碍能力。
+
+ 可用的无障碍属性：
+
+ accessibilityLevel(value: string)：用于判断当前节点是否能被无障碍辅助服务识别。accessibilityGroup(value: boolean)：用于设置无障碍组，true时表示该组件及其所有子组件为一整个可以选中的组件（ArkUI默认会先序遍历所有子节点，拼接节点text文本，并赋值给当前节点的text属性）。accessibilityText(value: string[text: Resource])：用于设置无障碍文本，播报优先级高于text文本，注意要支持多语言。accessibilityDescription(value: string[description: Resource])：用于设置无障碍提醒，播报优先级高于默认新手提醒，注意要支持多语言。accessibilityVirtualNode(builder: CustomBuilder)：用于设置无障碍虚拟子节点。 可用的无障碍事件：
+
+ requestFocusForAccessibility：当前焦点所在的控件消失或者隐藏后，需要重新设置新的焦点位置。announceForAccessibility：界面上重要内容在动态变化后，需要实时发送变化后的朗读内容。    [标注屏幕朗读内容的场景](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/scenario-screen-reading)  [禁用屏幕朗读焦点的场景](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/scenario-disable-screen-reading-focus)  [多维嵌套场景](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/scenario-multidimensional-nesting)  [组合场景](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/scenario-multicomponent)  [按钮标注场景](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/scenario-button-annotation)  [插画/视频/动画的播报场景](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/scenario-media-reading)  [内容动态变化场景](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/scenario-dynamic-content-change)  [控件状态变化场景](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/scenario-component-status-change)  [操作错误场景](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/scenario-operation-error)  [多语种场景](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/scenario-multilingual)  [控件位置调整场景](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/scenario-component-relocation)  [重新设置新焦点位置的场景](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/scenario-focus-position-setting)

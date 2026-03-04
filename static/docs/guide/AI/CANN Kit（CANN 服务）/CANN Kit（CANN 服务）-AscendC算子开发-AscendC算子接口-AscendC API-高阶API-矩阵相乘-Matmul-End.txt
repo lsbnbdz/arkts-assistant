@@ -1,0 +1,42 @@
+# [End](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-end)
+
+## 目录
+- [功能说明](#zh-cn_topic_0000002128328585_section462174413176)
+- [函数原型](#zh-cn_topic_0000002128328585_section19622174412176)
+- [参数说明](#zh-cn_topic_0000002128328585_section1362294481714)
+- [返回值](#zh-cn_topic_0000002128328585_section166221244141719)
+- [支持的型号](#zh-cn_topic_0000002128328585_section1762364412175)
+- [注意事项](#zh-cn_topic_0000002128328585_section156238447171)
+- [调用示例](#zh-cn_topic_0000002128328585_section66231044191718)
+
+## 功能说明
+单核内Matmul矩阵相乘计算结束后必须调用一次End函数。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+__aicore__ inline void End()
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+无
+
+ 
+## 支持的型号
+Kirin9020系列处理器
+
+ 
+## 注意事项
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+mm.IterateAll(gm_c); mm.End();
+```

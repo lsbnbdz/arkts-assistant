@@ -1,0 +1,39 @@
+# [GetMarks](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getmarks)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119256565_section97458mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119256565_section97461mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119256565_section97469mcpsimp)
+- [返回值](#zh-cn_topic_0000002119256565_section97472mcpsimp)
+- [异常处理](#zh-cn_topic_0000002119256565_section97496mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119256565_section97499mcpsimp)
+
+## 函数功能
+在资源类算子推理的上下文中，获取成对资源算子的标记。
+
+ 
+## 函数原型
+注意数据类型为string的接口后续版本会废弃，建议使用数据类型为非string的接口。
+
+ 收起自动换行深色代码主题复制
+```
+const std::vector &GetMarks() constvoid GetMarks(std::vector &marks) const
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| const std::vector | 资源类算子的标记。 |
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

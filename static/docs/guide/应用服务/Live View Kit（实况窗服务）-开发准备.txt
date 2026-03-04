@@ -1,0 +1,8 @@
+# [开发准备](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/liveview-preparations)
+
+- **[基本准备工作](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/liveview-base)**
+ - **[开通推送服务权益](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/liveview-push-service)**
+ - **[设置数据处理位置](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/liveview-data-process)**
+ - **[开通实况窗服务权益](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/liveview-rights)**
+ - **[接入联调测试](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/liveview-joint-commission-test)**
+ - **[申请实况窗正式权限](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/liveview-formal-authority)**

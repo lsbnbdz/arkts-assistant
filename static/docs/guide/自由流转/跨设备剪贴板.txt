@@ -1,0 +1,4 @@
+# [跨设备剪贴板](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/distributed-pasteboard)
+
+- **[跨设备剪贴板特性简介](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/distributed-pasteboard-overview)**
+ - **[跨设备剪贴板开发指导](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/distributed-pasteboard-guide)**

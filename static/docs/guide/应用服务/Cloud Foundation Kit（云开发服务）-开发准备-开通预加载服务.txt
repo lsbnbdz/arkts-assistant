@@ -1,0 +1,7 @@
+# [开通预加载服务](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cloudfoundation-enable-prefetch)
+
+首次使用预加载服务前，需要先开通此服务。如果已经开通，可跳过本步骤。
+
+ 1. 登录[AppGallery Connect](https://developer.huawei.com/consumer/cn/service/josp/agc/index.html)，点击“开发与服务”。
+2. 在项目列表中点击您的项目，在项目下的应用列表中选择需要开通预加载的HarmonyOS应用/元服务。
+3. 在左侧导航栏选择“云开发（Serverless）> 预加载”，进入预加载页面，点击“立即开通”。

@@ -1,0 +1,41 @@
+# [SetDim](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-setdim)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083776754_section92538mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083776754_section92541mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083776754_section92545mcpsimp)
+- [返回值](#zh-cn_topic_0000002083776754_section92575mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083776754_section92578mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083776754_section92581mcpsimp)
+
+## 函数功能
+设置dim值。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+void SetDim(size_t idx, const int64_t dim_value)
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| idx | 输入 | dim的index，调用者需要保证index合法。 |
+| dim_value | 输入 | 对idx轴设置的维度值。 |
+
+ 
+## 返回值
+无
+
+ 
+## 约束说明
+调用者需要保证index合法。
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+Shape shape0({3, 256, 256}); shape0.SetDim(0U, 1); // 1,256,256
+```

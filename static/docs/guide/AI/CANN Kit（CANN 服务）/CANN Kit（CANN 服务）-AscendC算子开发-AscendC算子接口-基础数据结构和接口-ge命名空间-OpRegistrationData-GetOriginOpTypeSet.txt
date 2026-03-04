@@ -1,0 +1,29 @@
+# [GetOriginOpTypeSet](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getoriginoptypeset)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119176573_section103345mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119176573_section103348mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119176573_section103356mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119176573_section103380mcpsimp)
+
+## 函数功能
+获取原始模型的算子类型集合。
+
+ 
+## 函数原型
+注意数据类型为string的接口后续版本会废弃，建议使用数据类型为非string的接口。
+
+ 收起自动换行深色代码主题复制
+```
+std::set GetOriginOpTypeSet () const;Status GetOriginOpTypeSet(std::set &ori_op_type) const;
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| ori_op_type | 输出 | 原始模型的算子类型集合。 |
+
+ 
+## 约束说明
+无

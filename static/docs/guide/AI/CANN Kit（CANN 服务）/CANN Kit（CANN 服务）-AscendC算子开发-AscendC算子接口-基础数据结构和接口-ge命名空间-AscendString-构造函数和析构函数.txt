@@ -1,0 +1,38 @@
+# [构造函数和析构函数](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-ascendstring-construction-and-destructor)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083616878_section96659mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083616878_section96662mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083616878_section96672mcpsimp)
+- [返回值](#zh-cn_topic_0000002083616878_section96702mcpsimp)
+- [异常处理](#zh-cn_topic_0000002083616878_section96705mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083616878_section96708mcpsimp)
+
+## 函数功能
+AscendString构造函数和析构函数。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+AscendString() = default;~AscendString() = default;AscendString(const char_t *const name);AscendString(const char_t *const name, size_t length);
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| name | 输入 | 字符串名称。 |
+| length | 输入 | 字符串长度。 |
+
+ 
+## 返回值
+AscendString构造函数返回AscendString类型的对象。
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

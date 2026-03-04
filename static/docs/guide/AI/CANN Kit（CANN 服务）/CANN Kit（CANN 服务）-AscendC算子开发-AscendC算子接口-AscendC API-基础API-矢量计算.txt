@@ -1,0 +1,10 @@
+# [矢量计算](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-vector-computation)
+
+- **[单目指令](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-vector-calculation-monocular)**
+ - **[双目指令](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-vector-calculation-binocular)**
+ - **[标量双目指令](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-scalar-binocular-instruction)**
+ - **[标量三目指令](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-scalar-ternary-instruction)**
+ - **[精度转换指令](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-precision-conversion-instruction)**
+ - **[数据转换](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-data-conversion)**
+ - **[数据填充](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-data-filling)**
+ - **[数据分散/数据收集](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-data-distribution-collection)**

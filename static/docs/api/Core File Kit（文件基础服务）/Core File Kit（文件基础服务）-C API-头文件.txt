@@ -1,0 +1,9 @@
+# [头文件](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/core-file-headerfile)
+
+- **[oh_environment.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-environment-h)**
+ - **[error_code.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-error-code-h)**
+ - **[oh_fileio.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-fileio-h)**
+ - **[oh_file_share.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-file-share-h)**
+ - **[oh_file_uri.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-file-uri-h)**
+ - **[oh_cloud_disk_manager.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-cloud-disk-manager-h)**
+ - **[cloud_disk_error_code.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-cloud-disk-error-code-h)**

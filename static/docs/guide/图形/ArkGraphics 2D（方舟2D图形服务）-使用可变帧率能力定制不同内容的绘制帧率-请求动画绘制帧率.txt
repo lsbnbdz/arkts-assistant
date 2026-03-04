@@ -1,0 +1,23 @@
+# [请求动画绘制帧率](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/displaysync-animation)
+
+在应用开发中，[属性动画](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-animatorproperty)和[显式动画](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-explicit-animation)能够使用可选参数[ExpectedFrameRateRange](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-explicit-animation#expectedframeraterange11)，为不同的动画配置不同的期望绘制帧率。
+
+ 
+## 请求属性动画的绘制帧率
+ 定义文本组件的属性动画，请求绘制帧率为60，范例如下：
+
+ 收起自动换行深色代码主题复制
+```
+Text('60') // ... .animation({ duration: 1200, iterations: 10, // ... expectedFrameRateRange: { expected: 60, min: 0, max: 120, }, })
+```
+[PropertyAnimationDisplaySync.ets](https://gitcode.com/HarmonyOS_Samples/guide-snippets/blob/HarmonyOS-feature-20251117/ArkGraphics2D/DisplaySync/entry/src/main/ets/DispalySync/PropertyAnimationDisplaySync.ets#L66-L91) 
+## 请求显式动画的绘制帧率
+ 定义按钮组件的显式动画，请求绘制帧率为30，范例如下：
+
+ 收起自动换行深色代码主题复制
+```
+Button('Start') // ... .onClick(() => { // ...
+ this.uiContext?.animateTo({ duration: 1200, iterations: 10, // ... expectedFrameRateRange: { expected: 30, min: 0, max: 120, }, }, () => { // ... })
+ // ... })
+```
+[PropertyAnimationDisplaySync.ets](https://gitcode.com/HarmonyOS_Samples/guide-snippets/blob/HarmonyOS-feature-20251117/ArkGraphics2D/DisplaySync/entry/src/main/ets/DispalySync/PropertyAnimationDisplaySync.ets#L96-L143)

@@ -1,0 +1,57 @@
+## 目录
+- [29300002 系统服务工作异常](#section29300002-系统服务工作异常)
+- [29300003 应用未开启锁屏敏感数据保护功能](#section29300003-应用未开启锁屏敏感数据保护功能)
+- [29300004 锁屏敏感数据访问权限已释放](#section29300004-锁屏敏感数据访问权限已释放)
+- [29300005 未申请锁屏敏感数据访问权限](#section29300005-未申请锁屏敏感数据访问权限)
+
+说明      以下仅介绍本模块特有错误码，通用错误码请参考[通用错误码说明文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)。
+
+## 29300002 系统服务工作异常
+          支持设备PhonePC/2in1Tablet错误信息
+
+     The system ability work abnormally.
+
+     可能原因
+
+     该错误码表示系统服务工作异常。
+
+           锁屏敏感数据管理服务无法正常启动。      IPC数据读取写入失败。          处理步骤
+
+     系统服务内部工作异常，请稍后重试，或者重启设备。
+
+## 29300003 应用未开启锁屏敏感数据保护功能
+          支持设备PhonePC/2in1Tablet错误信息
+
+     The application has not enabled the data protection under lock screen.
+
+     可能原因
+
+           应用未在[requestpermissions](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/declare-permissions#%E5%9C%A8%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%B8%AD%E5%A3%B0%E6%98%8E%E6%9D%83%E9%99%90)配置权限ohos.permission.PROTECT_SCREEN_LOCK_DATA开启应用锁屏敏感数据保护功能。      当前硬件不支持锁屏敏感数据保护功能。          处理步骤
+
+     在[requestpermissions](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/declare-permissions#%E5%9C%A8%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%B8%AD%E5%A3%B0%E6%98%8E%E6%9D%83%E9%99%90)中配置权限ohos.permission.PROTECT_SCREEN_LOCK_DATA开启应用锁屏敏感数据保护功能。
+
+## 29300004 锁屏敏感数据访问权限已释放
+          支持设备PhonePC/2in1Tablet错误信息
+
+     File access is denied.
+
+     可能原因
+
+     锁屏敏感数据访问权限已释放。
+
+     处理步骤
+
+     锁屏下无法访问敏感数据，如有需要，请提示用户重新解锁屏幕，解锁后敏感数据恢复方可使用。
+
+## 29300005 未申请锁屏敏感数据访问权限
+          支持设备PhonePC/2in1Tablet错误信息
+
+     File access was not acquired.
+
+     可能原因
+
+     该错误码表示释放前，未申请锁屏敏感数据访问权限。
+
+     处理步骤
+
+     检查当前接口是否有配套使用，请在释放前先申请锁屏敏感数据访问权限。

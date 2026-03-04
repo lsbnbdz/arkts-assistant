@@ -1,0 +1,24 @@
+## 目录
+- [场景介绍](#section13892042112517)
+- [开发步骤](#section13347175714323)
+
+## 场景介绍
+          从6.0.0(20) Beta1版本开始，新增支持[自带背景的双边流光](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ui-design-hds-visual-component#section92774418495)。
+
+     通过通用视效组件HdsVisualComponent提供的自带背景的双边流光效果场景接口，支持设置两条边缘流光的起始、终止位置、边缘颜色效果以及与流光相叠加的背景板颜色，用于胶囊组件、屏幕边缘发光等。
+
+## 开发步骤
+                导入模块。       
+
+       收起自动换行深色代码主题复制
+```
+import {  HdsVisualComponent,  HdsSceneController,  HdsSceneType,  HdsVisualComponentAttribute,} from '@kit.UIDesignKit';
+```
+
+使用HdsVisualComponent组件，指定场景类型为DUAL_EDGE_FLOW_LIGHT_WITH_BACKGROUND_MASK，并且设置场景参数。       
+
+       收起自动换行深色代码主题复制
+```
+@Entry@Componentstruct EdgeFlowLightVisualComponent {  @State sceneController: HdsSceneController = new HdsSceneController()    .setSceneParams({      backgroundMaskColors: [Color.Green, Color.Red],      firstEdgeFlowLight: {        startPos: 0,        endPos: 0.5,        color: Color.Red      },      secondEdgeFlowLight: {        startPos: 0,        endPos: -0.5,        color: Color.Green      }    })
+  build() {    Stack() {      HdsVisualComponent()        .scene(HdsSceneType.DUAL_EDGE_FLOW_LIGHT_WITH_BACKGROUND_MASK, this.sceneController, () => {          console.info('Succeeded in finishing');        })        .width('100%')        .height('50%')    }  }}
+```

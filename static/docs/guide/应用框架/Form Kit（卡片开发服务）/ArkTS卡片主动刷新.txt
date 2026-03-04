@@ -1,0 +1,12 @@
+本文主要提供主动刷新的开发指导，刷新流程请参考[主动刷新概述](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-ui-widget-interaction-overview#%E4%B8%BB%E5%8A%A8%E5%88%B7%E6%96%B0)。
+
+## 卡片提供方主动刷新卡片内容
+          卡片提供方可以通过[updateForm](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-app-form-formprovider#formproviderupdateform)接口进行主动刷新。推荐与卡片生命周期回调[onFormEvent](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-app-form-formextensionability#formextensionabilityonformevent)、[onUpdateForm](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-app-form-formextensionability#formextensionabilityonupdateform)、[onAddForm](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-app-form-formextensionability#formextensionabilityonaddform)接口搭配使用。
+
+     收起自动换行深色代码主题复制
+```
+import { formBindingData, formProvider } from '@kit.FormKit';import { BusinessError } from '@kit.BasicServicesKit';
+let storage = new LocalStorage();
+@Entry(storage)@Componentstruct Index {  @StorageLink('formId') formId: string = '';  @StorageLink('formData') formData: Object | string = '';
+  build() {    Column() {      Column() {        //...        Button() {          //...        }        .onClick(() => {          console.info(`click to check updateForm, formId: ${this.formId}`);          const formInfo: formBindingData.FormBindingData = formBindingData.createFormBindingData(this.formData);          // formId需要为实际需要刷新的卡片ID          formProvider.updateForm(this.formId, formInfo).then(() => {            console.info('updateForm success.');          }).catch((error: BusinessError) => {            console.error(`updateForm fail, code: ${error?.code}, message: ${error?.message}`);          })        })        .margin(5)      }      //...    }    //...  }}
+```

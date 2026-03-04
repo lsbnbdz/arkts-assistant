@@ -1,0 +1,37 @@
+# [GetFormatName](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getformatname)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083776638_section108015mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083776638_section108018mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083776638_section108022mcpsimp)
+- [返回值](#zh-cn_topic_0000002083776638_section108045mcpsimp)
+- [异常处理](#zh-cn_topic_0000002083776638_section108048mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083776638_section108051mcpsimp)
+
+## 函数功能
+根据传入的format类型，获取format的字符串描述。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+const char_t *GetFormatName(Format format)
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| format | 输入 | format枚举值。 |
+
+ 
+## 返回值
+该format所对应的字符串描述，若format不合法或不被识别，则返回nullptr。
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+返回的字符串不可被修改。

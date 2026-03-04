@@ -1,0 +1,320 @@
+## 目录
+- [继承规则](#继承规则)
+  - [Sendable类必须继承自Sendable类](#sendable类必须继承自sendable类)
+  - [非Sendable类必须继承自非Sendable类](#非sendable类必须继承自非sendable类)
+- [接口实现规则](#接口实现规则)
+  - [非Sendable类禁止实现Sendable接口](#非sendable类禁止实现sendable接口)
+- [Sendable类/接口成员变量规则](#sendable类接口成员变量规则)
+  - [必须是Sendable支持的数据类型](#必须是sendable支持的数据类型)
+  - [不支持使用!断言](#不支持使用断言)
+  - [不支持使用计算属性名](#不支持使用计算属性名)
+- [泛型规则](#泛型规则)
+  - [泛型类中的Sendable类、SendableLruCache、collections.Array、collections.Map和collections.Set的模板类型必须是Sendable类型](#泛型类中的sendable类sendablelrucachecollectionsarraycollectionsmap和collectionsset的模板类型必须是sendable类型)
+- [上下文访问规则](#上下文访问规则)
+  - [Sendable类的内部不允许使用当前模块内上下文环境中定义的变量](#sendable类的内部不允许使用当前模块内上下文环境中定义的变量)
+- [@Sendable装饰器使用规则](#sendable装饰器使用规则)
+  - [@Sendable装饰器仅支持修饰类和函数](#sendable装饰器仅支持修饰类和函数)
+  - [Sendable类和Sendable函数禁止使用除@Sendable外的装饰器](#sendable类和sendable函数禁止使用除sendable外的装饰器)
+- [初始化规则](#初始化规则)
+  - [禁止使用对象字面量/数组字面量初始化Sendable对象](#禁止使用对象字面量数组字面量初始化sendable对象)
+- [类型转换规则](#类型转换规则)
+  - [禁止非Sendable类型强制转换为Sendable](#禁止非sendable类型强制转换为sendable)
+- [函数规则](#函数规则)
+  - [箭头函数不可标记为Sendable](#箭头函数不可标记为sendable)
+- [与TS/JS交互的规则](#与tsjs交互的规则)
+  - [ArkTS通用规则（目前只针对Sendable对象）](#arkts通用规则目前只针对sendable对象)
+  - [NAPI规则（目前只针对Sendable对象）](#napi规则目前只针对sendable对象)
+- [与UI交互的规则](#与ui交互的规则)
+- [在HAR包中的使用规则](#在har包中的使用规则)
+
+## 继承规则
+                  
+### Sendable类必须继承自Sendable类
+          Sendable对象的布局和原型链不可变，而非Sendable对象可以通过特殊方式修改布局。因此，不允许互相继承。这里的类不包含变量，Sendable类不能继承自变量。
+
+     正例：
+
+     收起自动换行深色代码主题复制
+```
+@Sendableclass A {  constructor() {  }}
+@Sendableclass B extends A {  constructor() {    super()  }}
+```
+     反例：
+
+     收起自动换行深色代码主题复制
+```
+class A {  constructor() {  }}
+@Sendableclass B extends A { // A不是sendable class，B不能继承它，编译报错  constructor() {    super()  }}
+```
+             
+### 非Sendable类必须继承自非Sendable类
+          Sendable对象的布局和原型链不可变，而非Sendable对象可以通过特殊方式修改布局，因此不允许互相继承。
+
+     正例：
+
+     收起自动换行深色代码主题复制
+```
+class A {  constructor() {  }}
+class B extends A {  constructor() {    super()  }}
+```
+     反例：
+
+     收起自动换行深色代码主题复制
+```
+@Sendableclass A {  constructor() {  }}
+class B extends A { // A是sendable class，B不能继承它，编译报错  constructor() {    super()  }}
+```
+             
+## 接口实现规则
+                  
+### 非Sendable类禁止实现Sendable接口
+          非Sendable类实现Sendable接口时，可能被误认为是Sendable类，导致错误使用。
+
+     正例：
+
+     收起自动换行深色代码主题复制
+```
+interface I {};
+class B implements I {};
+```
+     反例：
+
+     收起自动换行深色代码主题复制
+```
+import { lang } from '@kit.ArkTS';
+type ISendable = lang.ISendable;
+interface I extends ISendable {};
+class B implements I {};  // I是sendable interface，B不能实现，编译报错
+```
+             
+## Sendable类/接口成员变量规则
+                  
+### 必须是Sendable支持的数据类型
+          Sendable数据不得持有非Sendable数据，因此Sendable类或接口的成员变量必须是[Sendable支持的数据类型](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-sendable#sendable%E6%94%AF%E6%8C%81%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B)。
+
+     正例：
+
+     收起自动换行深色代码主题复制
+```
+@Sendableclass A {  constructor() {  }  a: number = 0;}
+```
+     反例：
+
+     收起自动换行深色代码主题复制
+```
+@Sendableclass A {  constructor() {  }  b: Array<number> = [1, 2, 3] // 编译报错，需使用collections.Array}
+```
+             
+### 不支持使用!断言
+          Sendable对象的成员属性必须赋初值，而“!”修饰的变量可以不赋初值，因此不支持使用“!”。
+
+     正例：
+
+     收起自动换行深色代码主题复制
+```
+@Sendableclass A {  constructor() {  }  a: number = 0;}
+```
+     反例：
+
+     收起自动换行深色代码主题复制
+```
+@Sendableclass A {  constructor() {  }  a!: number; // 编译报错，不支持使用“!”}
+```
+             
+### 不支持使用计算属性名
+          Sendable对象的布局不可更改，因为计算属性无法静态确定对象布局，所以不支持。
+
+     正例：
+
+     收起自动换行深色代码主题复制
+```
+@Sendableclass A {    num1: number = 1;    num2: number = 2;    add(): number {      return this.num1 + this.num2;    }}
+```
+     反例：
+
+     收起自动换行深色代码主题复制
+```
+enum B {    b1 = "bbb"}@Sendableclass A {    ["aaa"]: number = 1; // 编译报错，不支持["aaa"]    [B.b1]: number = 2; // 编译报错，不支持[B.b1]}
+```
+             
+## 泛型规则
+                  
+### 泛型类中的Sendable类、SendableLruCache、collections.Array、collections.Map和collections.Set的模板类型必须是Sendable类型
+          Sendable数据不能持有非Sendable数据，因此泛型类中的Sendable数据的模版类型必须是Sendable类型。
+
+     正例：
+
+     收起自动换行深色代码主题复制
+```
+import { collections } from '@kit.ArkTS';
+try {  let arr1: collections.Array<number> = new collections.Array<number>();  let num: number = 1;  arr1.push(num);} catch (e) {  console.error(`taskpool execute: Code: ${e.code}, message: ${e.message}`);}
+```
+     反例：
+
+     收起自动换行深色代码主题复制
+```
+import { collections } from '@kit.ArkTS';
+try {  let arr1: collections.Array<Array<number>> = new collections.Array<Array<number>>(); // 编译报错，模板类型必须是Sendable类型  let arr2: Array<number> = new Array<number>();  arr2.push(1);  arr1.push(arr2);} catch (e) {  console.error(`taskpool execute: Code: ${e.code}, message: ${e.message}`);}
+```
+             
+## 上下文访问规则
+                  
+### Sendable类的内部不允许使用当前模块内上下文环境中定义的变量
+          由于Sendable对象在不同并发实例间的上下文环境不同，属于单个虚拟机实例，如果直接访问会有非预期行为。不支持Sendable对象使用当前模块内上下文环境中定义的变量，违反此规则会在编译阶段报错。
+
+     说明       从API version 12开始，Sendable class的内部支持使用top level的Sendable class对象。
+
+           正例：
+
+     收起自动换行深色代码主题复制
+```
+import { lang } from '@kit.ArkTS';
+type ISendable = lang.ISendable;
+interface I extends ISendable {}
+@Sendableclass B implements I {  static o: number = 1;  static bar(): B {    return new B();  }}
+@Sendableclass C {  v: I = new B();  u: number = B.o;
+  foo() {    return B.bar();  }}
+```
+     反例：
+
+     收起自动换行深色代码主题复制
+```
+import { lang } from '@kit.ArkTS';
+type ISendable = lang.ISendable;
+interface I extends ISendable {}
+@Sendableclass B implements I {}
+function bar(): B {  return new B();}
+let b = new B();
+{  @Sendable  class A implements I {}
+  @Sendable  class C {    u: I = bar(); // bar不是sendable class对象，编译报错    v: I = new A(); // A不是定义在top level中，编译报错
+    foo() {      return b; // b不是sendable class对象，而是sendable class的实例，编译报错    }  }}
+```
+             
+## @Sendable装饰器使用规则
+                  
+### @Sendable装饰器仅支持修饰类和函数
+          当前仅支持修饰类和函数。
+
+     正例：
+
+     收起自动换行深色代码主题复制
+```
+@Sendabletype SendableFuncType = () => void;
+@Sendableclass C {}
+@Sendablefunction SendableFunc() {  console.info("Sendable func");}
+```
+     反例：
+
+     收起自动换行深色代码主题复制
+```
+@Sendabletype A = number; // 编译报错
+@Sendabletype D = C; // 编译报错
+```
+             
+### Sendable类和Sendable函数禁止使用除@Sendable外的装饰器
+          在ts文件中定义类装饰器时，可能会改变类的结构，进而引发运行时错误。
+
+     正例：
+
+     收起自动换行深色代码主题复制
+```
+@Sendableclass A {  num: number = 1;}
+```
+     反例：
+
+     收起自动换行深色代码主题复制
+```
+@Sendable@Observed // 编译报错class C {  num: number = 1;}
+```
+             
+## 初始化规则
+                  
+### 禁止使用对象字面量/数组字面量初始化Sendable对象
+          对象字面量和数组字面量不是Sendable类型。Sendable类型必须通过Sendable类型的new表达式创建。
+
+     正例：
+
+     收起自动换行深色代码主题复制
+```
+import { collections } from '@kit.ArkTS';
+let arr1: collections.Array<number> = new collections.Array<number>(1, 2, 3); // 是Sendable类型
+```
+     反例：
+
+     收起自动换行深色代码主题复制
+```
+import { collections } from '@kit.ArkTS';
+let arr2: collections.Array<number> = [1, 2, 3]; // 不是Sendable类型，编译报错let arr3: number[] = [1, 2, 3]; // 不是Sendable类型，正例，不报错let arr4: number[] = new collections.Array<number>(1, 2, 3); // 编译报错
+```
+             
+## 类型转换规则
+                  
+### 禁止非Sendable类型强制转换为Sendable
+          除了Object类型，非Sendable类型不能强转成Sendable类型。非Sendable类型通过as强转成Sendable类型后，实际数据仍为非Sendable类型，会导致错误使用。Sendable类型在不违反Sendable规则的前提下，需要和非Sendable类型行为兼容，因此Sendable类型可以通过as强转成非Sendable类型。
+
+     正例：
+
+     收起自动换行深色代码主题复制
+```
+class A {  state: number = 0;}
+@Sendableclass SendableA {  state: number = 0;}
+let a1: A = new SendableA() as A;
+```
+     反例：
+
+     收起自动换行深色代码主题复制
+```
+class A {  state: number = 0;}
+@Sendableclass SendableA {  state: number = 0;}
+let a2: SendableA = new A() as SendableA; // 编译报错
+```
+             
+## 函数规则
+                  
+### 箭头函数不可标记为Sendable
+          箭头函数不支持@Sendable装饰器，因此它是非Sendable函数，因此不支持共享。
+
+     正例：
+
+     收起自动换行深色代码主题复制
+```
+@Sendabletype SendableFuncType = () => void;
+@Sendablefunction SendableFunc() {  console.info("Sendable func");}
+@Sendableclass SendableClass {  constructor(f: SendableFuncType) {    this.func = f;  }  func: SendableFuncType;}
+let sendableClass = new SendableClass(SendableFunc);
+```
+     反例：
+
+     收起自动换行深色代码主题复制
+```
+@Sendabletype SendableFuncType = () => void;let func: SendableFuncType = () => {}; // 编译报错
+@Sendableclass SendableClass {  func: SendableFuncType = () => {}; // 编译报错}
+```
+             
+## 与TS/JS交互的规则
+                  
+### ArkTS通用规则（目前只针对Sendable对象）
+                
+| 规则 |
+| --- |
+| Sendable对象传入TS/JS的接口中，禁止操作其对象布局（增、删属性，改变属性类型）。 |
+| Sendable对象设置到TS/JS的对象上，TS中获取到Sendable对象后，禁止操作其对象布局（增、删属性，改变属性类型）。 |
+| Sendable对象放入TS/JS的容器中，TS中获取到Sendable对象后，禁止操作其对象布局（增、删属性，改变属性类型）。 |
+
+          说明       改变属性类型不包括Sendable对象类型的改变，例如从Sendable class A变为Sendable class B。
+
+### NAPI规则（目前只针对Sendable对象）
+          NAPI相关接口请参考[Sendable相关的NAPI接口](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/use-napi-about-extension#sendable%E7%9B%B8%E5%85%B3)，具体使用请参考[Native与Sendable ArkTS对象绑定](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/use-sendable-napi)。
+
+| 规则 |
+| --- |
+| 禁止删除属性。不能使用napi_delete_property接口。 |
+| 禁止新增属性。不能使用napi_set_property、napi_set_named_property、napi_define_properties接口。 |
+| 禁止修改属性类型。不能使用napi_set_property、napi_set_named_property、napi_define_properties接口。 |
+| 不支持Symbol相关接口和类型。不能使用napi_create_symbol、napi_is_symbol_object、napi_symbol接口。 |
+
+## 与UI交互的规则
+          Sendable数据需要与[makeObserved](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-new-makeobserved)配合使用，才可以观察Sendable对象的数据变化，具体使用请参考[makeObserved和@Sendable装饰的class配合文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-new-makeobserved#makeobserved%E5%92%8Csendable%E8%A3%85%E9%A5%B0%E7%9A%84class%E9%85%8D%E5%90%88%E4%BD%BF%E7%94%A8)。
+
+## 在HAR包中的使用规则
+          HAR中使用Sendable时，需启用编译生成TS文件的配置。具体使用请参考[编译生成TS文件](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/har-package#%E7%BC%96%E8%AF%91%E7%94%9F%E6%88%90ts%E6%96%87%E4%BB%B6)。

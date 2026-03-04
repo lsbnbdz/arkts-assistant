@@ -1,0 +1,39 @@
+# [构造函数和析构函数](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-tensor-construction-and-destructor)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119176821_section105804mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119176821_section105807mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119176821_section105821mcpsimp)
+- [返回值](#zh-cn_topic_0000002119176821_section105858mcpsimp)
+- [异常处理](#zh-cn_topic_0000002119176821_section105861mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119176821_section105864mcpsimp)
+
+## 函数功能
+Tensor构造函数和析构函数。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+Tensor();~Tensor() = default;explicit Tensor(const TensorDesc &tensor_desc);Tensor(const TensorDesc &tensor_desc, const std::vector &data);Tensor(const TensorDesc &tensor_desc, const uint8_t *data, size_t size);Tensor(TensorDesc &&tensor_desc, std::vector &&data);
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| tensor_desc | 输入 | TensorDesc对象，需设置的Tensor描述符。 |
+| data | 输入 | 需设置的数据。 |
+| size | 输入 | 数据的长度，单位为字节。 |
+
+ 
+## 返回值
+Tensor构造函数返回Tensor类型的对象。
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

@@ -1,0 +1,6 @@
+# [算子调测API](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-operator-debugging-apis)
+
+- **[GmAlloc](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-gmalloc)**
+ - **[GmFree](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-gmfree)**
+ - **[ICPU_RUN_KF](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-icpu-run-kf)**
+ - **[ICPU_SET_TILING_KEY](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-icpu-set-tiling-key)**

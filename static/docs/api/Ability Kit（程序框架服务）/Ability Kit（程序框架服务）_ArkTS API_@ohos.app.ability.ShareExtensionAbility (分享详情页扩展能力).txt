@@ -1,0 +1,26 @@
+## 目录
+- [场景介绍](#场景介绍)
+- [导入模块](#导入模块)
+- [ShareExtensionAbility](#shareextensionability)
+
+ShareExtensionAbility继承自[UIExtensionAbility](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-app-ability-uiextensionability)，为开发者提供分享详情页扩展能力。各类Ability的继承关系详见[继承关系说明](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-app-ability-ability#ability%E7%9A%84%E7%BB%A7%E6%89%BF%E5%85%B3%E7%B3%BB%E8%AF%B4%E6%98%8E)。
+
+ 说明 本模块首批接口从API version 10 开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+
+  本模块接口仅可在Stage模型下使用。
+
+## 场景介绍
+支持设备PhonePC/2in1TabletTVWearable以分享文本为例。用户选择一段文本，拉起要分享应用，此时被分享拉起的应用会根据分享信息将分享模板拉起，并将数据按分享模板内容显示。
+
+## 导入模块
+支持设备PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+import { ShareExtensionAbility } from '@kit.AbilityKit';
+```
+   
+## ShareExtensionAbility
+支持设备PhonePC/2in1TabletTVWearableShareExtensionAbility继承自[UIExtensionAbility](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-app-ability-uiextensionability)，为开发者提供分享详情页扩展能力。
+
+ 该模块支持开发者创建接收分享内容的分享详情页面，将应用入口展示于系统分享面板的推荐应用区域。
+
+ 系统能力：SystemCapability.Ability.AbilityRuntime.Core

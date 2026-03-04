@@ -1,0 +1,8 @@
+# [用户隐私未同意，如何引导用户打开运动健康App](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/health-faqs-5)
+
+接口响应错误码1002703001，可通过以下方式引导用户打开运动健康App，同意隐私授权：
+
+ 调用[canOpenLink](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-bundlemanager#bundlemanagercanopenlink12)判断运动健康App是否安装。运动健康App Scheme：huaweischeme://healthapp/home/main。
+
+ - App已安装，调用[openLink](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-inner-application-uiabilitycontext#openlink12)接口拉起运动健康App。运动健康App Scheme：huaweischeme://healthapp/home/main。
+- App未安装，调用[应用市场推荐](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/store-productview#section729012543213)接口，引导用户下载运动健康App，运动健康App包名：com.huawei.hmos.health。

@@ -1,0 +1,37 @@
+# [GetOriginShape](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getoriginshape)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083776762_section93015mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083776762_section93018mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083776762_section93022mcpsimp)
+- [返回值](#zh-cn_topic_0000002083776762_section93025mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083776762_section93028mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083776762_section93031mcpsimp)
+
+## 函数功能
+获取原始shape。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+const Shape &GetOriginShape() const
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+原始shape
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+StorageShape shape({3, 256, 256}, {256, 256, 3}); auto origin_shape = shape.GetOriginShape(); // 3,256,256
+```

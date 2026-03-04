@@ -1,0 +1,18 @@
+# [ArkWeb_SchemeHandler_](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-schemehandler)
+
+## 目录
+- [概述](#概述)
+
+收起自动换行深色代码主题复制
+```
+typedef struct ArkWeb_SchemeHandler_ ArkWeb_SchemeHandler
+```
+ 
+## 概述
+PhonePC/2in1TabletTVWearable该类用于拦截指定scheme的请求。
+
+ **起始版本：** 12
+
+ **相关模块：** [Web](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web)
+
+ **所在头文件：** [arkweb_scheme_handler.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-arkweb-scheme-handler-h)

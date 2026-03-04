@@ -1,0 +1,37 @@
+# [SetScalar](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-setscalar)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083616798_section92419mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083616798_section92422mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083616798_section92425mcpsimp)
+- [返回值](#zh-cn_topic_0000002083616798_section92428mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083616798_section92431mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083616798_section92434mcpsimp)
+
+## 函数功能
+设置shape为标量。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+void SetScalar()
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+无
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+Shape shape0({3, 256, 256}); shape0.IsScalar(); // false shape0.SetScalar(); shape0.IsScalar(); // true
+```

@@ -1,0 +1,13 @@
+# [来电横幅无法拉起](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/call-faq-1)
+
+**问题现象**
+
+ 调用[voipCall.reportIncomingCall](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/call-voipcall#section13177019143216)上报来电信息，但来电横幅无法显示。
+
+ **解决措施**
+
+ 1. 检查应用是否已开启[通知权限](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/notification-enable)。
+2. 检查是否继承UIAbility，调用[pushService.receiveMessage](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/push-pushservice#section125883044911)并在接收后调用上报接口。
+3. 来电信息中获取的callId，上报给通话服务接口的callId，二者应该保持一致。
+4. 检查构造的callInfo信息是否有参数错误，如voipCallState需要是VOIP_CALL_STATE_RINGING。
+5. 如还未解决，请通过[在线提单](https://developer.huawei.com/consumer/cn/support/feedback/#/)提交问题，华为支持人员会及时处理。

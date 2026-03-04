@@ -1,0 +1,13 @@
+# [开发准备](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/graphics-accelerate-assetdownload-prepare)
+
+## 目录
+- [配置网络权限](#zh-cn_topic_0000002179265856_zh-cn_topic_0000002143528348_section49951359134817)
+
+请先参考[应用开发准备](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/application-dev-overview)完成基本准备工作，再继续以下开发准备项。
+
+ 
+## 配置网络权限
+在“src/main/module.json5”的requestPermissions层级中添加网络权限。收起自动换行深色代码主题复制
+```
+{ "module": { // ... "requestPermissions": [ { "name": "ohos.permission.INTERNET" } ] }}
+```

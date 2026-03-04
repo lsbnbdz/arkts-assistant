@@ -1,0 +1,29 @@
+# [AutoMappingSubgraphIndex](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-automappingsubgraphindex)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119256533_section103797mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119256533_section103800mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119256533_section103814mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119256533_section103851mcpsimp)
+
+## 函数功能
+设置子图的输入输出和主图对应父节点输入输出的对应关系。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+Status AutoMappingSubgraphIndex(const ge::Graph &graph,const std::function &input,const std::function &output)Status AutoMappingSubgraphIndex(const ge::Graph &graph,const std::function &input,const std::function &output)
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| graph | 输入 | 子图对象 |
+| input | 输入 | 输入对应关系函数 |
+| output | 输入 | 输出对应关系函数 |
+
+ 
+## 约束说明
+无

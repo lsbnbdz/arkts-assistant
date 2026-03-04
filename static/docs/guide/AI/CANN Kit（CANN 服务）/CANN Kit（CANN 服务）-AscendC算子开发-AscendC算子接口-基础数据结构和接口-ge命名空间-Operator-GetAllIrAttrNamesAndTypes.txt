@@ -1,0 +1,40 @@
+# [GetAllIrAttrNamesAndTypes](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getallirattrnamesandtypes)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083617406_section99241mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083617406_section99244mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083617406_section99248mcpsimp)
+- [返回值](#zh-cn_topic_0000002083617406_section99271mcpsimp)
+- [异常处理](#zh-cn_topic_0000002083617406_section99295mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083617406_section99298mcpsimp)
+
+## 函数功能
+获取该算子所有的IR定义的属性名称和属性类型，包含普通和必选属性两种。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+graphStatus GetAllIrAttrNamesAndTypes(std::map &attr_name_types) const;
+```
+ 
+## 参数说明
+ 展开
+| 参数名 | 输入/输出 | 描述 |
+| --- | --- | --- |
+| attr_name_types | 输出 | 所有的IR定义的属性名称和属性类型。 |
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| graphStatus | GRAPH_FAILED：失败。 GRAPH_SUCCESS：成功。 |
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

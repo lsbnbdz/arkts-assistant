@@ -1,0 +1,102 @@
+# [高精几何重建](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arengine-c-volume-measurement)
+
+## 概要
+ 从6.0.0(20)开始，AR Engine支持高精几何重建能力。
+
+ 本章节通过AR Engine高精几何重建能力来识别空间中的立方体物体或者嵌入式立方体空间，计算出被识别物体或空间的长、宽、高以及体积。可以用于测量立方体体积以及嵌入式空间的大小。
+
+ **图1**稠密点云绘制示意图 
+ **图2**体积测量示意图 
+ **图3**空间识别示意图 
+ 注意 本功能仅提供能力，接入该功能不构成对产品的质量保证或任何承诺，详见[AR Engine高精几何重建功能技术局限性及免责声明](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arengine-appendix#section68356131976)。
+
+ 本章节涉及的AR Engine 能力如下：
+
+ - 运动跟踪能力
+ - 环境跟踪能力（点云识别）
+ - 高精几何重建能力
+ 
+ 
+## 接口说明
+ 以下接口为AREngine高精几何重建相关接口，详细接口和说明，请参考[AR Engine API参考](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arengine-capi-arengine)。
+
+ 展开
+| 接口名 | 描述 |
+| --- | --- |
+| HMS_AREngine_ARFrame_AcquireSemanticDenseData | 获取当前帧的高精几何重建对象数据。 |
+| HMS_AREngine_ARConfig_GetSemanticDenseMode | 获取已设置的高精几何重建模式。 |
+| HMS_AREngine_ARConfig_SetSemanticDenseMode | 设置当前所需的高精几何重建模式。 |
+| HMS_AREngine_ARSemanticDense_AcquireCubeData | 获取识别到的高精几何重建对象数据中的立方体数据。 |
+| HMS_AREngine_ARSemanticDense_AcquireCubeDataSize | 获取识别到的高精几何重建对象数据中的立方体数量。 |
+| HMS_AREngine_ARSemanticDense_Release | 释放高精几何重建对象。 |
+
+ 
+## 开发步骤
+ 
+### 声明Native接口
+ 开发者可参考AR物体摆放章节的[声明Native接口](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arengine-c-arworld#section1557014318265)。
+
+ 
+### 创建UI界面
+ 首先创建一个UI界面ARSemanticDense.ets，用于选择高精几何重建相关模式。
+
+ 收起自动换行深色代码主题复制
+```
+// 此代码可参考示例代码：ARSample/entry/src/main/ets/pages/ARSemanticDense.ets。import { display} from '@kit.ArkUI';
+@Builderexport function ARSemanticDenseBuilder() { ARSemanticDense();}
+@Componentstruct ARSemanticDense { pageInfo: NavPathStack = new NavPathStack(); @State context: Context = this.getUIContext().getHostContext() as Context; @State showPage: boolean = true; @State rotation: number = display.getDefaultDisplaySync().rotation; @State volume: string = '';
+ build() { NavDestination() { Column() { Button('开启稠密点云', { type: ButtonType.Normal, stateEffect: true }) .borderRadius(8) .width('50%') .height('5%') .onClick(() => { this.pageInfo.pushDestinationByName('ARSemanticDenseRender', 0).catch((error: BusinessError) => { console.error(`[pushDestinationByName]failed. Code: ${error.code}.`); }); })
+ Button('打开体积测量', { type: ButtonType.Normal, stateEffect: true }) .borderRadius(8) .width('50%') .height('5%') .onClick(() => { this.pageInfo.pushDestinationByName('ARSemanticDenseRender', 1).catch((error: BusinessError) => { console.error(`[pushDestinationByName]failed. Code: ${error.code}.`); }); })
+ Button('打开空间测量', { type: ButtonType.Normal, stateEffect: true }) .borderRadius(8) .width('50%') .height('5%') .onClick(() => { this.pageInfo.pushDestinationByName('ARSemanticDenseRender', 2).catch((error: BusinessError) => { console.error(`[pushDestinationByName]failed. Code: ${error.code}.`); }); }) } .justifyContent(FlexAlign.SpaceEvenly) .width('100%') .height('100%') } .onReady((context: NavDestinationContext) => { this.pageInfo = context.pathStack; }) .hideTitleBar(true) .hideBackButton(true) .hideToolBar(true) }}
+```
+ 最后创建一个ARSemanticDenseRender.ets，使用[XComponent](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-basic-components-xcomponent)组件用于加载相机预览画面，并定时触发每一帧绘制。
+
+ 收起自动换行深色代码主题复制
+```
+// 此代码可参考示例代码：ARSample/entry/src/main/ets/pages/ARSemanticDenseRender.ets。import { display } from '@kit.ArkUI';import { resourceManager } from '@kit.LocalizationKit';import arEngineDemo from 'libentry.so';
+@Builderexport function ARSemanticDenseRenderBuilder() { ARSemanticDenseRender();}
+@Componentstruct ARSemanticDenseRender { pageInfo: NavPathStack = new NavPathStack(); @State context: Context = this.getUIContext().getHostContext() as Context; private xComponentId: string = 'ARSemanticDense'; private resMgr: resourceManager.ResourceManager = this.context.resourceManager; private interval: number = -1; private inputInterval: number = -1; private getCubeInfoInterval: number = -1; private isUpdate: boolean = false; private semanticDenseMode: number = 0; @State showPage: boolean = true; @State rotation: number = display.getDefaultDisplaySync().rotation; @State volume: string = ''; build(): void { NavDestination() { RelativeContainer() { XComponent({ id: this.xComponentId, type: XComponentType.SURFACE, libraryname: 'entry' }) .opacity(0.2) .width('100%') .height('100%') .zIndex(0.1) .visibility(this.showPage ? Visibility.Visible : Visibility.None) .alignRules({ center: { anchor: '__container__', align: VerticalAlign.Center }, middle: { anchor: '__container__', align: HorizontalAlign.Center } }) .onLoad(() => { this.interval = setInterval(() => { if (this.isUpdate) { arEngineDemo.update(this.xComponentId); if (this.semanticDenseMode != 0) { this.volume = arEngineDemo.getVolume(this.xComponentId); } } }, 33) // 将帧速率设置为30fps（每33ms刷新一次帧） }) .onDestroy(() => { if (this.interval !== -1) { clearInterval(this.interval); this.interval = -1; }
+ if (this.inputInterval !== -1) { clearInterval(this.inputInterval); this.inputInterval = -1; }
+ if (this.getCubeInfoInterval !== -1) { clearInterval(this.getCubeInfoInterval); this.getCubeInfoInterval = -1; } })
+ Text(this.volume) .fontColor(Color.Red) .fontSize(14) .textAlign(TextAlign.Center) .alignRules({ bottom: { anchor: '__container__', align: VerticalAlign.Bottom }, middle: { anchor: '__container__', align: HorizontalAlign.Center } }) } } .onAppear(() => { arEngineDemo.init(this.resMgr); let config: Int32Array = new Int32Array([1,this.rotation, 2, this.semanticDenseMode]); arEngineDemo.start(this.xComponentId, config); }) .onWillDisappear(async () => { arEngineDemo.stop(this.xComponentId); }) .onShown(() => { this.isUpdate = true; arEngineDemo.show(this.xComponentId); }) .onHidden(() => { this.isUpdate = false; arEngineDemo.hide(this.xComponentId); }) .onReady((context: NavDestinationContext) => { this.pageInfo = context.pathStack; this.semanticDenseMode = context.pathInfo.param as number; }) .hideTitleBar(true) .hideBackButton(true) .hideToolBar(true) }}
+```
+ 
+### 引入AR Engine
+ 开发者可参考AR物体摆放章节的[引入AR Engine](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arengine-c-arworld#section183721115521)。
+
+ 
+### 创建AR会话并配置高精几何重建相关模式
+ 收起自动换行深色代码主题复制
+```
+AREngine_ARSession *arSession = nullptr;// 创建AR会话。HMS_AREngine_ARSession_Create(nullptr, nullptr, &arSession);AREngine_ARConfig *arConfig = nullptr;// 创建AR会话配置器。HMS_AREngine_ARConfig_Create(arSession, &arConfig);// 配置高精几何重建模式中的体积识别模式HMS_AREngine_ARConfig_SetSemanticDenseMode(arSession, arConfig, ARENGINE_SEMANTIC_DENSE_MODE_CUBE_VOLUME);// 配置器设置给AR会话。HMS_AREngine_ARSession_Configure(arSession, arConfig);
+```
+ 
+### 获取当前环境中的高精几何重建信息
+ 创建一个帧对象，调用[HMS_AREngine_ARFrame_AcquireSemanticDenseData](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arengine-capi-arengine#section17136162216547)函数，从当前帧中获取环境中的高精几何重建信息，其中包含了环境中的稠密点云信息和立方体信息。
+
+ 收起自动换行深色代码主题复制
+```
+AREngine_ARFrame *arFrame = nullptr;// 创建AR单帧对象HMS_AREngine_ARFrame_Create(arSession, &arFrame);AREngine_ARSemanticDenseData *arSemanticDense = nullptr;// 获取当前帧的稠密点云信息HMS_AREngine_ARFrame_AcquireSemanticDenseData(arSession, arFrame, &arSemanticDense);
+```
+ 
+### 获取高精几何重建信息中的立方体数据
+ 1. 调用[HMS_AREngine_ARSemanticDense_AcquireCubeData](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arengine-capi-arengine#section7554459949)函数，获取当前环境中的立方体数据，立方体的数据结构详情参考[AREngine_ARSemanticDenseCubeData](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arengine-struct-arsemanticdensecubedata)。
+
+ 收起自动换行深色代码主题复制
+```
+AREngine_ARSemanticDenseCubeData *semanticDenseCubeData = nullptr;HMS_AREngine_ARSemanticDense_AcquireCubeData(arSession, arSemanticDense, &semanticDenseCubeData);
+```
+ 2. 调用[HMS_AREngine_ARSemanticDense_AcquireCubeDataSize](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arengine-capi-arengine#section383013458212)函数，获取当前环境中的立方体数量，如果立方体数量大于0，即可从中获取单个立方体的数据进行绘制和体积计算。
+
+ 收起自动换行深色代码主题复制
+```
+int64_t cubeDataSize = 0;HMS_AREngine_ARSemanticDense_AcquireCubeDataSize(arSession, arSemanticDense, &cubeDataSize);
+```
+ 
+### 绘制相关几何信息
+ 1. 通过获取到的[AREngine_ARSemanticDenseCubeData](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arengine-struct-arsemanticdensecubedata)对象来绘制立方体。
+
+ 收起自动换行深色代码主题复制
+```
+// 判断获取的立方体数据及数量。if (semanticDenseCubeData != nullptr && cubeDataSize > 0) { // 绘制立方体。 mCubeRenderer.Draw(projectionMat, viewMat, arSession, semanticDenseCubeData);}
+```

@@ -1,0 +1,31 @@
+# [DelInputWithCond](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-delinputwithcond)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083776706_section103195mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083776706_section103198mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083776706_section103206mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083776706_section103243mcpsimp)
+
+## 函数功能
+根据算子属性，删除算子指定输入边。
+
+ 
+## 函数原型
+注意数据类型为string的接口后续版本会废弃，建议使用数据类型为非string的接口。
+
+ 收起自动换行深色代码主题复制
+```
+OpRegistrationData &DelInputWithCond(int32_t inputIdx, const std::string &attrName, bool attrValue);OpRegistrationData &DelInputWithCond(int32_t input_idx, const char_t *attr_name, bool attr_value);
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| inputIdx | 输入 | 需要删除的输入边编号。 |
+| attrName | 输入 | 属性名字。 |
+| attrValue | 输入 | 属性的值。 |
+
+ 
+## 约束说明
+无

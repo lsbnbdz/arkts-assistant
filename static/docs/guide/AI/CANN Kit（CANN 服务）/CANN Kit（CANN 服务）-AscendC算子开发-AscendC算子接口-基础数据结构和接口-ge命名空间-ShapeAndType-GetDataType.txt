@@ -1,0 +1,37 @@
+# [GetDataType](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-shapeandtype-getdatatype)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119256525_section104129mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119256525_section104132mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119256525_section104139mcpsimp)
+- [返回值](#zh-cn_topic_0000002119256525_section104142mcpsimp)
+- [异常处理](#zh-cn_topic_0000002119256525_section104168mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119256525_section104171mcpsimp)
+
+## 函数功能
+获取ShapeAndType类的数据类型。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+DataType GetDataType() const
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| DataType | ShapeAndType对象中的Data type。 |
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

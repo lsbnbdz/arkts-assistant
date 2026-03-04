@@ -1,0 +1,5 @@
+# [场景化控件的language参数生效范围](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/map-faq-5)
+
+1. 不传language：UI界面、底图、逆地理结果都是follow系统语言。
+
+ 2. 传language：UI界面和地图follow系统语言，请求云侧的结果根据language获取；不同的接口所支持的语言数据不同，存在不支持语言的接口返回的数据默认使用英文兜底。

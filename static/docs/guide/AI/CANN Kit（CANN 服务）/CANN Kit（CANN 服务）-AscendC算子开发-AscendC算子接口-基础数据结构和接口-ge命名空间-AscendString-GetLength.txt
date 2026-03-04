@@ -1,0 +1,32 @@
+# [GetLength](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getlength)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083617294_section96826mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083617294_section96829mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083617294_section96833mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083617294_section96836mcpsimp)
+- [返回值](#zh-cn_topic_0000002083617294_section96839mcpsimp)
+
+## 函数功能
+获取字符串的长度。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+size_t GetLength() const;
+```
+ 
+## 约束说明
+无
+
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+ 展开
+| 类型 | 描述 |
+| --- | --- |
+| size_t | 字符串长度。 |

@@ -1,0 +1,3 @@
+- **[管理网络连接](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/net-connection-manager)**
+ - **[管理网络连接(C/C++)](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/native-netmanager-guidelines)**
+ - **[连接VPN](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/net-vpnextension)**

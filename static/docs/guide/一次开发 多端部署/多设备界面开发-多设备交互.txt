@@ -1,0 +1,3 @@
+# [多设备交互](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-device-interaction)
+
+- **[多设备交互](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-interaction)**

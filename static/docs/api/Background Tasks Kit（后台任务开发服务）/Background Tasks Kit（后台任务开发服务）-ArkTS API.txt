@@ -1,0 +1,9 @@
+# [ArkTS API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/background-tasks-arkts)
+
+- **[@ohos.reminderAgentManager (后台代理提醒)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-reminderagentmanager)**
+ - **[@ohos.resourceschedule.backgroundTaskManager (后台任务管理)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-resourceschedule-backgroundtaskmanager)**
+ - **[@ohos.resourceschedule.workScheduler (延迟任务调度)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-resourceschedule-workscheduler)**
+ - **[@ohos.WorkSchedulerExtensionAbility (延迟任务调度回调)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-workschedulerextensionability)**
+ - **[@ohos.resourceschedule.backgroundProcessManager (后台子进程管控)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-backgroundprocessmanager)**
+ - **[application](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/background-tasks-arkts-application)**
+ - **[已停止维护的接口](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/background-tasks-arkts-dep)**

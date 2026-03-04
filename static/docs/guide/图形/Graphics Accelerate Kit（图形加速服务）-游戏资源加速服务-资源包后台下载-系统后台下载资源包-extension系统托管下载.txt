@@ -1,0 +1,44 @@
+# [extension系统托管下载](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/graphics-accelerate-assetdownload-back-system)
+
+## 目录
+- [业务流程](#zh-cn_topic_0000002214632077_zh-cn_topic_0000002158337886_section142791396388)
+- [接口说明](#zh-cn_topic_0000002214632077_zh-cn_topic_0000002158337886_section1212682065918)
+- [开发步骤](#zh-cn_topic_0000002214632077_zh-cn_topic_0000002158337886_section2336527123810)
+
+用户在应用市场安装游戏后、或更新游戏后、设备满足闲时条件时，在游戏未启动状态下，若检测到该游戏有资源包需要更新，将使用**系统下载器**（游戏资源加速服务）自动下载资源包。
+
+ 
+## 业务流程
+ 
+
+ 1. 用户在应用市场安装游戏后、用户在应用市场更新游戏后、系统检测到用户设备符合闲时条件时，游戏资源加速服务开启资源包后台下载。
+ 2. 游戏资源加速服务从AppGallery Connect获取相关资源下载配置信息，例如下载类型、CDN类型、 manifestUrl、域名白名单等。具体资源下载配置信息请参见[发布资源包下载任务](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/graphics-accelerate-assetdownload-release)。
+ 3. 游戏资源加速服务唤醒ExtensionAbility进程，并通过调用[onDownloadContentRequest](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/graphics-accelerate-extensionability#section1643305731014)方法传入manifestUrl资源清单等信息，以获取下载任务的配置信息列表。
+ 4. 游戏实现资源加速ExtensionAbility的[onDownloadContentRequest](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/graphics-accelerate-extensionability#section1643305731014)方法，生成资源包下载任务列表。若manifestUrl不为空，下载manifestUrl，生成托管在华为CDN的资源下载任务列表；若manifestUrl为空，生成托管在三方CDN的资源下载任务列表。
+ 5. 资源加速ExtensionAbility向游戏资源加速服务返回不超过200条下载任务的配置信息列表[AssetDownloadConfig](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/graphics-accelerate-assetdownloadmanager#zh-cn_topic_0000002214513333_zh-cn_topic_0000002137922672_section14401125712)。
+ 6. 游戏资源加速服务根据配置信息列表逐一从华为CDN或三方CDN下载资源包。
+ 7. 游戏资源加速服务每完成一个下载任务，均会向资源加速ExtensionAbility通知当前任务的下载状态。
+ 8. 游戏实现资源加速ExtensionAbility的[onBackgroundDownloadSucceeded](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/graphics-accelerate-extensionability#section7400025191119)方法，接收“成功”状态的下载任务信息，并前往下载路径操作（例如转移、解压）资源文件。游戏实现资源加速ExtensionAbility的[onBackgroundDownloadFailed](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/graphics-accelerate-extensionability#section1348813731114)方法，接收“失败”状态的下载任务信息，并根据失败原因[DownloadFault](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/graphics-accelerate-assetdownloadmanager#zh-cn_topic_0000002214513333_zh-cn_topic_0000002137922672_section82071855806)自行实现处理逻辑。
+ 9. 游戏资源加速服务完成所有下载任务后，调用[onExtensionWillTerminate](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/graphics-accelerate-extensionability#section144241488119)方法通知资源加速ExtensionAbility。
+ 10. 游戏资源加速服务关闭资源包后台下载功能。
+ 
+ 
+## 接口说明
+ 具体API说明请详见[接口文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/graphics-accelerate-extensionability)。
+
+ 展开
+| 接口名 | 描述 |
+| --- | --- |
+| onDownloadContentRequest(requestType: ContentRequestType, manifestUrl: string, assetAccelerationExtensionInfo: AssetAccelerationExtensionInfo): Promise | 安装应用、更新应用、设备闲时，执行该方法，获取资源包下载任务列表。返回任务量不超过200条。使用Promise异步回调。 |
+| onBackgroundDownloadSucceeded(downloadTask: assetDownloadManager.AssetDownloadTask, filePath: string): Promise | 在系统后台下载任务成功时，执行该方法，通知资源加速ExtensionAbility下载成功。使用Promise异步回调。 |
+| onBackgroundDownloadFailed(downloadTask: assetDownloadManager.AssetDownloadTask, fault: assetDownloadManager.DownloadFault): Promise | 在系统后台下载任务失败时，执行该方法，通知资源加速ExtensionAbility下载失败。使用Promise异步回调。 |
+| onExtensionWillTerminate(error?: BusinessError): Promise | 在资源加速ExtensionAbility生命周期即将结束时、调度异常退出后，执行该方法，通知关闭资源包后台下载功能。建议在该方法中执行资源清理等操作。请避免耗时操作。使用Promise异步回调。 |
+
+ 
+## 开发步骤
+ 1. 在“src/main/module.json5”的extensionAbilities层级中添加资源加速ExtensionAbility信息。 收起自动换行深色代码主题复制 ``` "extensionAbilities": [ { "name": "AssetAccelExtAbility", // 游戏资源加速ExtensionAbility组件的名称。 "srcEntry": "./ets/extensionability/AssetAccelExtAbility.ets", // 游戏资源加速ExtensionAbility组件所对应的代码路径。 "type": "assetAcceleration" }] ```
+ 2. 新建extensionability文件夹及AssetAccelExtAbility.ets文件，导入assetDownloadManager模块、AssetAccelerationExtensionAbility模块及相关模块，同时新增AssetAccelExtAbility类继承AssetAccelerationExtensionAbility。 收起自动换行深色代码主题复制 ``` import { BusinessError } from '@kit.BasicServicesKit';import { common } from '@kit.AbilityKit';import { assetDownloadManager, AssetAccelerationExtensionAbility, AssetAccelerationExtensionInfo, ContentRequestType } from '@kit.GraphicsAccelerateKit'; export default class AssetAccelExtAbility extends AssetAccelerationExtensionAbility {}; ```
+ 3. 游戏实现[onDownloadContentRequest](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/graphics-accelerate-extensionability#section1643305731014)方法，收集资源包下载任务列表。 说明 若接口需要使用common.Context类型的上下文，可以从this.context中获取类型为common.ExtensionContext的上下文对象。 收起自动换行深色代码主题复制 ``` async onDownloadContentRequest(requestType: ContentRequestType, manifestUrl: string, assetAccelerationExtensionInfo: AssetAccelerationExtensionInfo): Promise { const context = this.context as common.ExtensionContext; // 将当前上下文转换为common.ExtensionContext类型。 console.info('AssetAccelDemo', `application file directory = ${context.filesDir}`); console.info('AssetAccelDemo', `onDownloadContentRequest enter, requestType: ${requestType}, manifestUrl: ${manifestUrl}.`); // 1.根据manifestUrl获取下载资源包。2.manifestUrl不为空，获取华为CDN侧资源，为空则获取三方CDN侧资源。3.返回资源包下载任务列表。 let downloadConfigArr: Array = []; return downloadConfigArr;} ```
+ 4. 游戏实现[onBackgroundDownloadSucceeded](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/graphics-accelerate-extensionability#section7400025191119)方法，接收“成功”状态的下载任务，并前往下载路径操作（例如转移、解压）资源文件。 收起自动换行深色代码主题复制 ``` async onBackgroundDownloadSucceeded(downloadTask: assetDownloadManager.AssetDownloadTask, filePath: string): Promise { console.info('AssetAccelDemo', `onBackgroundDownloadSucceeded enter, taskId is ${downloadTask.taskId}, filePath = ${filePath}`); // 添加已下载资源包转移等处理逻辑。} ```
+ 5. 游戏实现[onBackgroundDownloadFailed](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/graphics-accelerate-extensionability#section1348813731114)方法，接收“失败”状态的下载任务，并根据失败原因[DownloadFault](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/graphics-accelerate-assetdownloadmanager#zh-cn_topic_0000002214513333_zh-cn_topic_0000002137922672_section82071855806)自行实现处理逻辑。 收起自动换行深色代码主题复制 ``` async onBackgroundDownloadFailed(downloadTask: assetDownloadManager.AssetDownloadTask, fault: assetDownloadManager.DownloadFault): Promise { console.info('AssetAccelDemo', `onBackgroundDownloadFailed enter, download url: ${downloadTask.config.url}, err: ${fault}`); // 添加资源包下载失败处理逻辑。} ```
+ 6. 游戏实现[onExtensionWillTerminate](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/graphics-accelerate-extensionability#section144241488119)方法，接收游戏资源加速服务关闭资源包后台下载功能的通知。 收起自动换行深色代码主题复制 ``` async onExtensionWillTerminate(error?: BusinessError): Promise { // 避免进行耗时处理。 if (error) { console.error('AssetAccelDemo', `onExtensionWillTerminate enter, TerminateReason：${error?.code}, msg: ${error?.message}.`); // 添加异常终止处理逻辑。 return; } // 添加资源清理等处理逻辑。} ```

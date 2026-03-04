@@ -1,0 +1,37 @@
+# [GetPlatformInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-getplatforminfo)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002083777206_section95323mcpsimp)
+- [函数原型](#zh-cn_topic_0000002083777206_section95326mcpsimp)
+- [参数说明](#zh-cn_topic_0000002083777206_section95329mcpsimp)
+- [返回值](#zh-cn_topic_0000002083777206_section95332mcpsimp)
+- [约束说明](#zh-cn_topic_0000002083777206_section95335mcpsimp)
+- [调用示例](#zh-cn_topic_0000002083777206_section95338mcpsimp)
+
+## 函数功能
+获取fe::PlatformInfos指针。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+fe::PlatFormInfos *GetPlatformInfo() const
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+fe::PlatFormInfos指针。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+ge::graphStatus Tiling4XXX(TilingContext* context) { auto platform_info = context->GetPlatformInfo(); // ... }
+```

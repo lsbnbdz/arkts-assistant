@@ -1,0 +1,37 @@
+# [GetSize](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-continuousvector-getsize)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119256293_section89037mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119256293_section89040mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119256293_section89044mcpsimp)
+- [返回值](#zh-cn_topic_0000002119256293_section89047mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119256293_section89050mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119256293_section89053mcpsimp)
+
+## 函数功能
+获取当前保存的元素个数。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+size_t GetSize() const
+```
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+当前保存的元素个数。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+size_t capacity = 100U; auto cv_holder = ContinuousVector::Create(capacity); auto cv = reinterpret_cast(cv_holder.get()); auto size = cv->GetSize(); // 0U
+```

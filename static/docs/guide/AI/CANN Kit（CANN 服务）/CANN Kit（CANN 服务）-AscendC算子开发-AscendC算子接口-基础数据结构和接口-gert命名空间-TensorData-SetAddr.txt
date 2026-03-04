@@ -1,0 +1,41 @@
+# [SetAddr](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-setaddr)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119177077_section93475mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119177077_section93478mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119177077_section93482mcpsimp)
+- [返回值](#zh-cn_topic_0000002119177077_section93514mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119177077_section93517mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119177077_section93520mcpsimp)
+
+## 函数功能
+设置tensor地址。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+ge::graphStatus SetAddr(const ConstTensorAddressPtr addr, TensorAddrManager manager)
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| addr | 输入 | tensor地址。 收起自动换行深色代码主题复制 ``` using ConstTensorAddressPtr = const void *; ``` |
+| manager | 输入 | tensor的管理函数。 收起自动换行深色代码主题复制 ``` using TensorAddrManager = ge::graphStatus (*)(TensorAddress addr, TensorOperateType operate_type, void **out); ``` |
+
+ 
+## 返回值
+成功时返回ge::GRAPH_SUCCESS；失败时返回manager管理函数中定义的错误码。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+auto addr = reinterpret_cast(0x10); TensorData td(addr, nullptr); td.SetAddr(addr, HostAddrManager);
+```

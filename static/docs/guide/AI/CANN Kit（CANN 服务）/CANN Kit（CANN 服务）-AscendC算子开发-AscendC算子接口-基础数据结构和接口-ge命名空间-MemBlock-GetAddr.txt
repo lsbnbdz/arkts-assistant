@@ -1,0 +1,36 @@
+# [GetAddr](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-memblock-getaddr)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119176353_section98113mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119176353_section98118mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119176353_section98127mcpsimp)
+- [返回值](#zh-cn_topic_0000002119176353_section98130mcpsimp)
+- [异常处理](#zh-cn_topic_0000002119176353_section98178mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119176353_section98181mcpsimp)
+
+## 函数功能
+- 获取只读的device内存地址。
+- 获取可读写的device内存地址。
+
+ 
+## 函数原型
+- 获取只读的device内存地址场景：收起自动换行深色代码主题复制 ``` const void *GetAddr() const ```
+- 获取可读写的device内存地址场景：收起自动换行深色代码主题复制 ``` void *GetAddr() ```
+
+ 
+## 参数说明
+无
+
+ 
+## 返回值
+- 获取只读的device内存地址场景： 展开 | 类型 | 描述 | | --- | --- | | void* | 只读的device内存地址。 |
+
+ - 获取可读写的device内存地址场景： 展开 | 类型 | 描述 | | --- | --- | | void* | 可读写的device内存地址。 |
+
+ 
+## 异常处理
+无
+
+ 
+## 约束说明
+无

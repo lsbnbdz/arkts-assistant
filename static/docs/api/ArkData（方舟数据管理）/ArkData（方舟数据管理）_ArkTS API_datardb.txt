@@ -1,0 +1,1 @@
+[resultSet (结果集)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-data-resultset)

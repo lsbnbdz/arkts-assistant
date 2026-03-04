@@ -1,0 +1,41 @@
+# [构造函数](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/cannkit-storageshape-constructor)
+
+## 目录
+- [函数功能](#zh-cn_topic_0000002119257105_section92966mcpsimp)
+- [函数原型](#zh-cn_topic_0000002119257105_section92969mcpsimp)
+- [参数说明](#zh-cn_topic_0000002119257105_section92975mcpsimp)
+- [返回值](#zh-cn_topic_0000002119257105_section93005mcpsimp)
+- [约束说明](#zh-cn_topic_0000002119257105_section93008mcpsimp)
+- [调用示例](#zh-cn_topic_0000002119257105_section93011mcpsimp)
+
+## 函数功能
+构造一个运行时shape实例。
+
+ 
+## 函数原型
+收起自动换行深色代码主题复制
+```
+StorageShape()StorageShape(const std::initializer_list &origin_shape, const std::initializer_list &storage_shape)
+```
+ 
+## 参数说明
+ 展开
+| 参数 | 输入/输出 | 说明 |
+| --- | --- | --- |
+| origin_shape | 输入 | 原始shape。 |
+| storage_shape | 输入 | 运行时shape。 |
+
+ 
+## 返回值
+返回一个初始化后StorageShape对象。
+
+ 
+## 约束说明
+无
+
+ 
+## 调用示例
+收起自动换行深色代码主题复制
+```
+StorageShape shape({3, 256, 256}, {3, 256, 256});
+```

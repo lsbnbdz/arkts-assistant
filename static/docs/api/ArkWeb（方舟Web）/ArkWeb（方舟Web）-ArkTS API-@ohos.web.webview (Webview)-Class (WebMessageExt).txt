@@ -1,0 +1,377 @@
+# [Class (WebMessageExt)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webmessageext)
+
+## 目录
+- [getType10+](#gettype10)
+- [getString10+](#getstring10)
+- [getNumber10+](#getnumber10)
+- [getBoolean10+](#getboolean10)
+- [getArrayBuffer10+](#getarraybuffer10)
+- [getArray10+](#getarray10)
+- [getError10+](#geterror10)
+- [setType10+](#settype10)
+- [setString10+](#setstring10)
+- [setNumber10+](#setnumber10)
+- [setBoolean10+](#setboolean10)
+- [setArrayBuffer10+](#setarraybuffer10)
+- [setArray10+](#setarray10)
+- [setError10+](#seterror10)
+
+[WebMessagePort](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webmessageport)接口接收、发送的数据对象。
+
+ 说明 - 本模块首批接口从API version 9开始支持。后续版本如有新增内容，则采用上角标单独标记该内容的起始版本。
+ - 本Class首批接口从API version 10开始支持。
+ - 示例效果请以真机运行为准。
+ 
+ 
+## getType10+
+ PhonePC/2in1TabletTVWearablegetType(): WebMessageType
+
+ 获取数据对象的类型。完整示例代码参考[onMessageEventExt](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webmessageport#onmessageeventext10)。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| WebMessageType | webMessagePort 接口所支持的数据类型。 |
+
+ 
+## getString10+
+ PhonePC/2in1TabletTVWearablegetString(): string
+
+ 获取数据对象的字符串类型数据。完整示例代码参考[onMessageEventExt](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webmessageport#onmessageeventext10)。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| string | 返回字符串类型的数据。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[Webview错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-webview)。
+
+ 展开
+| |
+| |
+| |
+| 17100014 | The type and value of the message do not match. |
+
+ 
+## getNumber10+
+ PhonePC/2in1TabletTVWearablegetNumber(): number
+
+ 获取数据对象的数值类型数据。完整示例代码参考[onMessageEventExt](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webmessageport#onmessageeventext10)。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| number | 返回数值类型的数据。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[Webview错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-webview)。
+
+ 展开
+| |
+| |
+| |
+| 17100014 | The type and value of the message do not match. |
+
+ 
+## getBoolean10+
+ PhonePC/2in1TabletTVWearablegetBoolean(): boolean
+
+ 获取数据对象的布尔类型数据。完整示例代码参考[onMessageEventExt](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webmessageport#onmessageeventext10)。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| boolean | 返回布尔类型的数据。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[Webview错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-webview)。
+
+ 展开
+| |
+| |
+| |
+| 17100014 | The type and value of the message do not match. |
+
+ 
+## getArrayBuffer10+
+ PhonePC/2in1TabletTVWearablegetArrayBuffer(): ArrayBuffer
+
+ 获取数据对象的原始二进制数据。完整示例代码参考[onMessageEventExt](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webmessageport#onmessageeventext10)。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| ArrayBuffer | 返回原始二进制数据。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[Webview错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-webview)。
+
+ 展开
+| |
+| |
+| |
+| 17100014 | The type and value of the message do not match. |
+
+ 
+## getArray10+
+ PhonePC/2in1TabletTVWearablegetArray(): Array<string | number | boolean>
+
+ 获取数据对象的数组类型数据。完整示例代码参考[onMessageEventExt](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webmessageport#onmessageeventext10)。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| Array | 返回数组类型的数据。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[Webview错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-webview)。
+
+ 展开
+| |
+| |
+| |
+| 17100014 | The type and value of the message do not match. |
+
+ 
+## getError10+
+ PhonePC/2in1TabletTVWearablegetError(): Error
+
+ 获取数据对象的错误类型数据。完整示例代码参考[onMessageEventExt](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webmessageport#onmessageeventext10)。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| Error | 返回错误对象类型的数据。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[Webview错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-webview)。
+
+ 展开
+| |
+| |
+| |
+| 17100014 | The type and value of the message do not match. |
+
+ 
+## setType10+
+ PhonePC/2in1TabletTVWearablesetType(type: WebMessageType): void
+
+ 设置数据对象的类型。完整示例代码参考[onMessageEventExt](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webmessageport#onmessageeventext10)。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | WebMessageType | 是 | webMessagePort 接口所支持的数据类型。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[Webview错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-webview)、[通用错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)。
+
+ 展开
+| |
+| |
+| |
+| 17100014 | The type and value of the message do not match. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+
+ 
+## setString10+
+ PhonePC/2in1TabletTVWearablesetString(message: string): void
+
+ 设置数据对象的字符串类型数据。完整示例代码参考[onMessageEventExt](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webmessageport#onmessageeventext10)。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| message | string | 是 | 字符串类型数据。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[Webview错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-webview)、[通用错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)。
+
+ 展开
+| |
+| |
+| |
+| 17100014 | The type and value of the message do not match. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+
+ 
+## setNumber10+
+ PhonePC/2in1TabletTVWearablesetNumber(message: number): void
+
+ 设置数据对象的数值类型数据。完整示例代码参考[onMessageEventExt](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webmessageport#onmessageeventext10)。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| message | number | 是 | 数值类型数据。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[Webview错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-webview)、[通用错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)。
+
+ 展开
+| |
+| |
+| |
+| 17100014 | The type and value of the message do not match. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+
+ 
+## setBoolean10+
+ PhonePC/2in1TabletTVWearablesetBoolean(message: boolean): void
+
+ 设置数据对象的布尔类型数据。完整示例代码参考[onMessageEventExt](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webmessageport#onmessageeventext10)。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| message | boolean | 是 | 布尔类型数据。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[Webview错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-webview)、[通用错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)。
+
+ 展开
+| |
+| |
+| |
+| 17100014 | The type and value of the message do not match. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+
+ 
+## setArrayBuffer10+
+ PhonePC/2in1TabletTVWearablesetArrayBuffer(message: ArrayBuffer): void
+
+ 设置数据对象的原始二进制数据。完整示例代码参考[onMessageEventExt](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webmessageport#onmessageeventext10)。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| message | ArrayBuffer | 是 | 原始二进制类型数据。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[Webview错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-webview)、[通用错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)。
+
+ 展开
+| |
+| |
+| |
+| 17100014 | The type and value of the message do not match. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+
+ 
+## setArray10+
+ PhonePC/2in1TabletTVWearablesetArray(message: Array<string | number | boolean>): void
+
+ 设置数据对象的数组类型数据。完整示例代码参考[onMessageEventExt](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webmessageport#onmessageeventext10)。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| message | Array | 是 | 数组类型数据。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[Webview错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-webview)、[通用错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)。
+
+ 展开
+| |
+| |
+| |
+| 17100014 | The type and value of the message do not match. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+
+ 
+## setError10+
+ PhonePC/2in1TabletTVWearablesetError(message: Error): void
+
+ 设置数据对象的错误对象类型数据。完整示例代码参考[onMessageEventExt](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webmessageport#onmessageeventext10)。
+
+ **系统能力：** SystemCapability.Web.Webview.Core
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| message | Error | 是 | 错误对象类型数据。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[Webview错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-webview)、[通用错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)。
+
+ 展开
+| |
+| |
+| |
+| 17100014 | The type and value of the message do not match. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |

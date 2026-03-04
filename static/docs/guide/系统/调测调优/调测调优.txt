@@ -1,0 +1,5 @@
+# [调测调优](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/system-debug-optimize)
+
+- **[Performance Analysis Kit（性能分析服务）](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/performance-analysis-kit)**
+ - **[Test Kit（应用测试服务）](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/test-kit)**
+ - **[调试命令](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/debugging-commands)**
