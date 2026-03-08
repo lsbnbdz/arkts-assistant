@@ -141,6 +141,8 @@ npm run dev:http
 |--------|------|--------|
 | `ARKTS_DOCS_DIR` | 文档目录路径 | 项目 `static/docs` 目录 |
 | `ARKTS_MCP_PORT` | HTTP 服务端口 | 9527 |
+| `ARKTS_QA_TIMEOUT_MS` | 华为智能问答请求超时（毫秒） | 120000 |
+| `ARKTS_MCP_CONFIG_DIR` | Cookie 配置目录（用于 set_ai_auth / ask_ai 登录态） | Windows: `%APPDATA%/arkts-mcp`；Linux/WSL: `~/.config/arkts-mcp` |
 
 ## 工具详解
 
@@ -197,12 +199,12 @@ ask_ai({ query: "Navigation怎么实现页面跳转并传参" })
 
 ### set_ai_auth
 
-设置 AI 问答的登录凭证。
+设置 AI 问答的登录凭证，用于突破匿名态的次数限制。
 
 **参数：**
 - `cookie` (必填): 完整的 Cookie 字符串
 
-**获取 Cookie 方法：**
+**如何获取 Cookie：**
 1. 打开浏览器，登录 developer.huawei.com
 2. 打开开发者工具 (F12) → Network 标签
 3. 在页面上使用智能问答功能提问
@@ -213,6 +215,9 @@ ask_ai({ query: "Navigation怎么实现页面跳转并传参" })
 ```
 set_ai_auth({ cookie: "your_full_cookie_value_here" })
 ```
+
+**配置存储位置：**
+Cookie 会保存到 `ARKTS_MCP_CONFIG_DIR` 目录下的配置文件中。
 
 ### ask_ai_batch
 
