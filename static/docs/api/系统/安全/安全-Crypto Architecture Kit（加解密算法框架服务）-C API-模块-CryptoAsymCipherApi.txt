@@ -1,0 +1,14 @@
+# [CryptoAsymCipherApi](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-cryptoasymcipherapi)
+
+## 概述
+PhonePC/2in1TabletTVWearable为应用提供非对称加密和解密算法接口。
+
+ **起始版本：** 20
+
+ 
+## 文件汇总
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| crypto_asym_cipher.h | 定义非对称密钥加密API。 |

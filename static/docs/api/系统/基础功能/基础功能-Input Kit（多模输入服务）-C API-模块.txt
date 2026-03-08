@@ -1,0 +1,3 @@
+# [模块](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/input-module)
+
+- **[input](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-input)**

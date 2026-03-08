@@ -1,0 +1,180 @@
+# [@ohos.wifiext (WLAN扩展接口)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-wifiext)
+
+## 目录
+- [导入模块](#导入模块)
+- [wifiext.enableHotspot(deprecated)](#wifiextenablehotspotdeprecated)
+- [wifiext.disableHotspot(deprecated)](#wifiextdisablehotspotdeprecated)
+- [wifiext.getSupportedPowerModel(deprecated)](#wifiextgetsupportedpowermodeldeprecated)
+- [PowerModel](#powermodel)
+- [wifiext.getSupportedPowerModel](#wifiextgetsupportedpowermodel)
+- [wifiext.getPowerModel(deprecated)](#wifiextgetpowermodeldeprecated)
+- [wifiext.getPowerModel(deprecated)](#wifiextgetpowermodeldeprecated-1)
+- [wifiext.setPowerModel](#wifiextsetpowermodel)
+
+该模块主要提供WLAN扩展接口，供非通用类型产品使用。
+
+ 说明 本模块首批接口从API version 8开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+
+ 该文档中的接口只供非通用类型产品使用，如路由器等，对于常规类型产品，不应该使用这些接口。
+
+ 从API Version 9开始，该接口不再维护，推荐使用[@ohos.wifiManagerExt（WLAN扩展接口）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-wifimanagerext)等相关接口。
+
+ 
+## 导入模块
+TV收起自动换行深色代码主题复制
+```
+import wifiext from '@ohos.wifiext';
+```
+ 
+## wifiext.enableHotspot(deprecated)
+TVenableHotspot(): boolean;
+
+ 使能WLAN热点。
+
+ 说明 从API version 8开始支持，从API version 9开始废弃。建议使用[wifiManagerExt.enableHotspot](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-wifimanagerext#wifimanagerextenablehotspotdeprecated)替代。
+
+ **需要权限：** ohos.permission.MANAGE_WIFI_HOTSPOT_EXT
+
+ **系统能力：** SystemCapability.Communication.WiFi.AP.Extension
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| boolean | 操作结果， true: 成功， false: 失败。 |
+
+ 
+## wifiext.disableHotspot(deprecated)
+TVdisableHotspot(): boolean;
+
+ 去使能WLAN热点。
+
+ 说明 从API version 8开始支持，从API version 9开始废弃。建议使用[wifiManagerExt.disableHotspot](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-wifimanagerext#wifimanagerextdisablehotspotdeprecated)替代。
+
+ **需要权限：** ohos.permission.MANAGE_WIFI_HOTSPOT_EXT
+
+ **系统能力：** SystemCapability.Communication.WiFi.AP.Extension
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| boolean | 操作结果， true: 成功， false: 失败。 |
+
+ 
+## wifiext.getSupportedPowerModel(deprecated)
+TVgetSupportedPowerModel(): Promise<Array<PowerModel>>
+
+ 获取支持的功率模式。使用Promise异步回调。
+
+ 说明 从API version 8开始支持，从API version 9开始废弃。建议使用[wifiManagerExt.getSupportedPowerModel](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-wifimanagerext#wifimanagerextgetsupportedpowermode)替代。
+
+ **需要权限：** ohos.permission.GET_WIFI_INFO
+
+ **系统能力：** SystemCapability.Communication.WiFi.AP.Extension
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| Promise> | Promise对象。表示功率模式。 |
+
+ 
+## PowerModel
+TV表示功率模式的枚举。
+
+ **系统能力：** SystemCapability.Communication.WiFi.AP.Extension
+
+ 展开
+| 名称 | 值 | 说明 |
+| --- | --- | --- |
+| SLEEPING | 0 | 睡眠模式。 |
+| GENERAL | 1 | 常规模式。 |
+| THROUGH_WALL | 2 | 穿墙模式。 |
+
+ 
+## wifiext.getSupportedPowerModel
+TVgetSupportedPowerModel(callback: AsyncCallback<Array<PowerModel>>): void
+
+ 获取支持的功率模式。使用callback异步回调。
+
+ **需要权限：** ohos.permission.GET_WIFI_INFO
+
+ **系统能力：** SystemCapability.Communication.WiFi.AP.Extension
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | AsyncCallback> | 是 | 回调函数。当操作成功时，err为0，data表示支持的功率模式。如果err为非0，表示处理出现错误。 |
+
+ 
+## wifiext.getPowerModel(deprecated)
+TVgetPowerModel(): Promise<PowerModel>
+
+ 获取功率模式，使用Promise异步回调。
+
+ 说明 从API version 8开始支持，从API version 9开始废弃。建议使用[wifiManagerExt.getSupportedPowerModel](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-wifimanagerext#wifimanagerextgetpowermode)替代。
+
+ **需要权限：** ohos.permission.GET_WIFI_INFO
+
+ **系统能力：** SystemCapability.Communication.WiFi.AP.Extension
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| Promise< PowerModel > | Promise对象。表示功率模式。 |
+
+ 
+## wifiext.getPowerModel(deprecated)
+TVgetPowerModel(callback: AsyncCallback<PowerModel>): void
+
+ 获取功率模式。使用callback异步回调。
+
+ 说明 从API version 8开始支持，从API version 9开始废弃。建议使用[wifiManagerExt.getSupportedPowerModel](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-wifimanagerext#wifimanagerextgetpowermode-1)替代。
+
+ **需要权限：** ohos.permission.GET_WIFI_INFO
+
+ **系统能力：** SystemCapability.Communication.WiFi.AP.Extension
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | AsyncCallback< PowerModel > | 是 | 回调函数。当操作成功时，err为0，data表示功率模式。如果err为非0，表示处理出现错误。 |
+
+ 
+## wifiext.setPowerModel
+TVsetPowerModel(model: PowerModel) : boolean;
+
+ 设置功率模式。
+
+ **需要权限：** ohos.permission.MANAGE_WIFI_HOTSPOT_EXT
+
+ **系统能力：** SystemCapability.Communication.WiFi.AP.Extension
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| model | PowerModel | 是 | 功率模式。 |
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| boolean | 操作结果， true: 成功， false: 失败。 |

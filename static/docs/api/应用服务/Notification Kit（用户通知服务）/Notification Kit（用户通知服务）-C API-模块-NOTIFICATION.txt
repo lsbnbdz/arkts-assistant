@@ -1,0 +1,20 @@
+# [NOTIFICATION](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-notification)
+
+## 目录
+- [概述](#概述)
+- [文件汇总](#文件汇总)
+
+## 概述
+PhonePC/2in1TabletTVWearableNotification向应用提供通知服务的能力，包括查询当前应用通知的使能状态等。
+
+ **系统能力：** SystemCapability.Notification.Notification
+
+ **起始版本：** 13
+
+ 
+## 文件汇总
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| notification.h | 定义通知服务API接口。 |

@@ -1,0 +1,6 @@
+# [ArkTS API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/location-arkts)
+
+- **[@ohos.geoLocationManager (位置服务)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-geolocationmanager)**
+ - **[@ohos.app.ability.FenceExtensionAbility (FenceExtensionAbility)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-app-ability-fenceextensionability)**
+ - **[@ohos.app.ability.FenceExtensionContext (FenceExtensionContext)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-app-ability-fenceextensioncontext)**
+ - **[已停止维护的接口](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/location-arkts-dep)**

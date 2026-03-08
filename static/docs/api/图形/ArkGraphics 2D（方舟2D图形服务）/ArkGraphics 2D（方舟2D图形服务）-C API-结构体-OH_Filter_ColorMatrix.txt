@@ -1,0 +1,30 @@
+# [OH_Filter_ColorMatrix](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-effectkit-oh-filter-colormatrix)
+
+## 目录
+- [概述](#概述)
+- [汇总](#汇总)
+  - [成员变量](#成员变量)
+
+收起自动换行深色代码主题复制
+```
+struct OH_Filter_ColorMatrix {...}
+```
+ 
+## 概述
+PhonePC/2in1TabletTVWearable定义一个用来创建滤镜效果的矩阵。
+
+ **起始版本：** 12
+
+ **相关模块：** [effectKit](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-effectkit)
+
+ **所在头文件：** [effect_types.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-effect-types-h)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| float val[20] | 自定义颜色矩阵，值是一个5*4的数组。 |

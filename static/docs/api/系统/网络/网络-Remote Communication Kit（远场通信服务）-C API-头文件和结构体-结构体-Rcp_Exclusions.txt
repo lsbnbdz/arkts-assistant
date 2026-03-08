@@ -1,0 +1,65 @@
+# [Rcp_Exclusions](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___exclusions)
+
+## 目录
+- [概述](#section191798710094052)
+- [汇总](#section737094467094052)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section2032242132094052)
+  - [exclusionFunction](#ad99a237a7685adc45de3d3a728112922)
+  - [type](#adea8e4bddc87a6c451c94abbec909fbe)
+  - [urls](#abd535558039767647290d03621389486)
+
+## 概述
+PhonePC/2in1TabletTVWearable代理配置中用于过滤不使用代理的urls。
+
+ 如果[Rcp_Request.url](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___request#a39a1cc0a1ad666d8d9ad40eec4b52de7)匹配[Rcp_Exclusions](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___exclusions)规则，则[Rcp_Request](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___request)不会使用代理。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [RemoteCommunication](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| Rcp_ExclusionsValueType type | 表示union中使用的数据类型。 |
+| union { | union结构。 |
+| Rcp_Urls * urls | Urls。链式存储url。 |
+| Rcp_ExclusionFunction exclusionFunction | 回调函数。通过回调函数过滤url。 |
+| } data | data中使用的数据由type进行区分。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTVWearable 
+### exclusionFunction
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_ExclusionFunction Rcp_Exclusions::exclusionFunction
+```
+ **描述**
+
+ 通过回调过滤。
+
+ 
+### type
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_ExclusionsValueType Rcp_Exclusions::type
+```
+ **描述**
+
+ 表示union中使用的数据类型。
+
+ 
+### urls
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_Urls* Rcp_Exclusions::urls
+```
+ **描述**
+
+ Urls。

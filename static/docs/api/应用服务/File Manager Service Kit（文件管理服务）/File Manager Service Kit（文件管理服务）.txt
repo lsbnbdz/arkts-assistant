@@ -1,0 +1,4 @@
+# [File Manager Service Kit（文件管理服务）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/file-manager-service-api)
+
+- **[ArkTS API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/filemanagerservice-arkts)**
+ - **[图标格式说明](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/filemanagerservice-iconformat)**

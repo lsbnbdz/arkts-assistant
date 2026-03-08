@@ -1,0 +1,22 @@
+# [结构体](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/performance-analysis-struct)
+
+- **[HiAppEvent_AppEventInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hiappevent-hiappevent-appeventinfo)**
+ - **[HiAppEvent_AppEventGroup](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hiappevent-hiappevent-appeventgroup)**
+ - **[ParamListNode*](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hiappevent-paramlistnode8h)**
+ - **[HiAppEvent_Watcher](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hiappevent-hiappevent-watcher)**
+ - **[HiAppEvent_Processor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hiappevent-hiappevent-processor)**
+ - **[HiAppEvent_Config](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hiappevent-hiappevent-config)**
+ - **[HiCollie_DetectionParam](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hicollie-hicollie-detectionparam)**
+ - **[HiCollie_SetTimerParam](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hicollie-hicollie-settimerparam)**
+ - **[HiDebug_ThreadCpuUsage](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hidebug-hidebug-threadcpuusage)**
+ - **[HiDebug_SystemMemInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hidebug-hidebug-systemmeminfo)**
+ - **[HiDebug_NativeMemInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hidebug-hidebug-nativememinfo)**
+ - **[HiDebug_MemoryLimit](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hidebug-hidebug-memorylimit)**
+ - **[HiDebug_JsStackFrame](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hidebug-hidebug-jsstackframe)**
+ - **[HiDebug_NativeStackFrame](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hidebug-hidebug-nativestackframe)**
+ - **[HiDebug_StackFrame](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hidebug-hidebug-stackframe)**
+ - **[HiDebug_MallocDispatch](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hidebug-hidebug-mallocdispatch)**
+ - **[HiDebug_Backtrace_Object__*](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hidebug-hidebug-backtrace-object--8h)**
+ - **[HiDebug_GraphicsMemorySummary](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hidebug-hidebug-graphicsmemorysummary)**
+ - **[HiDebug_ProcessSamplerConfig](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hidebug-hidebug-processsamplerconfig)**
+ - **[HiTraceId](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hitrace-hitraceid)**

@@ -1,0 +1,3 @@
+# [FAST Kit（算法加速服务）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/fast-api)
+
+- **[C API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/fast-c)**

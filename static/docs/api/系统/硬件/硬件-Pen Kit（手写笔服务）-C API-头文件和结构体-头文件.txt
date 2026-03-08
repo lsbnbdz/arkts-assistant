@@ -1,0 +1,4 @@
+# [头文件](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/pen-headerfile)
+
+- **[native_gcp_api.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/pen-headerfile-declare)**
+ - **[native_handwrite_api.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/pen-handwrite-headerfile-declare)**

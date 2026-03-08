@@ -1,0 +1,49 @@
+# [Rcp_OnVoidCallback](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___on_void_callback)
+
+## 目录
+- [概述](#section996738269094053)
+- [汇总](#section382257983094053)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section2093440542094053)
+  - [callback](#a64fba630d3ca20f3baa3f2184cd4fd99)
+  - [usrObject](#ab1d887e227a21e05fb80c407396c3147)
+
+## 概述
+PhonePC/2in1TabletTVWearable在[Rcp_EventsHandler](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___events_handler)中配置的数据结束或已取消事件的回调配置。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [RemoteCommunication](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| Rcp_OnVoidCallbackFunc callback | DataEnd或Canceled事件回调函数。 |
+| void * usrObject | 用户定义的对象，在回调函数中使用。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTVWearable 
+### callback
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_OnVoidCallbackFunc Rcp_OnVoidCallback::callback
+```
+ **描述**
+
+ DataEnd或Canceled事件回调函数。
+
+ 
+### usrObject
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+void* Rcp_OnVoidCallback::usrObject
+```
+ **描述**
+
+ 用户定义的对象，在回调函数中使用。

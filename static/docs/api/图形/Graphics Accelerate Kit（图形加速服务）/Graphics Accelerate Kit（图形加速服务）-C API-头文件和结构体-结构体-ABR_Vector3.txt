@@ -1,0 +1,61 @@
+# [ABR_Vector3](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_a_b_r___vector3)
+
+## 目录
+- [概述](#section529959647093807)
+- [汇总](#section1137422531093807)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section1167884247093807)
+  - [x](#a443e2781503dbcf9a18f19dc0750f075)
+  - [y](#a302927a49606c5fd9626d1e62eb7d518)
+  - [z](#a8ca830d88d6fa916980aa6702ef41c16)
+
+## 概述
+PhoneTablet此结构体描述ABR三维向量。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [GraphicsAccelerate](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_graphics_accelerate)
+
+ 
+## 汇总
+PhoneTablet 
+### 成员变量
+ PhoneTablet展开
+| |
+| |
+| |
+| float x | 三维向量的X轴数据。 取值范围：[0, 360]。 |
+| float y | 三维向量的Y轴数据。 取值范围：[0, 360]。 |
+| float z | 三维向量的Z轴数据。 取值范围：[0, 360]。 |
+
+ 
+## 结构体成员变量说明
+PhoneTablet 
+### x
+PhoneTablet收起自动换行深色代码主题复制
+```
+float ABR_Vector3::x
+```
+ **描述**
+
+ 三维向量的X轴数据。
+
+ 
+### y
+PhoneTablet收起自动换行深色代码主题复制
+```
+float ABR_Vector3::y
+```
+ **描述**
+
+ 三维向量的Y轴数据。
+
+ 
+### z
+PhoneTablet收起自动换行深色代码主题复制
+```
+float ABR_Vector3::z
+```
+ **描述**
+
+ 三维向量的Z轴数据。

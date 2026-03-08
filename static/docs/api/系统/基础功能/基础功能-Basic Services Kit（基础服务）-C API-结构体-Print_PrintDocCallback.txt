@@ -1,0 +1,31 @@
+# [Print_PrintDocCallback](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-print-print-printdoccallback)
+
+## 目录
+- [概述](#概述)
+- [汇总](#汇总)
+  - [成员变量](#成员变量)
+
+收起自动换行深色代码主题复制
+```
+typedef struct {...} Print_PrintDocCallback
+```
+ 
+## 概述
+PhonePC/2in1Tablet表示打印文档状态回调结构体。
+
+ **起始版本：** 13
+
+ **相关模块：** [OH_Print](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-print)
+
+ **所在头文件：** [ohprint.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-ohprint-h)
+
+ 
+## 汇总
+PhonePC/2in1Tablet 
+### 成员变量
+ PhonePC/2in1Tablet展开
+| |
+| |
+| |
+| Print_OnStartLayoutWrite startLayoutWriteCb | 打印开始布局回调。 |
+| Print_OnJobStateChanged jobStateChangedCb | 打印任务状态回调。 |

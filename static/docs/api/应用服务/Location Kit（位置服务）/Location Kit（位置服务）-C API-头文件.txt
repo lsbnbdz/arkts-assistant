@@ -1,0 +1,4 @@
+# [头文件](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/location-headerfile)
+
+- **[oh_location.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-location-h)**
+ - **[oh_location_type.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-location-type-h)**

@@ -1,0 +1,5 @@
+# [ArkTS API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/driver-development-arkts)
+
+- **[@ohos.app.ability.DriverExtensionAbility (驱动程序扩展能力)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-app-ability-driverextensionability)**
+ - **[@ohos.driver.deviceManager (外设管理)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-driver-devicemanager)**
+ - **[application](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/driver-development-arkts-application)**

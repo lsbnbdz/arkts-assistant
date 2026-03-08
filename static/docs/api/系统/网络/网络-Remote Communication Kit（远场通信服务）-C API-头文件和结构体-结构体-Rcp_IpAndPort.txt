@@ -1,0 +1,49 @@
+# [Rcp_IpAndPort](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___ip_and_port)
+
+## 目录
+- [概述](#section983812990094052)
+- [汇总](#section1295588682094052)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section577932772094052)
+  - [ip](#ab94eb927a982d2e062cbb4266d1f5425)
+  - [port](#acde1a98de31e0b6bcc636efd60bda511)
+
+## 概述
+PhonePC/2in1TabletTVWearable该接口用在[Rcp_DnsServers](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___dns_servers)中，表示一个DNS服务器的地址和端口。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：**[RemoteCommunication](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| char ip [RCP_IP_MAX_LEN] | IPv4或IPv6地址。 |
+| uint16_t port | 表示端口。取值范围：[0, 65535]。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTVWearable 
+### ip
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+char Rcp_IpAndPort::ip[RCP_IP_MAX_LEN]
+```
+ **描述**
+
+ IPv4或IPv6地址。
+
+ 
+### port
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+uint16_t Rcp_IpAndPort::port
+```
+ **描述**
+
+ 表示端口。取值范围：[0, 65535]。

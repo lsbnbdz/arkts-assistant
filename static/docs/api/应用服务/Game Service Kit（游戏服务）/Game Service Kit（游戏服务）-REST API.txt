@@ -1,0 +1,7 @@
+# [REST API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-rest)
+
+- **[获取玩家标识](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-getplayerinfo)**
+ - **[转换ID](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-convertid)**
+ - **[批量转换teamPlayerId](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-teamplayerid)**
+ - **[解绑账号](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-unbindplayer)**
+ - **[解绑账号通知](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/gameservice-unbindplayer-notification)**

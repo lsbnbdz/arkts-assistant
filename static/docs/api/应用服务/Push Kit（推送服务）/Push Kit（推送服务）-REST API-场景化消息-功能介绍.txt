@@ -1,0 +1,24 @@
+# [功能介绍](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/push-scenariozed-api-intro)
+
+## 目录
+- [场景介绍](#section201311114111413)
+- [使用约束](#section114731924131418)
+
+V3场景化接口将典型的推送场景按照类型拆分为多种场景，不同场景定义为不同**push-type**，提供基于场景的消息发送，治理和差异化能力，实现更好的消息触达和用户使用体验。
+
+ 
+## 场景介绍
+ 展开
+| push-type | 名称 | 场景介绍 | 备注 |
+| --- | --- | --- | --- |
+| 0 | Alert消息 | 通知消息。 | 需申请通知消息自分类权益 |
+| 1 | 卡片刷新 | 卡片刷新。 | - |
+| 2 | 语音播报消息 | Push Kit拉起通知扩展子进程，您可以在通知扩展子进程中处理语音播报业务。 | 需申请推送语音播报消息权益 |
+| 6 | 后台消息 | Push Kit检测应用是否启动，应用如果启动消息传递到目标应用。应用如果未启动，则缓存。 | - |
+| 7 | 实况窗消息 | 实况窗创建、更新或结束。 | 需申请实况窗权益 |
+| 10 | 应用内通话消息 | 应用内通话消息。 | 需申请推送应用内通话消息权益 |
+
+ 
+## 使用约束
+ - 消息体最大不能超过4096Bytes（不包括Push Token）。
+ - 消息发送量，测试消息（参考消息体pushOptions.[testMessage](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/push-scenariozed-api-request-param#section418321011212)）每个项目限制所有应用共享1000条/天，正式消息区分场景有不同的配额，参考[消息频控](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/push-msg-freq-control)说明。

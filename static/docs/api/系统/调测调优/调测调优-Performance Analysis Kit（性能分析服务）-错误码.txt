@@ -1,0 +1,9 @@
+# [错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/performance-analysis-errcode)
+
+- **[Faultlogger 错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-faultlogger)**
+ - **[应用事件打点错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-hiappevent)**
+ - **[HiDebug错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-hiviewdfx-hidebug)**
+ - **[HiDebug CpuUsage错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-hiviewdfx-hidebug-cpuusage)**
+ - **[HiDebug Trace错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-hiviewdfx-hidebug-trace)**
+ - **[HiCollie错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-hiviewdfx-hicollie)**
+ - **[JsLeakWatcher错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-jsleakwatcher)**

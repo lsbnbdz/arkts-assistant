@@ -1,0 +1,1043 @@
+# [samplePointHelper(采样数据类型常量)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-samplepointhelper)
+
+## 目录
+- [导入模块](#zh-cn_topic_0000001768344397_section4539115425616)
+- [bloodOxygenSaturation](#section1928612741419)
+  - [常量](#section1518925691412)
+  - [Model](#section9611341191616)
+  - [Fields](#section175921611817)
+  - [AggregateResult](#section671913511291)
+  - [AggregateRequest](#section16584937374)
+  - [AggregateFields](#section1972045182915)
+- [bloodPressure](#section13445105943610)
+  - [常量](#section1144555923610)
+  - [Model](#section544645943613)
+  - [Fields](#section1044675919367)
+- [bodyTemperature](#section449916298194)
+  - [常量](#section8499929111914)
+  - [Model](#section3499929131917)
+  - [Fields](#section125001429171917)
+  - [AggregateResult](#section9703181952917)
+  - [AggregateRequest](#section111853420103)
+  - [AggregateFields](#section170613199291)
+- [dailyActivities](#section1425509112411)
+  - [常量](#section122559932419)
+  - [Model](#section2256189172410)
+  - [Fields](#section0256129142411)
+  - [AggregateResult](#section105802352612)
+  - [AggregateRequest](#section36661234123)
+  - [AggregateFields](#section201911482618)
+- [emotion](#section1933314311414)
+  - [常量](#section633320312412)
+  - [Model](#section173344317410)
+  - [Fields](#section733463444)
+- [heartRate](#section692214433279)
+  - [常量](#section8922144319272)
+  - [Model](#section129231243122711)
+  - [Fields](#section69231443182712)
+  - [AggregateResult](#section11912162404619)
+  - [AggregateRequest](#section876210211134)
+  - [AggregateFields](#section1191392414619)
+- [heartRateVariability](#section023114227819)
+  - [常量](#section62317226815)
+  - [Model](#section2023219222084)
+  - [Fields](#section132322221288)
+- [height](#section199107546402)
+  - [常量](#section691019541405)
+  - [Model](#section18911854114011)
+  - [Fields](#section0911165415400)
+- [restingHeartRate](#section182456319439)
+  - [常量](#section142451938435)
+  - [Model](#section32462315438)
+  - [Fields](#section12246532433)
+  - [AggregateResult](#section12800638104314)
+  - [AggregateRequest](#section9225122410141)
+  - [AggregateFields](#section12206132184518)
+- [skinTemperature](#section1888081610483)
+  - [常量](#section88802164482)
+  - [Model](#section17881101684817)
+  - [Fields](#section1188171616489)
+  - [AggregateResult](#section15882161619481)
+  - [AggregateRequest](#section6520418191511)
+  - [AggregateFields](#section088331611483)
+- [stress](#section159931437152911)
+  - [常量](#section299320372296)
+  - [Model](#section1599373716293)
+  - [Fields](#section1599483720293)
+  - [AggregateResult](#section995494611501)
+  - [AggregateRequest](#section13869956201516)
+  - [AggregateFields](#section119551246145013)
+- [weight](#section147051112521)
+  - [常量](#section7705611125214)
+  - [Model](#section18706101155220)
+  - [Fields](#section16706111155215)
+
+本模块提供采样数据类型常量及数据模型。
+
+ **起始版本：**5.0.0(12)
+
+ 
+## 导入模块
+PhoneTabletWearable收起自动换行深色代码主题复制
+```
+import { healthStore } from '@kit.HealthServiceKit';
+```
+ 说明此模块为healthStore子模块，需通过healthStore.samplePointHelper方式使用。
+
+ 
+## bloodOxygenSaturation
+PhoneTabletWearable血氧数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| DATA_TYPE | healthStore.DataType | 血氧数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.BloodOxygenSaturation
+
+ 血氧采样数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.BloodOxygenSaturation | 血氧采样数据模型。 |
+
+ 
+### Fields
+PhoneTabletWearabletype Fields = healthFields.BloodOxygenSaturation
+
+ 血氧采样数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.BloodOxygenSaturation | 血氧采样数据字段列表。 |
+
+ 
+### AggregateResult
+PhoneTabletWearabletype AggregateResult = healthModels.BloodOxygenSaturationAggregateResult
+
+ 血氧采样数据聚合统计结果模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.BloodOxygenSaturationAggregateResult | 血氧采样数据聚合统计结果模型 |
+
+ 
+### AggregateRequest
+PhoneTabletWearabletype AggregateRequest = healthModels.BloodOxygenSaturationAggregateRequest
+
+ 血氧采样数据聚合统计请求模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.BloodOxygenSaturationAggregateRequest | 血氧采样数据聚合统计请求模型 |
+
+ 
+### AggregateFields
+PhoneTabletWearabletype AggregateFields = healthFields.BloodOxygenSaturationAggregation
+
+ 血氧采样数据支持的聚合统计字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.BloodOxygenSaturationAggregation | 血氧采样数据支持的聚合统计字段列表。 |
+
+ 
+## bloodPressure
+PhoneTabletWearable血压数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| DATA_TYPE | healthStore.DataType | 血压数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.BloodPressure
+
+ 血压采样数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.BloodPressure | 血压采样数据模型。 |
+
+ 
+### Fields
+PhoneTabletWearabletype Fields = healthFields.BloodPressure
+
+ 血压采样数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.BloodPressure | 血压采样数据字段列表。 |
+
+ 
+## bodyTemperature
+PhoneTabletWearable体温数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| DATA_TYPE | healthStore.DataType | 体温数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.BodyTemperature
+
+ 体温采样数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.BodyTemperature | 体温采样数据模型。 |
+
+ 
+### Fields
+PhoneTabletWearabletype Fields = healthFields.BodyTemperature
+
+ 体温采样数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.BodyTemperature | 体温采样数据字段列表。 |
+
+ 
+### AggregateResult
+PhoneTabletWearabletype AggregateResult = healthModels.BodyTemperatureAggregateResult
+
+ 体温采样数据聚合统计结果模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.BodyTemperatureAggregateResult | 体温采样数据聚合统计结果模型。 |
+
+ 
+### AggregateRequest
+PhoneTabletWearabletype AggregateRequest = healthModels.BodyTemperatureAggregateRequest
+
+ 体温采样数据聚合统计请求模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.BodyTemperatureAggregateRequest | 体温采样数据聚合统计请求模型。 |
+
+ 
+### AggregateFields
+PhoneTabletWearabletype AggregateFields = healthFields.BodyTemperatureAggregation
+
+ 体温采样数据支持的聚合统计字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.BodyTemperatureAggregation | 体温采样数据支持的聚合统计字段列表。 |
+
+ 
+## dailyActivities
+PhoneTabletWearable日常活动数据类型常量及数据模型。
+
+ **元服务API：**从版本5.0.0(12)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**元服务API：**从版本5.0.0(12)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| DATA_TYPE | healthStore.DataType | 日常活动数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.DailyActivities
+
+ 日常活动采样数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.DailyActivities | 日常活动采样数据模型。 |
+
+ 
+### Fields
+PhoneTabletWearabletype Fields = healthFields.DailyActivities
+
+ 日常活动采样数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.DailyActivities | 日常活动采样数据字段列表。 |
+
+ 
+### AggregateResult
+PhoneTabletWearabletype AggregateResult = healthModels.DailyActivitiesAggregateResult
+
+ 日常活动采样数据聚合统计结果模型。
+
+ **元服务API：**从版本5.0.0(12)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.DailyActivitiesAggregateResult | 日常活动采样数据聚合结果模型。 |
+
+ 
+### AggregateRequest
+PhoneTabletWearabletype AggregateRequest = healthModels.DailyActivitiesAggregateRequest
+
+ 日常活动采样数据聚合统计请求模型。
+
+ **元服务API：**从版本5.0.0(12)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.DailyActivitiesAggregateRequest | 日常活动采样数据聚合请求模型。 |
+
+ 
+### AggregateFields
+PhoneTabletWearabletype AggregateFields = healthFields.DailyActivitiesAggregation
+
+ 日常活动采样数据支持的聚合统计字段列表。
+
+ **元服务API：**从版本5.0.0(12)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.DailyActivitiesAggregation | 日常活动采样数据支持的聚合统计字段列表。 |
+
+ 
+## emotion
+PhoneTabletWearable情绪数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.1.0(18)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.1.0(18)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| DATA_TYPE | healthStore.DataType | 情绪数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.Emotion
+
+ 情绪采样数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.1.0(18)
+
+ 展开
+| |
+| |
+| |
+| healthModels.Emotion | 情绪采样数据模型。 |
+
+ 
+### Fields
+PhoneTabletWearabletype Fields = healthFields.Emotion
+
+ 情绪采样数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.1.0(18)
+
+ 展开
+| |
+| |
+| |
+| healthFields.Emotion | 情绪采样数据字段列表。 |
+
+ 
+## heartRate
+PhoneTabletWearable动态心率数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| DATA_TYPE | healthStore.DataType | 动态心率数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.HeartRate
+
+ 动态心率采样数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.HeartRate | 动态心率采样数据模型。 |
+
+ 
+### Fields
+PhoneTabletWearabletype Fields = healthFields.HeartRate
+
+ 动态心率采样数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.HeartRate | 动态心率采样数据字段列表。 |
+
+ 
+### AggregateResult
+PhoneTabletWearabletype AggregateResult = healthModels.HeartRateAggregateResult
+
+ 动态心率采样数据聚合统计结果模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.HeartRateAggregateResult | 动态心率采样数据聚合统计结果模型。 |
+
+ 
+### AggregateRequest
+PhoneTabletWearabletype AggregateRequest = healthModels.HeartRateAggregateRequest
+
+ 动态心率采样数据聚合统计请求模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.HeartRateAggregateRequest | 动态心率采样数据聚合统计请求模型。 |
+
+ 
+### AggregateFields
+PhoneTabletWearabletype AggregateFields = healthFields.HeartRateAggregation
+
+ 动态心率采样数据支持的聚合统计字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.HeartRateAggregation | 动态心率采样数据支持的聚合统计字段列表。 |
+
+ 
+## heartRateVariability
+PhoneTabletWearable心率变异性数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.1.0(18)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.1.0(18)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| DATA_TYPE | healthStore.DataType | 心率变异性数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.HeartRateVariability
+
+ 心率变异性采样数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.1.0(18)
+
+ 展开
+| |
+| |
+| |
+| healthModels.HeartRateVariability | 心率变异性采样数据模型。 |
+
+ 
+### Fields
+PhoneTabletWearabletype Fields = healthFields.HeartRateVariability
+
+ 心率变异性采样数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.1.0(18)
+
+ 展开
+| |
+| |
+| |
+| healthFields.HeartRateVariability | 心率变异性采样数据字段列表。 |
+
+ 
+## height
+PhoneTabletWearable身高数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| DATA_TYPE | healthStore.DataType | 身高数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.Height
+
+ 身高采样数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.Height | 身高采样数据模型。 |
+
+ 
+### Fields
+PhoneTabletWearabletype Fields = healthFields.Height
+
+ 身高采样数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.Height | 身高采样数据字段列表。 |
+
+ 
+## restingHeartRate
+PhoneTabletWearable静息心率数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| DATA_TYPE | healthStore.DataType | 静息心率数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.RestingHeartRate
+
+ 静息心率采样数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.RestingHeartRate | 静息心率采样数据模型。 |
+
+ 
+### Fields
+PhoneTabletWearabletype Fields = healthFields.RestingHeartRate
+
+ 静息心率采样数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.RestingHeartRate | 静息心率采样数据字段列表。 |
+
+ 
+### AggregateResult
+PhoneTabletWearabletype AggregateResult = healthModels.RestingHeartRateAggregateResult
+
+ 静息心率采样数据聚合统计结果模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.RestingHeartRateAggregateResult | 静息心率采样数据聚合统计结果模型。 |
+
+ 
+### AggregateRequest
+PhoneTabletWearabletype AggregateRequest = healthModels.RestingHeartRateAggregateRequest
+
+ 静息心率采样数据聚合统计请求模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.RestingHeartRateAggregateRequest | 静息心率采样数据聚合统计请求模型。 |
+
+ 
+### AggregateFields
+PhoneTabletWearabletype AggregateFields = healthFields.RestingHeartRateAggregation
+
+ 静息心率采样数据支持的聚合统计字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.RestingHeartRateAggregation | 静息心率采样数据支持的聚合统计字段列表。 |
+
+ 
+## skinTemperature
+PhoneTabletWearable皮肤体温数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| DATA_TYPE | healthStore.DataType | 皮肤体温数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.SkinTemperature
+
+ 皮肤体温采样数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.SkinTemperature | 皮肤体温采样数据模型。 |
+
+ 
+### Fields
+PhoneTabletWearabletype Fields = healthFields.SkinTemperature
+
+ 皮肤体温采样数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.SkinTemperature | 皮肤体温采样数据字段列表。 |
+
+ 
+### AggregateResult
+PhoneTabletWearabletype AggregateResult = healthModels.SkinTemperatureAggregateResult
+
+ 皮肤体温采样数据聚合统计结果模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.SkinTemperatureAggregateResult | 皮肤体温采样数据聚合统计结果模型。 |
+
+ 
+### AggregateRequest
+PhoneTabletWearabletype AggregateRequest = healthModels.SkinTemperatureAggregateRequest
+
+ 皮肤体温采样数据聚合统计请求模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.SkinTemperatureAggregateRequest | 皮肤体温采样数据聚合统计请求模型。 |
+
+ 
+### AggregateFields
+PhoneTabletWearabletype AggregateFields = healthFields.SkinTemperatureAggregation
+
+ 皮肤体温采样数据支持的聚合统计字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.SkinTemperatureAggregation | 皮肤体温采样数据支持的聚合统计字段列表。 |
+
+ 
+## stress
+PhoneTabletWearable压力数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| DATA_TYPE | healthStore.DataType | 压力数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.Stress
+
+ 压力采样数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.Stress | 压力采样数据模型。 |
+
+ 
+### Fields
+PhoneTabletWearabletype Fields = healthFields.Stress
+
+ 压力采样数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.Stress | 压力采样数据字段列表。 |
+
+ 
+### AggregateResult
+PhoneTabletWearabletype AggregateResult = healthModels.StressAggregateResult
+
+ 压力采样数据聚合统计结果模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.StressAggregateResult | 压力采样数据聚合统计结果模型。 |
+
+ 
+### AggregateRequest
+PhoneTabletWearabletype AggregateRequest = healthModels.StressAggregateRequest
+
+ 压力采样数据聚合统计请求模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.StressAggregateRequest | 压力采样数据聚合统计请求模型。 |
+
+ 
+### AggregateFields
+PhoneTabletWearabletype AggregateFields = healthFields.StressAggregation
+
+ 压力采样数据支持的聚合统计字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.StressAggregation | 压力采样数据支持的聚合统计字段列表。 |
+
+ 
+## weight
+PhoneTabletWearable体重数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| DATA_TYPE | healthStore.DataType | 体重数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.Weight
+
+ 体重采样数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.Weight | 体重采样数据模型。 |
+
+ 
+### Fields
+PhoneTabletWearabletype Fields = healthFields.Weight
+
+ 体重采样数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.Weight | 体重采样数据字段列表。 |

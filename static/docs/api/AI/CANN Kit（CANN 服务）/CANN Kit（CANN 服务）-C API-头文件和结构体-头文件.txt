@@ -1,0 +1,7 @@
+# [头文件](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/cannkit-files)
+
+- **[hiai_aipp_param.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/cannkit-hiai-aipp-param-8h)**
+ - **[hiai_helper.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/cannkit-hiai-helper-8h)**
+ - **[hiai_options.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/cannkit-hiai-options-8h)**
+ - **[hiai_single_op.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/cannkit-hiai-single-op-8h)**
+ - **[hiai_tensor.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/cannkit-hiai-tensor-8h)**

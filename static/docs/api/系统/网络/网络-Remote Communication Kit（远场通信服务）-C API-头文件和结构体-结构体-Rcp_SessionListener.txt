@@ -1,0 +1,49 @@
+# [Rcp_SessionListener](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___session_listener)
+
+## 目录
+- [概述](#section657052715094053)
+- [汇总](#section1412920260094053)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section766441039094053)
+  - [onCanceled](#a3e9cf1cb6445a5b06c96ffefb547d129)
+  - [onClosed](#a5ca868b964814af3121f2f6fd4b71706)
+
+## 概述
+PhonePC/2in1TabletTVWearable关闭或取消会话事件的回调函数。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [RemoteCommunication](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| void(* onClosed )(void) | 此函数在Rcp_Session关闭时调用此函数。 |
+| void(* onCanceled )(void) | 此函数在Rcp_Session取消时调用此函数。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTVWearable 
+### onCanceled
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+void(* Rcp_SessionListener::onCanceled) (void)
+```
+ **描述**
+
+ 此函数在[Rcp_Session](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview#ga4f3a7d39c18fe6fdf01c52759213ddcd)取消时调用此函数。
+
+ 
+### onClosed
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+void(* Rcp_SessionListener::onClosed) (void)
+```
+ **描述**
+
+ 此函数在[Rcp_Session](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview#ga4f3a7d39c18fe6fdf01c52759213ddcd)关闭时调用此函数。

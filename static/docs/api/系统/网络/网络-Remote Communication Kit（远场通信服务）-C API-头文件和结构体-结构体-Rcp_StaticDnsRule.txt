@@ -1,0 +1,49 @@
+# [Rcp_StaticDnsRule](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___static_dns_rule)
+
+## 目录
+- [概述](#section675699169094053)
+- [汇总](#section475144597094053)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section191850779094053)
+  - [next](#a892fbba45d597be89398929e8936b027)
+  - [staticDnsRule](#a614d54045bd4f35aa4b35206a5d16709)
+
+## 概述
+PhonePC/2in1TabletTVWearable静态DNS规则。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [RemoteCommunication](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| Rcp_StaticDnsRuleItem staticDnsRule | 单个静态DNS规则。 |
+| struct Rcp_StaticDnsRule * next | 链式存储。指向下一个Rcp_StaticDnsRule的指针。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTVWearable 
+### next
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+struct Rcp_StaticDnsRule* Rcp_StaticDnsRule::next
+```
+ **描述**
+
+ 链式存储。指向下一个[Rcp_StaticDnsRule](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___static_dns_rule)的指针。
+
+ 
+### staticDnsRule
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_StaticDnsRuleItem Rcp_StaticDnsRule::staticDnsRule
+```
+ **描述**
+
+ 单个静态DNS规则。

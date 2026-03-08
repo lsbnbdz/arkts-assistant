@@ -50,7 +50,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-capi-module",
     "path": "",
-    "rel_path": "api/Data Augmentation Kit（数据增强服务）/Data Augmentation Kit（数据增强服务）-C API-模块.txt",
+    "rel_path": "api/应用框架/Data Augmentation Kit（数据增强服务）/Data Augmentation Kit（数据增强服务）-C API-模块.txt",
     "catalog": "Data Augmentation Kit（数据增强服务）",
     "objectId": "data-augmentation-kit-c-api-1",
     "nodeName": "document",
@@ -67,7 +67,8 @@
       "Data",
       "Augmentation",
       "Kit",
-      "数据增强服务"
+      "数据增强服务",
+      "应用框架"
     ]
   },
   "data-augmentation-kit-c-api": {
@@ -80,7 +81,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-capi-header-struct",
     "path": "",
-    "rel_path": "api/Data Augmentation Kit（数据增强服务）/Data Augmentation Kit（数据增强服务）-C API-头文件和结构体.txt",
+    "rel_path": "api/应用框架/Data Augmentation Kit（数据增强服务）/Data Augmentation Kit（数据增强服务）-C API-头文件和结构体.txt",
     "catalog": "Data Augmentation Kit（数据增强服务）",
     "objectId": "data-augmentation-kit-c-api",
     "nodeName": "document",
@@ -103,7 +104,8 @@
       "Data",
       "Augmentation",
       "Kit",
-      "数据增强服务"
+      "数据增强服务",
+      "应用框架"
     ]
   },
   "doc-c6u1zi": {
@@ -346,7 +348,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-capi-aip",
     "path": "",
-    "rel_path": "api/Data Augmentation Kit（数据增强服务）/Data Augmentation Kit（数据增强服务）-C API-模块-AIP.txt",
+    "rel_path": "api/应用框架/Data Augmentation Kit（数据增强服务）/Data Augmentation Kit（数据增强服务）-C API-模块-AIP.txt",
     "catalog": "Data Augmentation Kit（数据增强服务）",
     "objectId": "data-augmentation-kit-c-api-aip",
     "nodeName": "document",
@@ -370,6 +372,7 @@
       "Augmentation",
       "Kit",
       "数据增强服务",
+      "应用框架",
       "模块"
     ]
   },
@@ -388,7 +391,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-aip-error-code",
     "path": "",
-    "rel_path": "api/Data Augmentation Kit（数据增强服务）/Data Augmentation Kit（数据增强服务）-C API-头文件和结构体-aip_error_code.h.txt",
+    "rel_path": "api/应用框架/Data Augmentation Kit（数据增强服务）/Data Augmentation Kit（数据增强服务）-C API-头文件和结构体-aip_error_code.h.txt",
     "catalog": "Data Augmentation Kit（数据增强服务）",
     "objectId": "data-augmentation-kit-c-api-aip-error-code-h",
     "nodeName": "document",
@@ -410,6 +413,7 @@
       "Retrieval",
       "Kit",
       "数据增强服务",
+      "应用框架",
       "头文件和结构体"
     ]
   },
@@ -428,7 +432,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-aip-retrieval-condition-vector",
     "path": "",
-    "rel_path": "api/Data Augmentation Kit（数据增强服务）/Data Augmentation Kit（数据增强服务）-C API-头文件和结构体-aip_retrieval_condition_vector.h.txt",
+    "rel_path": "api/应用框架/Data Augmentation Kit（数据增强服务）/Data Augmentation Kit（数据增强服务）-C API-头文件和结构体-aip_retrieval_condition_vector.h.txt",
     "catalog": "Data Augmentation Kit（数据增强服务）",
     "objectId": "data-augmentation-kit-c-api-aip-retrieval-condition-vector-h",
     "nodeName": "document",
@@ -452,6 +456,7 @@
       "Augmentation",
       "Kit",
       "数据增强服务",
+      "应用框架",
       "头文件和结构体"
     ]
   },
@@ -470,7 +475,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-aip-retrieval-condition",
     "path": "",
-    "rel_path": "api/Data Augmentation Kit（数据增强服务）/Data Augmentation Kit（数据增强服务）-C API-头文件和结构体-aip_retrieval_condition.h.txt",
+    "rel_path": "api/应用框架/Data Augmentation Kit（数据增强服务）/Data Augmentation Kit（数据增强服务）-C API-头文件和结构体-aip_retrieval_condition.h.txt",
     "catalog": "Data Augmentation Kit（数据增强服务）",
     "objectId": "data-augmentation-kit-c-api-aip-retrieval-condition-h",
     "nodeName": "document",
@@ -494,6 +499,7 @@
       "Augmentation",
       "Kit",
       "数据增强服务",
+      "应用框架",
       "头文件和结构体"
     ]
   },
@@ -512,7 +518,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-aip-retrieval-query",
     "path": "",
-    "rel_path": "api/Data Augmentation Kit（数据增强服务）/Data Augmentation Kit（数据增强服务）-C API-头文件和结构体-aip_retrieval_query.h.txt",
+    "rel_path": "api/应用框架/Data Augmentation Kit（数据增强服务）/Data Augmentation Kit（数据增强服务）-C API-头文件和结构体-aip_retrieval_query.h.txt",
     "catalog": "Data Augmentation Kit（数据增强服务）",
     "objectId": "data-augmentation-kit-c-api-aip-retrieval-query-h",
     "nodeName": "document",
@@ -534,6 +540,7 @@
       "references",
       "Kit",
       "数据增强服务",
+      "应用框架",
       "头文件和结构体"
     ]
   },
@@ -552,7 +559,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-aip-retrieval-record",
     "path": "",
-    "rel_path": "api/Data Augmentation Kit（数据增强服务）/Data Augmentation Kit（数据增强服务）-C API-头文件和结构体-aip_retrieval_record.h.txt",
+    "rel_path": "api/应用框架/Data Augmentation Kit（数据增强服务）/Data Augmentation Kit（数据增强服务）-C API-头文件和结构体-aip_retrieval_record.h.txt",
     "catalog": "Data Augmentation Kit（数据增强服务）",
     "objectId": "data-augmentation-kit-c-api-aip-retrieval-record-h",
     "nodeName": "document",
@@ -576,6 +583,7 @@
       "Augmentation",
       "Kit",
       "数据增强服务",
+      "应用框架",
       "头文件和结构体"
     ]
   },
@@ -595,7 +603,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-aip-retrieval",
     "path": "",
-    "rel_path": "api/Data Augmentation Kit（数据增强服务）/Data Augmentation Kit（数据增强服务）-C API-头文件和结构体-aip_retrieval.h.txt",
+    "rel_path": "api/应用框架/Data Augmentation Kit（数据增强服务）/Data Augmentation Kit（数据增强服务）-C API-头文件和结构体-aip_retrieval.h.txt",
     "catalog": "Data Augmentation Kit（数据增强服务）",
     "objectId": "data-augmentation-kit-c-api-aip-retrieval-h",
     "nodeName": "document",
@@ -619,6 +627,7 @@
       "Augmentation",
       "Kit",
       "数据增强服务",
+      "应用框架",
       "头文件和结构体"
     ]
   },
@@ -632,7 +641,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-arkts",
     "path": "",
-    "rel_path": "api/Data Augmentation Kit（数据增强服务）/Data Augmentation Kit（数据增强服务）-ArkTS API.txt",
+    "rel_path": "api/应用框架/Data Augmentation Kit（数据增强服务）/Data Augmentation Kit（数据增强服务）-ArkTS API.txt",
     "catalog": "Data Augmentation Kit（数据增强服务）",
     "objectId": "data-augmentation-kit-arkts-api",
     "nodeName": "document",
@@ -655,7 +664,8 @@
       "Data",
       "Augmentation",
       "Kit",
-      "数据增强服务"
+      "数据增强服务",
+      "应用框架"
     ]
   },
   "data-augmentation-kit-arkts-api-1": {
@@ -682,7 +692,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-error-code",
     "path": "",
-    "rel_path": "api/Data Augmentation Kit（数据增强服务）/Data Augmentation Kit（数据增强服务）-ArkTS API错误码.txt",
+    "rel_path": "api/应用框架/Data Augmentation Kit（数据增强服务）/Data Augmentation Kit（数据增强服务）-ArkTS API错误码.txt",
     "catalog": "Data Augmentation Kit（数据增强服务）",
     "objectId": "data-augmentation-kit-arkts-api-1",
     "nodeName": "document",
@@ -705,7 +715,8 @@
       "Data",
       "Augmentation",
       "Kit",
-      "数据增强服务"
+      "数据增强服务",
+      "应用框架"
     ]
   },
   "data-augmentation-kit-c-api-2": {
@@ -718,7 +729,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-capi",
     "path": "",
-    "rel_path": "api/Data Augmentation Kit（数据增强服务）/Data Augmentation Kit（数据增强服务）-C API.txt",
+    "rel_path": "api/应用框架/Data Augmentation Kit（数据增强服务）/Data Augmentation Kit（数据增强服务）-C API.txt",
     "catalog": "Data Augmentation Kit（数据增强服务）",
     "objectId": "data-augmentation-kit-c-api-2",
     "nodeName": "document",
@@ -735,7 +746,8 @@
       "Data",
       "Augmentation",
       "Kit",
-      "数据增强服务"
+      "数据增强服务",
+      "应用框架"
     ]
   },
   "data-augmentation-kit": {
@@ -748,7 +760,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/data-augmentation-api",
     "path": "",
-    "rel_path": "api/Data Augmentation Kit（数据增强服务）/Data Augmentation Kit（数据增强服务）.txt",
+    "rel_path": "api/应用框架/Data Augmentation Kit（数据增强服务）/Data Augmentation Kit（数据增强服务）.txt",
     "catalog": "Data Augmentation Kit（数据增强服务）",
     "objectId": "data-augmentation-kit",
     "nodeName": "document",
@@ -766,7 +778,8 @@
       "augmentation",
       "error",
       "code",
-      "capi"
+      "capi",
+      "应用框架"
     ]
   },
   "data-augmentation-kit-1": {
@@ -859,7 +872,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-knowledgeprocessor-api",
     "path": "",
-    "rel_path": "api/Data Augmentation Kit（数据增强服务）/Data Augmentation Kit（数据增强服务）-ArkTS API-knowledgeProcessor（知识加工）.txt",
+    "rel_path": "api/应用框架/Data Augmentation Kit（数据增强服务）/Data Augmentation Kit（数据增强服务）-ArkTS API-knowledgeProcessor（知识加工）.txt",
     "catalog": "Data Augmentation Kit（数据增强服务）",
     "objectId": "data-augmentation-kit-arkts-api-knowledgeprocessor",
     "nodeName": "document",
@@ -882,7 +895,8 @@
       "Data",
       "Augmentation",
       "Kit",
-      "数据增强服务"
+      "数据增强服务",
+      "应用框架"
     ]
   },
   "data-augmentation-kit-arkts-api-localchatmodel": {
@@ -902,7 +916,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-localchatmodel-api",
     "path": "",
-    "rel_path": "api/Data Augmentation Kit（数据增强服务）/Data Augmentation Kit（数据增强服务）-ArkTS API-localChatModel（端侧问答模型）.txt",
+    "rel_path": "api/应用框架/Data Augmentation Kit（数据增强服务）/Data Augmentation Kit（数据增强服务）-ArkTS API-localChatModel（端侧问答模型）.txt",
     "catalog": "Data Augmentation Kit（数据增强服务）",
     "objectId": "data-augmentation-kit-arkts-api-localchatmodel",
     "nodeName": "document",
@@ -923,7 +937,8 @@
       "代码主题",
       "复制",
       "Kit",
-      "数据增强服务"
+      "数据增强服务",
+      "应用框架"
     ]
   },
   "rag-1": {
@@ -983,7 +998,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-rag-api",
     "path": "",
-    "rel_path": "api/Data Augmentation Kit（数据增强服务）/Data Augmentation Kit（数据增强服务）-ArkTS API-rag（检索增强生成）.txt",
+    "rel_path": "api/应用框架/Data Augmentation Kit（数据增强服务）/Data Augmentation Kit（数据增强服务）-ArkTS API-rag（检索增强生成）.txt",
     "catalog": "Data Augmentation Kit（数据增强服务）",
     "objectId": "data-augmentation-kit-arkts-api-rag",
     "nodeName": "document",
@@ -1006,7 +1021,8 @@
       "Data",
       "Augmentation",
       "Kit",
-      "数据增强服务"
+      "数据增强服务",
+      "应用框架"
     ]
   },
   "rag": {
@@ -1066,7 +1082,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-capi-retrieval",
     "path": "",
-    "rel_path": "api/Data Augmentation Kit（数据增强服务）/Data Augmentation Kit（数据增强服务）-C API-模块-Retrieval.txt",
+    "rel_path": "api/应用框架/Data Augmentation Kit（数据增强服务）/Data Augmentation Kit（数据增强服务）-C API-模块-Retrieval.txt",
     "catalog": "Data Augmentation Kit（数据增强服务）",
     "objectId": "data-augmentation-kit-c-api-retrieval",
     "nodeName": "document",
@@ -1090,6 +1106,7 @@
       "Augmentation",
       "Kit",
       "数据增强服务",
+      "应用框架",
       "模块"
     ]
   },
@@ -1117,7 +1134,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/dataaugmentation-retrieval-api",
     "path": "",
-    "rel_path": "api/Data Augmentation Kit（数据增强服务）/Data Augmentation Kit（数据增强服务）-ArkTS API-retrieval（检索器）.txt",
+    "rel_path": "api/应用框架/Data Augmentation Kit（数据增强服务）/Data Augmentation Kit（数据增强服务）-ArkTS API-retrieval（检索器）.txt",
     "catalog": "Data Augmentation Kit（数据增强服务）",
     "objectId": "data-augmentation-kit-arkts-api-retrieval",
     "nodeName": "document",
@@ -1139,7 +1156,8 @@
       "Intelligence",
       "Augmentation",
       "Kit",
-      "数据增强服务"
+      "数据增强服务",
+      "应用框架"
     ]
   }
 }

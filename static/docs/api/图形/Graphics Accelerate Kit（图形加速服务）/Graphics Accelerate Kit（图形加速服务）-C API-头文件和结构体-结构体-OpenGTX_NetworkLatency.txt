@@ -1,0 +1,61 @@
+# [OpenGTX_NetworkLatency](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_open_g_t_x___network_latency)
+
+## 目录
+- [概述](#section2016248721093807)
+- [汇总](#section914072602093807)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section1242540449093807)
+  - [down](#a583d7d2a0449ffca70f17e378637cd42)
+  - [total](#afea715723d4661c5273bcfe34636cf38)
+  - [up](#ae67db898729d9184a7502097387d7903)
+
+## 概述
+PhoneTablet此结构体描述当前设备网络延迟信息，游戏应用获取到网络延迟后传递此参数。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [GraphicsAccelerate](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_graphics_accelerate)
+
+ 
+## 汇总
+PhoneTablet 
+### 成员变量
+ PhoneTablet展开
+| |
+| |
+| |
+| int32_t total | 游戏的总延迟，以ms为单位，取值范围[0,200]。 |
+| int32_t up | 游戏上行时延，以ms为单位，取值范围[0,200]。 |
+| int32_t down | 游戏下行时延，以ms为单位，取值范围[0,200]。 |
+
+ 
+## 结构体成员变量说明
+PhoneTablet 
+### down
+PhoneTablet收起自动换行深色代码主题复制
+```
+int32_t OpenGTX_NetworkLatency::down
+```
+ **描述**
+
+ 游戏下行时延，以ms为单位，取值范围[0,200]。
+
+ 
+### total
+PhoneTablet收起自动换行深色代码主题复制
+```
+int32_t OpenGTX_NetworkLatency::total
+```
+ **描述**
+
+ 游戏的总延迟，以ms为单位，取值范围[0,200]。
+
+ 
+### up
+PhoneTablet收起自动换行深色代码主题复制
+```
+int32_t OpenGTX_NetworkLatency::up
+```
+ **描述**
+
+ 游戏上行时延，以ms为单位，取值范围[0,200]。

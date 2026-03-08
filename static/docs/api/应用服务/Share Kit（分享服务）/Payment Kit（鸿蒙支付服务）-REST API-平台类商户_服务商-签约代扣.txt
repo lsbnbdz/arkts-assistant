@@ -1,0 +1,13 @@
+# [签约代扣](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-partner-withhold)
+
+- **[预签约](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-partner-withhold-presign)**
+ - **[签约结果回调通知](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-partner-withhold-sign-notify)**
+ - **[申请免密代扣](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-partner-withhold-apply)**
+ - **[代扣结果回调通知](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-partner-withhold-notify)**
+ - **[查询签约订单](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-partner-sign-query)**
+ - **[查询代扣订单](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-partner-withhold-query)**
+ - **[申请解约](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-partner-withhold-unsign)**
+ - **[解约结果回调通知](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-partner-withhold-unsign-notify)**
+ - **[申请退款](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-partner-withhold-refunds)**
+ - **[退款结果回调通知](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-partner-withhold-refunds-notify)**
+ - **[查询退款订单](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-partner-withhold-query-refunds)**

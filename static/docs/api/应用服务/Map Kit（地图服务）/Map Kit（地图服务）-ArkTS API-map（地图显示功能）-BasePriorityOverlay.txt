@@ -1,0 +1,210 @@
+# [BasePriorityOverlay](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-basepriorityoverlay)
+
+## 目录
+- [导入模块](#section164051883419)
+- [BasePriorityOverlay](#section168491335163710)
+  - [getMaxZoom](#section2853113516375)
+  - [getMinZoom](#section0885953152417)
+  - [setPriority](#section13855113533720)
+  - [setZoom](#section4862183523712)
+  - [setAnimation](#section688810310374)
+  - [startAnimation](#section15532754163419)
+  - [clearAnimation](#section1853445414343)
+
+## 导入模块
+PhonePC/2in1TabletWearable收起自动换行深色代码主题复制
+```
+import { map, mapCommon } from '@kit.MapKit';
+```
+ 
+## BasePriorityOverlay
+PhonePC/2in1TabletWearable具有优先级控制的覆盖物基础类，继承[BaseOverlay](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-baseoverlay)。[PointAnnotation](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-pointannotation)和[Bubble](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-bubble)继承该基础类。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ 
+### getMaxZoom
+PhonePC/2in1TabletWearablegetMaxZoom(): number
+
+ 获取覆盖物的最大展示层级。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| number | 覆盖物的最大展示层级。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+// 以pointAnnotation为例let pointAnnotationOptions: mapCommon.PointAnnotationParams = { position: { latitude: 32.120750, longitude: 118.788765 }, titles: [{ content: "南京夫子庙" }], // 图标需存放在resources/rawfile目录下 icon: 'icon.png'};let pointAnnotation: map.PointAnnotation = await this.mapController.addPointAnnotation(pointAnnotationOptions);let maxZoom: number = pointAnnotation.getMaxZoom();
+```
+ 
+### getMinZoom
+PhonePC/2in1TabletWearablegetMinZoom(): number
+
+ 获取覆盖物的最小展示层级。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| number | 覆盖物的最小展示层级。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+// 以pointAnnotation为例let minZoom: number = pointAnnotation.getMinZoom();
+```
+ 
+### setPriority
+PhonePC/2in1TabletWearablesetPriority(priority: number): void
+
+ 设置覆盖物碰撞优先级，值越大优先级越低。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| priority | number | 是 | 设置覆盖物的碰撞优先级。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+// 以pointAnnotation为例pointAnnotation.setPriority(100);
+```
+ 
+### setZoom
+PhonePC/2in1TabletWearablesetZoom(minZoom: number, maxZoom: number): void
+
+ 设置覆盖物的显示层级。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| minZoom | number | 是 | 覆盖物的最小显示层级，取值范围：[2, 20]。 传入的值高于20，最小缩放级别会取20。 传入的值小于2，最小缩放级别会取2。 说明minZoom大于maxZoom，方法不生效。 |
+| maxZoom | number | 是 | 覆盖物的最大显示层级，取值范围：[2, 20]。 传入的值高于20，最大缩放级别会取20。 传入的值小于2，最大缩放级别会取2。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+// 以pointAnnotation为例pointAnnotation.setZoom(3, 10);
+```
+ 
+### setAnimation
+PhonePC/2in1TabletWearablesetAnimation(animation: Animation): void
+
+ 设置覆盖物的动画。仅支持[AlphaAnimation](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-alphaanimation)、[ScaleAnimation](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-scaleanimation)和[AnimationSet](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-animationset)。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| animation | Animation | 是 | 动画。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let animation: map.AlphaAnimation = new map.AlphaAnimation(0.2, 1);animation.setDuration(3000);let callbackStart = () => { console.info("animationStart", `callback`);};let callbackEnd = () => { console.info("animationEnd", `callback`);};animation.on("animationStart", callbackStart);animation.on("animationEnd", callbackEnd);animation.setFillMode(map.AnimationFillMode.BACKWARDS);animation.setRepeatMode(map.AnimationRepeatMode.RESTART);animation.setRepeatCount(100);
+pointAnnotation.setAnimation(animation);
+```
+ 
+### startAnimation
+PhonePC/2in1TabletWearablestartAnimation(): void
+
+ 启动覆盖物的动画。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let animation: map.AlphaAnimation = new map.AlphaAnimation(0.2, 1);animation.setDuration(3000);let callbackStart = () => { console.info("animationStart", `callback`);};let callbackEnd = () => { console.info("animationEnd", `callback`);};animation.on("animationStart", callbackStart);animation.on("animationEnd", callbackEnd);animation.setFillMode(map.AnimationFillMode.BACKWARDS);animation.setRepeatMode(map.AnimationRepeatMode.RESTART);animation.setRepeatCount(100);
+pointAnnotation.setAnimation(animation);pointAnnotation.startAnimation();
+```
+ 
+### clearAnimation
+PhonePC/2in1TabletWearableclearAnimation(): void
+
+ 清除覆盖物的动画。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+pointAnnotation.clearAnimation();
+```

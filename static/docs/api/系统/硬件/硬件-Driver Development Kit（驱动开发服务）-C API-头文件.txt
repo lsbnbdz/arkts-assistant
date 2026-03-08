@@ -1,0 +1,12 @@
+# [头文件](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/driver-development-headerfile)
+
+- **[ddk_api.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-ddk-api-h)**
+ - **[ddk_types.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-ddk-types-h)**
+ - **[hid_ddk_api.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hid-ddk-api-h)**
+ - **[hid_ddk_types.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hid-ddk-types-h)**
+ - **[scsi_peripheral_api.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-scsi-peripheral-api-h)**
+ - **[scsi_peripheral_types.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-scsi-peripheral-types-h)**
+ - **[usb_ddk_api.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-usb-ddk-api-h)**
+ - **[usb_ddk_types.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-usb-ddk-types-h)**
+ - **[usb_serial_api.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-usb-serial-api-h)**
+ - **[usb_serial_types.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-usb-serial-types-h)**

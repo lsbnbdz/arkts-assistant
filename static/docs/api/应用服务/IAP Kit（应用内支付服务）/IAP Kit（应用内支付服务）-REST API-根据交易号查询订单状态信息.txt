@@ -1,0 +1,84 @@
+# [根据交易号查询订单状态信息](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/iap-order-info-query-by-transaction-number)
+
+## 目录
+- [功能介绍](#section1950214943118)
+- [场景描述](#section1503119153112)
+- [接口原型](#section127414615399)
+- [请求参数](#section1854194512114)
+  - [Request Header](#section1978222671013)
+  - [Request Body](#section255294691012)
+- [请求示例](#section86425305253)
+- [响应参数](#section514779154018)
+  - [Response Header](#section9677514121315)
+  - [Response Body](#section433752716131)
+- [响应示例](#section34632202404)
+
+## 功能介绍
+此接口用于查询交易号对应的订单状态信息。
+
+ 
+## 场景描述
+当用户对订单存在疑问时，可以通过交易号向开发者寻求技术支持，开发者通过调用该接口查询对应的订单状态信息。
+
+ 说明该接口仅支持查询一年内的订单。
+
+ 该接口不支持查询沙盒测试订单。
+
+ 
+## 接口原型
+ 
+| |
+| |
+| HTTPS POST |
+| 开发者服务器 -> IAP服务器 |
+| {rootUrl}/harmony/v1/application/order/lookup 说明rootUrl：具体请参见站点信息。 |
+| 请求消息：Content-Type: application/json;charset=UTF-8 响应消息：Content-Type: application/json;charset=UTF-8 |
+
+ 
+## 请求参数
+ 
+### Request Header
+ 展开
+| 参数 | 是否必选 | 参数类型 | 描述 |
+| --- | --- | --- | --- |
+| Content-Type | 是 | String | 取值为：application/json;charset=UTF-8 |
+| Authorization | 是 | String | 认证信息，使用JWT进行鉴权，具体请参见Authorization说明。 |
+
+ 
+### Request Body
+ 展开
+| 参数 | 是否必选 | 参数类型 | 描述 |
+| --- | --- | --- | --- |
+| orderNo | 是 | String | 具体一笔订单对应的交易号，交易号可在用户设备的"设置">"华为账号">"付款与账单">"购买记录"中对应订单详情中获取。 |
+
+ 
+## 请求示例
+收起自动换行深色代码主题复制
+```
+POST /harmony/v1/application/order/lookupContent-Type: application/json;charset=UTF-8Authorization: Bearer ***.***.***Accept: application/json{ "orderNo": "******"}
+```
+ 
+## 响应参数
+ 
+### Response Header
+ 展开
+| 参数 | 是否必选 | 参数类型 | 描述 |
+| --- | --- | --- | --- |
+| Content-Type | 是 | String | 取值为：application/json;charset=UTF-8 |
+
+ 
+### Response Body
+ 展开
+| 参数 | 是否必选 | 参数类型 | 描述 |
+| --- | --- | --- | --- |
+| responseCode | 是 | String | 返回码。 0：成功其他：失败，具体请参见错误码 |
+| responseMessage | 否 | String | 响应描述。 |
+| orderStatus | 是 | Integer | 标识开发者在请求中提供的交易号是否有效。 1：交易号有效，且存在一笔订单状态信息0：交易号无效 |
+| jwsPurchaseOrder | 否 | String | 已购订单相关状态信息的JWS格式数据。 可参见对返回结果验签处理，验签通过后解码获取相关订单状态信息，具体请参见PurchaseOrderPayload说明。 |
+
+ 
+## 响应示例
+收起自动换行深色代码主题复制
+```
+HTTP/1.2 200 OKContent-Type: application/json;charset=UTF-8{ "responseCode": "0", "responseMessage": "success", "orderStatus": 1, "jwsPurchaseOrder": "***"}
+```

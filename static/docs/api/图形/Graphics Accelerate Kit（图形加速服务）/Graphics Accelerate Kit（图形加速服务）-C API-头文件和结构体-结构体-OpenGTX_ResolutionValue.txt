@@ -1,0 +1,49 @@
+# [OpenGTX_ResolutionValue](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_open_g_t_x___resolution_value)
+
+## 目录
+- [概述](#section1461859762093807)
+- [汇总](#section232167793093807)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section1301059673093807)
+  - [height](#a50f26579e9afc46be703d43f917790af)
+  - [width](#a7d55f8f23d3add625efd7f44ce365f40)
+
+## 概述
+PhoneTablet此结构体描述游戏应用的分辨率值。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [GraphicsAccelerate](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_graphics_accelerate)
+
+ 
+## 汇总
+PhoneTablet 
+### 成员变量
+ PhoneTablet展开
+| |
+| |
+| |
+| int32_t height | 分辨率高度值，以像素为单位，取值范围[360,7680]。 |
+| int32_t width | 分辨率宽度值，以像素为单位，取值范围[360,7680]。 |
+
+ 
+## 结构体成员变量说明
+PhoneTablet 
+### height
+PhoneTablet收起自动换行深色代码主题复制
+```
+int32_t OpenGTX_ResolutionValue::height
+```
+ **描述**
+
+ 分辨率高度值，以像素为单位，取值范围[360,7680]。
+
+ 
+### width
+PhoneTablet收起自动换行深色代码主题复制
+```
+int32_t OpenGTX_ResolutionValue::width
+```
+ **描述**
+
+ 分辨率宽度值，以像素为单位，取值范围[360,7680]。

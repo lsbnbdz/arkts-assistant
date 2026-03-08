@@ -1,0 +1,109 @@
+# [Rcp_InfoToCollect](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___info_to_collect)
+
+## 目录
+- [概述](#section1260891541094052)
+- [汇总](#section574308355094052)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section1122579799094052)
+  - [incomingData](#ae80433cb5192667786963b6a8a189155)
+  - [incomingHeader](#a540ee4c661375b5d261c399c2a95da03)
+  - [incomingSslData](#a55f47927846a107a20ea48c32f5b1ce5)
+  - [outgoingData](#a7324cc52ff8e8d7c3c0c6ec94631c986)
+  - [outgoingHeader](#a3b8cc7c5c55ca74be187ea24f8788f69)
+  - [outgoingSslData](#a1c467842caa404c49e282ec6b76a45f1)
+  - [textual](#aff60c2d577af35be42684cddc8287b23)
+
+## 概述
+PhonePC/2in1TabletTVWearable指定要收集的请求处理事件。可以通过响应对象检查收集的事件。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [RemoteCommunication](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| bool textual | 是否收集未分类的文本事件。默认值为false。 |
+| bool incomingHeader | 是否收集传入HTTP标头事件。默认值为false。 |
+| bool outgoingHeader | 是否收集传出HTTP标头事件。默认值为false。 |
+| bool incomingData | 是否收集有关传入HTTP数据的事件。默认值为false。 |
+| bool outgoingData | 是否收集有关传出HTTP数据的事件。默认值为false。 |
+| bool incomingSslData | 是否收集传入的SSL/TLS事件。默认值为false。 |
+| bool outgoingSslData | 是否收集传出的SSL/TLS事件。默认值为false。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTVWearable 
+### incomingData
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+bool Rcp_InfoToCollect::incomingData
+```
+ **描述**
+
+ 是否收集有关传入HTTP数据的事件。默认值为false。
+
+ 
+### incomingHeader
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+bool Rcp_InfoToCollect::incomingHeader
+```
+ **描述**
+
+ 是否收集传入HTTP标头事件。默认值为false。
+
+ 
+### incomingSslData
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+bool Rcp_InfoToCollect::incomingSslData
+```
+ **描述**
+
+ 是否收集传入的SSL/TLS事件。默认值为false。
+
+ 
+### outgoingData
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+bool Rcp_InfoToCollect::outgoingData
+```
+ **描述**
+
+ 是否收集有关传出HTTP数据的事件。默认值为false。
+
+ 
+### outgoingHeader
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+bool Rcp_InfoToCollect::outgoingHeader
+```
+ **描述**
+
+ 是否收集传出HTTP标头事件。默认值为false。
+
+ 
+### outgoingSslData
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+bool Rcp_InfoToCollect::outgoingSslData
+```
+ **描述**
+
+ 是否收集传出的SSL/TLS事件。默认值为false。
+
+ 
+### textual
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+bool Rcp_InfoToCollect::textual
+```
+ **描述**
+
+ 是否收集未分类的文本事件。默认值为false。

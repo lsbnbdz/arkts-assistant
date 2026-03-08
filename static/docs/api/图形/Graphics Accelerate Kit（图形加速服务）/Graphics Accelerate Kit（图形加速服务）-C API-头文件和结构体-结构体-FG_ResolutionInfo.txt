@@ -1,0 +1,61 @@
+# [FG_ResolutionInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_g___resolution_info)
+
+## 目录
+- [概述](#section1057348653093807)
+- [汇总](#section550825605093807)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section401446892093807)
+  - [inputColorResolution](#af99a47a1f71f8c13d8f5dff8ac02d137)
+  - [inputDepthStencilResolution](#a0938887b43f2d9353d836a95c1ce0c81)
+  - [outputColorResolution](#a69fd8491d75c622c2a21bc0278278965)
+
+## 概述
+PhoneTablet此结构体描述超帧输入输出图像的分辨率。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [GraphicsAccelerate](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_graphics_accelerate)
+
+ 
+## 汇总
+PhoneTablet 
+### 成员变量
+ PhoneTablet展开
+| |
+| |
+| |
+| FG_Dimension2D inputColorResolution | 真实渲染帧颜色缓冲区分辨率。 |
+| FG_Dimension2D inputDepthStencilResolution | 真实渲染帧深度模板缓冲区分辨率。当设置成0时, 系统中会默认使用inputColorResolution作为真实帧深度模板缓冲区分辨率。 |
+| FG_Dimension2D outputColorResolution | 预测帧缓冲区分辨率。当设置成0时, 系统中会默认使用inputColorResolution作为预测帧缓冲区分辨率。 |
+
+ 
+## 结构体成员变量说明
+PhoneTablet 
+### inputColorResolution
+PhoneTablet收起自动换行深色代码主题复制
+```
+FG_Dimension2D FG_ResolutionInfo::inputColorResolution
+```
+ **描述**
+
+ 真实渲染帧颜色缓冲区分辨率。
+
+ 
+### inputDepthStencilResolution
+PhoneTablet收起自动换行深色代码主题复制
+```
+FG_Dimension2D FG_ResolutionInfo::inputDepthStencilResolution
+```
+ **描述**
+
+ 真实渲染帧深度模板缓冲区分辨率。当设置成0时, 系统中会默认使用[inputColorResolution](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_g___resolution_info#af99a47a1f71f8c13d8f5dff8ac02d137)作为真实帧深度模板缓冲区分辨率。
+
+ 
+### outputColorResolution
+PhoneTablet收起自动换行深色代码主题复制
+```
+FG_Dimension2D FG_ResolutionInfo::outputColorResolution
+```
+ **描述**
+
+ 预测帧缓冲区分辨率。当设置成0时, 系统中会默认使用[inputColorResolution](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_g___resolution_info#af99a47a1f71f8c13d8f5dff8ac02d137)作为预测帧缓冲区分辨率。

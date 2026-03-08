@@ -1,0 +1,5 @@
+# [Performance Analysis Kit（性能分析服务）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/performance-analysis-api)
+
+- **[ArkTS API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/performance-analysis-arkts)**
+ - **[C API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/performance-analysis-c)**
+ - **[错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/performance-analysis-errcode)**

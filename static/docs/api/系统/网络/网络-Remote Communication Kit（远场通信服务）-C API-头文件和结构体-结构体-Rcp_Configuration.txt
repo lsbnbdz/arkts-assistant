@@ -1,0 +1,97 @@
+# [Rcp_Configuration](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___configuration)
+
+## 目录
+- [概述](#section197929238094052)
+- [汇总](#section1657626819094052)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section1049931817094052)
+  - [configurationPrivate](#aee2bffb54b1f4ec71c2816b85f838238)
+  - [dnsConfiguration](#a71f41dfa2cd2c2e6269c7640b83f6b40)
+  - [proxyConfiguration](#a7280355a1d2c319acb1f37e544249d9e)
+  - [securityConfiguration](#a304a69af4432db3b5f38d24b7a9b3f92)
+  - [tracingConfiguration](#a279392dde3cda75cc585210dc5ec49c5)
+  - [transferConfiguration](#a014070587666903f817328ffdf30852f)
+
+## 概述
+PhonePC/2in1TabletTVWearable请求配置。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [RemoteCommunication](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| Rcp_TransferConfiguration transferConfiguration | 传输配置。 |
+| Rcp_TracingConfiguration tracingConfiguration | 请求追踪配置。 |
+| Rcp_ProxyConfiguration proxyConfiguration | 代理配置。 |
+| Rcp_DnsConfiguration dnsConfiguration | DNS配置。 |
+| Rcp_SecurityConfiguration securityConfiguration | 安全配置。 |
+| void * configurationPrivate | 可扩展字段。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTVWearable 
+### configurationPrivate
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+void* Rcp_Configuration::configurationPrivate
+```
+ **描述**
+
+ 可扩展字段。
+
+ 
+### dnsConfiguration
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_DnsConfiguration Rcp_Configuration::dnsConfiguration
+```
+ **描述**
+
+ DNS配置。
+
+ 
+### proxyConfiguration
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_ProxyConfiguration Rcp_Configuration::proxyConfiguration
+```
+ **描述**
+
+ 代理配置。
+
+ 
+### securityConfiguration
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_SecurityConfiguration Rcp_Configuration::securityConfiguration
+```
+ **描述**
+
+ 安全配置。
+
+ 
+### tracingConfiguration
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_TracingConfiguration Rcp_Configuration::tracingConfiguration
+```
+ **描述**
+
+ 请求追踪配置。
+
+ 
+### transferConfiguration
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_TransferConfiguration Rcp_Configuration::transferConfiguration
+```
+ **描述**
+
+ 传输配置。

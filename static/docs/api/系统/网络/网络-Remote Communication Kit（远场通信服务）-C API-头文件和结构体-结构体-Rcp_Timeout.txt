@@ -1,0 +1,49 @@
+# [Rcp_Timeout](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___timeout)
+
+## 目录
+- [概述](#section1230871373094053)
+- [汇总](#section1892338956094053)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section2067990992094053)
+  - [connectMs](#a6fcc6e8da38cfb218ef9e534f30da218)
+  - [transferMs](#a096659a22ca66915119001cf5f76f3d9)
+
+## 概述
+PhonePC/2in1TabletTVWearable请求的超时配置。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [RemoteCommunication](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| uint32_t connectMs | 连接超时时间。默认值为60000毫秒。 |
+| uint32_t transferMs | 传输超时时间。默认值为60000毫秒。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTVWearable 
+### connectMs
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+uint32_t Rcp_Timeout::connectMs
+```
+ **描述**
+
+ 连接超时时间。默认值为60000毫秒。
+
+ 
+### transferMs
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+uint32_t Rcp_Timeout::transferMs
+```
+ **描述**
+
+ 传输超时时间。默认值为60000毫秒。

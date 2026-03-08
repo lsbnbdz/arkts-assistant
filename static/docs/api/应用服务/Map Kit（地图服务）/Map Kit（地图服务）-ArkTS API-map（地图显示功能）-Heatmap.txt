@@ -1,0 +1,449 @@
+# [Heatmap](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-heatmap)
+
+## 目录
+- [导入模块](#section164051883419)
+- [Heatmap](#section792365317339)
+  - [setData](#section5592111414447)
+  - [getData](#section2470093518)
+  - [setColor](#section39471344185718)
+  - [getColor](#section948010279813)
+  - [setIntensity](#section2036018270147)
+  - [getIntensity](#section829812315248)
+  - [setOpacity](#section244961912292)
+  - [getOpacity](#section876151173418)
+  - [setRadius](#section16965474614)
+  - [getRadius](#section136171747642)
+  - [setRadiusUnit](#section193012295117)
+  - [getRadiusUnit](#section1553232491612)
+  - [setVisible](#section9956141602119)
+  - [isVisible](#section1186010310264)
+  - [remove](#section377863103310)
+
+## 导入模块
+PhonePC/2in1TabletWearable收起自动换行深色代码主题复制
+```
+import { map, mapCommon } from '@kit.MapKit';
+```
+ 
+## Heatmap
+PhonePC/2in1TabletWearable热力图管理对象。在调用map.[MapComponentController](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-mapcomponentcontroller)类的[addHeatmap](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-mapcomponentcontroller#section849314585910)方法时会返回该类型的实例。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本6.0.0(20)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**6.0.0(20)
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let data: mapCommon.WeightedLatLng[] = [];for (let i = 0; i < 500; i++) { data.push({ point: { longitude: 118.000000 + Math.random() * 1 - 0.25, latitude: 31.000000 + Math.random() * 1 - 0.25, }, intensity: 1 });}let heatMapOptions: mapCommon.HeatmapParams = { id: 'heatmap0001', data: data, radius: 20, intensity: { 2: 1, 5: 5, 8: 10 },}let heatMap = await this.mapController.addHeatmap(heatMapOptions)
+```
+ 
+### setData
+PhonePC/2in1TabletWearablesetData(data: mapCommon.WeightedLatLng[]): void
+
+ 更新热力图数据。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本6.0.0(20)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**6.0.0(20)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data | mapCommon.WeightedLatLng[] | 是 | 热力图数据（建议数据量小于10000条）。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let data: mapCommon.WeightedLatLng[] = [ { point: { longitude: -151.5129, latitude: 63.1016 }, intensity: 2.3 }];heatMap.setData(data);
+```
+ 
+### getData
+PhonePC/2in1TabletWearablegetData(): mapCommon.WeightedLatLng[]
+
+ 获取热力图数据。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本6.0.0(20)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**6.0.0(20)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| mapCommon.WeightedLatLng[] | 热力图数据。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let data: mapCommon.WeightedLatLng[] = heatMap.getData();
+```
+ 
+### setColor
+PhonePC/2in1TabletWearablesetColor(color: Record<number, number>): void
+
+ 更新热力图颜色。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本6.0.0(20)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**6.0.0(20)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| color | Record | 是 | 热力图颜色。 key：数据密度，取值范围[0，1]。value：颜色渐变值，ARGB格式。 如果入参非法，不做处理。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let record: Record = { 0: 0x26C3999, // 深蓝色 0.15: 0xFF4D4DFF, // 蓝紫色 0.3: 0xFF9999FF, // 浅蓝紫色 0.45: 0xFFE6E6FF, // 非常浅的蓝紫色 0.6: 0xFFFFCCFF, // 浅紫色 0.75: 0xFFFF99FF, // 紫色 0.9: 0xFFFF66FF, // 深紫色 1: 0xFFFF00FF // 非常深的紫色};heatMap.setColor(record);
+```
+ 
+### getColor
+PhonePC/2in1TabletWearablegetColor(): Record<number, number>
+
+ 获取热力图颜色。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本6.0.0(20)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**6.0.0(20)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| Record | 热力图颜色。 key：数据密度，取值范围[0，1]。value：颜色渐变值，ARGB格式。 如果用户没有设置过，返回默认值。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let record: Record = heatMap.getColor();
+```
+ 
+### setIntensity
+PhonePC/2in1TabletWearablesetIntensity(intensity: number | Record<number, number>): void
+
+ 更新热力图强度。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本6.0.0(20)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**6.0.0(20)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| intensity | number | Record | 是 | 热力图强度，如果是number类型，所有层级使用同一个强度。 key：层级，取值范围[2，20]。value：热力图强度，取值范围(0，+∞)。 如果入参非法，不做处理。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let intensity: Record | number = { 2:0.1, 3:0.1, 4:0.1};heatMap.setIntensity(intensity);
+```
+ 
+### getIntensity
+PhonePC/2in1TabletWearablegetIntensity(): number | Record<number, number>
+
+ 获取热力图强度。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本6.0.0(20)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**6.0.0(20)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| number | Record | 热力图强度，如果是number类型，所有层级使用同一个强度。 key：层级，取值范围[2，20]。value：热力图强度，取值范围(0，+∞)。 如果用户没有设置过，返回默认值。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let intensity: Record | number = heatMap.getIntensity();
+```
+ 
+### setOpacity
+PhonePC/2in1TabletWearablesetOpacity(opacity: number | Record<number, number>): void
+
+ 更新热力图透明度。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本6.0.0(20)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**6.0.0(20)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| opacity | number | Record | 是 | 热力图透明度，如果是number类型，所有层级使用同一个透明度。 key：层级，取值范围[2，20]。value：热力图透明度，取值范围[0，1]，0表示完全不透明，1表示完全透明。 如果入参非法，不做处理。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let opacity: Record | number = { 2:0.1, 3:0.1, 4:0.1}heatMap.setOpacity(opacity);
+```
+ 
+### getOpacity
+PhonePC/2in1TabletWearablegetOpacity(): number | Record<number, number>
+
+ 获取热力图透明度。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本6.0.0(20)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**6.0.0(20)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| number | Record | 热力图透明度，如果是number类型，所有层级使用同一个透明度。 key：热力图颜色渐变层级，取值范围[2，20]。value：热力图透明度，取值范围[0，1]，0表示完全不透明，1表示完全透明。 如果用户没有设置过，返回默认值。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let opacity: Record | number = heatMap.getOpacity();
+```
+ 
+### setRadius
+PhonePC/2in1TabletWearablesetRadius(radius: number | Record<number, number>): void
+
+ 更新热力图半径。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本6.0.0(20)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**6.0.0(20)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| radius | number | Record | 是 | 热力图半径，如果是number类型，所有层级使用同一个半径。 key：层级，取值范围[2，20]。value：热力图半径，取值范围：[1，+∞)。 如果入参非法，不做处理。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+heatMap.setRadius(3000);
+```
+ 
+### getRadius
+PhonePC/2in1TabletWearablegetRadius(): number | Record<number, number>
+
+ 获取热力图半径。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本6.0.0(20)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**6.0.0(20)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| number | Record | 热力图半径，如果是number类型，所有层级使用同一个半径。 key：层级，取值范围[2，20]。value：热力图半径，取值范围：[1，+∞)。 如果用户没有设置过，返回默认值。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let radius: number | Record = heatMap.getRadius();
+```
+ 
+### setRadiusUnit
+PhonePC/2in1TabletWearablesetRadiusUnit(radiusUnit: mapCommon.RadiusUnit): void
+
+ 更新热力图半径的单位。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本6.0.0(20)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**6.0.0(20)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| radiusUnit | mapCommon.RadiusUnit | 是 | 热力图半径单位。如果入参非法，不做处理。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+heatMap.setRadiusUnit(mapCommon.RadiusUnit.PIXEL_UNIT);
+```
+ 
+### getRadiusUnit
+PhonePC/2in1TabletWearablegetRadiusUnit(): mapCommon.RadiusUnit
+
+ 获取热力图半径单位。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本6.0.0(20)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**6.0.0(20)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| mapCommon.RadiusUnit | 热力图半径单位。如果用户没有设置过，返回默认值。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let radiusUnit: mapCommon.RadiusUnit = heatMap.getRadiusUnit();
+```
+ 
+### setVisible
+PhonePC/2in1TabletWearablesetVisible(visible: boolean): void
+
+ 更新热力图是否可见。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本6.0.0(20)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**6.0.0(20)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| visible | boolean | 是 | 热力图是否可见。 true：可见。false：不可见。 如果入参非法，不做处理。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+heatMap.setVisible(false);
+```
+ 
+### isVisible
+PhonePC/2in1TabletWearableisVisible(): boolean
+
+ 获取热力图是否可见。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本6.0.0(20)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**6.0.0(20)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| boolean | 热力图是否可见。 true：可见。false：不可见。 如果用户没有设置过，返回默认值。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let isVisible: boolean = heatMap.isVisible();
+```
+ 
+### remove
+PhonePC/2in1TabletWearableremove(): void
+
+ 删除热力图。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本6.0.0(20)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**6.0.0(20)
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+heatMap.remove();
+```

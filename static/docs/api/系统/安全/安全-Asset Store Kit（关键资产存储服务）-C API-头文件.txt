@@ -1,0 +1,4 @@
+# [头文件](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/asset-store-headerfile)
+
+- **[asset_api.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-asset-api-h)**
+ - **[asset_type.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-asset-type-h)**

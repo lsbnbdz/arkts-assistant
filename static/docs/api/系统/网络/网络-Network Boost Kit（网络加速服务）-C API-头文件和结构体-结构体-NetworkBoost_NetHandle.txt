@@ -1,0 +1,37 @@
+# [NetworkBoost_NetHandle](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/network-boost-c-struct-net_handle)
+
+## 目录
+- [概述](#section1845563543162158)
+- [汇总](#section196934160162158)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section2059888795162158)
+  - [netId](#aebcee296a545e716dfab59acc76cdcfe)
+
+## 概述
+PhonePC/2in1TabletNetHandle信息。
+
+ **起始版本：** 5.1.0(18)
+
+ **相关模块：** [NetworkBoost](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/network-boost-c-overview)
+
+ 
+## 汇总
+PhonePC/2in1Tablet 
+### 成员变量
+ PhonePC/2in1Tablet展开
+| |
+| |
+| |
+| int32_t netId | 网络ID |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1Tablet 
+### netId
+PhonePC/2in1Tablet收起自动换行深色代码主题复制
+```
+int32_t NetworkBoost_NetHandle::netId
+```
+ **描述**
+
+ 网络ID。

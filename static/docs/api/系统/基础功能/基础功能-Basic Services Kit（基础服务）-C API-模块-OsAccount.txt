@@ -1,0 +1,19 @@
+# [OsAccount](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-osaccount)
+
+## 目录
+- [概述](#概述)
+- [文件汇总](#文件汇总)
+
+## 概述
+PhonePC/2in1TabletTVWearableOsAccount模块为应用提供系统账号管理能力。
+
+ **起始版本：** 12
+
+ 
+## 文件汇总
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| os_account.h | 声明访问和管理系统账号信息的API。 |
+| os_account_common.h | 提供OsAccount接口的公共类型定义。 |

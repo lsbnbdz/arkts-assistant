@@ -1,0 +1,14 @@
+# [CryptoKdfApi](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-cryptokdfapi)
+
+## 概述
+PhonePC/2in1TabletTVWearable为应用提供密钥派生函数(KDF)接口。
+
+ **起始版本：** 20
+
+ 
+## 文件汇总
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| crypto_kdf.h | 定义密钥派生接口。 |

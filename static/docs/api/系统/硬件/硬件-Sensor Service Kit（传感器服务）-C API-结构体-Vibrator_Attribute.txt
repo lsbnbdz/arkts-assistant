@@ -1,0 +1,31 @@
+# [Vibrator_Attribute](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-vibrator-vibrator-attribute)
+
+## 目录
+- [概述](#概述)
+- [汇总](#汇总)
+  - [成员变量](#成员变量)
+
+收起自动换行深色代码主题复制
+```
+typedef struct Vibrator_Attribute { ... } Vibrator_Attribute
+```
+ 
+## 概述
+PhonePC/2in1TabletTVWearable马达属性。
+
+ **起始版本：** 11
+
+ **相关模块：** [Vibrator](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-vibrator)
+
+ **所在头文件：** [vibrator_type.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-vibrator-type-h)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| int32_t vibratorId | 马达ID |
+| Vibrator_Usage usage | 振动场景 |

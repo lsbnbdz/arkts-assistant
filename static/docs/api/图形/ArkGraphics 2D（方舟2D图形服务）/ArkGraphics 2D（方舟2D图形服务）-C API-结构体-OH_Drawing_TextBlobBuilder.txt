@@ -1,0 +1,18 @@
+# [OH_Drawing_TextBlobBuilder](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-drawing-oh-drawing-textblobbuilder)
+
+## 目录
+- [概述](#概述)
+
+收起自动换行深色代码主题复制
+```
+typedef struct OH_Drawing_TextBlobBuilder OH_Drawing_TextBlobBuilder
+```
+ 
+## 概述
+PhonePC/2in1TabletTVWearable定义文本构建器，用于构建文本。
+
+ **起始版本：** 11
+
+ **相关模块：** [Drawing](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-drawing)
+
+ **所在头文件：** [drawing_types.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-drawing-types-h)

@@ -1,0 +1,125 @@
+# [NetworkBoost_HandoverComplete](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/network-boost-c-struct-handover_complete)
+
+## 目录
+- [概述](#section1525163935162158)
+- [汇总](#section1599768390162158)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section1234989572162158)
+  - [handoverContinue](#a0bf437c3ed4b6a4677cc33ede5e98e32)
+  - [newDataSpeedAction](#a5588fe3f833622f5eb81d34cc6fcbe5f)
+  - [newNetHandle](#a9de97d7518d5b5da314053ae4b4df8a3)
+  - [oldDataSpeedAction](#ae0dfbb93116a17a8df951ab5ee40b437)
+  - [oldPathLifetime](#a4b9a08e22f33ca1f09c30f3ca3b01425)
+  - [pathTypeChanged](#a610d963e22ad2c6151dc5c3f1770a42b)
+  - [reEstAction](#a29c0a1d7ce857c5e3bfb5e775344250b)
+  - [result](#a940df802a9744d5ea6f1c1c4e4460371)
+
+## 概述
+PhonePC/2in1Tablet连接迁移完成信息。
+
+ **起始版本：** 5.1.0(18)
+
+ **相关模块：** [NetworkBoost](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/network-boost-c-overview)
+
+ 
+## 汇总
+PhonePC/2in1Tablet 
+### 成员变量
+ PhonePC/2in1Tablet展开
+| |
+| |
+| |
+| NetworkBoost_ErrorResult result | 连接迁移结果。 |
+| bool handoverContinue | 是否继续等待HandoverComplete消息，当存在两条以上路径时，会存在多个HandoverComplete消息。 true表示还有新链路待激活，系统还会上报HandoverComplete消息，一般发生在连接迁移到多个网络的场景。 false表示当前已经是最后一个HandoverComplete消息，连接迁移流程完成。 |
+| uint32_t oldPathLifetime | 老链路的剩余生存时长，单位为s，取值为任意正整数或0。 |
+| NetworkBoost_DataSpeedAction oldDataSpeedAction | 老链路发包建议。 |
+| bool pathTypeChanged | 新老链路类型是否发生变更。true表示发生变化，如Wi-Fi<->蜂窝。false表示没有发生变化。 |
+| NetworkBoost_NetHandle newNetHandle | 新链路的NetHandle信息。 |
+| NetworkBoost_ReEstAction reEstAction | 链路重建类型。 |
+| NetworkBoost_DataSpeedAction newDataSpeedAction | 新链路发包建议。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1Tablet 
+### handoverContinue
+PhonePC/2in1Tablet收起自动换行深色代码主题复制
+```
+bool NetworkBoost_HandoverComplete::handoverContinue
+```
+ **描述**
+
+ 是否继续等待HandoverComplete消息，当存在两条以上路径时，会存在多个HandoverComplete消息。
+
+ true表示还有新链路待激活，系统还会上报HandoverComplete消息，一般发生在连接迁移到多个网络的场景。
+
+ false表示当前已经是最后一个HandoverComplete消息，连接迁移流程完成。
+
+ 
+### newDataSpeedAction
+PhonePC/2in1Tablet收起自动换行深色代码主题复制
+```
+NetworkBoost_DataSpeedAction NetworkBoost_HandoverComplete::newDataSpeedAction
+```
+ **描述**
+
+ 新链路发包建议。
+
+ 
+### newNetHandle
+PhonePC/2in1Tablet收起自动换行深色代码主题复制
+```
+NetworkBoost_NetHandle NetworkBoost_HandoverComplete::newNetHandle
+```
+ **描述**
+
+ 新链路的NetHandle信息。
+
+ 
+### oldDataSpeedAction
+PhonePC/2in1Tablet收起自动换行深色代码主题复制
+```
+NetworkBoost_DataSpeedAction NetworkBoost_HandoverComplete::oldDataSpeedAction
+```
+ **描述**
+
+ 老链路发包建议。
+
+ 
+### oldPathLifetime
+PhonePC/2in1Tablet收起自动换行深色代码主题复制
+```
+uint32_t NetworkBoost_HandoverComplete::oldPathLifetime
+```
+ **描述**
+
+ 老链路的剩余生存时长，单位为s，取值为任意正整数或0。
+
+ 
+### pathTypeChanged
+PhonePC/2in1Tablet收起自动换行深色代码主题复制
+```
+bool NetworkBoost_HandoverComplete::pathTypeChanged
+```
+ **描述**
+
+ 新老链路类型是否发生变更。true表示发生变化，如Wi-Fi<->蜂窝。false表示没有发生变化。
+
+ 
+### reEstAction
+PhonePC/2in1Tablet收起自动换行深色代码主题复制
+```
+NetworkBoost_ReEstAction NetworkBoost_HandoverComplete::reEstAction
+```
+ **描述**
+
+ 链路重建类型。
+
+ 
+### result
+PhonePC/2in1Tablet收起自动换行深色代码主题复制
+```
+NetworkBoost_ErrorResult NetworkBoost_HandoverComplete::result
+```
+ **描述**
+
+ 连接迁移结果。

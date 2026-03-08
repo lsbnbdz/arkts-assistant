@@ -1,5 +1,5 @@
 {
-  "cann-kit-cann-24": {
+  "cann-kit-cann-25": {
     "title": "版本获取方法",
     "headings": [
       "版本获取方法"
@@ -11,7 +11,7 @@
     "path": "",
     "rel_path": "guide/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-附录-版本获取方法.txt",
     "catalog": "CANN Kit（CANN 服务）",
-    "objectId": "cann-kit-cann-24",
+    "objectId": "cann-kit-cann-25",
     "nodeName": "document",
     "keywords": [
       "版本获取方法",
@@ -276,7 +276,7 @@
       "矢量计算"
     ]
   },
-  "cann-kit-cann-20": {
+  "cann-kit-cann-21": {
     "title": "部署全流程",
     "headings": [
       "部署全流程",
@@ -291,7 +291,7 @@
     "path": "",
     "rel_path": "guide/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-端侧部署-部署全流程.txt",
     "catalog": "CANN Kit（CANN 服务）",
-    "objectId": "cann-kit-cann-20",
+    "objectId": "cann-kit-cann-21",
     "nodeName": "document",
     "keywords": [
       "AIPP",
@@ -363,7 +363,7 @@
       "结构量化"
     ]
   },
-  "cann-kit-cann-3": {
+  "cann-kit-cann-4": {
     "title": "插件式量化",
     "headings": [
       "插件式量化",
@@ -389,7 +389,7 @@
     "path": "",
     "rel_path": "guide/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-模型优化-模型轻量化-插件式量化.txt",
     "catalog": "CANN Kit（CANN 服务）",
-    "objectId": "cann-kit-cann-3",
+    "objectId": "cann-kit-cann-4",
     "nodeName": "document",
     "keywords": [
       "Tensor",
@@ -415,7 +415,7 @@
       "模型轻量化"
     ]
   },
-  "cann-kit-cann-2": {
+  "cann-kit-cann-3": {
     "title": "常见问题",
     "headings": [
       "常见问题",
@@ -429,7 +429,7 @@
     "path": "",
     "rel_path": "guide/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-模型优化-模型轻量化-常见问题.txt",
     "catalog": "CANN Kit（CANN 服务）",
-    "objectId": "cann-kit-cann-2",
+    "objectId": "cann-kit-cann-3",
     "nodeName": "document",
     "keywords": [
       "image",
@@ -615,7 +615,7 @@
       "矢量计算"
     ]
   },
-  "cann-kit-cann": {
+  "cann-kit-cann-1": {
     "title": "单算子应用",
     "headings": [
       "单算子应用",
@@ -631,7 +631,7 @@
     "path": "",
     "rel_path": "guide/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-单算子应用.txt",
     "catalog": "CANN Kit（CANN 服务）",
-    "objectId": "cann-kit-cann",
+    "objectId": "cann-kit-cann-1",
     "nodeName": "document",
     "keywords": [
       "Hi",
@@ -774,7 +774,7 @@
       "基础"
     ]
   },
-  "cann-kit-cann-21": {
+  "cann-kit-cann-22": {
     "title": "端侧部署",
     "headings": [
       "端侧部署"
@@ -786,7 +786,7 @@
     "path": "",
     "rel_path": "guide/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-端侧部署.txt",
     "catalog": "CANN Kit（CANN 服务）",
-    "objectId": "cann-kit-cann-21",
+    "objectId": "cann-kit-cann-22",
     "nodeName": "document",
     "keywords": [
       "端侧部署",
@@ -849,7 +849,7 @@
       "自定义算子开发"
     ]
   },
-  "cann-kit-cann-25": {
+  "cann-kit-cann-26": {
     "title": "附录",
     "headings": [
       "附录"
@@ -861,7 +861,7 @@
     "path": "",
     "rel_path": "guide/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-附录.txt",
     "catalog": "CANN Kit（CANN 服务）",
-    "objectId": "cann-kit-cann-25",
+    "objectId": "cann-kit-cann-26",
     "nodeName": "document",
     "keywords": [
       "附录",
@@ -922,7 +922,7 @@
       "迁移指导"
     ]
   },
-  "cann-kit-cann-5": {
+  "cann-kit-cann-6": {
     "title": "概述",
     "headings": [
       "概述",
@@ -942,7 +942,7 @@
     "path": "",
     "rel_path": "guide/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-模型优化-模型轻量化-概述.txt",
     "catalog": "CANN Kit（CANN 服务）",
-    "objectId": "cann-kit-cann-5",
+    "objectId": "cann-kit-cann-6",
     "nodeName": "document",
     "keywords": [
       "量化",
@@ -4283,6 +4283,42 @@
       "编程"
     ]
   },
+  "cann-kit-cann-c-api-1": {
+    "title": "结构体",
+    "headings": [
+      "结构体"
+    ],
+    "preview": "结构体 - **HiAISingleOpDescriptor_ConvolutionParam** - **HiAI_SingleOpExecutorConvolutionParam** - **HiAI_SingleOpExecutorFusedConvolutionActivationParam**",
+    "char_count": 536,
+    "image_count": 0,
+    "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/cannkit-structs",
+    "path": "",
+    "rel_path": "api/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-C API-头文件和结构体-结构体.txt",
+    "catalog": "CANN Kit（CANN 服务）",
+    "objectId": "cann-kit-cann-c-api-1",
+    "nodeName": "document",
+    "keywords": [
+      "结构体",
+      "Hi",
+      "Op",
+      "Convolution",
+      "Param",
+      "AI",
+      "Single",
+      "Executor",
+      "references",
+      "cannkit",
+      "AIS",
+      "ingle",
+      "Descriptor",
+      "Fused",
+      "Activation",
+      "CANN",
+      "Kit",
+      "服务",
+      "头文件和结构体"
+    ]
+  },
   "cann-kit-cann-ascendc-35": {
     "title": "精度比对结果输出样例",
     "headings": [
@@ -4576,7 +4612,7 @@
       "算子入图"
     ]
   },
-  "cann-kit-cann-1": {
+  "cann-kit-cann-2": {
     "title": "开发准备",
     "headings": [
       "开发准备",
@@ -4591,7 +4627,7 @@
     "path": "",
     "rel_path": "guide/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-开发准备.txt",
     "catalog": "CANN Kit（CANN 服务）",
-    "objectId": "cann-kit-cann-1",
+    "objectId": "cann-kit-cann-2",
     "nodeName": "document",
     "keywords": [
       "Tools",
@@ -4655,7 +4691,7 @@
       "模型转换"
     ]
   },
-  "cann-kit-cann-22": {
+  "cann-kit-cann-23": {
     "title": "可视化工具",
     "headings": [
       "可视化工具",
@@ -4673,7 +4709,7 @@
     "path": "",
     "rel_path": "guide/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-附录-可视化工具.txt",
     "catalog": "CANN Kit（CANN 服务）",
-    "objectId": "cann-kit-cann-22",
+    "objectId": "cann-kit-cann-23",
     "nodeName": "document",
     "keywords": [
       "Netron",
@@ -4782,7 +4818,7 @@
       "自定义算子开发"
     ]
   },
-  "cann-kit-cann-13": {
+  "cann-kit-cann-14": {
     "title": "离线模型转换",
     "headings": [
       "离线模型转换"
@@ -4794,7 +4830,7 @@
     "path": "",
     "rel_path": "guide/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-模型转换-离线模型转换.txt",
     "catalog": "CANN Kit（CANN 服务）",
-    "objectId": "cann-kit-cann-13",
+    "objectId": "cann-kit-cann-14",
     "nodeName": "document",
     "keywords": [
       "离线模型转换",
@@ -4865,7 +4901,31 @@
       "结构量化"
     ]
   },
-  "cann-kit-cann-9": {
+  "cann-kit-cann-c-api-3": {
+    "title": "模块",
+    "headings": [
+      "模块"
+    ],
+    "preview": "模块 - **CANN**",
+    "char_count": 176,
+    "image_count": 0,
+    "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/cannkit-index",
+    "path": "",
+    "rel_path": "api/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-C API-模块.txt",
+    "catalog": "CANN Kit（CANN 服务）",
+    "objectId": "cann-kit-cann-c-api-3",
+    "nodeName": "document",
+    "keywords": [
+      "模块",
+      "CANN",
+      "references",
+      "cannkit",
+      "Kit",
+      "服务",
+      "AI"
+    ]
+  },
+  "cann-kit-cann-10": {
     "title": "模型轻量化",
     "headings": [
       "模型轻量化"
@@ -4877,7 +4937,7 @@
     "path": "",
     "rel_path": "guide/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-模型优化-模型轻量化.txt",
     "catalog": "CANN Kit（CANN 服务）",
-    "objectId": "cann-kit-cann-9",
+    "objectId": "cann-kit-cann-10",
     "nodeName": "document",
     "keywords": [
       "cannkit",
@@ -4902,7 +4962,7 @@
       "模型优化"
     ]
   },
-  "cann-kit-cann-7": {
+  "cann-kit-cann-8": {
     "title": "模型轻量化示例",
     "headings": [
       "模型轻量化示例",
@@ -4928,7 +4988,7 @@
     "path": "",
     "rel_path": "guide/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-模型优化-模型轻量化-模型轻量化示例.txt",
     "catalog": "CANN Kit（CANN 服务）",
-    "objectId": "cann-kit-cann-7",
+    "objectId": "cann-kit-cann-8",
     "nodeName": "document",
     "keywords": [
       "mnist",
@@ -4954,7 +5014,7 @@
       "模型轻量化"
     ]
   },
-  "cann-kit-cann-6": {
+  "cann-kit-cann-7": {
     "title": "模型收益",
     "headings": [
       "模型收益",
@@ -4971,7 +5031,7 @@
     "path": "",
     "rel_path": "guide/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-模型优化-模型轻量化-模型收益.txt",
     "catalog": "CANN Kit（CANN 服务）",
-    "objectId": "cann-kit-cann-6",
+    "objectId": "cann-kit-cann-7",
     "nodeName": "document",
     "keywords": [
       "Image",
@@ -4997,7 +5057,7 @@
       "模型轻量化"
     ]
   },
-  "cann-kit-cann-17": {
+  "cann-kit-cann-18": {
     "title": "模型推理",
     "headings": [
       "模型推理",
@@ -5014,7 +5074,7 @@
     "path": "",
     "rel_path": "guide/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-端侧部署-模型推理.txt",
     "catalog": "CANN Kit（CANN 服务）",
-    "objectId": "cann-kit-cann-17",
+    "objectId": "cann-kit-cann-18",
     "nodeName": "document",
     "keywords": [
       "模型推理",
@@ -5039,7 +5099,7 @@
       "端侧部署"
     ]
   },
-  "cann-kit-cann-10": {
+  "cann-kit-cann-11": {
     "title": "模型优化",
     "headings": [
       "模型优化"
@@ -5051,7 +5111,7 @@
     "path": "",
     "rel_path": "guide/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-模型优化.txt",
     "catalog": "CANN Kit（CANN 服务）",
-    "objectId": "cann-kit-cann-10",
+    "objectId": "cann-kit-cann-11",
     "nodeName": "document",
     "keywords": [
       "模型优化",
@@ -5071,7 +5131,7 @@
       "AI"
     ]
   },
-  "cann-kit-cann-14": {
+  "cann-kit-cann-15": {
     "title": "模型转换",
     "headings": [
       "模型转换"
@@ -5083,7 +5143,7 @@
     "path": "",
     "rel_path": "guide/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-模型转换.txt",
     "catalog": "CANN Kit（CANN 服务）",
-    "objectId": "cann-kit-cann-14",
+    "objectId": "cann-kit-cann-15",
     "nodeName": "document",
     "keywords": [
       "模型转换",
@@ -5105,7 +5165,7 @@
       "AI"
     ]
   },
-  "cann-kit-cann-11": {
+  "cann-kit-cann-12": {
     "title": "模型转换前准备",
     "headings": [
       "模型转换前准备"
@@ -5117,7 +5177,7 @@
     "path": "",
     "rel_path": "guide/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-模型转换-离线模型转换-模型转换前准备.txt",
     "catalog": "CANN Kit（CANN 服务）",
-    "objectId": "cann-kit-cann-11",
+    "objectId": "cann-kit-cann-12",
     "nodeName": "document",
     "keywords": [
       "Caffe",
@@ -5140,7 +5200,7 @@
       "离线模型转换"
     ]
   },
-  "cann-kit-cann-12": {
+  "cann-kit-cann-13": {
     "title": "模型转换示例",
     "headings": [
       "模型转换示例",
@@ -5160,7 +5220,7 @@
     "path": "",
     "rel_path": "guide/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-模型转换-离线模型转换-模型转换示例.txt",
     "catalog": "CANN Kit（CANN 服务）",
-    "objectId": "cann-kit-cann-12",
+    "objectId": "cann-kit-cann-13",
     "nodeName": "document",
     "keywords": [
       "模型转换",
@@ -5372,7 +5432,7 @@
       "基础"
     ]
   },
-  "cann-kit-cann-15": {
+  "cann-kit-cann-16": {
     "title": "内存零拷贝",
     "headings": [
       "内存零拷贝",
@@ -5387,7 +5447,7 @@
     "path": "",
     "rel_path": "guide/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-端侧部署-内存零拷贝.txt",
     "catalog": "CANN Kit（CANN 服务）",
-    "objectId": "cann-kit-cann-15",
+    "objectId": "cann-kit-cann-16",
     "nodeName": "document",
     "keywords": [
       "ION",
@@ -5740,7 +5800,7 @@
       "附录"
     ]
   },
-  "cann-kit-cann-18": {
+  "cann-kit-cann-19": {
     "title": "深度融合",
     "headings": [
       "深度融合"
@@ -5752,7 +5812,7 @@
     "path": "",
     "rel_path": "guide/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-端侧部署-深度融合.txt",
     "catalog": "CANN Kit（CANN 服务）",
-    "objectId": "cann-kit-cann-18",
+    "objectId": "cann-kit-cann-19",
     "nodeName": "document",
     "keywords": [
       "深度融合",
@@ -7467,6 +7527,69 @@
       "附录"
     ]
   },
+  "cann-kit-cann-c-api": {
+    "title": "头文件",
+    "headings": [
+      "头文件"
+    ],
+    "preview": "头文件 - **hiai_aipp_param.h** - **hiai_helper.h** - **hiai_options.h** - **hiai_single_op.h** - **hiai_tensor.h**",
+    "char_count": 669,
+    "image_count": 0,
+    "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/cannkit-files",
+    "path": "",
+    "rel_path": "api/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-C API-头文件和结构体-头文件.txt",
+    "catalog": "CANN Kit（CANN 服务）",
+    "objectId": "cann-kit-cann-c-api",
+    "nodeName": "document",
+    "keywords": [
+      "hiai",
+      "头文件",
+      "references",
+      "cannkit",
+      "aipp",
+      "param",
+      "helper",
+      "options",
+      "single",
+      "tensor",
+      "files",
+      "CANN",
+      "Kit",
+      "服务",
+      "AI",
+      "头文件和结构体"
+    ]
+  },
+  "cann-kit-cann-c-api-2": {
+    "title": "头文件和结构体",
+    "headings": [
+      "头文件和结构体"
+    ],
+    "preview": "头文件和结构体 - **头文件** - **结构体**",
+    "char_count": 282,
+    "image_count": 0,
+    "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/cannkit-total",
+    "path": "",
+    "rel_path": "api/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-C API-头文件和结构体.txt",
+    "catalog": "CANN Kit（CANN 服务）",
+    "objectId": "cann-kit-cann-c-api-2",
+    "nodeName": "document",
+    "keywords": [
+      "头文件和结构体",
+      "结构体",
+      "references",
+      "cannkit",
+      "头文件和",
+      "头文件",
+      "total",
+      "files",
+      "structs",
+      "CANN",
+      "Kit",
+      "服务",
+      "AI"
+    ]
+  },
   "cann-kit-cann-ascendc-ge": {
     "title": "图编译和图执行",
     "headings": [
@@ -7551,7 +7674,7 @@
       "常见问题"
     ]
   },
-  "cann-kit-cann-8": {
+  "cann-kit-cann-9": {
     "title": "网络结构搜索训练",
     "headings": [
       "网络结构搜索训练",
@@ -7577,7 +7700,7 @@
     "path": "",
     "rel_path": "guide/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-模型优化-模型轻量化-网络结构搜索训练.txt",
     "catalog": "CANN Kit（CANN 服务）",
-    "objectId": "cann-kit-cann-8",
+    "objectId": "cann-kit-cann-9",
     "nodeName": "document",
     "keywords": [
       "network",
@@ -7603,7 +7726,7 @@
       "模型轻量化"
     ]
   },
-  "cann-kit-cann-19": {
+  "cann-kit-cann-20": {
     "title": "维测调优",
     "headings": [
       "维测调优",
@@ -7619,7 +7742,7 @@
     "path": "",
     "rel_path": "guide/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-端侧部署-维测调优.txt",
     "catalog": "CANN Kit（CANN 服务）",
-    "objectId": "cann-kit-cann-19",
+    "objectId": "cann-kit-cann-20",
     "nodeName": "document",
     "keywords": [
       "维测调优",
@@ -7641,7 +7764,7 @@
       "端侧部署"
     ]
   },
-  "cann-kit-cann-4": {
+  "cann-kit-cann-5": {
     "title": "无训练量化",
     "headings": [
       "无训练量化",
@@ -7667,7 +7790,7 @@
     "path": "",
     "rel_path": "guide/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-模型优化-模型轻量化-无训练量化.txt",
     "catalog": "CANN Kit（CANN 服务）",
-    "objectId": "cann-kit-cann-4",
+    "objectId": "cann-kit-cann-5",
     "nodeName": "document",
     "keywords": [
       "bit",
@@ -7772,7 +7895,7 @@
       "基础"
     ]
   },
-  "cann-kit-cann-16": {
+  "cann-kit-cann-17": {
     "title": "异构",
     "headings": [
       "异构",
@@ -7788,7 +7911,7 @@
     "path": "",
     "rel_path": "guide/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-端侧部署-异构.txt",
     "catalog": "CANN Kit（CANN 服务）",
-    "objectId": "cann-kit-cann-16",
+    "objectId": "cann-kit-cann-17",
     "nodeName": "document",
     "keywords": [
       "OP",
@@ -8122,7 +8245,7 @@
       "基础"
     ]
   },
-  "cann-kit-cann-23": {
+  "cann-kit-cann-24": {
     "title": "支持的算子",
     "headings": [
       "支持的算子",
@@ -8136,7 +8259,7 @@
     "path": "",
     "rel_path": "guide/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-附录-支持的算子.txt",
     "catalog": "CANN Kit（CANN 服务）",
-    "objectId": "cann-kit-cann-23",
+    "objectId": "cann-kit-cann-24",
     "nodeName": "document",
     "keywords": [
       "image",
@@ -10503,6 +10626,35 @@
       "命名空间"
     ]
   },
+  "cann-kit-cann-c-api-4": {
+    "title": "C API",
+    "headings": [
+      "C API"
+    ],
+    "preview": "C API - **模块** - **头文件和结构体**",
+    "char_count": 285,
+    "image_count": 0,
+    "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/hiai-foundation-c",
+    "path": "",
+    "rel_path": "api/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-C API.txt",
+    "catalog": "CANN Kit（CANN 服务）",
+    "objectId": "cann-kit-cann-c-api-4",
+    "nodeName": "document",
+    "keywords": [
+      "references",
+      "cannkit",
+      "模块",
+      "头文件和",
+      "结构体",
+      "hiai",
+      "foundation",
+      "total",
+      "CANN",
+      "Kit",
+      "服务",
+      "AI"
+    ]
+  },
   "cann-kit-cann-ascendc-ascendc-gert-computenodeinfo-calcsize": {
     "title": "CalcSize",
     "headings": [
@@ -10652,7 +10804,81 @@
       "平台信息获取"
     ]
   },
-  "cann-kit-cann-26": {
+  "cann-kit-cann-c-api-cann": {
+    "title": "CANN",
+    "headings": [
+      "CANN",
+      "目录",
+      "概述",
+      "汇总",
+      "文件",
+      "结构体",
+      "类型定义",
+      "枚举",
+      "函数",
+      "类型定义说明",
+      "HiAI_AippParam",
+      "HiAI_SingleOpBuffer",
+      "HiAI_SingleOpDescriptor",
+      "HiAISingleOpDescriptor_ConvolutionParam",
+      "HiAI_SingleOpExecutor"
+    ],
+    "preview": "CANN 概述 PhonePC/2in1TabletTV提供CANN Kit模型推理的相关接口。 **系统能力：** SystemCapability.AI.HiAIFoundation **起始版本：** 4.1.0(11) 注意CANN Kit的模型编译、加载、推理等基础功能接口已抽取放在neural_network_core.h中，此处重点描述高阶功能。 汇总 PhonePC/2in1TabletTV 文件 PhonePC/2in1TabletTV展开 hiai_aipp_param.h 模型推理时动态AIPP对象创建，参数设置和查询的接口。 hiai_helper.",
+    "char_count": 122190,
+    "image_count": 0,
+    "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/cannkit",
+    "path": "",
+    "rel_path": "api/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-C API-模块-CANN.txt",
+    "catalog": "CANN Kit（CANN 服务）",
+    "objectId": "cann-kit-cann-c-api-cann",
+    "nodeName": "document",
+    "keywords": [
+      "Hi",
+      "hiai",
+      "AI",
+      "Op",
+      "Single",
+      "CANN",
+      "Image",
+      "Mode",
+      "Param",
+      "network",
+      "HMS",
+      "类型定义",
+      "Convolution",
+      "Executor",
+      "Format",
+      "Kit",
+      "服务",
+      "模块"
+    ]
+  },
+  "cann-kit-cann": {
+    "title": "CANN Kit（CANN 服务）",
+    "headings": [
+      "CANN Kit（CANN 服务）"
+    ],
+    "preview": "CANN Kit（CANN 服务） - **C API**",
+    "char_count": 197,
+    "image_count": 0,
+    "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/cann-api",
+    "path": "",
+    "rel_path": "api/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）.txt",
+    "catalog": "CANN Kit（CANN 服务）",
+    "objectId": "cann-kit-cann",
+    "nodeName": "document",
+    "keywords": [
+      "CANN",
+      "Kit",
+      "服务",
+      "references",
+      "cann",
+      "hiai",
+      "foundation",
+      "AI"
+    ]
+  },
+  "cann-kit-cann-27": {
     "title": "CANN Kit（CANN 服务）",
     "headings": [
       "CANN Kit（CANN 服务）"
@@ -10664,7 +10890,7 @@
     "path": "",
     "rel_path": "guide/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）.txt",
     "catalog": "CANN Kit（CANN 服务）",
-    "objectId": "cann-kit-cann-26",
+    "objectId": "cann-kit-cann-27",
     "nodeName": "document",
     "keywords": [
       "CANN",
@@ -25839,6 +26065,361 @@
       "算子接口",
       "基础",
       "内存管理与同步控制"
+    ]
+  },
+  "cann-kit-cann-c-api-hiai-aipp-param-h": {
+    "title": "hiai_aipp_param.h",
+    "headings": [
+      "hiai_aipp_param.h",
+      "目录",
+      "概述",
+      "汇总",
+      "类型定义",
+      "枚举",
+      "函数"
+    ],
+    "preview": "hiai_aipp_param.h 概述 PhonePC/2in1TabletTV模型推理时动态AIPP对象创建，参数设置和查询的接口。 **库：** libhiai_foundation.so **系统能力：** SystemCapability.AI.HiAIFoundation **起始版本：** 4.1.0(11) **相关模块：**CANN 汇总 PhonePC/2in1TabletTV 类型定义 PhonePC/2in1TabletTV展开 typedef struct HiAI_AippParam HiAI_AippParam AIPP参数对象。",
+    "char_count": 6533,
+    "image_count": 0,
+    "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/cannkit-hiai-aipp-param-8h",
+    "path": "",
+    "rel_path": "api/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-C API-头文件和结构体-头文件-hiai_aipp_param.h.txt",
+    "catalog": "CANN Kit（CANN 服务）",
+    "objectId": "cann-kit-cann-c-api-hiai-aipp-param-h",
+    "nodeName": "document",
+    "keywords": [
+      "Param",
+      "Hi",
+      "Aipp",
+      "aipp",
+      "HIAI",
+      "AI",
+      "hiai",
+      "param",
+      "Image",
+      "IMAGE",
+      "HMS",
+      "AIA",
+      "ipp",
+      "AIPP",
+      "YUV",
+      "CANN",
+      "Kit",
+      "服务",
+      "头文件和结构体",
+      "头文件"
+    ]
+  },
+  "cann-kit-cann-c-api-hiai-helper-h": {
+    "title": "hiai_helper.h",
+    "headings": [
+      "hiai_helper.h",
+      "目录",
+      "概述",
+      "汇总",
+      "枚举",
+      "函数"
+    ],
+    "preview": "hiai_helper.h 概述 PhonePC/2in1TabletTV查询CANN Kit版本以及检查模型支持情况的接口。 **库：** libhiai_foundation.so **系统能力：** SystemCapability.AI.HiAIFoundation **起始版本：** 4.1.",
+    "char_count": 1056,
+    "image_count": 0,
+    "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/cannkit-hiai-helper-8h",
+    "path": "",
+    "rel_path": "api/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-C API-头文件和结构体-头文件-hiai_helper.h.txt",
+    "catalog": "CANN Kit（CANN 服务）",
+    "objectId": "cann-kit-cann-c-api-hiai-helper-h",
+    "nodeName": "document",
+    "keywords": [
+      "hiai",
+      "helper",
+      "Hi",
+      "AI",
+      "CANN",
+      "概述",
+      "Kit",
+      "Compatibility",
+      "const",
+      "HMS",
+      "NPU",
+      "汇总",
+      "枚举",
+      "函数",
+      "libhiai",
+      "服务",
+      "头文件和结构体",
+      "头文件"
+    ]
+  },
+  "cann-kit-cann-c-api-hiai-options-h": {
+    "title": "hiai_options.h",
+    "headings": [
+      "hiai_options.h",
+      "目录",
+      "概述",
+      "汇总",
+      "枚举",
+      "函数"
+    ],
+    "preview": "hiai_options.h 概述 PhonePC/2in1TabletTV选项参数的接口。 支持设置动态shape、变更模型shape、设置数据排列格式、算子融合策略、量化配置、算子级调优、模型级调优、辅助调优、带宽模式等参数配置。 **库：** libhiai_foundation.so **系统能力：** SystemCapability.AI.HiAIFoundation **起始版本：** 4.1.",
+    "char_count": 6202,
+    "image_count": 0,
+    "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/cannkit-hiai-options-8h",
+    "path": "",
+    "rel_path": "api/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-C API-头文件和结构体-头文件-hiai_options.h.txt",
+    "catalog": "CANN Kit（CANN 服务）",
+    "objectId": "cann-kit-cann-c-api-hiai-options-h",
+    "nodeName": "document",
+    "keywords": [
+      "HIAI",
+      "Hi",
+      "AI",
+      "hiai",
+      "options",
+      "TUNING",
+      "DEVICE",
+      "shape",
+      "Mode",
+      "MODE",
+      "DYNAMIC",
+      "SHAPE",
+      "STRATEGY",
+      "BANDMODE",
+      "概述",
+      "CANN",
+      "Kit",
+      "服务",
+      "头文件和结构体",
+      "头文件"
+    ]
+  },
+  "cann-kit-cann-c-api-hiai-single-op-h": {
+    "title": "hiai_single_op.h",
+    "headings": [
+      "hiai_single_op.h",
+      "目录",
+      "概述",
+      "汇总",
+      "结构体",
+      "类型定义",
+      "枚举",
+      "函数"
+    ],
+    "preview": "hiai_single_op.h 概述 PhonePC/2in1TabletTV定义CANN Kit单算子接口，用于单算子的创建、计算以及Tensor和Buffer的管理。 **库：** libhiai_foundation.so **系统能力：** SystemCapability.AI.HiAIFoundation **起始版本：** 5.0.",
+    "char_count": 7513,
+    "image_count": 0,
+    "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/cannkit-hiai-single-op-8h",
+    "path": "",
+    "rel_path": "api/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-C API-头文件和结构体-头文件-hiai_single_op.h.txt",
+    "catalog": "CANN Kit（CANN 服务）",
+    "objectId": "cann-kit-cann-c-api-hiai-single-op-h",
+    "nodeName": "document",
+    "keywords": [
+      "Hi",
+      "Op",
+      "AI",
+      "Single",
+      "struct",
+      "Convolution",
+      "hiai",
+      "single",
+      "Executor",
+      "typedef",
+      "Tensor",
+      "AIS",
+      "ingle",
+      "op",
+      "Descriptor",
+      "CANN",
+      "Kit",
+      "服务",
+      "头文件和结构体",
+      "头文件"
+    ]
+  },
+  "cann-kit-cann-c-api-hiai-singleopexecutorconvolutionparam": {
+    "title": "HiAI_SingleOpExecutorConvolutionParam",
+    "headings": [
+      "HiAI_SingleOpExecutorConvolutionParam",
+      "目录",
+      "概述",
+      "汇总",
+      "成员变量",
+      "结构体成员变量说明",
+      "bias",
+      "filter",
+      "input",
+      "opDesc",
+      "options",
+      "output"
+    ],
+    "preview": "HiAI_SingleOpExecutorConvolutionParam 概述 PhonePC/2in1TabletTVHMS_HiAISingleOpExecutor_CreateConvolution输入参数。 **起始版本：** 5.0.0(12) **相关模块：**CANN **所在头文件：**hiai_single_op.h 汇总 PhonePC/2in1TabletTV 成员变量 PhonePC/2in1TabletTV展开 HiAI_SingleOpOptions * options 指向HiAI_SingleOpOptions对象的指针。该值不能为空指针，否则接口调用失败。",
+    "char_count": 2599,
+    "image_count": 0,
+    "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/cannkit-sopexec-convparam",
+    "path": "",
+    "rel_path": "api/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-C API-头文件和结构体-结构体-HiAI_SingleOpExecutorConvolutionParam.txt",
+    "catalog": "CANN Kit（CANN 服务）",
+    "objectId": "cann-kit-cann-c-api-hiai-singleopexecutorconvolutionparam",
+    "nodeName": "document",
+    "keywords": [
+      "Hi",
+      "Op",
+      "AI",
+      "Single",
+      "Tensor",
+      "Executor",
+      "Convolution",
+      "该值不能",
+      "为空指针",
+      "否则接口",
+      "调用失败",
+      "HiAI",
+      "SingleOpExecutorConvolutionParam",
+      "Desc",
+      "Param",
+      "CANN",
+      "Kit",
+      "服务",
+      "头文件和结构体",
+      "结构体"
+    ]
+  },
+  "cann-kit-cann-c-api-hiai-singleopexecutorfusedconvolutionact": {
+    "title": "HiAI_SingleOpExecutorFusedConvolutionActivationParam",
+    "headings": [
+      "目录",
+      "概述",
+      "汇总",
+      "成员变量",
+      "结构体成员变量说明",
+      "actOpDesc",
+      "bias",
+      "convOpDesc",
+      "filter",
+      "input",
+      "options",
+      "output"
+    ],
+    "preview": "HiAI_SingleOpExecutorFusedConvolutionActivationParam 概述 PhonePC/2in1TabletTVHMS_HiAISingleOpExecutor_CreateFusedConvolutionActivation输入参数。 **起始版本：** 5.0.0(12) **相关模块：**CANN **所在头文件：**hiai_single_op.",
+    "char_count": 3205,
+    "image_count": 0,
+    "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/cannkit-sopexec-fusedconv-actparam",
+    "path": "",
+    "rel_path": "api/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-C API-头文件和结构体-结构体-HiAI_SingleOpExecutorFusedConvolutionActivationParam.txt",
+    "catalog": "CANN Kit（CANN 服务）",
+    "objectId": "cann-kit-cann-c-api-hiai-singleopexecutorfusedconvolutionact",
+    "nodeName": "document",
+    "keywords": [
+      "Op",
+      "Hi",
+      "AI",
+      "Single",
+      "Tensor",
+      "Desc",
+      "HiAI",
+      "SingleOpExecutorFusedConvolutionActivationParam",
+      "该值不能",
+      "为空指针",
+      "否则接口",
+      "调用失败",
+      "Executor",
+      "Fused",
+      "Convolution",
+      "CANN",
+      "Kit",
+      "服务",
+      "头文件和结构体",
+      "结构体"
+    ]
+  },
+  "cann-kit-cann-c-api-hiai-tensor-h": {
+    "title": "hiai_tensor.h",
+    "headings": [
+      "hiai_tensor.h",
+      "目录",
+      "概述",
+      "汇总",
+      "函数"
+    ],
+    "preview": "hiai_tensor.h 概述 PhonePC/2in1TabletTV模型推理时使用的输入输出内存相关的辅助接口。 通过以下接口，可以关联AippParam到tensor中，也可计算图片格式需要申请的tensor内存大小。 **库：** libhiai_foundation.so **系统能力：** SystemCapability.AI.HiAIFoundation **起始版本：** 4.1.",
+    "char_count": 812,
+    "image_count": 0,
+    "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/cannkit-hiai-tensor-8h",
+    "path": "",
+    "rel_path": "api/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-C API-头文件和结构体-头文件-hiai_tensor.h.txt",
+    "catalog": "CANN Kit（CANN 服务）",
+    "objectId": "cann-kit-cann-c-api-hiai-tensor-h",
+    "nodeName": "document",
+    "keywords": [
+      "tensor",
+      "Image",
+      "hiai",
+      "Hi",
+      "Aipp",
+      "AI",
+      "NN",
+      "Tensor",
+      "概述",
+      "Param",
+      "Format",
+      "Params",
+      "汇总",
+      "函数",
+      "libhiai",
+      "CANN",
+      "Kit",
+      "服务",
+      "头文件和结构体",
+      "头文件"
+    ]
+  },
+  "cann-kit-cann-c-api-hiaisingleopdescriptor-convolutionparam": {
+    "title": "HiAISingleOpDescriptor_ConvolutionParam",
+    "headings": [
+      "HiAISingleOpDescriptor_ConvolutionParam",
+      "目录",
+      "概述",
+      "汇总",
+      "成员变量",
+      "结构体成员变量说明",
+      "convMode",
+      "dilations",
+      "groups",
+      "padMode",
+      "pads",
+      "strides"
+    ],
+    "preview": "HiAISingleOpDescriptor_ConvolutionParam 概述 PhonePC/2in1TabletTVHMS_HiAISingleOpDescriptor_CreateConvolution输入参数。 **起始版本：** 5.0.0(12) **相关模块：**CANN **所在头文件：**hiai_single_op.h 汇总 PhonePC/2in1TabletTV 成员变量 PhonePC/2in1TabletTV展开 HiAI_SingleOpConvMode convMode 卷积模式。",
+    "char_count": 2948,
+    "image_count": 0,
+    "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/cannkit-sopdesc-convparam",
+    "path": "",
+    "rel_path": "api/AI/CANN Kit（CANN 服务）/CANN Kit（CANN 服务）-C API-头文件和结构体-结构体-HiAISingleOpDescriptor_ConvolutionParam.txt",
+    "catalog": "CANN Kit（CANN 服务）",
+    "objectId": "cann-kit-cann-c-api-hiaisingleopdescriptor-convolutionparam",
+    "nodeName": "document",
+    "keywords": [
+      "Mode",
+      "Hi",
+      "Op",
+      "int",
+      "HiAISingleOpDescriptor",
+      "ConvolutionParam",
+      "AIS",
+      "ingle",
+      "Descriptor",
+      "Convolution",
+      "conv",
+      "dilations",
+      "groups",
+      "HIAI",
+      "SINGLEOP",
+      "CANN",
+      "Kit",
+      "服务",
+      "AI",
+      "头文件和结构体",
+      "结构体"
     ]
   },
   "cann-kit-cann-ascendc-ascendc-ascendc-api-host-api-2": {

@@ -1,0 +1,9 @@
+# [spatialRender](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/spatial-recon-ns)
+
+- **[GSNode（3DGS渲染对象）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/spatial-recon-gsnode)**
+ - **[GSPlugin](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/spatial-recon-gsplugin)**
+ - **[GSImportSettings](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/spatial-recon-gsimport)**
+ - **[RetroEffect](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/spatial-recon-retro)**
+ - **[ComicEffect](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/spatial-recon-comic)**
+ - **[ObraDinnEffect](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/spatial-recon-obradinn)**
+ - **[ColorEditingEffect](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/spatial-recon-coloredit)**

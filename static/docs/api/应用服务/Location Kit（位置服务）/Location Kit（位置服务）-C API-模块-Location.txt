@@ -1,0 +1,19 @@
+# [Location](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-location)
+
+## 目录
+- [概述](#概述)
+- [文件汇总](#文件汇总)
+
+## 概述
+PhonePC/2in1TabletWearable提供用于查询位置开关状态、启动和停止定位的功能。
+
+ **起始版本：** 13
+
+ 
+## 文件汇总
+ PhonePC/2in1TabletWearable展开
+| |
+| |
+| |
+| oh_location.h | 定义查询位置开关状态、启动定位、停止定位的接口。 |
+| oh_location_type.h | 定义位置服务常用的属性。 |

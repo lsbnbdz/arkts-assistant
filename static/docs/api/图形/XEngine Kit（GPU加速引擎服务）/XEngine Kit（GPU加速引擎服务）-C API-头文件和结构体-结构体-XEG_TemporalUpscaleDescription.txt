@@ -1,0 +1,135 @@
+# [XEG_TemporalUpscaleDescription](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/xengine-kit-xeg-temporalupscaledescription)
+
+## 目录
+- [概述](#概述)
+- [汇总](#汇总)
+  - [成员变量](#成员变量)
+- [结构体成员变量说明](#结构体成员变量说明)
+  - [depthImage](#depthimage)
+  - [dynamicMaskImage](#dynamicmaskimage)
+  - [inputImage](#inputimage)
+  - [jitterX](#jitterx)
+  - [jitterY](#jittery)
+  - [motionVectorImage](#motionvectorimage)
+  - [outputImage](#outputimage)
+  - [resetHistory](#resethistory)
+  - [steadyLevel](#steadylevel)
+
+## 概述
+PhonePC/2in1TabletTV此结构体描述下发时域AI超分渲染命令时的输入信息。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [XEngine](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/xengine-kit-xengine)
+
+ **所在头文件：**[xeg_vulkan_temporal_upscale.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/xengine-kit-xeg-vulkan-temporal-upscale-8h)
+
+ 
+## 汇总
+PhonePC/2in1TabletTV 
+### 成员变量
+ PhonePC/2in1TabletTV展开
+| |
+| |
+| |
+| VkImageView inputImage | 输入图像。 |
+| VkImageView depthImage | 深度图像。 |
+| VkImageView motionVectorImage | 运动矢量图像。运动矢量的计算方式为当前渲染像素的NDC坐标的XY值减去上一帧的NDC坐标的XY值。图像格式需要是VK_FORMAT_R16G16_SFLOAT或更高精度。 |
+| VkImageView dynamicMaskImage | 物体的动态遮罩图像，格式需要是VK_FORMAT_R8_UNORM或其兼容格式。R通道的合法值为0.0，0.2或1.0，其中0.0表示静态物体，0.2表示运动物体如人物，1.0表示特效或半透明物体。 |
+| VkImageView outputImage | 输出图像。 |
+| float jitterX | 相机在X方向上的抖动。 |
+| float jitterY | 相机在Y方向上的抖动。 |
+| bool resetHistory | 是否重置历史帧数据，true表示重置，false表示不重置。在历史帧未使用超分，当前帧开始使用超分的情况下建议设置为true。 |
+| float steadyLevel | 画面偏向当前帧（鬼影少但可能存在闪烁）还是历史帧（鬼影多但是更稳定）的平衡程度。取值范围为[0.0, 1.0]，值越大越偏向历史帧。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTV 
+### depthImage
+PhonePC/2in1TabletTV收起自动换行深色代码主题复制
+```
+VkImageView XEG_TemporalUpscaleDescription::depthImage
+```
+ **描述**
+
+ 深度图像。
+
+ 
+### dynamicMaskImage
+PhonePC/2in1TabletTV收起自动换行深色代码主题复制
+```
+VkImageView XEG_TemporalUpscaleDescription::dynamicMaskImage
+```
+ **描述**
+
+ 物体的动态遮罩图像，格式需要是VK_FORMAT_R8_UNORM或其兼容格式。R通道的合法值为0.0，0.2或1.0，其中0.0表示静态物体，0.2表示运动物体如人物，1.0表示特效或半透明物体。
+
+ 
+### inputImage
+PhonePC/2in1TabletTV收起自动换行深色代码主题复制
+```
+VkImageView XEG_TemporalUpscaleDescription::inputImage
+```
+ **描述**
+
+ 输入图像。
+
+ 
+### jitterX
+PhonePC/2in1TabletTV收起自动换行深色代码主题复制
+```
+float XEG_TemporalUpscaleDescription::jitterX
+```
+ **描述**
+
+ 相机在X方向上的抖动。
+
+ 
+### jitterY
+PhonePC/2in1TabletTV收起自动换行深色代码主题复制
+```
+float XEG_TemporalUpscaleDescription::jitterY
+```
+ **描述**
+
+ 相机在Y方向上的抖动。
+
+ 
+### motionVectorImage
+PhonePC/2in1TabletTV收起自动换行深色代码主题复制
+```
+VkImageView XEG_TemporalUpscaleDescription::motionVectorImage
+```
+ **描述**
+
+ 运动矢量图像。运动矢量的计算方式为当前渲染像素的NDC坐标的XY值减去上一帧的NDC坐标的XY值。图像格式需要是VK_FORMAT_R16G16_SFLOAT或更高精度。
+
+ 
+### outputImage
+PhonePC/2in1TabletTV收起自动换行深色代码主题复制
+```
+VkImageView XEG_TemporalUpscaleDescription::outputImage
+```
+ **描述**
+
+ 输出图像。
+
+ 
+### resetHistory
+PhonePC/2in1TabletTV收起自动换行深色代码主题复制
+```
+bool XEG_TemporalUpscaleDescription::resetHistory
+```
+ **描述**
+
+ 是否重置历史帧数据，true表示重置，false表示不重置。在历史帧未使用超分，当前帧开始使用超分的情况下建议设置为true。
+
+ 
+### steadyLevel
+PhonePC/2in1TabletTV收起自动换行深色代码主题复制
+```
+float XEG_TemporalUpscaleDescription::steadyLevel
+```
+ **描述**
+
+ 画面偏向当前帧（鬼影少但可能存在闪烁）还是历史帧（鬼影多但是更稳定）的平衡程度。取值范围为[0.0, 1.0]，值越大越偏向历史帧。

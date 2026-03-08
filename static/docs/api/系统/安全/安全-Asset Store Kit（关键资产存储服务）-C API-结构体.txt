@@ -1,0 +1,8 @@
+# [结构体](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/asset-store-struct)
+
+- **[Asset_Blob](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-assettype-asset-blob)**
+ - **[Asset_Value](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-assettype-asset-value)**
+ - **[Asset_Attr](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-assettype-asset-attr)**
+ - **[Asset_Result](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-assettype-asset-result)**
+ - **[Asset_ResultSet](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-assettype-asset-resultset)**
+ - **[Asset_SyncResult](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-assettype-asset-syncresult)**

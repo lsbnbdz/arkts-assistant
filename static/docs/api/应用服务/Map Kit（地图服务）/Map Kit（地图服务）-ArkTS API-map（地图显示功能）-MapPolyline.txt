@@ -1,0 +1,776 @@
+# [MapPolyline](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-mappolyline)
+
+## 目录
+- [导入模块](#section164051883419)
+- [MapPolyline](#section5201165010417)
+  - [getColor](#section87076104217)
+  - [getColors](#section159522231454)
+  - [getEndCap](#section1263121981013)
+  - [getJointType](#section1319213811139)
+  - [getPatterns](#section372410587159)
+  - [getPoints](#section8282453102511)
+  - [getStartCap](#section102925512278)
+  - [getWidth](#section1198333112529)
+  - [isClickable](#section151342189532)
+  - [isGeodesic](#section2055002716534)
+  - [isGradient](#section1439911305535)
+  - [setClickable](#section8673731984)
+  - [setColor](#section554986187)
+  - [setColors](#section205821994815)
+  - [setEndCap](#section189838151588)
+  - [setGeodesic](#section93426315920)
+  - [setGradient](#section690415431896)
+  - [setJointType](#section18372166138)
+  - [setPatterns](#section67501425181311)
+  - [setPoints](#section1438753291312)
+  - [setStartCap](#section26677221378)
+  - [setWidth](#section147871887226)
+  - [setCustomTexture](#section18866126111212)
+  - [setCustomTexture](#section0710163191113)
+  - [setCustomTextureIndexes](#section148927597277)
+
+## 导入模块
+PhonePC/2in1TabletWearable收起自动换行深色代码主题复制
+```
+import { map, mapCommon } from '@kit.MapKit';
+```
+ 
+## MapPolyline
+PhonePC/2in1TabletWearable折线，继承[BaseOverlay](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-baseoverlay)。在调用map.[MapComponentController](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-mapcomponentcontroller)类的[addPolyline](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-mapcomponentcontroller#section6818109112812)方法时会返回该类型的实例。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+import { image } from '@kit.ImageKit';
+// 数组存放图片内容let customTextures: Array = new Array();// 图标存放在resources/rawfile目录下customTextures.push('icon/img.png');customTextures.push('icon/img_1.png');let cusIndexNumber: Array = new Array();// cusIndexNumber数组长度与折线点数量必须相同，数组元素内容与customTextures下标相对应，图片从数组第二个元素开始选择cusIndexNumber.push(0, 0, 1);let polylineOption: mapCommon.MapPolylineOptions = { points: [ { latitude: 31.68, longitude: 118.166 }, { latitude: 31.48, longitude: 118.366 }, { latitude: 31.28, longitude: 118.766 } ], customTextures: customTextures, customTextureIndexes: cusIndexNumber};let mapPolyline = await this.mapController.addPolyline(polylineOption);
+```
+ 
+### getColor
+PhonePC/2in1TabletWearablegetColor(): number
+
+ 获取折线的颜色值。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| number | ARGB格式颜色值。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let color: number = mapPolyline.getColor();
+```
+ 
+### getColors
+PhonePC/2in1TabletWearablegetColors(): Array<number>
+
+ 获取折线的分段颜色值数组。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| Array | 折线的分段颜色值数组。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let colors: Array = mapPolyline.getColors();
+```
+ 
+### getEndCap
+PhonePC/2in1TabletWearablegetEndCap(): mapCommon.CapStyle
+
+ 获取折线的末尾端点样式。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| mapCommon.CapStyle | 折线的末尾端点样式。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let endCap: mapCommon.CapStyle = mapPolyline.getEndCap();
+```
+ 
+### getJointType
+PhonePC/2in1TabletWearablegetJointType(): mapCommon.JointType
+
+ 获取折线除起始和结束顶点之外的所有顶点的节点类型属性。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| mapCommon.JointType | 折线除起始和结束顶点之外的所有顶点的节点类型属性。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let jointType: mapCommon.JointType = mapPolyline.getJointType();
+```
+ 
+### getPatterns
+PhonePC/2in1TabletWearablegetPatterns(): Array<mapCommon.PatternItem>
+
+ 获取折线的样式属性。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| Array | 折线的样式属性。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let patterns: Array = mapPolyline.getPatterns();
+```
+ 
+### getPoints
+PhonePC/2in1TabletWearablegetPoints(): Array<mapCommon.LatLng>
+
+ 获取折线的顶点坐标属性。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| Array | 折线的顶点坐标属性。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let points: Array = mapPolyline.getPoints();
+```
+ 
+### getStartCap
+PhonePC/2in1TabletWearablegetStartCap(): mapCommon.CapStyle
+
+ 获取折线的起始端点样式。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| mapCommon.CapStyle | 折线的起始端点样式。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let startCap: mapCommon.CapStyle = mapPolyline.getStartCap();
+```
+ 
+### getWidth
+PhonePC/2in1TabletWearablegetWidth(): number
+
+ 获取折线的宽度属性。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| number | 折线的宽度属性，单位：px。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let width: number = mapPolyline.getWidth();
+```
+ 
+### isClickable
+PhonePC/2in1TabletWearableisClickable(): boolean
+
+ 获取折线的可点击属性。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| boolean | 折线的可点击性。 true：可点击false：不可点击 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let isClickable: boolean = mapPolyline.isClickable();
+```
+ 
+### isGeodesic
+PhonePC/2in1TabletWearableisGeodesic(): boolean
+
+ 获取折线的大地线属性。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| boolean | 折线的大地线属性。 true：大地线false：非大地线 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let isGeodesic: boolean = mapPolyline.isGeodesic();
+```
+ 
+### isGradient
+PhonePC/2in1TabletWearableisGradient(): boolean
+
+ 获取折线的渐变属性。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| boolean | 折线的渐变属性。 true：渐变false：不渐变 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let isGradient: boolean = mapPolyline.isGradient();
+```
+ 
+### setClickable
+PhonePC/2in1TabletWearablesetClickable(clickable: boolean): void
+
+ 设置折线是否可以点击。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| clickable | boolean | 是 | 设置折线是否可以点击，默认值为false。 true：可以false：不可以 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+mapPolyline.setClickable(true);
+```
+ 
+### setColor
+PhonePC/2in1TabletWearablesetColor(color: number): void
+
+ 设置折线的颜色值。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| color | number | 是 | ARGB格式颜色值，默认值为黑色（0xff000000）。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+mapPolyline.setColor(0xff000000);
+```
+ 
+### setColors
+PhonePC/2in1TabletWearablesetColors(colors: Array<number>): void
+
+ 设置折线的多段颜色值数组。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| colors | Array | 是 | 多段颜色，ARGB格式颜色值数组。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+mapPolyline.setColors([0xffffff00, 0xff000000]);
+```
+ 
+### setEndCap
+PhonePC/2in1TabletWearablesetEndCap(endCap: mapCommon.CapStyle): void
+
+ 设置折线的末尾端点样式。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| endCap | mapCommon.CapStyle | 是 | 折线的末尾端点样式。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+mapPolyline.setEndCap(mapCommon.CapStyle.BUTT);
+```
+ 
+### setGeodesic
+PhonePC/2in1TabletWearablesetGeodesic(geodesic: boolean): void
+
+ 设置是否将折线的每个线段绘制为大地线。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| geodesic | boolean | 是 | 将折线的每个线段绘制为大地线，默认值为false。 true：每段绘制为大地线false：不是大地线 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+mapPolyline.setGeodesic(true);
+```
+ 
+### setGradient
+PhonePC/2in1TabletWearablesetGradient(gradient: boolean): void
+
+ 设置折线的渐变属性是否启用。需设置折线颜色方可生效。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| gradient | boolean | 是 | 设置渐变属性是否启用，默认值为false。 true：渐变false：不渐变 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+mapPolyline.setGradient(true);
+```
+ 
+### setJointType
+PhonePC/2in1TabletWearablesetJointType(jointType: mapCommon.JointType): void
+
+ 设置折线除起始和结束顶点之外的所有顶点的节点类型。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| jointType | mapCommon.JointType | 是 | 节点类型。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+mapPolyline.setJointType(mapCommon.JointType.DEFAULT);
+```
+ 
+### setPatterns
+PhonePC/2in1TabletWearablesetPatterns(patterns: Array<mapCommon.PatternItem>): void
+
+ 设置折线的样式。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| patterns | Array | 是 | PatternItem对象的集合。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let linePattern: Array = [ { type: mapCommon.PatternItemType.DASH, length: 100 }, { type: mapCommon.PatternItemType.DOT, length: 100 }, { type: mapCommon.PatternItemType.GAP, length: 100 }];mapPolyline.setPatterns(linePattern);
+```
+ 
+### setPoints
+PhonePC/2in1TabletWearablesetPoints(points: Array<mapCommon.LatLng>): void
+
+ 设置折线的顶点坐标。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| points | Array | 是 | 折线顶点的集合。默认情况下，折线不闭合；要形成闭合的折线，起点和终点必须相同。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let points: Array = [ { latitude: 31.18, longitude: 118.766 }, { latitude: 31.38, longitude: 118.366 }, { latitude: 31.68, longitude: 118.566 }, { latitude: 31.98, longitude: 118.266 }, { latitude: 31.88, longitude: 118.866 }];mapPolyline.setPoints(points);
+```
+ 
+### setStartCap
+PhonePC/2in1TabletWearablesetStartCap(startCap: mapCommon.CapStyle): void
+
+ 设置折线的起始端点样式。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| startCap | mapCommon.CapStyle | 是 | 折线的起始端点样式。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+mapPolyline.setStartCap(mapCommon.CapStyle.BUTT);
+```
+ 
+### setWidth
+PhonePC/2in1TabletWearablesetWidth(width: number): void
+
+ 设置折线的宽度。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| width | number | 是 | 折线的宽度，单位：px，取值范围：大于等于0。 默认值：10，异常值按默认值处理。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+mapPolyline.setWidth(20);
+```
+ 
+### setCustomTexture
+PhonePC/2in1TabletWearablesetCustomTexture(customTexture: ResourceStr | image.PixelMap): Promise<void>
+
+ 设置折线纹理。使用Promise异步回调。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本5.0.0(12)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**5.0.0(12)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| customTexture | ResourceStr | image.PixelMap | 是 | 折线纹理。建议纹理使用没有背景色（透明色）的图片。 |
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| Promise | Promise对象。无返回结果的Promise对象。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+// 图标存放在resources/rawfile目录下await mapPolyline.setCustomTexture("icon/naviline_arrow.png");
+```
+ 
+### setCustomTexture
+PhonePC/2in1TabletWearablesetCustomTexture(customTexture: ResourceStr | image.PixelMap, isTextureMappingUsed: boolean): Promise<void>
+
+ 设置折线纹理。使用Promise异步回调。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本5.0.3(15)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**5.0.3(15)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| customTexture | ResourceStr | image.PixelMap | 是 | 折线纹理。建议纹理使用没有背景色（透明色）的图片。 |
+| isTextureMappingUsed | boolean | 是 | 是否使用贴图模式进行纹理绘制，默认为false。如果设置为false，建议纹理没有背景色（使用透明色）。 true：使用贴图模式false：不使用贴图模式 |
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| Promise | Promise对象。无返回结果的Promise对象。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+// 图标需存放在resources/rawfile目录下await mapPolyline.setCustomTexture("icon/naviline_arrow.png", true);
+```
+ 
+### setCustomTextureIndexes
+PhonePC/2in1TabletWearablesetCustomTextureIndexes(customTextureIndexes: number[]): Promise<void>
+
+ 动态设置自定义纹理索引。折线设置纹理后，该接口可以将已有的纹理资源动态应用在各个折线段上。使用Promise异步回调。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本5.0.3(15)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**5.0.3(15)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| customTextureIndexes | number[] | 是 | 每个坐标对应的纹理索引。数组长度需要和points的数量保持一致。 |
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| Promise | Promise对象。无返回结果的Promise对象。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[ArkTS API错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-errorcode)。
+
+ 展开
+| |
+| |
+| |
+| 401 | Invalid input parameter. |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+await mapPolyline.setCustomTextureIndexes([0,1,0]);
+```

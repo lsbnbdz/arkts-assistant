@@ -1,0 +1,5 @@
+# [结构体](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/devicesecurity-capi-structs)
+
+- **[SecurityAudit_Event](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/devicesecurity-capi-structs-securityaudit-event)**
+ - **[SecurityAudit_Filter](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/devicesecurity-capi-structs-securityaudit-filter)**
+ - **[SecurityAntivirus_Antivirus](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/devicesecurity-capi-structs-securityantivirus)**

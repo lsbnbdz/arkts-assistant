@@ -1,0 +1,14 @@
+# [CryptoMacApi](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-cryptomacapi)
+
+## 概述
+PhonePC/2in1TabletTVWearable为应用提供MAC算法接口。
+
+ **起始版本：** 20
+
+ 
+## 文件汇总
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| crypto_mac.h | 定义MAC接口。 |

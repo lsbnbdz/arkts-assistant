@@ -1,0 +1,49 @@
+# [Rcp_HeaderValue](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___header_value)
+
+## 目录
+- [概述](#section2044101946094052)
+- [汇总](#section1042729607094052)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section1897891965094052)
+  - [next](#a6f80339bd4632840890dbed4516a2c7c)
+  - [value](#a2808b89bd4ee544a9167315c782d5dc0)
+
+## 概述
+PhonePC/2in1TabletTVWearable请求或响应的标头映射的值类型。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [RemoteCommunication](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| char * value | 标头键值对的值。 |
+| struct Rcp_HeaderValue * next | 链式存储。指向下一个Rcp_HeaderValue。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTVWearable 
+### next
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+struct Rcp_HeaderValue* Rcp_HeaderValue::next
+```
+ **描述**
+
+ 链式存储。指向下一个[Rcp_HeaderValue](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___header_value)。
+
+ 
+### value
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+char* Rcp_HeaderValue::value
+```
+ **描述**
+
+ 值。

@@ -1,0 +1,5 @@
+# [结构体](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/location-struct)
+
+- **[Location_BasicInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-location-location-basicinfo)**
+ - **[Location_RequestConfig](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-location-location-requestconfig)**
+ - **[Location_Info](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-location-location-info)**

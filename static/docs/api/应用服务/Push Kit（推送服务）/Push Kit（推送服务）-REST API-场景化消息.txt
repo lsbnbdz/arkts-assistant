@@ -1,0 +1,12 @@
+# [场景化消息](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/push-rest-api-scenes)
+
+说明为了更安全的网络访问，华为推送服务于2022年11月30日关闭Push相关域名的TLS1.0、TLS1.1协议及规定之外的加密套件，关闭后，应用使用TLS1.2以下协议或使用规定外的加密套件将无法正常推送消息。
+
+ 若您的应用访问Push相关域名使用协议是TLS1.0或TLS1.1，可能无法正常发送消息，请您务必升级到TLS1.2及以上版本。
+
+ - **[功能介绍](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/push-scenariozed-api-intro)**
+ - **[请求体结构说明](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/push-scenariozed-api-request-struct)**
+ - **[请求体参数说明](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/push-scenariozed-api-request-param)**
+ - **[响应参数](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/push-scenariozed-api-response)**
+ - **[请求示例](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/push-scenariozed-api-request-example)**
+ - **[消息频控](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/push-msg-freq-control)**

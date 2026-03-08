@@ -23,7 +23,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Accessibility Kit（无障碍服务）/Accessibility Kit（无障碍服务）_ArkTS API_@ohos.accessibility (辅助应用).txt",
+    "rel_path": "api/应用框架/Accessibility Kit（无障碍服务）/Accessibility Kit（无障碍服务）_ArkTS API_@ohos.accessibility (辅助应用).txt",
     "catalog": "Accessibility Kit（无障碍服务）",
     "objectId": "accessibility-kit-arkts-api-ohos-accessibility",
     "nodeName": "document",
@@ -44,7 +44,8 @@
       "bundle",
       "event",
       "Kit",
-      "无障碍服务"
+      "无障碍服务",
+      "应用框架"
     ]
   },
   "accessibility-kit-arkts-api-ohos-accessibility-gesturepath": {
@@ -60,7 +61,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Accessibility Kit（无障碍服务）/Accessibility Kit（无障碍服务）_ArkTS API_@ohos.accessibility.GesturePath (手势路径).txt",
+    "rel_path": "api/应用框架/Accessibility Kit（无障碍服务）/Accessibility Kit（无障碍服务）_ArkTS API_@ohos.accessibility.GesturePath (手势路径).txt",
     "catalog": "Accessibility Kit（无障碍服务）",
     "objectId": "accessibility-kit-arkts-api-ohos-accessibility-gesturepath",
     "nodeName": "document",
@@ -81,7 +82,8 @@
       "Capability",
       "Barrier",
       "Kit",
-      "无障碍服务"
+      "无障碍服务",
+      "应用框架"
     ]
   },
   "accessibility-kit-arkts-api-ohos-accessibility-gesturepoint": {
@@ -97,7 +99,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Accessibility Kit（无障碍服务）/Accessibility Kit（无障碍服务）_ArkTS API_@ohos.accessibility.GesturePoint (手势触摸点).txt",
+    "rel_path": "api/应用框架/Accessibility Kit（无障碍服务）/Accessibility Kit（无障碍服务）_ArkTS API_@ohos.accessibility.GesturePoint (手势触摸点).txt",
     "catalog": "Accessibility Kit（无障碍服务）",
     "objectId": "accessibility-kit-arkts-api-ohos-accessibility-gesturepoint",
     "nodeName": "document",
@@ -118,7 +120,8 @@
       "表示手势",
       "坐标",
       "Kit",
-      "无障碍服务"
+      "无障碍服务",
+      "应用框架"
     ]
   },
   "accessibility-kit-arkts-api-ohos-application-accessibilityex": {
@@ -145,7 +148,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Accessibility Kit（无障碍服务）/Accessibility Kit（无障碍服务）_ArkTS API_@ohos.application.AccessibilityExtensionAbility (辅助功能扩展能力).txt",
+    "rel_path": "api/应用框架/Accessibility Kit（无障碍服务）/Accessibility Kit（无障碍服务）_ArkTS API_@ohos.application.AccessibilityExtensionAbility (辅助功能扩展能力).txt",
     "catalog": "Accessibility Kit（无障碍服务）",
     "objectId": "accessibility-kit-arkts-api-ohos-application-accessibilityex",
     "nodeName": "document",
@@ -166,7 +169,8 @@
       "辅助功能扩展能力",
       "Element",
       "Kit",
-      "无障碍服务"
+      "无障碍服务",
+      "应用框架"
     ]
   },
   "accessibility-kit-arkts-api": {
@@ -183,7 +187,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal",
     "path": "",
-    "rel_path": "api/Accessibility Kit（无障碍服务）/Accessibility Kit（无障碍服务）_ArkTS API_无障碍子系统错误码.txt",
+    "rel_path": "api/应用框架/Accessibility Kit（无障碍服务）/Accessibility Kit（无障碍服务）_ArkTS API_无障碍子系统错误码.txt",
     "catalog": "Accessibility Kit（无障碍服务）",
     "objectId": "accessibility-kit-arkts-api",
     "nodeName": "document",
@@ -206,6 +210,7 @@
       "Accessibility",
       "Kit",
       "无障碍服务",
+      "应用框架",
       "无障碍子系统错误码"
     ]
   },
@@ -233,7 +238,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Accessibility Kit（无障碍服务）/Accessibility Kit（无障碍服务）_ArkTS API_AccessibilityExtensionContext (辅助功能扩展上下文).txt",
+    "rel_path": "api/应用框架/Accessibility Kit（无障碍服务）/Accessibility Kit（无障碍服务）_ArkTS API_AccessibilityExtensionContext (辅助功能扩展上下文).txt",
     "catalog": "Accessibility Kit（无障碍服务）",
     "objectId": "accessibility-kit-arkts-api-accessibilityextensioncontext",
     "nodeName": "document",
@@ -254,7 +259,8 @@
       "boolean",
       "true",
       "Kit",
-      "无障碍服务"
+      "无障碍服务",
+      "应用框架"
     ]
   },
   "accessibility-kit-arkts-api-accessibility-kit": {
@@ -265,7 +271,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/accessibility-arkts",
     "path": "",
-    "rel_path": "api/Accessibility Kit（无障碍服务）/Accessibility Kit（无障碍服务）_ArkTS API_Accessibility Kit（无障碍服务）.txt",
+    "rel_path": "api/应用框架/Accessibility Kit（无障碍服务）/Accessibility Kit（无障碍服务）_ArkTS API_Accessibility Kit（无障碍服务）.txt",
     "catalog": "Accessibility Kit（无障碍服务）",
     "objectId": "accessibility-kit-arkts-api-accessibility-kit",
     "nodeName": "document",
@@ -276,7 +282,8 @@
       "errcode",
       "Accessibility",
       "Kit",
-      "无障碍服务"
+      "无障碍服务",
+      "应用框架"
     ]
   }
 }

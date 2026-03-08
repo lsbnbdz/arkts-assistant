@@ -1,0 +1,257 @@
+# [BaseOverlay](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-baseoverlay)
+
+## 目录
+- [导入模块](#section164051883419)
+- [BaseOverlay](#section42531144181215)
+  - [getId](#section7073612370)
+  - [getZIndex](#section15225105915396)
+  - [getTag](#section19301111714013)
+  - [isVisible](#section186444914423)
+  - [remove](#section39155506439)
+  - [setZIndex](#section394129124411)
+  - [setTag](#section15199510114518)
+  - [setVisible](#section132033103450)
+
+## 导入模块
+PhonePC/2in1TabletWearable收起自动换行深色代码主题复制
+```
+import { map, mapCommon } from '@kit.MapKit';
+```
+ 
+## BaseOverlay
+PhonePC/2in1TabletWearable覆盖物基础类。[Marker](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-marker)、[MapPolyline](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-mappolyline)、[MapPolygon](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-mappolygon)、[MapCircle](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-mapcircle)、[MapArc](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-maparc)、[ImageOverlay](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-imageoverlay)、[BasePriorityOverlay](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-basepriorityoverlay)等覆盖物继承该基础类。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ 展开
+| |
+| |
+| |
+| string | getId() 获取覆盖物的ID属性。 |
+| number | getZIndex() 获取覆盖物的z指数。 |
+| Object | getTag() 覆盖物的tag属性。 |
+| boolean | isVisible() 覆盖物的可见性。 |
+| void | remove() 从地图移除覆盖物。 |
+| void | setZIndex(zIndex: number) 设置覆盖物的z指数。 |
+| void | setTag(tag: Object) 设置覆盖物的tag属性。 |
+| void | setVisible(visible: boolean) 设置覆盖物的可见性。 |
+
+ 
+### getId
+PhonePC/2in1TabletWearablegetId(): string
+
+ 获取覆盖物的ID。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| string | 覆盖物的ID。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+// 以marker为例let markerOptions: mapCommon.MarkerOptions = { position: { latitude: 39.9, longitude: 116.4 }};let marker: map.Marker = await this.mapController.addMarker(markerOptions);let id: string = marker.getId();
+```
+ 
+### getZIndex
+PhonePC/2in1TabletWearablegetZIndex(): number
+
+ 获取覆盖物的z指数。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| number | 覆盖物的z指数。z指数指覆盖物的叠加顺序，具有较大z指数的覆盖物会绘制在具有较小z指数的覆盖物上，具有相同z指数的叠加顺序为元素添加的先后顺序。覆盖物初始化时如果未设置zIndex参数，默认值为0。异常值按默认值处理。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+// 以marker为例let zIndex: number = marker.getZIndex();
+```
+ 
+### getTag
+PhonePC/2in1TabletWearablegetTag(): Object
+
+ 获取覆盖物的tag属性。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| Object | 覆盖物的tag属性。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+// 以marker为例let tag: Object = marker.getTag();
+```
+ 
+### isVisible
+PhonePC/2in1TabletWearableisVisible(): boolean
+
+ 获取覆盖物的可见性。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| boolean | 覆盖物的可见性。 true：可见false：不可见 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+// 以marker为例let isVisible: boolean = marker.isVisible();
+```
+ 
+### remove
+PhonePC/2in1TabletWearableremove(): void
+
+ 从地图移除覆盖物。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+// 以marker为例marker.remove();
+```
+ 
+### setZIndex
+PhonePC/2in1TabletWearablesetZIndex(zIndex: number): void
+
+ 设置覆盖物的z指数。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| zIndex | number | 是 | 覆盖物的z指数。z指数指覆盖物的叠加顺序，具有较大z指数的覆盖物会绘制在具有较小z指数的覆盖物上，具有相同z指数的叠加顺序为元素添加的先后顺序。覆盖物初始化时如果未设置zIndex参数，默认值为0。异常值按默认值处理。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+// 以marker为例marker.setZIndex(3);
+```
+ 
+### setTag
+PhonePC/2in1TabletWearablesetTag(tag: Object): void
+
+ 设置覆盖物的tag属性。tag属性可以是任意对象，如果设置为空，则清除tag。当您不再需要使用tag时，您可以调用setTag(null)或setTag(undefined)清除tag，以防止应用程序发生内存泄漏。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| tag | Object | 是 | 覆盖物的tag属性。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+// 以marker为例let tag = "tag-1";marker.setTag(tag);
+```
+ 
+### setVisible
+PhonePC/2in1TabletWearablesetVisible(visible: boolean): void
+
+ 设置覆盖物的可见性，默认可见。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| visible | boolean | 是 | 覆盖物的可见性。 true：可见false：不可见 默认值为true。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+// 以marker为例marker.setVisible(true);
+```

@@ -1,0 +1,5 @@
+# [Distributed Service Kit（分布式管理服务）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/distributed-service-api)
+
+- **[ArkTS API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/distributed-service-arkts)**
+ - **[错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/distributed-service-arkts-errcode)**
+ - **[C API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/distributed-service-c)**

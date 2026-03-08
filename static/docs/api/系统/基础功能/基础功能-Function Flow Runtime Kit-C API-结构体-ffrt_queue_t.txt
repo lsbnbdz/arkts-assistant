@@ -1,0 +1,18 @@
+# [ffrt_queue_t](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-ffrt-ffrt-queue-t)
+
+## 目录
+- [概述](#概述)
+
+收起自动换行深色代码主题复制
+```
+typedef void* ffrt_queue_t
+```
+ 
+## 概述
+PhonePC/2in1TabletTVWearable队列句柄。
+
+ **起始版本：** 10
+
+ **相关模块：** [FFRT](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-ffrt)
+
+ **所在头文件：** [queue.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-queue-h)

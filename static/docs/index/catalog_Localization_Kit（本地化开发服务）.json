@@ -23,7 +23,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-i18n",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-ArkTS API-@ohos.i18n (国际化-I18n).txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-ArkTS API-@ohos.i18n (国际化-I18n).txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-arkts-api-ohos-i18n-i18n",
     "nodeName": "document",
@@ -45,7 +45,8 @@
       "Temperature",
       "Localization",
       "Kit",
-      "本地化开发服务"
+      "本地化开发服务",
+      "应用框架"
     ]
   },
   "localization-kit-arkts-api-ohos-intl-intl": {
@@ -72,7 +73,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-intl",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-ArkTS API-@ohos.intl (国际化-Intl).txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-ArkTS API-@ohos.intl (国际化-Intl).txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-arkts-api-ohos-intl-intl",
     "nodeName": "document",
@@ -94,7 +95,8 @@
       "CLDR",
       "Localization",
       "Kit",
-      "本地化开发服务"
+      "本地化开发服务",
+      "应用框架"
     ]
   },
   "localization-kit-arkts-api-ohos-resourcemanager": {
@@ -121,7 +123,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-resource-manager",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-ArkTS API-@ohos.resourceManager (资源管理).txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-ArkTS API-@ohos.resourceManager (资源管理).txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-arkts-api-ohos-resourcemanager",
     "nodeName": "document",
@@ -143,7 +145,8 @@
       "Array",
       "Localization",
       "Kit",
-      "本地化开发服务"
+      "本地化开发服务",
+      "应用框架"
     ]
   },
   "localization-kit-arkts-api-ohos-sendableresourcemanager": {
@@ -160,7 +163,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-sendable-resource-manager",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-ArkTS API-@ohos.sendableResourceManager (资源管理).txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-ArkTS API-@ohos.sendableResourceManager (资源管理).txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-arkts-api-ohos-sendableresourcemanager",
     "nodeName": "document",
@@ -182,7 +185,8 @@
       "sendableresourcemanagersendableresourcetoresource",
       "Localization",
       "Kit",
-      "本地化开发服务"
+      "本地化开发服务",
+      "应用框架"
     ]
   },
   "doc-un5rvm": {
@@ -418,7 +422,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/localization-arkts-errcode",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-错误码.txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-错误码.txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-1",
     "nodeName": "document",
@@ -433,7 +437,8 @@
       "errcode",
       "Localization",
       "Kit",
-      "本地化开发服务"
+      "本地化开发服务",
+      "应用框架"
     ]
   },
   "doc-2fgyn6": {
@@ -780,7 +785,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/localization-struct",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-结构体.txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-结构体.txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-c-api-2",
     "nodeName": "document",
@@ -802,7 +807,8 @@
       "Configuration",
       "Localization",
       "Kit",
-      "本地化开发服务"
+      "本地化开发服务",
+      "应用框架"
     ]
   },
   "doc-ki8nt4": {
@@ -854,7 +860,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/localization-module",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-模块.txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-模块.txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-c-api-1",
     "nodeName": "document",
@@ -868,7 +874,8 @@
       "module",
       "Localization",
       "Kit",
-      "本地化开发服务"
+      "本地化开发服务",
+      "应用框架"
     ]
   },
   "doc-9grl1a": {
@@ -1169,7 +1176,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/localization-headerfile",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-头文件.txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-头文件.txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-c-api",
     "nodeName": "document",
@@ -1190,7 +1197,8 @@
       "headerfile",
       "Localization",
       "Kit",
-      "本地化开发服务"
+      "本地化开发服务",
+      "应用框架"
     ]
   },
   "doc-3d14b4": {
@@ -1561,7 +1569,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-resource-manager",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-错误码-资源管理错误码.txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-错误码-资源管理错误码.txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit",
     "nodeName": "document",
@@ -1584,6 +1592,7 @@
       "Localization",
       "Kit",
       "本地化开发服务",
+      "应用框架",
       "错误码"
     ]
   },
@@ -1645,7 +1654,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-i18n-annualtimezonerule",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-结构体-AnnualTimeZoneRule.txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-结构体-AnnualTimeZoneRule.txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-c-api-annualtimezonerule",
     "nodeName": "document",
@@ -1668,6 +1677,7 @@
       "Localization",
       "Kit",
       "本地化开发服务",
+      "应用框架",
       "结构体"
     ]
   },
@@ -1681,7 +1691,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/localization-arkts",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-ArkTS API.txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-ArkTS API.txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-arkts-api",
     "nodeName": "document",
@@ -1703,7 +1713,8 @@
       "global",
       "Localization",
       "Kit",
-      "本地化开发服务"
+      "本地化开发服务",
+      "应用框架"
     ]
   },
   "localization-kit-c-api-3": {
@@ -1716,7 +1727,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/localization-c",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API.txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API.txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-c-api-3",
     "nodeName": "document",
@@ -1731,7 +1742,8 @@
       "struct",
       "Localization",
       "Kit",
-      "本地化开发服务"
+      "本地化开发服务",
+      "应用框架"
     ]
   },
   "localization-kit-c-api-datetimerule": {
@@ -1748,7 +1760,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-i18n-datetimerule",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-结构体-DateTimeRule.txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-结构体-DateTimeRule.txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-c-api-datetimerule",
     "nodeName": "document",
@@ -1771,6 +1783,7 @@
       "Localization",
       "Kit",
       "本地化开发服务",
+      "应用框架",
       "结构体"
     ]
   },
@@ -1790,7 +1803,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-errorcode-h",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-头文件-errorcode.h.txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-头文件-errorcode.h.txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-c-api-errorcode-h",
     "nodeName": "document",
@@ -1813,6 +1826,7 @@
       "Localization",
       "Kit",
       "本地化开发服务",
+      "应用框架",
       "头文件"
     ]
   },
@@ -1826,7 +1840,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/localization-global-arkts",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-ArkTS API-global.txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-ArkTS API-global.txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-arkts-api-global",
     "nodeName": "document",
@@ -1844,7 +1858,8 @@
       "sendableresource",
       "Localization",
       "Kit",
-      "本地化开发服务"
+      "本地化开发服务",
+      "应用框架"
     ]
   },
   "localization-kit-c-api-i18n": {
@@ -1860,7 +1875,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-i18n",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-模块-i18n.txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-模块-i18n.txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-c-api-i18n",
     "nodeName": "document",
@@ -1883,6 +1898,7 @@
       "Localization",
       "Kit",
       "本地化开发服务",
+      "应用框架",
       "模块"
     ]
   },
@@ -1898,7 +1914,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-i18n",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-错误码-I18n错误码.txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-错误码-I18n错误码.txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-i18n",
     "nodeName": "document",
@@ -1920,7 +1936,8 @@
       "以下仅介",
       "Localization",
       "Kit",
-      "本地化开发服务"
+      "本地化开发服务",
+      "应用框架"
     ]
   },
   "localization-kit-c-api-initialtimezonerule": {
@@ -1937,7 +1954,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-i18n-initialtimezonerule",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-结构体-InitialTimeZoneRule.txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-结构体-InitialTimeZoneRule.txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-c-api-initialtimezonerule",
     "nodeName": "document",
@@ -1960,6 +1977,7 @@
       "Localization",
       "Kit",
       "本地化开发服务",
+      "应用框架",
       "结构体"
     ]
   },
@@ -1973,7 +1991,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/localization-api",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）.txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）.txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-2",
     "nodeName": "document",
@@ -1986,7 +2004,8 @@
       "本地化开",
       "发服务",
       "错误码",
-      "errcode"
+      "errcode",
+      "应用框架"
     ]
   },
   "localization-kit-c-api-nativeresourcemanager": {
@@ -2001,7 +2020,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-rawfile-nativeresourcemanager",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-结构体-NativeResourceManager.txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-结构体-NativeResourceManager.txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-c-api-nativeresourcemanager",
     "nodeName": "document",
@@ -2024,6 +2043,7 @@
       "Localization",
       "Kit",
       "本地化开发服务",
+      "应用框架",
       "结构体"
     ]
   },
@@ -2051,7 +2071,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-ohresmgr-h",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-头文件-ohresmgr.h.txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-头文件-ohresmgr.h.txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-c-api-ohresmgr-h",
     "nodeName": "document",
@@ -2074,6 +2094,7 @@
       "Localization",
       "Kit",
       "本地化开发服务",
+      "应用框架",
       "头文件"
     ]
   },
@@ -2096,7 +2117,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-raw-dir-h",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-头文件-raw_dir.h.txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-头文件-raw_dir.h.txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-c-api-raw-dir-h",
     "nodeName": "document",
@@ -2119,6 +2140,7 @@
       "Localization",
       "Kit",
       "本地化开发服务",
+      "应用框架",
       "头文件"
     ]
   },
@@ -2144,7 +2166,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-raw-file-manager-h",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-头文件-raw_file_manager.h.txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-头文件-raw_file_manager.h.txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-c-api-raw-file-manager-h",
     "nodeName": "document",
@@ -2167,6 +2189,7 @@
       "Localization",
       "Kit",
       "本地化开发服务",
+      "应用框架",
       "头文件"
     ]
   },
@@ -2194,7 +2217,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-raw-file-h",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-头文件-raw_file.h.txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-头文件-raw_file.h.txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-c-api-raw-file-h",
     "nodeName": "document",
@@ -2217,6 +2240,7 @@
       "Localization",
       "Kit",
       "本地化开发服务",
+      "应用框架",
       "头文件"
     ]
   },
@@ -2232,7 +2256,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-rawfile-rawdir",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-结构体-RawDir.txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-结构体-RawDir.txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-c-api-rawdir",
     "nodeName": "document",
@@ -2255,6 +2279,7 @@
       "Localization",
       "Kit",
       "本地化开发服务",
+      "应用框架",
       "结构体"
     ]
   },
@@ -2271,7 +2296,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-rawfile",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-模块-rawfile.txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-模块-rawfile.txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-c-api-rawfile",
     "nodeName": "document",
@@ -2294,6 +2319,7 @@
       "Localization",
       "Kit",
       "本地化开发服务",
+      "应用框架",
       "模块"
     ]
   },
@@ -2309,7 +2335,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-rawfile-rawfile",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-结构体-RawFile.txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-结构体-RawFile.txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-c-api-rawfile-1",
     "nodeName": "document",
@@ -2332,6 +2358,7 @@
       "Localization",
       "Kit",
       "本地化开发服务",
+      "应用框架",
       "结构体"
     ]
   },
@@ -2347,7 +2374,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-rawfile-rawfile64",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-结构体-RawFile64.txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-结构体-RawFile64.txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-c-api-rawfile64",
     "nodeName": "document",
@@ -2370,6 +2397,7 @@
       "Localization",
       "Kit",
       "本地化开发服务",
+      "应用框架",
       "结构体"
     ]
   },
@@ -2386,7 +2414,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-rawfiledescriptor",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-ArkTS API-global-RawFileDescriptor.txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-ArkTS API-global-RawFileDescriptor.txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-arkts-api-global-rawfiledescriptor",
     "nodeName": "document",
@@ -2409,6 +2437,7 @@
       "Localization",
       "Kit",
       "本地化开发服务",
+      "应用框架",
       "global"
     ]
   },
@@ -2426,7 +2455,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-rawfile-rawfiledescriptor",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-结构体-RawFileDescriptor.txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-结构体-RawFileDescriptor.txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-c-api-rawfiledescriptor",
     "nodeName": "document",
@@ -2449,6 +2478,7 @@
       "Localization",
       "Kit",
       "本地化开发服务",
+      "应用框架",
       "结构体"
     ]
   },
@@ -2466,7 +2496,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-rawfile-rawfiledescriptor64",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-结构体-RawFileDescriptor64.txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-结构体-RawFileDescriptor64.txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-c-api-rawfiledescriptor64",
     "nodeName": "document",
@@ -2489,6 +2519,7 @@
       "Localization",
       "Kit",
       "本地化开发服务",
+      "应用框架",
       "结构体"
     ]
   },
@@ -2513,7 +2544,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-resmgr-common-h",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-头文件-resmgr_common.h.txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-头文件-resmgr_common.h.txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-c-api-resmgr-common-h",
     "nodeName": "document",
@@ -2536,6 +2567,7 @@
       "Localization",
       "Kit",
       "本地化开发服务",
+      "应用框架",
       "头文件"
     ]
   },
@@ -2552,7 +2584,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-resource",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-ArkTS API-global-Resource.txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-ArkTS API-global-Resource.txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-arkts-api-global-resource",
     "nodeName": "document",
@@ -2575,6 +2607,7 @@
       "Localization",
       "Kit",
       "本地化开发服务",
+      "应用框架",
       "global"
     ]
   },
@@ -2591,7 +2624,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-resourcemanager",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-模块-resourcemanager.txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-模块-resourcemanager.txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-c-api-resourcemanager",
     "nodeName": "document",
@@ -2614,6 +2647,7 @@
       "Localization",
       "Kit",
       "本地化开发服务",
+      "应用框架",
       "模块"
     ]
   },
@@ -2631,7 +2665,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-resourcemanager-resourcemanager-configuration",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-结构体-ResourceManager_Configuration.txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-结构体-ResourceManager_Configuration.txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-c-api-resourcemanager-configuration",
     "nodeName": "document",
@@ -2654,6 +2688,7 @@
       "Localization",
       "Kit",
       "本地化开发服务",
+      "应用框架",
       "结构体"
     ]
   },
@@ -2670,7 +2705,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-sendableresource",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-ArkTS API-global-SendableResource.txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-ArkTS API-global-SendableResource.txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-arkts-api-global-sendableresource",
     "nodeName": "document",
@@ -2693,6 +2728,7 @@
       "Localization",
       "Kit",
       "本地化开发服务",
+      "应用框架",
       "global"
     ]
   },
@@ -2710,7 +2746,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-i18n-timearraytimezonerule",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-结构体-TimeArrayTimeZoneRule.txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-结构体-TimeArrayTimeZoneRule.txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-c-api-timearraytimezonerule",
     "nodeName": "document",
@@ -2733,6 +2769,7 @@
       "Localization",
       "Kit",
       "本地化开发服务",
+      "应用框架",
       "结构体"
     ]
   },
@@ -2760,7 +2797,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-timezone-h",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-头文件-timezone.h.txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-头文件-timezone.h.txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-c-api-timezone-h",
     "nodeName": "document",
@@ -2783,6 +2820,7 @@
       "Localization",
       "Kit",
       "本地化开发服务",
+      "应用框架",
       "头文件"
     ]
   },
@@ -2800,7 +2838,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-i18n-timezonerulequery",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-结构体-TimeZoneRuleQuery.txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-结构体-TimeZoneRuleQuery.txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-c-api-timezonerulequery",
     "nodeName": "document",
@@ -2823,6 +2861,7 @@
       "Localization",
       "Kit",
       "本地化开发服务",
+      "应用框架",
       "结构体"
     ]
   },
@@ -2840,7 +2879,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-i18n-timezonerules",
     "path": "",
-    "rel_path": "api/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-结构体-TimeZoneRules.txt",
+    "rel_path": "api/应用框架/Localization Kit（本地化开发服务）/Localization Kit（本地化开发服务）-C API-结构体-TimeZoneRules.txt",
     "catalog": "Localization Kit（本地化开发服务）",
     "objectId": "localization-kit-c-api-timezonerules",
     "nodeName": "document",
@@ -2863,6 +2902,7 @@
       "Localization",
       "Kit",
       "本地化开发服务",
+      "应用框架",
       "结构体"
     ]
   }

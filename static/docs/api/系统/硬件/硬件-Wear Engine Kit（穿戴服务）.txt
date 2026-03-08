@@ -1,0 +1,4 @@
+# [Wear Engine Kit（穿戴服务）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/wear-engine-api)
+
+- **[ArkTS API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/wearengine_arkts_api)**
+ - **[ArkTS API错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/wearengine_api_error_code)**

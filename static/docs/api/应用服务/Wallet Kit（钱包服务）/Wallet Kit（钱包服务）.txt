@@ -1,0 +1,4 @@
+# [Wallet Kit（钱包服务）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/wallet-api)
+
+- **[ArkTS API参考](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/wallet-arkts)**
+ - **[REST API参考](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/wallet-rest-api)**

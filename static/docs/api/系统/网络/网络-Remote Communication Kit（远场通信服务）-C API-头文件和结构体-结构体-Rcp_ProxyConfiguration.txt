@@ -1,0 +1,49 @@
+# [Rcp_ProxyConfiguration](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___proxy_configuration)
+
+## 目录
+- [概述](#section1408762077094053)
+- [汇总](#section649516202094053)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section493757035094053)
+  - [customProxy](#a01dc17cde923a3499c90dd116ad68468)
+  - [proxyType](#a70883d9a11b3be0fbe4321f3c43d400b)
+
+## 概述
+PhonePC/2in1TabletTVWearable代理配置。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [RemoteCommunication](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| Rcp_ProxyType proxyType | 区分请求使用的代理类型。 |
+| Rcp_WebProxy customProxy | 自定义代理配置，参见Rcp_WebProxy。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTVWearable 
+### customProxy
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_WebProxy Rcp_ProxyConfiguration::customProxy
+```
+ **描述**
+
+ 自定义代理配置，参见[Rcp_WebProxy](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___web_proxy)。
+
+ 
+### proxyType
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_ProxyType Rcp_ProxyConfiguration::proxyType
+```
+ **描述**
+
+ 区分请求使用的代理类型。

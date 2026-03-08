@@ -1,0 +1,82 @@
+# [FlowFieldOverlay](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-flowfieldoverlay)
+
+## 目录
+- [导入模块](#section164051883419)
+- [FlowFieldOverlay](#section138173619559)
+  - [setStyle](#section138791028101214)
+  - [getStyle](#section94291311201817)
+
+## 导入模块
+ PhonePC/2in1TabletWearable收起自动换行深色代码主题复制
+```
+import { map, mapCommon } from '@kit.MapKit';
+```
+ 
+## FlowFieldOverlay
+ PhonePC/2in1Tablet流场图层管理对象。在调用map.[MapComponentController](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-mapcomponentcontroller)类的[addFlowFieldOverlay](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-mapcomponentcontroller#section7516202017439)方法时会返回该类型的实例，继承[BaseOverlay](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-baseoverlay)。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本6.0.0(20)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core.EnhancedOverlay
+
+ **起始版本：**6.0.0(20)
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let params: mapCommon.FlowFieldOverlayParams = { // data为GRIB2规范的json数据，需开发者自行传输，可参考流场数据格式参考 data: 'xxx'};let fieldOverlay = await mapController.addFlowFieldOverlay(params);
+```
+ 
+### setStyle
+ PhonePC/2in1TabletsetStyle(style: mapCommon.ParticleStyle): void
+
+ 设置粒子样式。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本6.0.0(20)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core.EnhancedOverlay
+
+ **起始版本：**6.0.0(20)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| style | mapCommon.ParticleStyle | 是 | 粒子样式。 |
+
+ **示例：** 收起自动换行深色代码主题复制
+```
+let style: mapCommon.ParticleStyle = { count: 200, color: 0xff009575, maxSpeed: 60, speedFactor: 0.3};fieldOverlay.setStyle(style);
+```
+ 
+### getStyle
+ PhonePC/2in1TabletgetStyle(): mapCommon.ParticleStyle
+
+ 获取粒子样式。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本6.0.0(20)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core.EnhancedOverlay
+
+ **起始版本：**6.0.0(20)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| mapCommon.ParticleStyle | 粒子样式。 |
+
+ **示例：** 收起自动换行深色代码主题复制
+```
+let style: mapCommon.ParticleStyle = fieldOverlay.getStyle();
+```

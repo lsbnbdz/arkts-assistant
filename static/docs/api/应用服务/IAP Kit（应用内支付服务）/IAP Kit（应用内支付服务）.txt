@@ -1,0 +1,4 @@
+# [IAP Kit（应用内支付服务）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/iap-api)
+
+- **[ArkTS API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/iap-arkts)**
+ - **[REST API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/iap-rest)**

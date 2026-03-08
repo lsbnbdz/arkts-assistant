@@ -1883,7 +1883,7 @@
       "框架"
     ]
   },
-  "input": {
+  "input-1": {
     "title": "input开发指导",
     "headings": [
       "目录",
@@ -1900,7 +1900,7 @@
     "path": "",
     "rel_path": "guide/应用框架/ArkUI（方舟UI框架）/UI开发 (兼容JS的类Web开发范式)/input开发指导.txt",
     "catalog": "UI开发 (兼容JS的类Web开发范式)",
-    "objectId": "input",
+    "objectId": "input-1",
     "nodeName": "document",
     "keywords": [
       "input",

@@ -1,0 +1,55 @@
+# [oh_device_manager_err_code.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-device-manager-err-code-h)
+
+## 目录
+- [概述](#概述)
+- [汇总](#汇总)
+  - [枚举](#枚举)
+- [枚举类型说明](#枚举类型说明)
+  - [DeviceManager_ErrorCode](#devicemanager_errorcode)
+
+## 概述
+PhonePC/2in1TabletTVWearable声明设备管理模块错误码信息。
+
+ **引用文件：** <distributedhardware/device_manager/oh_device_manager_err_code.h>
+
+ **库：** libdevicemanager_ndk.so
+
+ **系统能力：** SystemCapability.DistributedHardware.DeviceManager
+
+ **起始版本：** 20
+
+ **相关模块：** [DeviceManager](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-devicemanager)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 枚举
+ PhonePC/2in1TabletTVWearable展开
+| 名称 | typedef关键字 | 描述 |
+| --- | --- | --- |
+| DeviceManager_ErrorCode | DeviceManager_ErrorCode | 分布式设备管理错误码信息。 |
+
+ 
+## 枚举类型说明
+PhonePC/2in1TabletTVWearable 
+### DeviceManager_ErrorCode
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+enum DeviceManager_ErrorCode
+```
+ **描述**
+
+ 分布式设备管理错误码信息。
+
+ **起始版本：** 20
+
+ 展开
+| |
+| |
+| |
+| ERR_OK = 0 | 执行成功。 |
+| ERR_PERMISSION_ERROR = 201 | 权限校验失败。 |
+| ERR_INVALID_PARAMETER = 401 | 非法参数。 |
+| DM_ERR_FAILED = 11600101 | 函数执行失败。 |
+| DM_ERR_OBTAIN_SERVICE = 11600102 | 获取设备管理服务失败。 |
+| DM_ERR_OBTAIN_BUNDLE_NAME = 11600109 | 获取bundleName失败。 |

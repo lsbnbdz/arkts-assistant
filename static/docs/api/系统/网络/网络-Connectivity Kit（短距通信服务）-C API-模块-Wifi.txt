@@ -1,0 +1,18 @@
+# [Wifi](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-wifi)
+
+## 目录
+- [概述](#概述)
+- [文件汇总](#文件汇总)
+
+## 概述
+PhonePC/2in1TabletTVWearable提供用于查询WIFI开关状态的功能。
+
+ **起始版本：** 13
+
+ 
+## 文件汇总
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| oh_wifi.h | 定义查询WIFI开关状态的接口。 |

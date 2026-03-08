@@ -1,0 +1,49 @@
+# [FG_Dimension2D](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_g___dimension2_d)
+
+## 目录
+- [概述](#section1846341116093807)
+- [汇总](#section518103511093807)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section456236362093807)
+  - [height](#ac723f7084e0e38f10c0bb59c3c1fc45f)
+  - [width](#a1a19ee2e492503d165cc898646fdd124)
+
+## 概述
+PhoneTablet此结构体描述2D图像分辨率，以像素为单位。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [GraphicsAccelerate](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_graphics_accelerate)
+
+ 
+## 汇总
+PhoneTablet 
+### 成员变量
+ PhoneTablet展开
+| |
+| |
+| |
+| uint32_t width | 图像宽度，以像素为单位。 |
+| uint32_t height | 图像高度，以像素为单位。 |
+
+ 
+## 结构体成员变量说明
+PhoneTablet 
+### height
+PhoneTablet收起自动换行深色代码主题复制
+```
+uint32_t FG_Dimension2D::height
+```
+ **描述**
+
+ 图像高度，以像素为单位。
+
+ 
+### width
+PhoneTablet收起自动换行深色代码主题复制
+```
+uint32_t FG_Dimension2D::width
+```
+ **描述**
+
+ 图像宽度，以像素为单位。

@@ -1,0 +1,73 @@
+# [Rcp_WebProxy](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___web_proxy)
+
+## 目录
+- [概述](#section1465097596094053)
+- [汇总](#section1300562249094053)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section504131520094053)
+  - [createTunnel](#acacb9b6bb4c814b12b1aac1df60a873f)
+  - [exclusions](#a11817f43fef6b3e1afc3c9539f5b7808)
+  - [securityConfiguration](#acc58f45a01e990be428e5eb7d660d417)
+  - [url](#a16daba15d11690d1213ab06b6d037865)
+
+## 概述
+PhonePC/2in1TabletTVWearable自定义代理配置。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [RemoteCommunication](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| const char * url | 代理服务器的URL。如果您没有明确设置端口，则端口将为1080。 |
+| Rcp_ProxyTunnelMode createTunnel | 用于控制何时创建代理隧道。 |
+| Rcp_Exclusions exclusions | 如果Rcp_Request.url匹配Rcp_Exclusions规则，则Rcp_Request将不使用代理。 |
+| Rcp_SecurityConfiguration securityConfiguration | 代理中的Rcp_SecurityConfiguration。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTVWearable 
+### createTunnel
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_ProxyTunnelMode Rcp_WebProxy::createTunnel
+```
+ **描述**
+
+ 用于控制何时创建代理隧道。
+
+ 
+### exclusions
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_Exclusions Rcp_WebProxy::exclusions
+```
+ **描述**
+
+ 如果[Rcp_Request.url](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___request#a39a1cc0a1ad666d8d9ad40eec4b52de7)匹配[Rcp_Exclusions](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___exclusions)规则，则[Rcp_Request](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___request)将不使用代理。
+
+ 
+### securityConfiguration
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_SecurityConfiguration Rcp_WebProxy::securityConfiguration
+```
+ **描述**
+
+ 代理中的[Rcp_SecurityConfiguration](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___security_configuration)。
+
+ 
+### url
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+const char* Rcp_WebProxy::url
+```
+ **描述**
+
+ 代理服务器的URL。如果您没有明确设置端口，则端口将为1080。

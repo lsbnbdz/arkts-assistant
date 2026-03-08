@@ -1,0 +1,20 @@
+# [REST API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/iap-rest)
+
+- **[公共说明](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/iap-rest-common-statement)**
+ - **[生成服务端请求的token](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/iap-jwt-description)**
+ - **[对返回结果验签](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/iap-verifying-signature)**
+ - **[订单状态查询（消耗型/非消耗型/非续期订阅商品）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/iap-query-order-status)**
+ - **[订单确认发货（消耗型/非消耗型/非续期订阅商品）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/iap-confirm-purchase-for-order)**
+ - **[应用购买记录相关支付订单查询](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/iap-order-query)**
+ - **[订阅状态查询](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/iap-query-subscription-status)**
+ - **[订阅确认发货](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/iap-confirm-purchase-for-sub)**
+ - **[延迟订阅续订日期](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/iap-date-delay-for-sub)**
+ - **[根据交易号查询订单状态信息](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/iap-order-info-query-by-transaction-number)**
+ - **[查询用户的历史购买记录](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/iap-order-info-query-by-order-history)**
+ - **[服务端通知记录查询](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/iap-server-notifications-record-query)**
+ - **[测试服务端通知](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/iap-server-notifications-test)**
+ - **[生成优惠签名购买参数](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/iap-server-subscribe-offer-sign)**
+ - **[服务端关键事件通知](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/iap-key-event-notifications)**
+ - **[退款申请通知与处理](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/iap-server-refund-notify-and-handle)**
+ - **[数据类型说明](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/iap-server-data-model)**
+ - **[REST API错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/iap-server-error-code)**

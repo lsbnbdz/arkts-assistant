@@ -1,0 +1,147 @@
+# [newLatLngBounds](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-newlatlngbounds-1)
+
+## 目录
+- [导入模块](#section164051883419)
+- [newLatLngBounds](#section1925622842414)
+- [newLatLngBounds](#section275119019112)
+- [newLatLngBounds](#section268618619820)
+
+## 导入模块
+PhonePC/2in1TabletWearable收起自动换行深色代码主题复制
+```
+import { map, mapCommon } from '@kit.MapKit';
+```
+ 
+## newLatLngBounds
+PhonePC/2in1TabletWearablenewLatLngBounds(bounds: mapCommon.LatLngBounds, padding?: number): CameraUpdate
+
+ 设置地图经纬度范围、地图区域和边界之间的距离。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bounds | mapCommon.LatLngBounds | 是 | 地图显示经纬度范围。 |
+| padding | number | 否 | 地图区域和边界之间的距离，单位：px，默认值为0。 |
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| CameraUpdate | 描述地图状态将要发生的变化。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[ArkTS API错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-errorcode)。
+
+ 展开
+| |
+| |
+| |
+| 401 | Invalid input parameter. |
+
+ **示例：**收起自动换行深色代码主题复制
+```
+let bounds: mapCommon.LatLngBounds = { northeast: { latitude: 33, longitude: 118 }, southwest: { latitude: 32, longitude: 119 }};let cameraUpdate: map.CameraUpdate = map.newLatLngBounds(bounds, 5);
+```
+ 
+## newLatLngBounds
+PhonePC/2in1TabletWearablenewLatLngBounds(bounds: mapCommon.LatLngBounds, width: number, height: number, padding: number): CameraUpdate
+
+ 设置地图经纬度范围、经纬度矩形范围的高和宽、地图区域和边界之间的距离。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本5.0.0(12)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**5.0.0(12)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bounds | mapCommon.LatLngBounds | 是 | 地图显示经纬度范围。 |
+| width | number | 是 | 经纬度矩形范围的屏幕宽，单位：px，取值范围：大于等于0。 |
+| height | number | 是 | 经纬度矩形范围的屏幕高，单位：px，取值范围：大于等于0。 |
+| padding | number | 是 | 地图区域和边界之间的距离，单位：px，默认值为0。 |
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| CameraUpdate | 描述地图状态将要发生的变化。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[ArkTS API错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-errorcode)。
+
+ 展开
+| |
+| |
+| |
+| 401 | Invalid input parameter. |
+
+ **示例：**收起自动换行深色代码主题复制
+```
+let bounds: mapCommon.LatLngBounds = { northeast: { latitude: 31, longitude: 118 }, southwest: { latitude: 30.5, longitude: 123 }};// 设置地图显示经纬度范围，设置经纬度矩形范围的宽为1000像素，设置经纬度矩形范围的高为1000像素，设置地图区域和边界之间的距离为100像素let cameraUpdate: map.CameraUpdate = map.newLatLngBounds(bounds, 1000, 1000, 100);
+```
+ 
+## newLatLngBounds
+PhonePC/2in1TabletWearablenewLatLngBounds(bounds: mapCommon.LatLngBounds, padding: mapCommon.Padding): CameraUpdate
+
+ 设置地图经纬度范围和4个方向与边界之间的距离。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本5.0.1(13)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**5.0.1(13)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| bounds | mapCommon.LatLngBounds | 是 | 地图显示经纬度范围。 |
+| padding | mapCommon.Padding | 是 | 地图区域和边界之间的距离，单位：px，默认值为0。 说明地图组件高度减去padding的top值和bottom值，结果需要大于等于100px。地图组件宽度减去padding的left值和right值，结果需要大于等于100px。 |
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| CameraUpdate | 描述地图状态将要发生的变化。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[ArkTS API错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-errorcode)。
+
+ 展开
+| |
+| |
+| |
+| 401 | Invalid input parameter. |
+
+ **示例：**收起自动换行深色代码主题复制
+```
+let bounds: mapCommon.LatLngBounds = { northeast: { latitude: 31, longitude: 118 }, southwest: { latitude: 30.5, longitude: 123 }};// 初始化参数，左边距0，底边距50let padding: mapCommon.Padding = { left: 0, bottom: 50};let cameraUpdate: map.CameraUpdate = map.newLatLngBounds(bounds, padding);
+```

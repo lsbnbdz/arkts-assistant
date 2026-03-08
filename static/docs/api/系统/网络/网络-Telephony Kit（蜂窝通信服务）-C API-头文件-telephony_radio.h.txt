@@ -1,0 +1,100 @@
+# [telephony_radio.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-telephony-radio-h)
+
+## 目录
+- [概述](#概述)
+- [汇总](#汇总)
+  - [函数](#函数)
+- [函数说明](#函数说明)
+  - [OH_Telephony_GetNetworkState()](#oh_telephony_getnetworkstate)
+  - [OH_Telephony_GetNetworkStateForSlot()](#oh_telephony_getnetworkstateforslot)
+
+## 概述
+PhoneTabletWearable为网络搜索模块定义C接口。
+
+ **引用文件：** <telephony/core_service/telephony_radio.h>
+
+ **库：** libtelephony_radio.so
+
+ **系统能力：** SystemCapability.Telephony.CoreService
+
+ **起始版本：** 13
+
+ **相关模块：** [Telephony](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-telephony)
+
+ 
+## 汇总
+PhoneTabletWearable 
+### 函数
+ PhoneTabletWearable展开
+| |
+| |
+| |
+| Telephony_RadioResult OH_Telephony_GetNetworkState(Telephony_NetworkState *state) | 获取网络状态。 |
+| Telephony_RadioResult OH_Telephony_GetNetworkStateForSlot(int32_t slotId, Telephony_NetworkState *state) | 获取给定卡槽ID的网络状态。 |
+
+ 
+## 函数说明
+PhoneTabletWearable 
+### OH_Telephony_GetNetworkState()
+PhoneTabletWearable收起自动换行深色代码主题复制
+```
+Telephony_RadioResult OH_Telephony_GetNetworkState(Telephony_NetworkState *state)
+```
+ **描述**
+
+ 获取网络状态。
+
+ **系统能力：** SystemCapability.Telephony.CoreService
+
+ **需要权限：** ohos.permission.GET_NETWORK_INFO
+
+ **起始版本：** 13
+
+ **参数：**
+
+ 展开
+| |
+| |
+| |
+| Telephony_NetworkState *state | 用户接收网络状态信息的结构体。 |
+
+ **返回：**
+
+ 展开
+| |
+| |
+| |
+| Telephony_RadioResult | 结果定义在 Telephony_RadioResult。 TEL_RADIO_SUCCESS 成功。 TEL_RADIO_PERMISSION_DENIED 权限错误。 TEL_RADIO_ERR_MARSHALLING_FAILED 编组错误。 TEL_RADIO_ERR_SERVICE_CONNECTION_FAILED 连接电话服务错误。 TEL_RADIO_ERR_OPERATION_FAILED 操作电话服务错误。 TEL_RADIO_ERR_INVALID_PARAM 参数错误。 |
+
+ 
+### OH_Telephony_GetNetworkStateForSlot()
+PhoneTabletWearable收起自动换行深色代码主题复制
+```
+Telephony_RadioResult OH_Telephony_GetNetworkStateForSlot(int32_t slotId, Telephony_NetworkState *state)
+```
+ **描述**
+
+ 获取给定卡槽ID的网络状态。
+
+ **系统能力：** SystemCapability.Telephony.CoreService
+
+ **需要权限：** ohos.permission.GET_NETWORK_INFO
+
+ **起始版本：** 13
+
+ **参数：**
+
+ 展开
+| |
+| |
+| |
+| int32_t slotId | 卡槽ID。 |
+| Telephony_NetworkState *state | 用户接收网络状态信息的结构体。 |
+
+ **返回：**
+
+ 展开
+| |
+| |
+| |
+| Telephony_RadioResult | 结果定义在 Telephony_RadioResult。 TEL_RADIO_SUCCESS 成功。 TEL_RADIO_PERMISSION_DENIED 权限错误。 TEL_RADIO_ERR_MARSHALLING_FAILED 编组错误。 TEL_RADIO_ERR_SERVICE_CONNECTION_FAILED 连接电话服务错误。 TEL_RADIO_ERR_OPERATION_FAILED 操作电话服务错误。 TEL_RADIO_ERR_INVALID_PARAM 参数错误。 |

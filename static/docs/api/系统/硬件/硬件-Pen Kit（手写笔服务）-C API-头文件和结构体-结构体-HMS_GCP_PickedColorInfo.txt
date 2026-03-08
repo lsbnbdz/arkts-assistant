@@ -1,0 +1,63 @@
+# [HMS_GCP_PickedColorInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/pen-imagefeaturepicker-struct-colorinfo)
+
+## 目录
+- [概述](#section574297297155533)
+- [汇总](#section730998251155533)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section2062805453155533)
+  - [color](#a9c1f0a698294f1d34e6824f710d78ed1)
+  - [colorSpace](#a60b4fff41d82f00f0c14e3b270380279)
+  - [timestamp](#af1b1674d2f73f350bb47d0f9d97a3664)
+
+## 概述
+PhonePC/2in1Tablet定义取色颜色信息的结构体。
+
+ **系统能力：** SystemCapability.Stylus.ColorPicker
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [GlobalColorPicker](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/pen-imagefeaturepicker-c)
+
+ 
+## 汇总
+PhonePC/2in1Tablet 
+### 成员变量
+ PhonePC/2in1Tablet展开
+| |
+| |
+| |
+| HMS_GCP_Color color | 提取的颜色值。 |
+| HMS_GCP_ColorSpace colorSpace | 颜色所属的颜色空间。 |
+| int64_t timestamp | 提取颜色的时间戳。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1Tablet 
+### color
+PhonePC/2in1Tablet收起自动换行深色代码主题复制
+```
+HMS_GCP_Color HMS_GCP_PickedColorInfo::color
+```
+ **描述**
+
+ 提取的颜色值。
+
+ 
+### colorSpace
+PhonePC/2in1Tablet收起自动换行深色代码主题复制
+```
+HMS_GCP_ColorSpace HMS_GCP_PickedColorInfo::colorSpace
+```
+ **描述**
+
+ 颜色所属的颜色空间。
+
+ 
+### timestamp
+PhonePC/2in1Tablet收起自动换行深色代码主题复制
+```
+int64_t HMS_GCP_PickedColorInfo::timestamp
+```
+ **描述**
+
+ 提取颜色的时间戳。

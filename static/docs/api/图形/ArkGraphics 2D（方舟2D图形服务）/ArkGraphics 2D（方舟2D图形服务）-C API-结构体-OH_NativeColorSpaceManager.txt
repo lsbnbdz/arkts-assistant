@@ -1,0 +1,18 @@
+# [OH_NativeColorSpaceManager](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/nativecolorspacemanager-oh-nativecolorspacemanager)
+
+## 目录
+- [概述](#概述)
+
+收起自动换行深色代码主题复制
+```
+typedef struct OH_NativeColorSpaceManager OH_NativeColorSpaceManager
+```
+ 
+## 概述
+PhonePC/2in1TabletTV提供OH_NativeColorSpaceManager结构体声明。
+
+ **起始版本：** 13
+
+ **相关模块：** [NativeColorSpaceManager](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-nativecolorspacemanager)
+
+ **所在头文件：** [native_color_space_manager.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-native-color-space-manager-h)

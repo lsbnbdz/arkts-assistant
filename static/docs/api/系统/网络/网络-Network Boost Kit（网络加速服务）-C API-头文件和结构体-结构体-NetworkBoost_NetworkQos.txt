@@ -1,0 +1,121 @@
+# [NetworkBoost_NetworkQos](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/network-boost-c-struct-network_qos)
+
+## 目录
+- [概述](#section2067073402162158)
+- [汇总](#section1189717847162158)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section248098549162158)
+  - [linkDownBandwidth](#ad718456602334a20ef9a527cf32f736e)
+  - [linkDownRate](#ad607a0c7adddc87641499a1c21501e9a)
+  - [linkUpBandwidth](#aa52e26c49ee8385d48729c92944aa76e)
+  - [linkUpBufferCongestionPercent](#aa5d0ece94735554c3c0c8296a6e4d1d1)
+  - [linkUpBufferDelayMs](#a13c017d5d078e43588c9be922c6b39dd)
+  - [linkUpRate](#adea87b33659ab8d87566b97d9f4afdc8)
+  - [pathType](#aa2c0dbab80006b4f907cc4ed6ba1069e)
+  - [rttMs](#a77a16170d4a0ab235de7c0ca59db88dc)
+
+## 概述
+PhonePC/2in1Tablet网络质量回调信息。
+
+ **起始版本：** 5.1.0(18)
+
+ **相关模块：** [NetworkBoost](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/network-boost-c-overview)
+
+ 
+## 汇总
+PhonePC/2in1Tablet 
+### 成员变量
+ PhonePC/2in1Tablet展开
+| |
+| |
+| |
+| NetworkBoost_PathType pathType | 相应的数据路径上的网络质量信息。 |
+| uint64_t linkUpBandwidth | 上行带宽信息，单位为bps。 |
+| uint64_t linkDownBandwidth | 下行带宽信息，单位为bps。 |
+| uint64_t linkUpRate | 上行速率，单位为bps。 |
+| uint64_t linkDownRate | 下行速率，单位为bps。 |
+| uint32_t rttMs | RTT时延，单位为ms，取值范围是任意正数。 |
+| uint32_t linkUpBufferDelayMs | 上行发送空口缓冲时延，单位为ms，取值范围是任意正数。 |
+| uint32_t linkUpBufferCongestionPercent | 上行发送空口缓冲时延占总缓冲时间的比例，取值范围[0, 100]。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1Tablet 
+### linkDownBandwidth
+PhonePC/2in1Tablet收起自动换行深色代码主题复制
+```
+uint64_t NetworkBoost_NetworkQos::linkDownBandwidth
+```
+ **描述**
+
+ 下行带宽信息，单位为bps。
+
+ 
+### linkDownRate
+PhonePC/2in1Tablet收起自动换行深色代码主题复制
+```
+uint64_t NetworkBoost_NetworkQos::linkDownRate
+```
+ **描述**
+
+ 下行速率，单位为bps。
+
+ 
+### linkUpBandwidth
+PhonePC/2in1Tablet收起自动换行深色代码主题复制
+```
+uint64_t NetworkBoost_NetworkQos::linkUpBandwidth
+```
+ **描述**
+
+ 上行带宽信息，单位为bps。
+
+ 
+### linkUpBufferCongestionPercent
+PhonePC/2in1Tablet收起自动换行深色代码主题复制
+```
+uint32_t NetworkBoost_NetworkQos::linkUpBufferCongestionPercent
+```
+ **描述**
+
+ 上行发送空口缓冲时延占总缓冲时间的比例，取值范围[0, 100]。
+
+ 
+### linkUpBufferDelayMs
+PhonePC/2in1Tablet收起自动换行深色代码主题复制
+```
+uint32_t NetworkBoost_NetworkQos::linkUpBufferDelayMs
+```
+ **描述**
+
+ 上行发送空口缓冲时延（单位ms），取值范围是任意正数。
+
+ 
+### linkUpRate
+PhonePC/2in1Tablet收起自动换行深色代码主题复制
+```
+uint64_t NetworkBoost_NetworkQos::linkUpRate
+```
+ **描述**
+
+ 上行速率，单位为bps。
+
+ 
+### pathType
+PhonePC/2in1Tablet收起自动换行深色代码主题复制
+```
+NetworkBoost_PathType NetworkBoost_NetworkQos::pathType
+```
+ **描述**
+
+ 相应的数据路径上的网络质量信息。
+
+ 
+### rttMs
+PhonePC/2in1Tablet收起自动换行深色代码主题复制
+```
+uint32_t NetworkBoost_NetworkQos::rttMs
+```
+ **描述**
+
+ RTT时延（单位ms），取值范围是任意正数。

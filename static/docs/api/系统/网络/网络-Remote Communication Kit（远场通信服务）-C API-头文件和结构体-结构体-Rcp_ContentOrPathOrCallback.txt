@@ -1,0 +1,75 @@
+# [Rcp_ContentOrPathOrCallback](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___content_or_path_or_callback)
+
+## 目录
+- [概述](#section1863890083094052)
+- [汇总](#section1991242817094052)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section798469419094052)
+  - [callback](#a307b3cb12a976b3e3555b20dc0f5d0bd)
+  - [content](#a9a98334505537018eec3356254ef6340)
+  - [path](#a3c4cb1ec63c7e30ef25f3e8c04007639)
+  - [type](#ab083ea1a78b6bb4d37728fdb63258ac9)
+
+## 概述
+PhonePC/2in1TabletTVWearable[Rcp_FormFieldFileValue](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___form_field_file_value)中使用的简单表单数据字段值。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [RemoteCommunication](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| Rcp_ContentOrPathOrCallbackType type | 表示union中使用的数据类型。 |
+| union { | union结构。data中使用的数据由type进行区分。 |
+| Rcp_Buffer content | content: 文本数据。 |
+| char path [RCP_MAX_PATH_LEN] | path: 文件路径。 |
+| Rcp_GetDataCallback callback | callback: 获取数据的回调函数。 |
+| } data | data中使用的数据由type进行区分。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTVWearable 
+### callback
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_GetDataCallback Rcp_ContentOrPathOrCallback::callback
+```
+ **描述**
+
+ 获取数据的回调。
+
+ 
+### content
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_Buffer Rcp_ContentOrPathOrCallback::content
+```
+ **描述**
+
+ 文本数据。
+
+ 
+### path
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+char Rcp_ContentOrPathOrCallback::path[RCP_MAX_PATH_LEN]
+```
+ **描述**
+
+ 文件路径。
+
+ 
+### type
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_ContentOrPathOrCallbackType Rcp_ContentOrPathOrCallback::type
+```
+ **描述**
+
+ union中使用的数据类型。

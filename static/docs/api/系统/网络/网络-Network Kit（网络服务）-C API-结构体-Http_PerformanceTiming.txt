@@ -1,0 +1,36 @@
+# [Http_PerformanceTiming](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netstack-http-performancetiming)
+
+## 目录
+- [概述](#概述)
+- [汇总](#汇总)
+  - [成员变量](#成员变量)
+
+收起自动换行深色代码主题复制
+```
+typedef struct Http_PerformanceTiming {...} Http_PerformanceTiming
+```
+ 
+## 概述
+PhonePC/2in1TabletTVWearableHTTP响应时间信息，会在[Http_Response](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netstack-http-response#%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F)中收集。
+
+ **起始版本：** 20
+
+ **相关模块：** [netstack](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netstack)
+
+ **所在头文件：** [net_http_type.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-net-http-type-h)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| double dnsTiming | 从request请求到DNS解析完成的耗时，包含域名解析，TCP连接等流程耗时。 |
+| double tcpTiming | 从request请求到TCP连接完成的耗时。 |
+| double tlsTiming | 从request请求到TLS连接完成的耗时。 |
+| double firstSendTiming | 从request请求到开始发送第一个字节的耗时。 |
+| double firstReceiveTiming | 从request请求到接收到第一个字节的耗时。 |
+| double totalFinishTiming | 从request请求到完成请求的耗时。 |
+| double redirectTiming | 从request请求到完成所有重定向步骤的耗时。 |

@@ -301,7 +301,7 @@
       "传感器服务"
     ]
   },
-  "sensor-service-kit-传感器服务": {
+  "sensor-service-kit-传感器服务-1": {
     "title": "Sensor Service Kit（传感器服务）",
     "headings": [
       "Sensor Service Kit（传感器服务）"
@@ -313,7 +313,7 @@
     "path": "",
     "rel_path": "guide/系统/硬件/硬件-Sensor Service Kit（传感器服务）/硬件-Sensor Service Kit（传感器服务）.txt",
     "catalog": "硬件-Sensor Service Kit（传感器服务）",
-    "objectId": "sensor-service-kit-传感器服务",
+    "objectId": "sensor-service-kit-传感器服务-1",
     "nodeName": "document",
     "keywords": [
       "Sensor",

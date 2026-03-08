@@ -1,0 +1,8 @@
+# [开放接口调用凭证](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/account-api-obtain-token)
+
+- **[概述](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/account-api-obtain-token-overview)**
+ - **[获取用户级凭证](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/account-api-obtain-user-token)**
+ - **[刷新用户级凭证](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/account-api-obtain-refresh-token)**
+ - **[解析凭证](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/account-api-get-token-info)**
+ - **[取消用户级凭证授权](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/account-api-obtain-revoke-token)**
+ - **[获取应用级凭证](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/account-api-obtain-app-token)**

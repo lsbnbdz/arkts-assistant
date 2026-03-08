@@ -1,0 +1,17 @@
+# [结构体](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/function-flow-runtime-struct)
+
+- **[ffrt_function_header_t](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-ffrt-ffrt-function-header-t)**
+ - **[ffrt_dependence_t](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-ffrt-ffrt-dependence-t)**
+ - **[ffrt_deps_t](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-ffrt-ffrt-deps-t)**
+ - **[ffrt_task_attr_t](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-ffrt-ffrt-task-attr-t)**
+ - **[ffrt_queue_attr_t](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-ffrt-ffrt-queue-attr-t)**
+ - **[ffrt_condattr_t](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-ffrt-ffrt-condattr-t)**
+ - **[ffrt_mutexattr_t](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-ffrt-ffrt-mutexattr-t)**
+ - **[ffrt_rwlockattr_t](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-ffrt-ffrt-rwlockattr-t)**
+ - **[ffrt_mutex_t](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-ffrt-ffrt-mutex-t)**
+ - **[ffrt_rwlock_t](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-ffrt-ffrt-rwlock-t)**
+ - **[ffrt_cond_t](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-ffrt-ffrt-cond-t)**
+ - **[ffrt_loop_t](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-ffrt-ffrt-loop-t)**
+ - **[ffrt_queue_t](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-ffrt-ffrt-queue-t)**
+ - **[ffrt_task_handle_t](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-ffrt-ffrt-task-handle-t)**
+ - **[ffrt_fiber_t](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-ffrt-ffrt-fiber-t)**

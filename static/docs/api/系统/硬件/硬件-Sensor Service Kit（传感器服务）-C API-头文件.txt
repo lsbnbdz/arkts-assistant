@@ -1,0 +1,6 @@
+# [头文件](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/sensor-service-headerfile)
+
+- **[oh_sensor.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-sensor-h)**
+ - **[oh_sensor_type.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-sensor-type-h)**
+ - **[vibrator.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-vibrator-h)**
+ - **[vibrator_type.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-vibrator-type-h)**

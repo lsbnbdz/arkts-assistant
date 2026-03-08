@@ -1,0 +1,52 @@
+# [RotateAnimation](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-rotateanimation)
+
+## 目录
+- [导入模块](#section164051883419)
+- [RotateAnimation](#section1217119125358)
+  - [constructor](#section129193914379)
+
+## 导入模块
+PhonePC/2in1TabletWearable收起自动换行深色代码主题复制
+```
+import { map } from '@kit.MapKit';
+```
+ 
+## RotateAnimation
+PhonePC/2in1TabletWearable控制旋转的动画类，继承[Animation](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-animation)。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ 
+### constructor
+PhonePC/2in1TabletWearableconstructor(fromDegree: number, toDegree: number)
+
+ 构造器，构造控制旋转的动画实例。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| fromDegree | number | 是 | 起始角度。角度的范围为[0, 360]。 |
+| toDegree | number | 是 | 目标角度。角度的范围为[0, 360]。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let animation: map.RotateAnimation = new map.RotateAnimation(15, 150);
+```

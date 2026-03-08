@@ -1,0 +1,3 @@
+# [App Linking Kit（应用链接服务）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/app-linking-api)
+
+- **[ArkTS API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/applinking-arkts-api)**

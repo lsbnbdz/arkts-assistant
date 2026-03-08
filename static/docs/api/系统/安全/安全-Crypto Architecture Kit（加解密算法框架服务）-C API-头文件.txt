@@ -1,0 +1,14 @@
+# [头文件](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/crypto-architecture-headerfile)
+
+- **[crypto_architecture_kit.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-crypto-architecture-kit-h)**
+ - **[crypto_asym_cipher.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-crypto-asym-cipher-h)**
+ - **[crypto_asym_key.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-crypto-asym-key-h)**
+ - **[crypto_common.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-crypto-common-h)**
+ - **[crypto_digest.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-crypto-digest-h)**
+ - **[crypto_kdf.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-crypto-kdf-h)**
+ - **[crypto_key_agreement.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-crypto-key-agreement-h)**
+ - **[crypto_mac.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-crypto-mac-h)**
+ - **[crypto_rand.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-crypto-rand-h)**
+ - **[crypto_signature.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-crypto-signature-h)**
+ - **[crypto_sym_cipher.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-crypto-sym-cipher-h)**
+ - **[crypto_sym_key.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-crypto-sym-key-h)**

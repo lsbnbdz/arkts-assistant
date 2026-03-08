@@ -1,0 +1,4 @@
+# [Test Kit（应用测试服务）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/test-api)
+
+- **[ArkTS API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/test-arkts)**
+ - **[错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/test-arkts-errcode)**

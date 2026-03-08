@@ -12,7 +12,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-neterrorlist",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.netErrorList (ArkWeb网络协议栈错误列表).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.netErrorList (ArkWeb网络协议栈错误列表).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-neterrorlist-arkweb",
     "nodeName": "document",
@@ -32,7 +32,8 @@
       "Error",
       "NOT",
       "NETWORK",
-      "方舟"
+      "方舟",
+      "应用框架"
     ]
   },
   "arkweb-web-arkts-api-ohos-web-webnativemessagingextensionabi": {
@@ -52,7 +53,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-web-webnativemessagingextensionability",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.WebNativeMessagingExtensionAbility (Web Native Messaging Extension Ability).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.WebNativeMessagingExtensionAbility (Web Native Messaging Extension Ability).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webnativemessagingextensionabi",
     "nodeName": "document",
@@ -73,7 +74,8 @@
       "Connect",
       "Disconnect",
       "ArkWeb",
-      "方舟"
+      "方舟",
+      "应用框架"
     ]
   },
   "arkweb-web-arkts-api-ohos-web-webnativemessagingextensioncon": {
@@ -91,7 +93,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-web-webnativemessagingextensioncontext",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.WebNativeMessagingExtensionContext (Web Native Messaging Extension Context).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.WebNativeMessagingExtensionContext (Web Native Messaging Extension Context).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webnativemessagingextensioncon",
     "nodeName": "document",
@@ -112,7 +114,8 @@
       "The",
       "component",
       "ArkWeb",
-      "方舟"
+      "方舟",
+      "应用框架"
     ]
   },
   "arkweb-web-arkts-api-ohos-web-webnativemessagingextensionman": {
@@ -133,7 +136,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-web-webnativemessagingextensionmanager",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webNativeMessagingExtensionManager (Web Native Messaging Extension Manager).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webNativeMessagingExtensionManager (Web Native Messaging Extension Manager).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webnativemessagingextensionman",
     "nodeName": "document",
@@ -154,7 +157,8 @@
       "Permission",
       "permission",
       "ArkWeb",
-      "方舟"
+      "方舟",
+      "应用框架"
     ]
   },
   "arkweb-web-arkts-api-ohos-web-webview-webview-1": {
@@ -167,7 +171,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-webview",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webview-webview-1",
     "nodeName": "document",
@@ -189,7 +193,8 @@
       "Proxy",
       "ArkWeb",
       "Web",
-      "方舟"
+      "方舟",
+      "应用框架"
     ]
   },
   "doc-m0tieb": {
@@ -240,7 +245,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkweb-arkts-errcode",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-错误码.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-错误码.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web",
     "nodeName": "document",
@@ -254,7 +259,8 @@
       "webview",
       "ArkWeb",
       "Web",
-      "方舟"
+      "方舟",
+      "应用框架"
     ]
   },
   "doc-pacvm4": {
@@ -495,7 +501,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkweb-struct",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-c-api-2",
     "nodeName": "document",
@@ -516,7 +522,8 @@
       "Any",
       "Native",
       "ArkWeb",
-      "方舟"
+      "方舟",
+      "应用框架"
     ]
   },
   "doc-luy5p": {
@@ -600,7 +607,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkweb-module",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-模块.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-模块.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-c-api-1",
     "nodeName": "document",
@@ -613,7 +620,8 @@
       "capi",
       "web",
       "ArkWeb",
-      "方舟"
+      "方舟",
+      "应用框架"
     ]
   },
   "arkweb-web-arkts-api-ohos-web-webview-webview": {
@@ -629,7 +637,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-模块描述.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-模块描述.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webview-webview",
     "nodeName": "document",
@@ -651,6 +659,7 @@
       "Options",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "ohos",
       "web",
       "Webview"
@@ -1340,7 +1349,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-events",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-事件.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-事件.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-web",
     "nodeName": "document",
@@ -1363,6 +1372,7 @@
       "ArkWeb",
       "Web",
       "方舟",
+      "应用框架",
       "组件"
     ]
   },
@@ -1390,7 +1400,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-attributes",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-属性.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-属性.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-web-1",
     "nodeName": "document",
@@ -1413,6 +1423,7 @@
       "ArkWeb",
       "Web",
       "方舟",
+      "应用框架",
       "组件"
     ]
   },
@@ -1475,7 +1486,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkweb-headerfile",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-头文件.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-头文件.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-c-api",
     "nodeName": "document",
@@ -1495,7 +1506,8 @@
       "headerfile",
       "ArkWeb",
       "Web",
-      "方舟"
+      "方舟",
+      "应用框架"
     ]
   },
   "doc-l3pf2": {
@@ -1828,7 +1840,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-组件描述.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-组件描述.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-web-2",
     "nodeName": "document",
@@ -1850,6 +1862,7 @@
       "Webview",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "组件"
     ]
   },
@@ -1863,7 +1876,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkweb-comp",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts",
     "nodeName": "document",
@@ -1877,7 +1890,8 @@
       "components",
       "web",
       "ArkWeb",
-      "方舟"
+      "方舟",
+      "应用框架"
     ]
   },
   "arkweb-web-arkts-api": {
@@ -1890,7 +1904,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkweb-arkts",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api",
     "nodeName": "document",
@@ -1911,7 +1925,8 @@
       "Webview",
       "Error",
       "ArkWeb",
-      "方舟"
+      "方舟",
+      "应用框架"
     ]
   },
   "arkweb-web-c-api-arkweb-anynativeapi": {
@@ -1928,7 +1943,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-anynativeapi",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_AnyNativeAPI.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_AnyNativeAPI.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-c-api-arkweb-anynativeapi",
     "nodeName": "document",
@@ -1949,6 +1964,7 @@
       "web",
       "收起自动",
       "方舟",
+      "应用框架",
       "结构体"
     ]
   },
@@ -1966,7 +1982,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-blanklessinfo",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_BlanklessInfo.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_BlanklessInfo.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-c-api-arkweb-blanklessinfo",
     "nodeName": "document",
@@ -1987,6 +2003,7 @@
       "耗时预测",
       "汇总",
       "方舟",
+      "应用框架",
       "结构体"
     ]
   },
@@ -2010,7 +2027,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-componentapi",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_ComponentAPI.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_ComponentAPI.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-c-api-arkweb-componentapi",
     "nodeName": "document",
@@ -2031,6 +2048,7 @@
       "On",
       "user",
       "方舟",
+      "应用框架",
       "结构体"
     ]
   },
@@ -2058,7 +2076,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-controllerapi",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_ControllerAPI.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_ControllerAPI.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-c-api-arkweb-controllerapi",
     "nodeName": "document",
@@ -2079,6 +2097,7 @@
       "Javascript",
       "javascript",
       "方舟",
+      "应用框架",
       "结构体"
     ]
   },
@@ -2103,7 +2122,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-cookiemanagerapi",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_CookieManagerAPI.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_CookieManagerAPI.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-c-api-arkweb-cookiemanagerapi",
     "nodeName": "document",
@@ -2124,6 +2143,7 @@
       "incognito",
       "URL",
       "方舟",
+      "应用框架",
       "结构体"
     ]
   },
@@ -2144,7 +2164,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-arkweb-error-code-h",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-头文件-arkweb_error_code.h.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-头文件-arkweb_error_code.h.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-c-api-arkweb-error-code-h",
     "nodeName": "document",
@@ -2166,6 +2186,7 @@
       "接口异常",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "头文件"
     ]
   },
@@ -2181,7 +2202,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-httpbodystream",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_HttpBodyStream_.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_HttpBodyStream_.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-c-api-arkweb-httpbodystream",
     "nodeName": "document",
@@ -2202,6 +2223,7 @@
       "换行深色",
       "代码主题",
       "方舟",
+      "应用框架",
       "结构体"
     ]
   },
@@ -2226,7 +2248,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-arkweb-interface-h",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-头文件-arkweb_interface.h.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-头文件-arkweb_interface.h.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-c-api-arkweb-interface-h",
     "nodeName": "document",
@@ -2248,6 +2270,7 @@
       "component",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "头文件"
     ]
   },
@@ -2265,7 +2288,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-javascriptbridgedata",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_JavaScriptBridgeData.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_JavaScriptBridgeData.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-c-api-arkweb-javascriptbridgedata",
     "nodeName": "document",
@@ -2286,6 +2309,7 @@
       "capi",
       "const",
       "方舟",
+      "应用框架",
       "结构体"
     ]
   },
@@ -2303,7 +2327,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-javascriptobject",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_JavaScriptObject.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_JavaScriptObject.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-c-api-arkweb-javascriptobject",
     "nodeName": "document",
@@ -2324,6 +2348,7 @@
       "Object",
       "type",
       "方舟",
+      "应用框架",
       "结构体"
     ]
   },
@@ -2339,7 +2364,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-javascriptvalue8h",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_JavaScriptValue_.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_JavaScriptValue_.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-c-api-arkweb-javascriptvalue",
     "nodeName": "document",
@@ -2360,6 +2385,7 @@
       "换行深色",
       "代码主题",
       "方舟",
+      "应用框架",
       "结构体"
     ]
   },
@@ -2380,7 +2406,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-javascriptvalueapi",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_JavaScriptValueAPI.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_JavaScriptValueAPI.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-c-api-arkweb-javascriptvalueapi",
     "nodeName": "document",
@@ -2401,6 +2427,7 @@
       "create",
       "概述",
       "方舟",
+      "应用框架",
       "结构体"
     ]
   },
@@ -2420,7 +2447,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-arkweb-net-error-list-h",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-头文件-arkweb_net_error_list.h.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-头文件-arkweb_net_error_list.h.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-c-api-arkweb-net-error-list-h",
     "nodeName": "document",
@@ -2442,6 +2469,7 @@
       "System",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "头文件"
     ]
   },
@@ -2459,7 +2487,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-proxymethod",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_ProxyMethod.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_ProxyMethod.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-c-api-arkweb-proxymethod",
     "nodeName": "document",
@@ -2480,6 +2508,7 @@
       "capi",
       "const",
       "方舟",
+      "应用框架",
       "结构体"
     ]
   },
@@ -2497,7 +2526,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-proxymethodwithresult",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_ProxyMethodWithResult.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_ProxyMethodWithResult.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-c-api-arkweb-proxymethodwithresult",
     "nodeName": "document",
@@ -2518,6 +2547,7 @@
       "type",
       "references",
       "方舟",
+      "应用框架",
       "结构体"
     ]
   },
@@ -2535,7 +2565,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-proxyobject",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_ProxyObject.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_ProxyObject.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-c-api-arkweb-proxyobject",
     "nodeName": "document",
@@ -2556,6 +2586,7 @@
       "references",
       "capi",
       "方舟",
+      "应用框架",
       "结构体"
     ]
   },
@@ -2573,7 +2604,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-proxyobjectwithresult",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_ProxyObjectWithResult.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_ProxyObjectWithResult.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-c-api-arkweb-proxyobjectwithresult",
     "nodeName": "document",
@@ -2594,6 +2625,7 @@
       "const",
       "references",
       "方舟",
+      "应用框架",
       "结构体"
     ]
   },
@@ -2609,7 +2641,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-requestheaderlist",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_RequestHeaderList_.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_RequestHeaderList_.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-c-api-arkweb-requestheaderlist",
     "nodeName": "document",
@@ -2630,6 +2662,7 @@
       "收起自动",
       "换行深色",
       "方舟",
+      "应用框架",
       "结构体"
     ]
   },
@@ -2645,7 +2678,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-resourcehandler",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_ResourceHandler_.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_ResourceHandler_.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-c-api-arkweb-resourcehandler",
     "nodeName": "document",
@@ -2666,6 +2699,7 @@
       "收起自动",
       "换行深色",
       "方舟",
+      "应用框架",
       "结构体"
     ]
   },
@@ -2681,7 +2715,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-resourcerequest",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_ResourceRequest_.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_ResourceRequest_.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-c-api-arkweb-resourcerequest",
     "nodeName": "document",
@@ -2702,6 +2736,7 @@
       "post",
       "data",
       "方舟",
+      "应用框架",
       "结构体"
     ]
   },
@@ -2717,7 +2752,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-response",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_Response_.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_Response_.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-c-api-arkweb-response",
     "nodeName": "document",
@@ -2738,6 +2773,7 @@
       "复制",
       "为被拦截",
       "方舟",
+      "应用框架",
       "结构体"
     ]
   },
@@ -2765,7 +2801,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-arkweb-scheme-handler-h",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-头文件-arkweb_scheme_handler.h.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-头文件-arkweb_scheme_handler.h.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-c-api-arkweb-scheme-handler-h",
     "nodeName": "document",
@@ -2787,6 +2823,7 @@
       "Header",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "头文件"
     ]
   },
@@ -2802,7 +2839,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-schemehandler",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_SchemeHandler_.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_SchemeHandler_.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-c-api-arkweb-schemehandler",
     "nodeName": "document",
@@ -2823,6 +2860,7 @@
       "换行深色",
       "代码主题",
       "方舟",
+      "应用框架",
       "结构体"
     ]
   },
@@ -2850,7 +2888,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-arkweb-type-h",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-头文件-arkweb_type.h.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-头文件-arkweb_type.h.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-c-api-arkweb-type-h",
     "nodeName": "document",
@@ -2872,6 +2910,7 @@
       "Scroll",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "头文件"
     ]
   },
@@ -2887,7 +2926,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-webmessage8h",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_WebMessage_.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_WebMessage_.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-c-api-arkweb-webmessage",
     "nodeName": "document",
@@ -2908,6 +2947,7 @@
       "代码主题",
       "复制",
       "方舟",
+      "应用框架",
       "结构体"
     ]
   },
@@ -2933,7 +2973,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-webmessageapi",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_WebMessageAPI.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_WebMessageAPI.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-c-api-arkweb-webmessageapi",
     "nodeName": "document",
@@ -2954,6 +2994,7 @@
       "capi",
       "create",
       "方舟",
+      "应用框架",
       "结构体"
     ]
   },
@@ -2969,7 +3010,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-webmessageport8h",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_WebMessagePort_.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_WebMessagePort_.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-c-api-arkweb-webmessageport",
     "nodeName": "document",
@@ -2990,6 +3031,7 @@
       "换行深色",
       "代码主题",
       "方舟",
+      "应用框架",
       "结构体"
     ]
   },
@@ -3012,7 +3054,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web-arkweb-webmessageportapi",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_WebMessagePortAPI.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-结构体-ArkWeb_WebMessagePortAPI.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-c-api-arkweb-webmessageportapi",
     "nodeName": "document",
@@ -3033,6 +3075,7 @@
       "Native",
       "type",
       "方舟",
+      "应用框架",
       "结构体"
     ]
   },
@@ -3046,7 +3089,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkweb-api",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-1",
     "nodeName": "document",
@@ -3059,7 +3102,8 @@
       "组件",
       "错误码",
       "comp",
-      "errcode"
+      "errcode",
+      "应用框架"
     ]
   },
   "arkweb": {
@@ -3173,7 +3217,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkweb-c",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-c-api-3",
     "nodeName": "document",
@@ -3188,7 +3232,8 @@
       "struct",
       "ArkWeb",
       "Web",
-      "方舟"
+      "方舟",
+      "应用框架"
     ]
   },
   "arkweb-web-arkts-api-ohos-web-webview-webview-class-adsblock": {
@@ -3210,7 +3255,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-adsblockmanager",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (AdsBlockManager).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (AdsBlockManager).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webview-webview-class-adsblock",
     "nodeName": "document",
@@ -3232,6 +3277,7 @@
       "kit",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "ohos",
       "web",
       "Webview"
@@ -3250,7 +3296,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-backforwardcacheoptions",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (BackForwardCacheOptions).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (BackForwardCacheOptions).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webview-webview-class-backforw",
     "nodeName": "document",
@@ -3272,6 +3318,7 @@
       "属性",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "ohos",
       "web",
       "webview"
@@ -3290,7 +3337,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/kts-apis-webview-backforwardcachesupportedfeatures",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (BackForwardCacheSupportedFeatures).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (BackForwardCacheSupportedFeatures).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webview-webview-class-backforw-1",
     "nodeName": "document",
@@ -3312,6 +3359,7 @@
       "Webview",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "ohos",
       "web",
       "webview"
@@ -3334,7 +3382,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/s-basic-components-web-clientauthenticationhandler",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (ClientAuthenticationHandler).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (ClientAuthenticationHandler).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-web-class-clientauthenticationhandler",
     "nodeName": "document",
@@ -3356,6 +3404,7 @@
       "MANAGER",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "组件"
     ]
   },
@@ -3376,7 +3425,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-consolemessage",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (ConsoleMessage).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (ConsoleMessage).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-web-class-consolemessage",
     "nodeName": "document",
@@ -3398,6 +3447,7 @@
       "开始支持",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "组件"
     ]
   },
@@ -3414,7 +3464,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-controllerhandler",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (ControllerHandler).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (ControllerHandler).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-web-class-controllerhandler",
     "nodeName": "document",
@@ -3436,6 +3486,7 @@
       "New",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "组件"
     ]
   },
@@ -3453,7 +3504,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-dataresubmissionhandler",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (DataResubmissionHandler).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (DataResubmissionHandler).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-web-class-dataresubmissionhandler",
     "nodeName": "document",
@@ -3475,6 +3526,7 @@
       "Controller",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "组件"
     ]
   },
@@ -3493,7 +3545,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-eventresult",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (EventResult).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (EventResult).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-web-class-eventresult",
     "nodeName": "document",
@@ -3515,6 +3567,7 @@
       "web",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "组件"
     ]
   },
@@ -3535,7 +3588,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-fileselectorparam",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (FileSelectorParam).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (FileSelectorParam).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-web-class-fileselectorparam",
     "nodeName": "document",
@@ -3557,6 +3610,7 @@
       "Param",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "组件"
     ]
   },
@@ -3573,7 +3627,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-fileselectorresult",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (FileSelectorResult).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (FileSelectorResult).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-web-class-fileselectorresult",
     "nodeName": "document",
@@ -3595,6 +3649,7 @@
       "Show",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "组件"
     ]
   },
@@ -3611,7 +3666,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-fullscreenexithandler",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (FullScreenExitHandler).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (FullScreenExitHandler).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-web-class-fullscreenexithandler",
     "nodeName": "document",
@@ -3633,6 +3688,7 @@
       "系统能力",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "组件"
     ]
   },
@@ -3656,7 +3712,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-geolocationpermissions",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (GeolocationPermissions).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (GeolocationPermissions).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webview-webview-class-geolocat",
     "nodeName": "document",
@@ -3678,6 +3734,7 @@
       "false",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "web",
       "Webview"
     ]
@@ -3697,7 +3754,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-httpauthhandler",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (HttpAuthHandler).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (HttpAuthHandler).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-web-class-httpauthhandler",
     "nodeName": "document",
@@ -3719,6 +3776,7 @@
       "cancel",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "组件"
     ]
   },
@@ -3735,7 +3793,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-jsgeolocation",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (JsGeolocation).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (JsGeolocation).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-web-class-jsgeolocation",
     "nodeName": "document",
@@ -3757,6 +3815,7 @@
       "references",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "组件"
     ]
   },
@@ -3778,7 +3837,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-jsmessageext",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (JsMessageExt).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (JsMessageExt).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webview-webview-class-jsmessag",
     "nodeName": "document",
@@ -3801,6 +3860,7 @@
       "ArkWeb",
       "Web",
       "方舟",
+      "应用框架",
       "ohos",
       "web"
     ]
@@ -3820,7 +3880,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-jsresult",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (JsResult).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (JsResult).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-web-class-jsresult",
     "nodeName": "document",
@@ -3842,6 +3902,7 @@
       "Prompt",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "组件"
     ]
   },
@@ -3857,7 +3918,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-mediasourceinfo",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (MediaSourceInfo).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (MediaSourceInfo).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webview-webview-class-mediasou",
     "nodeName": "document",
@@ -3879,6 +3940,7 @@
       "string",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "ohos",
       "web",
       "webview"
@@ -3896,7 +3958,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-nativemediaplayersurfaceinfo",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (NativeMediaPlayerSurfaceInfo).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (NativeMediaPlayerSurfaceInfo).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webview-webview-class-nativeme",
     "nodeName": "document",
@@ -3918,6 +3980,7 @@
       "Web",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "ohos",
       "web",
       "webview",
@@ -3936,7 +3999,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-pdfdata",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (PdfData).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (PdfData).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webview-webview-class-pdfdata",
     "nodeName": "document",
@@ -3959,6 +4022,7 @@
       "ArkWeb",
       "Web",
       "方舟",
+      "应用框架",
       "ohos",
       "web",
       "Webview"
@@ -3980,7 +4044,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-permissionrequest",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (PermissionRequest).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (PermissionRequest).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-web-class-permissionrequest",
     "nodeName": "document",
@@ -4002,6 +4066,7 @@
       "Array",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "组件"
     ]
   },
@@ -4018,7 +4083,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-prefetchoptions",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (PrefetchOptions).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (PrefetchOptions).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webview-webview-class-prefetch",
     "nodeName": "document",
@@ -4040,6 +4105,7 @@
       "忽略响应",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "ohos",
       "web",
       "webview"
@@ -4065,7 +4131,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-proxyconfig",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (ProxyConfig).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (ProxyConfig).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webview-webview-class-proxycon",
     "nodeName": "document",
@@ -4088,6 +4154,7 @@
       "ArkWeb",
       "Web",
       "方舟",
+      "应用框架",
       "ohos",
       "web",
       "webview",
@@ -4108,7 +4175,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-proxycontroller",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (ProxyController).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (ProxyController).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webview-webview-class-proxycon-1",
     "nodeName": "document",
@@ -4130,6 +4197,7 @@
       "开始支持",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "ohos",
       "web",
       "Webview"
@@ -4148,7 +4216,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-proxyrule",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (ProxyRule).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (ProxyRule).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webview-webview-class-proxyrul",
     "nodeName": "document",
@@ -4171,6 +4239,7 @@
       "ArkWeb",
       "Web",
       "方舟",
+      "应用框架",
       "ohos",
       "web",
       "Webview"
@@ -4191,7 +4260,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-screencapturehandler",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (ScreenCaptureHandler).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (ScreenCaptureHandler).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-web-class-screencapturehandler",
     "nodeName": "document",
@@ -4213,6 +4282,7 @@
       "系统能力",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "组件"
     ]
   },
@@ -4231,7 +4301,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-sslerrorhandler",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (SslErrorHandler).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (SslErrorHandler).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-web-class-sslerrorhandler",
     "nodeName": "document",
@@ -4253,6 +4323,7 @@
       "Core",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "组件"
     ]
   },
@@ -4269,7 +4340,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-verifypinhandler",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (VerifyPinHandler).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (VerifyPinHandler).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webview-webview-class-verifypi",
     "nodeName": "document",
@@ -4291,6 +4362,7 @@
       "earableconstructor",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "ohos",
       "web",
       "webview"
@@ -4320,7 +4392,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-webcontextmenuparam",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (WebContextMenuParam).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (WebContextMenuParam).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-web-class-webcontextmenuparam",
     "nodeName": "document",
@@ -4342,6 +4414,7 @@
       "State",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "组件"
     ]
   },
@@ -4366,7 +4439,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-webcontextmenuresult",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (WebContextMenuResult).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (WebContextMenuResult).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-web-class-webcontextmenuresult",
     "nodeName": "document",
@@ -4388,6 +4461,7 @@
       "单相关的",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "组件"
     ]
   },
@@ -4415,7 +4489,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-webcontroller",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (WebController).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (WebController).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-web-class-webcontroller",
     "nodeName": "document",
@@ -4437,6 +4511,7 @@
       "创建对象",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "组件"
     ]
   },
@@ -4454,7 +4529,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-webcookie",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (WebCookie).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (WebCookie).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-web-class-webcookie",
     "nodeName": "document",
@@ -4476,6 +4551,7 @@
       "Capability",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "组件"
     ]
   },
@@ -4503,7 +4579,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webcookiemanager",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (WebCookieManager).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (WebCookieManager).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webview-webview-class-webcooki",
     "nodeName": "document",
@@ -4525,6 +4601,7 @@
       "fetchcookie",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "ohos",
       "web",
       "webview",
@@ -4547,7 +4624,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webdatabase",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (WebDataBase).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (WebDataBase).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webview-webview-class-webdatab",
     "nodeName": "document",
@@ -4569,6 +4646,7 @@
       "error",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "ohos",
       "web",
       "Webview"
@@ -4590,7 +4668,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webdownloaddelegate",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (WebDownloadDelegate).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (WebDownloadDelegate).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webview-webview-class-webdownl",
     "nodeName": "document",
@@ -4612,6 +4690,7 @@
       "storage",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "ohos",
       "Webview"
     ]
@@ -4640,7 +4719,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webdownloaditem",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (WebDownloadItem).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (WebDownloadItem).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webview-webview-class-webdownl-1",
     "nodeName": "document",
@@ -4662,6 +4741,7 @@
       "任务",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "ohos",
       "Webview"
     ]
@@ -4680,7 +4760,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webdownloadmanager",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (WebDownloadManager).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (WebDownloadManager).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webview-webview-class-webdownl-2",
     "nodeName": "document",
@@ -4702,6 +4782,7 @@
       "set",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "ohos",
       "Webview"
     ]
@@ -4725,7 +4806,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webhttpbodystream",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (WebHttpBodyStream).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (WebHttpBodyStream).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webview-webview-class-webhttpb",
     "nodeName": "document",
@@ -4747,6 +4828,7 @@
       "Data",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "ohos",
       "web"
     ]
@@ -4768,7 +4850,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-webkeyboardcontroller",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (WebKeyboardController).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (WebKeyboardController).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-web-class-webkeyboardcontroller",
     "nodeName": "document",
@@ -4790,6 +4872,7 @@
       "Key",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "组件"
     ]
   },
@@ -4817,7 +4900,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webmessageext",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (WebMessageExt).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (WebMessageExt).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webview-webview-class-webmessa",
     "nodeName": "document",
@@ -4839,6 +4922,7 @@
       "String",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "ohos",
       "web",
       "Webview"
@@ -4858,7 +4942,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-webresourceerror",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (WebResourceError).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (WebResourceError).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-web-class-webresourceerror",
     "nodeName": "document",
@@ -4880,6 +4964,7 @@
       "Code",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "组件"
     ]
   },
@@ -4900,7 +4985,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webresourcehandler",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (WebResourceHandler).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (WebResourceHandler).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webview-webview-class-webresou",
     "nodeName": "document",
@@ -4922,6 +5007,7 @@
       "展开",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "ohos",
       "web"
     ]
@@ -4944,7 +5030,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-webresourcerequest",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (WebResourceRequest).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (WebResourceRequest).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-web-class-webresourcerequest",
     "nodeName": "document",
@@ -4966,6 +5052,7 @@
       "请求是否",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "组件"
     ]
   },
@@ -4993,7 +5080,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-webresourceresponse",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (WebResourceResponse).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Class (WebResourceResponse).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-web-class-webresourceresponse",
     "nodeName": "document",
@@ -5015,6 +5102,7 @@
       "constructor",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "组件"
     ]
   },
@@ -5032,7 +5120,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webschemehandler",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (WebSchemeHandler).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (WebSchemeHandler).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webview-webview-class-webschem",
     "nodeName": "document",
@@ -5054,6 +5142,7 @@
       "kit",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "ohos",
       "web",
       "Webview"
@@ -5079,7 +5168,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webschemehandlerrequest",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (WebSchemeHandlerRequest).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (WebSchemeHandlerRequest).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webview-webview-class-webschem-1",
     "nodeName": "document",
@@ -5101,6 +5190,7 @@
       "系统能力",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "ohos",
       "web",
       "webview"
@@ -5130,7 +5220,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webschemehandlerresponse",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (WebSchemeHandlerResponse).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (WebSchemeHandlerResponse).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webview-webview-class-webschem-2",
     "nodeName": "document",
@@ -5152,6 +5242,7 @@
       "Url",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "ohos",
       "web",
       "Webview"
@@ -5177,7 +5268,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webstorage",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (WebStorage).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (WebStorage).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webview-webview-class-webstora",
     "nodeName": "document",
@@ -5199,6 +5290,7 @@
       "Webview",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "ohos",
       "web"
     ]
@@ -5227,7 +5319,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webviewcontroller",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (WebviewController).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Class (WebviewController).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webview-webview-class-webviewc",
     "nodeName": "document",
@@ -5249,6 +5341,7 @@
       "Network",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "ohos",
       "web",
       "webview"
@@ -5391,7 +5484,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-e",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Enums.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Enums.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webview-webview-enums",
     "nodeName": "document",
@@ -5413,6 +5506,7 @@
       "Capability",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "ohos",
       "web",
       "webview",
@@ -5443,7 +5537,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-e",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Enums.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Enums.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-web-enums",
     "nodeName": "document",
@@ -5465,6 +5559,7 @@
       "console",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "组件"
     ]
   },
@@ -5481,7 +5576,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-f",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Functions.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Functions.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webview-webview-functions",
     "nodeName": "document",
@@ -5503,6 +5598,7 @@
       "string",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "ohos",
       "Webview"
     ]
@@ -5673,7 +5769,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-backforwardlist",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Interface (BackForwardList).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Interface (BackForwardList).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webview-webview-interface-back",
     "nodeName": "document",
@@ -5695,6 +5791,7 @@
       "Back",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "ohos",
       "web"
     ]
@@ -5722,7 +5819,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-nativemediaplayerbridge",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Interface (NativeMediaPlayerBridge).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Interface (NativeMediaPlayerBridge).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webview-webview-interface-nati",
     "nodeName": "document",
@@ -5744,6 +5841,7 @@
       "play",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "ohos",
       "web",
       "Webview"
@@ -5773,7 +5871,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-nativemediaplayerhandler",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Interface (NativeMediaPlayerHandler).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Interface (NativeMediaPlayerHandler).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webview-webview-interface-nati-1",
     "nodeName": "document",
@@ -5795,6 +5893,7 @@
       "开始支持",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "ohos",
       "web",
       "webview",
@@ -5822,7 +5921,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-webmessageport",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Interface (WebMessagePort).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Interface (WebMessagePort).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webview-webview-interface-webm",
     "nodeName": "document",
@@ -5844,6 +5943,7 @@
       "类型消息",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "ohos",
       "web"
     ]
@@ -5872,7 +5972,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-i",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Interfaces (其他).txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Interfaces (其他).txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webview-webview-interfaces",
     "nodeName": "document",
@@ -5894,6 +5994,7 @@
       "System",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "ohos",
       "web",
       "webview",
@@ -5924,7 +6025,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-i",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Interfaces（其他）.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Interfaces（其他）.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-web-interfaces",
     "nodeName": "document",
@@ -5946,6 +6047,7 @@
       "Receive",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "组件"
     ]
   },
@@ -6007,7 +6109,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-native-interface-arkweb-h",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-头文件-native_interface_arkweb.h.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-头文件-native_interface_arkweb.h.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-c-api-native-interface-arkweb-h",
     "nodeName": "document",
@@ -6029,6 +6131,7 @@
       "Set",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "头文件"
     ]
   },
@@ -6252,7 +6355,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-webview-t",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Types.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS API-@ohos.web.webview (Webview)-Types.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-api-ohos-web-webview-webview-types",
     "nodeName": "document",
@@ -6274,6 +6377,7 @@
       "string",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "ohos",
       "web",
       "Webview"
@@ -6303,7 +6407,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-basic-components-web-t",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Types.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web-Types.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-web-types",
     "nodeName": "document",
@@ -6325,6 +6429,7 @@
       "Error",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "组件"
     ]
   },
@@ -6414,7 +6519,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-basic-components-web",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-ArkTS 组件-Web.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-arkts-web-3",
     "nodeName": "document",
@@ -6436,6 +6541,7 @@
       "Message",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "组件"
     ]
   },
@@ -6452,7 +6558,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-web",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-模块-Web.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-C API-模块-Web.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-c-api-web",
     "nodeName": "document",
@@ -6474,6 +6580,7 @@
       "声明",
       "ArkWeb",
       "方舟",
+      "应用框架",
       "模块"
     ]
   },
@@ -6986,7 +7093,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-webview",
     "path": "",
-    "rel_path": "api/ArkWeb（方舟Web）/ArkWeb（方舟Web）-错误码-Webview错误码.txt",
+    "rel_path": "api/应用框架/ArkWeb（方舟Web）/ArkWeb（方舟Web）-错误码-Webview错误码.txt",
     "catalog": "ArkWeb（方舟Web）",
     "objectId": "arkweb-web-webview",
     "nodeName": "document",
@@ -7007,7 +7114,8 @@
       "具体的",
       "格式错误",
       "ArkWeb",
-      "方舟"
+      "方舟",
+      "应用框架"
     ]
   }
 }

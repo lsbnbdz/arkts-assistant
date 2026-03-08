@@ -19,7 +19,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-application-backupextensionability",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-ArkTS API-@ohos.application.BackupExtensionAbility (备份恢复扩展能力).txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-ArkTS API-@ohos.application.BackupExtensionAbility (备份恢复扩展能力).txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-arkts-api-ohos-application-backupextensionabil",
     "nodeName": "document",
@@ -41,7 +41,8 @@
       "File",
       "Core",
       "Kit",
-      "文件基础服务"
+      "文件基础服务",
+      "应用框架"
     ]
   },
   "core-file-kit-arkts-api-ohos-document": {
@@ -61,7 +62,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-document",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-ArkTS API-已停止维护的接口-@ohos.document (文件交互).txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-ArkTS API-已停止维护的接口-@ohos.document (文件交互).txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-arkts-api-ohos-document",
     "nodeName": "document",
@@ -85,6 +86,7 @@
       "File",
       "Kit",
       "文件基础服务",
+      "应用框架",
       "已停止维护的接口"
     ]
   },
@@ -103,7 +105,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-file-backupextensioncontext",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-ArkTS API-@ohos.file.BackupExtensionContext (备份恢复扩展能力).txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-ArkTS API-@ohos.file.BackupExtensionContext (备份恢复扩展能力).txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-arkts-api-ohos-file-backupextensioncontext",
     "nodeName": "document",
@@ -126,7 +128,8 @@
       "Core",
       "File",
       "Kit",
-      "文件基础服务"
+      "文件基础服务",
+      "应用框架"
     ]
   },
   "core-file-kit-arkts-api-ohos-file-cloudsync": {
@@ -153,7 +156,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-file-cloudsync",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-ArkTS API-@ohos.file.cloudSync (端云同步能力).txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-ArkTS API-@ohos.file.cloudSync (端云同步能力).txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-arkts-api-ohos-file-cloudsync",
     "nodeName": "document",
@@ -175,7 +178,8 @@
       "state",
       "Core",
       "Kit",
-      "文件基础服务"
+      "文件基础服务",
+      "应用框架"
     ]
   },
   "core-file-kit-arkts-api-ohos-file-cloudsyncmanager": {
@@ -196,7 +200,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-file-cloudsyncmanager",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-ArkTS API-@ohos.file.cloudSyncManager (端云同步管理能力).txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-ArkTS API-@ohos.file.cloudSyncManager (端云同步管理能力).txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-arkts-api-ohos-file-cloudsyncmanager",
     "nodeName": "document",
@@ -218,7 +222,8 @@
       "STORAGE",
       "Core",
       "Kit",
-      "文件基础服务"
+      "文件基础服务",
+      "应用框架"
     ]
   },
   "core-file-kit-arkts-api-ohos-file-environment": {
@@ -236,7 +241,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-file-environment",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-ArkTS API-@ohos.file.environment (目录环境能力).txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-ArkTS API-@ohos.file.environment (目录环境能力).txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-arkts-api-ohos-file-environment",
     "nodeName": "document",
@@ -258,7 +263,8 @@
       "录的沙箱",
       "Core",
       "Kit",
-      "文件基础服务"
+      "文件基础服务",
+      "应用框架"
     ]
   },
   "core-file-kit-arkts-api-ohos-file-fileuri-uri": {
@@ -280,7 +286,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-file-fileuri",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-ArkTS API-@ohos.file.fileuri (文件URI).txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-ArkTS API-@ohos.file.fileuri (文件URI).txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-arkts-api-ohos-file-fileuri-uri",
     "nodeName": "document",
@@ -302,7 +308,8 @@
       "storage",
       "Core",
       "Kit",
-      "文件基础服务"
+      "文件基础服务",
+      "应用框架"
     ]
   },
   "core-file-kit-arkts-api-ohos-file-fs": {
@@ -329,7 +336,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-file-fs",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-ArkTS API-@ohos.file.fs (文件管理).txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-ArkTS API-@ohos.file.fs (文件管理).txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-arkts-api-ohos-file-fs",
     "nodeName": "document",
@@ -351,7 +358,8 @@
       "open",
       "Core",
       "Kit",
-      "文件基础服务"
+      "文件基础服务",
+      "应用框架"
     ]
   },
   "core-file-kit-arkts-api-ohos-file-hash": {
@@ -373,7 +381,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-file-hash",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-ArkTS API-@ohos.file.hash (文件哈希处理).txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-ArkTS API-@ohos.file.hash (文件哈希处理).txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-arkts-api-ohos-file-hash",
     "nodeName": "document",
@@ -396,7 +404,8 @@
       "Core",
       "File",
       "Kit",
-      "文件基础服务"
+      "文件基础服务",
+      "应用框架"
     ]
   },
   "core-file-kit-arkts-api-ohos-file-picker": {
@@ -423,7 +432,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-file-picker",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-ArkTS API-@ohos.file.picker (选择器).txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-ArkTS API-@ohos.file.picker (选择器).txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-arkts-api-ohos-file-picker",
     "nodeName": "document",
@@ -446,7 +455,8 @@
       "Core",
       "File",
       "Kit",
-      "文件基础服务"
+      "文件基础服务",
+      "应用框架"
     ]
   },
   "core-file-kit-arkts-api-ohos-file-securitylabel": {
@@ -469,7 +479,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-file-securitylabel",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-ArkTS API-@ohos.file.securityLabel (数据标签).txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-ArkTS API-@ohos.file.securityLabel (数据标签).txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-arkts-api-ohos-file-securitylabel",
     "nodeName": "document",
@@ -491,7 +501,8 @@
       "File",
       "Core",
       "Kit",
-      "文件基础服务"
+      "文件基础服务",
+      "应用框架"
     ]
   },
   "core-file-kit-arkts-api-ohos-file-statvfs": {
@@ -512,7 +523,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-file-statvfs",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-ArkTS API-@ohos.file.statvfs (文件系统空间统计).txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-ArkTS API-@ohos.file.statvfs (文件系统空间统计).txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-arkts-api-ohos-file-statvfs",
     "nodeName": "document",
@@ -534,7 +545,8 @@
       "Total",
       "Core",
       "Kit",
-      "文件基础服务"
+      "文件基础服务",
+      "应用框架"
     ]
   },
   "core-file-kit-arkts-api-ohos-file-storagestatistics": {
@@ -558,7 +570,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-file-storage-statistics",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-ArkTS API-@ohos.file.storageStatistics (应用空间统计).txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-ArkTS API-@ohos.file.storageStatistics (应用空间统计).txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-arkts-api-ohos-file-storagestatistics",
     "nodeName": "document",
@@ -581,7 +593,8 @@
       "Core",
       "File",
       "Kit",
-      "文件基础服务"
+      "文件基础服务",
+      "应用框架"
     ]
   },
   "core-file-kit-arkts-api-ohos-fileio": {
@@ -608,7 +621,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-fileio",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-ArkTS API-已停止维护的接口-@ohos.fileio (文件管理).txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-ArkTS API-已停止维护的接口-@ohos.fileio (文件管理).txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-arkts-api-ohos-fileio",
     "nodeName": "document",
@@ -631,6 +644,7 @@
       "Core",
       "Kit",
       "文件基础服务",
+      "应用框架",
       "已停止维护的接口"
     ]
   },
@@ -657,7 +671,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-fileshare",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-ArkTS API-@ohos.fileshare (文件分享).txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-ArkTS API-@ohos.fileshare (文件分享).txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-arkts-api-ohos-fileshare",
     "nodeName": "document",
@@ -679,7 +693,8 @@
       "File",
       "Core",
       "Kit",
-      "文件基础服务"
+      "文件基础服务",
+      "应用框架"
     ]
   },
   "core-file-kit-arkts-api-ohos-statfs-statfs": {
@@ -698,7 +713,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-statfs",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-ArkTS API-已停止维护的接口-@ohos.statfs (statfs).txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-ArkTS API-已停止维护的接口-@ohos.statfs (statfs).txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-arkts-api-ohos-statfs-statfs",
     "nodeName": "document",
@@ -722,6 +737,7 @@
       "File",
       "Kit",
       "文件基础服务",
+      "应用框架",
       "已停止维护的接口"
     ]
   },
@@ -749,7 +765,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-system-file",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-ArkTS API-已停止维护的接口-@system.file (文件存储).txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-ArkTS API-已停止维护的接口-@system.file (文件存储).txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-arkts-api-system-file",
     "nodeName": "document",
@@ -772,6 +788,7 @@
       "Core",
       "Kit",
       "文件基础服务",
+      "应用框架",
       "已停止维护的接口"
     ]
   },
@@ -861,7 +878,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/core-file-arkts-errcode",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-错误码.txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-错误码.txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-1",
     "nodeName": "document",
@@ -877,7 +894,8 @@
       "Core",
       "File",
       "Kit",
-      "文件基础服务"
+      "文件基础服务",
+      "应用框架"
     ]
   },
   "doc-uluclo": {
@@ -1115,7 +1133,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/core-file-struct",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-结构体.txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-结构体.txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-c-api-2",
     "nodeName": "document",
@@ -1137,7 +1155,8 @@
       "fileshare",
       "Core",
       "Kit",
-      "文件基础服务"
+      "文件基础服务",
+      "应用框架"
     ]
   },
   "doc-ch8dso": {
@@ -1217,7 +1236,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/core-file-module",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-模块.txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-模块.txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-c-api-1",
     "nodeName": "document",
@@ -1239,7 +1258,8 @@
       "fileshare",
       "Core",
       "Kit",
-      "文件基础服务"
+      "文件基础服务",
+      "应用框架"
     ]
   },
   "doc-ijj0cp": {
@@ -1443,7 +1463,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/core-file-headerfile",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-头文件.txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-头文件.txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-c-api",
     "nodeName": "document",
@@ -1466,7 +1486,8 @@
       "Core",
       "File",
       "Kit",
-      "文件基础服务"
+      "文件基础服务",
+      "应用框架"
     ]
   },
   "doc-xhtlhx": {
@@ -1533,7 +1554,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-filemanagement",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-错误码-文件管理错误码.txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-错误码-文件管理错误码.txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit",
     "nodeName": "document",
@@ -1556,7 +1577,8 @@
       "Core",
       "File",
       "Kit",
-      "文件基础服务"
+      "文件基础服务",
+      "应用框架"
     ]
   },
   "doc-1gp0c0": {
@@ -1642,7 +1664,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/core-file-arkts-dep",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-ArkTS API-已停止维护的接口.txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-ArkTS API-已停止维护的接口.txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-arkts-api",
     "nodeName": "document",
@@ -1665,7 +1687,8 @@
       "Core",
       "File",
       "Kit",
-      "文件基础服务"
+      "文件基础服务",
+      "应用框架"
     ]
   },
   "doc-gk9rhe": {
@@ -2367,7 +2390,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/core-file-arkts",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-ArkTS API.txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-ArkTS API.txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-arkts-api-1",
     "nodeName": "document",
@@ -2390,7 +2413,8 @@
       "Core",
       "File",
       "Kit",
-      "文件基础服务"
+      "文件基础服务",
+      "应用框架"
     ]
   },
   "core-file-kit-c-api-3": {
@@ -2403,7 +2427,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/core-file-c",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API.txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API.txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-c-api-3",
     "nodeName": "document",
@@ -2420,7 +2444,8 @@
       "Core",
       "File",
       "Kit",
-      "文件基础服务"
+      "文件基础服务",
+      "应用框架"
     ]
   },
   "core-file-kit-c-api-cloud-disk-error-code-h": {
@@ -2439,7 +2464,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-cloud-disk-error-code-h",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-头文件-cloud_disk_error_code.h.txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-头文件-cloud_disk_error_code.h.txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-c-api-cloud-disk-error-code-h",
     "nodeName": "document",
@@ -2463,6 +2488,7 @@
       "File",
       "Kit",
       "文件基础服务",
+      "应用框架",
       "头文件"
     ]
   },
@@ -2479,7 +2505,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-clouddisk",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-模块-CloudDisk.txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-模块-CloudDisk.txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-c-api-clouddisk",
     "nodeName": "document",
@@ -2503,6 +2529,7 @@
       "File",
       "Kit",
       "文件基础服务",
+      "应用框架",
       "模块"
     ]
   },
@@ -2520,7 +2547,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-clouddisk-clouddisk-changedata",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-结构体-CloudDisk_ChangeData.txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-结构体-CloudDisk_ChangeData.txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-c-api-clouddisk-changedata",
     "nodeName": "document",
@@ -2544,6 +2571,7 @@
       "File",
       "Kit",
       "文件基础服务",
+      "应用框架",
       "结构体"
     ]
   },
@@ -2561,7 +2589,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-clouddisk-clouddisk-changesresult",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-结构体-CloudDisk_ChangesResult.txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-结构体-CloudDisk_ChangesResult.txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-c-api-clouddisk-changesresult",
     "nodeName": "document",
@@ -2585,6 +2613,7 @@
       "File",
       "Kit",
       "文件基础服务",
+      "应用框架",
       "结构体"
     ]
   },
@@ -2602,7 +2631,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-clouddisk-clouddisk-displaynameinfo",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-结构体-CloudDisk_DisplayNameInfo.txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-结构体-CloudDisk_DisplayNameInfo.txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-c-api-clouddisk-displaynameinfo",
     "nodeName": "document",
@@ -2626,6 +2655,7 @@
       "File",
       "Kit",
       "文件基础服务",
+      "应用框架",
       "结构体"
     ]
   },
@@ -2643,7 +2673,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-clouddisk-clouddisk-failedlist",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-结构体-CloudDisk_FailedList.txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-结构体-CloudDisk_FailedList.txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-c-api-clouddisk-failedlist",
     "nodeName": "document",
@@ -2667,6 +2697,7 @@
       "File",
       "Kit",
       "文件基础服务",
+      "应用框架",
       "结构体"
     ]
   },
@@ -2684,7 +2715,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-clouddisk-clouddisk-filesyncstate",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-结构体-CloudDisk_FileSyncState.txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-结构体-CloudDisk_FileSyncState.txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-c-api-clouddisk-filesyncstate",
     "nodeName": "document",
@@ -2707,6 +2738,7 @@
       "Core",
       "Kit",
       "文件基础服务",
+      "应用框架",
       "结构体"
     ]
   },
@@ -2724,7 +2756,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-clouddisk-clouddisk-pathinfo",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-结构体-CloudDisk_PathInfo.txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-结构体-CloudDisk_PathInfo.txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-c-api-clouddisk-pathinfo",
     "nodeName": "document",
@@ -2748,6 +2780,7 @@
       "File",
       "Kit",
       "文件基础服务",
+      "应用框架",
       "结构体"
     ]
   },
@@ -2765,7 +2798,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-clouddisk-clouddisk-resultlist",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-结构体-CloudDisk_ResultList.txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-结构体-CloudDisk_ResultList.txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-c-api-clouddisk-resultlist",
     "nodeName": "document",
@@ -2789,6 +2822,7 @@
       "File",
       "Kit",
       "文件基础服务",
+      "应用框架",
       "结构体"
     ]
   },
@@ -2806,7 +2840,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-clouddisk-clouddisk-syncfolder",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-结构体-CloudDisk_SyncFolder.txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-结构体-CloudDisk_SyncFolder.txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-c-api-clouddisk-syncfolder",
     "nodeName": "document",
@@ -2830,6 +2864,7 @@
       "File",
       "Kit",
       "文件基础服务",
+      "应用框架",
       "结构体"
     ]
   },
@@ -2843,7 +2878,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/core-file-api",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）.txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）.txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-2",
     "nodeName": "document",
@@ -2858,7 +2893,8 @@
       "文件基础",
       "服务",
       "错误码",
-      "errcode"
+      "errcode",
+      "应用框架"
     ]
   },
   "core-file-kit-3": {
@@ -2947,7 +2983,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-environment",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-模块-Environment.txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-模块-Environment.txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-c-api-environment",
     "nodeName": "document",
@@ -2971,6 +3007,7 @@
       "File",
       "Kit",
       "文件基础服务",
+      "应用框架",
       "模块"
     ]
   },
@@ -2990,7 +3027,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-error-code-h",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-头文件-error_code.h.txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-头文件-error_code.h.txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-c-api-error-code-h",
     "nodeName": "document",
@@ -3013,6 +3050,7 @@
       "Core",
       "Kit",
       "文件基础服务",
+      "应用框架",
       "头文件"
     ]
   },
@@ -3029,7 +3067,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-fileio",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-模块-FileIO.txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-模块-FileIO.txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-c-api-fileio",
     "nodeName": "document",
@@ -3052,6 +3090,7 @@
       "Core",
       "Kit",
       "文件基础服务",
+      "应用框架",
       "模块"
     ]
   },
@@ -3068,7 +3107,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-fileshare",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-模块-fileShare.txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-模块-fileShare.txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-c-api-fileshare",
     "nodeName": "document",
@@ -3092,6 +3131,7 @@
       "File",
       "Kit",
       "文件基础服务",
+      "应用框架",
       "模块"
     ]
   },
@@ -3109,7 +3149,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-fileshare-fileshare-policyerrorresult",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-结构体-FileShare_PolicyErrorResult.txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-结构体-FileShare_PolicyErrorResult.txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-c-api-fileshare-policyerrorresult",
     "nodeName": "document",
@@ -3132,6 +3172,7 @@
       "Core",
       "Kit",
       "文件基础服务",
+      "应用框架",
       "结构体"
     ]
   },
@@ -3149,7 +3190,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-fileshare-fileshare-policyinfo",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-结构体-FileShare_PolicyInfo.txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-结构体-FileShare_PolicyInfo.txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-c-api-fileshare-policyinfo",
     "nodeName": "document",
@@ -3172,6 +3213,7 @@
       "Core",
       "Kit",
       "文件基础服务",
+      "应用框架",
       "结构体"
     ]
   },
@@ -3188,7 +3230,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-fileuri",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-模块-fileUri.txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-模块-fileUri.txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-c-api-fileuri",
     "nodeName": "document",
@@ -3211,6 +3253,7 @@
       "Core",
       "Kit",
       "文件基础服务",
+      "应用框架",
       "模块"
     ]
   },
@@ -3278,7 +3321,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-cloud-disk-manager-h",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-头文件-oh_cloud_disk_manager.h.txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-头文件-oh_cloud_disk_manager.h.txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-c-api-oh-cloud-disk-manager-h",
     "nodeName": "document",
@@ -3301,6 +3344,7 @@
       "Core",
       "Kit",
       "文件基础服务",
+      "应用框架",
       "头文件"
     ]
   },
@@ -3322,7 +3366,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-environment-h",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-头文件-oh_environment.h.txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-头文件-oh_environment.h.txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-c-api-oh-environment-h",
     "nodeName": "document",
@@ -3345,6 +3389,7 @@
       "Core",
       "Kit",
       "文件基础服务",
+      "应用框架",
       "头文件"
     ]
   },
@@ -3372,7 +3417,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-file-share-h",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-头文件-oh_file_share.h.txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-头文件-oh_file_share.h.txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-c-api-oh-file-share-h",
     "nodeName": "document",
@@ -3395,6 +3440,7 @@
       "Core",
       "Kit",
       "文件基础服务",
+      "应用框架",
       "头文件"
     ]
   },
@@ -3418,7 +3464,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-file-uri-h",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-头文件-oh_file_uri.h.txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-头文件-oh_file_uri.h.txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-c-api-oh-file-uri-h",
     "nodeName": "document",
@@ -3441,6 +3487,7 @@
       "Core",
       "Kit",
       "文件基础服务",
+      "应用框架",
       "头文件"
     ]
   },
@@ -3463,7 +3510,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-fileio-h",
     "path": "",
-    "rel_path": "api/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-头文件-oh_fileio.h.txt",
+    "rel_path": "api/应用框架/Core File Kit（文件基础服务）/Core File Kit（文件基础服务）-C API-头文件-oh_fileio.h.txt",
     "catalog": "Core File Kit（文件基础服务）",
     "objectId": "core-file-kit-c-api-oh-fileio-h",
     "nodeName": "document",
@@ -3486,6 +3533,7 @@
       "Core",
       "Kit",
       "文件基础服务",
+      "应用框架",
       "头文件"
     ]
   }

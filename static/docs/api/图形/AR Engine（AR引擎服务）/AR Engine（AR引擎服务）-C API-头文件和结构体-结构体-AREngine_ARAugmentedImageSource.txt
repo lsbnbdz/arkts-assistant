@@ -1,0 +1,97 @@
+# [AREngine_ARAugmentedImageSource](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arengine-struct-araugmentedimagesource)
+
+## 目录
+- [概述](#section1107471767164117)
+- [汇总](#section39573876164117)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section462562193164117)
+  - [imageName](#a8fd160424c15bc17d2860f26b1f67d3f)
+  - [imageData](#a60bbc989bbfdd3ea9f45d9eafe7e8e35)
+  - [pixelWidth](#section144101439164014)
+  - [pixelHeight](#section1841210401406)
+  - [stride](#section116614412407)
+  - [realWidthInMeters](#section556412567413)
+
+## 概述
+PhoneTablet图像数据。
+
+ **起始版本：** 5.1.0(18)
+
+ **相关模块：** [AR Engine](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arengine-capi-arengine)
+
+ 
+## 汇总
+PhoneTablet 
+### 成员变量
+ PhoneTablet展开
+| |
+| |
+| |
+| const char *imageName | 图像名，不允许为空，255个字符以内，超过255个的字符将会被丢弃。 |
+| const uint8_t *imageData | 灰度图像元素数组地址。 |
+| int32_t pixelWidth | 图像像素宽度。 |
+| int32_t pixelHeight | 图像像素高度。 |
+| int32_t stride | 图像步幅。 |
+| float realWidthInMeters | 图像中对象的实际物理宽度。无限制，默认值为A4纸张尺寸。 |
+
+ 
+## 结构体成员变量说明
+PhoneTablet 
+### imageName
+PhoneTablet收起自动换行深色代码主题复制
+```
+const char* AREngine_ARAugmentedImageSource::imageName
+```
+ **描述**
+
+ 图像名，不允许为空，255个字符以内，超过255个的字符将会被丢弃。
+
+ 
+### imageData
+PhoneTablet收起自动换行深色代码主题复制
+```
+const uint8_t* AREngine_ARAugmentedImageSource::imageData
+```
+ **描述**
+
+ 灰度图像元素数组地址。
+
+ 
+### pixelWidth
+PhoneTablet收起自动换行深色代码主题复制
+```
+int32_t AREngine_ARAugmentedImageSource::pixelWidth
+```
+ **描述**
+
+ 图像像素宽度。
+
+ 
+### pixelHeight
+PhoneTablet收起自动换行深色代码主题复制
+```
+int32_t AREngine_ARAugmentedImageSource::pixelHeight
+```
+ **描述**
+
+ 图像像素高度。
+
+ 
+### stride
+PhoneTablet收起自动换行深色代码主题复制
+```
+int32_t AREngine_ARAugmentedImageSource::stride
+```
+ **描述**
+
+ 图像步幅。
+
+ 
+### realWidthInMeters
+PhoneTablet收起自动换行深色代码主题复制
+```
+float AREngine_ARAugmentedImageSource::realWidthInMeters
+```
+ **描述**
+
+ 图像中对象的实际物理宽度。无限制，默认值为A4纸张尺寸。

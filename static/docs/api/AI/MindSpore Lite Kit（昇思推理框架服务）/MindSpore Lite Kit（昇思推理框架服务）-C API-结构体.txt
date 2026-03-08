@@ -1,0 +1,12 @@
+# [结构体](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/mindspore-lite-struct)
+
+- **[OH_AI_TensorHandleArray](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-mindspore-oh-ai-tensorhandlearray)**
+ - **[OH_AI_ShapeInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-mindspore-oh-ai-shapeinfo)**
+ - **[OH_AI_CallBackParam](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-mindspore-oh-ai-callbackparam)**
+ - **[NNRTDeviceDesc](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-mindspore-nnrtdevicedesc)**
+ - **[OH_AI_ContextHandle](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-mindspore-oh-ai-contexthandle)**
+ - **[OH_AI_DeviceInfoHandle](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-mindspore-oh-ai-deviceinfohandle)**
+ - **[OH_AI_TensorHandle](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-mindspore-oh-ai-tensorhandle)**
+ - **[OH_AI_AllocatorHandle](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-mindspore-oh-ai-allocatorhandle)**
+ - **[OH_AI_ModelHandle](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-mindspore-oh-ai-modelhandle)**
+ - **[OH_AI_TrainCfgHandle](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-mindspore-oh-ai-traincfghandle)**

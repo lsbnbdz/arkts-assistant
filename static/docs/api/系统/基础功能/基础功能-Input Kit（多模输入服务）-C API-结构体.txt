@@ -1,0 +1,16 @@
+# [结构体](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/input-struct)
+
+- **[Input_InterceptorEventCallback](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-input-input-interceptoreventcallback)**
+ - **[Input_DeviceListener](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-input-input-devicelistener)**
+ - **[OH_PixelmapNative](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-input-oh-pixelmapnative)**
+ - **[Input_KeyState](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-input-input-keystate)**
+ - **[Input_KeyEvent](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-input-input-keyevent)**
+ - **[Input_MouseEvent](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-input-input-mouseevent)**
+ - **[Input_TouchEvent](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-input-input-touchevent)**
+ - **[Input_AxisEvent](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-input-input-axisevent)**
+ - **[Input_Hotkey](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-input-input-hotkey)**
+ - **[Input_DeviceInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-input-input-deviceinfo)**
+ - **[Input_InterceptorOptions](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-input-input-interceptoroptions)**
+ - **[Input_CursorConfig](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-input-input-cursorconfig)**
+ - **[Input_CustomCursor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-input-input-customcursor)**
+ - **[Input_CursorInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-input-input-cursorinfo)**

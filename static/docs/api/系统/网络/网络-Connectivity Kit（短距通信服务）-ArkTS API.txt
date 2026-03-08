@@ -1,0 +1,23 @@
+# [ArkTS API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/connectivity-arkts)
+
+- **[@ohos.bluetooth.a2dp (蓝牙a2dp模块)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-bluetooth-a2dp)**
+ - **[@ohos.bluetooth.access (蓝牙access模块)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-bluetooth-access)**
+ - **[@ohos.bluetooth.baseProfile (蓝牙baseProfile模块)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-bluetooth-baseprofile)**
+ - **[@ohos.bluetooth.ble (蓝牙ble模块)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-bluetooth-ble)**
+ - **[@ohos.bluetooth.connection (蓝牙connection模块)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-bluetooth-connection)**
+ - **[@ohos.bluetooth.constant (蓝牙constant模块)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-bluetooth-constant)**
+ - **[@ohos.bluetooth.common (蓝牙common模块)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-bluetooth-common)**
+ - **[@ohos.bluetooth.hfp (蓝牙hfp模块)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-bluetooth-hfp)**
+ - **[@ohos.bluetooth.hid (蓝牙hid模块)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-bluetooth-hid)**
+ - **[@ohos.bluetooth.pan (蓝牙pan模块)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-bluetooth-pan)**
+ - **[@ohos.bluetooth.socket (蓝牙socket模块)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-bluetooth-socket)**
+ - **[@ohos.bluetooth.pbap (蓝牙pbap模块)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-bluetooth-pbap)**
+ - **[@ohos.bluetooth.map (蓝牙map模块)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-bluetooth-map)**
+ - **[@ohos.connectedTag (有源标签)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-connectedtag)**
+ - **[@ohos.nfc.cardEmulation (标准NFC-cardEmulation)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-cardemulation)**
+ - **[@ohos.nfc.controller (标准NFC)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-nfccontroller)**
+ - **[@ohos.nfc.tag (标准NFC-Tag)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-nfctag)**
+ - **[@ohos.secureElement (安全单元的通道管理)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-secureelement)**
+ - **[@ohos.wifiManager (WLAN)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-wifimanager)**
+ - **[@ohos.wifiManagerExt (WLAN扩展接口)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-wifimanagerext)**
+ - **[tag](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/connectivity-nfc-tag-arkts)**

@@ -1,0 +1,3 @@
+# [错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/location-arkts-errcode)
+
+- **[位置服务错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-geolocationmanager)**

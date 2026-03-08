@@ -1,0 +1,37 @@
+# [zoomOut](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-zoomout)
+
+## 目录
+- [导入模块](#section164051883419)
+- [zoomOut](#section1736965442316)
+
+## 导入模块
+PhonePC/2in1TabletWearable收起自动换行深色代码主题复制
+```
+import { map } from '@kit.MapKit';
+```
+ 
+## zoomOut
+PhonePC/2in1TabletWearablezoomOut(): CameraUpdate
+
+ 缩小地图缩放级别，在当前地图显示的级别基础上减1。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| CameraUpdate | 描述地图状态将要发生的变化。 |
+
+ **示例：**收起自动换行深色代码主题复制
+```
+let cameraUpdate: map.CameraUpdate = map.zoomOut();
+```

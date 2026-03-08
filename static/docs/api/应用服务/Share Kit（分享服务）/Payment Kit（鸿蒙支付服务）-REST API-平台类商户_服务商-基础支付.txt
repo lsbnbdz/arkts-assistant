@@ -1,0 +1,9 @@
+# [基础支付](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-partner-pay)
+
+- **[预下单](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-agent-prepay)**
+ - **[关闭订单](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-partner-orders-close)**
+ - **[支付结果回调通知](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-agent-pay-notify)**
+ - **[查询支付订单](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-agent-query-order)**
+ - **[申请退款](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-agent-refund)**
+ - **[退款结果回调通知](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-agent-refund-notify)**
+ - **[查询退款订单](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-agentmerc-query-refund)**

@@ -1,0 +1,4 @@
+# [MindSpore Lite Kit（昇思推理框架服务）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/mindspore-lite-api)
+
+- **[ArkTS API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/mindspore-lite-arkts)**
+ - **[C API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/mindspore-lite-c)**

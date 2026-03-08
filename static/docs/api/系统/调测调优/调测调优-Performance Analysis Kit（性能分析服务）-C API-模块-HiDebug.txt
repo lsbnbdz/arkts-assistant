@@ -1,0 +1,19 @@
+# [HiDebug](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hidebug)
+
+## 目录
+- [概述](#概述)
+- [文件汇总](#文件汇总)
+
+## 概述
+PhonePC/2in1TabletTVWearable提供调试功能。本模块函数可用于获取cpu usage、memory、heap、capture trace等。
+
+ **起始版本：** 12
+
+ 
+## 文件汇总
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| hidebug.h | 定义HiDebug模块的调试功能。 |
+| hidebug_type.h | HiDebug模块代码结构体定义。 |

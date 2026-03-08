@@ -1,0 +1,10 @@
+# [模块](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/basic-services-module)
+
+- **[OH_CommonEvent](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-commonevent)**
+ - **[DeviceInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-deviceinfo)**
+ - **[OsAccount](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-osaccount)**
+ - **[OH_BatteryInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-batteryinfo)**
+ - **[OH_Scan](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-scan)**
+ - **[OH_Print](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-print)**
+ - **[Pasteboard](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-pasteboard)**
+ - **[TimeService](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-timeservice)**

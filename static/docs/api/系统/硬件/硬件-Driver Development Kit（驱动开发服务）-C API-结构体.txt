@@ -1,0 +1,40 @@
+# [结构体](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/driver-development-struct)
+
+- **[DDK_Ashmem](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-baseddk-ddk-ashmem)**
+ - **[Hid_EmitItem](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hidddk-hid-emititem)**
+ - **[Hid_Device](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hidddk-hid-device)**
+ - **[Hid_EventTypeArray](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hidddk-hid-eventtypearray)**
+ - **[Hid_KeyCodeArray](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hidddk-hid-keycodearray)**
+ - **[Hid_AbsAxesArray](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hidddk-hid-absaxesarray)**
+ - **[Hid_RelAxesArray](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hidddk-hid-relaxesarray)**
+ - **[Hid_MscEventArray](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hidddk-hid-msceventarray)**
+ - **[Hid_EventProperties](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hidddk-hid-eventproperties)**
+ - **[Hid_RawDevInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hidddk-hid-rawdevinfo)**
+ - **[Hid_DeviceHandle](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hidddk-hid-devicehandle)**
+ - **[ScsiPeripheral_DeviceMemMap](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-scsiperipheralddk-scsiperipheral-devicememmap)**
+ - **[ScsiPeripheral_IORequest](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-scsiperipheralddk-scsiperipheral-iorequest)**
+ - **[ScsiPeripheral_Request](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-scsiperipheralddk-scsiperipheral-request)**
+ - **[ScsiPeripheral_Response](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-scsiperipheralddk-scsiperipheral-response)**
+ - **[ScsiPeripheral_TestUnitReadyRequest](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/iperipheralddk-scsiperipheral-testunitreadyrequest)**
+ - **[ScsiPeripheral_InquiryRequest](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/pi-scsiperipheralddk-scsiperipheral-inquiryrequest)**
+ - **[ScsiPeripheral_InquiryInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-scsiperipheralddk-scsiperipheral-inquiryinfo)**
+ - **[ScsiPeripheral_ReadCapacityRequest](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/siperipheralddk-scsiperipheral-readcapacityrequest)**
+ - **[ScsiPeripheral_CapacityInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-scsiperipheralddk-scsiperipheral-capacityinfo)**
+ - **[ScsiPeripheral_RequestSenseRequest](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/siperipheralddk-scsiperipheral-requestsenserequest)**
+ - **[ScsiPeripheral_BasicSenseInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/pi-scsiperipheralddk-scsiperipheral-basicsenseinfo)**
+ - **[ScsiPeripheral_VerifyRequest](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/api-scsiperipheralddk-scsiperipheral-verifyrequest)**
+ - **[ScsiPeripheral_Device](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-scsiperipheralddk-scsiperipheral-device)**
+ - **[UsbControlRequestSetup](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-usbddk-usbcontrolrequestsetup)**
+ - **[UsbDeviceDescriptor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-usbddk-usbdevicedescriptor)**
+ - **[UsbConfigDescriptor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-usbddk-usbconfigdescriptor)**
+ - **[UsbInterfaceDescriptor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-usbddk-usbinterfacedescriptor)**
+ - **[UsbEndpointDescriptor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-usbddk-usbendpointdescriptor)**
+ - **[UsbDdkEndpointDescriptor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-usbddk-usbddkendpointdescriptor)**
+ - **[UsbDdkInterfaceDescriptor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-usbddk-usbddkinterfacedescriptor)**
+ - **[UsbDdkInterface](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-usbddk-usbddkinterface)**
+ - **[UsbDdkConfigDescriptor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-usbddk-usbddkconfigdescriptor)**
+ - **[UsbRequestPipe](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-usbddk-usbrequestpipe)**
+ - **[UsbDeviceMemMap](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-usbddk-usbdevicememmap)**
+ - **[Usb_DeviceArray](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-usbddk-usb-devicearray)**
+ - **[UsbSerial_Params](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-serialddk-usbserial-params)**
+ - **[UsbSerial_Device](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-serialddk-usbserial-devicehandle)**

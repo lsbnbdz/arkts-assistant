@@ -1,0 +1,15 @@
+# [OH_CryptoAsymKeyGeneratorWithSpec](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/cryptoasymkeyapi-oh-cryptoasymkeygeneratorwithspec)
+
+收起自动换行深色代码主题复制
+```
+typedef struct OH_CryptoAsymKeyGeneratorWithSpec OH_CryptoAsymKeyGeneratorWithSpec
+```
+ 
+## 概述
+PhonePC/2in1TabletTVWearable定义带规格的非对称密钥生成器。
+
+ **起始版本：** 20
+
+ **相关模块：** [CryptoAsymKeyApi](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-cryptoasymkeyapi)
+
+ **所在头文件：** [crypto_asym_key.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-crypto-asym-key-h)

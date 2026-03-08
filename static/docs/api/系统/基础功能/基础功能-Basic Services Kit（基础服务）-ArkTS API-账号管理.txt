@@ -1,0 +1,5 @@
+# [账号管理](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/account-management-arkts)
+
+- **[@ohos.account.appAccount (应用账号管理)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-appaccount)**
+ - **[@ohos.account.distributedAccount (分布式账号管理)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-distributed-account)**
+ - **[@ohos.account.osAccount (系统账号管理)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-osaccount)**

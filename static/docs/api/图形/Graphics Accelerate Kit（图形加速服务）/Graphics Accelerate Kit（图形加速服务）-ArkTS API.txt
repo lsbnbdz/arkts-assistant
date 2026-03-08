@@ -1,0 +1,7 @@
+# [ArkTS API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/graphics-accelerate-arkts)
+
+- **[assetDownloadManager（资源包下载管理）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/graphics-accelerate-assetdownloadmanager)**
+ - **[AssetAccelerationExtensionAbility（资源加速ExtensionAbility）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/graphics-accelerate-extensionability)**
+ - **[AssetAccelerationExtensionContext（资源加速ExtensionContext）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/graphics-accelerate-extensioncontext)**
+ - **[launchAcceleration（游戏启动加速）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/graphics-accelerate-launchacceleration)**
+ - **[ArkTS API错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/graphics-accelerate-arkts-errorcode)**

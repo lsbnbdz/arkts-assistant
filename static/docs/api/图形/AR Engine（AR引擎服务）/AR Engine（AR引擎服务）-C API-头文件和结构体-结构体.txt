@@ -1,0 +1,6 @@
+# [结构体](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arengine-struct)
+
+- **[AREngine_ARAugmentedImageSource](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arengine-struct-araugmentedimagesource)**
+ - **[AREngine_ClipPlaneDistance](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arengine-struct-clipplanedistance)**
+ - **[AREngine_ARSemanticDensePointData](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arengine-struct-arsemanticdensepointdata)**
+ - **[AREngine_ARSemanticDenseCubeData](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arengine-struct-arsemanticdensecubedata)**

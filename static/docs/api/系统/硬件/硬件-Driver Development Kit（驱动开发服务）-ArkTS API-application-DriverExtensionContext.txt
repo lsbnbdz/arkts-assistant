@@ -1,0 +1,43 @@
+# [DriverExtensionContext](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-inner-application-driverextensioncontext)
+
+## 目录
+- [导入模块](#导入模块)
+- [使用说明](#使用说明)
+- [DriverExtensionContext.updateDriverState](#driverextensioncontextupdatedriverstate)
+
+DriverExtensionContext模块是DriverExtensionAbility的上下文环境，继承自ExtensionContext。
+
+ DriverExtensionContext模块提供DriverExtensionAbility实现中需要主动发起的操作。
+
+ 说明 - 本模块首批接口从API version 10开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+- 本模块接口仅可在Stage模型下使用。
+
+ 
+## 导入模块
+PC/2in1收起自动换行深色代码主题复制
+```
+import { common } from '@kit.AbilityKit';
+```
+ 
+## 使用说明
+PC/2in1在使用DriverExtensionContext的功能前，需要通过DriverExtensionAbility子类实例获取。
+
+ 收起自动换行深色代码主题复制
+```
+ import { DriverExtensionAbility, DriverExtensionContext } from '@kit.DriverDevelopmentKit';
+ let context : DriverExtensionContext | undefined; class EntryAbility extends DriverExtensionAbility { onInit() { context = this.context; // 获取DriverExtensionContext } }
+```
+ 
+## DriverExtensionContext.updateDriverState
+PC/2in1updateDriverState(): void
+
+ 驱动状态上报。预留接口，暂不提供具体功能。
+
+ **系统能力**：SystemCapability.Driver.ExternalDevice
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+// 当前代码实现依赖上一节代码实现if (context != null) { context.updateDriverState();}
+```

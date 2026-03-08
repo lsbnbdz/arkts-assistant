@@ -1,0 +1,9 @@
+# [其他](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/basic-services-others)
+
+- **[@ohos.base (公共回调信息)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-base)**
+ - **[@ohos.annotation (注解)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-annotation)**
+ - **[@ohos.customization.customConfig (定制配置)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-customization-customconfig)**
+ - **[@ohos.settings (设置数据项名称)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-settings)**
+ - **[@ohos.wallpaper (壁纸)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-wallpaper)**
+ - **[@ohos.resourceschedule.systemload (性能功耗热融合档位)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-resourceschedule-systemload)**
+ - **[@ohos.systemDateTime (系统时间、时区)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-date-time)**

@@ -1,0 +1,5 @@
+# [PDF Kit（PDF服务）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/pdf-api)
+
+- **[ArkTS API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/pdf-arkts)**
+ - **[ArkTS组件](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/pdf-arkts-conponent)**
+ - **[ArkTS API 错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/pdf-error-code)**

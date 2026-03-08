@@ -1,0 +1,123 @@
+# [Rcp_TimeInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___time_info)
+
+## 目录
+- [概述](#section1976409964094053)
+- [汇总](#section574485239094053)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section14117362094053)
+  - [connectTime](#a00f71c3e61958a61c5a95763460d53e9)
+  - [fileTime](#aa2ace0fbac885a58100761269720d213)
+  - [nameLookUpTime](#a61499e9621bab228bb6860af13090b68)
+  - [preTransferTime](#ae1e72d2680d8edd395b1a80de8d24a39)
+  - [redirectTime](#a6050b0abb52990b0a0d01b49335a0d53)
+  - [startTransferTime](#ad2373fa86954f501efb5492858ca17f7)
+  - [tlsHandshakeTime](#ad4ecb9c4812a3f06edad569022a06ec1)
+  - [totalTime](#a61266aa883f6f7715bc5380c43c6ab28)
+
+## 概述
+PhonePC/2in1TabletTVWearable响应计时信息。
+
+ 它将在[Rcp_Response.timeInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___response#a57d437be63e686ada47b96b3126067d8)中被收集，[Rcp_TracingConfiguration.collectTimeInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___tracing_configuration#aded07a3d27e7524e18362082264b9b94)决定是否收集它。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [RemoteCommunication](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| double totalTime | HTTP传输（包括名称解析、TCP连接等）的总时间（毫秒）。 |
+| double nameLookUpTime | 从开始到解析远程主机名所用的时间（以毫秒为单位）。 |
+| double connectTime | 从开始到完成与远程主机（或代理）的连接的时间（以毫秒为单位）。 |
+| double preTransferTime | 从开始到传输即将开始所花费的时间（以毫秒为单位）。 |
+| double fileTime | 从远程文件的上次修改时间开始的时间（以毫秒为单位）。 |
+| double startTransferTime | 从开始到接收到第一个字节所花费的时间（以毫秒为单位）。 |
+| double redirectTime | 所有重定向步骤（包括名称查找、连接等）所用的时间（毫秒）。 |
+| double tlsHandshakeTime | 从开始到完成与远程主机（或代理）的TLS握手的时间（以毫秒为单位）。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTVWearable 
+### connectTime
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+double Rcp_TimeInfo::connectTime
+```
+ **描述**
+
+ 从开始到完成与远程主机（或代理）的连接时间（以毫秒为单位）。
+
+ 
+### fileTime
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+double Rcp_TimeInfo::fileTime
+```
+ **描述**
+
+ 从远程文件的上次修改时间开始的时间（以毫秒为单位）。
+
+ 
+### nameLookUpTime
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+double Rcp_TimeInfo::nameLookUpTime
+```
+ **描述**
+
+ 从开始到解析远程主机名所用的时间（以毫秒为单位）。
+
+ 
+### preTransferTime
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+double Rcp_TimeInfo::preTransferTime
+```
+ **描述**
+
+ 从开始到传输即将开始所花费的时间（以毫秒为单位）。
+
+ 
+### redirectTime
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+double Rcp_TimeInfo::redirectTime
+```
+ **描述**
+
+ 所有重定向步骤（包括名称查找、连接等）所用的时间（毫秒）。
+
+ 
+### startTransferTime
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+double Rcp_TimeInfo::startTransferTime
+```
+ **描述**
+
+ 从开始到接收到第一个字节所花费的时间（以毫秒为单位）。
+
+ 
+### tlsHandshakeTime
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+double Rcp_TimeInfo::tlsHandshakeTime
+```
+ **描述**
+
+ 从开始到完成与远程主机（或代理）的TLS握手的时间（以毫秒为单位）。
+
+ 
+### totalTime
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+double Rcp_TimeInfo::totalTime
+```
+ **描述**
+
+ HTTP传输（包括名称解析、TCP连接等）的总时间（毫秒）。

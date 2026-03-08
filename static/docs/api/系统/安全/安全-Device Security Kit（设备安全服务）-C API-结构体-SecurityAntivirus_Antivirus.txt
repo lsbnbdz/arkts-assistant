@@ -1,0 +1,48 @@
+# [SecurityAntivirus_Antivirus](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/devicesecurity-capi-structs-securityantivirus)
+
+## 概述
+PC/2in1定义防病毒应用信息。
+
+ **起始版本：** 6.0.0(20)
+
+ **相关模块：** [SecurityAntivirus](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/devicesecurity-capi-securityantivirus)
+
+ **所在头文件：** [security_antivirus.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/devicesecurity-capi-security-antivirus-8h)
+
+ 
+## 汇总
+PC/2in1 
+### 成员变量
+ PC/2in1展开
+| |
+| |
+| |
+| const char *bundleName | 防病毒应用包名 |
+| const char *metadata | 防病毒应用信息（当前版本号、上次更新时间、病毒防护开关状态、用户ID） |
+
+ 
+## 结构体成员变量说明
+PC/2in1 
+### bundleName
+PC/2in1收起自动换行深色代码主题复制
+```
+const char *SecurityAntivirus_Antivirus::bundleName
+```
+ **描述**
+
+ 防病毒应用包名，包名字段要求请参见[链接](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/app-configuration-file)。
+
+ 
+### metadata
+收起自动换行深色代码主题复制
+```
+const char *SecurityAntivirus_Antivirus::metadata
+```
+ **描述**
+
+ 防病毒应用信息（包含当前版本号、上次更新时间、病毒防护状态、用户ID的json字符串），其中版本号字段要求请参见[链接](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/app-configuration-file)，上次更新时间为10位秒级或13位毫秒级时间戳，病毒防护状态仅限on或off，user_id为用户ID。示例格式如下：
+
+ 收起自动换行深色代码主题复制
+```
+{"version": "1.0.0.0","last_update_time": "1751877696","protection_status": "on/off"，"user_id": "100"}
+```

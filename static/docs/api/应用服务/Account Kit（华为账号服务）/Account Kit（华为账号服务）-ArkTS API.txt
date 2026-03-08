@@ -1,0 +1,8 @@
+# [ArkTS API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/account-api-arkts)
+
+- **[authentication (华为账号应用统一认证服务)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/account-api-authentication)**
+ - **[extendService (华为账号增强服务)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/account-api-extendservice)**
+ - **[shippingAddress (华为账号收货地址管理服务)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/account-choose-address)**
+ - **[minorsProtection (华为账号未成年人模式)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/account-api-minorsprotection)**
+ - **[invoiceAssistant (华为账号发票助手服务)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/account-api-invoiceassistant)**
+ - **[realName (华为账号实名认证服务)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/account-api-realname)**

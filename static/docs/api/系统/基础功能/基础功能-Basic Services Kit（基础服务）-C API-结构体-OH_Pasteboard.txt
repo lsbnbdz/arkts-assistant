@@ -1,0 +1,18 @@
+# [OH_Pasteboard](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-pasteboard-oh-pasteboard)
+
+## 目录
+- [概述](#概述)
+
+收起自动换行深色代码主题复制
+```
+typedef struct OH_Pasteboard OH_Pasteboard
+```
+ 
+## 概述
+PhonePC/2in1TabletTVWearable定义剪贴板对象，用以操作系统剪贴板。
+
+ **起始版本：** 13
+
+ **相关模块：** [Pasteboard](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-pasteboard)
+
+ **所在头文件：** [oh_pasteboard.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-pasteboard-h)

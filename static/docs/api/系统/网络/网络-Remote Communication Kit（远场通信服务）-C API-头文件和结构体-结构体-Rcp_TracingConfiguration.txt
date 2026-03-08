@@ -1,0 +1,73 @@
+# [Rcp_TracingConfiguration](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___tracing_configuration)
+
+## 目录
+- [概述](#section1597498480094053)
+- [汇总](#section492559642094053)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section840417802094053)
+  - [collectTimeInfo](#aded07a3d27e7524e18362082264b9b94)
+  - [httpEventsHandler](#ac7621467d197c2df3c4da27f69e8a2fd)
+  - [infoToCollect](#a5495e16d1ce7b0d75c25150c0ac0f711)
+  - [verbose](#aa239b1c1f3cf8618d07c2a8582224fc8)
+
+## 概述
+PhonePC/2in1TabletTVWearable请求追踪配置。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [RemoteCommunication](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| bool verbose | 请求运行时是否记录详细日志。默认值为false。如果设置了infoToCollect中的选项，则自动启用。 |
+| Rcp_InfoToCollect infoToCollect | 指定要收集的请求处理事件。可以通过响应对象检查收集的事件。 |
+| bool collectTimeInfo | 是否收集请求计时信息。默认值为false。 |
+| Rcp_EventsHandler httpEventsHandler | 监听不同HTTP事件的回调函数。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTVWearable 
+### collectTimeInfo
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+bool Rcp_TracingConfiguration::collectTimeInfo
+```
+ **描述**
+
+ 是否收集请求计时信息。默认值为false。
+
+ 
+### httpEventsHandler
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_EventsHandler Rcp_TracingConfiguration::httpEventsHandler
+```
+ **描述**
+
+ 监听不同HTTP事件的回调函数。
+
+ 
+### infoToCollect
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_InfoToCollect Rcp_TracingConfiguration::infoToCollect
+```
+ **描述**
+
+ 指定要收集的请求处理事件。可以通过响应对象检查收集的事件。
+
+ 
+### verbose
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+bool Rcp_TracingConfiguration::verbose
+```
+ **描述**
+
+ 请求运行时是否记录详细日志。默认值为false。如果设置了infoToCollect中的选项，则自动启用。

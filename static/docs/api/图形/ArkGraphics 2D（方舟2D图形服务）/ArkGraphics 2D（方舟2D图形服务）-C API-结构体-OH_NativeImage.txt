@@ -1,0 +1,18 @@
+# [OH_NativeImage](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-nativeimage-oh-nativeimage)
+
+## 目录
+- [概述](#概述)
+
+收起自动换行深色代码主题复制
+```
+typedef struct OH_NativeImage OH_NativeImage
+```
+ 
+## 概述
+PhonePC/2in1TabletTVWearable提供OH_NativeImage结构体声明。
+
+ **起始版本：** 9
+
+ **相关模块：** [OH_NativeImage](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-nativeimage)
+
+ **所在头文件：** [native_image.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-native-image-h)

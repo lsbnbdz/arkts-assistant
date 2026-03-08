@@ -1,0 +1,102 @@
+# [AnimationSet](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-animationset)
+
+## 目录
+- [导入模块](#section164051883419)
+- [AnimationSet](#section11158182461216)
+  - [constructor](#section61181246820)
+  - [addAnimation](#section0998117142714)
+  - [clearAnimation](#section154120585312)
+
+## 导入模块
+PhonePC/2in1TabletWearable收起自动换行深色代码主题复制
+```
+import { map } from '@kit.MapKit';
+```
+ 
+## AnimationSet
+PhonePC/2in1TabletWearable动画类的集合，继承[Animation](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-animation)。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ 
+### constructor
+PhonePC/2in1TabletWearableconstructor(shareInterpolator: boolean)
+
+ 构造器，构造动画类的集合实例。
+
+ 说明动画类集合继承[Animation](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-animation)方法，仅shareInterpolator为true时共享插值器，其他属性不共享，不支持设置。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| shareInterpolator | boolean | 是 | 定义是否共享插值器。 true：共享false：不共享 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let animation1: map.AlphaAnimation = new map.AlphaAnimation(0.2, 1);let animation2: map.RotateAnimation = new map.RotateAnimation(15, 150);let animation3: map.ScaleAnimation = new map.ScaleAnimation(1, 3, 1, 3);let animation = new map.AnimationSet(true);animation.setInterpolator(Curve.Linear);animation.addAnimation(animation1);animation.addAnimation(animation2);animation.addAnimation(animation3);animation.clearAnimation();
+```
+ 
+### addAnimation
+PhonePC/2in1TabletWearableaddAnimation(animation: Animation): void
+
+ 动画类集合增加动画。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| animation | Animation | 是 | 动画类集合增加动画。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let animation1: map.AlphaAnimation = new map.AlphaAnimation(0.2, 1);let animation2: map.RotateAnimation = new map.RotateAnimation(15, 150);let animation3: map.ScaleAnimation = new map.ScaleAnimation(1, 3, 1, 3);let animation = new map.AnimationSet(true);animation.addAnimation(animation1);animation.addAnimation(animation2);animation.addAnimation(animation3);
+```
+ 
+### clearAnimation
+PhonePC/2in1TabletWearableclearAnimation(): void
+
+ 清空动画类集合。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let animation1: map.AlphaAnimation = new map.AlphaAnimation(0.2, 1);let animation2: map.RotateAnimation = new map.RotateAnimation(15, 150);let animation3: map.ScaleAnimation = new map.ScaleAnimation(1, 3, 1, 3);let animation = new map.AnimationSet(true);animation.addAnimation(animation1);animation.addAnimation(animation2);animation.addAnimation(animation3);animation.clearAnimation();
+```

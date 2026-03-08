@@ -1,0 +1,52 @@
+# [os_account_common.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-os-account-common-h)
+
+## 目录
+- [概述](#概述)
+- [汇总](#汇总)
+  - [枚举](#枚举)
+- [枚举类型说明](#枚举类型说明)
+  - [OsAccount_ErrCode](#osaccount_errcode)
+
+## 概述
+PhonePC/2in1TabletTVWearable提供OsAccount接口的公共类型定义。
+
+ **库：** libos_account_ndk.so
+
+ **引用文件：** <BasicServicesKit/os_account_common.h>
+
+ **系统能力：** SystemCapability.Account.OsAccount
+
+ **起始版本：** 12
+
+ **相关模块：** [OsAccount](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-osaccount)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 枚举
+ PhonePC/2in1TabletTVWearable展开
+| 名称 | typedef关键字 | 描述 |
+| --- | --- | --- |
+| OsAccount_ErrCode | OsAccount_ErrCode | 枚举错误码。 |
+
+ 
+## 枚举类型说明
+PhonePC/2in1TabletTVWearable 
+### OsAccount_ErrCode
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+enum OsAccount_ErrCode
+```
+ **描述**
+
+ 枚举错误码。
+
+ **起始版本：** 12
+
+ 展开
+| |
+| |
+| |
+| OS_ACCOUNT_ERR_OK = 0 | 成功。 |
+| OS_ACCOUNT_ERR_INTERNAL_ERROR = 12300001 | 内部错误。 |
+| OS_ACCOUNT_ERR_INVALID_PARAMETER = 12300002 | 无效的参数。 |

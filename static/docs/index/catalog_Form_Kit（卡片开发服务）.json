@@ -14,7 +14,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-app-form-formbindingdata",
     "path": "",
-    "rel_path": "api/Form Kit（卡片开发服务）/Form Kit（卡片开发服务）-ArkTS API-@ohos.app.form.formBindingData (卡片数据绑定类).txt",
+    "rel_path": "api/应用框架/Form Kit（卡片开发服务）/Form Kit（卡片开发服务）-ArkTS API-@ohos.app.form.formBindingData (卡片数据绑定类).txt",
     "catalog": "Form Kit（卡片开发服务）",
     "objectId": "form-kit-arkts-api-ohos-app-form-formbindingdata",
     "nodeName": "document",
@@ -35,7 +35,8 @@
       "Prop",
       "卡片代理",
       "Kit",
-      "卡片开发服务"
+      "卡片开发服务",
+      "应用框架"
     ]
   },
   "form-kit-arkts-api-ohos-app-form-formeditextensionability-fo": {
@@ -51,7 +52,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-app-form-formeditextensionability",
     "path": "",
-    "rel_path": "api/Form Kit（卡片开发服务）/Form Kit（卡片开发服务）-ArkTS API-@ohos.app.form.FormEditExtensionAbility (FormEditExtensionAbility).txt",
+    "rel_path": "api/应用框架/Form Kit（卡片开发服务）/Form Kit（卡片开发服务）-ArkTS API-@ohos.app.form.FormEditExtensionAbility (FormEditExtensionAbility).txt",
     "catalog": "Form Kit（卡片开发服务）",
     "objectId": "form-kit-arkts-api-ohos-app-form-formeditextensionability-fo",
     "nodeName": "document",
@@ -72,7 +73,8 @@
       "继承自",
       "模型下使",
       "Kit",
-      "卡片开发服务"
+      "卡片开发服务",
+      "应用框架"
     ]
   },
   "form-kit-arkts-api-ohos-app-form-formextensionability-formex": {
@@ -99,7 +101,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-app-form-formextensionability",
     "path": "",
-    "rel_path": "api/Form Kit（卡片开发服务）/Form Kit（卡片开发服务）-ArkTS API-@ohos.app.form.FormExtensionAbility (FormExtensionAbility).txt",
+    "rel_path": "api/应用框架/Form Kit（卡片开发服务）/Form Kit（卡片开发服务）-ArkTS API-@ohos.app.form.FormExtensionAbility (FormExtensionAbility).txt",
     "catalog": "Form Kit（卡片开发服务）",
     "objectId": "form-kit-arkts-api-ohos-app-form-formextensionability-formex",
     "nodeName": "document",
@@ -120,7 +122,8 @@
       "State",
       "audio",
       "Kit",
-      "卡片开发服务"
+      "卡片开发服务",
+      "应用框架"
     ]
   },
   "form-kit-arkts-api-ohos-app-form-forminfo-forminfo": {
@@ -147,7 +150,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-app-form-forminfo",
     "path": "",
-    "rel_path": "api/Form Kit（卡片开发服务）/Form Kit（卡片开发服务）-ArkTS API-@ohos.app.form.formInfo (formInfo).txt",
+    "rel_path": "api/应用框架/Form Kit（卡片开发服务）/Form Kit（卡片开发服务）-ArkTS API-@ohos.app.form.formInfo (formInfo).txt",
     "catalog": "Form Kit（卡片开发服务）",
     "objectId": "form-kit-arkts-api-ohos-app-form-forminfo-forminfo",
     "nodeName": "document",
@@ -168,7 +171,8 @@
       "State",
       "string",
       "Kit",
-      "卡片开发服务"
+      "卡片开发服务",
+      "应用框架"
     ]
   },
   "form-kit-arkts-api-ohos-app-form-formprovider-formprovider": {
@@ -195,7 +199,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-app-form-formprovider",
     "path": "",
-    "rel_path": "api/Form Kit（卡片开发服务）/Form Kit（卡片开发服务）-ArkTS API-@ohos.app.form.formProvider (formProvider).txt",
+    "rel_path": "api/应用框架/Form Kit（卡片开发服务）/Form Kit（卡片开发服务）-ArkTS API-@ohos.app.form.formProvider (formProvider).txt",
     "catalog": "Form Kit（卡片开发服务）",
     "objectId": "form-kit-arkts-api-ohos-app-form-formprovider-formprovider",
     "nodeName": "document",
@@ -216,7 +220,8 @@
       "Async",
       "Callback",
       "Kit",
-      "卡片开发服务"
+      "卡片开发服务",
+      "应用框架"
     ]
   },
   "form-kit-arkts-api-ohos-app-form-liveformextensionability-li": {
@@ -236,7 +241,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-app-form-liveformextensionability",
     "path": "",
-    "rel_path": "api/Form Kit（卡片开发服务）/Form Kit（卡片开发服务）-ArkTS API-@ohos.app.form.LiveFormExtensionAbility (LiveFormExtensionAbility).txt",
+    "rel_path": "api/应用框架/Form Kit（卡片开发服务）/Form Kit（卡片开发服务）-ArkTS API-@ohos.app.form.LiveFormExtensionAbility (LiveFormExtensionAbility).txt",
     "catalog": "Form Kit（卡片开发服务）",
     "objectId": "form-kit-arkts-api-ohos-app-form-liveformextensionability-li",
     "nodeName": "document",
@@ -257,7 +262,8 @@
       "模型下使",
       "references",
       "Kit",
-      "卡片开发服务"
+      "卡片开发服务",
+      "应用框架"
     ]
   },
   "form-kit-ohos-application-formbindingdata": {
@@ -274,7 +280,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-application-formbindingdata",
     "path": "",
-    "rel_path": "api/Form Kit（卡片开发服务）/Form Kit（卡片开发服务）-已停止维护的接口-@ohos.application.formBindingData (卡片数据绑定类).txt",
+    "rel_path": "api/应用框架/Form Kit（卡片开发服务）/Form Kit（卡片开发服务）-已停止维护的接口-@ohos.application.formBindingData (卡片数据绑定类).txt",
     "catalog": "Form Kit（卡片开发服务）",
     "objectId": "form-kit-ohos-application-formbindingdata",
     "nodeName": "document",
@@ -296,6 +302,7 @@
       "create",
       "Kit",
       "卡片开发服务",
+      "应用框架",
       "已停止维护的接口"
     ]
   },
@@ -313,7 +320,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-application-formerror",
     "path": "",
-    "rel_path": "api/Form Kit（卡片开发服务）/Form Kit（卡片开发服务）-已停止维护的接口-@ohos.application.formError (formError).txt",
+    "rel_path": "api/应用框架/Form Kit（卡片开发服务）/Form Kit（卡片开发服务）-已停止维护的接口-@ohos.application.formError (formError).txt",
     "catalog": "Form Kit（卡片开发服务）",
     "objectId": "form-kit-ohos-application-formerror-formerror",
     "nodeName": "document",
@@ -335,6 +342,7 @@
       "ABILITY",
       "Kit",
       "卡片开发服务",
+      "应用框架",
       "已停止维护的接口"
     ]
   },
@@ -356,7 +364,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-application-forminfo",
     "path": "",
-    "rel_path": "api/Form Kit（卡片开发服务）/Form Kit（卡片开发服务）-已停止维护的接口-@ohos.application.formInfo (formInfo).txt",
+    "rel_path": "api/应用框架/Form Kit（卡片开发服务）/Form Kit（卡片开发服务）-已停止维护的接口-@ohos.application.formInfo (formInfo).txt",
     "catalog": "Form Kit（卡片开发服务）",
     "objectId": "form-kit-ohos-application-forminfo-forminfo",
     "nodeName": "document",
@@ -378,6 +386,7 @@
       "Name",
       "Kit",
       "卡片开发服务",
+      "应用框架",
       "已停止维护的接口"
     ]
   },
@@ -397,7 +406,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-application-formprovider",
     "path": "",
-    "rel_path": "api/Form Kit（卡片开发服务）/Form Kit（卡片开发服务）-已停止维护的接口-@ohos.application.formProvider (formProvider).txt",
+    "rel_path": "api/应用框架/Form Kit（卡片开发服务）/Form Kit（卡片开发服务）-已停止维护的接口-@ohos.application.formProvider (formProvider).txt",
     "catalog": "Form Kit（卡片开发服务）",
     "objectId": "form-kit-ohos-application-formprovider-formprovider",
     "nodeName": "document",
@@ -419,6 +428,7 @@
       "Time",
       "Kit",
       "卡片开发服务",
+      "应用框架",
       "已停止维护的接口"
     ]
   },
@@ -622,7 +632,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/form-arkts-errcode",
     "path": "",
-    "rel_path": "api/Form Kit（卡片开发服务）/Form Kit（卡片开发服务）-错误码.txt",
+    "rel_path": "api/应用框架/Form Kit（卡片开发服务）/Form Kit（卡片开发服务）-错误码.txt",
     "catalog": "Form Kit（卡片开发服务）",
     "objectId": "form-kit-2",
     "nodeName": "document",
@@ -635,7 +645,8 @@
       "errorcode",
       "Form",
       "Kit",
-      "卡片开发服务"
+      "卡片开发服务",
+      "应用框架"
     ]
   },
   "arkts-31": {
@@ -839,7 +850,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-form",
     "path": "",
-    "rel_path": "api/Form Kit（卡片开发服务）/Form Kit（卡片开发服务）-错误码-卡片错误码.txt",
+    "rel_path": "api/应用框架/Form Kit（卡片开发服务）/Form Kit（卡片开发服务）-错误码-卡片错误码.txt",
     "catalog": "Form Kit（卡片开发服务）",
     "objectId": "form-kit-1",
     "nodeName": "document",
@@ -862,6 +873,7 @@
       "Form",
       "Kit",
       "卡片开发服务",
+      "应用框架",
       "错误码"
     ]
   },
@@ -1166,7 +1178,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/form-arkts-dep",
     "path": "",
-    "rel_path": "api/Form Kit（卡片开发服务）/Form Kit（卡片开发服务）-已停止维护的接口.txt",
+    "rel_path": "api/应用框架/Form Kit（卡片开发服务）/Form Kit（卡片开发服务）-已停止维护的接口.txt",
     "catalog": "Form Kit（卡片开发服务）",
     "objectId": "form-kit",
     "nodeName": "document",
@@ -1188,7 +1200,8 @@
       "绑定类",
       "Form",
       "Kit",
-      "卡片开发服务"
+      "卡片开发服务",
+      "应用框架"
     ]
   },
   "doc-kwksce": {
@@ -1334,7 +1347,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/form-arkts-application",
     "path": "",
-    "rel_path": "api/Form Kit（卡片开发服务）/Form Kit（卡片开发服务）-ArkTS API-application.txt",
+    "rel_path": "api/应用框架/Form Kit（卡片开发服务）/Form Kit（卡片开发服务）-ArkTS API-application.txt",
     "catalog": "Form Kit（卡片开发服务）",
     "objectId": "form-kit-arkts-api-application",
     "nodeName": "document",
@@ -1352,7 +1365,8 @@
       "formeditextensioncontext",
       "liveformextensioncontext",
       "Kit",
-      "卡片开发服务"
+      "卡片开发服务",
+      "应用框架"
     ]
   },
   "form-kit-arkts-api": {
@@ -1365,7 +1379,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/form-arkts",
     "path": "",
-    "rel_path": "api/Form Kit（卡片开发服务）/Form Kit（卡片开发服务）-ArkTS API.txt",
+    "rel_path": "api/应用框架/Form Kit（卡片开发服务）/Form Kit（卡片开发服务）-ArkTS API.txt",
     "catalog": "Form Kit（卡片开发服务）",
     "objectId": "form-kit-arkts-api",
     "nodeName": "document",
@@ -1386,7 +1400,8 @@
       "Live",
       "application",
       "Kit",
-      "卡片开发服务"
+      "卡片开发服务",
+      "应用框架"
     ]
   },
   "arkts-26": {
@@ -1824,7 +1839,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/form-api",
     "path": "",
-    "rel_path": "api/Form Kit（卡片开发服务）/Form Kit（卡片开发服务）.txt",
+    "rel_path": "api/应用框架/Form Kit（卡片开发服务）/Form Kit（卡片开发服务）.txt",
     "catalog": "Form Kit（卡片开发服务）",
     "objectId": "form-kit-3",
     "nodeName": "document",
@@ -1840,7 +1855,8 @@
       "护的接口",
       "错误码",
       "dep",
-      "errcode"
+      "errcode",
+      "应用框架"
     ]
   },
   "form-kit-4": {
@@ -1919,7 +1935,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-inner-application-formeditextensioncontext",
     "path": "",
-    "rel_path": "api/Form Kit（卡片开发服务）/Form Kit（卡片开发服务）-ArkTS API-application-FormEditExtensionContext.txt",
+    "rel_path": "api/应用框架/Form Kit（卡片开发服务）/Form Kit（卡片开发服务）-ArkTS API-application-FormEditExtensionContext.txt",
     "catalog": "Form Kit（卡片开发服务）",
     "objectId": "form-kit-arkts-api-application-formeditextensioncontext",
     "nodeName": "document",
@@ -1940,7 +1956,8 @@
       "Stage",
       "inner",
       "Kit",
-      "卡片开发服务"
+      "卡片开发服务",
+      "应用框架"
     ]
   },
   "formextensionability": {
@@ -2034,7 +2051,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-inner-application-formextensioncontext",
     "path": "",
-    "rel_path": "api/Form Kit（卡片开发服务）/Form Kit（卡片开发服务）-ArkTS API-application-FormExtensionContext.txt",
+    "rel_path": "api/应用框架/Form Kit（卡片开发服务）/Form Kit（卡片开发服务）-ArkTS API-application-FormExtensionContext.txt",
     "catalog": "Form Kit（卡片开发服务）",
     "objectId": "form-kit-arkts-api-application-formextensioncontext",
     "nodeName": "document",
@@ -2056,6 +2073,7 @@
       "环境",
       "Kit",
       "卡片开发服务",
+      "应用框架",
       "application"
     ]
   },
@@ -2225,7 +2243,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-application-liveformextensioncontext",
     "path": "",
-    "rel_path": "api/Form Kit（卡片开发服务）/Form Kit（卡片开发服务）-ArkTS API-application-LiveFormExtensionContext.txt",
+    "rel_path": "api/应用框架/Form Kit（卡片开发服务）/Form Kit（卡片开发服务）-ArkTS API-application-LiveFormExtensionContext.txt",
     "catalog": "Form Kit（卡片开发服务）",
     "objectId": "form-kit-arkts-api-application-liveformextensioncontext",
     "nodeName": "document",
@@ -2246,7 +2264,8 @@
       "继承自",
       "模型下使",
       "Kit",
-      "卡片开发服务"
+      "卡片开发服务",
+      "应用框架"
     ]
   },
   "postcardaction": {

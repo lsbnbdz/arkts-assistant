@@ -1,0 +1,5 @@
+# [错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/input-arkts-errcode)
+
+- **[全局快捷键管理错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-inputconsumer)**
+ - **[输入设备错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-inputdevice)**
+ - **[鼠标光标错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-pointer)**

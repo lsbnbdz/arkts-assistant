@@ -1,0 +1,18 @@
+# [ParamListNode*](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hiappevent-paramlistnode8h)
+
+## 目录
+- [概述](#概述)
+
+收起自动换行深色代码主题复制
+```
+typedef struct ParamListNode* ParamList
+```
+ 
+## 概述
+PhonePC/2in1TabletTVWearable事件参数列表节点。
+
+ **起始版本：** 8
+
+ **相关模块：** [HiAppEvent](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hiappevent)
+
+ **所在头文件：** [hiappevent.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hiappevent-h)

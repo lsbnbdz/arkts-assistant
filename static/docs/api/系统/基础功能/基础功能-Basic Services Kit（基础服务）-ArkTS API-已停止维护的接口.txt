@@ -1,0 +1,11 @@
+# [已停止维护的接口](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/basic-services-arkts-dep)
+
+- **[系统公共事件定义(待停用)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/commonevent-definitions)**
+ - **[@ohos.commonEvent (公共事件模块)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-commonevent)**
+ - **[@ohos.usb (USB管理)(已停止维护)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-usb-deprecated)**
+ - **[@system.brightness (屏幕亮度)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-system-brightness)**
+ - **[@system.battery (电量信息)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-system-battery)**
+ - **[@system.device (设备信息)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-system-device)**
+ - **[@system.request (上传下载)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-system-request)**
+ - **[@ohos.screenLock (锁屏管理)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-screen-lock)**
+ - **[@ohos.systemTime (系统时间、时区)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-system-time)**

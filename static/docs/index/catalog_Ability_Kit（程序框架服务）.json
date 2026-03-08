@@ -16,7 +16,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.ability.ability (Ability模块).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.ability.ability (Ability模块).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-ability-ability-ability",
     "nodeName": "document",
@@ -37,7 +37,8 @@
       "模块",
       "Runtime",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-fa": {
@@ -48,7 +49,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-ability-ability",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_FA模型能力的接口.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_FA模型能力的接口.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-fa",
     "nodeName": "document",
@@ -69,6 +70,7 @@
       "model",
       "Kit",
       "程序框架服务",
+      "应用框架",
       "模型能力的接口"
     ]
   },
@@ -87,7 +89,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.ability.dataUriUtils (DataUriUtils模块).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.ability.dataUriUtils (DataUriUtils模块).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-ability-datauriutils-datauriutils",
     "nodeName": "document",
@@ -108,7 +110,8 @@
       "DataUriUtils",
       "模块",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-2": {
@@ -119,7 +122,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-ability-datauriutils",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_已停止维护的接口.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_已停止维护的接口.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-2",
     "nodeName": "document",
@@ -142,6 +145,7 @@
       "Ability",
       "Kit",
       "程序框架服务",
+      "应用框架",
       "已停止维护的接口"
     ]
   },
@@ -157,7 +161,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.ability.errorCode (ErrorCode).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.ability.errorCode (ErrorCode).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-ability-errorcode-errorcode",
     "nodeName": "document",
@@ -178,7 +182,8 @@
       "导入模块",
       "支持设备",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-ability-featureability-featureabi": {
@@ -205,7 +210,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.ability.featureAbility (FeatureAbility模块).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.ability.featureAbility (FeatureAbility模块).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-ability-featureability-featureabi",
     "nodeName": "document",
@@ -226,7 +231,8 @@
       "data",
       "error",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-ability-particleability-particlea": {
@@ -249,7 +255,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.ability.particleAbility (ParticleAbility模块).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.ability.particleAbility (ParticleAbility模块).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-ability-particleability-particlea",
     "nodeName": "document",
@@ -270,7 +276,8 @@
       "Data",
       "error",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-ability-screenlockfilemanager": {
@@ -290,7 +297,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.ability.screenLockFileManager (锁屏敏感数据管理).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.ability.screenLockFileManager (锁屏敏感数据管理).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-ability-screenlockfilemanager",
     "nodeName": "document",
@@ -312,7 +319,8 @@
       "System",
       "Ability",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-ability-wantconstant-wantconstant": {
@@ -329,7 +337,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.ability.wantConstant (wantConstant).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.ability.wantConstant (wantConstant).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-ability-wantconstant-wantconstant",
     "nodeName": "document",
@@ -350,7 +358,8 @@
       "VIDEO",
       "video",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-abilityaccessctrl": {
@@ -377,7 +386,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.abilityAccessCtrl (程序访问控制管理).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.abilityAccessCtrl (程序访问控制管理).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-abilityaccessctrl",
     "nodeName": "document",
@@ -398,7 +407,8 @@
       "支持设备",
       "访问控制",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-6": {
@@ -409,7 +419,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-abilityaccessctrl",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_通用能力的接口(推荐).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_通用能力的接口(推荐).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-6",
     "nodeName": "document",
@@ -431,6 +441,7 @@
       "Want",
       "Kit",
       "程序框架服务",
+      "应用框架",
       "通用能力的接口",
       "推荐"
     ]
@@ -443,7 +454,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-app-ability-ability",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_Stage模型能力的接口.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_Stage模型能力的接口.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-stage",
     "nodeName": "document",
@@ -465,6 +476,7 @@
       "Process",
       "Kit",
       "程序框架服务",
+      "应用框架",
       "模型能力的接口"
     ]
   },
@@ -484,7 +496,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.abilityManager (Ability信息管理).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.abilityManager (Ability信息管理).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-abilitymanager-abilit",
     "nodeName": "document",
@@ -505,7 +517,8 @@
       "Infos",
       "Service",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-applicationstatechang": {
@@ -519,7 +532,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.ApplicationStateChangeCallback (应用进程状态变化监听器).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.ApplicationStateChangeCallback (应用进程状态变化监听器).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-applicationstatechang",
     "nodeName": "document",
@@ -540,7 +553,8 @@
       "后台状态",
       "references",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-appmanager": {
@@ -567,7 +581,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.appManager (应用管理).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.appManager (应用管理).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-appmanager",
     "nodeName": "document",
@@ -588,7 +602,8 @@
       "Memory",
       "get",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-apprecovery": {
@@ -610,7 +625,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.appRecovery (应用故障恢复).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.appRecovery (应用故障恢复).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-apprecovery",
     "nodeName": "document",
@@ -631,7 +646,8 @@
       "Restart",
       "Save",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-appserviceextensionab": {
@@ -653,7 +669,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.AppServiceExtensionAbility (应用后台服务扩展组件).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.AppServiceExtensionAbility (应用后台服务扩展组件).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-appserviceextensionab",
     "nodeName": "document",
@@ -674,7 +690,8 @@
       "appserviceextensionability",
       "支持设备",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-autofillmanager": {
@@ -691,7 +708,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.autoFillManager (自动填充框架).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.autoFillManager (自动填充框架).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-autofillmanager",
     "nodeName": "document",
@@ -712,7 +729,8 @@
       "Auto",
       "Save",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-childprocessmanager": {
@@ -731,7 +749,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.childProcessManager (子进程管理).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.childProcessManager (子进程管理).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-childprocessmanager",
     "nodeName": "document",
@@ -752,7 +770,8 @@
       "支持设备",
       "references",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-common-ability": {
@@ -779,7 +798,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.common (Ability公共模块).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.common (Ability公共模块).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-common-ability",
     "nodeName": "document",
@@ -800,7 +819,8 @@
       "Capability",
       "Runtime",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-configuration": {
@@ -815,7 +835,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.Configuration (环境变量).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.Configuration (环境变量).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-configuration",
     "nodeName": "document",
@@ -836,7 +856,8 @@
       "务中使用",
       "表示应用",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-configurationconstant": {
@@ -853,7 +874,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.ConfigurationConstant (环境变量相关的常量定义).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.ConfigurationConstant (环境变量相关的常量定义).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-configurationconstant",
     "nodeName": "document",
@@ -874,7 +895,8 @@
       "DENSITY",
       "导入模块",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-contextconstant-conte": {
@@ -891,7 +913,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.contextConstant (Context相关常量).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.contextConstant (Context相关常量).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-contextconstant-conte",
     "nodeName": "document",
@@ -912,7 +934,8 @@
       "支持设备",
       "密区",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-continuemanager": {
@@ -930,7 +953,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.continueManager (跨端迁移).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.continueManager (跨端迁移).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-continuemanager",
     "nodeName": "document",
@@ -951,7 +974,8 @@
       "跨端迁移",
       "State",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-datauriutils-datauriu": {
@@ -969,7 +993,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.dataUriUtils (DataUriUtils模块).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.dataUriUtils (DataUriUtils模块).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-datauriutils-datauriu",
     "nodeName": "document",
@@ -990,7 +1014,8 @@
       "模块",
       "string",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-dialogrequest-dialogr": {
@@ -1013,7 +1038,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.dialogRequest (dialogRequest模块).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.dialogRequest (dialogRequest模块).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-dialogrequest-dialogr",
     "nodeName": "document",
@@ -1034,7 +1059,8 @@
       "Window",
       "Extension",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-embeddableuiability-u": {
@@ -1049,7 +1075,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.EmbeddableUIAbility (可嵌入式UIAbility).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.EmbeddableUIAbility (可嵌入式UIAbility).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-embeddableuiability-u",
     "nodeName": "document",
@@ -1070,7 +1096,8 @@
       "是为元服",
       "务提供可",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-embeddeduiextensionab": {
@@ -1085,7 +1112,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.EmbeddedUIExtensionAbility (跨进程界面嵌入扩展能力).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.EmbeddedUIExtensionAbility (跨进程界面嵌入扩展能力).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-embeddeduiextensionab",
     "nodeName": "document",
@@ -1106,7 +1133,8 @@
       "进程界面",
       "嵌入的能",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-environmentcallback": {
@@ -1124,7 +1152,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.EnvironmentCallback (系统环境变化监听器).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.EnvironmentCallback (系统环境变化监听器).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-environmentcallback",
     "nodeName": "document",
@@ -1145,7 +1173,8 @@
       "Memory",
       "Level",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-errormanager": {
@@ -1172,7 +1201,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.errorManager (错误管理模块).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.errorManager (错误管理模块).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-errormanager",
     "nodeName": "document",
@@ -1193,7 +1222,8 @@
       "global",
       "导入模块",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-extensionability": {
@@ -1207,7 +1237,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.ExtensionAbility (扩展能力基类).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.ExtensionAbility (扩展能力基类).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-extensionability",
     "nodeName": "document",
@@ -1228,7 +1258,8 @@
       "BB",
       "是特定场",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-insightintent": {
@@ -1246,7 +1277,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.insightIntent (意图框架基础定义).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.insightIntent (意图框架基础定义).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-insightintent",
     "nodeName": "document",
@@ -1267,7 +1298,8 @@
       "开始",
       "该接口支",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-insightintentcontext": {
@@ -1283,7 +1315,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.InsightIntentContext (意图执行上下文).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.InsightIntentContext (意图执行上下文).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-insightintentcontext",
     "nodeName": "document",
@@ -1304,7 +1336,8 @@
       "references",
       "component",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-insightintentdecorato": {
@@ -1331,7 +1364,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.InsightIntentDecorator (意图装饰器定义).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.InsightIntentDecorator (意图装饰器定义).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-insightintentdecorato",
     "nodeName": "document",
@@ -1353,7 +1386,8 @@
       "references",
       "Ability",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-insightintententryexe": {
@@ -1370,7 +1404,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.InsightIntentEntryExecutor (@InsightIntentEntry的意图执行基类).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.InsightIntentEntryExecutor (@InsightIntentEntry的意图执行基类).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-insightintententryexe",
     "nodeName": "document",
@@ -1392,6 +1426,7 @@
       "InsightIntentEntryExecutor",
       "Kit",
       "程序框架服务",
+      "应用框架",
       "InsightIntentEntry",
       "的意图执行基类"
     ]
@@ -1413,7 +1448,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.InsightIntentExecutor (意图执行基类).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.InsightIntentExecutor (意图执行基类).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-insightintentexecutor",
     "nodeName": "document",
@@ -1434,7 +1469,8 @@
       "page",
       "window",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-kioskmanager-kiosk": {
@@ -1451,7 +1487,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.kioskManager (Kiosk模式管理).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.kioskManager (Kiosk模式管理).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-kioskmanager-kiosk",
     "nodeName": "document",
@@ -1472,7 +1508,8 @@
       "list",
       "ATM",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-openlinkoptions-openl": {
@@ -1487,7 +1524,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.OpenLinkOptions (openLink的可选参数).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.OpenLinkOptions (openLink的可选参数).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-openlinkoptions-openl",
     "nodeName": "document",
@@ -1508,7 +1545,8 @@
       "App",
       "State",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-photoeditorextensiona": {
@@ -1530,7 +1568,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.PhotoEditorExtensionAbility (支持图片编辑能力的ExtensionAbility组件).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.PhotoEditorExtensionAbility (支持图片编辑能力的ExtensionAbility组件).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-photoeditorextensiona",
     "nodeName": "document",
@@ -1551,7 +1589,8 @@
       "Create",
       "Content",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-sendablecontextmanage": {
@@ -1571,7 +1610,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.sendableContextManager (sendable上下文管理).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.sendableContextManager (sendable上下文管理).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-sendablecontextmanage",
     "nodeName": "document",
@@ -1592,7 +1631,8 @@
       "Ability",
       "Hub",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-shareextensionability": {
@@ -1608,7 +1648,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.ShareExtensionAbility (分享详情页扩展能力).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.ShareExtensionAbility (分享详情页扩展能力).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-shareextensionability",
     "nodeName": "document",
@@ -1629,7 +1669,8 @@
       "references",
       "继承自",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-startoptions-startabi": {
@@ -1644,7 +1685,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.StartOptions (startAbility的可选参数).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.StartOptions (startAbility的可选参数).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-startoptions-startabi",
     "nodeName": "document",
@@ -1665,7 +1706,8 @@
       "Mode",
       "Animation",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-uiability": {
@@ -1692,7 +1734,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.UIAbility (带界面的应用组件).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.UIAbility (带界面的应用组件).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-uiability",
     "nodeName": "document",
@@ -1713,7 +1755,8 @@
       "生命周期",
       "uiability",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-uiextensionability-ex": {
@@ -1735,7 +1778,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.UIExtensionAbility (带界面的ExtensionAbility组件).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.UIExtensionAbility (带界面的ExtensionAbility组件).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-uiextensionability-ex",
     "nodeName": "document",
@@ -1756,7 +1799,8 @@
       "Create",
       "references",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-uiextensioncontentses": {
@@ -1782,7 +1826,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.UIExtensionContentSession (UIExtensionAbility界面操作类).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.UIExtensionContentSession (UIExtensionAbility界面操作类).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-uiextensioncontentses",
     "nodeName": "document",
@@ -1803,7 +1847,8 @@
       "UIExtensionAbility",
       "界面操作类",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-want-want": {
@@ -1819,7 +1864,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.Want (Want).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.Want (Want).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-want-want",
     "nodeName": "document",
@@ -1840,7 +1885,8 @@
       "parameters",
       "aafwk",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-wantagent-wantagent": {
@@ -1867,7 +1913,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.wantAgent (WantAgent模块).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.wantAgent (WantAgent模块).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-wantagent-wantagent",
     "nodeName": "document",
@@ -1888,7 +1934,8 @@
       "模块",
       "Async",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-wantconstant-want": {
@@ -1905,7 +1952,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.wantConstant (Want常量).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.wantConstant (Want常量).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-wantconstant-want",
     "nodeName": "document",
@@ -1926,7 +1973,8 @@
       "开始",
       "该接口支",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-appstartup-startupconfig": {
@@ -1941,7 +1989,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.appstartup.StartupConfig (启动框架配置信息).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.appstartup.StartupConfig (启动框架配置信息).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-appstartup-startupconfig",
     "nodeName": "document",
@@ -1962,7 +2010,8 @@
       "hilog",
       "error",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-appstartup-startupconfigentry": {
@@ -1979,7 +2028,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.appstartup.StartupConfigEntry (启动框架配置).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.appstartup.StartupConfigEntry (启动框架配置).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-appstartup-startupconfigentry",
     "nodeName": "document",
@@ -2000,7 +2049,8 @@
       "ability",
       "hilog",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-appstartup-startuplistener": {
@@ -2015,7 +2065,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.appstartup.StartupListener (启动框架任务监听器).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.appstartup.StartupListener (启动框架任务监听器).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-appstartup-startuplistener",
     "nodeName": "document",
@@ -2036,7 +2086,8 @@
       "void",
       "Business",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-appstartup-startupmanager": {
@@ -2056,7 +2107,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.appstartup.startupManager (启动框架管理能力).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.appstartup.startupManager (启动框架管理能力).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-appstartup-startupmanager",
     "nodeName": "document",
@@ -2077,7 +2128,8 @@
       "run",
       "开始支持",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-appstartup-startuptask": {
@@ -2094,7 +2146,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.appstartup.StartupTask (启动框架任务).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.appstartup.StartupTask (启动框架任务).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-appstartup-startuptask",
     "nodeName": "document",
@@ -2115,7 +2167,8 @@
       "Completed",
       "init",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-application-appmanager-appmanager": {
@@ -2137,7 +2190,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.application.appManager (appManager).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.application.appManager (appManager).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-application-appmanager-appmanager",
     "nodeName": "document",
@@ -2158,7 +2211,8 @@
       "In",
       "Stability",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-application-configuration-configu": {
@@ -2173,7 +2227,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.application.Configuration (Configuration).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.application.Configuration (Configuration).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-application-configuration-configu",
     "nodeName": "document",
@@ -2194,7 +2248,8 @@
       "Mode",
       "Constant",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-application-configurationconstant": {
@@ -2209,7 +2264,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.application.ConfigurationConstant (ConfigurationConstant).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.application.ConfigurationConstant (ConfigurationConstant).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-application-configurationconstant",
     "nodeName": "document",
@@ -2230,7 +2285,8 @@
       "Mode",
       "COLOR",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-application-want-want": {
@@ -2245,7 +2301,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.application.Want (Want).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.application.Want (Want).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-application-want-want",
     "nodeName": "document",
@@ -2266,7 +2322,8 @@
       "text",
       "image",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-bundle-bundle": {
@@ -2293,7 +2350,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.bundle (Bundle模块).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.bundle (Bundle模块).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-bundle-bundle",
     "nodeName": "document",
@@ -2314,7 +2371,8 @@
       "bundlegetapplicationinfodeprecated",
       "bundlegetallbundleinfodeprecated",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-bundle-bundlemanager-bundlemanage": {
@@ -2341,7 +2399,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.bundle.bundleManager (bundleManager模块).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.bundle.bundleManager (bundleManager模块).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-bundle-bundlemanager-bundlemanage",
     "nodeName": "document",
@@ -2362,7 +2420,8 @@
       "Profile",
       "Sync",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-bundle-defaultappmanager": {
@@ -2380,7 +2439,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.bundle.defaultAppManager (默认应用管理).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.bundle.defaultAppManager (默认应用管理).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-bundle-defaultappmanager",
     "nodeName": "document",
@@ -2401,7 +2460,8 @@
       "Ability",
       "IMAGE",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-bundle-launcherbundlemanager-laun": {
@@ -2420,7 +2480,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.bundle.launcherBundleManager (launcherBundleManager模块).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.bundle.launcherBundleManager (launcherBundleManager模块).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-bundle-launcherbundlemanager-laun",
     "nodeName": "document",
@@ -2441,7 +2501,8 @@
       "BUNDLE",
       "launcherabilityinfo",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-bundle-overlay-overlay": {
@@ -2462,7 +2523,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.bundle.overlay (overlay模块).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.bundle.overlay (overlay模块).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-bundle-overlay-overlay",
     "nodeName": "document",
@@ -2483,7 +2544,8 @@
       "Manager",
       "get",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-bundle-shortcutmanager-shortcutma": {
@@ -2502,7 +2564,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.bundle.shortcutManager (shortcutManager模块).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.bundle.shortcutManager (shortcutManager模块).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-bundle-shortcutmanager-shortcutma",
     "nodeName": "document",
@@ -2523,7 +2585,8 @@
       "快捷方式",
       "Visible",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-continuation-continuationmanager": {
@@ -2550,7 +2613,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.continuation.continuationManager (流转协同管理).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.continuation.continuationManager (流转协同管理).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-continuation-continuationmanager",
     "nodeName": "document",
@@ -2572,7 +2635,8 @@
       "continuationmanagerregistercontinuation",
       "Ability",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-wantagent-wantagent": {
@@ -2599,7 +2663,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.wantAgent (WantAgent模块).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.wantAgent (WantAgent模块).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-wantagent-wantagent",
     "nodeName": "document",
@@ -2621,6 +2685,7 @@
       "Async",
       "Kit",
       "程序框架服务",
+      "应用框架",
       "wantAgent",
       "WantAgent",
       "模块"
@@ -2640,7 +2705,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@system.package (应用管理).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@system.package (应用管理).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-system-package",
     "nodeName": "document",
@@ -2662,7 +2727,8 @@
       "维护",
       "Ability",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "doc-gzuo1u": {
@@ -2711,7 +2777,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-ability",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_错误码.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_错误码.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-8",
     "nodeName": "document",
@@ -2733,7 +2799,8 @@
       "数据管理",
       "Ability",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-4": {
@@ -2744,7 +2811,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ability",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_接口依赖的元素及定义.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_接口依赖的元素及定义.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-4",
     "nodeName": "document",
@@ -2763,6 +2830,7 @@
       "Ability",
       "Kit",
       "程序框架服务",
+      "应用框架",
       "接口依赖的元素及定义"
     ]
   },
@@ -2790,7 +2858,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_包管理子系统通用错误码.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_包管理子系统通用错误码.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-1",
     "nodeName": "document",
@@ -2809,7 +2877,8 @@
       "特征的",
       "dump",
       "link",
-      "通用错误"
+      "通用错误",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-5": {
@@ -2831,7 +2900,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_访问控制错误码.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_访问控制错误码.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-5",
     "nodeName": "document",
@@ -2850,7 +2919,8 @@
       "将返回该",
       "错误码",
       "可能原因",
-      "指定的权"
+      "指定的权",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-7": {
@@ -2867,7 +2937,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_锁屏敏感数据管理错误码.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_锁屏敏感数据管理错误码.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-7",
     "nodeName": "document",
@@ -2886,7 +2956,8 @@
       "可能原因",
       "处理步骤",
       "数据访问",
-      "屏敏感数"
+      "屏敏感数",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-3": {
@@ -2900,7 +2971,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_应用域名校验错误码.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_应用域名校验错误码.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-3",
     "nodeName": "document",
@@ -2919,7 +2990,8 @@
       "internal",
       "error",
       "has",
-      "occurred"
+      "occurred",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api": {
@@ -2946,7 +3018,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_元能力子系统错误码.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_元能力子系统错误码.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api",
     "nodeName": "document",
@@ -2965,7 +3037,8 @@
       "不存在",
       "验失败",
       "重启应用",
-      "严格模式"
+      "严格模式",
+      "应用框架"
     ]
   },
   "ability-kit": {
@@ -3020,7 +3093,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_AbilityInfo.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_AbilityInfo.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-abilityinfo",
     "nodeName": "document",
@@ -3041,7 +3114,8 @@
       "abilities",
       "Info",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-bundlemanager": {
@@ -3052,7 +3126,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-bundlemanager-abilityinfo",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_bundleManager.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_bundleManager.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-bundlemanager",
     "nodeName": "document",
@@ -3074,6 +3148,7 @@
       "Overlay",
       "Kit",
       "程序框架服务",
+      "应用框架",
       "bundleManager"
     ]
   },
@@ -3088,7 +3163,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_AbilityInfo (1).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_AbilityInfo (1).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-abilityinfo-1",
     "nodeName": "document",
@@ -3109,7 +3184,8 @@
       "可在",
       "模型下使",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-abilitymonitor": {
@@ -3125,7 +3201,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_AbilityMonitor.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_AbilityMonitor.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-abilitymonitor",
     "nodeName": "document",
@@ -3145,7 +3221,8 @@
       "kit",
       "Kit",
       "的入参来",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-application": {
@@ -3156,7 +3233,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-inner-application-abilitymonitor",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_application.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_application.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-application",
     "nodeName": "document",
@@ -3177,7 +3254,8 @@
       "Application",
       "Observer",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ability": {
@@ -3188,7 +3266,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-inner-ability-abilityresult",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ability.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ability.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ability",
     "nodeName": "document",
@@ -3207,7 +3285,8 @@
       "connectoptions",
       "dataabilityhelper",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-abilityresult": {
@@ -3223,7 +3302,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_AbilityResult.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_AbilityResult.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-abilityresult",
     "nodeName": "document",
@@ -3244,7 +3323,8 @@
       "被拉起并",
       "导入模块",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-abilityrunninginfo": {
@@ -3259,7 +3339,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_AbilityRunningInfo.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_AbilityRunningInfo.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-abilityrunninginfo",
     "nodeName": "document",
@@ -3280,7 +3360,8 @@
       "Error",
       "data",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-abilitystagecontext": {
@@ -3295,7 +3376,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_AbilityStageContext.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_AbilityStageContext.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-abilitystagecontext",
     "nodeName": "document",
@@ -3315,7 +3396,8 @@
       "context",
       "kit",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-abilitystagemonitor": {
@@ -3329,7 +3411,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_AbilityStageMonitor.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_AbilityStageMonitor.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-abilitystagemonitor",
     "nodeName": "document",
@@ -3350,7 +3432,8 @@
       "references",
       "module",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-abilitystartcallback": {
@@ -3367,7 +3450,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_AbilityStartCallback.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_AbilityStartCallback.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-abilitystartcallback",
     "nodeName": "document",
@@ -3388,7 +3471,8 @@
       "name",
       "message",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-abilitystatedata": {
@@ -3407,7 +3491,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_AbilityStateData.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_AbilityStateData.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-abilitystatedata",
     "nodeName": "document",
@@ -3428,7 +3512,8 @@
       "state",
       "Service",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-applicationcontext": {
@@ -3455,7 +3540,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ApplicationContext (应用上下文).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ApplicationContext (应用上下文).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-applicationcontext",
     "nodeName": "document",
@@ -3477,7 +3562,8 @@
       "Processes",
       "Ability",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-applicationinfo": {
@@ -3494,7 +3580,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ApplicationInfo.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ApplicationInfo.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-applicationinfo",
     "nodeName": "document",
@@ -3515,7 +3601,8 @@
       "description",
       "label",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-applicationinfo-1": {
@@ -3529,7 +3616,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ApplicationInfo (1).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ApplicationInfo (1).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-applicationinfo-1",
     "nodeName": "document",
@@ -3551,7 +3638,8 @@
       "deprecated",
       "Ability",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-applicationstateobserver": {
@@ -3572,7 +3660,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ApplicationStateObserver.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ApplicationStateObserver.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-applicationstateobserver",
     "nodeName": "document",
@@ -3593,7 +3681,8 @@
       "导入模块",
       "Foreground",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-appserviceextensioncontext": {
@@ -3613,7 +3702,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_AppServiceExtensionContext (应用后台服务扩展组件上下文).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_AppServiceExtensionContext (应用后台服务扩展组件上下文).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-appserviceextensioncontext",
     "nodeName": "document",
@@ -3634,7 +3723,8 @@
       "want",
       "导入模块",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-appstatedata": {
@@ -3649,7 +3739,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_AppStateData.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_AppStateData.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-appstatedata",
     "nodeName": "document",
@@ -3670,7 +3760,8 @@
       "log",
       "Changed",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-completionhandlerfora": {
@@ -3688,7 +3779,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-app-ability-atomicserviceoptions",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.CompletionHandlerForAtomicService (打开元服务结果的操作类).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.CompletionHandlerForAtomicService (打开元服务结果的操作类).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-completionhandlerfora",
     "nodeName": "document",
@@ -3710,6 +3801,7 @@
       "references",
       "Kit",
       "程序框架服务",
+      "应用框架",
       "ohos"
     ]
   },
@@ -3725,7 +3817,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_BaseContext.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_BaseContext.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-basecontext",
     "nodeName": "document",
@@ -3746,7 +3838,8 @@
       "换行深色",
       "代码主题",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-bundleinfo": {
@@ -3765,7 +3858,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_BundleInfo.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_BundleInfo.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-bundleinfo",
     "nodeName": "document",
@@ -3787,7 +3880,8 @@
       "字段",
       "Ability",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-bundleinfo-1": {
@@ -3803,7 +3897,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_BundleInfo (1).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_BundleInfo (1).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-bundleinfo-1",
     "nodeName": "document",
@@ -3824,7 +3918,8 @@
       "deprecated",
       "ability",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-childprocess": {
@@ -3838,7 +3933,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-app-ability-childprocessmanager",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.ChildProcess (子进程基类).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.ChildProcess (子进程基类).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-childprocess",
     "nodeName": "document",
@@ -3860,6 +3955,7 @@
       "代码主题",
       "Kit",
       "程序框架服务",
+      "应用框架",
       "ohos",
       "app",
       "ChildProcess",
@@ -3877,7 +3973,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-app-ability-childprocessmanager",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.ChildProcessArgs (子进程参数).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.ChildProcessArgs (子进程参数).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-childprocessargs",
     "nodeName": "document",
@@ -3899,6 +3995,7 @@
       "key",
       "Kit",
       "程序框架服务",
+      "应用框架",
       "ohos",
       "app",
       "ChildProcessArgs",
@@ -3916,7 +4013,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-app-ability-childprocessmanager",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.ChildProcessOptions (子进程启动选项).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.ChildProcessOptions (子进程启动选项).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-childprocessoptions",
     "nodeName": "document",
@@ -3937,6 +4034,7 @@
       "kit",
       "Kit",
       "程序框架服务",
+      "应用框架",
       "ohos",
       "app",
       "ChildProcessOptions",
@@ -3958,7 +4056,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ConnectOptions.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ConnectOptions.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-connectoptions",
     "nodeName": "document",
@@ -3979,7 +4077,8 @@
       "Want",
       "ability",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-application": {
@@ -3995,7 +4094,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/application-context-stage",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.application (应用工具类).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.application (应用工具类).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-application",
     "nodeName": "document",
@@ -4016,6 +4115,7 @@
       "支持设备",
       "收起自动",
       "程序框架服务",
+      "应用框架",
       "ohos",
       "app",
       "ability",
@@ -4046,7 +4146,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_Context (FA模型的上下文基类).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_Context (FA模型的上下文基类).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-context-fa",
     "nodeName": "document",
@@ -4068,6 +4168,7 @@
       "Dir",
       "Kit",
       "程序框架服务",
+      "应用框架",
       "模型的上下文基类"
     ]
   },
@@ -4091,7 +4192,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_Context (Stage模型的上下文基类).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_Context (Stage模型的上下文基类).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-context-stage",
     "nodeName": "document",
@@ -4112,7 +4213,8 @@
       "目录",
       "ability",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-continuation": {
@@ -4123,7 +4225,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-continuation-continuationextraparams",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_continuation.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_continuation.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-continuation",
     "nodeName": "document",
@@ -4139,7 +4241,8 @@
       "continuationresult",
       "Ability",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-continuationextraparams": {
@@ -4153,7 +4256,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ContinuationExtraParams.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ContinuationExtraParams.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-continuationextraparams",
     "nodeName": "document",
@@ -4174,7 +4277,8 @@
       "Capability",
       "Mode",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-continuationresult": {
@@ -4188,7 +4292,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ContinuationResult.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ContinuationResult.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-continuationresult",
     "nodeName": "document",
@@ -4209,7 +4313,8 @@
       "的设备信",
       "本模块首",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-customizedata": {
@@ -4223,7 +4328,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_CustomizeData.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_CustomizeData.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-customizedata",
     "nodeName": "document",
@@ -4245,7 +4350,8 @@
       "bundlemanager",
       "Ability",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-dataabilityhelper": {
@@ -4272,7 +4378,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_DataAbilityHelper.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_DataAbilityHelper.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-dataabilityhelper",
     "nodeName": "document",
@@ -4293,7 +4399,8 @@
       "dataabilityhelperupdate",
       "导入模块",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-distributedschedule": {
@@ -4320,7 +4427,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_DistributedSchedule错误码.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_DistributedSchedule错误码.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-distributedschedule",
     "nodeName": "document",
@@ -4342,7 +4449,8 @@
       "binder",
       "Ability",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-elementname": {
@@ -4357,7 +4465,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ElementName.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ElementName.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-elementname",
     "nodeName": "document",
@@ -4378,7 +4486,8 @@
       "Options",
       "Connect",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-elementname-1": {
@@ -4392,7 +4501,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ElementName (1).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ElementName (1).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-elementname-1",
     "nodeName": "document",
@@ -4413,7 +4522,8 @@
       "get",
       "deprecated",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-embeddableuiabilitycontext": {
@@ -4428,7 +4538,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_EmbeddableUIAbilityContext.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_EmbeddableUIAbilityContext.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-embeddableuiabilitycontext",
     "nodeName": "document",
@@ -4449,7 +4559,8 @@
       "Extension",
       "组件的上",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-errorobserver": {
@@ -4465,7 +4576,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ErrorObserver.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ErrorObserver.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-errorobserver",
     "nodeName": "document",
@@ -4485,7 +4596,8 @@
       "Kit",
       "支持设备",
       "Business",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-eventhub": {
@@ -4504,7 +4616,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_EventHub.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_EventHub.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-eventhub",
     "nodeName": "document",
@@ -4525,7 +4637,8 @@
       "Worker",
       "common",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-dataabilityoperation": {
@@ -4539,7 +4652,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-inner-ability-dataabilityhelper#dataabilityhelperexecutebatch",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_DataAbilityOperation.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_DataAbilityOperation.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-dataabilityoperation",
     "nodeName": "document",
@@ -4561,6 +4674,7 @@
       "values",
       "Kit",
       "程序框架服务",
+      "应用框架",
       "DataAbilityOperation"
     ]
   },
@@ -4575,7 +4689,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-inner-ability-dataabilityhelper#dataabilityhelperexecutebatch",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_DataAbilityResult.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_DataAbilityResult.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-dataabilityresult",
     "nodeName": "document",
@@ -4597,6 +4711,7 @@
       "Operation",
       "Kit",
       "程序框架服务",
+      "应用框架",
       "DataAbilityResult"
     ]
   },
@@ -4612,7 +4727,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ExtensionAbilityInfo.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ExtensionAbilityInfo.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-extensionabilityinfo",
     "nodeName": "document",
@@ -4633,7 +4748,8 @@
       "get",
       "For",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-extensioncontext": {
@@ -4649,7 +4765,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ExtensionContext.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ExtensionContext.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-extensioncontext",
     "nodeName": "document",
@@ -4670,7 +4786,8 @@
       "context",
       "kit",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-appversioninfo": {
@@ -4684,7 +4801,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-inner-app-context#contextgetappversioninfo7",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_AppVersionInfo.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_AppVersionInfo.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-appversioninfo",
     "nodeName": "document",
@@ -4706,6 +4823,7 @@
       "feature",
       "Kit",
       "程序框架服务",
+      "应用框架",
       "AppVersionInfo"
     ]
   },
@@ -4720,7 +4838,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-inner-app-context#contextgetprocessinfo7",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ProcessInfo.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ProcessInfo.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-processinfo",
     "nodeName": "document",
@@ -4742,6 +4860,7 @@
       "process",
       "Kit",
       "程序框架服务",
+      "应用框架",
       "ProcessInfo"
     ]
   },
@@ -4761,7 +4880,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_HapModuleInfo.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_HapModuleInfo.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-hapmoduleinfo",
     "nodeName": "document",
@@ -4782,7 +4901,8 @@
       "HAP",
       "当前模块",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-hapmoduleinfo-1": {
@@ -4796,7 +4916,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_HapModuleInfo (1).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_HapModuleInfo (1).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-hapmoduleinfo-1",
     "nodeName": "document",
@@ -4817,7 +4937,8 @@
       "deprecated",
       "references",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-kioskstatus-kiosk": {
@@ -4831,7 +4952,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_KioskStatus (Kiosk状态信息).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_KioskStatus (Kiosk状态信息).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-kioskstatus-kiosk",
     "nodeName": "document",
@@ -4852,7 +4973,8 @@
       "Mode",
       "boolean",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-launcherabilityinfo": {
@@ -4867,7 +4989,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_LauncherAbilityInfo.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_LauncherAbilityInfo.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-launcherabilityinfo",
     "nodeName": "document",
@@ -4888,7 +5010,8 @@
       "ID",
       "get",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-abilityconstant-abili": {
@@ -4914,7 +5037,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-app-ability-abilityconstant#launchreason",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.AbilityConstant (Ability相关常量).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.AbilityConstant (Ability相关常量).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-abilityconstant-abili",
     "nodeName": "document",
@@ -4936,6 +5059,7 @@
       "上次退出",
       "Kit",
       "程序框架服务",
+      "应用框架",
       "ohos",
       "app",
       "AbilityConstant",
@@ -4954,7 +5078,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_LoopObserver.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_LoopObserver.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-loopobserver",
     "nodeName": "document",
@@ -4975,7 +5099,8 @@
       "支持设备",
       "收起自动",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-metadata": {
@@ -4990,7 +5115,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_Metadata.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_Metadata.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-metadata",
     "nodeName": "document",
@@ -5011,7 +5136,8 @@
       "string",
       "导入模块",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-abilitystage-abilitys": {
@@ -5036,7 +5162,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/application-package-overview#%E5%BA%94%E7%94%A8%E7%9A%84%E5%A4%9Amodule%E8%AE%BE%E8%AE%A1%E6%9C%BA%E5%88%B6",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.AbilityStage (AbilityStage组件管理器).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.AbilityStage (AbilityStage组件管理器).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-abilitystage-abilitys",
     "nodeName": "document",
@@ -5058,6 +5184,7 @@
       "BA",
       "Kit",
       "程序框架服务",
+      "应用框架",
       "ohos",
       "AbilityStage",
       "组件管理器"
@@ -5074,7 +5201,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ModuleInfo.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ModuleInfo.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-moduleinfo",
     "nodeName": "document",
@@ -5096,7 +5223,8 @@
       "bundlemanager",
       "Ability",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-atomicserviceoptions-": {
@@ -5111,7 +5239,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-inner-application-uiabilitycontext#openatomicservice12",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.AtomicServiceOptions (openAtomicService可选参数).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.AtomicServiceOptions (openAtomicService可选参数).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-atomicserviceoptions-",
     "nodeName": "document",
@@ -5133,6 +5261,7 @@
       "ohos",
       "Kit",
       "程序框架服务",
+      "应用框架",
       "AtomicServiceOptions",
       "可选参数"
     ]
@@ -5149,7 +5278,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_OverlayModuleInfo.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_OverlayModuleInfo.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-overlaymoduleinfo",
     "nodeName": "document",
@@ -5170,7 +5299,8 @@
       "支持设备",
       "Name",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-permissionrequestresult": {
@@ -5185,7 +5315,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_PermissionRequestResult.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_PermissionRequestResult.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-permissionrequestresult",
     "nodeName": "document",
@@ -5207,7 +5337,8 @@
       "属性",
       "Ability",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-security": {
@@ -5218,7 +5349,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-permissionrequestresult",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_security.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_security.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-security",
     "nodeName": "document",
@@ -5232,6 +5363,7 @@
       "Ability",
       "Kit",
       "程序框架服务",
+      "应用框架",
       "security"
     ]
   },
@@ -5246,7 +5378,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_PhotoEditorExtensionContext.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_PhotoEditorExtensionContext.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-photoeditorextensioncontext",
     "nodeName": "document",
@@ -5266,7 +5398,8 @@
       "Content",
       "ability",
       "image",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-processdata": {
@@ -5281,7 +5414,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ProcessData.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ProcessData.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-processdata",
     "nodeName": "document",
@@ -5302,7 +5435,8 @@
       "state",
       "stringify",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-processinformation": {
@@ -5317,7 +5451,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ProcessInformation.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ProcessInformation.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-processinformation",
     "nodeName": "document",
@@ -5338,7 +5472,8 @@
       "Running",
       "Information",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-processrunninginfo": {
@@ -5353,7 +5488,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ProcessRunningInfo.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ProcessRunningInfo.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-processrunninginfo",
     "nodeName": "document",
@@ -5374,7 +5509,8 @@
       "属性",
       "get",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-sendablecontext": {
@@ -5389,7 +5525,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_SendableContext.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_SendableContext.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-sendablecontext",
     "nodeName": "document",
@@ -5410,7 +5546,8 @@
       "endable",
       "Stage",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-shortcutinfo": {
@@ -5427,7 +5564,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ShortcutInfo.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ShortcutInfo.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-shortcutinfo",
     "nodeName": "document",
@@ -5448,7 +5585,8 @@
       "number",
       "导入模块",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-shortcutinfo-1": {
@@ -5462,7 +5600,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ShortcutInfo (1).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_ShortcutInfo (1).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-shortcutinfo-1",
     "nodeName": "document",
@@ -5483,7 +5621,8 @@
       "shortcutinfo",
       "boolean",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-skill": {
@@ -5499,7 +5638,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_Skill.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_Skill.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-skill",
     "nodeName": "document",
@@ -5520,7 +5659,8 @@
       "bundlemanager",
       "string",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-startabilityparameter": {
@@ -5534,7 +5674,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-ability-featureability#featureabilitystartability",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_StartAbilityParameter.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_StartAbilityParameter.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-startabilityparameter",
     "nodeName": "document",
@@ -5556,6 +5696,7 @@
       "WINDOW",
       "Kit",
       "程序框架服务",
+      "应用框架",
       "StartAbilityParameter"
     ]
   },
@@ -5574,7 +5715,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-app-ability-startoptions",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.CompletionHandler (拉起应用结果的操作类).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.CompletionHandler (拉起应用结果的操作类).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-completionhandler",
     "nodeName": "document",
@@ -5596,6 +5737,7 @@
       "start",
       "Kit",
       "程序框架服务",
+      "应用框架",
       "ohos",
       "CompletionHandler",
       "拉起应用结果的操作类"
@@ -5613,7 +5755,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_TriggerInfo.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_TriggerInfo.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-triggerinfo",
     "nodeName": "document",
@@ -5634,7 +5776,8 @@
       "string",
       "Info",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-wantagent": {
@@ -5645,7 +5788,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-inner-wantagent-triggerinfo",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_wantAgent.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_wantAgent.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-wantagent",
     "nodeName": "document",
@@ -5663,6 +5806,7 @@
       "Ability",
       "Kit",
       "程序框架服务",
+      "应用框架",
       "wantAgent"
     ]
   },
@@ -5679,7 +5823,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-app-ability-uiability",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.Ability (Ability基类).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.Ability (Ability基类).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-ability-ability",
     "nodeName": "document",
@@ -5700,6 +5844,7 @@
       "extensionability",
       "类是应用",
       "程序框架服务",
+      "应用框架",
       "ohos",
       "基类"
     ]
@@ -5728,7 +5873,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-app-ability-uiability",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.abilityLifecycleCallback (UIAbility生命周期回调监听器).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.abilityLifecycleCallback (UIAbility生命周期回调监听器).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-abilitylifecyclecallb",
     "nodeName": "document",
@@ -5750,6 +5895,7 @@
       "Application",
       "Kit",
       "程序框架服务",
+      "应用框架",
       "ohos",
       "abilityLifecycleCallback",
       "生命周期回调监听器"
@@ -5779,7 +5925,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_UIAbilityContext.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_UIAbilityContext.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-uiabilitycontext",
     "nodeName": "document",
@@ -5800,7 +5946,8 @@
       "Mission",
       "Info",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-ohos-app-ability-actionextensionabilit": {
@@ -5815,7 +5962,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-app-ability-uiextensionability",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.ActionExtensionAbility (自定义服务扩展能力).txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_@ohos.app.ability.ActionExtensionAbility (自定义服务扩展能力).txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-ohos-app-ability-actionextensionabilit",
     "nodeName": "document",
@@ -5837,6 +5984,7 @@
       "继承自",
       "Kit",
       "程序框架服务",
+      "应用框架",
       "ohos",
       "ActionExtensionAbility",
       "自定义服务扩展能力"
@@ -5866,7 +6014,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_UIExtensionContext.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_UIExtensionContext.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-uiextensioncontext",
     "nodeName": "document",
@@ -5887,7 +6035,8 @@
       "app",
       "本模块接",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-uiserviceextensionconnectcallback": {
@@ -5903,7 +6052,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_UIServiceExtensionConnectCallback.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_UIServiceExtensionConnectCallback.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-uiserviceextensionconnectcallback",
     "nodeName": "document",
@@ -5924,7 +6073,8 @@
       "Data",
       "common",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-uiserviceproxy": {
@@ -5939,7 +6089,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_UIServiceProxy.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_UIServiceProxy.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-uiserviceproxy",
     "nodeName": "document",
@@ -5960,7 +6110,8 @@
       "string",
       "本模块接",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-want": {
@@ -5975,7 +6126,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_Want.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_Want.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-want",
     "nodeName": "document",
@@ -5996,7 +6147,8 @@
       "component",
       "app",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   },
   "ability-kit-arkts-api-wantagentinfo": {
@@ -6011,7 +6163,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_WantAgentInfo.txt",
+    "rel_path": "api/应用框架/Ability Kit（程序框架服务）/Ability Kit（程序框架服务）_ArkTS API_WantAgentInfo.txt",
     "catalog": "Ability Kit（程序框架服务）",
     "objectId": "ability-kit-arkts-api-wantagentinfo",
     "nodeName": "document",
@@ -6032,7 +6184,8 @@
       "开始支持",
       "导入模块",
       "Kit",
-      "程序框架服务"
+      "程序框架服务",
+      "应用框架"
     ]
   }
 }

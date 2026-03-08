@@ -1,0 +1,55 @@
+# [Rcp_DnsConfiguration](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___dns_configuration)
+
+## 目录
+- [概述](#section1315662156094052)
+- [汇总](#section1258499659094052)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section11437715094052)
+  - [dnsOverHttps](#a7e3122dc7ea963e7864d4ff6c3f66f0f)
+  - [dnsRules](#ab09aacb68c682d9beea100cae481eaa4)
+
+## 概述
+PhonePC/2in1TabletTVWearableDNS解析配置。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [RemoteCommunication](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| Rcp_DnsRule * dnsRules | DNS规则配置。 |
+| Rcp_DnsOverHttps dnsOverHttps | DOH配置。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTVWearable 
+### dnsOverHttps
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_DnsOverHttps Rcp_DnsConfiguration::dnsOverHttps
+```
+ **描述**
+
+ DOH配置。
+
+ 
+### dnsRules
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_DnsRule* Rcp_DnsConfiguration::dnsRules
+```
+ **描述**
+
+ DNS规则配置。
+
+ [Rcp_DnsServers](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___dns_servers): 表示优先使用指定的dns服务器解析主机名。
+
+ [Rcp_StaticDnsRule](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___static_dns_rule): 表示如果主机名匹配，则优先使用指定的地址。
+
+ [Rcp_DynamicDnsRuleFunction](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview#gad0ace0c83dd20972b34ff1538700eab3): 表示优先使用函数中返回的地址。

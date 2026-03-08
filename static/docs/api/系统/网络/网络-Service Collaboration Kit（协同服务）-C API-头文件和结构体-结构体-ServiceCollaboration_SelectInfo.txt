@@ -1,0 +1,61 @@
+# [ServiceCollaboration_SelectInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/servicecollaboration-selectinfo)
+
+## 目录
+- [概述](#section1747947095180804)
+- [汇总](#section348120704180804)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section1175258517180804)
+  - [deviceNetworkId](#a8829d22e5d51fc0814cc3e1f5d814679)
+  - [maxSize](#a8aa0e58e2736c50b8c9957c7b14c7cd3)
+  - [serviceFilterType](#a9154e00b7840c2e739599ebfce7c5deb)
+
+## 概述
+PhonePC/2in1TabletTV使用[HMS_ServiceCollaboration_StartCollaboration](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/servicecollaboration-capi-module#section4531193410296)触发跨设备互通时，被选择的设备信息。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [ServiceCollaboration](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/servicecollaboration-capi-module)
+
+ 
+## 汇总
+PhonePC/2in1TabletTV 
+### 成员变量
+ PhonePC/2in1TabletTV展开
+| |
+| |
+| |
+| ServiceCollaborationFilterType serviceFilterType | 开发者期望的设备能力类型。 |
+| char deviceNetworkId [COLLABORATIONDEVICEINFO_DEVICENETWORKID_MAXLENGTH] | 被选择的设备network Id。 |
+| uint32_t maxSize | 能被选中的最大图片数量。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTV 
+### deviceNetworkId
+PhonePC/2in1TabletTV收起自动换行深色代码主题复制
+```
+char ServiceCollaboration_SelectInfo::deviceNetworkId[COLLABORATIONDEVICEINFO_DEVICENETWORKID_MAXLENGTH]
+```
+ **描述**
+
+ 被选择的设备network Id。
+
+ 
+### maxSize
+PhonePC/2in1TabletTV收起自动换行深色代码主题复制
+```
+uint32_t ServiceCollaboration_SelectInfo::maxSize
+```
+ **描述**
+
+ 能被选中的最大图片数量。
+
+ 
+### serviceFilterType
+PhonePC/2in1TabletTV收起自动换行深色代码主题复制
+```
+ServiceCollaborationFilterType ServiceCollaboration_SelectInfo::serviceFilterType
+```
+ **描述**
+
+ 开发者期望的设备能力类型。

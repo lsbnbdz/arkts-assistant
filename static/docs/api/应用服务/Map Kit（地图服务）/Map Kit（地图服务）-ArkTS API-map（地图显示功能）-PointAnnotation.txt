@@ -1,0 +1,164 @@
+# [PointAnnotation](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-pointannotation)
+
+## 目录
+- [导入模块](#section164051883419)
+- [PointAnnotation](#section1175213362253)
+  - [getPosition](#section1328171982513)
+  - [getTitleText](#section8331319102519)
+  - [setTitleText](#section238171916252)
+  - [setTitleAnimation](#section884818504399)
+  - [startTitleAnimation](#section108531150183916)
+
+## 导入模块
+PhonePC/2in1TabletWearable收起自动换行深色代码主题复制
+```
+import { map, mapCommon } from '@kit.MapKit';
+```
+ 
+## PointAnnotation
+PhonePC/2in1TabletWearable点注释，继承[BasePriorityOverlay](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-basepriorityoverlay)。在调用map.[MapComponentController](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-mapcomponentcontroller)类的[addPointAnnotation](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-mapcomponentcontroller#section1899064804520)方法时会返回该类型的实例。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let pointAnnotationOptions: mapCommon.PointAnnotationParams = { position: { latitude: 32.120750, longitude: 118.788765 }, titles: [{ content: "南京夫子庙" }], // 图标需存放在resources/rawfile目录下 icon: 'icon.png'};let pointAnnotation: map.PointAnnotation = await this.mapController.addPointAnnotation(pointAnnotationOptions);
+```
+ 
+### getPosition
+PhonePC/2in1TabletWearablegetPosition(): mapCommon.LatLng
+
+ 获取点注释的锚点坐标。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| mapCommon.LatLng | 点注释的锚点坐标。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let position: mapCommon.LatLng = pointAnnotation.getPosition();
+```
+ 
+### getTitleText
+PhonePC/2in1TabletWearablegetTitleText(): mapCommon.Text
+
+ 获取点注释第一标题的属性。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| mapCommon.Text | 获取点注释第一标题的属性。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let titleText: mapCommon.Text = pointAnnotation.getTitleText();
+```
+ 
+### setTitleText
+PhonePC/2in1TabletWearablesetTitleText(text: mapCommon.Text): void
+
+ 设置第一标题属性（除content）。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| text | mapCommon.Text | 是 | 第一标题属性（除content）。 说明约束条件：fontSize、strokeWidth大于等于0。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+// 以pointAnnotation为例pointAnnotation.setTitleText({ content: '', color: 0xff00ffff, fontSize: 15, strokeColor: 0xff00ff00, strokeWidth: 2, fontStyle: mapCommon.FontStyle.BOLD_ITALIC});
+```
+ 
+### setTitleAnimation
+PhonePC/2in1TabletWearablesetTitleAnimation(animation: FontSizeAnimation): void
+
+ 设置点注释的标题动画。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| animation | FontSizeAnimation | 是 | 点注释的标题动画。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let animation: map.FontSizeAnimation = new map.FontSizeAnimation(5, 25);animation.setDuration(3000);animation.on("start",() => { console.info('start Font Animation');});animation.on("end",() => { console.info('end Font Animation');});// 设置动画完成的状态animation.setFillMode(map.AnimationFillMode.BACKWARDS);// 设置动画重复方式animation.setRepeatMode(map.AnimationRepeatMode.REVERSE);// 设置动画的插值器animation.setInterpolator(Curve.Linear);// 设置动画重复的次数animation.setRepeatCount(100);pointAnnotation.setTitleAnimation(animation);pointAnnotation.startTitleAnimation();
+```
+ 
+### startTitleAnimation
+PhonePC/2in1TabletWearablestartTitleAnimation(): void
+
+ 启动点注释的标题动画。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+pointAnnotation.startTitleAnimation();
+```

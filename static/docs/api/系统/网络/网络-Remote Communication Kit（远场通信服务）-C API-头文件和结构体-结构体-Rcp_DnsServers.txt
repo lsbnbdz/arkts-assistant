@@ -1,0 +1,49 @@
+# [Rcp_DnsServers](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___dns_servers)
+
+## 目录
+- [概述](#section1261496457094052)
+- [汇总](#section783089982094052)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section639233616094052)
+  - [ipAndPort](#a4cd8b8fb177386081b28758bb0b2f97c)
+  - [next](#a89103c531bba6cd8cf60fd5d30dba8ef)
+
+## 概述
+PhonePC/2in1TabletTVWearableDNS服务器。[Rcp_DnsConfiguration.dnsRules](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___dns_configuration#ab09aacb68c682d9beea100cae481eaa4)中的类型之一。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [RemoteCommunication](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| Rcp_IpAndPort ipAndPort | IP和端口。 |
+| struct Rcp_DnsServers * next | 链式存储。指向下一个Rcp_DnsServers的指针。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTVWearable 
+### ipAndPort
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_IpAndPort Rcp_DnsServers::ipAndPort
+```
+ **描述**
+
+ IP和端口。
+
+ 
+### next
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+struct Rcp_DnsServers* Rcp_DnsServers::next
+```
+ **描述**
+
+ 链式存储。指向下一个[Rcp_DnsServers](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___dns_servers)的指针。

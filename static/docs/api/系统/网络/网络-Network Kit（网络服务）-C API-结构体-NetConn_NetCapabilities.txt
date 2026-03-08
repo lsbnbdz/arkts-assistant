@@ -1,0 +1,35 @@
+# [NetConn_NetCapabilities](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netconnection-netconn-netcapabilities)
+
+## 目录
+- [概述](#概述)
+- [汇总](#汇总)
+  - [成员变量](#成员变量)
+
+收起自动换行深色代码主题复制
+```
+typedef struct NetConn_NetCapabilities {...} NetConn_NetCapabilities
+```
+ 
+## 概述
+PhonePC/2in1TabletTVWearable网络能力集。
+
+ **起始版本：** 11
+
+ **相关模块：** [NetConnection](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netconnection)
+
+ **所在头文件：** [net_connection_type.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-net-connection-type-h)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| uint32_t linkUpBandwidthKbps | 上行带宽。 |
+| uint32_t linkDownBandwidthKbps | 下行带宽。 |
+| NetConn_NetCap netCaps [NETCONN_MAX_CAP_SIZE] | 网络能力列表。 |
+| int32_t netCapsSize | 网络能力列表的实际size。 |
+| NetConn_NetBearerType bearerTypes [NETCONN_MAX_BEARER_TYPE_SIZE] | 承载类型列表 |
+| int32_t bearerTypesSize | 承载类型列表的实际size |

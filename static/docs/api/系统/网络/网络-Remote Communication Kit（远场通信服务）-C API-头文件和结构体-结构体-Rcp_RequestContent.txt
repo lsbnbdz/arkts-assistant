@@ -1,0 +1,87 @@
+# [Rcp_RequestContent](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___request_content)
+
+## 目录
+- [概述](#section1605079103094053)
+- [汇总](#section1088654609094053)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section1725688130094053)
+  - [contentStr](#a81dfde6bdcabe53dd1ca25f85173d19a)
+  - [form](#a385cd35b8a47800f13a6ef5520842c58)
+  - [getDataCallback](#a042146cb217fe387a22d8538de6b147c)
+  - [multipartForm](#afb9b3ece4b637e347bafc3d98899ae45)
+  - [type](#a46cdb54d4c402f9eca88b46c3746f913)
+
+## 概述
+PhonePC/2in1TabletTVWearable请求的内容。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [RemoteCommunication](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| Rcp_ContentType type | 表示union中使用的数据类型。 |
+| union { | union结构。data中使用的数据由type进行区分。 |
+| Rcp_Buffer contentStr | contentStr：文本。 |
+| Rcp_Form * form | form：表单。 |
+| Rcp_MultipartForm * multipartForm | multipartForm：多部分表单。 |
+| Rcp_GetDataCallback getDataCallback | getDataCallback：使用回调函数获取数据。 |
+| } data | data中使用的数据由type进行区分。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTVWearable 
+### contentStr
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_Buffer Rcp_RequestContent::contentStr
+```
+ **描述**
+
+ 字符串内容。
+
+ 
+### form
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_Form* Rcp_RequestContent::form
+```
+ **描述**
+
+ 表单内容。
+
+ 
+### getDataCallback
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_GetDataCallback Rcp_RequestContent::getDataCallback
+```
+ **描述**
+
+ 回调函数。
+
+ 
+### multipartForm
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_MultipartForm* Rcp_RequestContent::multipartForm
+```
+ **描述**
+
+ 多部分表单内容。
+
+ 
+### type
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_ContentType Rcp_RequestContent::type
+```
+ **描述**
+
+ 表示union中使用的数据类型。

@@ -1,0 +1,49 @@
+# [Rcp_Buffer](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___buffer)
+
+## 目录
+- [概述](#section1806009654094052)
+- [汇总](#section1021540297094052)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section1912632205094052)
+  - [buffer](#a816dac46e792aa594921f699b5c8ba58)
+  - [length](#a1f5f1c7aa421648fc7279c29de769b62)
+
+## 概述
+PhonePC/2in1TabletTVWearable文本存储结构。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [RemoteCommunication](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| const char * buffer | 内容。 |
+| uint32_t length | 内容长度。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTVWearable 
+### buffer
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+const char* Rcp_Buffer::buffer
+```
+ **描述**
+
+ 内容。
+
+ 
+### length
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+uint32_t Rcp_Buffer::length
+```
+ **描述**
+
+ 内容长度。

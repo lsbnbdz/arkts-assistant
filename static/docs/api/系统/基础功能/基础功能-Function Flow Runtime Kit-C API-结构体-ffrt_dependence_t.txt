@@ -1,0 +1,31 @@
+# [ffrt_dependence_t](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-ffrt-ffrt-dependence-t)
+
+## 目录
+- [概述](#概述)
+- [汇总](#汇总)
+  - [成员变量](#成员变量)
+
+收起自动换行深色代码主题复制
+```
+typedef struct {...} ffrt_dependence_t
+```
+ 
+## 概述
+PhonePC/2in1TabletTVWearable依赖数据结构。
+
+ **起始版本：** 10
+
+ **相关模块：** [FFRT](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-ffrt)
+
+ **所在头文件：** [type_def.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-type-def-h)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| ffrt_dependence_type_t type | 依赖类型 |
+| const void* ptr | 依赖数据地址 |

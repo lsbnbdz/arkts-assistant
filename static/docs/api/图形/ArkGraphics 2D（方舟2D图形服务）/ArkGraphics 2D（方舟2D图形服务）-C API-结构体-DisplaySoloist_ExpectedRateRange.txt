@@ -1,0 +1,66 @@
+# [DisplaySoloist_ExpectedRateRange](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ivedisplaysoloist-displaysoloist-expectedraterange)
+
+## 目录
+- [概述](#概述)
+- [汇总](#汇总)
+  - [成员变量](#成员变量)
+  - [成员函数](#成员函数)
+- [成员函数说明](#成员函数说明)
+  - [OH_DisplaySoloist_FrameCallback()](#oh_displaysoloist_framecallback)
+
+收起自动换行深色代码主题复制
+```
+typedef struct {...} DisplaySoloist_ExpectedRateRange
+```
+ 
+## 概述
+PhonePC/2in1TabletTVWearable提供期望帧率范围结构体。
+
+ **起始版本：** 12
+
+ **相关模块：** [NativeDisplaySoloist](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-nativedisplaysoloist)
+
+ **所在头文件：** [native_display_soloist.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-native-display-soloist-h)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| int32_t min | 期望帧率范围最小值，取值范围为[0,120]。 |
+| int32_t max | 期望帧率范围最大值，取值范围为[0,120]。 |
+| int32_t expected | 期望帧率，取值范围为[0,120]。 |
+
+ 
+### 成员函数
+ PhonePC/2in1TabletTVWearable展开
+| 名称 | typedef关键字 | 描述 |
+| --- | --- | --- |
+| typedef void (*OH_DisplaySoloist_FrameCallback)(long long timestamp, long long targetTimestamp, void* data) | OH_DisplaySoloist_FrameCallback() | OH_DisplaySoloist回调函数类型。 起始版本： 12 |
+
+ 
+## 成员函数说明
+PhonePC/2in1TabletTVWearable 
+### OH_DisplaySoloist_FrameCallback()
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+typedef void (*OH_DisplaySoloist_FrameCallback)(long long timestamp, long long targetTimestamp, void* data)
+```
+ **描述**
+
+ OH_DisplaySoloist回调函数类型。
+
+ **起始版本：** 12
+
+ **参数：**
+
+ 展开
+| |
+| |
+| |
+| long long timestamp | 当前帧VSync时间戳。 |
+| long long targetTimestamp | 预期的下一帧VSync时间戳。 |
+| void* data | 用户自定义数据。 |

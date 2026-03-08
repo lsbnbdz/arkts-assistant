@@ -13,7 +13,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-backgroundtaskmanager",
     "path": "",
-    "rel_path": "api/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-ArkTS API-已停止维护的接口-@ohos.backgroundTaskManager (后台任务管理).txt",
+    "rel_path": "api/应用框架/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-ArkTS API-已停止维护的接口-@ohos.backgroundTaskManager (后台任务管理).txt",
     "catalog": "Background Tasks Kit（后台任务开发服务）",
     "objectId": "background-tasks-kit-arkts-api-ohos-backgroundtaskmanager",
     "nodeName": "document",
@@ -36,6 +36,7 @@
       "Tasks",
       "Kit",
       "后台任务开发服务",
+      "应用框架",
       "已停止维护的接口"
     ]
   },
@@ -53,7 +54,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-deviceusagestatistics",
     "path": "",
-    "rel_path": "api/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-ArkTS API-已停止维护的接口-@ohos.bundleState (设备使用信息统计).txt",
+    "rel_path": "api/应用框架/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-ArkTS API-已停止维护的接口-@ohos.bundleState (设备使用信息统计).txt",
     "catalog": "Background Tasks Kit（后台任务开发服务）",
     "objectId": "background-tasks-kit-arkts-api-ohos-bundlestate",
     "nodeName": "document",
@@ -77,6 +78,7 @@
       "Tasks",
       "Kit",
       "后台任务开发服务",
+      "应用框架",
       "已停止维护的接口",
       "设备使用信息统计"
     ]
@@ -105,7 +107,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-reminderagent",
     "path": "",
-    "rel_path": "api/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-ArkTS API-已停止维护的接口-@ohos.reminderAgent (后台代理提醒).txt",
+    "rel_path": "api/应用框架/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-ArkTS API-已停止维护的接口-@ohos.reminderAgent (后台代理提醒).txt",
     "catalog": "Background Tasks Kit（后台任务开发服务）",
     "objectId": "background-tasks-kit-arkts-api-ohos-reminderagent",
     "nodeName": "document",
@@ -129,6 +131,7 @@
       "Tasks",
       "Kit",
       "后台任务开发服务",
+      "应用框架",
       "已停止维护的接口"
     ]
   },
@@ -156,7 +159,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-reminderagentmanager",
     "path": "",
-    "rel_path": "api/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-ArkTS API-@ohos.reminderAgentManager (后台代理提醒).txt",
+    "rel_path": "api/应用框架/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-ArkTS API-@ohos.reminderAgentManager (后台代理提醒).txt",
     "catalog": "Background Tasks Kit（后台任务开发服务）",
     "objectId": "background-tasks-kit-arkts-api-ohos-reminderagentmanager",
     "nodeName": "document",
@@ -179,7 +182,8 @@
       "Background",
       "Tasks",
       "Kit",
-      "后台任务开发服务"
+      "后台任务开发服务",
+      "应用框架"
     ]
   },
   "background-tasks-kit-arkts-api-ohos-resourceschedule-backgro": {
@@ -199,7 +203,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-backgroundprocessmanager",
     "path": "",
-    "rel_path": "api/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-ArkTS API-@ohos.resourceschedule.backgroundProcessManager (后台子进程管控).txt",
+    "rel_path": "api/应用框架/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-ArkTS API-@ohos.resourceschedule.backgroundProcessManager (后台子进程管控).txt",
     "catalog": "Background Tasks Kit（后台任务开发服务）",
     "objectId": "background-tasks-kit-arkts-api-ohos-resourceschedule-backgro",
     "nodeName": "document",
@@ -222,7 +226,8 @@
       "Background",
       "Tasks",
       "Kit",
-      "后台任务开发服务"
+      "后台任务开发服务",
+      "应用框架"
     ]
   },
   "background-tasks-kit-arkts-api-ohos-resourceschedule-backgro-1": {
@@ -249,7 +254,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-resourceschedule-backgroundtaskmanager",
     "path": "",
-    "rel_path": "api/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-ArkTS API-@ohos.resourceschedule.backgroundTaskManager (后台任务管理).txt",
+    "rel_path": "api/应用框架/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-ArkTS API-@ohos.resourceschedule.backgroundTaskManager (后台任务管理).txt",
     "catalog": "Background Tasks Kit（后台任务开发服务）",
     "objectId": "background-tasks-kit-arkts-api-ohos-resourceschedule-backgro-1",
     "nodeName": "document",
@@ -271,7 +276,8 @@
       "start",
       "Tasks",
       "Kit",
-      "后台任务开发服务"
+      "后台任务开发服务",
+      "应用框架"
     ]
   },
   "background-tasks-kit-arkts-api-ohos-resourceschedule-worksch": {
@@ -298,7 +304,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-resourceschedule-workscheduler",
     "path": "",
-    "rel_path": "api/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-ArkTS API-@ohos.resourceschedule.workScheduler (延迟任务调度).txt",
+    "rel_path": "api/应用框架/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-ArkTS API-@ohos.resourceschedule.workScheduler (延迟任务调度).txt",
     "catalog": "Background Tasks Kit（后台任务开发服务）",
     "objectId": "background-tasks-kit-arkts-api-ohos-resourceschedule-worksch",
     "nodeName": "document",
@@ -321,7 +327,8 @@
       "Background",
       "Tasks",
       "Kit",
-      "后台任务开发服务"
+      "后台任务开发服务",
+      "应用框架"
     ]
   },
   "background-tasks-kit-arkts-api-ohos-workschedulerextensionab": {
@@ -341,7 +348,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-workschedulerextensionability",
     "path": "",
-    "rel_path": "api/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-ArkTS API-@ohos.WorkSchedulerExtensionAbility (延迟任务调度回调).txt",
+    "rel_path": "api/应用框架/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-ArkTS API-@ohos.WorkSchedulerExtensionAbility (延迟任务调度回调).txt",
     "catalog": "Background Tasks Kit（后台任务开发服务）",
     "objectId": "background-tasks-kit-arkts-api-ohos-workschedulerextensionab",
     "nodeName": "document",
@@ -364,7 +371,8 @@
       "Background",
       "Tasks",
       "Kit",
-      "后台任务开发服务"
+      "后台任务开发服务",
+      "应用框架"
     ]
   },
   "background-tasks-kit": {
@@ -377,7 +385,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/background-tasks-arkts-errcode",
     "path": "",
-    "rel_path": "api/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-错误码.txt",
+    "rel_path": "api/应用框架/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-错误码.txt",
     "catalog": "Background Tasks Kit（后台任务开发服务）",
     "objectId": "background-tasks-kit",
     "nodeName": "document",
@@ -400,7 +408,8 @@
       "Background",
       "Tasks",
       "Kit",
-      "后台任务开发服务"
+      "后台任务开发服务",
+      "应用框架"
     ]
   },
   "doc-pb5o9u": {
@@ -540,7 +549,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/background-tasks-struct",
     "path": "",
-    "rel_path": "api/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-C API-结构体.txt",
+    "rel_path": "api/应用框架/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-C API-结构体.txt",
     "catalog": "Background Tasks Kit（后台任务开发服务）",
     "objectId": "background-tasks-kit-c-api-2",
     "nodeName": "document",
@@ -562,7 +571,8 @@
       "Background",
       "Tasks",
       "Kit",
-      "后台任务开发服务"
+      "后台任务开发服务",
+      "应用框架"
     ]
   },
   "background-tasks-kit-c-api-1": {
@@ -575,7 +585,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/background-tasks-module",
     "path": "",
-    "rel_path": "api/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-C API-模块.txt",
+    "rel_path": "api/应用框架/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-C API-模块.txt",
     "catalog": "Background Tasks Kit（后台任务开发服务）",
     "objectId": "background-tasks-kit-c-api-1",
     "nodeName": "document",
@@ -595,7 +605,8 @@
       "transienttask",
       "Tasks",
       "Kit",
-      "后台任务开发服务"
+      "后台任务开发服务",
+      "应用框架"
     ]
   },
   "background-tasks-kit-c-api": {
@@ -608,7 +619,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/background-tasks-headerfile",
     "path": "",
-    "rel_path": "api/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-C API-头文件.txt",
+    "rel_path": "api/应用框架/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-C API-头文件.txt",
     "catalog": "Background Tasks Kit（后台任务开发服务）",
     "objectId": "background-tasks-kit-c-api",
     "nodeName": "document",
@@ -627,7 +638,8 @@
       "Background",
       "Tasks",
       "Kit",
-      "后台任务开发服务"
+      "后台任务开发服务",
+      "应用框架"
     ]
   },
   "doc-1q717m": {
@@ -685,7 +697,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/background-tasks-arkts-dep",
     "path": "",
-    "rel_path": "api/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-ArkTS API-已停止维护的接口.txt",
+    "rel_path": "api/应用框架/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-ArkTS API-已停止维护的接口.txt",
     "catalog": "Background Tasks Kit（后台任务开发服务）",
     "objectId": "background-tasks-kit-arkts-api",
     "nodeName": "document",
@@ -708,7 +720,8 @@
       "Background",
       "Tasks",
       "Kit",
-      "后台任务开发服务"
+      "后台任务开发服务",
+      "应用框架"
     ]
   },
   "doc-tuaale": {
@@ -764,7 +777,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/background-tasks-arkts-application",
     "path": "",
-    "rel_path": "api/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-ArkTS API-application.txt",
+    "rel_path": "api/应用框架/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-ArkTS API-application.txt",
     "catalog": "Background Tasks Kit（后台任务开发服务）",
     "objectId": "background-tasks-kit-arkts-api-application",
     "nodeName": "document",
@@ -781,7 +794,8 @@
       "Background",
       "Tasks",
       "Kit",
-      "后台任务开发服务"
+      "后台任务开发服务",
+      "应用框架"
     ]
   },
   "background-tasks-kit-arkts-api-1": {
@@ -794,7 +808,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/background-tasks-arkts",
     "path": "",
-    "rel_path": "api/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-ArkTS API.txt",
+    "rel_path": "api/应用框架/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-ArkTS API.txt",
     "catalog": "Background Tasks Kit（后台任务开发服务）",
     "objectId": "background-tasks-kit-arkts-api-1",
     "nodeName": "document",
@@ -817,7 +831,8 @@
       "Background",
       "Tasks",
       "Kit",
-      "后台任务开发服务"
+      "后台任务开发服务",
+      "应用框架"
     ]
   },
   "background-tasks-kit-1": {
@@ -830,7 +845,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/background-tasks-api",
     "path": "",
-    "rel_path": "api/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）.txt",
+    "rel_path": "api/应用框架/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）.txt",
     "catalog": "Background Tasks Kit（后台任务开发服务）",
     "objectId": "background-tasks-kit-1",
     "nodeName": "document",
@@ -845,7 +860,8 @@
       "后台任务",
       "开发服务",
       "错误码",
-      "errcode"
+      "errcode",
+      "应用框架"
     ]
   },
   "background-tasks-kit-2": {
@@ -936,7 +952,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-background-process-manager-h",
     "path": "",
-    "rel_path": "api/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-C API-头文件-background_process_manager.h.txt",
+    "rel_path": "api/应用框架/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-C API-头文件-background_process_manager.h.txt",
     "catalog": "Background Tasks Kit（后台任务开发服务）",
     "objectId": "background-tasks-kit-c-api-background-process-manager-h",
     "nodeName": "document",
@@ -959,6 +975,7 @@
       "Tasks",
       "Kit",
       "后台任务开发服务",
+      "应用框架",
       "头文件"
     ]
   },
@@ -975,7 +992,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-backgroundprocessmanager",
     "path": "",
-    "rel_path": "api/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-C API-模块-BackgroundProcessManager.txt",
+    "rel_path": "api/应用框架/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-C API-模块-BackgroundProcessManager.txt",
     "catalog": "Background Tasks Kit（后台任务开发服务）",
     "objectId": "background-tasks-kit-c-api-backgroundprocessmanager",
     "nodeName": "document",
@@ -998,6 +1015,7 @@
       "Tasks",
       "Kit",
       "后台任务开发服务",
+      "应用框架",
       "模块"
     ]
   },
@@ -1015,7 +1033,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-backgroundprocessmanager",
     "path": "",
-    "rel_path": "api/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-错误码-backgroundProcessManager错误码.txt",
+    "rel_path": "api/应用框架/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-错误码-backgroundProcessManager错误码.txt",
     "catalog": "Background Tasks Kit（后台任务开发服务）",
     "objectId": "background-tasks-kit-backgroundprocessmanager",
     "nodeName": "document",
@@ -1038,7 +1056,8 @@
       "Background",
       "Tasks",
       "Kit",
-      "后台任务开发服务"
+      "后台任务开发服务",
+      "应用框架"
     ]
   },
   "background-tasks-kit-backgroundtaskmanager": {
@@ -1063,7 +1082,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-backgroundtaskmgr",
     "path": "",
-    "rel_path": "api/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-错误码-backgroundTaskManager错误码.txt",
+    "rel_path": "api/应用框架/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-错误码-backgroundTaskManager错误码.txt",
     "catalog": "Background Tasks Kit（后台任务开发服务）",
     "objectId": "background-tasks-kit-backgroundtaskmanager",
     "nodeName": "document",
@@ -1086,7 +1105,8 @@
       "Background",
       "Tasks",
       "Kit",
-      "后台任务开发服务"
+      "后台任务开发服务",
+      "应用框架"
     ]
   },
   "background-tasks-kit-c-api-3": {
@@ -1099,7 +1119,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/background-tasks-c",
     "path": "",
-    "rel_path": "api/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-C API.txt",
+    "rel_path": "api/应用框架/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-C API.txt",
     "catalog": "Background Tasks Kit（后台任务开发服务）",
     "objectId": "background-tasks-kit-c-api-3",
     "nodeName": "document",
@@ -1116,7 +1136,8 @@
       "Background",
       "Tasks",
       "Kit",
-      "后台任务开发服务"
+      "后台任务开发服务",
+      "应用框架"
     ]
   },
   "background-tasks-kit-reminderagentmanager": {
@@ -1135,7 +1156,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-reminderagentmanager",
     "path": "",
-    "rel_path": "api/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-错误码-reminderAgentManager错误码.txt",
+    "rel_path": "api/应用框架/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-错误码-reminderAgentManager错误码.txt",
     "catalog": "Background Tasks Kit（后台任务开发服务）",
     "objectId": "background-tasks-kit-reminderagentmanager",
     "nodeName": "document",
@@ -1158,7 +1179,8 @@
       "Background",
       "Tasks",
       "Kit",
-      "后台任务开发服务"
+      "后台任务开发服务",
+      "应用框架"
     ]
   },
   "background-tasks-kit-c-api-transient-task-api-h": {
@@ -1180,7 +1202,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-transient-task-api-h",
     "path": "",
-    "rel_path": "api/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-C API-头文件-transient_task_api.h.txt",
+    "rel_path": "api/应用框架/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-C API-头文件-transient_task_api.h.txt",
     "catalog": "Background Tasks Kit（后台任务开发服务）",
     "objectId": "background-tasks-kit-c-api-transient-task-api-h",
     "nodeName": "document",
@@ -1203,6 +1225,7 @@
       "Tasks",
       "Kit",
       "后台任务开发服务",
+      "应用框架",
       "头文件"
     ]
   },
@@ -1227,7 +1250,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-transient-task-type-h",
     "path": "",
-    "rel_path": "api/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-C API-头文件-transient_task_type.h.txt",
+    "rel_path": "api/应用框架/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-C API-头文件-transient_task_type.h.txt",
     "catalog": "Background Tasks Kit（后台任务开发服务）",
     "objectId": "background-tasks-kit-c-api-transient-task-type-h",
     "nodeName": "document",
@@ -1251,6 +1274,7 @@
       "Tasks",
       "Kit",
       "后台任务开发服务",
+      "应用框架",
       "头文件"
     ]
   },
@@ -1267,7 +1291,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-transienttask",
     "path": "",
-    "rel_path": "api/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-C API-模块-TransientTask.txt",
+    "rel_path": "api/应用框架/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-C API-模块-TransientTask.txt",
     "catalog": "Background Tasks Kit（后台任务开发服务）",
     "objectId": "background-tasks-kit-c-api-transienttask",
     "nodeName": "document",
@@ -1291,6 +1315,7 @@
       "Tasks",
       "Kit",
       "后台任务开发服务",
+      "应用框架",
       "模块"
     ]
   },
@@ -1308,7 +1333,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-transienttask-transienttask-delaysuspendinfo",
     "path": "",
-    "rel_path": "api/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-C API-结构体-TransientTask_DelaySuspendInfo.txt",
+    "rel_path": "api/应用框架/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-C API-结构体-TransientTask_DelaySuspendInfo.txt",
     "catalog": "Background Tasks Kit（后台任务开发服务）",
     "objectId": "background-tasks-kit-c-api-transienttask-delaysuspendinfo",
     "nodeName": "document",
@@ -1332,6 +1357,7 @@
       "Tasks",
       "Kit",
       "后台任务开发服务",
+      "应用框架",
       "结构体"
     ]
   },
@@ -1349,7 +1375,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-transienttask-transienttask-transienttaskinfo",
     "path": "",
-    "rel_path": "api/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-C API-结构体-TransientTask_TransientTaskInfo.txt",
+    "rel_path": "api/应用框架/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-C API-结构体-TransientTask_TransientTaskInfo.txt",
     "catalog": "Background Tasks Kit（后台任务开发服务）",
     "objectId": "background-tasks-kit-c-api-transienttask-transienttaskinfo",
     "nodeName": "document",
@@ -1373,6 +1399,7 @@
       "Tasks",
       "Kit",
       "后台任务开发服务",
+      "应用框架",
       "结构体"
     ]
   },
@@ -1392,7 +1419,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-workscheduler",
     "path": "",
-    "rel_path": "api/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-错误码-workScheduler错误码.txt",
+    "rel_path": "api/应用框架/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-错误码-workScheduler错误码.txt",
     "catalog": "Background Tasks Kit（后台任务开发服务）",
     "objectId": "background-tasks-kit-workscheduler",
     "nodeName": "document",
@@ -1415,7 +1442,8 @@
       "Background",
       "Tasks",
       "Kit",
-      "后台任务开发服务"
+      "后台任务开发服务",
+      "应用框架"
     ]
   },
   "background-tasks-kit-arkts-api-application-workschedulerexte": {
@@ -1431,7 +1459,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-workschedulerextensioncontext",
     "path": "",
-    "rel_path": "api/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-ArkTS API-application-WorkSchedulerExtensionContext.txt",
+    "rel_path": "api/应用框架/Background Tasks Kit（后台任务开发服务）/Background Tasks Kit（后台任务开发服务）-ArkTS API-application-WorkSchedulerExtensionContext.txt",
     "catalog": "Background Tasks Kit（后台任务开发服务）",
     "objectId": "background-tasks-kit-arkts-api-application-workschedulerexte",
     "nodeName": "document",
@@ -1455,6 +1483,7 @@
       "Tasks",
       "Kit",
       "后台任务开发服务",
+      "应用框架",
       "application"
     ]
   }

@@ -1,0 +1,4 @@
+# [模块](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/connectivity-module)
+
+- **[Bluetooth](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-bluetooth)**
+ - **[Wifi](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-wifi)**

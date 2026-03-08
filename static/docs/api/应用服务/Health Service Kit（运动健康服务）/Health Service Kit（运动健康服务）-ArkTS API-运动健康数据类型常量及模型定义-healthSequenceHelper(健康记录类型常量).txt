@@ -1,0 +1,160 @@
+# [healthSequenceHelper(健康记录类型常量)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-healthsequencehelper)
+
+## 目录
+- [导入模块](#zh-cn_topic_0000001768344397_section4539115425616)
+- [sleepRecord](#section159931437152911)
+  - [常量](#section299320372296)
+  - [Model](#section1599373716293)
+  - [Fields](#section1599483720293)
+  - [DetailFields](#section988513311325)
+- [sleepNapRecord](#section134091127174620)
+  - [常量](#section84091227104612)
+  - [Model](#section04095278466)
+  - [Fields](#section174091927194619)
+  - [DetailFields](#section134101527104617)
+
+本模块提供健康记录数据类型常量及数据模型。
+
+ **起始版本：**5.0.0(12)
+
+ 
+## 导入模块
+PhoneTabletWearable收起自动换行深色代码主题复制
+```
+import { healthStore } from '@kit.HealthServiceKit';
+```
+ 说明此模块为healthStore子模块，需通过healthStore.healthSequenceHelper方式使用。
+
+ 
+## sleepRecord
+PhoneTabletWearable夜间睡眠数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| DATA_TYPE | healthStore.DataType | 夜间睡眠数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.SleepRecord
+
+ 夜间睡眠健康记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.SleepRecord | 夜间睡眠健康记录数据模型。 |
+
+ 
+### Fields
+PhoneTabletWearabletype Fields = healthFields.Sleep
+
+ 夜间睡眠健康记录数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.Sleep | 夜间睡眠健康记录数据字段列表。 |
+
+ 
+### DetailFields
+PhoneTabletWearabletype DetailFields = healthFields.SleepDetail
+
+ 睡眠详情数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.SleepDetail | 睡眠详情数据字段列表。 |
+
+ 
+## sleepNapRecord
+PhoneTabletWearable零星小睡数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| DATA_TYPE | healthStore.DataType | 零星小睡数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.SleepNapRecord
+
+ 零星小睡健康记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.SleepNapRecord | 零星小睡健康记录数据模型。 |
+
+ 
+### Fields
+PhoneTabletWearabletype Fields = healthFields.SleepNap
+
+ 零星小睡健康记录数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.SleepNap | 零星小睡健康记录数据字段列表。 |
+
+ 
+### DetailFields
+PhoneTabletWearabletype DetailFields = healthFields.SleepDetail
+
+ 睡眠详情数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.SleepDetail | 睡眠详情数据字段列表。 |

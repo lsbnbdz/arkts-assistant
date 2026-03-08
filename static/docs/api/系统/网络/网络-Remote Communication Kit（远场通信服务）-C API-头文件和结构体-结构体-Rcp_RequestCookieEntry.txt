@@ -1,0 +1,61 @@
+# [Rcp_RequestCookieEntry](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___request_cookie_entry)
+
+## 目录
+- [概述](#section703647454094053)
+- [汇总](#section1301016899094053)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section2121198375094053)
+  - [key](#a3412ddb3fe8dd53fdfd78cdc64606dde)
+  - [next](#a0ad803719fa8dabb2e92099b956188c6)
+  - [value](#a9107385a3fbbfc9f224e41b62b6840a2)
+
+## 概述
+PhonePC/2in1TabletTVWearable描述请求的所有Cookie键值对。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [RemoteCommunication](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| char * key | 请求Cookie键值对的键。 |
+| char * value | 请求Cookie键值对的值。 |
+| struct Rcp_RequestCookieEntry * next | 链式存储。指向下一个Rcp_RequestCookieEntry的指针。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTVWearable 
+### key
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+char* Rcp_RequestCookieEntry::key
+```
+ **描述**
+
+ 请求Cookie键值对的键。
+
+ 
+### next
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+struct Rcp_RequestCookieEntry* Rcp_RequestCookieEntry::next
+```
+ **描述**
+
+ 链式存储。指向下一个[Rcp_RequestCookieEntry](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___request_cookie_entry)的指针。
+
+ 
+### value
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+char* Rcp_RequestCookieEntry::value
+```
+ **描述**
+
+ 请求Cookie键值对的值。

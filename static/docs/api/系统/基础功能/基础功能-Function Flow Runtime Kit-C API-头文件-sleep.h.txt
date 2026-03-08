@@ -1,0 +1,75 @@
+# [sleep.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-sleep-h)
+
+## 目录
+- [概述](#概述)
+- [汇总](#汇总)
+  - [函数](#函数)
+- [函数说明](#函数说明)
+  - [ffrt_usleep()](#ffrt_usleep)
+  - [ffrt_yield()](#ffrt_yield)
+
+## 概述
+PhonePC/2in1TabletTVWearable声明sleep和yield的C接口。
+
+ **引用文件：** <ffrt/sleep.h>
+
+ **库：** libffrt.z.so
+
+ **系统能力：** SystemCapability.Resourceschedule.Ffrt.Core
+
+ **起始版本：** 10
+
+ **相关模块：** [FFRT](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-ffrt)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 函数
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| FFRT_C_API int ffrt_usleep(uint64_t usec) | 睡眠调用线程固定的时间。 |
+| FFRT_C_API void ffrt_yield(void) | 当前任务主动放权，让其他任务有机会调度执行。 |
+
+ 
+## 函数说明
+PhonePC/2in1TabletTVWearable 
+### ffrt_usleep()
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+FFRT_C_API int ffrt_usleep(uint64_t usec)
+```
+ **描述**
+
+ 睡眠调用线程固定的时间。
+
+ **起始版本：** 10
+
+ **参数：**
+
+ 展开
+| |
+| |
+| |
+| uint64_t usec | 睡眠时间，单位是微秒。 |
+
+ **返回：**
+
+ 展开
+| |
+| |
+| |
+| FFRT_C_API int | 执行成功时返回ffrt_success， 执行失败时返回ffrt_error。 |
+
+ 
+### ffrt_yield()
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+FFRT_C_API void ffrt_yield(void)
+```
+ **描述**
+
+ 当前任务主动放权，让其他任务有机会调度执行。
+
+ **起始版本：** 10

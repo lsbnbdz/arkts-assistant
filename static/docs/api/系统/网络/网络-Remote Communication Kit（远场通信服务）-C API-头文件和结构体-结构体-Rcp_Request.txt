@@ -1,0 +1,133 @@
+# [Rcp_Request](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___request)
+
+## 目录
+- [概述](#section830721494094053)
+- [汇总](#section751791881094053)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section1567531308094053)
+  - [configuration](#ac932aa050c8e51b76783f27a07273b05)
+  - [content](#ae1768fc61b69a42fcc051cc75e5b1267)
+  - [cookies](#a4233d0d064ac2209accfb25a701047c9)
+  - [headers](#a4ebc6011dc454a18c04eca049f8e95cd)
+  - [id](#a63dfa45000ae0a04ad62077593507ae8)
+  - [method](#a7ed7d494ed73e3a6ee9ebc03703424ad)
+  - [requestPrivate](#a1685876d0e7dc370afbded8c9bc028b3)
+  - [transferRange](#a165e2b6e37dc667cd91cb7393544d91b)
+  - [url](#a39a1cc0a1ad666d8d9ad40eec4b52de7)
+
+## 概述
+PhonePC/2in1TabletTVWearable网络请求。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [RemoteCommunication](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| char id [RCP_MAX_REQUEST_ID_LEN] | 每个请求的唯一ID。由系统生成。 |
+| char * url | 请求URL。 |
+| const char * method | 请求方法。默认值为GET。 |
+| Rcp_Headers * headers | 请求标头。 |
+| Rcp_RequestContent * content | 请求体。 |
+| Rcp_Configuration * configuration | 请求配置。请参见Rcp_Configuration。 |
+| Rcp_TransferRange * transferRange | HTTP传输范围。该设置将转换为HTTP Range标头。 |
+| Rcp_RequestCookies * cookies | 请求Cookie。该设置将转换为HTTP Cookie标头。 |
+| void * requestPrivate | 可扩展字段。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTVWearable 
+### configuration
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_Configuration* Rcp_Request::configuration
+```
+ **描述**
+
+ 请求配置。请参见[Rcp_Configuration](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___configuration)。
+
+ 
+### content
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_RequestContent* Rcp_Request::content
+```
+ **描述**
+
+ 请求体。
+
+ 
+### cookies
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_RequestCookies* Rcp_Request::cookies
+```
+ **描述**
+
+ 请求Cookie。该设置将转换为HTTP Cookie标头。
+
+ 
+### headers
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_Headers* Rcp_Request::headers
+```
+ **描述**
+
+ 请求标头。
+
+ 
+### id
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+char Rcp_Request::id[RCP_MAX_REQUEST_ID_LEN]
+```
+ **描述**
+
+ 每个请求的唯一ID。由系统生成。
+
+ 
+### method
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+const char* Rcp_Request::method
+```
+ **描述**
+
+ 请求方法。默认值为GET。
+
+ 
+### requestPrivate
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+void* Rcp_Request::requestPrivate
+```
+ **描述**
+
+ 可扩展字段。
+
+ 
+### transferRange
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_TransferRange* Rcp_Request::transferRange
+```
+ **描述**
+
+ HTTP传输范围。该设置将转换为HTTP Range标头。
+
+ 
+### url
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+char* Rcp_Request::url
+```
+ **描述**
+
+ 请求URL。

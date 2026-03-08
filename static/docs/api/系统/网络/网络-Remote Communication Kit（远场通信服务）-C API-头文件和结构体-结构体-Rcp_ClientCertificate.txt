@@ -1,0 +1,85 @@
+# [Rcp_ClientCertificate](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___client_certificate)
+
+## 目录
+- [概述](#section23844343094052)
+- [汇总](#section1861441681094052)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section429657121094052)
+  - [content](#aa6630a26570a25349dab3e9280f782b9)
+  - [filePath](#a8d7f4b03387823946edd84952772998b)
+  - [key](#ac6d5c955c1cfeefc9a70cf45131ad25f)
+  - [keyPassword](#a05de541cd1c59f9f0bd1305ebc11a56a)
+  - [type](#a50eedad042bd9de8ef3c5dad02af78af)
+
+## 概述
+PhonePC/2in1TabletTVWearable发送到远程服务器的客户端证书，远程服务器将使用它来验证客户端的标识。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [RemoteCommunication](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| char * content | 客户端证书内容。它应采用“PEM”、“DER”或“P12”格式。 |
+| char * filePath | 客户端证书的路径。文件的格式应为“PEM”、“DER”或“P12”格式。 |
+| char * key | 客户端证书私钥的文件名。 |
+| char * keyPassword | 客户端证书私钥的密码。 |
+| Rcp_CertType type | 客户端证书类型。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTVWearable 
+### content
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+char* Rcp_ClientCertificate::content
+```
+ **描述**
+
+ 客户端证书内容。它应采用“PEM”、“DER”或“P12”格式。
+
+ 
+### filePath
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+char* Rcp_ClientCertificate::filePath
+```
+ **描述**
+
+ 客户端证书的路径。文件的格式应为“PEM”、“DER”或“P12”格式。
+
+ 
+### key
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+char* Rcp_ClientCertificate::key
+```
+ **描述**
+
+ 客户端证书私钥的文件名。
+
+ 
+### keyPassword
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+char* Rcp_ClientCertificate::keyPassword
+```
+ **描述**
+
+ 客户端证书私钥的密码。
+
+ 
+### type
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_CertType Rcp_ClientCertificate::type
+```
+ **描述**
+
+ 客户端证书类型。

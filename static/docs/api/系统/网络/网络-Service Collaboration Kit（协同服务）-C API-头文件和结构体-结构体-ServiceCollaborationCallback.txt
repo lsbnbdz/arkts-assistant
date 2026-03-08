@@ -1,0 +1,69 @@
+# [ServiceCollaborationCallback](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/servicecollaborationcallback)
+
+## 目录
+- [概述](#section392783236180804)
+- [汇总](#section333268013180804)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section1756722669180804)
+  - [OnDataCallback](#aee0a1469ca582efe5b81d1cc198f308d)
+  - [OnEvent](#aafe5f2728b365097fc4b13a249581b6c)
+
+## 概述
+PhonePC/2in1TabletTV传给[HMS_ServiceCollaboration_StartCollaboration](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/servicecollaboration-capi-module#section4531193410296)的回调方法。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [ServiceCollaboration](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/servicecollaboration-capi-module)
+
+ 
+## 汇总
+PhonePC/2in1TabletTV 
+### 成员变量
+ PhonePC/2in1TabletTV展开
+| |
+| |
+| |
+| int32_t(* OnEvent )(ServiceCollaborationEventCode code, uint32_t extraCode) | 在跨设备互通服务状态变化时被调用。 |
+| int32_t(* OnDataCallback )(ServiceCollaborationEventCode code, ServiceCollaborationDataType dataType, uint32_t dataSize, char *data) | 在跨设备互通服务数据返回时被调用。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTV 
+### OnDataCallback
+PhonePC/2in1TabletTV收起自动换行深色代码主题复制
+```
+int32_t(* ServiceCollaborationCallback::OnDataCallback) (ServiceCollaborationEventCode code, ServiceCollaborationDataType dataType, uint32_t dataSize, char *data)
+```
+ **描述**
+
+ 在跨设备互通服务数据返回时被调用。
+
+ **参数：**
+
+ 展开
+| |
+| |
+| |
+| ServiceCollaborationEventCode code | 错误码。 |
+| ServiceCollaborationDataType dataType | 回传数据类型。 |
+| uint32_t dataSize | 数据大小，单位是字节。 |
+| char *data | 数据。 |
+
+ 
+### OnEvent
+PhonePC/2in1TabletTV收起自动换行深色代码主题复制
+```
+int32_t(* ServiceCollaborationCallback::OnEvent) (ServiceCollaborationEventCode code, uint32_t extraCode)
+```
+ **描述**
+
+ 在跨设备互通服务状态变化时被调用。
+
+ **参数：**
+
+ 展开
+| |
+| |
+| |
+| ServiceCollaborationEventCode code | 错误码。 |
+| uint32_t extraCode | 拓展状态码，携带错误码未提供的额外信息。 |

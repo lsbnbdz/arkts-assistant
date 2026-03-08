@@ -1,0 +1,97 @@
+# [Rcp_EventsHandler](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___events_handler)
+
+## 目录
+- [概述](#section621300935094052)
+- [汇总](#section1196224989094052)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section1499365010094052)
+  - [onCanceled](#aff228ac71317d81091f0ded4a2164624)
+  - [onDataEnd](#a7dfa76b63d826eddafc885b79813d226)
+  - [onDataReceive](#adbe4eae15e9325332c4723041c956ca1)
+  - [onDownloadProgress](#a9f8a879701150c07720137a61945fcb5)
+  - [onHeaderReceive](#a8431cdb73925f4df6213ec6385b2f0f9)
+  - [onUploadProgress](#a2ed016a986b6813c6983ffbeac55827f)
+
+## 概述
+PhonePC/2in1TabletTVWearable监听不同HTTP事件的回调函数。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [RemoteCommunication](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| Rcp_OnDataReceiveCallback onDataReceive | 收到响应体时的回调函数。 |
+| Rcp_OnProgressCallback onUploadProgress | 上传时调用的回调函数。 |
+| Rcp_OnProgressCallback onDownloadProgress | 下载时调用的回调函数。 |
+| Rcp_OnHeaderReceiveCallback onHeaderReceive | 收到header时的回调函数。 |
+| Rcp_OnVoidCallback onDataEnd | 传输结束时的回调函数。 |
+| Rcp_OnVoidCallback onCanceled | 请求或会话被取消时的回调函数。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTVWearable 
+### onCanceled
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_OnVoidCallback Rcp_EventsHandler::onCanceled
+```
+ **描述**
+
+ 请求或会话被取消时的回调函数。
+
+ 
+### onDataEnd
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_OnVoidCallback Rcp_EventsHandler::onDataEnd
+```
+ **描述**
+
+ 传输结束时的回调函数。
+
+ 
+### onDataReceive
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_OnDataReceiveCallback Rcp_EventsHandler::onDataReceive
+```
+ **描述**
+
+ 收到响应体时的回调函数。
+
+ 
+### onDownloadProgress
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_OnProgressCallback Rcp_EventsHandler::onDownloadProgress
+```
+ **描述**
+
+ 下载时调用的回调函数。
+
+ 
+### onHeaderReceive
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_OnHeaderReceiveCallback Rcp_EventsHandler::onHeaderReceive
+```
+ **描述**
+
+ 收到header时的回调函数。
+
+ 
+### onUploadProgress
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_OnProgressCallback Rcp_EventsHandler::onUploadProgress
+```
+ **描述**
+
+ 上传时调用的回调函数。

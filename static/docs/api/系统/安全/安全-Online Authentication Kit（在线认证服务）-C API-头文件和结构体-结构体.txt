@@ -1,0 +1,27 @@
+# [结构体](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/onlineauthentication_capi_struct)
+
+- **[AuthenticationExtensionsClientOutputs](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_authentication_extensions_client_outputs)**
+ - **[FIDO2_AttestationFormatsArray](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_i_d_o2___attestation_formats_array)**
+ - **[FIDO2_AuthenticatorAttestationResponse](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_i_d_o2___authenticator_attestation_response)**
+ - **[FIDO2_AuthenticatorMetadata](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_i_d_o2___authenticator_metadata)**
+ - **[FIDO2_AuthenticatorMetadataArray](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_i_d_o2___authenticator_metadata_array)**
+ - **[FIDO2_AuthenticatorResponse](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_i_d_o2___authenticator_response)**
+ - **[FIDO2_AuthenticatorSelectionCriteria](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_i_d_o2___authenticator_selection_criteria)**
+ - **[FIDO2_AuthenticatorTransportArray](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_i_d_o2___authenticator_transport_array)**
+ - **[FIDO2_Capability](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_i_d_o2___capability)**
+ - **[FIDO2_CapabilityArray](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_i_d_o2___capability_array)**
+ - **[FIDO2_CredentialCreationOptionArray](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_i_d_o2___credential_creation_option_array)**
+ - **[FIDO2_CredentialCreationOptions](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_i_d_o2___credential_creation_options)**
+ - **[FIDO2_CredentialRequestOptions](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_i_d_o2___credential_request_options)**
+ - **[FIDO2_PublicKeyAssertionCredential](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_i_d_o2___public_key_assertion_credential)**
+ - **[FIDO2_PublicKeyAttestationCredential](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_i_d_o2___public_key_attestation_credential)**
+ - **[FIDO2_PublicKeyCredentialCreationOptions](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_i_d_o2___public_key_credential_creation_options)**
+ - **[FIDO2_PublicKeyCredentialDescriptor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_i_d_o2___public_key_credential_descriptor)**
+ - **[FIDO2_PublicKeyCredentialDescriptorArray](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_i_d_o2___public_key_credential_descriptor_array)**
+ - **[FIDO2_PublicKeyCredentialHintArray](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_i_d_o2___public_key_credential_hint_array)**
+ - **[FIDO2_PublicKeyCredentialParameters](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_i_d_o2___public_key_credential_parameters)**
+ - **[FIDO2_PublicKeyCredentialRequestOptions](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_i_d_o2___public_key_credential_request_options)**
+ - **[FIDO2_PublicKeyCredentialRpEntity](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_i_d_o2___public_key_credential_rp_entity)**
+ - **[FIDO2_PublicKeyCredentialUserEntity](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_i_d_o2___public_key_credential_user_entity)**
+ - **[FIDO2_TokenBinding](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_i_d_o2___token_binding)**
+ - **[Uint8Buff](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_uint8_buff)**

@@ -1,0 +1,18 @@
+# [Location_Info](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-location-location-info)
+
+## 目录
+- [概述](#概述)
+
+收起自动换行深色代码主题复制
+```
+typedef struct Location_Info Location_Info
+```
+ 
+## 概述
+PhonePC/2in1TabletWearable定义位置信息的结构体。
+
+ **起始版本：** 13
+
+ **相关模块：** [Location](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-location)
+
+ **所在头文件：** [oh_location_type.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-location-type-h)

@@ -1,0 +1,73 @@
+# [Rcp_TransferConfiguration](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___transfer_configuration)
+
+## 目录
+- [概述](#section414693732094053)
+- [汇总](#section451853694094053)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section1504087070094053)
+  - [assumesHTTP3Capable](#ae5f8dd2f74c11b558e0aa6761feefbed)
+  - [autoRedirect](#a80c7d591979b9538f847a9d4bd2109a1)
+  - [pathPreference](#a169a9f44d629000efe1e54ea953efcf1)
+  - [timeout](#a9ffa3456e4f7e056eb93887091b7fb04)
+
+## 概述
+PhonePC/2in1TabletTVWearable传输配置。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [RemoteCommunication](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| bool autoRedirect | 是否自动遵循HTTP重定向响应。默认为True。 |
+| Rcp_Timeout timeout | 超时配置。如果未设置此选项，将应用默认超时。 |
+| bool assumesHTTP3Capable | 是否假定目标服务器支持HTTP/3。默认值为false。 |
+| Rcp_PathPreference pathPreference | 请求路径首选项。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTVWearable 
+### assumesHTTP3Capable
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+bool Rcp_TransferConfiguration::assumesHTTP3Capable
+```
+ **描述**
+
+ 是否假定目标服务器支持HTTP/3。默认值为false。
+
+ 
+### autoRedirect
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+bool Rcp_TransferConfiguration::autoRedirect
+```
+ **描述**
+
+ 是否自动遵循HTTP重定向响应。默认为True。
+
+ 
+### pathPreference
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_PathPreference Rcp_TransferConfiguration::pathPreference
+```
+ **描述**
+
+ 请求路径首选项。
+
+ 
+### timeout
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_Timeout Rcp_TransferConfiguration::timeout
+```
+ **描述**
+
+ 超时配置。如果未设置此选项，将应用默认超时。如果已配置，则使用配置的超时时间。

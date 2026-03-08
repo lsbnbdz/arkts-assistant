@@ -1,0 +1,18 @@
+# [DeviceInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-deviceinfo)
+
+## 目录
+- [概述](#概述)
+- [文件汇总](#文件汇总)
+
+## 概述
+PhonePC/2in1TabletTVWearable提供查询终端设备信息的API。
+
+ **起始版本：** 10
+
+ 
+## 文件汇总
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| deviceinfo.h | 声明用于查询终端设备信息的API。 |

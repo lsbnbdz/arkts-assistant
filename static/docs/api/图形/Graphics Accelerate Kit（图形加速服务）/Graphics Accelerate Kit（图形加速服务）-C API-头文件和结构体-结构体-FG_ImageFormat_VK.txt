@@ -1,0 +1,61 @@
+# [FG_ImageFormat_VK](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_g___image_format___v_k)
+
+## 目录
+- [概述](#section1585382231093807)
+- [汇总](#section403227515093807)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section2097657516093807)
+  - [inputColorFormat](#a09363220ef43f5006a2954d6906538f9)
+  - [inputDepthStencilFormat](#a1e1bfcba3b16941fd78ed5ed93af7a49)
+  - [outputColorFormat](#adc87ed6f09c0fd7d07d1b85af3d715bb)
+
+## 概述
+PhoneTablet此结构体描述超帧输入输出图像的格式信息，该接口仅适配Vulkan图形API平台。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [GraphicsAccelerate](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_graphics_accelerate)
+
+ 
+## 汇总
+PhoneTablet 
+### 成员变量
+ PhoneTablet展开
+| |
+| |
+| |
+| VkFormat inputColorFormat | 真实渲染帧颜色缓冲区图像格式。 |
+| VkFormat inputDepthStencilFormat | 深度模板缓冲区图像格式。 |
+| VkFormat outputColorFormat | 预测帧缓冲区图像格式。 |
+
+ 
+## 结构体成员变量说明
+PhoneTablet 
+### inputColorFormat
+PhoneTablet收起自动换行深色代码主题复制
+```
+VkFormat FG_ImageFormat_VK::inputColorFormat
+```
+ **描述**
+
+ 真实渲染帧颜色缓冲区图像格式。
+
+ 
+### inputDepthStencilFormat
+PhoneTablet收起自动换行深色代码主题复制
+```
+VkFormat FG_ImageFormat_VK::inputDepthStencilFormat
+```
+ **描述**
+
+ 深度模板缓冲区图像格式。
+
+ 
+### outputColorFormat
+PhoneTablet收起自动换行深色代码主题复制
+```
+VkFormat FG_ImageFormat_VK::outputColorFormat
+```
+ **描述**
+
+ 预测帧缓冲区图像格式。

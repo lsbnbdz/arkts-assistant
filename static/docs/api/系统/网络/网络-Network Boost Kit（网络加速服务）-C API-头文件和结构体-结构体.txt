@@ -1,0 +1,17 @@
+# [结构体](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/network-boost-c-struct)
+
+- **[HMS_NetworkBoost_HandoverCallback](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/network-boost-c-struct-handover_callback)**
+ - **[NetworkBoost_DataSpeedAction](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/network-boost-c-struct-data_speed_action)**
+ - **[NetworkBoost_HandoverComplete](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/network-boost-c-struct-handover_complete)**
+ - **[NetworkBoost_HandoverStart](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/network-boost-c-struct-handover_start)**
+ - **[NetworkBoost_NetHandle](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/network-boost-c-struct-net_handle)**
+ - **[NetworkBoost_NetworkQos](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/network-boost-c-struct-network_qos)**
+ - **[NetworkBoost_NetworkQosArray](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/network-boost-c-struct-network_qos_array)**
+ - **[NetworkBoost_NetworkScene](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/network-boost-c-struct-network_scene)**
+ - **[NetworkBoost_WeakSignalPrediction](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/network-boost-c-struct-weak_signal_prediction)**
+ - **[NetworkBoost_MultiPathQuota](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/network-boost-c-struct-multipath_quota)**
+ - **[NetworkBoost_MultiPathQuotaInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/network-boost-c-struct-multipath_quotainfo)**
+ - **[NetworkBoost_MultiPathRecommendation](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/network-boost-c-struct-multipath_reco)**
+ - **[NetworkBoost_MultiPathRequestResult](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/network-boost-c-struct-multipath_req_result)**
+ - **[NetworkBoost_MultiPathStateChange](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/network-boost-c-struct-multipath_statechange)**
+ - **[NetworkBoost_SceneDesc](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/network-boost-c-struct-scene_desc)**

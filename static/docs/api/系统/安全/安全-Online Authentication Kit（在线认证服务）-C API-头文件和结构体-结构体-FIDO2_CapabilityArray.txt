@@ -1,0 +1,41 @@
+# [FIDO2_CapabilityArray](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_i_d_o2___capability_array)
+
+## 概述
+PhonePC/2in1Tablet描述能力数组。
+
+ **起始版本：** 6.0.0(20)
+
+ **相关模块：** [FIDO2](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/passkey)
+
+ 
+## 汇总
+PhonePC/2in1Tablet 
+### 成员变量
+ PhonePC/2in1Tablet展开
+| |
+| |
+| |
+| uint32_t number | 能力的数量。 |
+| FIDO2_Capability * capability | 能力的数组。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1Tablet 
+### capability
+PhonePC/2in1Tablet收起自动换行深色代码主题复制
+```
+FIDO2_Capability* FIDO2_CapabilityArray::capability
+```
+ **描述**
+
+ 能力数组。
+
+ 
+### number
+PhonePC/2in1Tablet收起自动换行深色代码主题复制
+```
+uint32_t FIDO2_CapabilityArray::number
+```
+ **描述**
+
+ 能力数组长度。

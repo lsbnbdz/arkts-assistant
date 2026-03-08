@@ -13,7 +13,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.cloudData (端云服务).txt",
+    "rel_path": "api/应用框架/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.cloudData (端云服务).txt",
     "catalog": "ArkData（方舟数据管理）",
     "objectId": "arkdata-arkts-api-ohos-data-clouddata",
     "nodeName": "document",
@@ -34,7 +34,8 @@
       "cloud",
       "支持设备",
       "ArkData",
-      "方舟数据管理"
+      "方舟数据管理",
+      "应用框架"
     ]
   },
   "arkdata-arkts-api-ohos-data-commontype": {
@@ -52,7 +53,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.commonType (数据通用类型).txt",
+    "rel_path": "api/应用框架/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.commonType (数据通用类型).txt",
     "catalog": "ArkData（方舟数据管理）",
     "objectId": "arkdata-arkts-api-ohos-data-commontype",
     "nodeName": "document",
@@ -73,7 +74,8 @@
       "System",
       "Capability",
       "ArkData",
-      "方舟数据管理"
+      "方舟数据管理",
+      "应用框架"
     ]
   },
   "arkdata-arkts-api-ohos-data-dataability-dataability": {
@@ -100,7 +102,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.dataAbility (DataAbility谓词).txt",
+    "rel_path": "api/应用框架/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.dataAbility (DataAbility谓词).txt",
     "catalog": "ArkData（方舟数据管理）",
     "objectId": "arkdata-arkts-api-ohos-data-dataability-dataability",
     "nodeName": "document",
@@ -121,7 +123,8 @@
       "Than",
       "By",
       "ArkData",
-      "方舟数据管理"
+      "方舟数据管理",
+      "应用框架"
     ]
   },
   "arkdata-arkts-api-ohos-data-datashare": {
@@ -148,7 +151,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.dataShare (数据共享).txt",
+    "rel_path": "api/应用框架/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.dataShare (数据共享).txt",
     "catalog": "ArkData（方舟数据管理）",
     "objectId": "arkdata-arkts-api-ohos-data-datashare",
     "nodeName": "document",
@@ -169,7 +172,8 @@
       "service",
       "Change",
       "ArkData",
-      "方舟数据管理"
+      "方舟数据管理",
+      "应用框架"
     ]
   },
   "arkdata-arkts-api-ohos-data-datasharepredicates": {
@@ -190,7 +194,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.dataSharePredicates (数据共享谓词).txt",
+    "rel_path": "api/应用框架/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.dataSharePredicates (数据共享谓词).txt",
     "catalog": "ArkData（方舟数据管理）",
     "objectId": "arkdata-arkts-api-ohos-data-datasharepredicates",
     "nodeName": "document",
@@ -211,7 +215,8 @@
       "and",
       "field",
       "ArkData",
-      "方舟数据管理"
+      "方舟数据管理",
+      "应用框架"
     ]
   },
   "arkdata-arkts-api-ohos-data-distributeddata": {
@@ -238,7 +243,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.distributedData (分布式数据管理).txt",
+    "rel_path": "api/应用框架/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.distributedData (分布式数据管理).txt",
     "catalog": "ArkData（方舟数据管理）",
     "objectId": "arkdata-arkts-api-ohos-data-distributeddata",
     "nodeName": "document",
@@ -259,7 +264,8 @@
       "anager",
       "Security",
       "ArkData",
-      "方舟数据管理"
+      "方舟数据管理",
+      "应用框架"
     ]
   },
   "arkdata-arkts-api": {
@@ -270,7 +276,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-distributed-data",
     "path": "",
-    "rel_path": "api/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_已停止维护的接口.txt",
+    "rel_path": "api/应用框架/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_已停止维护的接口.txt",
     "catalog": "ArkData（方舟数据管理）",
     "objectId": "arkdata-arkts-api",
     "nodeName": "document",
@@ -292,6 +298,7 @@
       "据库",
       "ArkData",
       "方舟数据管理",
+      "应用框架",
       "已停止维护的接口"
     ]
   },
@@ -319,7 +326,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.distributedDataObject (分布式数据对象).txt",
+    "rel_path": "api/应用框架/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.distributedDataObject (分布式数据对象).txt",
     "catalog": "ArkData（方舟数据管理）",
     "objectId": "arkdata-arkts-api-ohos-data-distributeddataobject",
     "nodeName": "document",
@@ -340,7 +347,8 @@
       "Session",
       "Id",
       "ArkData",
-      "方舟数据管理"
+      "方舟数据管理",
+      "应用框架"
     ]
   },
   "arkdata-arkts-api-ohos-data-distributedkvstore": {
@@ -367,7 +375,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.distributedKVStore (分布式键值数据库).txt",
+    "rel_path": "api/应用框架/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.distributedKVStore (分布式键值数据库).txt",
     "catalog": "ArkData（方舟数据管理）",
     "objectId": "arkdata-arkts-api-ohos-data-distributedkvstore",
     "nodeName": "document",
@@ -388,7 +396,8 @@
       "Security",
       "KVM",
       "ArkData",
-      "方舟数据管理"
+      "方舟数据管理",
+      "应用框架"
     ]
   },
   "arkdata-arkts-api-ohos-data-intelligence": {
@@ -415,7 +424,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.intelligence (智慧数据平台).txt",
+    "rel_path": "api/应用框架/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.intelligence (智慧数据平台).txt",
     "catalog": "ArkData（方舟数据管理）",
     "objectId": "arkdata-arkts-api-ohos-data-intelligence",
     "nodeName": "document",
@@ -436,7 +445,8 @@
       "image",
       "Manager",
       "ArkData",
-      "方舟数据管理"
+      "方舟数据管理",
+      "应用框架"
     ]
   },
   "arkdata-arkts-api-ohos-data-preferences": {
@@ -463,7 +473,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.preferences (用户首选项).txt",
+    "rel_path": "api/应用框架/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.preferences (用户首选项).txt",
     "catalog": "ArkData（方舟数据管理）",
     "objectId": "arkdata-arkts-api-ohos-data-preferences",
     "nodeName": "document",
@@ -484,7 +494,8 @@
       "has",
       "flush",
       "ArkData",
-      "方舟数据管理"
+      "方舟数据管理",
+      "应用框架"
     ]
   },
   "arkdata-arkts-api-ohos-data-rdb": {
@@ -511,7 +522,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.rdb (关系型数据库).txt",
+    "rel_path": "api/应用框架/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.rdb (关系型数据库).txt",
     "catalog": "ArkData（方舟数据管理）",
     "objectId": "arkdata-arkts-api-ohos-data-rdb",
     "nodeName": "document",
@@ -532,7 +543,8 @@
       "By",
       "insert",
       "ArkData",
-      "方舟数据管理"
+      "方舟数据管理",
+      "应用框架"
     ]
   },
   "arkdata-arkts-api-ohos-data-sendablepreferences": {
@@ -559,7 +571,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.sendablePreferences (共享用户首选项).txt",
+    "rel_path": "api/应用框架/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.sendablePreferences (共享用户首选项).txt",
     "catalog": "ArkData（方舟数据管理）",
     "objectId": "arkdata-arkts-api-ohos-data-sendablepreferences",
     "nodeName": "document",
@@ -580,7 +592,8 @@
       "delete",
       "Change",
       "ArkData",
-      "方舟数据管理"
+      "方舟数据管理",
+      "应用框架"
     ]
   },
   "arkdata-arkts-api-ohos-data-sendablerelationalstore": {
@@ -607,7 +620,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.sendableRelationalStore (共享关系型数据库).txt",
+    "rel_path": "api/应用框架/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.sendableRelationalStore (共享关系型数据库).txt",
     "catalog": "ArkData（方舟数据管理）",
     "objectId": "arkdata-arkts-api-ohos-data-sendablerelationalstore",
     "nodeName": "document",
@@ -628,7 +641,8 @@
       "Non",
       "Manager",
       "ArkData",
-      "方舟数据管理"
+      "方舟数据管理",
+      "应用框架"
     ]
   },
   "arkdata-arkts-api-ohos-data-storage": {
@@ -655,7 +669,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.storage (轻量级存储).txt",
+    "rel_path": "api/应用框架/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.storage (轻量级存储).txt",
     "catalog": "ArkData（方舟数据管理）",
     "objectId": "arkdata-arkts-api-ohos-data-storage",
     "nodeName": "document",
@@ -676,7 +690,8 @@
       "Manager",
       "key",
       "ArkData",
-      "方舟数据管理"
+      "方舟数据管理",
+      "应用框架"
     ]
   },
   "arkdata-arkts-api-ohos-data-udmfcomponents": {
@@ -694,7 +709,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.UdmfComponents(内容卡片).txt",
+    "rel_path": "api/应用框架/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.UdmfComponents(内容卡片).txt",
     "catalog": "ArkData（方舟数据管理）",
     "objectId": "arkdata-arkts-api-ohos-data-udmfcomponents",
     "nodeName": "document",
@@ -715,7 +730,8 @@
       "content",
       "uniform",
       "ArkData",
-      "方舟数据管理"
+      "方舟数据管理",
+      "应用框架"
     ]
   },
   "arkdata-arkts-api-ohos-data-unifieddatachannel": {
@@ -742,7 +758,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.unifiedDataChannel (标准化数据通路).txt",
+    "rel_path": "api/应用框架/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.unifiedDataChannel (标准化数据通路).txt",
     "catalog": "ArkData（方舟数据管理）",
     "objectId": "arkdata-arkts-api-ohos-data-unifieddatachannel",
     "nodeName": "document",
@@ -763,7 +779,8 @@
       "image",
       "Video",
       "ArkData",
-      "方舟数据管理"
+      "方舟数据管理",
+      "应用框架"
     ]
   },
   "arkdata-arkts-api-ohos-data-uniformdatastruct": {
@@ -785,7 +802,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.uniformDataStruct (标准化数据结构).txt",
+    "rel_path": "api/应用框架/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.uniformDataStruct (标准化数据结构).txt",
     "catalog": "ArkData（方舟数据管理）",
     "objectId": "arkdata-arkts-api-ohos-data-uniformdatastruct",
     "nodeName": "document",
@@ -806,7 +823,8 @@
       "Manager",
       "Plain",
       "ArkData",
-      "方舟数据管理"
+      "方舟数据管理",
+      "应用框架"
     ]
   },
   "arkdata-arkts-api-ohos-data-uniformtypedescriptor": {
@@ -828,7 +846,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.uniformTypeDescriptor (标准化数据定义与描述).txt",
+    "rel_path": "api/应用框架/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.uniformTypeDescriptor (标准化数据定义与描述).txt",
     "catalog": "ArkData（方舟数据管理）",
     "objectId": "arkdata-arkts-api-ohos-data-uniformtypedescriptor",
     "nodeName": "document",
@@ -849,7 +867,8 @@
       "uniform",
       "general",
       "ArkData",
-      "方舟数据管理"
+      "方舟数据管理",
+      "应用框架"
     ]
   },
   "arkdata-arkts-api-ohos-data-valuesbucket": {
@@ -865,7 +884,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.ValuesBucket (数据集).txt",
+    "rel_path": "api/应用框架/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.ValuesBucket (数据集).txt",
     "catalog": "ArkData（方舟数据管理）",
     "objectId": "arkdata-arkts-api-ohos-data-valuesbucket",
     "nodeName": "document",
@@ -886,7 +905,8 @@
       "导入模块",
       "earabletype",
       "ArkData",
-      "方舟数据管理"
+      "方舟数据管理",
+      "应用框架"
     ]
   },
   "arkdata-arkts-api-system-storage": {
@@ -908,7 +928,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@system.storage (数据存储).txt",
+    "rel_path": "api/应用框架/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@system.storage (数据存储).txt",
     "catalog": "ArkData（方舟数据管理）",
     "objectId": "arkdata-arkts-api-system-storage",
     "nodeName": "document",
@@ -929,7 +949,8 @@
       "options",
       "导入模块",
       "ArkData",
-      "方舟数据管理"
+      "方舟数据管理",
+      "应用框架"
     ]
   },
   "doc-98mzu4": {
@@ -1516,7 +1537,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-data-relationalstore",
     "path": "",
-    "rel_path": "api/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.relationalStore (关系型数据库).txt",
+    "rel_path": "api/应用框架/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_@ohos.data.relationalStore (关系型数据库).txt",
     "catalog": "ArkData（方舟数据管理）",
     "objectId": "arkdata-arkts-api-ohos-data-relationalstore",
     "nodeName": "document",
@@ -1538,6 +1559,7 @@
       "Enums",
       "ArkData",
       "方舟数据管理",
+      "应用框架",
       "ohos",
       "relationalStore",
       "关系型数据库"
@@ -2459,7 +2481,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_模块描述.txt",
+    "rel_path": "api/应用框架/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_模块描述.txt",
     "catalog": "ArkData（方舟数据管理）",
     "objectId": "arkdata-arkts-api-1",
     "nodeName": "document",
@@ -2478,7 +2500,8 @@
       "关系型数",
       "据库",
       "RDB",
-      "Result"
+      "Result",
+      "应用框架"
     ]
   },
   "arkdata-2": {
@@ -2609,7 +2632,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_Class (RdbPredicates).txt",
+    "rel_path": "api/应用框架/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_Class (RdbPredicates).txt",
     "catalog": "ArkData（方舟数据管理）",
     "objectId": "arkdata-arkts-api-class-rdbpredicates",
     "nodeName": "document",
@@ -2630,7 +2653,8 @@
       "导入模块",
       "name",
       "ArkData",
-      "方舟数据管理"
+      "方舟数据管理",
+      "应用框架"
     ]
   },
   "e-arkts": {
@@ -2706,7 +2730,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_Enums.txt",
+    "rel_path": "api/应用框架/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_Enums.txt",
     "catalog": "ArkData（方舟数据管理）",
     "objectId": "arkdata-arkts-api-enums",
     "nodeName": "document",
@@ -2727,7 +2751,8 @@
       "Store",
       "AES",
       "ArkData",
-      "方舟数据管理"
+      "方舟数据管理",
+      "应用框架"
     ]
   },
   "arkdata-arkts-api-functions": {
@@ -2753,7 +2778,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_Functions.txt",
+    "rel_path": "api/应用框架/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_Functions.txt",
     "catalog": "ArkData（方舟数据管理）",
     "objectId": "arkdata-arkts-api-functions",
     "nodeName": "document",
@@ -2774,7 +2799,8 @@
       "Sql",
       "Info",
       "ArkData",
-      "方舟数据管理"
+      "方舟数据管理",
+      "应用框架"
     ]
   },
   "arkdata-arkts-api-interface-rdbstore": {
@@ -2801,7 +2827,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_Interface (RdbStore).txt",
+    "rel_path": "api/应用框架/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_Interface (RdbStore).txt",
     "catalog": "ArkData（方舟数据管理）",
     "objectId": "arkdata-arkts-api-interface-rdbstore",
     "nodeName": "document",
@@ -2822,7 +2848,8 @@
       "Tables",
       "setdistributedtables",
       "ArkData",
-      "方舟数据管理"
+      "方舟数据管理",
+      "应用框架"
     ]
   },
   "arkdata-arkts-api-interface-resultset": {
@@ -2849,7 +2876,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_Interface (ResultSet).txt",
+    "rel_path": "api/应用框架/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_Interface (ResultSet).txt",
     "catalog": "ArkData（方舟数据管理）",
     "objectId": "arkdata-arkts-api-interface-resultset",
     "nodeName": "document",
@@ -2870,7 +2897,8 @@
       "number",
       "导入模块",
       "ArkData",
-      "方舟数据管理"
+      "方舟数据管理",
+      "应用框架"
     ]
   },
   "arkdata-arkts-api-interface-transaction": {
@@ -2897,7 +2925,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_Interface (Transaction).txt",
+    "rel_path": "api/应用框架/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_Interface (Transaction).txt",
     "catalog": "ArkData（方舟数据管理）",
     "objectId": "arkdata-arkts-api-interface-transaction",
     "nodeName": "document",
@@ -2918,7 +2946,8 @@
       "开始支持",
       "create",
       "ArkData",
-      "方舟数据管理"
+      "方舟数据管理",
+      "应用框架"
     ]
   },
   "arkdata-arkts-api-interfaces": {
@@ -2943,7 +2972,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_Interfaces (其他).txt",
+    "rel_path": "api/应用框架/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_Interfaces (其他).txt",
     "catalog": "ArkData（方舟数据管理）",
     "objectId": "arkdata-arkts-api-interfaces",
     "nodeName": "document",
@@ -2964,7 +2993,8 @@
       "Relational",
       "Core",
       "ArkData",
-      "方舟数据管理"
+      "方舟数据管理",
+      "应用框架"
     ]
   },
   "arkdata": {
@@ -3052,7 +3082,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-data-resultset",
     "path": "",
-    "rel_path": "api/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_datardb.txt",
+    "rel_path": "api/应用框架/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_datardb.txt",
     "catalog": "ArkData（方舟数据管理）",
     "objectId": "arkdata-arkts-api-datardb",
     "nodeName": "document",
@@ -3066,6 +3096,7 @@
       "resultset",
       "ArkData",
       "方舟数据管理",
+      "应用框架",
       "datardb"
     ]
   },
@@ -3093,7 +3124,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_resultSet (结果集).txt",
+    "rel_path": "api/应用框架/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_resultSet (结果集).txt",
     "catalog": "ArkData（方舟数据管理）",
     "objectId": "arkdata-arkts-api-resultset",
     "nodeName": "document",
@@ -3114,7 +3145,8 @@
       "Result",
       "Rdb",
       "ArkData",
-      "方舟数据管理"
+      "方舟数据管理",
+      "应用框架"
     ]
   },
   "sqlite": {
@@ -3182,7 +3214,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_Types.txt",
+    "rel_path": "api/应用框架/ArkData（方舟数据管理）/ArkData（方舟数据管理）_ArkTS API_Types.txt",
     "catalog": "ArkData（方舟数据管理）",
     "objectId": "arkdata-arkts-api-types",
     "nodeName": "document",
@@ -3203,7 +3235,8 @@
       "System",
       "Capability",
       "ArkData",
-      "方舟数据管理"
+      "方舟数据管理",
+      "应用框架"
     ]
   },
   "utd": {

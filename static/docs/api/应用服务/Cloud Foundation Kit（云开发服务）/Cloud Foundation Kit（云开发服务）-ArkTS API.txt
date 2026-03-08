@@ -1,0 +1,8 @@
+# [ArkTS API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/cloudfoundation-arkts-api)
+
+- **[cloudCommon (公共模块)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/cloudfoundation-cloudcommon)**
+ - **[cloudFunction (云函数模块)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/cloudfoundation-cloudfunction)**
+ - **[cloudStorage (云存储模块)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/cloudfoundation-cloudstorage)**
+ - **[cloudDatabase (云数据库模块)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/cloudfoundation-clouddatabase)**
+ - **[cloudResPrefetch（预加载模块）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/cloudfoundation-cloudresprefetch)**
+ - **[ArkTS错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/cloudfoundation-arkts-error-code)**

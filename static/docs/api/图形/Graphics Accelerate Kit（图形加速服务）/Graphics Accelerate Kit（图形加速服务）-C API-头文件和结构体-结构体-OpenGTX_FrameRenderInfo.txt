@@ -1,0 +1,49 @@
+# [OpenGTX_FrameRenderInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_open_g_t_x___frame_render_info)
+
+## 目录
+- [概述](#section1994013093093807)
+- [汇总](#section2134866446093807)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section1621877901093807)
+  - [mainCameraPosition](#aa3ca65cc999276260b31db3a4a5ec477)
+  - [mainCameraRotate](#a089fb1579868141b741bcd6ee06b8f0b)
+
+## 概述
+PhoneTablet此结构体描述帧渲染信息，游戏应用获取到帧属性后传递此参数。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [GraphicsAccelerate](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_graphics_accelerate)
+
+ 
+## 汇总
+PhoneTablet 
+### 成员变量
+ PhoneTablet展开
+| |
+| |
+| |
+| OpenGTX_Vector3 mainCameraPosition | 主摄像头的位置。x, y, z的取值范围[-360,360]。 |
+| OpenGTX_Vector3 mainCameraRotate | 主摄像头的转动，包括偏航、俯仰、侧滚。 x, y, z的取值范围[-360,360]。 |
+
+ 
+## 结构体成员变量说明
+PhoneTablet 
+### mainCameraPosition
+PhoneTablet收起自动换行深色代码主题复制
+```
+OpenGTX_Vector3 OpenGTX_FrameRenderInfo::mainCameraPosition
+```
+ **描述**
+
+ 主摄像头的位置。
+
+ 
+### mainCameraRotate
+PhoneTablet收起自动换行深色代码主题复制
+```
+OpenGTX_Vector3 OpenGTX_FrameRenderInfo::mainCameraRotate
+```
+ **描述**
+
+ 主摄像头的转动，包括偏航、俯仰、侧滚。 x, y, z的取值范围[-360,360]。

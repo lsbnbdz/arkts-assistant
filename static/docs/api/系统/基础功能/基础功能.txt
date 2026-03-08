@@ -1,0 +1,9 @@
+# [基础功能](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/system-basicfun-api)
+
+- **[Basic Services Kit（基础服务）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/basic-services-api)**
+ - **[Desktop Extension Kit（桌面拓展服务）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/status-bar-extension-api)**
+ - **[FAST Kit（算法加速服务）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/fast-api)**
+ - **[Function Flow Runtime Kit](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/function-flow-runtime-api)**
+ - **[Input Kit（多模输入服务）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/input-api)**
+ - **[MDM Kit（企业设备管理服务）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/mdm-api)**
+ - **[Kernel Enhance Kit（内核增强能力）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/kernel-api)**

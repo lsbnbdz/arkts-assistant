@@ -1,0 +1,4 @@
+# [账单](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-bill)
+
+- **[查询对账单](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-query-trade-bill)**
+ - **[查询结算账单](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-query-settle-bill)**

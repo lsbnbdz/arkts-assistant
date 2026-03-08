@@ -1,0 +1,18 @@
+# [OH_DisplaySoloist](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-nativedisplaysoloist-oh-displaysoloist)
+
+## 目录
+- [概述](#概述)
+
+收起自动换行深色代码主题复制
+```
+typedef struct OH_DisplaySoloist OH_DisplaySoloist
+```
+ 
+## 概述
+PhonePC/2in1TabletTVWearable提供OH_DisplaySoloist结构体声明。
+
+ **起始版本：** 12
+
+ **相关模块：** [NativeDisplaySoloist](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-nativedisplaysoloist)
+
+ **所在头文件：** [native_display_soloist.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-native-display-soloist-h)

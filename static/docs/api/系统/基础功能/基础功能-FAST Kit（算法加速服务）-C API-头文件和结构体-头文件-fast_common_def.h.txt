@@ -1,0 +1,36 @@
+# [fast_common_def.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/fast-kit-fast-common-def-8h)
+
+## 目录
+- [概述](#section1031975592210229)
+- [汇总](#section2031973851210229)
+  - [类型定义](#typedef-members)
+  - [枚举](#enum-members)
+
+## 概述
+PhonePC/2in1TabletFAST Kit的通用定义。
+
+ **引用文件：**<FASTKit/fast_common_def.h>
+
+ **系统能力：** SystemCapability.FAST.Core
+
+ **起始版本：** 6.0.2(22)
+
+ **相关模块：** [FAST](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/fast-kit-fast)
+
+ 
+## 汇总
+PhonePC/2in1Tablet 
+### 类型定义
+ PhonePC/2in1Tablet展开
+| |
+| |
+| |
+| typedef enum FAST_ErrorCode FAST_ErrorCode | FAST Kit的错误码类型。 |
+
+ 
+### 枚举
+ PhonePC/2in1Tablet展开
+| |
+| |
+| |
+| FAST_ErrorCode { FAST_ERROR_CODE_SUCCESS = 1023100000, FAST_ERROR_CODE_FAIL = 1023100001, FAST_ERROR_CODE_ILLEGAL_INPUT = 1023100002, FAST_ERROR_CODE_INVALID_PTR = 1023100003, FAST_ERROR_CODE_OOM = 1023199001 } | FAST Kit的错误码。 |

@@ -1,0 +1,61 @@
+# [OpenGTX_Vector3](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_open_g_t_x___vector3)
+
+## 目录
+- [概述](#section519287832093807)
+- [汇总](#section1080212760093807)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section971616601093807)
+  - [x](#ad162fd470794e0110bf6bbe11d68ca9e)
+  - [y](#a5d61b6ad9a269a64de13a4dcda3f357e)
+  - [z](#a3f806ed30817681dda0f4aa3881eebe5)
+
+## 概述
+PhoneTablet此结构体描述OpenGTX三维向量。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [GraphicsAccelerate](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_graphics_accelerate)
+
+ 
+## 汇总
+PhoneTablet 
+### 成员变量
+ PhoneTablet展开
+| |
+| |
+| |
+| float x | 三维向量的X轴数据。 取值范围：[-360, 360]。 |
+| float y | 三维向量的Y轴数据。 取值范围：[-360, 360]。 |
+| float z | 三维向量的Z轴数据。 取值范围：[-360, 360]。 |
+
+ 
+## 结构体成员变量说明
+PhoneTablet 
+### x
+PhoneTablet收起自动换行深色代码主题复制
+```
+float OpenGTX_Vector3::x
+```
+ **描述**
+
+ 三维向量的X轴数据。
+
+ 
+### y
+PhoneTablet收起自动换行深色代码主题复制
+```
+float OpenGTX_Vector3::y
+```
+ **描述**
+
+ 三维向量的Y轴数据。
+
+ 
+### z
+PhoneTablet收起自动换行深色代码主题复制
+```
+float OpenGTX_Vector3::z
+```
+ **描述**
+
+ 三维向量的Z轴数据。

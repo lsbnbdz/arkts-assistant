@@ -1,8 +1,8 @@
 {
   "version": "2.0",
-  "generatedAt": "2026-03-04T02:56:47.357Z",
-  "totalDocs": 5271,
-  "totalKeywords": 16663,
+  "generatedAt": "2026-03-08T17:45:32.604Z",
+  "totalDocs": 7211,
+  "totalKeywords": 19506,
   "catalogs": [
     {
       "name": "应用服务",
@@ -11,8 +11,13 @@
     },
     {
       "name": "CANN Kit（CANN 服务）",
-      "count": 837,
+      "count": 852,
       "file": "catalog_CANN_Kit（CANN_服务）.json"
+    },
+    {
+      "name": "安全",
+      "count": 615,
+      "file": "catalog_安全.json"
     },
     {
       "name": "ArkUI（方舟UI框架）",
@@ -20,9 +25,19 @@
       "file": "catalog_ArkUI（方舟UI框架）.json"
     },
     {
-      "name": "安全",
-      "count": 373,
-      "file": "catalog_安全.json"
+      "name": "网络",
+      "count": 288,
+      "file": "catalog_网络.json"
+    },
+    {
+      "name": "基础功能",
+      "count": 229,
+      "file": "catalog_基础功能.json"
+    },
+    {
+      "name": "ArkGraphics 2D（方舟2D图形服务）",
+      "count": 205,
+      "file": "catalog_ArkGraphics_2D（方舟2D图形服务）.json"
     },
     {
       "name": "图形",
@@ -43,6 +58,16 @@
       "name": "Ability Kit（程序框架服务）",
       "count": 155,
       "file": "catalog_Ability_Kit（程序框架服务）.json"
+    },
+    {
+      "name": "硬件",
+      "count": 144,
+      "file": "catalog_硬件.json"
+    },
+    {
+      "name": "Share Kit（分享服务）",
+      "count": 139,
+      "file": "catalog_Share_Kit（分享服务）.json"
     },
     {
       "name": "NDK开发",
@@ -70,6 +95,11 @@
       "file": "catalog_ArkData（方舟数据管理）.json"
     },
     {
+      "name": "调测调优",
+      "count": 78,
+      "file": "catalog_调测调优.json"
+    },
+    {
       "name": "Localization Kit（本地化开发服务）",
       "count": 76,
       "file": "catalog_Localization_Kit（本地化开发服务）.json"
@@ -78,6 +108,11 @@
       "name": "UI开发 (兼容JS的类Web开发范式)",
       "count": 74,
       "file": "catalog_UI开发_(兼容JS的类Web开发范式).json"
+    },
+    {
+      "name": "Map Kit（地图服务）",
+      "count": 68,
+      "file": "catalog_Map_Kit（地图服务）.json"
     },
     {
       "name": "Camera Kit（相机服务）",
@@ -130,6 +165,21 @@
       "file": "catalog_Media_Kit（媒体服务）.json"
     },
     {
+      "name": "XEngine Kit（GPU加速引擎服务）",
+      "count": 44,
+      "file": "catalog_XEngine_Kit（GPU加速引擎服务）.json"
+    },
+    {
+      "name": "Account Kit（华为账号服务）",
+      "count": 42,
+      "file": "catalog_Account_Kit（华为账号服务）.json"
+    },
+    {
+      "name": "Graphics Accelerate Kit（图形加速服务）",
+      "count": 41,
+      "file": "catalog_Graphics_Accelerate_Kit（图形加速服务）.json"
+    },
+    {
       "name": "Background Tasks Kit（后台任务开发服务）",
       "count": 36,
       "file": "catalog_Background_Tasks_Kit（后台任务开发服务）.json"
@@ -170,6 +220,11 @@
       "file": "catalog_AVCodec_Kit（音视频编解码服务）.json"
     },
     {
+      "name": "Push Kit（推送服务）",
+      "count": 30,
+      "file": "catalog_Push_Kit（推送服务）.json"
+    },
+    {
       "name": "基础入门",
       "count": 29,
       "file": "catalog_基础入门.json"
@@ -185,14 +240,29 @@
       "file": "catalog_Data_Augmentation_Kit（数据增强服务）.json"
     },
     {
+      "name": "Notification Kit（用户通知服务）",
+      "count": 28,
+      "file": "catalog_Notification_Kit（用户通知服务）.json"
+    },
+    {
       "name": "使用弹窗",
       "count": 26,
       "file": "catalog_使用弹窗.json"
     },
     {
+      "name": "IAP Kit（应用内支付服务）",
+      "count": 26,
+      "file": "catalog_IAP_Kit（应用内支付服务）.json"
+    },
+    {
       "name": "使用动画",
       "count": 25,
       "file": "catalog_使用动画.json"
+    },
+    {
+      "name": "MindSpore Lite Kit（昇思推理框架服务）",
+      "count": 25,
+      "file": "catalog_MindSpore_Lite_Kit（昇思推理框架服务）.json"
     },
     {
       "name": "窗口管理",
@@ -230,14 +300,39 @@
       "file": "catalog_硬件-Pen_Kit（手写笔服务）.json"
     },
     {
+      "name": "Location Kit（位置服务）",
+      "count": 20,
+      "file": "catalog_Location_Kit（位置服务）.json"
+    },
+    {
       "name": "Media Library Kit（媒体文件管理服务）",
       "count": 20,
       "file": "catalog_Media_Library_Kit（媒体文件管理服务）.json"
     },
     {
+      "name": "AppGallery Kit（应用市场服务）",
+      "count": 19,
+      "file": "catalog_AppGallery_Kit（应用市场服务）.json"
+    },
+    {
+      "name": "Game Service Kit（游戏服务）",
+      "count": 19,
+      "file": "catalog_Game_Service_Kit（游戏服务）.json"
+    },
+    {
+      "name": "Neural Network Runtime Kit（Neural Network运行时服务）",
+      "count": 19,
+      "file": "catalog_Neural_Network_Runtime_Kit（Neural_Network运行时服务）.json"
+    },
+    {
       "name": "使用自定义能力",
       "count": 18,
       "file": "catalog_使用自定义能力.json"
+    },
+    {
+      "name": "AR Engine（AR引擎服务）",
+      "count": 18,
+      "file": "catalog_AR_Engine（AR引擎服务）.json"
     },
     {
       "name": "添加交互响应",
@@ -265,14 +360,39 @@
       "file": "catalog_硬件-Driver_Development_Kit（驱动开发服务）.json"
     },
     {
+      "name": "Game Controller Kit（游戏控制器服务）",
+      "count": 12,
+      "file": "catalog_Game_Controller_Kit（游戏控制器服务）.json"
+    },
+    {
+      "name": "Health Service Kit（运动健康服务）",
+      "count": 12,
+      "file": "catalog_Health_Service_Kit（运动健康服务）.json"
+    },
+    {
       "name": "NearLink Kit（星闪服务）",
       "count": 12,
       "file": "catalog_NearLink_Kit（星闪服务）.json"
     },
     {
+      "name": "Preview Kit（文件预览服务）",
+      "count": 12,
+      "file": "catalog_Preview_Kit（文件预览服务）.json"
+    },
+    {
       "name": "硬件-Car Kit（车服务）",
       "count": 11,
       "file": "catalog_硬件-Car_Kit（车服务）.json"
+    },
+    {
+      "name": "Ads Kit（广告服务）",
+      "count": 11,
+      "file": "catalog_Ads_Kit（广告服务）.json"
+    },
+    {
+      "name": "Scenario Fusion Kit（融合场景服务）",
+      "count": 11,
+      "file": "catalog_Scenario_Fusion_Kit（融合场景服务）.json"
     },
     {
       "name": "Service Collaboration Kit（协同服务）",
@@ -300,6 +420,31 @@
       "file": "catalog_ArkTS基础.json"
     },
     {
+      "name": "Core Vision Kit（基础视觉服务）",
+      "count": 10,
+      "file": "catalog_Core_Vision_Kit（基础视觉服务）.json"
+    },
+    {
+      "name": "Spatial Recon Kit（空间建模服务）",
+      "count": 10,
+      "file": "catalog_Spatial_Recon_Kit（空间建模服务）.json"
+    },
+    {
+      "name": "Wallet Kit（钱包服务）",
+      "count": 10,
+      "file": "catalog_Wallet_Kit（钱包服务）.json"
+    },
+    {
+      "name": "ArkGraphics 3D（方舟3D图形）",
+      "count": 9,
+      "file": "catalog_ArkGraphics_3D（方舟3D图形）.json"
+    },
+    {
+      "name": "Speech Kit（场景化语音服务）",
+      "count": 9,
+      "file": "catalog_Speech_Kit（场景化语音服务）.json"
+    },
+    {
       "name": "UI开发调试调优",
       "count": 9,
       "file": "catalog_UI开发调试调优.json"
@@ -320,6 +465,21 @@
       "file": "catalog_学习UI范式渲染控制.json"
     },
     {
+      "name": "Cloud Foundation Kit（云开发服务）",
+      "count": 8,
+      "file": "catalog_Cloud_Foundation_Kit（云开发服务）.json"
+    },
+    {
+      "name": "Intents Kit（意图框架服务）",
+      "count": 8,
+      "file": "catalog_Intents_Kit（意图框架服务）.json"
+    },
+    {
+      "name": "Vision Kit（场景化视觉服务）",
+      "count": 8,
+      "file": "catalog_Vision_Kit（场景化视觉服务）.json"
+    },
+    {
       "name": "硬件-Multimodal Awareness Kit（多模态融合感知服务）",
       "count": 7,
       "file": "catalog_硬件-Multimodal_Awareness_Kit（多模态融合感知服务）.json"
@@ -335,6 +495,21 @@
       "file": "catalog_Input_Kit（多模输入服务）.json"
     },
     {
+      "name": "PDF Kit（PDF服务）",
+      "count": 7,
+      "file": "catalog_PDF_Kit（PDF服务）.json"
+    },
+    {
+      "name": "Reader Kit（阅读服务）",
+      "count": 7,
+      "file": "catalog_Reader_Kit（阅读服务）.json"
+    },
+    {
+      "name": "Screen Time Guard Kit（屏幕时间守护服务）",
+      "count": 7,
+      "file": "catalog_Screen_Time_Guard_Kit（屏幕时间守护服务）.json"
+    },
+    {
       "name": "表单选择",
       "count": 6,
       "file": "catalog_表单选择.json"
@@ -343,6 +518,11 @@
       "name": "列表与网格",
       "count": 6,
       "file": "catalog_列表与网格.json"
+    },
+    {
+      "name": "Call Service Kit（通话服务）",
+      "count": 6,
+      "file": "catalog_Call_Service_Kit（通话服务）.json"
     },
     {
       "name": "Distributed Service Kit（分布式管理服务）",
@@ -355,6 +535,16 @@
       "file": "catalog_DRM_Kit（数字版权保护服务）.json"
     },
     {
+      "name": "Live View Kit（实况窗服务）",
+      "count": 6,
+      "file": "catalog_Live_View_Kit（实况窗服务）.json"
+    },
+    {
+      "name": "Natural Language Kit（自然语言理解服务）",
+      "count": 6,
+      "file": "catalog_Natural_Language_Kit（自然语言理解服务）.json"
+    },
+    {
       "name": "媒体展示",
       "count": 5,
       "file": "catalog_媒体展示.json"
@@ -363,6 +553,26 @@
       "name": "设置组件导航和页面路由",
       "count": 5,
       "file": "catalog_设置组件导航和页面路由.json"
+    },
+    {
+      "name": "Contacts Kit（联系人服务）",
+      "count": 5,
+      "file": "catalog_Contacts_Kit（联系人服务）.json"
+    },
+    {
+      "name": "Core Speech Kit（基础语音服务）",
+      "count": 5,
+      "file": "catalog_Core_Speech_Kit（基础语音服务）.json"
+    },
+    {
+      "name": "Enterprise Space Kit（企业数字空间服务）",
+      "count": 5,
+      "file": "catalog_Enterprise_Space_Kit（企业数字空间服务）.json"
+    },
+    {
+      "name": "File Manager Service Kit（文件管理服务）",
+      "count": 5,
+      "file": "catalog_File_Manager_Service_Kit（文件管理服务）.json"
     },
     {
       "name": "MDM Kit（企业设备管理服务）",
@@ -385,6 +595,11 @@
       "file": "catalog_屏幕管理.json"
     },
     {
+      "name": "Agent Framework Kit（智能体框架服务）",
+      "count": 4,
+      "file": "catalog_Agent_Framework_Kit（智能体框架服务）.json"
+    },
+    {
       "name": "Desktop Extension Kit（桌面拓展服务）",
       "count": 4,
       "file": "catalog_Desktop_Extension_Kit（桌面拓展服务）.json"
@@ -398,6 +613,11 @@
       "name": "Telephony Kit（蜂窝通信服务）",
       "count": 4,
       "file": "catalog_Telephony_Kit（蜂窝通信服务）.json"
+    },
+    {
+      "name": "Weather Service Kit（天气服务）",
+      "count": 4,
+      "file": "catalog_Weather_Service_Kit（天气服务）.json"
     },
     {
       "name": "添加组件",
@@ -425,6 +645,16 @@
       "file": "catalog_API参考概述.json"
     },
     {
+      "name": "App Linking Kit（应用链接服务）",
+      "count": 3,
+      "file": "catalog_App_Linking_Kit（应用链接服务）.json"
+    },
+    {
+      "name": "Calendar Kit（日历服务）",
+      "count": 3,
+      "file": "catalog_Calendar_Kit（日历服务）.json"
+    },
+    {
       "name": "Ringtone Kit（铃声服务）",
       "count": 3,
       "file": "catalog_Ringtone_Kit（铃声服务）.json"
@@ -448,16 +678,6 @@
       "name": "Test Kit（应用测试服务）",
       "count": 2,
       "file": "catalog_Test_Kit（应用测试服务）.json"
-    },
-    {
-      "name": "调测调优",
-      "count": 1,
-      "file": "catalog_调测调优.json"
-    },
-    {
-      "name": "硬件",
-      "count": 1,
-      "file": "catalog_硬件.json"
     }
   ]
 }

@@ -1,0 +1,18 @@
+# [NativeFence](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-nativefence)
+
+## 目录
+- [概述](#概述)
+- [文件汇总](#文件汇总)
+
+## 概述
+PhonePC/2in1TabletTVWearable提供NativeFence功能，通过提供的接口，可以实现对fenceFd阻塞指定时间、永久阻塞、关闭和检查fenceFd是否有效等操作。
+
+ **起始版本：** 20
+
+ 
+## 文件汇总
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| native_fence.h | 定义获取和使用NativeFence的相关函数。 |

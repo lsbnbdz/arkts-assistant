@@ -1,0 +1,14 @@
+# [CryptoSignatureApi](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-cryptosignatureapi)
+
+## 概述
+PhonePC/2in1TabletTVWearable为应用提供验签接口。
+
+ **起始版本：** 12
+
+ 
+## 文件汇总
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| crypto_signature.h | 定义验签接口。 |

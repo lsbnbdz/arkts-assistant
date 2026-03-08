@@ -1,0 +1,3 @@
+# [Function Flow Runtime Kit](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/function-flow-runtime-api)
+
+- **[C API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/function-flow-runtime-c)**

@@ -1,0 +1,18 @@
+# [OH_AI_AllocatorHandle](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-mindspore-oh-ai-allocatorhandle)
+
+## 目录
+- [概述](#概述)
+
+收起自动换行深色代码主题复制
+```
+typedef void *OH_AI_AllocatorHandle
+```
+ 
+## 概述
+PhonePC/2in1TabletTV指向内存分配器对象句柄。
+
+ **起始版本：** 12
+
+ **相关模块：** [MindSpore](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-mindspore)
+
+ **所在头文件：** [tensor.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-tensor-h)

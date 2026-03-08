@@ -1,0 +1,49 @@
+# [NetworkBoost_MultiPathQuotaInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/network-boost-c-struct-multipath_quotainfo)
+
+## 目录
+- [概述](#section140951652218)
+- [汇总](#section7125204252218)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section862772612417)
+- [count](#section159871228122717)
+- [duration](#section2054235172714)
+
+## 概述
+PhonePC/2in1Tablet多网配额信息，包含配额次数信息和时长信息。
+
+ **起始版本：** 6.0.2(22)
+
+ **相关模块：** [NetworkBoost](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/network-boost-c-overview)
+
+ 
+## 汇总
+PhonePC/2in1Tablet 
+### 成员变量
+ PhonePC/2in1Tablet展开
+| |
+| |
+| |
+| uint16_t count | 配额次数信息。 |
+| uint16_t duration | 配额时长信息，单位为s。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1Tablet 
+## count
+PhonePC/2in1Tablet收起自动换行深色代码主题复制
+```
+uint16_t NetworkBoost_MultiPathQuotaInfo::count
+```
+ **描述**
+
+ 配额次数信息。
+
+ 
+## duration
+PhonePC/2in1Tablet收起自动换行深色代码主题复制
+```
+uint16_t NetworkBoost_MultiPathQuotaInfo::duration
+```
+ **描述**
+
+ 配额时长信息，单位为s。

@@ -1,0 +1,7 @@
+# [头文件](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/game-controller-headerfile)
+
+- **[game_controller_type.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-game-controller-type)**
+ - **[game_device.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-game-device)**
+ - **[game_device_event.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-game-device-event)**
+ - **[game_pad.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-game-pad)**
+ - **[game_pad_event.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-game-pad-event)**

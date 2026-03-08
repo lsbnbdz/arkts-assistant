@@ -1,0 +1,9 @@
+# [硬件](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/system-hardware-api)
+
+- **[Car Kit（车服务）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/car-api)**
+ - **[Driver Development Kit（驱动开发服务）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/driver-development-api)**
+ - **[Multimodal Awareness Kit（多模态融合感知服务）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/multimodal-awareness-api)**
+ - **[Pen Kit（手写笔服务）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/pen-api)**
+ - **[Sensor Service Kit（传感器服务）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/sensor-service-api)**
+ - **[Mechanic Kit（机械设备管理服务）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/mechanic-kit-api)**
+ - **[Wear Engine Kit（穿戴服务）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/wear-engine-api)**

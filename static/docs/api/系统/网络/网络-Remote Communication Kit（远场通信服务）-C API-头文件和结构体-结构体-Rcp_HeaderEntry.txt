@@ -1,0 +1,61 @@
+# [Rcp_HeaderEntry](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___header_entry)
+
+## 目录
+- [概述](#section1355677860094052)
+- [汇总](#section2014159294094052)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section1831599207094052)
+  - [key](#a5fe5651c6fb34ca1c58f9ef27f8b3236)
+  - [next](#a9f821c0572ebb0e1ad391a13b6db3d4c)
+  - [value](#a3535a6d660132530e59c62d651648455)
+
+## 概述
+PhonePC/2in1TabletTVWearable请求或响应的标头的所有键值对。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [RemoteCommunication](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| char * key | 键。如果用户希望使用自定义的content-type覆盖系统原有的content-type，键必须使用小写的“content-type”。 |
+| Rcp_HeaderValue * value | 值。 |
+| struct Rcp_HeaderEntry * next | 链式存储。指向下一个键值对Rcp_HeaderEntry。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTVWearable 
+### key
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+char* Rcp_HeaderEntry::key
+```
+ **描述**
+
+ 键。如果用户希望使用自定义的content-type覆盖系统原有的content-type，键必须使用小写的“content-type”。
+
+ 
+### next
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+struct Rcp_HeaderEntry* Rcp_HeaderEntry::next
+```
+ **描述**
+
+ 链式存储。指向下一个键值对[Rcp_HeaderEntry](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___header_entry)。
+
+ 
+### value
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_HeaderValue* Rcp_HeaderEntry::value
+```
+ **描述**
+
+ 标头键值对的值。

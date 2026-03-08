@@ -1,0 +1,181 @@
+# [Rcp_ResponseCookies](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___response_cookies)
+
+## 目录
+- [概述](#section1933485303094053)
+- [汇总](#section1408403371094053)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section1724873582094053)
+  - [cookieAttributes](#a355c49aca4e4fe1bc799e83e115c60bf)
+  - [domain](#a6f836af033fc293b012d49070c15dbd0)
+  - [expires](#ac6870a218b3c8cf7f70d4666e1a9f9ad)
+  - [httpOnly](#a9b26fb82d3e441c63128bf1e88c6ce5c)
+  - [maxAge](#aa3607ffbf45b1d9fb297d826df3b250a)
+  - [name](#a4fb5e327e05b807620387ee2500d314d)
+  - [next](#aed191dfba2a7e291b08df92f48be033f)
+  - [originString](#a29a4b1bfb8eefa5accf5b2844524a80b)
+  - [path](#a56c12937ae44e3ecb7d6c85e2d2ded03)
+  - [rawSize](#a395f93dbd2c0f272495ebcc2fb8aeae5)
+  - [sameSite](#ad4cb031c71dacc43b4deafbbe2c8e5ae)
+  - [secure](#a81a2dd49c05c77313928d7843c49950b)
+  - [value](#a7fb6c2177d99ffae4f13f411352196b2)
+
+## 概述
+PhonePC/2in1TabletTVWearable响应Cookie。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [RemoteCommunication](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| char * name | 响应Cookie名称。 |
+| char * value | 响应Cookie值。 |
+| char * domain | 响应Cookie域属性。 |
+| char * path | 响应Cookie路径属性。 |
+| char * expires | 响应Cookie过期属性。 |
+| uint64_t maxAge | 响应Cookie maxAge属性。 |
+| bool secure | 响应Cookie安全属性。 |
+| bool httpOnly | 响应Cookie httpOnly属性。 |
+| char * sameSite | 响应Cookie sameSite属性。 |
+| uint64_t rawSize | 此响应Cookie的原始大小。 |
+| char * originString | 原始字符串。 |
+| Rcp_CookieAttributes * cookieAttributes | 响应Cookie中的所有属性。 |
+| struct Rcp_ResponseCookies * next | 链式存储。指向下一个Rcp_ResponseCookies的指针。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTVWearable 
+### cookieAttributes
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_CookieAttributes* Rcp_ResponseCookies::cookieAttributes
+```
+ **描述**
+
+ 响应Cookie中的所有属性。
+
+ 
+### domain
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+char* Rcp_ResponseCookies::domain
+```
+ **描述**
+
+ 响应Cookie域属性。
+
+ 
+### expires
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+char* Rcp_ResponseCookies::expires
+```
+ **描述**
+
+ 响应Cookie过期属性。
+
+ 
+### httpOnly
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+bool Rcp_ResponseCookies::httpOnly
+```
+ **描述**
+
+ 响应Cookie httpOnly属性。
+
+ 
+### maxAge
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+uint64_t Rcp_ResponseCookies::maxAge
+```
+ **描述**
+
+ 响应Cookie maxAge属性。
+
+ 
+### name
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+char* Rcp_ResponseCookies::name
+```
+ **描述**
+
+ 响应Cookie名称。
+
+ 
+### next
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+struct Rcp_ResponseCookies* Rcp_ResponseCookies::next
+```
+ **描述**
+
+ 链式存储。指向下一个[Rcp_ResponseCookies](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___response_cookies)的指针。
+
+ 
+### originString
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+char* Rcp_ResponseCookies::originString
+```
+ **描述**
+
+ 原始字符串。
+
+ 
+### path
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+char* Rcp_ResponseCookies::path
+```
+ **描述**
+
+ 响应Cookie路径属性。
+
+ 
+### rawSize
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+uint64_t Rcp_ResponseCookies::rawSize
+```
+ **描述**
+
+ 此响应Cookie的原始大小。
+
+ 
+### sameSite
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+char* Rcp_ResponseCookies::sameSite
+```
+ **描述**
+
+ 响应Cookie sameSite属性。
+
+ 
+### secure
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+bool Rcp_ResponseCookies::secure
+```
+ **描述**
+
+ 响应Cookie安全属性。
+
+ 
+### value
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+char* Rcp_ResponseCookies::value
+```
+ **描述**
+
+ 响应Cookie值。

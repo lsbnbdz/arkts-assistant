@@ -1,0 +1,31 @@
+# [Region](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-nativewindow-region)
+
+## 目录
+- [概述](#概述)
+- [汇总](#汇总)
+  - [成员变量](#成员变量)
+
+收起自动换行深色代码主题复制
+```
+typedef struct {...} Region
+```
+ 
+## 概述
+PhonePC/2in1TabletTVWearable表示本地窗口OHNativeWindow需要更新内容的矩形区域（脏区）。
+
+ **起始版本：** 8
+
+ **相关模块：** [NativeWindow](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-nativewindow)
+
+ **所在头文件：** [external_window.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-external-window-h)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| * rects | 如果rects是空指针nullptr，默认Buffer大小为脏区。 |
+| int32_t rectNumber | 如果rectNumber为0，默认Buffer大小为脏区。 |

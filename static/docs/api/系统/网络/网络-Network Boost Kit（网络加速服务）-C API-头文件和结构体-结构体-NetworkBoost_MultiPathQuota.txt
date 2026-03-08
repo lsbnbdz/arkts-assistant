@@ -1,0 +1,49 @@
+# [NetworkBoost_MultiPathQuota](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/network-boost-c-struct-multipath_quota)
+
+## 目录
+- [概述](#section140951652218)
+- [汇总](#section7125204252218)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section862772612417)
+- [used](#section159871228122717)
+- [remaining](#section2054235172714)
+
+## 概述
+PhonePC/2in1Tablet应用配额信息，包含应用已使用配额信息和剩余配额信息。
+
+ **起始版本：** 6.0.2(22)
+
+ **相关模块：** [NetworkBoost](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/network-boost-c-overview)
+
+ 
+## 汇总
+PhonePC/2in1Tablet 
+### 成员变量
+ PhonePC/2in1Tablet展开
+| |
+| |
+| |
+| NetworkBoost_MultiPathQuotaInfo used | 应用已使用配额信息。 |
+| NetworkBoost_MultiPathQuotaInfo remaining | 应用剩余使用配额信息。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1Tablet 
+## used
+PhonePC/2in1Tablet收起自动换行深色代码主题复制
+```
+NetworkBoost_MultiPathQuotaInfo NetworkBoost_MultiPathQuota::used
+```
+ **描述**
+
+ 表明应用已使用配额信息。
+
+ 
+## remaining
+PhonePC/2in1Tablet收起自动换行深色代码主题复制
+```
+NetworkBoost_MultiPathQuotaInfo NetworkBoost_MultiPathQuota::remaining
+```
+ **描述**
+
+ 应用剩余使用配额信息。

@@ -1,0 +1,1076 @@
+# [@ohos.telephony.observer (observer)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-observer)
+
+## 目录
+- [导入模块](#导入模块)
+- [NetworkState](#networkstate)
+- [SignalInformation](#signalinformation)
+- [DataConnectState](#dataconnectstate)
+- [RatType](#rattype)
+- [DataFlowType](#dataflowtype)
+- [CallState](#callstate)
+- [CardType](#cardtype)
+- [SimState](#simstate)
+- [TelCallState21+](#telcallstate21)
+- [observer.on('networkStateChange')](#observeronnetworkstatechange)
+- [observer.on('networkStateChange')](#observeronnetworkstatechange-1)
+- [observer.off('networkStateChange')](#observeroffnetworkstatechange)
+- [observer.on('signalInfoChange')](#observeronsignalinfochange)
+- [observer.on('signalInfoChange')](#observeronsignalinfochange-1)
+- [observer.off('signalInfoChange')](#observeroffsignalinfochange)
+- [observer.on('callStateChange')](#observeroncallstatechange)
+- [observer.on('callStateChange')](#observeroncallstatechange-1)
+- [observer.off('callStateChange')](#observeroffcallstatechange)
+- [observer.on('callStateChangeEx')21+](#observeroncallstatechangeex21)
+- [observer.off('callStateChangeEx')21+](#observeroffcallstatechangeex21)
+- [observer.on('cellularDataConnectionStateChange')7+](#observeroncellulardataconnectionstatechange7)
+- [observer.on('cellularDataConnectionStateChange')7+](#observeroncellulardataconnectionstatechange7-1)
+- [observer.off('cellularDataConnectionStateChange')7+](#observeroffcellulardataconnectionstatechange7)
+- [observer.on('cellularDataFlowChange')7+](#observeroncellulardataflowchange7)
+- [observer.on('cellularDataFlowChange')7+](#observeroncellulardataflowchange7-1)
+- [observer.off('cellularDataFlowChange')7+](#observeroffcellulardataflowchange7)
+- [observer.on('simStateChange')7+](#observeronsimstatechange7)
+- [observer.on('simStateChange')7+](#observeronsimstatechange7-1)
+- [observer.off('simStateChange')7+](#observeroffsimstatechange7)
+- [observer.on('iccAccountInfoChange')10+](#observeroniccaccountinfochange10)
+- [observer.off('iccAccountInfoChange')10+](#observerofficcaccountinfochange10)
+- [LockReason8+](#lockreason8)
+- [SimStateData7+](#simstatedata7)
+- [CallStateInfo11+](#callstateinfo11)
+- [DataConnectionStateInfo11+](#dataconnectionstateinfo11)
+- [ObserverOptions11+](#observeroptions11)
+
+本模块提供订阅管理功能，可以订阅/取消订阅的事件包括：网络状态变化、信号状态变化、通话状态变化、蜂窝数据链路连接状态、蜂窝数据业务的上下行数据流状态、SIM状态变化。
+
+ 说明 本模块首批接口从API version 6开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+
+ 
+## 导入模块
+ PhoneTabletWearable收起自动换行深色代码主题复制
+```
+import { observer } from '@kit.TelephonyKit';
+```
+ 
+## NetworkState
+ PhoneTabletWearabletype NetworkState = radio.NetworkState
+
+ 网络注册状态。
+
+ **系统能力**：SystemCapability.Telephony.StateRegistry
+
+ 展开
+| |
+| |
+| |
+| radio.NetworkState | 网络注册状态。 |
+
+ 
+## SignalInformation
+ PhoneTabletWearabletype SignalInformation = radio.SignalInformation
+
+ 网络信号强度信息对象。
+
+ **系统能力**：SystemCapability.Telephony.StateRegistry
+
+ 展开
+| |
+| |
+| |
+| radio.SignalInformation | 网络信号强度信息对象。 |
+
+ 
+## DataConnectState
+ PhoneTabletWearabletype DataConnectState = data.DataConnectState
+
+ 描述蜂窝数据链路连接状态。
+
+ **系统能力**：SystemCapability.Telephony.StateRegistry
+
+ 展开
+| |
+| |
+| |
+| data.DataConnectState | 描述蜂窝数据链路连接状态。 |
+
+ 
+## RatType
+ PhoneTabletWearabletype RatType = radio.RadioTechnology
+
+ 无线接入技术。
+
+ **系统能力**：SystemCapability.Telephony.StateRegistry
+
+ 展开
+| |
+| |
+| |
+| radio.RadioTechnology | 无线接入技术。 |
+
+ 
+## DataFlowType
+ PhoneTabletWearabletype DataFlowType = data.DataFlowType
+
+ 描述蜂窝数据流类型。
+
+ **系统能力**：SystemCapability.Telephony.StateRegistry
+
+ 展开
+| |
+| |
+| |
+| data.DataFlowType | 描述蜂窝数据流类型。 |
+
+ 
+## CallState
+ PhoneTabletWearabletype CallState = call.CallState
+
+ 通话状态码。
+
+ **系统能力**：SystemCapability.Telephony.StateRegistry
+
+ 展开
+| |
+| |
+| |
+| call.CallState | 通话状态码（去电过程仅通知CALL_STATE_OFFHOOK状态）。 |
+
+ 
+## CardType
+ PhoneTabletWearabletype CardType = sim.CardType
+
+ 卡类型。
+
+ **系统能力**：SystemCapability.Telephony.StateRegistry
+
+ 展开
+| |
+| |
+| |
+| sim.CardType | 卡类型。 |
+
+ 
+## SimState
+ PhoneTabletWearabletype SimState = sim.SimState
+
+ SIM卡状态。
+
+ **系统能力**：SystemCapability.Telephony.StateRegistry
+
+ 展开
+| |
+| |
+| |
+| sim.SimState | SIM卡状态。 |
+
+ 
+## TelCallState21+
+ PhoneTabletWearabletype TelCallState = call.TelCallState
+
+ 通话状态码。
+
+ **系统能力**：SystemCapability.Telephony.StateRegistry
+
+ 展开
+| |
+| |
+| |
+| call.TelCallState | 通话状态码（去电过程通知去电号码状态TEL_CALL_STATE_OFFHOOK和去电接通状态TEL_CALL_STATE_CONNECTED）。 |
+
+ 
+## observer.on('networkStateChange')
+ PhoneTabletWearableon(type: 'networkStateChange', callback: Callback<NetworkState>): void
+
+ 订阅网络状态变化事件，使用callback方式作为异步方法。
+
+ **需要权限**：ohos.permission.GET_NETWORK_INFO
+
+ **系统能力**：SystemCapability.Telephony.StateRegistry
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | string | 是 | 网络状态变化事件，参数固定为'networkStateChange'。 |
+| callback | Callback< NetworkState > | 是 | 以callback形式异步返回结果。参考radio的 NetworkState 。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[通用错误码说明文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)和[ohos.telephony(电话子系统)错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-telephony)。
+
+ 展开
+| |
+| |
+| |
+| 201 | Permission denied. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 8300001 | Invalid parameter value. |
+| 8300002 | Service connection failed. |
+| 8300003 | System internal error. |
+| 8300999 | Unknown error. |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+observer.on('networkStateChange', (data: observer.NetworkState) => { console.info("on networkStateChange, data:" + JSON.stringify(data));});
+```
+ 
+## observer.on('networkStateChange')
+ PhoneTabletWearableon(type: 'networkStateChange', options: ObserverOptions, callback: Callback<NetworkState>): void
+
+ 订阅指定卡槽位的网络状态变化事件，使用callback方式作为异步方法。
+
+ **需要权限**：ohos.permission.GET_NETWORK_INFO
+
+ **系统能力**：SystemCapability.Telephony.StateRegistry
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | string | 是 | 网络状态变化事件，参数固定为'networkStateChange'。 |
+| options | ObserverOptions | 是 | 电话相关事件订阅参数可选项。 |
+| callback | Callback< NetworkState > | 是 | 以callback形式异步返回结果，参考radio的 NetworkState 。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[通用错误码说明文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)和[ohos.telephony(电话子系统)错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-telephony)。
+
+ 展开
+| |
+| |
+| |
+| 201 | Permission denied. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 8300001 | Invalid parameter value. |
+| 8300002 | Service connection failed. |
+| 8300003 | System internal error. |
+| 8300999 | Unknown error. |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let options: observer.ObserverOptions = { slotId: 0}observer.on('networkStateChange', options, (data: observer.NetworkState) => { console.info("on networkStateChange, data:" + JSON.stringify(data));});
+```
+ 
+## observer.off('networkStateChange')
+ PhoneTabletWearableoff(type: 'networkStateChange', callback?: Callback<NetworkState>): void
+
+ 取消订阅网络状态变化事件，使用callback方式作为异步方法。
+
+ 说明 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
+
+ **系统能力**：SystemCapability.Telephony.StateRegistry
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | string | 是 | 网络状态变化事件，参数固定为'networkStateChange'。 |
+| callback | Callback< NetworkState > | 否 | 以callback形式异步返回结果，参考radio的 NetworkState 。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[通用错误码说明文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)和[ohos.telephony(电话子系统)错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-telephony)。
+
+ 展开
+| |
+| |
+| |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 8300001 | Invalid parameter value. |
+| 8300002 | Service connection failed. |
+| 8300003 | System internal error. |
+| 8300999 | Unknown error. |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let callback: (data: observer.NetworkState) => void = (data: observer.NetworkState) => { console.info("on networkStateChange, data:" + JSON.stringify(data));}observer.on('networkStateChange', callback);// 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。observer.off('networkStateChange', callback);observer.off('networkStateChange');
+```
+ 
+## observer.on('signalInfoChange')
+ PhoneTabletWearableon(type: 'signalInfoChange', callback: Callback<Array<SignalInformation>>): void
+
+ 订阅信号状态变化事件，使用callback方式作为异步方法。
+
+ **系统能力**：SystemCapability.Telephony.StateRegistry
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | string | 是 | 信号状态变化事件，参数固定为'signalInfoChange'。 |
+| callback | Callback> | 是 | 以callback形式异步返回结果，参考radio的 SignalInformation 。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[通用错误码说明文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)和[ohos.telephony(电话子系统)错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-telephony)。
+
+ 展开
+| |
+| |
+| |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 8300001 | Invalid parameter value. |
+| 8300002 | Service connection failed. |
+| 8300003 | System internal error. |
+| 8300999 | Unknown error. |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+import { radio } from '@kit.TelephonyKit';
+observer.on('signalInfoChange', (data: Array) => { console.info("on signalInfoChange, data:" + JSON.stringify(data));});
+```
+ 
+## observer.on('signalInfoChange')
+ PhoneTabletWearableon(type: 'signalInfoChange', options: ObserverOptions, callback: Callback<Array<SignalInformation>>): void
+
+ 订阅指定卡槽位的信号状态变化事件，使用callback方式作为异步方法。
+
+ **系统能力**：SystemCapability.Telephony.StateRegistry
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | string | 是 | 信号状态变化事件，参数固定为'signalInfoChange'。 |
+| options | ObserverOptions | 是 | 电话相关事件订阅参数可选项。 |
+| callback | Callback> | 是 | 以callback形式异步返回结果，参考radio的 SignalInformation 。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[通用错误码说明文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)和[ohos.telephony(电话子系统)错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-telephony)。
+
+ 展开
+| |
+| |
+| |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 8300001 | Invalid parameter value. |
+| 8300002 | Service connection failed. |
+| 8300003 | System internal error. |
+| 8300999 | Unknown error. |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+import { radio } from '@kit.TelephonyKit';
+let options: observer.ObserverOptions = { slotId: 0}observer.on('signalInfoChange', options, (data: Array) => { console.info("on signalInfoChange, data:" + JSON.stringify(data));});
+```
+ 
+## observer.off('signalInfoChange')
+ PhoneTabletWearableoff(type: 'signalInfoChange', callback?: Callback<Array<SignalInformation>>): void
+
+ 取消订阅信号状态变化事件，使用callback方式作为异步方法。
+
+ 说明 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
+
+ **系统能力**：SystemCapability.Telephony.StateRegistry
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | string | 是 | 信号状态变化事件，参数固定为'signalInfoChange'。 |
+| callback | Callback> | 否 | 以callback形式异步返回结果，参考radio的 SignalInformation 。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[通用错误码说明文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)和[ohos.telephony(电话子系统)错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-telephony)。
+
+ 展开
+| |
+| |
+| |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 8300001 | Invalid parameter value. |
+| 8300002 | Service connection failed. |
+| 8300003 | System internal error. |
+| 8300999 | Unknown error. |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+import { radio } from '@kit.TelephonyKit';
+let callback: (data: Array) => void = (data: Array) => { console.info("on signalInfoChange, data:" + JSON.stringify(data));}observer.on('signalInfoChange', callback);// 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。observer.off('signalInfoChange', callback);observer.off('signalInfoChange');
+```
+ 
+## observer.on('callStateChange')
+ PhoneTabletWearableon(type: 'callStateChange', callback: Callback<CallStateInfo>): void
+
+ 订阅通话状态变化事件，使用callback方式作为异步方法。
+
+ **系统能力**：SystemCapability.Telephony.StateRegistry
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | string | 是 | 通话状态变化事件，参数固定为'callStateChange'。 |
+| callback | Callback< CallStateInfo > | 是 | 以callback形式异步返回结果。 应用可获取到CallStateInfo。 其中，三方应用仅能获取state通话状态。number受系统权限管控，仅面向系统应用开放。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[通用错误码说明文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)和[ohos.telephony(电话子系统)错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-telephony)。
+
+ 展开
+| |
+| |
+| |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 8300001 | Invalid parameter value. |
+| 8300002 | Service connection failed. |
+| 8300003 | System internal error. |
+| 8300999 | Unknown error. |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+observer.on('callStateChange', (data: observer.CallStateInfo) => { console.info("on callStateChange, data:" + JSON.stringify(data));});
+```
+ 
+## observer.on('callStateChange')
+ PhoneTabletWearableon(type: 'callStateChange', options: ObserverOptions, callback: Callback<CallStateInfo>): void
+
+ 订阅通话状态变化事件，使用callback方式作为异步方法。
+
+ **系统能力**：SystemCapability.Telephony.StateRegistry
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | string | 是 | 通话状态变化事件，参数固定为'callStateChange'。 |
+| options | ObserverOptions | 是 | 电话相关事件订阅参数可选项。 |
+| callback | Callback< CallStateInfo > | 是 | 以callback形式异步返回结果。 应用可获取到CallStateInfo。 其中，三方应用仅能获取state通话状态。number受系统权限管控，仅面向系统应用开放。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[通用错误码说明文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)和[ohos.telephony(电话子系统)错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-telephony)。
+
+ 展开
+| |
+| |
+| |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 8300001 | Invalid parameter value. |
+| 8300002 | Service connection failed. |
+| 8300003 | System internal error. |
+| 8300999 | Unknown error. |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let options: observer.ObserverOptions = { slotId: 0}observer.on('callStateChange', options, (data: observer.CallStateInfo) => { console.info("on callStateChange, data:" + JSON.stringify(data));});
+```
+ 
+## observer.off('callStateChange')
+ PhoneTabletWearableoff(type: 'callStateChange', callback?: Callback<CallStateInfo>): void
+
+ 取消订阅通话状态变化事件，使用callback方式作为异步方法。
+
+ 说明 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
+
+ **系统能力**：SystemCapability.Telephony.StateRegistry
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | string | 是 | 通话状态变化事件，参数固定为'callStateChange'。 |
+| callback | Callback< CallStateInfo > | 否 | 以callback形式异步返回结果，参考call的CallState。 number：电话号码。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[通用错误码说明文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)和[ohos.telephony(电话子系统)错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-telephony)。
+
+ 展开
+| |
+| |
+| |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 8300001 | Invalid parameter value. |
+| 8300002 | Service connection failed. |
+| 8300003 | System internal error. |
+| 8300999 | Unknown error. |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let callback: (data: observer.CallStateInfo) => void = (data: observer.CallStateInfo) => { console.info("on callStateChange, data:" + JSON.stringify(data));}observer.on('callStateChange', callback);// 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。observer.off('callStateChange', callback);observer.off('callStateChange');
+```
+ 
+## observer.on('callStateChangeEx')21+
+ PhoneTabletWearableon(type: 'callStateChangeEx', callback: Callback<TelCallState>, options?: ObserverOptions): void
+
+ 订阅通话状态变化拓展事件，使用callback方式作为异步方法。
+
+ **系统能力**：SystemCapability.Telephony.StateRegistry
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | string | 是 | 通话状态变化事件，参数固定为'callStateChangeEx'。 |
+| callback | Callback< TelCallState > | 是 | 以callback形式异步返回结果。 应用可获取到TelCallState。 |
+| options | ObserverOptions | 否 | 电话相关事件订阅参数可选项。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[通用错误码说明文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)和[ohos.telephony(电话子系统)错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-telephony)。
+
+ 展开
+| |
+| |
+| |
+| 8800001 | Invalid parameter value. |
+| 8800002 | Service connection failed. |
+| 8800003 | System internal error. |
+| 8800999 | Unknown error. |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+import { call } from '@kit.TelephonyKit';
+let callback: (data: call.TelCallState) => void = (data: call.TelCallState) => { console.info("on callStateChangeEx, data:" + JSON.stringify(data));}let options: observer.ObserverOptions = { slotId: 0}
+observer.on('callStateChangeEx', callback, options);observer.on('callStateChangeEx', callback);
+```
+ 
+## observer.off('callStateChangeEx')21+
+ PhoneTabletWearableoff(type: 'callStateChangeEx', callback?: Callback<TelCallState>): void
+
+ 取消订阅通话状态变化拓展事件，使用callback方式作为异步方法。
+
+ 说明 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
+
+ **系统能力**：SystemCapability.Telephony.StateRegistry
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | string | 是 | 通话状态变化事件，参数固定为'callStateChange'。 |
+| callback | Callback< TelCallState > | 否 | 以callback形式异步返回结果，参考call的TelCallState。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[通用错误码说明文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)和[ohos.telephony(电话子系统)错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-telephony)。
+
+ 展开
+| |
+| |
+| |
+| 8800001 | Invalid parameter value. |
+| 8800002 | Service connection failed. |
+| 8800003 | System internal error. |
+| 8800999 | Unknown error. |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+import { call } from '@kit.TelephonyKit';let callback: (data: call.TelCallState) => void = (data: call.TelCallState) => { console.info("on callStateChangeEx, data:" + JSON.stringify(data));}observer.on('callStateChangeEx', callback);// 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。observer.off('callStateChangeEx', callback);observer.off('callStateChangeEx');
+```
+ 
+## observer.on('cellularDataConnectionStateChange')7+
+ PhoneTabletWearableon(type: 'cellularDataConnectionStateChange', callback: Callback<DataConnectionStateInfo>): void
+
+ 订阅蜂窝数据链路连接状态，使用callback方式作为异步方法。
+
+ **系统能力**：SystemCapability.Telephony.StateRegistry
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | string | 是 | 蜂窝数据链路连接状态事件，参数固定为'cellularDataConnectionStateChange'。 |
+| callback | Callback< DataConnectionStateInfo > | 是 | 以callback形式异步返回结果，参考data的 DataConnectState ，radio的 RadioTechnology 。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[通用错误码说明文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)和[ohos.telephony(电话子系统)错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-telephony)。
+
+ 展开
+| |
+| |
+| |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 8300001 | Invalid parameter value. |
+| 8300002 | Service connection failed. |
+| 8300003 | System internal error. |
+| 8300999 | Unknown error. |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+observer.on('cellularDataConnectionStateChange', (data: observer.DataConnectionStateInfo) => { console.info("on cellularDataConnectionStateChange, data:" + JSON.stringify(data));});
+```
+ 
+## observer.on('cellularDataConnectionStateChange')7+
+ PhoneTabletWearableon(type: 'cellularDataConnectionStateChange', options: ObserverOptions, callback: Callback<DataConnectionStateInfo>): void
+
+ 订阅指定卡槽位的蜂窝数据链路连接状态，使用callback方式作为异步方法。
+
+ **系统能力**：SystemCapability.Telephony.StateRegistry
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | string | 是 | 蜂窝数据链路连接状态事件，参数固定为'cellularDataConnectionStateChange'。 |
+| options | ObserverOptions | 是 | 电话相关事件订阅参数可选项。 |
+| callback | Callback< DataConnectionStateInfo > | 是 | 以callback形式异步返回结果，参考data的 DataConnectState ，radio的 RadioTechnology 。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[通用错误码说明文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)和[ohos.telephony(电话子系统)错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-telephony)。
+
+ 展开
+| |
+| |
+| |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 8300001 | Invalid parameter value. |
+| 8300002 | Service connection failed. |
+| 8300003 | System internal error. |
+| 8300999 | Unknown error. |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let options: observer.ObserverOptions = { slotId: 0}observer.on('cellularDataConnectionStateChange', options, (data: observer.DataConnectionStateInfo) => { console.info("on cellularDataConnectionStateChange, data:" + JSON.stringify(data));});
+```
+ 
+## observer.off('cellularDataConnectionStateChange')7+
+ PhoneTabletWearableoff(type: 'cellularDataConnectionStateChange', callback?: Callback<DataConnectionStateInfo>): void
+
+ 移除订阅蜂窝数据链路连接状态，使用callback方式作为异步方法。
+
+ 说明 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
+
+ **系统能力**：SystemCapability.Telephony.StateRegistry
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | string | 是 | 蜂窝数据链路连接状态事件，参数固定为'cellularDataConnectionStateChange'。 |
+| callback | Callback< DataConnectionStateInfo > | 否 | 以callback形式异步返回结果，参考data的 DataConnectState ，radio的 RadioTechnology 。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[通用错误码说明文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)和[ohos.telephony(电话子系统)错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-telephony)。
+
+ 展开
+| |
+| |
+| |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 8300001 | Invalid parameter value. |
+| 8300002 | Service connection failed. |
+| 8300003 | System internal error. |
+| 8300999 | Unknown error. |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let callback: (data: observer.DataConnectionStateInfo) => void = (data: observer.DataConnectionStateInfo) => { console.info("on cellularDataConnectionStateChange, data:" + JSON.stringify(data));}observer.on('cellularDataConnectionStateChange', callback);// 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。observer.off('cellularDataConnectionStateChange', callback);observer.off('cellularDataConnectionStateChange');
+```
+ 
+## observer.on('cellularDataFlowChange')7+
+ PhoneTabletWearableon(type: 'cellularDataFlowChange', callback: Callback<DataFlowType>): void
+
+ 订阅蜂窝数据业务的上下行数据流状态，使用callback方式作为异步方法。
+
+ **系统能力**：SystemCapability.Telephony.StateRegistry
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | string | 是 | 蜂窝数据业务的上下行数据流状态事件，参数固定为'cellularDataFlowChange'。 |
+| callback | Callback< DataFlowType > | 是 | 以callback形式异步返回结果，参考data的 DataFlowType 。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[通用错误码说明文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)和[ohos.telephony(电话子系统)错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-telephony)。
+
+ 展开
+| |
+| |
+| |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 8300001 | Invalid parameter value. |
+| 8300002 | Service connection failed. |
+| 8300003 | System internal error. |
+| 8300999 | Unknown error. |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+import { data } from '@kit.TelephonyKit';
+observer.on('cellularDataFlowChange', (data: data.DataFlowType) => { console.info("on cellularDataFlowChange, data:" + JSON.stringify(data));});
+```
+ 
+## observer.on('cellularDataFlowChange')7+
+ PhoneTabletWearableon(type: 'cellularDataFlowChange', options: ObserverOptions, callback: Callback<DataFlowType>): void
+
+ 订阅指定卡槽位的蜂窝数据业务的上下行数据流状态，使用callback方式作为异步方法。
+
+ **系统能力**：SystemCapability.Telephony.StateRegistry
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | string | 是 | 蜂窝数据业务的上下行数据流状态事件，参数固定为'cellularDataFlowChange'。 |
+| options | ObserverOptions | 是 | 电话相关事件订阅参数可选项。 |
+| callback | Callback< DataFlowType > | 是 | 以callback形式异步返回结果，参考data的 DataFlowType 。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[通用错误码说明文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)和[ohos.telephony(电话子系统)错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-telephony)。
+
+ 展开
+| |
+| |
+| |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 8300001 | Invalid parameter value. |
+| 8300002 | Service connection failed. |
+| 8300003 | System internal error. |
+| 8300999 | Unknown error. |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+import { data } from '@kit.TelephonyKit';
+let options: observer.ObserverOptions = { slotId: 0}observer.on('cellularDataFlowChange', options, (data: data.DataFlowType) => { console.info("on cellularDataFlowChange, data:" + JSON.stringify(data));});
+```
+ 
+## observer.off('cellularDataFlowChange')7+
+ PhoneTabletWearableoff(type: 'cellularDataFlowChange', callback?: Callback<DataFlowType>): void
+
+ 移除订阅蜂窝数据业务的上下行数据流状态，使用callback方式作为异步方法。
+
+ 说明 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
+
+ **系统能力**：SystemCapability.Telephony.StateRegistry
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | string | 是 | 蜂窝数据业务的上下行数据流状态事件，参数固定为'cellularDataFlowChange'。 |
+| callback | Callback< DataFlowType > | 否 | 以callback形式异步返回结果，参考data的 DataFlowType 。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[通用错误码说明文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)和[ohos.telephony(电话子系统)错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-telephony)。
+
+ 展开
+| |
+| |
+| |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 8300001 | Invalid parameter value. |
+| 8300002 | Service connection failed. |
+| 8300003 | System internal error. |
+| 8300999 | Unknown error. |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+import { data } from '@kit.TelephonyKit';
+let callback: (data: data.DataFlowType) => void = (data: data.DataFlowType) => { console.info("on cellularDataFlowChange, data:" + JSON.stringify(data));}observer.on('cellularDataFlowChange', callback);// 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。observer.off('cellularDataFlowChange', callback);observer.off('cellularDataFlowChange');
+```
+ 
+## observer.on('simStateChange')7+
+ PhoneTabletWearableon(type: 'simStateChange', callback: Callback<SimStateData>): void
+
+ 订阅sim状态更改事件，使用callback方式作为异步方法。
+
+ 说明 此接口不包含sim卡的激活状态，具体请参见[sim.isSimActive](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-sim#simissimactive7)接口。
+
+ **系统能力**：SystemCapability.Telephony.StateRegistry
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | string | 是 | sim状态更改事件，参数固定为'simStateChange'。 |
+| callback | Callback< SimStateData > | 是 | 以callback形式异步返回结果。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[通用错误码说明文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)和[ohos.telephony(电话子系统)错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-telephony)。
+
+ 展开
+| |
+| |
+| |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 8300001 | Invalid parameter value. |
+| 8300002 | Service connection failed. |
+| 8300003 | System internal error. |
+| 8300999 | Unknown error. |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+observer.on('simStateChange', (data: observer.SimStateData) => { console.info("on simStateChange, data:" + JSON.stringify(data));});
+```
+ 
+## observer.on('simStateChange')7+
+ PhoneTabletWearableon(type: 'simStateChange', options: ObserverOptions, callback: Callback<SimStateData>): void
+
+ 订阅指定卡槽位的sim状态更改事件，使用callback方式作为异步方法。
+
+ **系统能力**：SystemCapability.Telephony.StateRegistry
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | string | 是 | sim状态更改事件，参数固定为'simStateChange'。 |
+| options | ObserverOptions | 是 | 电话相关事件订阅参数可选项。 |
+| callback | Callback< SimStateData > | 是 | 以callback形式异步返回结果。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[通用错误码说明文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)和[ohos.telephony(电话子系统)错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-telephony)。
+
+ 展开
+| |
+| |
+| |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 8300001 | Invalid parameter value. |
+| 8300002 | Service connection failed. |
+| 8300003 | System internal error. |
+| 8300999 | Unknown error. |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let options: observer.ObserverOptions = { slotId: 0}observer.on('simStateChange', options, (data: observer.SimStateData) => { console.info("on simStateChange, data:" + JSON.stringify(data));});
+```
+ 
+## observer.off('simStateChange')7+
+ PhoneTabletWearableoff(type: 'simStateChange', callback?: Callback<SimStateData>): void
+
+ 移除订阅sim状态更改事件，使用callback方式作为异步方法。
+
+ 说明 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
+
+ **系统能力**：SystemCapability.Telephony.StateRegistry
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | string | 是 | sim状态更改事件，参数固定为'simStateChange'。 |
+| callback | Callback< SimStateData > | 否 | 以callback形式异步返回结果。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[通用错误码说明文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)和[ohos.telephony(电话子系统)错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-telephony)。
+
+ 展开
+| |
+| |
+| |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 8300001 | Invalid parameter value. |
+| 8300002 | Service connection failed. |
+| 8300003 | System internal error. |
+| 8300999 | Unknown error. |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let callback: (data: observer.SimStateData) => void = (data: observer.SimStateData) => { console.info("on simStateChange, data:" + JSON.stringify(data));}observer.on('simStateChange', callback);// 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。observer.off('simStateChange', callback);observer.off('simStateChange');
+```
+ 
+## observer.on('iccAccountInfoChange')10+
+ PhoneTabletWearableon(type: 'iccAccountInfoChange', callback: Callback<void>): void
+
+ 订阅卡帐户变化事件，使用callback方式作为异步方法。
+
+ **系统能力**：SystemCapability.Telephony.StateRegistry
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | string | 是 | 卡帐户变化事件，参数固定为'iccAccountInfoChange'。 |
+| callback | Callback | 是 | 以callback形式异步返回结果。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[通用错误码说明文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)和[ohos.telephony(电话子系统)错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-telephony)。
+
+ 展开
+| |
+| |
+| |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 8300001 | Invalid parameter value. |
+| 8300002 | Service connection failed. |
+| 8300003 | System internal error. |
+| 8300999 | Unknown error. |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+observer.on('iccAccountInfoChange', () => { console.info("on iccAccountInfoChange success");});
+```
+ 
+## observer.off('iccAccountInfoChange')10+
+ PhoneTabletWearableoff(type: 'iccAccountInfoChange', callback?: Callback<void>): void
+
+ 移除订阅卡帐户变化事件，使用callback方式作为异步方法。
+
+ 说明 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
+
+ **系统能力**：SystemCapability.Telephony.StateRegistry
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | string | 是 | 卡帐户变化事件，参数固定为'iccAccountInfoChange'。 |
+| callback | Callback | 否 | 以callback形式异步返回结果。 |
+
+ **错误码：**
+
+ 以下错误码的详细介绍请参见[通用错误码说明文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)和[ohos.telephony(电话子系统)错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-telephony)。
+
+ 展开
+| |
+| |
+| |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 8300001 | Invalid parameter value. |
+| 8300002 | Service connection failed. |
+| 8300003 | System internal error. |
+| 8300999 | Unknown error. |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let callback: () => void = () => { console.info("on iccAccountInfoChange success");}observer.on('iccAccountInfoChange', callback);// 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。observer.off('iccAccountInfoChange', callback);observer.off('iccAccountInfoChange');
+```
+ 
+## LockReason8+
+ PhoneTabletWearableSIM卡锁类型。
+
+ **系统能力**：SystemCapability.Telephony.StateRegistry
+
+ 展开
+| 名称 | 值 | 说明 |
+| --- | --- | --- |
+| SIM_NONE | 0 | 无锁。 |
+| SIM_PIN | 1 | PIN锁。 |
+| SIM_PUK | 2 | PUK锁。 |
+| SIM_PN_PIN | 3 | 网络PIN锁。 |
+| SIM_PN_PUK | 4 | 网络PUK锁。 |
+| SIM_PU_PIN | 5 | 子网PIN锁。 |
+| SIM_PU_PUK | 6 | 子网PUK锁。 |
+| SIM_PP_PIN | 7 | 服务提供商PIN锁。 |
+| SIM_PP_PUK | 8 | 服务提供商PUK锁。 |
+| SIM_PC_PIN | 9 | 组织PIN锁。 |
+| SIM_PC_PUK | 10 | 组织PUK锁。 |
+| SIM_SIM_PIN | 11 | SIM PIN锁。 |
+| SIM_SIM_PUK | 12 | SIM PUK锁。 |
+
+ 
+## SimStateData7+
+ PhoneTabletWearableSIM卡类型和状态。
+
+ **系统能力**：SystemCapability.Telephony.StateRegistry
+
+ 展开
+| 名称 | 类型 | 只读 | 可选 | 说明 |
+| --- | --- | --- | --- | --- |
+| type | CardType | 否 | 否 | SIM卡类型。 |
+| state | SimState | 否 | 否 | SIM卡状态。 |
+| reason 8+ | LockReason | 否 | 否 | SIM卡锁类型。 |
+
+ 
+## CallStateInfo11+
+ PhoneTabletWearable通话状态相关信息。
+
+ **系统能力**：SystemCapability.Telephony.StateRegistry
+
+ 展开
+| 名称 | 类型 | 只读 | 可选 | 说明 |
+| --- | --- | --- | --- | --- |
+| state | CallState | 否 | 否 | 通话类型。 |
+| number | string | 否 | 否 | 电话号码。 |
+
+ 
+## DataConnectionStateInfo11+
+ PhoneTabletWearable数据连接状态相关信息。
+
+ **系统能力**：SystemCapability.Telephony.StateRegistry
+
+ 展开
+| 名称 | 类型 | 只读 | 可选 | 说明 |
+| --- | --- | --- | --- | --- |
+| state | DataConnectState | 否 | 否 | 数据连接状态。 |
+| network | RatType | 否 | 否 | 网络类型。 |
+
+ 
+## ObserverOptions11+
+ PhoneTabletWearable电话相关事件订阅参数可选项。
+
+ **系统能力**：SystemCapability.Telephony.StateRegistry
+
+ 展开
+| 名称 | 类型 | 只读 | 可选 | 说明 |
+| --- | --- | --- | --- | --- |
+| slotId | number | 否 | 否 | 卡槽ID。 - 0：卡槽1。 - 1：卡槽2。 |

@@ -1,0 +1,20 @@
+# [OH_BatteryInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-batteryinfo)
+
+## 目录
+- [概述](#概述)
+- [文件汇总](#文件汇总)
+
+## 概述
+PhonePC/2in1TabletWearable提供BatteryInfo模块的电池相关信息的能力。
+
+ **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
+
+ **起始版本：** 13
+
+ 
+## 文件汇总
+ PhonePC/2in1TabletWearable展开
+| |
+| |
+| |
+| ohbattery_info.h | 声明电池API以获取当前电池容量和电源类型的信息，定义电池相应常见事件。 |

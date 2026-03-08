@@ -1,0 +1,49 @@
+# [ServiceCollaboration_CollaborationDeviceInfoSets](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/servicecollaboration-collaborationdeviceinfosets)
+
+## 目录
+- [概述](#section127252561180804)
+- [汇总](#section97112606180804)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section1052854704180804)
+  - [deviceInfoSets](#a9d06809b163953413c2cc34b86a186ec)
+  - [size](#a8ea9582b40bfefeeb0694afa2d98dafb)
+
+## 概述
+PhonePC/2in1TabletTV通过[HMS_ServiceCollaboration_GetCollaborationDeviceInfos](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/servicecollaboration-capi-module#gaeffea1546cbe64aeba533e5b72bca7ba)获取的对端设备信息对象集合。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [ServiceCollaboration](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/servicecollaboration-capi-module)
+
+ 
+## 汇总
+PhonePC/2in1TabletTV 
+### 成员变量
+ PhonePC/2in1TabletTV展开
+| |
+| |
+| |
+| uint32_t size | 对端设备信息对象集合的大小。 |
+| ServiceCollaboration_CollaborationDeviceInfo * deviceInfoSets | 对端设备信息对象集合。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTV 
+### deviceInfoSets
+PhonePC/2in1TabletTV收起自动换行深色代码主题复制
+```
+ServiceCollaboration_CollaborationDeviceInfo* ServiceCollaboration_CollaborationDeviceInfoSets::deviceInfoSets
+```
+ **描述**
+
+ 对端设备信息对象集合。
+
+ 
+### size
+PhonePC/2in1TabletTV收起自动换行深色代码主题复制
+```
+uint32_t ServiceCollaboration_CollaborationDeviceInfoSets::size
+```
+ **描述**
+
+ 对端设备信息对象集合的大小。

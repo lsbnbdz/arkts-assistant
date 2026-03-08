@@ -48,7 +48,7 @@
       "资源创建以及使用"
     ]
   },
-  "graphics-accelerate-kit-20": {
+  "graphics-accelerate-kit-21": {
     "title": "查看资源包分发数据",
     "headings": [
       "查看资源包分发数据"
@@ -60,7 +60,7 @@
     "path": "",
     "rel_path": "guide/图形/Graphics Accelerate Kit（图形加速服务）-游戏资源加速服务-资源包后台下载-查看资源包分发数据.txt",
     "catalog": "图形",
-    "objectId": "graphics-accelerate-kit-20",
+    "objectId": "graphics-accelerate-kit-21",
     "nodeName": "document",
     "keywords": [
       "查看资源包分发数据",
@@ -125,7 +125,7 @@
       "常见问题"
     ]
   },
-  "graphics-accelerate-kit-14": {
+  "graphics-accelerate-kit-15": {
     "title": "超帧功能开发",
     "headings": [
       "超帧功能开发"
@@ -137,7 +137,7 @@
     "path": "",
     "rel_path": "guide/图形/Graphics Accelerate Kit（图形加速服务）-游戏渲染加速服务-超帧功能开发.txt",
     "catalog": "图形",
-    "objectId": "graphics-accelerate-kit-14",
+    "objectId": "graphics-accelerate-kit-15",
     "nodeName": "document",
     "keywords": [
       "超帧功能开发",
@@ -358,7 +358,7 @@
       "常见问题"
     ]
   },
-  "graphics-accelerate-kit-13": {
+  "graphics-accelerate-kit-14": {
     "title": "顶点标记",
     "headings": [
       "顶点标记"
@@ -370,7 +370,7 @@
     "path": "",
     "rel_path": "guide/图形/Graphics Accelerate Kit（图形加速服务）-游戏渲染加速服务-超帧功能开发-顶点标记.txt",
     "catalog": "图形",
-    "objectId": "graphics-accelerate-kit-13",
+    "objectId": "graphics-accelerate-kit-14",
     "nodeName": "document",
     "keywords": [
       "顶点标记",
@@ -393,7 +393,7 @@
       "超帧功能开发"
     ]
   },
-  "graphics-accelerate-kit-17": {
+  "graphics-accelerate-kit-18": {
     "title": "发布资源包下载任务",
     "headings": [
       "发布资源包下载任务",
@@ -418,7 +418,7 @@
     "path": "",
     "rel_path": "guide/图形/Graphics Accelerate Kit（图形加速服务）-游戏资源加速服务-资源包后台下载-发布资源包下载任务.txt",
     "catalog": "图形",
-    "objectId": "graphics-accelerate-kit-17",
+    "objectId": "graphics-accelerate-kit-18",
     "nodeName": "document",
     "keywords": [
       "topic",
@@ -445,7 +445,7 @@
       "资源包后台下载"
     ]
   },
-  "ar-engine-ar-ar-engine": {
+  "ar-engine-ar-ar-engine-1": {
     "title": "反光、光线暗或者弱纹理场景（输入图像颜色变化小）下无法识别平面",
     "headings": [
       "反光、光线暗或者弱纹理场景（输入图像颜色变化小）下无法识别平面",
@@ -460,7 +460,7 @@
     "path": "",
     "rel_path": "guide/图形/AR Engine（AR引擎服务）-AR Engine常见问题-反光、光线暗或者弱纹理场景（输入图像颜色变化小）下无法识别平面.txt",
     "catalog": "图形",
-    "objectId": "ar-engine-ar-ar-engine",
+    "objectId": "ar-engine-ar-ar-engine-1",
     "nodeName": "document",
     "keywords": [
       "反光",
@@ -483,7 +483,7 @@
       "常见问题"
     ]
   },
-  "ar-engine-ar-2": {
+  "ar-engine-ar-3": {
     "title": "附录",
     "headings": [
       "附录",
@@ -499,7 +499,7 @@
     "path": "",
     "rel_path": "guide/图形/AR Engine（AR引擎服务）-附录.txt",
     "catalog": "图形",
-    "objectId": "ar-engine-ar-2",
+    "objectId": "ar-engine-ar-3",
     "nodeName": "document",
     "keywords": [
       "附录",
@@ -763,7 +763,7 @@
       "超帧模式"
     ]
   },
-  "graphics-accelerate-kit-6": {
+  "graphics-accelerate-kit-7": {
     "title": "概述",
     "headings": [
       "概述"
@@ -775,7 +775,7 @@
     "path": "",
     "rel_path": "guide/图形/Graphics Accelerate Kit（图形加速服务）-游戏渲染加速服务-超帧功能开发-内插模式-概述.txt",
     "catalog": "图形",
-    "objectId": "graphics-accelerate-kit-6",
+    "objectId": "graphics-accelerate-kit-7",
     "nodeName": "document",
     "keywords": [
       "概述",
@@ -803,7 +803,7 @@
       "内插模式"
     ]
   },
-  "graphics-accelerate-kit-8": {
+  "graphics-accelerate-kit-9": {
     "title": "概述",
     "headings": [
       "概述"
@@ -815,7 +815,7 @@
     "path": "",
     "rel_path": "guide/图形/Graphics Accelerate Kit（图形加速服务）-游戏渲染加速服务-超帧功能开发-外插模式-概述.txt",
     "catalog": "图形",
-    "objectId": "graphics-accelerate-kit-8",
+    "objectId": "graphics-accelerate-kit-9",
     "nodeName": "document",
     "keywords": [
       "概述",
@@ -843,7 +843,7 @@
       "外插模式"
     ]
   },
-  "graphics-accelerate-kit-10": {
+  "graphics-accelerate-kit-11": {
     "title": "概述",
     "headings": [
       "概述"
@@ -855,7 +855,7 @@
     "path": "",
     "rel_path": "guide/图形/Graphics Accelerate Kit（图形加速服务）-游戏渲染加速服务-超帧功能开发-系统送显模式-概述.txt",
     "catalog": "图形",
-    "objectId": "graphics-accelerate-kit-10",
+    "objectId": "graphics-accelerate-kit-11",
     "nodeName": "document",
     "keywords": [
       "概述",
@@ -883,7 +883,7 @@
       "系统送显模式"
     ]
   },
-  "graphics-accelerate-kit-12": {
+  "graphics-accelerate-kit-13": {
     "title": "概述",
     "headings": [
       "概述"
@@ -895,7 +895,7 @@
     "path": "",
     "rel_path": "guide/图形/Graphics Accelerate Kit（图形加速服务）-游戏渲染加速服务-超帧功能开发-顶点标记-概述.txt",
     "catalog": "图形",
-    "objectId": "graphics-accelerate-kit-12",
+    "objectId": "graphics-accelerate-kit-13",
     "nodeName": "document",
     "keywords": [
       "Draw",
@@ -1052,7 +1052,7 @@
       "加速引擎服务"
     ]
   },
-  "ar-engine-ar": {
+  "ar-engine-ar-1": {
     "title": "个人数据处理说明",
     "headings": [
       "个人数据处理说明",
@@ -1066,7 +1066,7 @@
     "path": "",
     "rel_path": "guide/图形/AR Engine（AR引擎服务）-个人数据处理说明.txt",
     "catalog": "图形",
-    "objectId": "ar-engine-ar",
+    "objectId": "ar-engine-ar-1",
     "nodeName": "document",
     "keywords": [
       "个人数据处理说明",
@@ -1173,7 +1173,7 @@
       "开发指导"
     ]
   },
-  "xengine-kit-gpu-1": {
+  "xengine-kit-gpu-2": {
     "title": "光线追踪反射",
     "headings": [
       "光线追踪反射",
@@ -1190,7 +1190,7 @@
     "path": "",
     "rel_path": "guide/图形/XEngine Kit（GPU加速引擎服务）-光线追踪反射.txt",
     "catalog": "图形",
-    "objectId": "xengine-kit-gpu-1",
+    "objectId": "xengine-kit-gpu-2",
     "nodeName": "document",
     "keywords": [
       "XEG",
@@ -1214,7 +1214,7 @@
       "加速引擎服务"
     ]
   },
-  "xengine-kit-gpu": {
+  "xengine-kit-gpu-1": {
     "title": "光线追踪全局光照",
     "headings": [
       "光线追踪全局光照",
@@ -1235,7 +1235,7 @@
     "path": "",
     "rel_path": "guide/图形/XEngine Kit（GPU加速引擎服务）-光线追踪全局光照.txt",
     "catalog": "图形",
-    "objectId": "xengine-kit-gpu",
+    "objectId": "xengine-kit-gpu-1",
     "nodeName": "document",
     "keywords": [
       "XEG",
@@ -1260,7 +1260,7 @@
       "加速引擎服务"
     ]
   },
-  "xengine-kit-gpu-2": {
+  "xengine-kit-gpu-3": {
     "title": "光线追踪阴影和环境光遮蔽",
     "headings": [
       "光线追踪阴影和环境光遮蔽",
@@ -1277,7 +1277,7 @@
     "path": "",
     "rel_path": "guide/图形/XEngine Kit（GPU加速引擎服务）-光线追踪阴影和环境光遮蔽.txt",
     "catalog": "图形",
-    "objectId": "xengine-kit-gpu-2",
+    "objectId": "xengine-kit-gpu-3",
     "nodeName": "document",
     "keywords": [
       "Mask",
@@ -1301,7 +1301,7 @@
       "加速引擎服务"
     ]
   },
-  "arkgraphics-2d-2d-20": {
+  "arkgraphics-2d-2d-24": {
     "title": "过度绘制调试使用指导",
     "headings": [
       "过度绘制调试使用指导",
@@ -1316,7 +1316,7 @@
     "path": "",
     "rel_path": "guide/图形/ArkGraphics 2D（方舟2D图形服务）-过度绘制调试使用指导.txt",
     "catalog": "图形",
-    "objectId": "arkgraphics-2d-2d-20",
+    "objectId": "arkgraphics-2d-2d-24",
     "nodeName": "document",
     "keywords": [
       "过度绘制",
@@ -1340,7 +1340,7 @@
       "图形服务"
     ]
   },
-  "arkgraphics-2d-2d-8": {
+  "arkgraphics-2d-2d-12": {
     "title": "画布操作及状态",
     "headings": [
       "画布操作及状态"
@@ -1352,7 +1352,7 @@
     "path": "",
     "rel_path": "guide/图形/ArkGraphics 2D（方舟2D图形服务）-图形绘制与显示-画布操作及状态.txt",
     "catalog": "图形",
-    "objectId": "arkgraphics-2d-2d-8",
+    "objectId": "arkgraphics-2d-2d-12",
     "nodeName": "document",
     "keywords": [
       "state",
@@ -1470,7 +1470,7 @@
       "画布操作及状态"
     ]
   },
-  "arkgraphics-2d-2d-9": {
+  "arkgraphics-2d-2d-13": {
     "title": "画布的获取与绘制结果的显示",
     "headings": [
       "画布的获取与绘制结果的显示"
@@ -1482,7 +1482,7 @@
     "path": "",
     "rel_path": "guide/图形/ArkGraphics 2D（方舟2D图形服务）-图形绘制与显示-画布的获取与绘制结果的显示.txt",
     "catalog": "图形",
-    "objectId": "arkgraphics-2d-2d-9",
+    "objectId": "arkgraphics-2d-2d-13",
     "nodeName": "document",
     "keywords": [
       "画布的获取与绘制结果的显示",
@@ -1585,7 +1585,7 @@
       "图形绘制与显示"
     ]
   },
-  "arkgraphics-2d-2d-11": {
+  "arkgraphics-2d-2d-15": {
     "title": "绘制效果",
     "headings": [
       "绘制效果"
@@ -1597,7 +1597,7 @@
     "path": "",
     "rel_path": "guide/图形/ArkGraphics 2D（方舟2D图形服务）-图形绘制与显示-绘制效果.txt",
     "catalog": "图形",
-    "objectId": "arkgraphics-2d-2d-11",
+    "objectId": "arkgraphics-2d-2d-15",
     "nodeName": "document",
     "keywords": [
       "绘制效果",
@@ -1616,7 +1616,7 @@
       "图形绘制与显示"
     ]
   },
-  "arkgraphics-2d-2d-10": {
+  "arkgraphics-2d-2d-14": {
     "title": "绘制效果概述",
     "headings": [
       "绘制效果概述"
@@ -1628,7 +1628,7 @@
     "path": "",
     "rel_path": "guide/图形/ArkGraphics 2D（方舟2D图形服务）-图形绘制与显示-绘制效果-绘制效果概述.txt",
     "catalog": "图形",
-    "objectId": "arkgraphics-2d-2d-10",
+    "objectId": "arkgraphics-2d-2d-14",
     "nodeName": "document",
     "keywords": [
       "绘制效果概述",
@@ -2505,7 +2505,7 @@
       "游戏资源加速服务"
     ]
   },
-  "ar-engine-ar-1": {
+  "ar-engine-ar-2": {
     "title": "开发准备",
     "headings": [
       "开发准备",
@@ -2522,7 +2522,7 @@
     "path": "",
     "rel_path": "guide/图形/AR Engine（AR引擎服务）-开发准备.txt",
     "catalog": "图形",
-    "objectId": "ar-engine-ar-1",
+    "objectId": "ar-engine-ar-2",
     "nodeName": "document",
     "keywords": [
       "开发准备",
@@ -2545,7 +2545,7 @@
       "引擎服务"
     ]
   },
-  "graphics-accelerate-kit-2": {
+  "graphics-accelerate-kit-3": {
     "title": "开发准备",
     "headings": [
       "开发准备",
@@ -2559,7 +2559,7 @@
     "path": "",
     "rel_path": "guide/图形/Graphics Accelerate Kit（图形加速服务）-游戏启动加速服务-秒级启动-开发准备.txt",
     "catalog": "图形",
-    "objectId": "graphics-accelerate-kit-2",
+    "objectId": "graphics-accelerate-kit-3",
     "nodeName": "document",
     "keywords": [
       "开发准备",
@@ -2585,7 +2585,7 @@
       "游戏启动加速服务"
     ]
   },
-  "graphics-accelerate-kit-19": {
+  "graphics-accelerate-kit-20": {
     "title": "开发准备",
     "headings": [
       "开发准备",
@@ -2599,7 +2599,7 @@
     "path": "",
     "rel_path": "guide/图形/Graphics Accelerate Kit（图形加速服务）-游戏资源加速服务-资源包后台下载-开发准备.txt",
     "catalog": "图形",
-    "objectId": "graphics-accelerate-kit-19",
+    "objectId": "graphics-accelerate-kit-20",
     "nodeName": "document",
     "keywords": [
       "开发准备",
@@ -2626,7 +2626,7 @@
       "资源包后台下载"
     ]
   },
-  "xengine-kit-gpu-3": {
+  "xengine-kit-gpu-4": {
     "title": "开发准备",
     "headings": [
       "开发准备",
@@ -2640,7 +2640,7 @@
     "path": "",
     "rel_path": "guide/图形/XEngine Kit（GPU加速引擎服务）-开发准备.txt",
     "catalog": "图形",
-    "objectId": "xengine-kit-gpu-3",
+    "objectId": "xengine-kit-gpu-4",
     "nodeName": "document",
     "keywords": [
       "开发准备",
@@ -2704,7 +2704,7 @@
       "游戏渲染加速服务"
     ]
   },
-  "arkgraphics-2d-2d": {
+  "arkgraphics-2d-2d-4": {
     "title": "可变帧率简介",
     "headings": [
       "可变帧率简介",
@@ -2719,7 +2719,7 @@
     "path": "",
     "rel_path": "guide/图形/ArkGraphics 2D（方舟2D图形服务）-使用可变帧率能力定制不同内容的绘制帧率-可变帧率简介.txt",
     "catalog": "图形",
-    "objectId": "arkgraphics-2d-2d",
+    "objectId": "arkgraphics-2d-2d-4",
     "nodeName": "document",
     "keywords": [
       "UI",
@@ -2903,7 +2903,7 @@
       "游戏启动加速服务"
     ]
   },
-  "arkgraphics-2d-2d-19": {
+  "arkgraphics-2d-2d-23": {
     "title": "离线图像处理",
     "headings": [
       "离线图像处理"
@@ -2915,7 +2915,7 @@
     "path": "",
     "rel_path": "guide/图形/ArkGraphics 2D（方舟2D图形服务）-离线图像处理.txt",
     "catalog": "图形",
-    "objectId": "arkgraphics-2d-2d-19",
+    "objectId": "arkgraphics-2d-2d-23",
     "nodeName": "document",
     "keywords": [
       "离线图像处理",
@@ -2934,7 +2934,7 @@
       "图形服务"
     ]
   },
-  "graphics-accelerate-kit-3": {
+  "graphics-accelerate-kit-4": {
     "title": "秒级启动",
     "headings": [
       "秒级启动"
@@ -2946,7 +2946,7 @@
     "path": "",
     "rel_path": "guide/图形/Graphics Accelerate Kit（图形加速服务）-游戏启动加速服务-秒级启动.txt",
     "catalog": "图形",
-    "objectId": "graphics-accelerate-kit-3",
+    "objectId": "graphics-accelerate-kit-4",
     "nodeName": "document",
     "keywords": [
       "秒级启动",
@@ -3008,7 +3008,7 @@
       "游戏启动加速服务"
     ]
   },
-  "ar-engine-ar-ar-engine-2": {
+  "ar-engine-ar-ar-engine-3": {
     "title": "某些特殊场景下（如附近存在磁场干扰、手机发烫或扫描到重复纹理等），出现平面漂移或者位姿数据跳变现象",
     "headings": [
       "某些特殊场景下（如附近存在磁场干扰、手机发烫或扫描到重复纹理等），出现平面漂移或者位姿数据跳变现象",
@@ -3023,7 +3023,7 @@
     "path": "",
     "rel_path": "guide/图形/AR Engine（AR引擎服务）-AR Engine常见问题-某些特殊场景下（如附近存在磁场干扰、手机发烫或扫描到重复纹理等），出现平面漂移或者位姿数据跳变现象.txt",
     "catalog": "图形",
-    "objectId": "ar-engine-ar-ar-engine-2",
+    "objectId": "ar-engine-ar-ar-engine-3",
     "nodeName": "document",
     "keywords": [
       "某些特殊场景下",
@@ -3086,7 +3086,7 @@
       "游戏渲染加速服务"
     ]
   },
-  "graphics-accelerate-kit-7": {
+  "graphics-accelerate-kit-8": {
     "title": "内插模式",
     "headings": [
       "内插模式"
@@ -3098,7 +3098,7 @@
     "path": "",
     "rel_path": "guide/图形/Graphics Accelerate Kit（图形加速服务）-游戏渲染加速服务-超帧功能开发-内插模式.txt",
     "catalog": "图形",
-    "objectId": "graphics-accelerate-kit-7",
+    "objectId": "graphics-accelerate-kit-8",
     "nodeName": "document",
     "keywords": [
       "内插模式",
@@ -3122,7 +3122,7 @@
       "超帧功能开发"
     ]
   },
-  "ar-engine-ar-ar-engine-5": {
+  "ar-engine-ar-ar-engine-6": {
     "title": "能力介绍",
     "headings": [
       "能力介绍",
@@ -3138,7 +3138,7 @@
     "path": "",
     "rel_path": "guide/图形/AR Engine（AR引擎服务）-AR Engine简介-能力介绍.txt",
     "catalog": "图形",
-    "objectId": "ar-engine-ar-ar-engine-5",
+    "objectId": "ar-engine-ar-ar-engine-6",
     "nodeName": "document",
     "keywords": [
       "AR",
@@ -3161,7 +3161,7 @@
       "简介"
     ]
   },
-  "arkgraphics-2d-2d-1": {
+  "arkgraphics-2d-2d-5": {
     "title": "请求动画绘制帧率",
     "headings": [
       "请求动画绘制帧率",
@@ -3175,7 +3175,7 @@
     "path": "",
     "rel_path": "guide/图形/ArkGraphics 2D（方舟2D图形服务）-使用可变帧率能力定制不同内容的绘制帧率-请求动画绘制帧率.txt",
     "catalog": "图形",
-    "objectId": "arkgraphics-2d-2d-1",
+    "objectId": "arkgraphics-2d-2d-5",
     "nodeName": "document",
     "keywords": [
       "Animation",
@@ -3199,7 +3199,7 @@
       "图形服务"
     ]
   },
-  "arkgraphics-2d-2d-2": {
+  "arkgraphics-2d-2d-6": {
     "title": "请求自绘制内容绘制帧率",
     "headings": [
       "请求自绘制内容绘制帧率",
@@ -3213,7 +3213,7 @@
     "path": "",
     "rel_path": "guide/图形/ArkGraphics 2D（方舟2D图形服务）-使用可变帧率能力定制不同内容的绘制帧率-请求自绘制内容绘制帧率.txt",
     "catalog": "图形",
-    "objectId": "arkgraphics-2d-2d-2",
+    "objectId": "arkgraphics-2d-2d-6",
     "nodeName": "document",
     "keywords": [
       "component",
@@ -3426,7 +3426,7 @@
       "游戏资源加速服务"
     ]
   },
-  "ar-engine-ar-ar-engine-1": {
+  "ar-engine-ar-ar-engine-2": {
     "title": "摄像头被遮挡一段时间后再放开，输出的位姿有跳变",
     "headings": [
       "摄像头被遮挡一段时间后再放开，输出的位姿有跳变",
@@ -3441,7 +3441,7 @@
     "path": "",
     "rel_path": "guide/图形/AR Engine（AR引擎服务）-AR Engine常见问题-摄像头被遮挡一段时间后再放开，输出的位姿有跳变.txt",
     "catalog": "图形",
-    "objectId": "ar-engine-ar-ar-engine-1",
+    "objectId": "ar-engine-ar-ar-engine-2",
     "nodeName": "document",
     "keywords": [
       "STATE",
@@ -3634,7 +3634,7 @@
       "开发指导"
     ]
   },
-  "graphics-accelerate-kit-1": {
+  "graphics-accelerate-kit-2": {
     "title": "实现游戏启动加速",
     "headings": [
       "实现游戏启动加速",
@@ -3651,7 +3651,7 @@
     "path": "",
     "rel_path": "guide/图形/Graphics Accelerate Kit（图形加速服务）-游戏启动加速服务-秒级启动-实现游戏启动加速.txt",
     "catalog": "图形",
-    "objectId": "graphics-accelerate-kit-1",
+    "objectId": "graphics-accelerate-kit-2",
     "nodeName": "document",
     "keywords": [
       "Window",
@@ -3678,7 +3678,7 @@
       "秒级启动"
     ]
   },
-  "arkgraphics-2d-2d-3": {
+  "arkgraphics-2d-2d-7": {
     "title": "使用可变帧率能力定制不同内容的绘制帧率",
     "headings": [
       "使用可变帧率能力定制不同内容的绘制帧率"
@@ -3690,7 +3690,7 @@
     "path": "",
     "rel_path": "guide/图形/ArkGraphics 2D（方舟2D图形服务）-使用可变帧率能力定制不同内容的绘制帧率.txt",
     "catalog": "图形",
-    "objectId": "arkgraphics-2d-2d-3",
+    "objectId": "arkgraphics-2d-2d-7",
     "nodeName": "document",
     "keywords": [
       "使用可变帧率能力定制不同内容的绘制帧率",
@@ -3953,7 +3953,7 @@
       "开发指导"
     ]
   },
-  "spatial-recon-kit": {
+  "spatial-recon-kit-1": {
     "title": "添加滤镜效果",
     "headings": [
       "添加滤镜效果",
@@ -3967,7 +3967,7 @@
     "path": "",
     "rel_path": "guide/图形/Spatial Recon Kit（空间建模服务）-添加滤镜效果.txt",
     "catalog": "图形",
-    "objectId": "spatial-recon-kit",
+    "objectId": "spatial-recon-kit-1",
     "nodeName": "document",
     "keywords": [
       "ID",
@@ -4239,7 +4239,7 @@
       "开发指导"
     ]
   },
-  "arkgraphics-2d-2d-12": {
+  "arkgraphics-2d-2d-16": {
     "title": "图形绘制与显示",
     "headings": [
       "图形绘制与显示"
@@ -4251,7 +4251,7 @@
     "path": "",
     "rel_path": "guide/图形/ArkGraphics 2D（方舟2D图形服务）-图形绘制与显示.txt",
     "catalog": "图形",
-    "objectId": "arkgraphics-2d-2d-12",
+    "objectId": "arkgraphics-2d-2d-16",
     "nodeName": "document",
     "keywords": [
       "图形绘制与显示",
@@ -4275,7 +4275,7 @@
       "图形服务"
     ]
   },
-  "arkgraphics-2d-2d-7": {
+  "arkgraphics-2d-2d-11": {
     "title": "图形绘制与显示开发概述",
     "headings": [
       "图形绘制与显示开发概述",
@@ -4293,7 +4293,7 @@
     "path": "",
     "rel_path": "guide/图形/ArkGraphics 2D（方舟2D图形服务）-图形绘制与显示-图形绘制与显示开发概述.txt",
     "catalog": "图形",
-    "objectId": "arkgraphics-2d-2d-7",
+    "objectId": "arkgraphics-2d-2d-11",
     "nodeName": "document",
     "keywords": [
       "图形绘制",
@@ -4318,7 +4318,7 @@
       "图形绘制与显示"
     ]
   },
-  "arkgraphics-2d-2d-4": {
+  "arkgraphics-2d-2d-8": {
     "title": "图形开发术语",
     "headings": [
       "图形开发术语",
@@ -4337,7 +4337,7 @@
     "path": "",
     "rel_path": "guide/图形/ArkGraphics 2D（方舟2D图形服务）-图形开发术语.txt",
     "catalog": "图形",
-    "objectId": "arkgraphics-2d-2d-4",
+    "objectId": "arkgraphics-2d-2d-8",
     "nodeName": "document",
     "keywords": [
       "Text",
@@ -4361,7 +4361,7 @@
       "图形服务"
     ]
   },
-  "arkgraphics-2d-2d-6": {
+  "arkgraphics-2d-2d-10": {
     "title": "图元绘制",
     "headings": [
       "图元绘制"
@@ -4373,7 +4373,7 @@
     "path": "",
     "rel_path": "guide/图形/ArkGraphics 2D（方舟2D图形服务）-图形绘制与显示-图元绘制.txt",
     "catalog": "图形",
-    "objectId": "arkgraphics-2d-2d-6",
+    "objectId": "arkgraphics-2d-2d-10",
     "nodeName": "document",
     "keywords": [
       "图元绘制",
@@ -4395,7 +4395,7 @@
       "图形绘制与显示"
     ]
   },
-  "arkgraphics-2d-2d-5": {
+  "arkgraphics-2d-2d-9": {
     "title": "图元绘制概述",
     "headings": [
       "图元绘制概述"
@@ -4407,7 +4407,7 @@
     "path": "",
     "rel_path": "guide/图形/ArkGraphics 2D（方舟2D图形服务）-图形绘制与显示-图元绘制-图元绘制概述.txt",
     "catalog": "图形",
-    "objectId": "arkgraphics-2d-2d-5",
+    "objectId": "arkgraphics-2d-2d-9",
     "nodeName": "document",
     "keywords": [
       "图元绘制",
@@ -4432,7 +4432,7 @@
       "图形绘制与显示"
     ]
   },
-  "graphics-accelerate-kit-9": {
+  "graphics-accelerate-kit-10": {
     "title": "外插模式",
     "headings": [
       "外插模式"
@@ -4444,7 +4444,7 @@
     "path": "",
     "rel_path": "guide/图形/Graphics Accelerate Kit（图形加速服务）-游戏渲染加速服务-超帧功能开发-外插模式.txt",
     "catalog": "图形",
-    "objectId": "graphics-accelerate-kit-9",
+    "objectId": "graphics-accelerate-kit-10",
     "nodeName": "document",
     "keywords": [
       "外插模式",
@@ -4468,7 +4468,7 @@
       "超帧功能开发"
     ]
   },
-  "arkgraphics-2d-2d-18": {
+  "arkgraphics-2d-2d-22": {
     "title": "文本",
     "headings": [
       "文本"
@@ -4480,7 +4480,7 @@
     "path": "",
     "rel_path": "guide/图形/ArkGraphics 2D（方舟2D图形服务）-文本.txt",
     "catalog": "图形",
-    "objectId": "arkgraphics-2d-2d-18",
+    "objectId": "arkgraphics-2d-2d-22",
     "nodeName": "document",
     "keywords": [
       "text",
@@ -4504,7 +4504,7 @@
       "图形服务"
     ]
   },
-  "arkgraphics-2d-2d-16": {
+  "arkgraphics-2d-2d-20": {
     "title": "文本测量",
     "headings": [
       "文本测量"
@@ -4516,7 +4516,7 @@
     "path": "",
     "rel_path": "guide/图形/ArkGraphics 2D（方舟2D图形服务）-文本-文本测量.txt",
     "catalog": "图形",
-    "objectId": "arkgraphics-2d-2d-16",
+    "objectId": "arkgraphics-2d-2d-20",
     "nodeName": "document",
     "keywords": [
       "text",
@@ -4609,7 +4609,7 @@
       "文本"
     ]
   },
-  "arkgraphics-2d-2d-17": {
+  "arkgraphics-2d-2d-21": {
     "title": "文本绘制与显示",
     "headings": [
       "文本绘制与显示"
@@ -4621,7 +4621,7 @@
     "path": "",
     "rel_path": "guide/图形/ArkGraphics 2D（方舟2D图形服务）-文本-文本绘制与显示.txt",
     "catalog": "图形",
-    "objectId": "arkgraphics-2d-2d-17",
+    "objectId": "arkgraphics-2d-2d-21",
     "nodeName": "document",
     "keywords": [
       "text",
@@ -4646,7 +4646,7 @@
       "文本"
     ]
   },
-  "arkgraphics-2d-2d-14": {
+  "arkgraphics-2d-2d-18": {
     "title": "文本开发常见问题",
     "headings": [
       "文本开发常见问题",
@@ -4659,7 +4659,7 @@
     "path": "",
     "rel_path": "guide/图形/ArkGraphics 2D（方舟2D图形服务）-文本-文本开发常见问题.txt",
     "catalog": "图形",
-    "objectId": "arkgraphics-2d-2d-14",
+    "objectId": "arkgraphics-2d-2d-18",
     "nodeName": "document",
     "keywords": [
       "Text",
@@ -4684,7 +4684,7 @@
       "文本"
     ]
   },
-  "arkgraphics-2d-2d-15": {
+  "arkgraphics-2d-2d-19": {
     "title": "文本开发概述",
     "headings": [
       "文本开发概述",
@@ -4698,7 +4698,7 @@
     "path": "",
     "rel_path": "guide/图形/ArkGraphics 2D（方舟2D图形服务）-文本-文本开发概述.txt",
     "catalog": "图形",
-    "objectId": "arkgraphics-2d-2d-15",
+    "objectId": "arkgraphics-2d-2d-19",
     "nodeName": "document",
     "keywords": [
       "文本开发概述",
@@ -4723,7 +4723,7 @@
       "文本"
     ]
   },
-  "graphics-accelerate-kit-22": {
+  "graphics-accelerate-kit-23": {
     "title": "系统后台切应用前台接续下载资源包",
     "headings": [
       "系统后台切应用前台接续下载资源包",
@@ -4738,7 +4738,7 @@
     "path": "",
     "rel_path": "guide/图形/Graphics Accelerate Kit（图形加速服务）-游戏资源加速服务-资源包后台下载-系统后台切应用前台接续下载资源包.txt",
     "catalog": "图形",
-    "objectId": "graphics-accelerate-kit-22",
+    "objectId": "graphics-accelerate-kit-23",
     "nodeName": "document",
     "keywords": [
       "Ability",
@@ -4765,7 +4765,7 @@
       "资源包后台下载"
     ]
   },
-  "graphics-accelerate-kit-21": {
+  "graphics-accelerate-kit-22": {
     "title": "系统后台下载资源包",
     "headings": [
       "系统后台下载资源包"
@@ -4777,7 +4777,7 @@
     "path": "",
     "rel_path": "guide/图形/Graphics Accelerate Kit（图形加速服务）-游戏资源加速服务-资源包后台下载-系统后台下载资源包.txt",
     "catalog": "图形",
-    "objectId": "graphics-accelerate-kit-21",
+    "objectId": "graphics-accelerate-kit-22",
     "nodeName": "document",
     "keywords": [
       "系统后台下载资源包",
@@ -4802,7 +4802,7 @@
       "资源包后台下载"
     ]
   },
-  "graphics-accelerate-kit-11": {
+  "graphics-accelerate-kit-12": {
     "title": "系统送显模式",
     "headings": [
       "系统送显模式"
@@ -4814,7 +4814,7 @@
     "path": "",
     "rel_path": "guide/图形/Graphics Accelerate Kit（图形加速服务）-游戏渲染加速服务-超帧功能开发-系统送显模式.txt",
     "catalog": "图形",
-    "objectId": "graphics-accelerate-kit-11",
+    "objectId": "graphics-accelerate-kit-12",
     "nodeName": "document",
     "keywords": [
       "系统送显模式",
@@ -4925,7 +4925,7 @@
       "字体管理"
     ]
   },
-  "graphics-accelerate-kit": {
+  "graphics-accelerate-kit-1": {
     "title": "业务概述",
     "headings": [
       "业务概述",
@@ -4941,7 +4941,7 @@
     "path": "",
     "rel_path": "guide/图形/Graphics Accelerate Kit（图形加速服务）-游戏启动加速服务-秒级启动-业务概述.txt",
     "catalog": "图形",
-    "objectId": "graphics-accelerate-kit",
+    "objectId": "graphics-accelerate-kit-1",
     "nodeName": "document",
     "keywords": [
       "window",
@@ -4968,7 +4968,7 @@
       "秒级启动"
     ]
   },
-  "graphics-accelerate-kit-5": {
+  "graphics-accelerate-kit-6": {
     "title": "业务概述",
     "headings": [
       "业务概述",
@@ -4984,7 +4984,7 @@
     "path": "",
     "rel_path": "guide/图形/Graphics Accelerate Kit（图形加速服务）-游戏渲染加速服务-业务概述.txt",
     "catalog": "图形",
-    "objectId": "graphics-accelerate-kit-5",
+    "objectId": "graphics-accelerate-kit-6",
     "nodeName": "document",
     "keywords": [
       "业务概述",
@@ -5010,7 +5010,7 @@
       "游戏渲染加速服务"
     ]
   },
-  "graphics-accelerate-kit-16": {
+  "graphics-accelerate-kit-17": {
     "title": "业务概述",
     "headings": [
       "业务概述",
@@ -5030,7 +5030,7 @@
     "path": "",
     "rel_path": "guide/图形/Graphics Accelerate Kit（图形加速服务）-游戏资源加速服务-资源包后台下载-业务概述.txt",
     "catalog": "图形",
-    "objectId": "graphics-accelerate-kit-16",
+    "objectId": "graphics-accelerate-kit-17",
     "nodeName": "document",
     "keywords": [
       "window",
@@ -5057,7 +5057,7 @@
       "资源包后台下载"
     ]
   },
-  "graphics-accelerate-kit-18": {
+  "graphics-accelerate-kit-19": {
     "title": "应用前台下载资源包",
     "headings": [
       "应用前台下载资源包",
@@ -5073,7 +5073,7 @@
     "path": "",
     "rel_path": "guide/图形/Graphics Accelerate Kit（图形加速服务）-游戏资源加速服务-资源包后台下载-应用前台下载资源包.txt",
     "catalog": "图形",
-    "objectId": "graphics-accelerate-kit-18",
+    "objectId": "graphics-accelerate-kit-19",
     "nodeName": "document",
     "keywords": [
       "topic",
@@ -5292,7 +5292,7 @@
       "常见问题"
     ]
   },
-  "graphics-accelerate-kit-4": {
+  "graphics-accelerate-kit-5": {
     "title": "游戏启动加速服务",
     "headings": [
       "游戏启动加速服务"
@@ -5304,7 +5304,7 @@
     "path": "",
     "rel_path": "guide/图形/Graphics Accelerate Kit（图形加速服务）-游戏启动加速服务.txt",
     "catalog": "图形",
-    "objectId": "graphics-accelerate-kit-4",
+    "objectId": "graphics-accelerate-kit-5",
     "nodeName": "document",
     "keywords": [
       "游戏启动加速服务",
@@ -5400,7 +5400,7 @@
       "常见问题"
     ]
   },
-  "graphics-accelerate-kit-15": {
+  "graphics-accelerate-kit-16": {
     "title": "游戏渲染加速服务",
     "headings": [
       "游戏渲染加速服务"
@@ -5412,7 +5412,7 @@
     "path": "",
     "rel_path": "guide/图形/Graphics Accelerate Kit（图形加速服务）-游戏渲染加速服务.txt",
     "catalog": "图形",
-    "objectId": "graphics-accelerate-kit-15",
+    "objectId": "graphics-accelerate-kit-16",
     "nodeName": "document",
     "keywords": [
       "游戏渲染加速服务",
@@ -5513,7 +5513,7 @@
       "常见问题"
     ]
   },
-  "graphics-accelerate-kit-24": {
+  "graphics-accelerate-kit-25": {
     "title": "游戏资源加速服务",
     "headings": [
       "游戏资源加速服务"
@@ -5525,7 +5525,7 @@
     "path": "",
     "rel_path": "guide/图形/Graphics Accelerate Kit（图形加速服务）-游戏资源加速服务.txt",
     "catalog": "图形",
-    "objectId": "graphics-accelerate-kit-24",
+    "objectId": "graphics-accelerate-kit-25",
     "nodeName": "document",
     "keywords": [
       "游戏资源加速服务",
@@ -5583,7 +5583,7 @@
       "游戏资源加速服务"
     ]
   },
-  "graphics-accelerate-kit-23": {
+  "graphics-accelerate-kit-24": {
     "title": "资源包后台下载",
     "headings": [
       "资源包后台下载"
@@ -5595,7 +5595,7 @@
     "path": "",
     "rel_path": "guide/图形/Graphics Accelerate Kit（图形加速服务）-游戏资源加速服务-资源包后台下载.txt",
     "catalog": "图形",
-    "objectId": "graphics-accelerate-kit-23",
+    "objectId": "graphics-accelerate-kit-24",
     "nodeName": "document",
     "keywords": [
       "graphics",
@@ -5715,7 +5715,7 @@
       "图元绘制"
     ]
   },
-  "arkgraphics-2d-2d-13": {
+  "arkgraphics-2d-2d-17": {
     "title": "字体管理",
     "headings": [
       "字体管理"
@@ -5727,7 +5727,7 @@
     "path": "",
     "rel_path": "guide/图形/ArkGraphics 2D（方舟2D图形服务）-文本-字体管理.txt",
     "catalog": "图形",
-    "objectId": "arkgraphics-2d-2d-13",
+    "objectId": "arkgraphics-2d-2d-17",
     "nodeName": "document",
     "keywords": [
       "字体管理",
@@ -6001,7 +6001,7 @@
       "常见问题"
     ]
   },
-  "ar-engine-ar-ar-engine-4": {
+  "ar-engine-ar-ar-engine-5": {
     "title": "坐标系说明",
     "headings": [
       "坐标系说明",
@@ -6016,7 +6016,7 @@
     "path": "",
     "rel_path": "guide/图形/AR Engine（AR引擎服务）-AR Engine简介-坐标系说明.txt",
     "catalog": "图形",
-    "objectId": "ar-engine-ar-ar-engine-4",
+    "objectId": "ar-engine-ar-ar-engine-5",
     "nodeName": "document",
     "keywords": [
       "重力对齐",
@@ -6158,7 +6158,7 @@
       "超帧功能开发"
     ]
   },
-  "ar-engine-ar-3": {
+  "ar-engine-ar-4": {
     "title": "AR Engine（AR引擎服务）",
     "headings": [
       "AR Engine（AR引擎服务）"
@@ -6170,7 +6170,7 @@
     "path": "",
     "rel_path": "guide/图形/AR Engine（AR引擎服务）.txt",
     "catalog": "图形",
-    "objectId": "ar-engine-ar-3",
+    "objectId": "ar-engine-ar-4",
     "nodeName": "document",
     "keywords": [
       "AR",
@@ -6191,7 +6191,7 @@
       "图形"
     ]
   },
-  "ar-engine-ar-ar-engine-3": {
+  "ar-engine-ar-ar-engine-4": {
     "title": "AR Engine常见问题",
     "headings": [
       "AR Engine常见问题"
@@ -6203,7 +6203,7 @@
     "path": "",
     "rel_path": "guide/图形/AR Engine（AR引擎服务）-AR Engine常见问题.txt",
     "catalog": "图形",
-    "objectId": "ar-engine-ar-ar-engine-3",
+    "objectId": "ar-engine-ar-ar-engine-4",
     "nodeName": "document",
     "keywords": [
       "AR",
@@ -6225,7 +6225,7 @@
       "引擎服务"
     ]
   },
-  "ar-engine-ar-ar-engine-6": {
+  "ar-engine-ar-ar-engine-7": {
     "title": "AR Engine简介",
     "headings": [
       "AR Engine简介"
@@ -6237,7 +6237,7 @@
     "path": "",
     "rel_path": "guide/图形/AR Engine（AR引擎服务）-AR Engine简介.txt",
     "catalog": "图形",
-    "objectId": "ar-engine-ar-ar-engine-6",
+    "objectId": "ar-engine-ar-ar-engine-7",
     "nodeName": "document",
     "keywords": [
       "AR",
@@ -6408,7 +6408,7 @@
       "开发指导"
     ]
   },
-  "arkgraphics-2d-2d-21": {
+  "arkgraphics-2d-2d-25": {
     "title": "ArkGraphics 2D（方舟2D图形服务）",
     "headings": [
       "ArkGraphics 2D（方舟2D图形服务）"
@@ -6420,7 +6420,7 @@
     "path": "",
     "rel_path": "guide/图形/ArkGraphics 2D（方舟2D图形服务）.txt",
     "catalog": "图形",
-    "objectId": "arkgraphics-2d-2d-21",
+    "objectId": "arkgraphics-2d-2d-25",
     "nodeName": "document",
     "keywords": [
       "Image",
@@ -6479,7 +6479,7 @@
       "图形服务"
     ]
   },
-  "arkgraphics-3d-3d": {
+  "arkgraphics-3d-3d-1": {
     "title": "ArkGraphics 3D（方舟3D图形）",
     "headings": [
       "ArkGraphics 3D（方舟3D图形）"
@@ -6491,7 +6491,7 @@
     "path": "",
     "rel_path": "guide/图形/ArkGraphics 3D（方舟3D图形）.txt",
     "catalog": "图形",
-    "objectId": "arkgraphics-3d-3d",
+    "objectId": "arkgraphics-3d-3d-1",
     "nodeName": "document",
     "keywords": [
       "Graphics",
@@ -6824,7 +6824,7 @@
       "图形服务"
     ]
   },
-  "graphics-accelerate-kit-25": {
+  "graphics-accelerate-kit-26": {
     "title": "Graphics Accelerate Kit（图形加速服务）",
     "headings": [
       "Graphics Accelerate Kit（图形加速服务）"
@@ -6836,7 +6836,7 @@
     "path": "",
     "rel_path": "guide/图形/Graphics Accelerate Kit（图形加速服务）.txt",
     "catalog": "图形",
-    "objectId": "graphics-accelerate-kit-25",
+    "objectId": "graphics-accelerate-kit-26",
     "nodeName": "document",
     "keywords": [
       "Graphics",
@@ -7414,7 +7414,7 @@
       "游戏渲染加速服务"
     ]
   },
-  "spatial-recon-kit-1": {
+  "spatial-recon-kit-2": {
     "title": "Spatial Recon Kit（空间建模服务）",
     "headings": [
       "Spatial Recon Kit（空间建模服务）"
@@ -7426,7 +7426,7 @@
     "path": "",
     "rel_path": "guide/图形/Spatial Recon Kit（空间建模服务）.txt",
     "catalog": "图形",
-    "objectId": "spatial-recon-kit-1",
+    "objectId": "spatial-recon-kit-2",
     "nodeName": "document",
     "keywords": [
       "Spatial",
@@ -7777,7 +7777,7 @@
       "顶点标记"
     ]
   },
-  "xengine-kit-gpu-4": {
+  "xengine-kit-gpu-5": {
     "title": "XEngine Kit（GPU加速引擎服务）",
     "headings": [
       "XEngine Kit（GPU加速引擎服务）"
@@ -7789,7 +7789,7 @@
     "path": "",
     "rel_path": "guide/图形/XEngine Kit（GPU加速引擎服务）.txt",
     "catalog": "图形",
-    "objectId": "xengine-kit-gpu-4",
+    "objectId": "xengine-kit-gpu-5",
     "nodeName": "document",
     "keywords": [
       "Kit",

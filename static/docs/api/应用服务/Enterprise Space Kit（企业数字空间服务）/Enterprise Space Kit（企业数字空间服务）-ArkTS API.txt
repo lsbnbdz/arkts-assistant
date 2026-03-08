@@ -1,0 +1,5 @@
+# [ArkTS API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/enterprisespace-arkts)
+
+- **[spaceDataTransfer (空间数据传输)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/enterprisespace-spacedatatransfer)**
+ - **[spaceManager (空间管理)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/enterprisespace-spacemanager)**
+ - **[ArkTS API错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/enterprisespace-error-code)**

@@ -48,7 +48,7 @@
       "基础功能"
     ]
   },
-  "function-flow-runtime-kit": {
+  "function-flow-runtime-kit-1": {
     "title": "Function Flow Runtime Kit（任务并发调度服务）",
     "headings": [
       "Function Flow Runtime Kit（任务并发调度服务）"
@@ -60,7 +60,7 @@
     "path": "",
     "rel_path": "guide/系统/基础功能/Function Flow Runtime Kit（任务并发调度服务）/Function Flow Runtime Kit（任务并发调度服务）.txt",
     "catalog": "Function Flow Runtime Kit（任务并发调度服务）",
-    "objectId": "function-flow-runtime-kit",
+    "objectId": "function-flow-runtime-kit-1",
     "nodeName": "document",
     "keywords": [
       "Function",

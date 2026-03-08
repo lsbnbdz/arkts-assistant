@@ -1,0 +1,28 @@
+# [abr_gles.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/abr__gles_8h)
+
+## 目录
+- [概述](#section332223324093807)
+- [汇总](#section2122196622093807)
+  - [函数](#func-members)
+
+## 概述
+PhoneTablet声明OpenGL ES图形API平台的ABR接口。
+
+ **库：** libabr.so
+
+ **系统能力：** SystemCapability.GraphicsGame.RenderAccelerate
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [GraphicsAccelerate](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_graphics_accelerate)
+
+ 
+## 汇总
+PhoneTablet 
+### 函数
+ PhoneTablet展开
+| |
+| |
+| |
+| ABR_ErrorCode HMS_ABR_MarkFrameBuffer_GLES(ABR_Context* context) | 标记ABR进行自适应渲染处理的GLES Buffer，需要在GLES Buffer开始渲染前调用此接口。 |
+| ABR_ErrorCode HMS_ABR_GetScaledTexture_GLES(ABR_Context* context, uint32_t originTexture, uint32_t* scaledTexture) | 根据原始GLES纹理获取ABR渲染后的GLES纹理。 |

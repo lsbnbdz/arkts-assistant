@@ -1,0 +1,8 @@
+# [ArkTS API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/test-arkts)
+
+- **[@ohos.app.ability.abilityDelegatorRegistry (AbilityDelegatorRegistry)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-app-ability-abilitydelegatorregistry)**
+ - **[@ohos.application.testRunner (TestRunner)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-application-testrunner)**
+ - **[@ohos.UiTest](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-uitest)**
+ - **[@ohos.test.PerfTest](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-perftest)**
+ - **[接口依赖的元素及定义](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/test-api-interface-depend)**
+ - **[已停止维护的接口](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/test-arkts-dep)**

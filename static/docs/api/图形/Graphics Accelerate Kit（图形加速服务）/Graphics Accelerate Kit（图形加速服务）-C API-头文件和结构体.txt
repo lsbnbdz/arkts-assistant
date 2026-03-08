@@ -1,0 +1,4 @@
+# [头文件和结构体](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/total)
+
+- **[头文件](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/files)**
+ - **[结构体](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/annotated)**

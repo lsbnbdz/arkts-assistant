@@ -1,0 +1,6 @@
+# [结构体](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/device-certificate-struct)
+
+- **[OH_CM_Blob](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-certmanagertype-oh-cm-blob)**
+ - **[OH_CM_Credential](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-certmanagertype-oh-cm-credential)**
+ - **[OH_CM_CredentialDetailList](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-certmanagertype-oh-cm-credentialdetaillist)**
+ - **[OH_CM_UkeyInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-certmanagertype-oh-cm-ukeyinfo)**

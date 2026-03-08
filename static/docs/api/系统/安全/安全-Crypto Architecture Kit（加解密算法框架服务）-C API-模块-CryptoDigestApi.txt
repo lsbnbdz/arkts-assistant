@@ -1,0 +1,14 @@
+# [CryptoDigestApi](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-cryptodigestapi)
+
+## 概述
+PhonePC/2in1TabletTVWearable为应用提供摘要算法接口。
+
+ **起始版本：** 12
+
+ 
+## 文件汇总
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| crypto_digest.h | 定义摘要算法API。 |

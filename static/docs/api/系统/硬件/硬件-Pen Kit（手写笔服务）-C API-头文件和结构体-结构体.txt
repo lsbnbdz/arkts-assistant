@@ -1,0 +1,5 @@
+# [结构体](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/pen-struct)
+
+- **[HMS_GCP_Color](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/pen-imagefeaturepicker-struct-color)**
+ - **[HMS_GCP_PickedColorInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/pen-imagefeaturepicker-struct-colorinfo)**
+ - **[HandWrite_HistoricalPoint](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/pen-handwrite-struct-historicalpoint)**

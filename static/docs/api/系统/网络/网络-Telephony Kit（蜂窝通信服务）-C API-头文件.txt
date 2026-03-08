@@ -1,0 +1,5 @@
+# [头文件](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/telephony-headerfile)
+
+- **[telephony_data.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-telephony-data-h)**
+ - **[telephony_radio.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-telephony-radio-h)**
+ - **[telephony_radio_type.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-telephony-radio-type-h)**

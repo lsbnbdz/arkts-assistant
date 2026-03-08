@@ -1,0 +1,51 @@
+# [AREngine_ClipPlaneDistance](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arengine-struct-clipplanedistance)
+
+## 目录
+- [概述](#section1107471767164117)
+- [汇总](#section39573876164117)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section462562193164117)
+  - [far](#a8fd160424c15bc17d2860f26b1f67d3f)
+  - [near](#a60bbc989bbfdd3ea9f45d9eafe7e8e35)
+
+## 概述
+PhoneTablet裁剪平面距离数据。
+
+ 作为[HMS_AREngine_ARCamera_GetProjectionMatrix](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arengine-capi-arengine#ga01feacf9cd393a0598e2ac5cf7b61693)接口输入。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [AR Engine](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arengine-capi-arengine)
+
+ 
+## 汇总
+PhoneTablet 
+### 成员变量
+ PhoneTablet展开
+| |
+| |
+| |
+| float near | OpenGL近裁剪平面距离，以m为单位。 |
+| float far | OpenGL远裁剪平面距离，以m为单位。 |
+
+ 
+## 结构体成员变量说明
+PhoneTablet 
+### far
+PhoneTablet收起自动换行深色代码主题复制
+```
+float AREngine_ClipPlaneDistance::far
+```
+ **描述**
+
+ OpenGL远裁剪平面距离，以m为单位。
+
+ 
+### near
+PhoneTablet收起自动换行深色代码主题复制
+```
+float AREngine_ClipPlaneDistance::near
+```
+ **描述**
+
+ OpenGL近裁剪平面距离，以m为单位。

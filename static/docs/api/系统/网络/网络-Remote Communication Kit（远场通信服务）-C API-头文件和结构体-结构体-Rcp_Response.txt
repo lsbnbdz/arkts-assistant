@@ -1,0 +1,173 @@
+# [Rcp_Response](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___response)
+
+## 目录
+- [概述](#section756034698094053)
+- [汇总](#section590967345094053)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section381301720094053)
+  - [body](#a2ef03d4c3fbd3eb2b39063cdad784c9f)
+  - [cookies](#a8faaf3b941ee3ea71ea9a5f29f0cba0d)
+  - [debugInfo](#ab42553d48543d390dc3e168daa6679fc)
+  - [destroyResponse](#a1fed4fc16ee61a226a4a3cc52d9775bb)
+  - [effectiveUrl](#a70b36ed43793ef7b2316e6651e70bb02)
+  - [headers](#a270f2855aa008069d5ae45284f00a7eb)
+  - [request](#ac840978bf352227f8dc889dd74b9ba18)
+  - [responseCallback](#a3280f7e39349795a5545663ce573798f)
+  - [responsePrivate](#a0fc41a839e5d0646410fc11d46f7fd40)
+  - [statusCode](#a49900c34bb1ce245916a9afa53d1cf29)
+  - [timeInfo](#a57d437be63e686ada47b96b3126067d8)
+
+## 概述
+PhonePC/2in1TabletTVWearable网络请求的响应。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [RemoteCommunication](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| const Rcp_Request * request | 表示生成响应的请求。 |
+| char * effectiveUrl | 上次使用的有效URL。 |
+| Rcp_StatusCode statusCode | 响应状态码。 |
+| Rcp_Headers * headers | 响应标头。 |
+| Rcp_Buffer body | 响应消息体。 |
+| Rcp_DebugInfo * debugInfo | 请求/响应处理调试信息。 |
+| Rcp_TimeInfo * timeInfo | 响应时间信息。 |
+| Rcp_ResponseCookies * cookies | 响应Cookies。 |
+| const Rcp_ResponseCallbackObject * responseCallback | 使用的响应回调。 |
+| void(* destroyResponse )(struct Rcp_Response *response) | 用于销毁响应的方法。 |
+| void * responsePrivate | 可扩展字段。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTVWearable 
+### body
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_Buffer Rcp_Response::body
+```
+ **描述**
+
+ 响应消息体。
+
+ 
+### cookies
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_ResponseCookies* Rcp_Response::cookies
+```
+ **描述**
+
+ 响应Cookies。
+
+ 
+### debugInfo
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_DebugInfo* Rcp_Response::debugInfo
+```
+ **描述**
+
+ 请求/响应处理调试信息。
+
+ 收集的事件取决于[Rcp_TracingConfiguration](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___tracing_configuration)配置信息。
+
+ 
+### destroyResponse
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+void(* Rcp_Response::destroyResponse) (struct Rcp_Response *response)
+```
+ **描述**
+
+ 用于销毁响应的方法。
+
+ **起始版本：** 5.0.0(12)
+
+ **参数:**
+
+ 展开
+| |
+| |
+| |
+| response | 指示要销毁的响应。它是一个指向Rcp_Response的指针。 |
+
+ 
+### effectiveUrl
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+char* Rcp_Response::effectiveUrl
+```
+ **描述**
+
+ 上次使用的有效URL。
+
+ 如果重定向，或设置了[Rcp_SessionConfiguration.baseUrl](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___session_configuration#a8cb997b4f5fdcdf28aad95f975ed2a0c)，则有效URL可能不等于[Rcp_Request.url](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___request#a39a1cc0a1ad666d8d9ad40eec4b52de7)。
+
+ 
+### headers
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_Headers* Rcp_Response::headers
+```
+ **描述**
+
+ 响应标头。
+
+ 
+### request
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+const Rcp_Request* Rcp_Response::request
+```
+ **描述**
+
+ 表示生成响应的请求。
+
+ 
+### responseCallback
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+const Rcp_ResponseCallbackObject* Rcp_Response::responseCallback
+```
+ **描述**
+
+ 使用的响应回调。
+
+ 
+### responsePrivate
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+void* Rcp_Response::responsePrivate
+```
+ **描述**
+
+ 可扩展字段。
+
+ 
+### statusCode
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_StatusCode Rcp_Response::statusCode
+```
+ **描述**
+
+ 响应状态码。
+
+ 
+### timeInfo
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_TimeInfo* Rcp_Response::timeInfo
+```
+ **描述**
+
+ 响应时间信息。
+
+ 是否收集该信息取决于[Rcp_TracingConfiguration.collectTimeInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___tracing_configuration#aded07a3d27e7524e18362082264b9b94)文件中的配置信息。

@@ -1,0 +1,25 @@
+# [结构体](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/basic-services-struct)
+
+- **[CommonEvent_SubscribeInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-commonevent-commonevent-subscribeinfo)**
+ - **[CommonEvent_PublishInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-commonevent-commonevent-publishinfo)**
+ - **[CommonEvent_RcvData](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-commonevent-commonevent-rcvdata)**
+ - **[Pasteboard_ProgressInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-pasteboard-progressinfo)**
+ - **[Pasteboard_GetDataParams](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-pasteboard-getdataparams)**
+ - **[OH_PasteboardObserver](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-pasteboard-oh-pasteboardobserver)**
+ - **[OH_Pasteboard](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-pasteboard-oh-pasteboard)**
+ - **[Print_Margin](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-print-print-margin)**
+ - **[Print_PageSize](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-print-print-pagesize)**
+ - **[Print_Range](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-print-print-range)**
+ - **[Print_DefaultValue](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-print-print-defaultvalue)**
+ - **[Print_PrinterCapability](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-print-print-printercapability)**
+ - **[Print_PrinterInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-print-print-printerinfo)**
+ - **[Print_PrintJob](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-print-print-printjob)**
+ - **[Print_Property](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-print-print-property)**
+ - **[Print_PropertyList](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-print-print-propertylist)**
+ - **[Print_Resolution](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-print-print-resolution)**
+ - **[Print_StringList](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-print-print-stringlist)**
+ - **[Print_PrintAttributes](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-print-print-printattributes)**
+ - **[Print_PrintDocCallback](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-print-print-printdoccallback)**
+ - **[Scan_ScannerDevice](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-scan-scan-scannerdevice)**
+ - **[Scan_PictureScanProgress](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-scan-scan-picturescanprogress)**
+ - **[Scan_ScannerOptions](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-scan-scan-scanneroptions)**

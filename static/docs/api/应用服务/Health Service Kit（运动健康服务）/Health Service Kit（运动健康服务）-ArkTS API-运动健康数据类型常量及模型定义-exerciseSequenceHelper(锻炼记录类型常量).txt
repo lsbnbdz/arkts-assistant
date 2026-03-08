@@ -1,0 +1,2274 @@
+# [exerciseSequenceHelper(锻炼记录类型常量)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-exercisedequencehelper)
+
+## 目录
+- [导入模块](#zh-cn_topic_0000001768344397_section4539115425616)
+- [常量](#section171402050378)
+- [adventures](#section87295263548)
+  - [常量](#section5729132616547)
+  - [Model](#section572915260546)
+  - [SummaryFields](#section373012655417)
+  - [DetailFields](#section1073012655420)
+- [basketball](#section19349175411569)
+  - [常量](#section1535055413566)
+  - [Model](#section11350135425610)
+  - [SummaryFields](#section16350165417561)
+  - [DetailFields](#section1435125435614)
+- [biathlon](#section1899417587582)
+  - [常量](#section19994175885819)
+  - [Model](#section2994155816585)
+  - [SummaryFields](#section09958585584)
+  - [DetailFields](#section1999614584588)
+- [bmx](#section1214013135918)
+  - [常量](#section171409112597)
+  - [Model](#section161404117596)
+  - [SummaryFields](#section71419110593)
+  - [DetailFields](#section141414175911)
+- [breathHoldingTest](#section1737019014410)
+  - [常量](#section4370709410)
+  - [Model](#section1371208410)
+  - [SummaryFields](#section43718017416)
+  - [DetailFields](#section637211017416)
+- [breathHoldingTrain](#section141068216410)
+  - [常量](#section1310632742)
+  - [Model](#section101071021849)
+  - [SummaryFields](#section6107525417)
+  - [DetailFields](#section41086213414)
+- [cycling](#section159931437152911)
+  - [常量](#section299320372296)
+  - [Model](#section1599373716293)
+  - [SummaryFields](#section1599483720293)
+  - [DetailFields](#section988513311325)
+- [diving](#section59304111482)
+  - [常量](#section593010118815)
+  - [Model](#section693001110811)
+  - [SummaryFields](#section99311911381)
+  - [DetailFields](#section1293271115816)
+- [elliptical](#section12797314151013)
+  - [常量](#section17797111421017)
+  - [Model](#section10798171414104)
+  - [SummaryFields](#section2079861411018)
+  - [DetailFields](#section279918149104)
+- [golfCourseModel](#section94801117151016)
+  - [常量](#section15480121711012)
+  - [Model](#section1481181714100)
+  - [SummaryFields](#section5482191718102)
+  - [DetailFields](#section1848281791014)
+- [golfPractice](#section1065672618105)
+  - [常量](#section1765742610109)
+  - [Model](#section14657102615108)
+  - [SummaryFields](#section1865814260106)
+  - [DetailFields](#section10659112619104)
+- [hiking](#section187281513193312)
+  - [常量](#section137281013143315)
+  - [Model](#section127287135339)
+  - [SummaryFields](#section15729513193311)
+  - [DetailFields](#section19729813153313)
+- [indoorCycling](#section13476134919363)
+  - [常量](#section14762493361)
+  - [Model](#section10476104913361)
+  - [SummaryFields](#section147754915360)
+  - [DetailFields](#section174771249113611)
+- [indoorRunning](#section202971045133710)
+  - [常量](#section52972450370)
+  - [Model](#section16297184516378)
+  - [SummaryFields](#section12298845163717)
+  - [DetailFields](#section1529874516376)
+- [indoorWalking](#section1953012133911)
+  - [常量](#section55301112399)
+  - [Model](#section953017112397)
+  - [SummaryFields](#section953101133917)
+  - [DetailFields](#section20531713397)
+- [jumpingRope](#section1451617452397)
+  - [常量](#section185161145153915)
+  - [Model](#section1751734516399)
+  - [SummaryFields](#section185175458394)
+  - [DetailFields](#section17518194593918)
+- [mountainHike](#section16426356101810)
+  - [常量](#section1742655681818)
+  - [Model](#section5427195681819)
+  - [SummaryFields](#section642885610189)
+  - [DetailFields](#section142965611188)
+- [openWaterSwim](#section992405821814)
+  - [常量](#section119248581181)
+  - [Model](#section592585810183)
+  - [SummaryFields](#section39251258201814)
+  - [DetailFields](#section1292665801814)
+- [poolSwim](#section13679160131911)
+  - [常量](#section1467980181920)
+  - [Model](#section106808012192)
+  - [SummaryFields](#section15681109199)
+  - [DetailFields](#section8682160191915)
+- [rower](#section83605251911)
+  - [常量](#section436062171914)
+  - [Model](#section936111216197)
+  - [SummaryFields](#section236214211914)
+  - [DetailFields](#section1236362201910)
+- [rowing](#section1516183518252)
+  - [常量](#section216143562519)
+  - [Model](#section19163203572518)
+  - [SummaryFields](#section0163135162513)
+  - [DetailFields](#section4164193511258)
+- [running](#section1226094116408)
+  - [常量](#section1326024118404)
+  - [Model](#section1226011414409)
+  - [SummaryFields](#section526104111405)
+  - [DetailFields](#section9261114111400)
+- [scubaDiving](#section843523916279)
+  - [常量](#section243517395272)
+  - [Model](#section16437123917274)
+  - [SummaryFields](#section7438139112717)
+  - [DetailFields](#section843963919270)
+- [skiing](#section1489017417277)
+  - [常量](#section15890124120276)
+  - [Model](#section5892134111272)
+  - [SummaryFields](#section1489344132719)
+  - [DetailFields](#section1189414114274)
+- [sled](#section1069254320279)
+  - [常量](#section569310437271)
+  - [Model](#section36944437271)
+  - [SummaryFields](#section76951643152711)
+  - [DetailFields](#section46961443152712)
+- [snowboarding](#section1018784516275)
+  - [常量](#section018720455274)
+  - [Model](#section141887459271)
+  - [SummaryFields](#section1118934512270)
+  - [DetailFields](#section2190345162720)
+- [spinning](#section25291626164113)
+  - [常量](#section13529152615411)
+  - [Model](#section6530202624119)
+  - [SummaryFields](#section1653072618411)
+  - [DetailFields](#section4531162610411)
+- [sports](#section567893213328)
+  - [常量](#section26782324329)
+  - [Model](#section86798328322)
+  - [SummaryFields](#section1167943243212)
+  - [DetailFields](#section196803327323)
+- [trailRunning](#section6758161564214)
+  - [常量](#section1075820157426)
+  - [Model](#section207597152423)
+  - [SummaryFields](#section137597151423)
+  - [DetailFields](#section376031564218)
+- [walking](#section649743184319)
+  - [常量](#section194977384318)
+  - [Model](#section549713310437)
+  - [SummaryFields](#section8498153134310)
+  - [DetailFields](#section19498193114318)
+
+本模块提供锻炼记录数据类型常量及数据模型。
+
+ **起始版本：**5.0.0(12)
+
+ 
+## 导入模块
+PhoneTabletWearable收起自动换行深色代码主题复制
+```
+import { healthStore } from '@kit.HealthServiceKit';
+```
+ 说明此模块为healthStore子模块，需通过healthStore.exerciseSequenceHelper方式使用。
+
+ 
+## 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| DATA_TYPE | healthStore.DataType | 锻炼记录数据类型。 |
+
+ 
+## adventures
+PhoneTabletWearable户外探险数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| EXERCISE_TYPE | healthStore.SubDataType | 户外探险子数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.Adventures
+
+ 户外探险锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.Adventures | 户外探险锻炼记录数据模型。 |
+
+ 
+### SummaryFields
+PhoneTabletWearabletype SummaryFields = healthFields.AdventuresSummary
+
+ 户外探险统计数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.AdventuresSummary | 户外探险统计数据字段列表。 |
+
+ 
+### DetailFields
+PhoneTabletWearabletype DetailFields = healthFields.AdventuresDetail
+
+ 户外探险详情数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.AdventuresDetail | 户外探险详情数据字段列表。 |
+
+ 
+## basketball
+PhoneTabletWearable篮球数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| EXERCISE_TYPE | healthStore.SubDataType | 篮球子数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.Basketball
+
+ 篮球锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.Basketball | 篮球锻炼记录数据模型。 |
+
+ 
+### SummaryFields
+PhoneTabletWearabletype SummaryFields = healthFields.BasketballSummary
+
+ 篮球统计数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.BasketballSummary | 篮球统计数据字段列表。 |
+
+ 
+### DetailFields
+PhoneTabletWearabletype DetailFields = healthFields.BasketballDetail
+
+ 篮球详情数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.BasketballDetail | 篮球详情数据字段列表。 |
+
+ 
+## biathlon
+PhoneTabletWearable冬季两项数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| EXERCISE_TYPE | healthStore.SubDataType | 冬季两项子数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.Biathlon
+
+ 冬季两项锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.Biathlon | 冬季两项锻炼记录数据模型。 |
+
+ 
+### SummaryFields
+PhoneTabletWearabletype SummaryFields = healthFields.BiathlonSummary
+
+ 冬季两项统计数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.BiathlonSummary | 冬季两项统计数据字段列表。 |
+
+ 
+### DetailFields
+PhoneTabletWearabletype DetailFields = healthFields.BiathlonDetail
+
+ 冬季两项详情数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.BiathlonDetail | 冬季两项详情数据字段列表。 |
+
+ 
+## bmx
+PhoneTabletWearableBMX自行车数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| EXERCISE_TYPE | healthStore.SubDataType | BMX自行车子数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.Bmx
+
+ BMX自行车锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.Bmx | BMX自行车锻炼记录数据模型。 |
+
+ 
+### SummaryFields
+PhoneTabletWearabletype SummaryFields = healthFields.CyclingSummary
+
+ BMX自行车统计数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.CyclingSummary | BMX自行车统计数据字段列表。 |
+
+ 
+### DetailFields
+PhoneTabletWearabletype DetailFields = healthFields.CyclingDetail
+
+ BMX自行车详情数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.CyclingDetail | BMX自行车详情数据字段列表。 |
+
+ 
+## breathHoldingTest
+PhoneTabletWearable闭气测试数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| EXERCISE_TYPE | healthStore.SubDataType | 闭气测试子数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.BreathHoldingTest
+
+ 闭气测试锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.BreathHoldingTest | 闭气测试锻炼记录数据模型。 |
+
+ 
+### SummaryFields
+PhoneTabletWearabletype SummaryFields = healthFields.BreathHoldingTestSummary
+
+ 闭气测试统计数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.BreathHoldingTestSummary | 闭气测试统计数据字段列表。 |
+
+ 
+### DetailFields
+PhoneTabletWearabletype DetailFields = healthFields.BreathHoldingTestDetail
+
+ 闭气测试详情数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.BreathHoldingTestDetail | 闭气测试详情数据字段列表。 |
+
+ 
+## breathHoldingTrain
+PhoneTabletWearable闭气训练数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| EXERCISE_TYPE | healthStore.SubDataType | 闭气训练子数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.BreathHoldingTrain
+
+ 闭气训练锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.BreathHoldingTrain | 闭气训练锻炼记录数据模型。 |
+
+ 
+### SummaryFields
+PhoneTabletWearabletype SummaryFields = healthFields.BreathHoldingTrainSummary
+
+ 闭气训练统计数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.BreathHoldingTrainSummary | 闭气训练统计数据字段列表。 |
+
+ 
+### DetailFields
+PhoneTabletWearabletype DetailFields = healthFields.BreathHoldingTrainDetail
+
+ 闭气训练详情数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.BreathHoldingTrainDetail | 闭气训练详情数据字段列表。 |
+
+ 
+## cycling
+PhoneTabletWearable户外骑行数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| EXERCISE_TYPE | healthStore.SubDataType | 户外骑行子数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.Cycling
+
+ 户外骑行锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.Cycling | 户外骑行锻炼记录数据模型。 |
+
+ 
+### SummaryFields
+PhoneTabletWearabletype SummaryFields = healthFields.CyclingSummary
+
+ 户外骑行统计数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.CyclingSummary | 户外骑行统计数据字段列表。 |
+
+ 
+### DetailFields
+PhoneTabletWearabletype DetailFields = healthFields.CyclingDetail
+
+ 户外骑行详情数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.CyclingDetail | 户外骑行详情数据字段列表。 |
+
+ 
+## diving
+PhoneTabletWearable自由潜水数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| EXERCISE_TYPE | healthStore.SubDataType | 自由潜水子数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.Diving
+
+ 自由潜水锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.Diving | 自由潜水锻炼记录数据模型。 |
+
+ 
+### SummaryFields
+PhoneTabletWearabletype SummaryFields = healthFields.DivingSummary
+
+ 自由潜水统计数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.DivingSummary | 自由潜水统计数据字段列表。 |
+
+ 
+### DetailFields
+PhoneTabletWearabletype DetailFields = healthFields.DivingDetail
+
+ 自由潜水详情数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.DivingDetail | 自由潜水详情数据字段列表。 |
+
+ 
+## elliptical
+PhoneTabletWearable椭圆机数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| EXERCISE_TYPE | healthStore.SubDataType | 椭圆机子数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.Elliptical
+
+ 椭圆机锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.Elliptical | 椭圆机锻炼记录数据模型。 |
+
+ 
+### SummaryFields
+PhoneTabletWearabletype SummaryFields = healthFields.EllipticalSummary
+
+ 椭圆机统计数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.EllipticalSummary | 椭圆机统计数据字段列表。 |
+
+ 
+### DetailFields
+PhoneTabletWearabletype DetailFields = healthFields.EllipticalDetail
+
+ 椭圆机详情数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.EllipticalDetail | 椭圆机详情数据字段列表。 |
+
+ 
+## golfCourseModel
+PhoneTabletWearable高尔夫场地模式数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| EXERCISE_TYPE | healthStore.SubDataType | 高尔夫场地模式子数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.GolfCourseModel
+
+ 高尔夫场地模式锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.GolfCourseModel | 高尔夫场地模式锻炼记录数据模型。 |
+
+ 
+### SummaryFields
+PhoneTabletWearabletype SummaryFields = healthFields.GolfCourseModelSummary
+
+ 高尔夫场地模式统计数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.GolfCourseModelSummary | 高尔夫场地模式统计数据字段列表。 |
+
+ 
+### DetailFields
+PhoneTabletWearabletype DetailFields = healthFields.GolfCourseModelDetail
+
+ 高尔夫场地模式详情数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.GolfCourseModelDetail | 高尔夫场地模式详情数据字段列表。 |
+
+ 
+## golfPractice
+PhoneTabletWearable高尔夫练习场模式数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| EXERCISE_TYPE | healthStore.SubDataType | 高尔夫练习场模式子数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.GolfPractice
+
+ 高尔夫练习场模式锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.GolfPractice | 高尔夫练习场模式锻炼记录数据模型。 |
+
+ 
+### SummaryFields
+PhoneTabletWearabletype SummaryFields = healthFields.GolfPracticeSummary
+
+ 高尔夫练习场模式统计数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.GolfPracticeSummary | 高尔夫练习场模式统计数据字段列表。 |
+
+ 
+### DetailFields
+PhoneTabletWearabletype DetailFields = healthFields.GolfPracticeDetail
+
+ 高尔夫练习场模式详情数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.GolfPracticeDetail | 高尔夫练习场模式详情数据字段列表。 |
+
+ 
+## hiking
+PhoneTabletWearable徒步数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| EXERCISE_TYPE | healthStore.SubDataType | 徒步子数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.Hiking
+
+ 徒步锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.Hiking | 徒步锻炼记录数据模型。 |
+
+ 
+### SummaryFields
+PhoneTabletWearabletype SummaryFields = healthFields.WalkingSummary
+
+ 徒步统计数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.WalkingSummary | 徒步统计数据字段列表。 |
+
+ 
+### DetailFields
+PhoneTabletWearabletype DetailFields = healthFields.WalkingDetail
+
+ 徒步详情数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.WalkingDetail | 徒步详情数据字段列表。 |
+
+ 
+## indoorCycling
+PhoneTabletWearable室内骑行数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| EXERCISE_TYPE | healthStore.SubDataType | 室内骑行子数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.IndoorCycling
+
+ 室内骑行锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.IndoorCycling | 室内骑行锻炼记录数据模型。 |
+
+ 
+### SummaryFields
+PhoneTabletWearabletype SummaryFields = healthFields.CyclingSummary
+
+ 室内骑行统计数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.CyclingSummary | 室内骑行统计数据字段列表。 |
+
+ 
+### DetailFields
+PhoneTabletWearabletype DetailFields = healthFields.CyclingDetail
+
+ 室内骑行详情数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.CyclingDetail | 室内骑行详情数据字段列表。 |
+
+ 
+## indoorRunning
+PhoneTabletWearable室内跑步数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| EXERCISE_TYPE | healthStore.SubDataType | 室内跑步子数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.IndoorRunning
+
+ 室内跑步锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.IndoorRunning | 室内跑步锻炼记录数据模型。 |
+
+ 
+### SummaryFields
+PhoneTabletWearabletype SummaryFields = healthFields.RunningSummary
+
+ 室内跑步统计数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.RunningSummary | 室内跑步统计数据字段列表。 |
+
+ 
+### DetailFields
+PhoneTabletWearabletype DetailFields = healthFields.RunningDetail
+
+ 室内跑步详情数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.RunningDetail | 室内跑步详情数据字段列表。 |
+
+ 
+## indoorWalking
+PhoneTabletWearable室内步行数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| EXERCISE_TYPE | healthStore.SubDataType | 室内步行子数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.IndoorWalking
+
+ 室内步行锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.IndoorWalking | 室内步行锻炼记录数据模型。 |
+
+ 
+### SummaryFields
+PhoneTabletWearabletype SummaryFields = healthFields.WalkingSummary
+
+ 室内步行统计数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.WalkingSummary | 室内步行统计数据字段列表。 |
+
+ 
+### DetailFields
+PhoneTabletWearabletype DetailFields = healthFields.WalkingDetail
+
+ 室内步行详情数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.WalkingDetail | 室内步行详情数据字段列表。 |
+
+ 
+## jumpingRope
+PhoneTabletWearable跳绳数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| EXERCISE_TYPE | healthStore.SubDataType | 跳绳子数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.JumpingRope
+
+ 跳绳锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.JumpingRope | 跳绳锻炼记录数据模型。 |
+
+ 
+### SummaryFields
+PhoneTabletWearabletype SummaryFields = healthFields.JumpingRopeSummary
+
+ 跳绳统计数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.JumpingRopeSummary | 跳绳统计数据字段列表。 |
+
+ 
+### DetailFields
+PhoneTabletWearabletype DetailFields = healthFields.JumpingRopeDetail
+
+ 跳绳详情数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.JumpingRopeDetail | 跳绳详情数据字段列表。 |
+
+ 
+## mountainHike
+PhoneTabletWearable登山数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| EXERCISE_TYPE | healthStore.SubDataType | 登山子数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.MountainHike
+
+ 登山锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.MountainHike | 登山锻炼记录数据模型。 |
+
+ 
+### SummaryFields
+PhoneTabletWearabletype SummaryFields = healthFields.MountainHikeSummary
+
+ 登山统计数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.MountainHikeSummary | 登山统计数据字段列表。 |
+
+ 
+### DetailFields
+PhoneTabletWearabletype DetailFields = healthFields.MountainHikeDetail
+
+ 登山详情数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.MountainHikeDetail | 登山详情数据字段列表。 |
+
+ 
+## openWaterSwim
+PhoneTabletWearable开放水域游泳数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| EXERCISE_TYPE | healthStore.SubDataType | 开放水域游泳子数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.OpenWaterSwim
+
+ 开放水域游泳锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.OpenWaterSwim | 开放水域游泳锻炼记录数据模型。 |
+
+ 
+### SummaryFields
+PhoneTabletWearabletype SummaryFields = healthFields.OpenWaterSwimSummary
+
+ 开放水域游泳统计数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.OpenWaterSwimSummary | 开放水域游泳统计数据字段列表。 |
+
+ 
+### DetailFields
+PhoneTabletWearabletype DetailFields = healthFields.OpenWaterSwimDetail
+
+ 开放水域游泳详情数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.OpenWaterSwimDetail | 开放水域游泳详情数据字段列表。 |
+
+ 
+## poolSwim
+PhoneTabletWearable泳池游泳数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| EXERCISE_TYPE | healthStore.SubDataType | 泳池游泳子数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.PoolSwim
+
+ 泳池游泳锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.PoolSwim | 泳池游泳锻炼记录数据模型。 |
+
+ 
+### SummaryFields
+PhoneTabletWearabletype SummaryFields = healthFields.PoolSwimSummary
+
+ 泳池游泳统计数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.PoolSwimSummary | 泳池游泳统计数据字段列表。 |
+
+ 
+### DetailFields
+PhoneTabletWearabletype DetailFields = healthFields.PoolSwimDetail
+
+ 泳池游泳详情数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.PoolSwimDetail | 泳池游泳详情数据字段列表。 |
+
+ 
+## rower
+PhoneTabletWearable划船机数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| EXERCISE_TYPE | healthStore.SubDataType | 划船机子数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.Rower
+
+ 划船机锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.Rower | 划船机锻炼记录数据模型。 |
+
+ 
+### SummaryFields
+PhoneTabletWearabletype SummaryFields = healthFields.RowerSummary
+
+ 划船机统计数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.RowerSummary | 划船机统计数据字段列表。 |
+
+ 
+### DetailFields
+PhoneTabletWearabletype DetailFields = healthFields.RowerDetail
+
+ 划船机详情数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.RowerDetail | 划船机详情数据字段列表。 |
+
+ 
+## rowing
+PhoneTabletWearable赛艇数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| EXERCISE_TYPE | healthStore.SubDataType | 赛艇子数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.Rowing
+
+ 赛艇锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.Rowing | 赛艇锻炼记录数据模型。 |
+
+ 
+### SummaryFields
+PhoneTabletWearabletype SummaryFields = healthFields.RowingSummary
+
+ 赛艇统计数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.RowingSummary | 赛艇统计数据字段列表。 |
+
+ 
+### DetailFields
+PhoneTabletWearabletype DetailFields = healthFields.RowingDetail
+
+ 赛艇详情数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.RowingDetail | 赛艇详情数据字段列表。 |
+
+ 
+## running
+PhoneTabletWearable户外跑步数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| EXERCISE_TYPE | healthStore.SubDataType | 户外跑步子数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.Running
+
+ 户外跑步锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.Running | 户外跑步锻炼记录数据模型。 |
+
+ 
+### SummaryFields
+PhoneTabletWearabletype SummaryFields = healthFields.RunningSummary
+
+ 户外跑步统计数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.RunningSummary | 户外跑步统计数据字段列表。 |
+
+ 
+### DetailFields
+PhoneTabletWearabletype DetailFields = healthFields.RunningDetail
+
+ 户外跑步详情数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.RunningDetail | 户外跑步详情数据字段列表。 |
+
+ 
+## scubaDiving
+PhoneTabletWearable水肺潜水数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| EXERCISE_TYPE | healthStore.SubDataType | 水肺潜水子数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.ScubaDiving
+
+ 水肺潜水锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.ScubaDiving | 水肺潜水锻炼记录数据模型。 |
+
+ 
+### SummaryFields
+PhoneTabletWearabletype SummaryFields = healthFields.ScubaDivingSummary
+
+ 水肺潜水统计数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.ScubaDivingSummary | 水肺潜水统计数据字段列表。 |
+
+ 
+### DetailFields
+PhoneTabletWearabletype DetailFields = healthFields.ScubaDivingDetail
+
+ 水肺潜水详情数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.ScubaDivingDetail | 水肺潜水详情数据字段列表。 |
+
+ 
+## skiing
+PhoneTabletWearable滑雪数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| EXERCISE_TYPE | healthStore.SubDataType | 滑雪子数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.Skiing
+
+ 滑雪锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.Skiing | 滑雪锻炼记录数据模型。 |
+
+ 
+### SummaryFields
+PhoneTabletWearabletype SummaryFields = healthFields.SkiingSummary
+
+ 滑雪统计数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.SkiingSummary | 滑雪统计数据字段列表。 |
+
+ 
+### DetailFields
+PhoneTabletWearabletype DetailFields = healthFields.SkiingDetail
+
+ 滑雪详情数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.SkiingDetail | 滑雪详情数据字段列表。 |
+
+ 
+## sled
+PhoneTabletWearable滑雪橇数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| EXERCISE_TYPE | healthStore.SubDataType | 滑雪橇子数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.Sled
+
+ 滑雪橇锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.Sled | 滑雪橇锻炼记录数据模型。 |
+
+ 
+### SummaryFields
+PhoneTabletWearabletype SummaryFields = healthFields.SledSummary
+
+ 滑雪橇统计数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.SledSummary | 滑雪橇统计数据字段列表。 |
+
+ 
+### DetailFields
+PhoneTabletWearabletype DetailFields = healthFields.SledDetail
+
+ 滑雪橇详情数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.SledDetail | 滑雪橇详情数据字段列表。 |
+
+ 
+## snowboarding
+PhoneTabletWearable单板滑雪数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| EXERCISE_TYPE | healthStore.SubDataType | 单板滑雪子数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.Snowboarding
+
+ 单板滑雪锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.Snowboarding | 单板滑雪锻炼记录数据模型。 |
+
+ 
+### SummaryFields
+PhoneTabletWearabletype SummaryFields = healthFields.SnowboardingSummary
+
+ 单板滑雪统计数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.SnowboardingSummary | 单板滑雪统计数据字段列表。 |
+
+ 
+### DetailFields
+PhoneTabletWearabletype DetailFields = healthFields.SnowboardingDetail
+
+ 单板滑雪详情数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.SnowboardingDetail | 单板滑雪详情数据字段列表。 |
+
+ 
+## spinning
+PhoneTabletWearable动感单车数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| EXERCISE_TYPE | healthStore.SubDataType | 动感单车子数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.Spinning
+
+ 动感单车锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.Spinning | 动感单车锻炼记录数据模型。 |
+
+ 
+### SummaryFields
+PhoneTabletWearabletype SummaryFields = healthFields.CyclingSummary
+
+ 动感单车统计数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.CyclingSummary | 动感单车统计数据字段列表。 |
+
+ 
+### DetailFields
+PhoneTabletWearabletype DetailFields = healthFields.CyclingDetail
+
+ 动感单车详情数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.CyclingDetail | 动感单车详情数据字段列表。 |
+
+ 
+## sports
+PhoneTabletWearable其他运动数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| AEROBICS | healthStore.SubDataType | 健美操 |
+| AIR_WALKER | healthStore.SubDataType | 漫步机 |
+| ARCHERY | healthStore.SubDataType | 射箭 |
+| BADMINTON | healthStore.SubDataType | 羽毛球 |
+| BALLET | healthStore.SubDataType | 芭蕾舞 |
+| BASEBALL | healthStore.SubDataType | 棒球 |
+| BEACH_SOCCER | healthStore.SubDataType | 沙滩足球 |
+| BEACH_VOLLEYBALL | healthStore.SubDataType | 沙滩排球 |
+| BELLY_DANCE | healthStore.SubDataType | 肚皮舞 |
+| BODY_COMBAT | healthStore.SubDataType | 搏击操 |
+| BOWLING | healthStore.SubDataType | 保龄球 |
+| BOXING | healthStore.SubDataType | 拳击 |
+| BUNGEE_JUMPING | healthStore.SubDataType | 蹦极 |
+| CANOEING | healthStore.SubDataType | 皮划艇 |
+| CORE_TRAINING | healthStore.SubDataType | 核心训练 |
+| CRICKET | healthStore.SubDataType | 板球 |
+| CROSS_COUNTRY_SKIING | healthStore.SubDataType | 越野滑雪 |
+| CROSS_FIT | healthStore.SubDataType | Cross fit |
+| CURLING | healthStore.SubDataType | 冰壶 |
+| DANCE | healthStore.SubDataType | 舞蹈 |
+| DARTS | healthStore.SubDataType | 飞镖 |
+| DODGE_BALL | healthStore.SubDataType | 躲避球 |
+| DRAGON_BOAT | healthStore.SubDataType | 龙舟 |
+| DRIFTING | healthStore.SubDataType | 漂流 |
+| ESPORTS | healthStore.SubDataType | 电子竞技 |
+| FENCING | healthStore.SubDataType | 击剑 |
+| FISHING | healthStore.SubDataType | 钓鱼 |
+| FREE_SPARRING | healthStore.SubDataType | 自由搏击 |
+| FREE_TRAINING | healthStore.SubDataType | 自由训练 |
+| FRISBEE | healthStore.SubDataType | 飞盘 |
+| FUNCTIONAL_TRAINING | healthStore.SubDataType | 功能性训练 |
+| GATEBALL | healthStore.SubDataType | 门球 |
+| HANDBALL | healthStore.SubDataType | 手球 |
+| HIIT | healthStore.SubDataType | HIIT |
+| HOCKEY | healthStore.SubDataType | 曲棍球 |
+| HORSE_RIDING | healthStore.SubDataType | 骑马 |
+| HULA_HOOP | healthStore.SubDataType | 呼啦圈 |
+| HUNTING | healthStore.SubDataType | 对战游戏 |
+| ICE_HOCKEY | healthStore.SubDataType | 冰球 |
+| JAZZ_DANCE | healthStore.SubDataType | 爵士舞 |
+| KARATE | healthStore.SubDataType | 空手道 |
+| KENDO | healthStore.SubDataType | 剑道 |
+| KITE_FLYING | healthStore.SubDataType | 放风筝 |
+| LATIN_DANCE | healthStore.SubDataType | 拉丁舞 |
+| MARTIAL_ARTS | healthStore.SubDataType | 武术 |
+| MOTORBOAT | healthStore.SubDataType | 摩托艇 |
+| OBSTACLE_RACE | healthStore.SubDataType | 障碍赛 |
+| ORIENTEERING | healthStore.SubDataType | 定向越野 |
+| PADEL | healthStore.SubDataType | 笼式网球 |
+| PARACHUTE | healthStore.SubDataType | 跳伞 |
+| PARALLEL_BARS | healthStore.SubDataType | 双杠 |
+| PARKOUR | healthStore.SubDataType | 跑酷 |
+| PHYSICAL_TRAINING | healthStore.SubDataType | 体能训练 |
+| PILATES | healthStore.SubDataType | 普拉提 |
+| PLAYGROUND_RACE | healthStore.SubDataType | 操场赛跑 |
+| PLAZA_DANCING | healthStore.SubDataType | 广场舞 |
+| POOL | healthStore.SubDataType | 台球 |
+| RACING_CAR | healthStore.SubDataType | 赛车 |
+| ROCK_CLIMBING | healthStore.SubDataType | 攀岩 |
+| ROLLER_SKATING | healthStore.SubDataType | 轮滑 |
+| RUGBY | healthStore.SubDataType | 橄榄球 |
+| SAILBOAT | healthStore.SubDataType | 帆船 |
+| SENSE_SPORT | healthStore.SubDataType | 体感运动 |
+| SEPAKTAKRAW | healthStore.SubDataType | 藤球 |
+| SHUTTLECOCK | healthStore.SubDataType | 毽球 |
+| SINGLE_BAR | healthStore.SubDataType | 单杠 |
+| SKATEBOARD | healthStore.SubDataType | 滑板 |
+| SKATING | healthStore.SubDataType | 滑冰 |
+| SNOWMOBILE | healthStore.SubDataType | 雪地摩托 |
+| SOCCER | healthStore.SubDataType | 足球 |
+| SOFTBALL | healthStore.SubDataType | 垒球 |
+| SQUASH | healthStore.SubDataType | 壁球 |
+| STAIR_CLIMBING | healthStore.SubDataType | 爬楼 |
+| STEPPER | healthStore.SubDataType | 踏步机 |
+| STREET_DANCE | healthStore.SubDataType | 街舞 |
+| STRENGTH_TRAINING | healthStore.SubDataType | 力量训练 |
+| SUP | healthStore.SubDataType | 桨板冲浪 |
+| SURFING | healthStore.SubDataType | 冲浪 |
+| SWINGING | healthStore.SubDataType | 秋千 |
+| TABLE_TENNIS | healthStore.SubDataType | 乒乓球 |
+| TAEKWONDO | healthStore.SubDataType | 跆拳道 |
+| TAI_CHI | healthStore.SubDataType | 太极拳 |
+| TENNIS | healthStore.SubDataType | 网球 |
+| TRIATHLON | healthStore.SubDataType | 铁人三项 |
+| TUG_OF_WAR | healthStore.SubDataType | 拔河 |
+| VOLLEYBALL | healthStore.SubDataType | 排球 |
+| YOGA | healthStore.SubDataType | 瑜伽 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.Sports
+
+ 通用锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.Sports | 通用锻炼记录数据模型。 |
+
+ 
+### SummaryFields
+PhoneTabletWearabletype SummaryFields = healthFields.SportsSummary
+
+ 通用统计数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.SportsSummary | 通用统计数据字段列表。 |
+
+ 
+### DetailFields
+PhoneTabletWearabletype DetailFields = healthFields.SportsDetail
+
+ 通用详情数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.SportsDetail | 通用详情数据字段列表。 |
+
+ 
+## trailRunning
+PhoneTabletWearable越野跑数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| EXERCISE_TYPE | healthStore.SubDataType | 越野跑子数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.TrailRunning
+
+ 越野跑锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.TrailRunning | 越野跑锻炼记录数据模型。 |
+
+ 
+### SummaryFields
+PhoneTabletWearabletype SummaryFields = healthFields.RunningSummary
+
+ 越野跑统计数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.RunningSummary | 越野跑统计数据字段列表。 |
+
+ 
+### DetailFields
+PhoneTabletWearabletype DetailFields = healthFields.RunningDetail
+
+ 越野跑详情数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.RunningDetail | 越野跑详情数据字段列表。 |
+
+ 
+## walking
+PhoneTabletWearable户外步行数据类型常量及数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 
+### 常量
+PhoneTabletWearable**系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| EXERCISE_TYPE | healthStore.SubDataType | 户外步行子数据类型。 |
+
+ 
+### Model
+PhoneTabletWearabletype Model = healthModels.Walking
+
+ 户外步行锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthModels.Walking | 户外步行锻炼记录数据模型。 |
+
+ 
+### SummaryFields
+PhoneTabletWearabletype SummaryFields = healthFields.WalkingSummary
+
+ 户外步行统计数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.WalkingSummary | 户外步行统计数据字段列表。 |
+
+ 
+### DetailFields
+PhoneTabletWearabletype DetailFields = healthFields.WalkingDetail
+
+ 户外步行详情数据字段列表。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthFields.WalkingDetail | 户外步行详情数据字段列表。 |

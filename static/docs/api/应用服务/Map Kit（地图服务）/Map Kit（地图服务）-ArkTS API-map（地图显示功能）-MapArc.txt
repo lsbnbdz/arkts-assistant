@@ -1,0 +1,143 @@
+# [MapArc](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-maparc)
+
+## 目录
+- [导入模块](#section164051883419)
+- [MapArc](#section017215712213)
+  - [getColor](#section644644620444)
+  - [getWidth](#section10673105385615)
+  - [setColor](#section3421169195411)
+  - [setWidth](#section691964919533)
+
+## 导入模块
+PhonePC/2in1TabletWearable收起自动换行深色代码主题复制
+```
+import { map, mapCommon } from '@kit.MapKit';
+```
+ 
+## MapArc
+PhonePC/2in1TabletWearable弧线。继承[BaseOverlay](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-baseoverlay)。在调用map.[MapComponentController](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-mapcomponentcontroller)类的[addArc](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-mapcomponentcontroller#section123390488448)方法时会返回该类型的实例。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本5.0.0(12)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**5.0.0(12)
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+// 设置弧线参数let mapArcParams: mapCommon.MapArcParams = { // 弧线起点坐标 startPoint: { latitude: 39.913138, longitude: 116.415112 }, // 弧线终点坐标 endPoint: { latitude: 28.239473, longitude: 112.954094 }, // 弧线中心点坐标 centerPoint: { latitude: 33.86970399048567, longitude: 112.08633528544145 }, width: 10, color: 0xffff0000, visible: true, zIndex: 100};// 添加弧线let mapArc: map.MapArc = this.mapController.addArc(mapArcParams);
+```
+ 
+### getColor
+PhonePC/2in1TabletWearablegetColor(): number
+
+ 获取弧线的颜色。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本5.0.0(12)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**5.0.0(12)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| number | ARGB格式颜色值。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let color: number = mapArc.getColor();
+```
+ 
+### getWidth
+PhonePC/2in1TabletWearablegetWidth(): number
+
+ 获取弧线的宽度。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本5.0.0(12)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**5.0.0(12)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| number | 弧线的宽度。单位：px。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let width: number = mapArc.getWidth();
+```
+ 
+### setColor
+PhonePC/2in1TabletWearablesetColor(color: number): void
+
+ 设置弧线的颜色。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本5.0.0(12)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**5.0.0(12)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| color | number | 是 | ARGB格式颜色值。默认值为黑色（0xff000000） |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+mapArc.setColor(0xffff00ff);
+```
+ 
+### setWidth
+PhonePC/2in1TabletWearablesetWidth(width: number): void
+
+ 设置弧线的宽度。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本5.0.0(12)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**5.0.0(12)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| width | number | 是 | 弧线的宽度，单位：px，取值范围：大于等于0。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+mapArc.setWidth(20);
+```

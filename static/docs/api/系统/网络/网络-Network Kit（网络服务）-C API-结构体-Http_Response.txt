@@ -1,0 +1,67 @@
+# [Http_Response](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netstack-http-response)
+
+## 目录
+- [概述](#概述)
+- [汇总](#汇总)
+  - [成员变量](#成员变量)
+  - [成员函数](#成员函数)
+- [成员函数说明](#成员函数说明)
+  - [destroyResponse()](#destroyresponse)
+
+收起自动换行深色代码主题复制
+```
+typedef struct Http_Response {...} Http_Response
+```
+ 
+## 概述
+PhonePC/2in1TabletTVWearable定义HTTP响应的结构体。
+
+ **起始版本：** 20
+
+ **相关模块：** [netstack](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netstack)
+
+ **所在头文件：** [net_http_type.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-net-http-type-h)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| Http_Buffer body | HTTP请求响应的数据，参考 Http_Buffer 。 |
+| Http_ResponseCode responseCode | HTTP请求响应码，参考 Http_ResponseCode 。 |
+| Http_Headers *headers | HTTP响应的头，指向Http_Headers的指针，参考 Http_Headers 。 |
+| char *cookies | HTTP响应Cookies。 |
+| Http_PerformanceTiming *performanceTiming | HTTP响应时间信息，指向Http_PerformanceTiming的指针，参考 Http_PerformanceTiming 。 |
+
+ 
+### 成员函数
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| void (*destroyResponse)(struct Http_Response **response) | 销毁HTTP响应的回调函数 |
+
+ 
+## 成员函数说明
+PhonePC/2in1TabletTVWearable 
+### destroyResponse()
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+void (*destroyResponse)(struct Http_Response **response)
+```
+ **描述**
+
+ 销毁HTTP响应的回调函数
+
+ **起始版本：** 20
+
+ **参数：**
+
+ 展开
+| |
+| |
+| |
+| struct Http_Response **response | 要销毁的HTTP响应，指向Http_Response的指针，参考 Http_Response 。 |

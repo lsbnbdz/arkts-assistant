@@ -1,0 +1,103 @@
+{
+  "calendar-kit-arkts-api-ohos-calendarmanager": {
+    "title": "@ohos.calendarManager (日程管理能力)",
+    "headings": [
+      "@ohos.calendarManager (日程管理能力)",
+      "目录",
+      "导入模块",
+      "calendarManager.getCalendarManager",
+      "CalendarManager",
+      "createCalendar",
+      "createCalendar",
+      "deleteCalendar",
+      "deleteCalendar",
+      "getCalendar",
+      "getCalendar",
+      "getCalendar",
+      "getAllCalendars",
+      "getAllCalendars",
+      "editEvent12+"
+    ],
+    "preview": "@ohos.calendarManager (日程管理能力) 本模块提供日历与日程管理能力，包括日历和日程的创建、删除、修改、查询等。 - 日历管理器CalendarManager用于管理日历Calendar。 - 日历Calendar主要包含账户信息CalendarAccount和配置信息CalendarConfig。日历Calendar与日程Event属于从属关系，需要先创建日历Calendar对象，然后再通过日历Calendar创建日程Event对象，一个Calendar可以有多个Event，一个Event只属于一个Calendar。日历管理器是对日历的管理，日程过滤器是对日程的管理。",
+    "char_count": 65946,
+    "image_count": 0,
+    "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-calendarmanager",
+    "path": "",
+    "rel_path": "api/应用服务/Calendar Kit（日历服务）/Calendar Kit（日历服务）-ArkTS API-@ohos.calendarManager (日程管理能力).txt",
+    "catalog": "Calendar Kit（日历服务）",
+    "objectId": "calendar-kit-arkts-api-ohos-calendarmanager",
+    "nodeName": "document",
+    "keywords": [
+      "Event",
+      "Manager",
+      "@ohos.calendarManager",
+      "Calendar",
+      "ohos",
+      "get",
+      "Service",
+      "calendarManager",
+      "日程管理能力",
+      "Events",
+      "delete",
+      "Config",
+      "event",
+      "calendar",
+      "calendarmanager",
+      "Kit",
+      "日历服务",
+      "应用服务"
+    ]
+  },
+  "calendar-kit-arkts-api": {
+    "title": "ArkTS API",
+    "headings": [
+      "ArkTS API"
+    ],
+    "preview": "ArkTS API - **@ohos.calendarManager (日程管理能力)**",
+    "char_count": 226,
+    "image_count": 0,
+    "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/calendar-arkts",
+    "path": "",
+    "rel_path": "api/应用服务/Calendar Kit（日历服务）/Calendar Kit（日历服务）-ArkTS API.txt",
+    "catalog": "Calendar Kit（日历服务）",
+    "objectId": "calendar-kit-arkts-api",
+    "nodeName": "document",
+    "keywords": [
+      "@ohos.calendarManager",
+      "ohos",
+      "Manager",
+      "calendar",
+      "references",
+      "日程管理",
+      "能力",
+      "calendarmanager",
+      "Calendar",
+      "Kit",
+      "日历服务",
+      "应用服务"
+    ]
+  },
+  "calendar-kit": {
+    "title": "Calendar Kit（日历服务）",
+    "headings": [
+      "Calendar Kit（日历服务）"
+    ],
+    "preview": "Calendar Kit（日历服务） - **ArkTS API**",
+    "char_count": 203,
+    "image_count": 0,
+    "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/calendar-api",
+    "path": "",
+    "rel_path": "api/应用服务/Calendar Kit（日历服务）/Calendar Kit（日历服务）.txt",
+    "catalog": "Calendar Kit（日历服务）",
+    "objectId": "calendar-kit",
+    "nodeName": "document",
+    "keywords": [
+      "Calendar",
+      "Kit",
+      "日历服务",
+      "references",
+      "calendar",
+      "应用服务"
+    ]
+  }
+}

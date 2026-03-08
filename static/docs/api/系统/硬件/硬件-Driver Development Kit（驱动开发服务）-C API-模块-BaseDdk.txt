@@ -1,0 +1,19 @@
+# [BaseDdk](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-baseddk)
+
+## 目录
+- [概述](#概述)
+- [文件汇总](#文件汇总)
+
+## 概述
+PC/2in1提供BASE DDK接口，包括创建共享内存，映射共享内存，取消映射共享内存，以及摧毁共享内存。
+
+ **起始版本：** 12
+
+ 
+## 文件汇总
+ PC/2in1展开
+| |
+| |
+| |
+| ddk_api.h | 声明主机侧访问的Base DDK接口。 |
+| ddk_types.h | 提供基础DDK接口所使用的Base DDK类型，宏定义，枚举值和数据结构。 |

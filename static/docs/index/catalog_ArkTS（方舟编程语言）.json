@@ -11,7 +11,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@arkts.lang (ArkTS语言基础能力).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@arkts.lang (ArkTS语言基础能力).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-arkts-lang-arkts",
     "nodeName": "document",
@@ -31,7 +31,8 @@
       "ets",
       "null",
       "undefined",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-arkts-math-decimal-decimal": {
@@ -58,7 +59,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@arkts.math.Decimal (高精度数学库Decimal).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@arkts.math.Decimal (高精度数学库Decimal).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-arkts-math-decimal-decimal",
     "nodeName": "document",
@@ -78,7 +79,8 @@
       "tohexadecimal",
       "Places",
       "todecimalplaces",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-ohos-buffer-buffer": {
@@ -105,7 +107,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.buffer (Buffer).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.buffer (Buffer).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-ohos-buffer-buffer",
     "nodeName": "document",
@@ -125,7 +127,8 @@
       "bufferfrom",
       "readint",
       "readuint",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-ohos-convertxml-xml-javascript": {
@@ -144,7 +147,7 @@
     "image_count": 1,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.convertxml (xml转换JavaScript).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.convertxml (xml转换JavaScript).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-ohos-convertxml-xml-javascript",
     "nodeName": "document",
@@ -164,7 +167,8 @@
       "string",
       "options",
       "Object",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-ohos-fastbuffer-fastbuffer": {
@@ -191,7 +195,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.fastbuffer (FastBuffer).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.fastbuffer (FastBuffer).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-ohos-fastbuffer-fastbuffer",
     "nodeName": "document",
@@ -211,7 +215,8 @@
       "swap",
       "Fast",
       "readint",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-ohos-process": {
@@ -238,7 +243,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.process (获取进程相关的信息).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.process (获取进程相关的信息).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-ohos-process",
     "nodeName": "document",
@@ -258,7 +263,8 @@
       "导入模块",
       "属性",
       "Capability",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-ohos-taskpool": {
@@ -285,7 +291,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.taskpool（启动任务池）.txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.taskpool（启动任务池）.txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-ohos-taskpool",
     "nodeName": "document",
@@ -305,7 +311,8 @@
       "cancel",
       "taskpoolcancel",
       "add",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-ohos-uri-uri": {
@@ -332,7 +339,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.uri (URI字符串解析).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.uri (URI字符串解析).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-ohos-uri-uri",
     "nodeName": "document",
@@ -352,7 +359,8 @@
       "持在元服",
       "务中使用",
       "check",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-ohos-url-url": {
@@ -379,7 +387,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.url (URL字符串解析).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.url (URL字符串解析).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-ohos-url-url",
     "nodeName": "document",
@@ -399,7 +407,8 @@
       "导入模块",
       "append",
       "delete",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-ohos-util-util": {
@@ -426,7 +435,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.util (util工具函数).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.util (util工具函数).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-ohos-util-util",
     "nodeName": "document",
@@ -446,7 +455,8 @@
       "create",
       "Rational",
       "Into",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-ohos-util-arraylist-arraylist": {
@@ -473,7 +483,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.util.ArrayList (线性容器ArrayList).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.util.ArrayList (线性容器ArrayList).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-ohos-util-arraylist-arraylist",
     "nodeName": "document",
@@ -493,7 +503,8 @@
       "支持设备",
       "get",
       "To",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-ohos-util-deque-deque": {
@@ -519,7 +530,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.util.Deque (线性容器Deque).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.util.Deque (线性容器Deque).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-ohos-util-deque-deque",
     "nodeName": "document",
@@ -539,7 +550,8 @@
       "推荐使用",
       "属性",
       "queue",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-ohos-util-hashmap-hashmap": {
@@ -566,7 +578,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.util.HashMap (非线性容器HashMap).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.util.HashMap (非线性容器HashMap).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-ohos-util-hashmap-hashmap",
     "nodeName": "document",
@@ -586,7 +598,8 @@
       "constructor",
       "基于",
       "推荐使用",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-ohos-util-hashset-hashset": {
@@ -612,7 +625,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.util.HashSet (非线性容器HashSet).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.util.HashSet (非线性容器HashSet).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-ohos-util-hashset-hashset",
     "nodeName": "document",
@@ -632,7 +645,8 @@
       "length",
       "属性",
       "支持设备",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-ohos-util-json-json": {
@@ -654,7 +668,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.util.json (JSON解析与生成).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.util.json (JSON解析与生成).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-ohos-util-json-json",
     "nodeName": "document",
@@ -674,7 +688,8 @@
       "null",
       "Mode",
       "导入模块",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-ohos-util-lightweightmap-lightweightmap": {
@@ -701,7 +716,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.util.LightWeightMap (非线性容器LightWeightMap).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.util.LightWeightMap (非线性容器LightWeightMap).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-ohos-util-lightweightmap-lightweightmap",
     "nodeName": "document",
@@ -721,7 +736,8 @@
       "hash",
       "Key",
       "At",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-ohos-util-lightweightset-lightweightset": {
@@ -748,7 +764,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.util.LightWeightSet (非线性容器LightWeightSet).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.util.LightWeightSet (非线性容器LightWeightSet).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-ohos-util-lightweightset-lightweightset",
     "nodeName": "document",
@@ -768,7 +784,8 @@
       "属性",
       "支持设备",
       "add",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-ohos-util-linkedlist-linkedlist": {
@@ -795,7 +812,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.util.LinkedList (线性容器LinkedList).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.util.LinkedList (线性容器LinkedList).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-ohos-util-linkedlist-linkedlist",
     "nodeName": "document",
@@ -815,7 +832,8 @@
       "Last",
       "查询效率",
       "相比",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-ohos-util-list-list": {
@@ -842,7 +860,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.util.List (线性容器List).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.util.List (线性容器List).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-ohos-util-list-list",
     "nodeName": "document",
@@ -862,7 +880,8 @@
       "remove",
       "导入模块",
       "null",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-ohos-util-plainarray-plainarray": {
@@ -889,7 +908,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.util.PlainArray (非线性容器PlainArray).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.util.PlainArray (非线性容器PlainArray).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-ohos-util-plainarray-plainarray",
     "nodeName": "document",
@@ -909,7 +928,8 @@
       "At",
       "remove",
       "属性",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-ohos-util-queue-queue": {
@@ -931,7 +951,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.util.Queue (线性容器Queue).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.util.Queue (线性容器Queue).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-ohos-util-queue-queue",
     "nodeName": "document",
@@ -951,7 +971,8 @@
       "System",
       "Capability",
       "Utils",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-ohos-util-stack-stack": {
@@ -975,7 +996,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.util.Stack (线性容器Stack).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.util.Stack (线性容器Stack).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-ohos-util-stack-stack",
     "nodeName": "document",
@@ -995,7 +1016,8 @@
       "System",
       "Capability",
       "Utils",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-ohos-util-stream-stream": {
@@ -1022,7 +1044,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.util.stream (数据流基类stream).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.util.stream (数据流基类stream).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-ohos-util-stream-stream",
     "nodeName": "document",
@@ -1042,7 +1064,8 @@
       "end",
       "cork",
       "uncork",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-ohos-util-treemap-treemap": {
@@ -1069,7 +1092,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.util.TreeMap (非线性容器TreeMap).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.util.TreeMap (非线性容器TreeMap).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-ohos-util-treemap-treemap",
     "nodeName": "document",
@@ -1089,7 +1112,8 @@
       "Hash",
       "场景",
       "属性",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-ohos-util-treeset-treeset": {
@@ -1116,7 +1140,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.util.TreeSet (非线性容器TreeSet).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.util.TreeSet (非线性容器TreeSet).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-ohos-util-treeset-treeset",
     "nodeName": "document",
@@ -1136,7 +1160,8 @@
       "支持设备",
       "null",
       "constructor",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-ohos-util-vector-vector": {
@@ -1163,7 +1188,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.util.Vector (线性容器Vector).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.util.Vector (线性容器Vector).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-ohos-util-vector-vector",
     "nodeName": "document",
@@ -1183,7 +1208,8 @@
       "constructor",
       "Last",
       "set",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api": {
@@ -1194,7 +1220,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-vector",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_已停止维护的接口.txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_已停止维护的接口.txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api",
     "nodeName": "document",
@@ -1207,6 +1233,7 @@
       "references",
       "vector",
       "方舟编程语言",
+      "应用框架",
       "已停止维护的接口"
     ]
   },
@@ -1234,7 +1261,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.worker (启动一个Worker).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.worker (启动一个Worker).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-ohos-worker-worker",
     "nodeName": "document",
@@ -1254,7 +1281,8 @@
       "Global",
       "Callback",
       "postmessage",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-ohos-xml-xml": {
@@ -1281,7 +1309,7 @@
     "image_count": 5,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.xml (XML解析与生成).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@ohos.xml (XML解析与生成).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-ohos-xml-xml",
     "nodeName": "document",
@@ -1301,7 +1329,8 @@
       "的情况",
       "导入模块",
       "Dynamic",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkui": {
@@ -2401,7 +2430,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-arkts-collections",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@arkts.collections (ArkTS容器集).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@arkts.collections (ArkTS容器集).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-arkts-collections-arkts",
     "nodeName": "document",
@@ -2422,6 +2451,7 @@
       "Clamped",
       "Float",
       "方舟编程语言",
+      "应用框架",
       "容器集"
     ]
   },
@@ -2433,7 +2463,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/arkts-apis-arkts-utils",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@arkts.utils (ArkTS工具库).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_@arkts.utils (ArkTS工具库).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-arkts-utils-arkts",
     "nodeName": "document",
@@ -2452,6 +2482,7 @@
       "ason",
       "sendablelrucache",
       "方舟编程语言",
+      "应用框架",
       "工具库"
     ]
   },
@@ -2466,7 +2497,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_模块描述.txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_模块描述.txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-1",
     "nodeName": "document",
@@ -2485,7 +2516,8 @@
       "个并发实",
       "ets",
       "Java",
-      "Script"
+      "Script",
+      "应用框架"
     ]
   },
   "doc-af2p0": {
@@ -3768,7 +3800,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_编译工具链错误码.txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_编译工具链错误码.txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-2",
     "nodeName": "document",
@@ -3787,7 +3819,8 @@
       "错误描述",
       "文件",
       "可能原因",
-      "处理步骤"
+      "处理步骤",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-3": {
@@ -3814,7 +3847,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_语言基础类库错误码.txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_语言基础类库错误码.txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-3",
     "nodeName": "document",
@@ -3833,7 +3866,8 @@
       "越界错误",
       "参数解析",
       "param",
-      "Buffer"
+      "Buffer",
+      "应用框架"
     ]
   },
   "arkts-11": {
@@ -4181,7 +4215,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_ArkTSUtils.ASON.txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_ArkTSUtils.ASON.txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-arktsutils-ason",
     "nodeName": "document",
@@ -4201,7 +4235,8 @@
       "System",
       "Capability",
       "Utils",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-arktsutils-locks": {
@@ -4228,7 +4263,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_ArkTSUtils.locks.txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_ArkTSUtils.locks.txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-arktsutils-locks",
     "nodeName": "document",
@@ -4248,7 +4283,8 @@
       "lock",
       "lockasync",
       "支持设备",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arraybuffer": {
@@ -4419,7 +4455,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_Class (Array).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_Class (Array).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-class-array",
     "nodeName": "document",
@@ -4439,7 +4475,8 @@
       "支持设备",
       "ets",
       "Type",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-class-arraybuffer": {
@@ -4456,7 +4493,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_Class (ArrayBuffer).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_Class (ArrayBuffer).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-class-arraybuffer",
     "nodeName": "document",
@@ -4476,7 +4513,8 @@
       "Length",
       "number",
       "导入模块",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-class-bitvector": {
@@ -4503,7 +4541,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_Class (BitVector).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_Class (BitVector).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-class-bitvector",
     "nodeName": "document",
@@ -4523,7 +4561,8 @@
       "属性",
       "元服务",
       "开始",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-class-float32array": {
@@ -4550,7 +4589,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_Class (Float32Array).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_Class (Float32Array).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-class-float32array",
     "nodeName": "document",
@@ -4570,7 +4609,8 @@
       "Sendable",
       "System",
       "Capability",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-class-int16array": {
@@ -4597,7 +4637,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_Class (Int16Array).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_Class (Int16Array).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-class-int16array",
     "nodeName": "document",
@@ -4617,7 +4657,8 @@
       "Sendable",
       "System",
       "Capability",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-class-int32array": {
@@ -4644,7 +4685,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_Class (Int32Array).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_Class (Int32Array).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-class-int32array",
     "nodeName": "document",
@@ -4664,7 +4705,8 @@
       "Sendable",
       "System",
       "Capability",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-class-int8array": {
@@ -4691,7 +4733,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_Class (Int8Array).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_Class (Int8Array).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-class-int8array",
     "nodeName": "document",
@@ -4711,7 +4753,8 @@
       "Sendable",
       "System",
       "Capability",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-class-map": {
@@ -4737,7 +4780,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_Class (Map).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_Class (Map).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-class-map",
     "nodeName": "document",
@@ -4757,7 +4800,8 @@
       "null",
       "导入模块",
       "属性",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-class-set": {
@@ -4782,7 +4826,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_Class (Set).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_Class (Set).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-class-set",
     "nodeName": "document",
@@ -4802,7 +4846,8 @@
       "导入模块",
       "属性",
       "null",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-class-uint16array": {
@@ -4829,7 +4874,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_Class (Uint16Array).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_Class (Uint16Array).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-class-uint16array",
     "nodeName": "document",
@@ -4849,7 +4894,8 @@
       "Sendable",
       "System",
       "Capability",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-class-uint32array": {
@@ -4876,7 +4922,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_Class (Uint32Array).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_Class (Uint32Array).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-class-uint32array",
     "nodeName": "document",
@@ -4896,7 +4942,8 @@
       "Sendable",
       "System",
       "Capability",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-class-uint8array": {
@@ -4923,7 +4970,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_Class (Uint8Array).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_Class (Uint8Array).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-class-uint8array",
     "nodeName": "document",
@@ -4943,7 +4990,8 @@
       "Sendable",
       "System",
       "Capability",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-class-uint8clampedarray": {
@@ -4970,7 +5018,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_Class (Uint8ClampedArray).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_Class (Uint8ClampedArray).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-class-uint8clampedarray",
     "nodeName": "document",
@@ -4990,7 +5038,8 @@
       "find",
       "ets",
       "Sendable",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "cpu-taskpool-worker": {
@@ -5078,7 +5127,7 @@
     "image_count": 2,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_Es2abc 编译器错误码.txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_Es2abc 编译器错误码.txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-es2abc",
     "nodeName": "document",
@@ -5098,7 +5147,8 @@
       "错误信息",
       "示例",
       "收起自动",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-functions": {
@@ -5113,7 +5163,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_Functions.txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_Functions.txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-functions",
     "nodeName": "document",
@@ -5133,7 +5183,8 @@
       "undefined",
       "boolean",
       "console",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "gc": {
@@ -5232,7 +5283,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_Interface (ConcatArray).txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_Interface (ConcatArray).txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-interface-concatarray",
     "nodeName": "document",
@@ -5252,7 +5303,8 @@
       "Utils",
       "Lang",
       "收起自动",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "io-taskpool": {
@@ -5617,7 +5669,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_SendableLruCacheK, V.txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_SendableLruCacheK, V.txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-sendablelrucachek-v",
     "nodeName": "document",
@@ -5637,7 +5689,8 @@
       "导入模块",
       "属性",
       "支持设备",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "sharedarraybuffer": {
@@ -5980,7 +6033,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_Types.txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_Types.txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-types",
     "nodeName": "document",
@@ -6000,7 +6053,8 @@
       "System",
       "Capability",
       "Utils",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "arkts-arkts-api-typescript-compiler": {
@@ -6018,7 +6072,7 @@
     "image_count": 0,
     "url": "",
     "path": "",
-    "rel_path": "api/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_Typescript Compiler错误码介绍.txt",
+    "rel_path": "api/应用框架/ArkTS（方舟编程语言）/ArkTS（方舟编程语言）_ArkTS API_Typescript Compiler错误码介绍.txt",
     "catalog": "ArkTS（方舟编程语言）",
     "objectId": "arkts-arkts-api-typescript-compiler",
     "nodeName": "document",
@@ -6038,7 +6092,8 @@
       "关键字或",
       "符号的缺",
       "赋值类型",
-      "方舟编程语言"
+      "方舟编程语言",
+      "应用框架"
     ]
   },
   "worker-1": {

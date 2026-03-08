@@ -1,0 +1,12 @@
+# [支付并签约](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-pay-and-sign-api)
+
+- **[预下单](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-pas-prepay)**
+ - **[支付结果回调通知](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-pas-pay-notify)**
+ - **[查询支付订单](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-pas-query-order)**
+ - **[申请退款](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-pas--refund)**
+ - **[退款结果回调通知](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-pas-refund-notify)**
+ - **[查询退款订单](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-pas-query-refund)**
+ - **[签约结果回调通知](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-pas-withhold-sign-notify)**
+ - **[查询签约订单](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-pas-sign-query)**
+ - **[申请解约](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-pas-withhold-unsign)**
+ - **[解约结果回调通知](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-pas-withhold-unsign-notify)**

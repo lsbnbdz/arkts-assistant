@@ -1,0 +1,5 @@
+# [错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/device-certificate-arkts-errcode)
+
+- **[证书错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-cert)**
+ - **[证书管理错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-certmanager)**
+ - **[证书管理对话框错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-certmanagerdialog)**

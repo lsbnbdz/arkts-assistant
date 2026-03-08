@@ -1,0 +1,18 @@
+# [QoS](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-qos)
+
+## 目录
+- [概述](#概述)
+- [文件汇总](#文件汇总)
+
+## 概述
+PhonePC/2in1TabletTVWearable提供QoS接口，包括设置、取消和查询QoS等级。
+
+ **起始版本：** 12
+
+ 
+## 文件汇总
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| qos.h | 声明QoS提供的C接口。 |

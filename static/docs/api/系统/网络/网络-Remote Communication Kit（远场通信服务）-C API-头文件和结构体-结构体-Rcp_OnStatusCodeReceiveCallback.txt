@@ -1,0 +1,49 @@
+# [Rcp_OnStatusCodeReceiveCallback](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___on_status_code_callback)
+
+## 目录
+- [概述](#section8833638203416)
+- [汇总](#section1391532737094053)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section527095097094053)
+  - [callback](#a3c40fdbb12e9ace486f03ca31df05ea5)
+  - [usrObject](#section271832410116)
+
+## 概述
+响应的状态码接收回调函数。可以通过[HMS_Rcp_SetRequestOnStatusCodeReceiveCallback](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview#section10194153116201)为请求设置相应回调函数。
+
+ **起始版本：** 6.0.1(21)
+
+ **相关模块：** [RemoteCommunication](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| Rcp_OnStatusCodeReceiveCallbackFunc | 请求过程中接收响应状态码的回调函数。 |
+| void *usrObject | 用户定义的对象，在回调函数中使用。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTVWearable 
+### callback
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_OnStatusCodeReceiveCallbackFunc Rcp_OnStatusCodeReceiveCallback::callback
+```
+ **描述**
+
+ 响应状态码接收回调函数。
+
+ 
+### usrObject
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+void* Rcp_OnStatusCodeReceiveCallback::usrObject
+```
+ **描述**
+
+ 用户定义的对象，在回调函数中使用。

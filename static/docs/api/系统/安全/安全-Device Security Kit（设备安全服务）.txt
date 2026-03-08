@@ -1,0 +1,5 @@
+# [Device Security Kit（设备安全服务）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/device-security-api)
+
+- **[ArkTS API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/devicesecurity-arktsapi)**
+ - **[C API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/devicesecurity-c)**
+ - **[REST API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/devicesecurity-restapi)**

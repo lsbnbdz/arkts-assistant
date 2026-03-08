@@ -1,0 +1,37 @@
+# [NetworkBoost_MultiPathRequestResult](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/network-boost-c-struct-multipath_req_result)
+
+## 目录
+- [概述](#section140951652218)
+- [汇总](#section7125204252218)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section862772612417)
+- [result](#section159871228122717)
+
+## 概述
+PhonePC/2in1Tablet多网请求结果，发起多网请求后，回调该信息获取多网请求的结果。
+
+ **起始版本：** 6.0.2(22)
+
+ **相关模块：** [NetworkBoost](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/network-boost-c-overview)
+
+ 
+## 汇总
+PhonePC/2in1Tablet 
+### 成员变量
+ PhonePC/2in1Tablet展开
+| |
+| |
+| |
+| NetworkBoost_ErrorResult result | 多网请求结果。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1Tablet 
+## result
+PhonePC/2in1Tablet收起自动换行深色代码主题复制
+```
+NetworkBoost_MultiPathErrorResult NetworkBoost_MultiPathRequestResult::used
+```
+ **描述**
+
+ 多网请求结果。

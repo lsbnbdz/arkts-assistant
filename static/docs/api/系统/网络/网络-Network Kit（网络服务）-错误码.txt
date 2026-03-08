@@ -1,0 +1,16 @@
+# [错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/network-arkts-errcode)
+
+- **[HTTP错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-net-http)**
+ - **[SOCKET 错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-net-socket)**
+ - **[webSocket错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-net-websocket)**
+ - **[网络连接管理错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-net-connection)**
+ - **[以太网连接错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-net-ethernet)**
+ - **[扩展认证错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-net-eap)**
+ - **[网络共享错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-net-sharing)**
+ - **[策略管理错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-net-policy)**
+ - **[MDNS错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-net-mdns)**
+ - **[流量管理错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-net-statistics)**
+ - **[VPN错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-net-vpn)**
+ - **[网络安全校验错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-net-networksecurity)**
+ - **[内核错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-kernel)**
+ - **[防火墙错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-net-netfirewall)**

@@ -1,0 +1,34 @@
+# [OHExtDataHandle](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-nativewindow-ohextdatahandle)
+
+## 目录
+- [概述](#概述)
+- [汇总](#汇总)
+  - [成员变量](#成员变量)
+
+收起自动换行深色代码主题复制
+```
+typedef struct OHExtDataHandle {...} OHExtDataHandle
+```
+ 
+## 概述
+PhonePC/2in1TabletTVWearable扩展数据句柄结构体定义。
+
+ **起始版本：** 9
+
+ **废弃版本：** 从API version 10开始废弃，不再提供替代接口。
+
+ **相关模块：** [NativeWindow](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-nativewindow)
+
+ **所在头文件：** [external_window.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-external-window-h)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| int32_t fd | 句柄 Fd，-1代表不支持。 |
+| uint32_t reserveInts | Reserve数组的个数。 |
+| int32_t reserve[0] | Reserve数组。 |

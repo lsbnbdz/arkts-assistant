@@ -1,0 +1,41 @@
+# [Uint8Buff](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_uint8_buff)
+
+## 概述
+PhonePC/2in1Tablet定义uint8_t字节流。
+
+ **起始版本：** 6.0.0(20)
+
+ **相关模块：** [FIDO2](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/passkey)
+
+ 
+## 汇总
+PhonePC/2in1Tablet 
+### 成员变量
+ PhonePC/2in1Tablet展开
+| |
+| |
+| |
+| uint32_t length | 字节流的长度。 |
+| uint8_t * val | 字节流的值。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1Tablet 
+### length
+PhonePC/2in1Tablet收起自动换行深色代码主题复制
+```
+uint32_t Uint8Buff::length
+```
+ **描述**
+
+ 字节流的长度。
+
+ 
+### val
+PhonePC/2in1Tablet收起自动换行深色代码主题复制
+```
+uint8_t* Uint8Buff::val
+```
+ **描述**
+
+ 字节流的值。

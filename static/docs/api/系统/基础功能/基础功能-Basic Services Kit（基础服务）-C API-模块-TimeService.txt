@@ -1,0 +1,18 @@
+# [TimeService](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-timeservice)
+
+## 目录
+- [概述](#概述)
+- [文件汇总](#文件汇总)
+
+## 概述
+PhonePC/2in1TabletTVWearable描述TimeService向应用提供时间时区能力。
+
+ **起始版本：** 12
+
+ 
+## 文件汇总
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| time_service.h | 声明获取时间时区信息的API。 |

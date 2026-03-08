@@ -1,0 +1,6 @@
+# [结构体](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/servicecollaboration-capi-struct)
+
+- **[ServiceCollaboration_CollaborationDeviceInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/servicecollaboration-collaborationdeviceinfo)**
+ - **[ServiceCollaboration_CollaborationDeviceInfoSets](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/servicecollaboration-collaborationdeviceinfosets)**
+ - **[ServiceCollaboration_SelectInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/servicecollaboration-selectinfo)**
+ - **[ServiceCollaborationCallback](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/servicecollaborationcallback)**

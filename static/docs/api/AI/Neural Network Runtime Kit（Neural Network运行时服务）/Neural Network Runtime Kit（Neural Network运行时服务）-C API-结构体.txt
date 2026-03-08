@@ -1,0 +1,12 @@
+# [结构体](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/neural-network-runtime-struct)
+
+- **[OH_NN_UInt32Array](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-neuralnetworkruntime-oh-nn-uint32array)**
+ - **[OH_NN_QuantParam](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-neuralnetworkruntime-oh-nn-quantparam)**
+ - **[OH_NN_Tensor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-neuralnetworkruntime-oh-nn-tensor)**
+ - **[OH_NN_Memory](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-neuralnetworkruntime-oh-nn-memory)**
+ - **[OH_NNModel](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-neuralnetworkruntime-oh-nnmodel)**
+ - **[OH_NNCompilation](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-neuralnetworkruntime-oh-nncompilation)**
+ - **[OH_NNExecutor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-neuralnetworkruntime-oh-nnexecutor)**
+ - **[NN_QuantParam](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-neuralnetworkruntime-nn-quantparam)**
+ - **[NN_TensorDesc](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-neuralnetworkruntime-nn-tensordesc)**
+ - **[NN_Tensor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-neuralnetworkruntime-nn-tensor)**

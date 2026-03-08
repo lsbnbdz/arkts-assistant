@@ -1,0 +1,21 @@
+# [AnimationRepeatMode](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-animationrepeatmode)
+
+## 目录
+- [AnimationRepeatMode](#section01793223299)
+
+## AnimationRepeatMode
+PhonePC/2in1TabletWearable重复执行的模式。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ 展开
+| 名称 | 值 | 说明 |
+| --- | --- | --- |
+| RESTART | 0 | 动画结束后从头播放。 |
+| REVERSE | 1 | 动画结束后从尾倒放。 |

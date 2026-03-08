@@ -1,0 +1,7 @@
+# [ArkTS API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/screentimeguard-arkts)
+
+- **[GuardService（屏幕时间守护服务）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/screentimeguard-guardservice)**
+ - **[AppPicker（应用选择页）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/screentimeguard-app-picker)**
+ - **[TimeGuardExtensionAbility（屏幕时间守护扩展Ability）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/screentimeguard-timeguardextensionability)**
+ - **[TimeGuardExtensionContext（屏幕时间守护扩展Context）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/screentimeguard-timeguardextensioncontext)**
+ - **[ArkTS API错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/screentimeguard-error-code)**

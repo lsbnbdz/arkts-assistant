@@ -1,0 +1,1006 @@
+# [healthModels(运动健康数据模型)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-healthmodels)
+
+## 目录
+- [导入模块](#zh-cn_topic_0000001768344397_section4539115425616)
+- [Adventures](#section5912123017383)
+- [Basketball](#section16204164214412)
+- [Biathlon](#section1715555112715)
+- [BloodOxygenSaturation](#section4460144920180)
+- [BloodOxygenSaturationAggregateRequest](#section362414246403)
+- [BloodOxygenSaturationAggregateResult](#section597231954018)
+- [BloodPressure](#section3682114103016)
+- [Bmx](#section20670154703217)
+- [BodyTemperature](#section163973109173)
+- [BodyTemperatureAggregateRequest](#section3663325204419)
+- [BodyTemperatureAggregateResult](#section6662725124415)
+- [BreathHoldingTest](#section52914233513)
+- [BreathHoldingTrain](#section13965369396)
+- [Cycling](#section71644353174)
+- [DailyActivities](#section1950102725213)
+- [DailyActivitiesAggregateRequest](#section96562416465)
+- [DailyActivitiesAggregateResult](#section197361850135310)
+- [Diving](#section556511419444)
+- [Elliptical](#section93801745134518)
+- [Emotion](#section1360442913818)
+- [GolfCourseModel](#section341241412472)
+- [GolfPractice](#section1214317594487)
+- [HeartRate](#section158575417544)
+- [HeartRateAggregateRequest](#section419015624713)
+- [HeartRateAggregateResult](#section1618986154718)
+- [HeartRateVariability](#section476295519419)
+- [Height](#section53612024115018)
+- [Hiking](#section1310632985518)
+- [IndoorCycling](#section2092610616566)
+- [IndoorRunning](#section137351136205718)
+- [IndoorWalking](#section7181127175820)
+- [JumpingRope](#section15172204615820)
+- [MountainHike](#section12865212539)
+- [OpenWaterSwim](#section5956164395412)
+- [PoolSwim](#section106651827125815)
+- [RestingHeartRate](#section15611411402)
+- [RestingHeartRateAggregateRequest](#section690314211475)
+- [RestingHeartRateAggregateResult](#section179020215478)
+- [Rower](#section17314149114)
+- [Rowing](#section383331015218)
+- [Running](#section1630110141015)
+- [ScubaDiving](#section1034819231535)
+- [Skiing](#section10217328948)
+- [SkinTemperature](#section20161955257)
+- [SkinTemperatureAggregateRequest](#section17694123374713)
+- [SkinTemperatureAggregateResult](#section196931933174713)
+- [Sled](#section93528422717)
+- [SleepNapRecord](#section1247085812019)
+- [SleepRecord](#section84904481925)
+- [Snowboarding](#section11299813920)
+- [Spinning](#section8510164615314)
+- [Sports](#section284762314290)
+- [Stress](#section91515324419)
+- [StressAggregateRequest](#section2031411477477)
+- [StressAggregateResult](#section9313947104710)
+- [TrailRunning](#section122681430352)
+- [Walking](#section2986141662)
+- [Weight](#section82991615171110)
+
+本模块提供运动健康数据模型。
+
+ **起始版本：**5.0.0(12)
+
+ 
+## 导入模块
+PhoneTabletWearable收起自动换行深色代码主题复制
+```
+import { healthStore } from '@kit.HealthServiceKit';
+```
+ 说明此模块为healthStore子模块，需通过healthStore.healthModels方式使用。
+
+ 
+## Adventures
+PhoneTabletWearabletype Adventures = healthStore.ExerciseSequence<healthFields.AdventuresSummary, healthFields.AdventuresDetail>
+
+ 户外探险锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.ExerciseSequence | 户外探险锻炼记录数据模型。 |
+
+ 
+## Basketball
+PhoneTabletWearabletype Basketball = healthStore.ExerciseSequence<healthFields.BasketballSummary, healthFields.BasketballDetail>
+
+ 篮球锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.ExerciseSequence | 篮球锻炼记录数据模型。 |
+
+ 
+## Biathlon
+PhoneTabletWearabletype Biathlon = healthStore.ExerciseSequence<healthFields.BiathlonSummary, healthFields.BiathlonDetail>
+
+ 冬季两项锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.ExerciseSequence | 冬季两项锻炼记录数据模型。 |
+
+ 
+## BloodOxygenSaturation
+PhoneTabletWearabletype BloodOxygenSaturation = healthStore.SamplePoint<healthFields.BloodOxygenSaturation>
+
+ 血氧采样数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.SamplePoint | 血氧采样数据模型。 |
+
+ 
+## BloodOxygenSaturationAggregateRequest
+PhoneTabletWearabletype BloodOxygenSaturationAggregateRequest = healthStore.AggregateRequest<healthFields.BloodOxygenSaturationAggregation>
+
+ 血氧采样数据聚合统计请求模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.AggregateRequest | 血氧采样数据聚合统计请求模型。 |
+
+ 
+## BloodOxygenSaturationAggregateResult
+PhoneTabletWearabletype BloodOxygenSaturationAggregateResult = healthStore.AggregateResult<healthFields.BloodOxygenSaturationAggregation>
+
+ 血氧聚合结果数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.AggregateResult | 血氧聚合结果数据模型。 |
+
+ 
+## BloodPressure
+PhoneTabletWearabletype BloodPressure = healthStore.SamplePoint<healthFields.BloodPressure>
+
+ 血压采样数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.SamplePoint | 血压采样数据模型。 |
+
+ 
+## Bmx
+PhoneTabletWearabletype Bmx = healthStore.ExerciseSequence<healthFields.CyclingSummary, healthFields.CyclingDetail>
+
+ BMX自行车锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.ExerciseSequence | BMX自行车锻炼记录数据模型。 |
+
+ 
+## BodyTemperature
+PhoneTabletWearabletype BodyTemperature = healthStore.SamplePoint<healthFields.BodyTemperature>
+
+ 体温采样数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.SamplePoint | 体温采样数据模型。 |
+
+ 
+## BodyTemperatureAggregateRequest
+PhoneTabletWearabletype BodyTemperatureAggregateRequest = healthStore.AggregateRequest<healthFields.BodyTemperatureAggregation>
+
+ 体温采样数据聚合统计请求模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.AggregateRequest | 体温采样数据聚合统计请求模型。 |
+
+ 
+## BodyTemperatureAggregateResult
+PhoneTabletWearabletype BodyTemperatureAggregateResult = healthStore.AggregateResult<healthFields.BodyTemperatureAggregation>
+
+ 体温聚合结果数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.AggregateResult | 体温聚合结果数据模型。 |
+
+ 
+## BreathHoldingTest
+PhoneTabletWearabletype BreathHoldingTest = healthStore.ExerciseSequence<healthFields.BreathHoldingTestSummary, healthFields.BreathHoldingTestDetail>
+
+ 闭气测试锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.ExerciseSequence | 闭气测试锻炼记录数据模型。 |
+
+ 
+## BreathHoldingTrain
+PhoneTabletWearabletype BreathHoldingTrain = healthStore.ExerciseSequence<healthFields.BreathHoldingTrainSummary, healthFields.BreathHoldingTrainDetail>
+
+ 闭气训练锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.ExerciseSequence | 闭气训练锻炼记录数据模型。 |
+
+ 
+## Cycling
+PhoneTabletWearabletype Cycling = healthStore.ExerciseSequence<healthFields.CyclingSummary, healthFields.CyclingDetail>
+
+ 户外骑行锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.ExerciseSequence | 户外骑行锻炼记录数据模型。 |
+
+ 
+## DailyActivities
+PhoneTabletWearabletype DailyActivities = healthStore.SamplePoint<healthFields.DailyActivities>
+
+ 日常活动采样数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.SamplePoint | 日常活动采样数据模型。 |
+
+ 
+## DailyActivitiesAggregateRequest
+PhoneTabletWearabletype DailyActivitiesAggregateRequest = healthStore.AggregateRequest<healthFields.DailyActivitiesAggregation>
+
+ 日常活动采样数据聚合统计请求模型。
+
+ **元服务API**：从版本5.0.0(12)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.AggregateRequest | 日常活动采样数据聚合统计请求模型。 |
+
+ 
+## DailyActivitiesAggregateResult
+PhoneTabletWearabletype DailyActivitiesAggregateResult = healthStore.AggregateResult<healthFields.DailyActivitiesAggregation>
+
+ 日常活动聚合结果数据模型。
+
+ **元服务API：**从版本5.0.0(12)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.AggregateResult | 日常活动聚合结果数据模型。 |
+
+ 
+## Diving
+PhoneTabletWearabletype Diving = healthStore.ExerciseSequence<healthFields.DivingSummary, healthFields.DivingDetail>
+
+ 自由潜水锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.ExerciseSequence | 自由潜水锻炼记录数据模型。 |
+
+ 
+## Elliptical
+PhoneTabletWearabletype Elliptical = healthStore.ExerciseSequence<healthFields.EllipticalSummary, healthFields.EllipticalDetail>
+
+ 椭圆机锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.ExerciseSequence | 椭圆机锻炼记录数据模型。 |
+
+ 
+## Emotion
+PhoneTabletWearabletype Emotion = healthStore.SamplePoint<healthFields.Emotion>
+
+ 情绪采样数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.1.0(18)
+
+ 展开
+| |
+| |
+| |
+| healthStore.SamplePoint | 情绪采样数据模型。 |
+
+ 
+## GolfCourseModel
+PhoneTabletWearabletype GolfCourseModel = healthStore.ExerciseSequence<healthFields.GolfCourseModelSummary, healthFields.GolfCourseModelDetail>
+
+ 高尔夫场地模式锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.ExerciseSequence | 高尔夫场地模式锻炼记录数据模型。 |
+
+ 
+## GolfPractice
+PhoneTabletWearabletype GolfPractice = healthStore.ExerciseSequence<healthFields.GolfPracticeSummary, healthFields.GolfPracticeDetail>
+
+ 高尔夫练习场模式锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.ExerciseSequence | 高尔夫练习场模式锻炼记录数据模型。 |
+
+ 
+## HeartRate
+PhoneTabletWearabletype HeartRate = healthStore.SamplePoint<healthFields.HeartRate>
+
+ 动态心率采样数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.SamplePoint | 动态心率采样数据模型。 |
+
+ 
+## HeartRateAggregateRequest
+PhoneTabletWearabletype HeartRateAggregateRequest = healthStore.AggregateRequest<healthFields.HeartRateAggregation>
+
+ 动态心率采样数据聚合统计请求模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.AggregateRequest | 动态心率采样数据聚合统计请求模型。 |
+
+ 
+## HeartRateAggregateResult
+PhoneTabletWearabletype HeartRateAggregateResult = healthStore.AggregateResult<healthFields.HeartRateAggregation>
+
+ 动态心率聚合结果数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.AggregateResult | 动态心率聚合结果数据模型。 |
+
+ 
+## HeartRateVariability
+PhoneTabletWearabletype HeartRateVariability = healthStore.SamplePoint<healthFields.HeartRateVariability>
+
+ 心率变异性采样数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.1.0(18)
+
+ 展开
+| |
+| |
+| |
+| healthStore.SamplePoint | 心率变异性采样数据模型。 |
+
+ 
+## Height
+PhoneTabletWearabletype Height = healthStore.SamplePoint<healthFields.Height>
+
+ 身高采样数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.SamplePoint | 身高采样数据模型。 |
+
+ 
+## Hiking
+PhoneTabletWearabletype Hiking = healthStore.ExerciseSequence<healthFields.WalkingSummary, healthFields.WalkingDetail>
+
+ 徒步锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.ExerciseSequence | 徒步锻炼记录数据模型。 |
+
+ 
+## IndoorCycling
+PhoneTabletWearabletype IndoorCycling = healthStore.ExerciseSequence<healthFields.CyclingSummary, healthFields.CyclingDetail>
+
+ 室内单车锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.ExerciseSequence | 室内单车锻炼记录数据模型。 |
+
+ 
+## IndoorRunning
+PhoneTabletWearabletype IndoorRunning = healthStore.ExerciseSequence<healthFields.RunningSummary, healthFields.RunningDetail>
+
+ 室内跑步锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.ExerciseSequence | 室内跑步锻炼记录数据模型。 |
+
+ 
+## IndoorWalking
+PhoneTabletWearabletype IndoorWalking = healthStore.ExerciseSequence<healthFields.WalkingSummary, healthFields.WalkingDetail>
+
+ 室内步行锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.ExerciseSequence | 室内步行锻炼记录数据模型。 |
+
+ 
+## JumpingRope
+PhoneTabletWearabletype JumpingRope = healthStore.ExerciseSequence<healthFields.JumpingRopeSummary, healthFields.JumpingRopeDetail>
+
+ 跳绳锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.ExerciseSequence | 跳绳锻炼记录数据模型。 |
+
+ 
+## MountainHike
+PhoneTabletWearabletype MountainHike = healthStore.ExerciseSequence<healthFields.MountainHikeSummary, healthFields.MountainHikeDetail>
+
+ 登山锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.ExerciseSequence | 登山锻炼记录数据模型。 |
+
+ 
+## OpenWaterSwim
+PhoneTabletWearabletype OpenWaterSwim = healthStore.ExerciseSequence<healthFields.OpenWaterSwimSummary, healthFields.OpenWaterSwimDetail>
+
+ 开放水域游泳锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.ExerciseSequence | 开放水域游泳锻炼记录数据模型。 |
+
+ 
+## PoolSwim
+PhoneTabletWearabletype PoolSwim = healthStore.ExerciseSequence<healthFields.PoolSwimSummary, healthFields.PoolSwimDetail>
+
+ 泳池游泳锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.ExerciseSequence | 泳池游泳锻炼记录数据模型。 |
+
+ 
+## RestingHeartRate
+PhoneTabletWearabletype RestingHeartRate = healthStore.SamplePoint<healthFields.RestingHeartRate>
+
+ 静息心率采样数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.SamplePoint | 静息心率采样数据模型。 |
+
+ 
+## RestingHeartRateAggregateRequest
+PhoneTabletWearabletype RestingHeartRateAggregateRequest = healthStore.AggregateRequest<healthFields.RestingHeartRateAggregation>
+
+ 静息心率采样数据聚合统计请求模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.AggregateRequest | 静息心率采样数据聚合统计请求模型。 |
+
+ 
+## RestingHeartRateAggregateResult
+PhoneTabletWearabletype RestingHeartRateAggregateResult = healthStore.AggregateResult<healthFields.RestingHeartRateAggregation>
+
+ 静息心率聚合结果数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.AggregateResult | 静息心率聚合结果数据模型。 |
+
+ 
+## Rower
+PhoneTabletWearabletype Rower = healthStore.ExerciseSequence<healthFields.RowerSummary, healthFields.RowerDetail>
+
+ 划船机锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.ExerciseSequence | 划船机锻炼记录数据模型。 |
+
+ 
+## Rowing
+PhoneTabletWearabletype Rowing = healthStore.ExerciseSequence<healthFields.RowingSummary, healthFields.RowingDetail>
+
+ 赛艇锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.ExerciseSequence | 赛艇锻炼记录数据模型。 |
+
+ 
+## Running
+PhoneTabletWearabletype Running = healthStore.ExerciseSequence<healthFields.RunningSummary, healthFields.RunningDetail>
+
+ 户外跑步锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.ExerciseSequence | 户外跑步锻炼记录数据模型。 |
+
+ 
+## ScubaDiving
+PhoneTabletWearabletype ScubaDiving = healthStore.ExerciseSequence<healthFields.ScubaDivingSummary, healthFields.ScubaDivingDetail>
+
+ 水肺潜水锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.ExerciseSequence | 水肺潜水锻炼记录数据模型。 |
+
+ 
+## Skiing
+PhoneTabletWearabletype Skiing = healthStore.ExerciseSequence<healthFields.SkiingSummary, healthFields.SkiingDetail>
+
+ 滑雪锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.ExerciseSequence | 滑雪锻炼记录数据模型。 |
+
+ 
+## SkinTemperature
+PhoneTabletWearabletype SkinTemperature = healthStore.SamplePoint<healthFields.SkinTemperature>
+
+ 皮肤体温采样数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.SamplePoint | 皮肤体温采样数据模型。 |
+
+ 
+## SkinTemperatureAggregateRequest
+PhoneTabletWearabletype SkinTemperatureAggregateRequest = healthStore.AggregateRequest<healthFields.SkinTemperatureAggregation>
+
+ 皮肤体温采样数据聚合统计请求模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.AggregateRequest | 皮肤体温采样数据聚合统计请求模型。 |
+
+ 
+## SkinTemperatureAggregateResult
+PhoneTabletWearabletype SkinTemperatureAggregateResult = healthStore.AggregateResult<healthFields.SkinTemperatureAggregation>
+
+ 皮肤体温聚合结果数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.AggregateResult | 皮肤体温聚合结果数据模型。 |
+
+ 
+## Sled
+PhoneTabletWearabletype Sled = healthStore.ExerciseSequence<healthFields.SledSummary, healthFields.SledDetail>
+
+ 滑雪橇锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.ExerciseSequence | 滑雪橇锻炼记录数据模型。 |
+
+ 
+## SleepNapRecord
+PhoneTabletWearabletype SleepNapRecord = healthStore.HealthSequence<healthFields.SleepNap, healthFields.SleepDetail>
+
+ 零星小睡健康记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.HealthSequence | 零星小睡健康记录数据模型。 |
+
+ 
+## SleepRecord
+PhoneTabletWearabletype SleepRecord = healthStore.HealthSequence<healthFields.Sleep, healthFields.SleepDetail>
+
+ 夜间睡眠健康记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.HealthSequence | 夜间睡眠健康记录数据模型。 |
+
+ 
+## Snowboarding
+PhoneTabletWearabletype Snowboarding = healthStore.ExerciseSequence<healthFields.SnowboardingSummary, healthFields.SnowboardingDetail>
+
+ 单板滑雪锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.ExerciseSequence | 单板滑雪锻炼记录数据模型。 |
+
+ 
+## Spinning
+PhoneTabletWearabletype Spinning = healthStore.ExerciseSequence<healthFields.CyclingSummary, healthFields.CyclingDetail>
+
+ 动感单车锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.ExerciseSequence | 动感单车锻炼记录数据模型。 |
+
+ 
+## Sports
+PhoneTabletWearabletype Sports = healthStore.ExerciseSequence<healthFields.SportsSummary, healthFields.SportsDetail>
+
+ 通用锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.ExerciseSequence | 通用锻炼记录数据模型。 |
+
+ 
+## Stress
+PhoneTabletWearabletype Stress = healthStore.SamplePoint<healthFields.Stress>
+
+ 压力采样数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.SamplePoint | 压力采样数据模型。 |
+
+ 
+## StressAggregateRequest
+PhoneTabletWearabletype StressAggregateRequest = healthStore.AggregateRequest<healthFields.StressAggregation>
+
+ 压力采样数据聚合统计请求模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.AggregateRequest | 压力采样数据聚合统计请求模型。 |
+
+ 
+## StressAggregateResult
+PhoneTabletWearabletype StressAggregateResult = healthStore.AggregateResult<healthFields.StressAggregation>
+
+ 压力聚合结果数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.AggregateResult | 压力聚合结果数据模型。 |
+
+ 
+## TrailRunning
+PhoneTabletWearabletype TrailRunning = healthStore.ExerciseSequence<healthFields.RunningSummary, healthFields.RunningDetail>
+
+ 越野跑锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.ExerciseSequence | 越野跑锻炼记录数据模型。 |
+
+ 
+## Walking
+PhoneTabletWearabletype Walking = healthStore.ExerciseSequence<healthFields.WalkingSummary, healthFields.WalkingDetail>
+
+ 户外步行锻炼记录数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.ExerciseSequence | 户外步行锻炼数据模型记录。 |
+
+ 
+## Weight
+PhoneTabletWearabletype Weight = healthStore.SamplePoint<healthFields.Weight>
+
+ 体重采样数据模型。
+
+ **系统能力：**SystemCapability.Health.HealthStore
+
+ **起始版本：**5.0.0(12)
+
+ 展开
+| |
+| |
+| |
+| healthStore.SamplePoint | 体重采样数据模型。 |

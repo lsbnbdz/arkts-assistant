@@ -1,0 +1,26 @@
+# [Asset_Attr](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-assettype-asset-attr)
+
+收起自动换行深色代码主题复制
+```
+typedef struct {...} Asset_Attr
+```
+ 
+## 概述
+PhonePC/2in1TabletTVWearable关键资产属性。
+
+ **起始版本：** 11
+
+ **相关模块：** [AssetType](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-assettype)
+
+ **所在头文件：** [asset_type.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-asset-type-h)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| uint32_t tag | 关键资产属性名称。 |
+| Asset_Value value | 关键资产属性内容。 |

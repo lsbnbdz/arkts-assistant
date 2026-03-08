@@ -1,0 +1,49 @@
+# [Rcp_ResponseCallbackObject](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___response_callback_object)
+
+## 目录
+- [概述](#section1279145497094053)
+- [汇总](#section1952165931094053)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section1871960522094053)
+  - [callback](#af2fc2b71f6c20b28288197c3f86fd5d7)
+  - [usrCtx](#a9d0c5ad57ee637e069ccad3b7dfe4cf2)
+
+## 概述
+PhonePC/2in1TabletTVWearable响应回调结构体。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [RemoteCommunication](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| Rcp_ResponseCallback callback | 响应回调函数。 |
+| void * usrCtx | 用户上下文。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTVWearable 
+### callback
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_ResponseCallback Rcp_ResponseCallbackObject::callback
+```
+ **描述**
+
+ 响应回调函数。
+
+ 
+### usrCtx
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+void* Rcp_ResponseCallbackObject::usrCtx
+```
+ **描述**
+
+ 用户上下文。

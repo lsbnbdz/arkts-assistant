@@ -1,0 +1,109 @@
+# [HandWrite](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/pen-handwrite-c)
+
+## 目录
+- [概述](#section9324193842820)
+- [汇总](#section16497152185610)
+  - [文件](#section38314506582)
+  - [结构体](#section1536630134)
+  - [枚举](#section12159154513610)
+  - [函数](#section59441250131512)
+- [枚举类型说明](#section18444367235)
+  - [HandWrite_ErrCode](#section2871102614149)
+- [函数说明](#section9378111261811)
+  - [HMS_HandWrite_GetPredictPoint()](#section3513132112183)
+
+## 概述
+PhonePC/2in1Tablet该模块对外提供手写能力。
+
+ **系统能力****：**SystemCapability.Stylus.Handwrite
+
+ **起始版本：**6.0.0(20)
+
+ 
+## 汇总
+PhonePC/2in1Tablet 
+### 文件
+ PhonePC/2in1Tablet展开
+| |
+| |
+| |
+| native_handwrite_api.h | 声明用于对外提供手写能力。 |
+
+ 
+### 结构体
+ PhonePC/2in1Tablet展开
+| |
+| |
+| |
+| struct HandWrite_HistoricalPoint | 定义历史触摸点信息的结构体。 |
+
+ 
+### 枚举
+ PhonePC/2in1Tablet展开
+| |
+| |
+| |
+| enum HandWrite_ErrCode { E_NO_ERROR = 0, E_PARAMS = 401, E_INNER_ERROR = 1010400001 } | 定义手写错误码。 |
+
+ 
+### 函数
+ PhonePC/2in1Tablet展开
+| |
+| |
+| |
+| int32_t HMS_HandWrite_GetPredictPoint(const HandWrite_HistoricalPoint* event, int32_t size, float *predictPointX, float *predictPointY) | 此接口用于获取预测点。 |
+
+ 
+## 枚举类型说明
+PhonePC/2in1Tablet 
+### HandWrite_ErrCode
+PhonePC/2in1Tablet收起自动换行深色代码主题复制
+```
+enum HandWrite_ErrCode
+```
+ **描述**
+
+ 定义手写错误码。
+
+ **起始版本：**6.0.0(20)
+
+ 展开
+| |
+| |
+| |
+| E_NO_ERROR | 执行成功。 |
+| E_PARAMS | 输入参数无效。 |
+| E_INNER_ERROR | 系统内部错误，相关资源加载失败。 |
+
+ 
+## 函数说明
+PhonePC/2in1Tablet 
+### HMS_HandWrite_GetPredictPoint()
+PhonePC/2in1Tablet收起自动换行深色代码主题复制
+```
+int32_t HMS_HandWrite_GetPredictPoint(const HandWrite_HistoricalPoint* event, int32_t size, float *predictPointX, float *predictPointY)
+```
+ **描述**
+
+ 此接口用于获取预测点。
+
+ **起始版本：**6.0.0(20)
+
+ **参数：**
+
+ 展开
+| |
+| |
+| |
+| event | 指示输入的历史点。 |
+| size | 历史点的个数。 |
+| predictPointX | 接收预测点X坐标的指针。 |
+| predictPointY | 接收预测点Y坐标的指针。 |
+
+ **返回：**手写错误码HandWrite_ErrCode：
+
+ E_NO_ERROR 0 - 执行成功。
+
+ E_PARAMS 401 - 输入参数无效。
+
+ E_INNER_ERROR 1010400001 - 系统内部错误，相关资源加载失败。

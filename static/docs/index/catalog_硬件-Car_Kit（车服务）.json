@@ -346,7 +346,7 @@
       "连接状态"
     ]
   },
-  "car-kit-车服务": {
+  "car-kit-车服务-1": {
     "title": "Car Kit（车服务）",
     "headings": [
       "Car Kit（车服务）"
@@ -358,7 +358,7 @@
     "path": "",
     "rel_path": "guide/系统/硬件/硬件-Car Kit（车服务）/硬件-Car Kit（车服务）.txt",
     "catalog": "硬件-Car Kit（车服务）",
-    "objectId": "car-kit-车服务",
+    "objectId": "car-kit-车服务-1",
     "nodeName": "document",
     "keywords": [
       "Car",

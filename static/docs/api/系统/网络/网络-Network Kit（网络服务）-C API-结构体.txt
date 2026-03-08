@@ -1,0 +1,36 @@
+# [结构体](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/network-struct)
+
+- **[NetConn_NetHandle](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netconnection-netconn-nethandle)**
+ - **[NetConn_NetCapabilities](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netconnection-netconn-netcapabilities)**
+ - **[NetConn_NetAddr](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netconnection-netconn-netaddr)**
+ - **[NetConn_Route](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netconnection-netconn-route)**
+ - **[NetConn_HttpProxy](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netconnection-netconn-httpproxy)**
+ - **[NetConn_ConnectionProperties](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netconnection-netconn-connectionproperties)**
+ - **[NetConn_NetHandleList](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netconnection-netconn-nethandlelist)**
+ - **[NetConn_NetSpecifier](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netconnection-netconn-netspecifier)**
+ - **[NetConn_NetConnCallback](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netconnection-netconn-netconncallback)**
+ - **[NetConn_ProbeResultInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netconnection-netconn-proberesultinfo)**
+ - **[NetConn_TraceRouteInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netconnection-netconn-tracerouteinfo)**
+ - **[NetConn_TraceRouteOption](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netconnection-netconn-tracerouteoption)**
+ - **[NetStack_CertBlob](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netstack-netstack-certblob)**
+ - **[NetStack_CertificatePinning](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netstack-netstack-certificatepinning)**
+ - **[NetStack_Certificates](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netstack-netstack-certificates)**
+ - **[WebSocket](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netstack-websocket)**
+ - **[WebSocket_CloseResult](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netstack-websocket-closeresult)**
+ - **[WebSocket_CloseOption](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netstack-websocket-closeoption)**
+ - **[WebSocket_ErrorResult](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netstack-websocket-errorresult)**
+ - **[WebSocket_OpenResult](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netstack-websocket-openresult)**
+ - **[WebSocket_Header](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netstack-websocket-header)**
+ - **[WebSocket_RequestOptions](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netstack-websocket-requestoptions)**
+ - **[Http_Buffer](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netstack-http-buffer)**
+ - **[Http_HeaderValue](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netstack-http-headervalue)**
+ - **[Http_HeaderEntry](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netstack-http-headerentry)**
+ - **[Http_ClientCert](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netstack-http-clientcert)**
+ - **[Http_CustomProxy](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netstack-http-customproxy)**
+ - **[Http_Proxy](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netstack-http-proxy)**
+ - **[Http_PerformanceTiming](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netstack-http-performancetiming)**
+ - **[Http_RequestOptions](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netstack-http-requestoptions)**
+ - **[Http_Response](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netstack-http-response)**
+ - **[Http_Request](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netstack-http-request)**
+ - **[Http_EventsHandler](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netstack-http-eventshandler)**
+ - **[Http_Headers](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netstack-http-headers)**

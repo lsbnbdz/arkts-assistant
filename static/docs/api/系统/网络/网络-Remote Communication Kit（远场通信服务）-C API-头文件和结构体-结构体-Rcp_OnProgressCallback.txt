@@ -1,0 +1,49 @@
+# [Rcp_OnProgressCallback](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___on_progress_callback)
+
+## 目录
+- [概述](#section972941382094053)
+- [汇总](#section1215208755094053)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section1253840181094053)
+  - [callback](#a899177e3d91f73c817ccdb2edafbcd8f)
+  - [usrObject](#a4ad524ee058227acd02fdc1beebde386)
+
+## 概述
+PhonePC/2in1TabletTVWearable收发时回调配置，在[Rcp_EventsHandler](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___events_handler)中配置。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [RemoteCommunication](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| Rcp_OnProgressCallbackFunc callback | 收发过程中的回调函数。 |
+| void * usrObject | 用户定义的对象，在回调函数中使用。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTVWearable 
+### callback
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_OnProgressCallbackFunc Rcp_OnProgressCallback::callback
+```
+ **描述**
+
+ 收发过程中的回调函数。
+
+ 
+### usrObject
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+void* Rcp_OnProgressCallback::usrObject
+```
+ **描述**
+
+ 用户定义的对象，在回调函数中使用。

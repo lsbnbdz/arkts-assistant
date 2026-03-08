@@ -1,0 +1,4 @@
+# [模块](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/asset-store-module)
+
+- **[AssetApi](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-assetapi)**
+ - **[AssetType](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-assettype)**

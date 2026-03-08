@@ -1,0 +1,5 @@
+# [Sensor Service Kit（传感器服务）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/sensor-service-api)
+
+- **[ArkTS API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/sensor-service-arkts)**
+ - **[C API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/sensor-service-c)**
+ - **[错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/sensor-service-arkts-errcode)**

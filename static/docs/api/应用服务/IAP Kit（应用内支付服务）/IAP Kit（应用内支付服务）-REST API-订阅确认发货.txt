@@ -1,0 +1,83 @@
+# [订阅确认发货](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/iap-confirm-purchase-for-sub)
+
+## 目录
+- [功能介绍](#section1950214943118)
+- [场景描述](#section1503119153112)
+- [接口原型](#section127414615399)
+- [请求参数](#section1854194512114)
+  - [Request Header](#section394182122312)
+  - [Request Body](#section1324816375233)
+- [请求示例](#section86425305253)
+- [响应参数](#section514779154018)
+  - [Response Header](#section964441242415)
+  - [Response Body](#section155791831182420)
+- [响应示例](#section184174571403)
+
+## 功能介绍
+ 此接口用于确认购买的自动续期订阅商品已经发放权益。
+
+ 
+## 场景描述
+ 开发者服务器收到IAP服务器关键事件通知后，调用订阅状态查询接口获取订阅的最新状态，再根据订阅状态发放权益，具体请参见[确保权益发放](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/iap-delivering-subscriptions#section1880231055910)。
+
+ 说明 一个购买订单号ID（purchaseOrderId）只可以发货一次，请勿重复发货。
+
+ 
+## 接口原型
+ 
+| |
+| |
+| HTTPS POST |
+| 开发者服务器 -> IAP服务器 |
+| {rootUrl}/subscription/harmony/v1/application/purchase/shipped/confirm 说明 rootUrl：具体请参见站点信息。 |
+| 请求消息：Content-Type: application/json;charset=UTF-8 响应消息：Content-Type: application/json;charset=UTF-8 |
+
+ 
+## 请求参数
+ 
+### Request Header
+ 展开
+| 参数 | 是否必选 | 参数类型 | 描述 |
+| --- | --- | --- | --- |
+| Content-Type | 是 | String | 取值为：application/json;charset=UTF-8 |
+| Authorization | 是 | String | 认证信息，使用JWT进行鉴权，具体请参见Authorization说明。 |
+
+ 
+### Request Body
+ 展开
+| 参数 | 是否必选 | 参数类型 | 描述 |
+| --- | --- | --- | --- |
+| purchaseOrderId | 是 | String | 具体一笔订单中对应的购买订单号ID。最大长度256。 |
+| purchaseToken | 是 | String | 商品的购买Token，发起购买和查询订单信息均会返回。最大长度256。 |
+
+ 
+## 请求示例
+ 更多语言及详细的代码示例，请参考**[IAP Kit-Sample-ServerDemo](https://gitcode.com/HarmonyOS_Samples/iapkit-sample-serverdemo)**。
+
+ 收起自动换行深色代码主题复制
+```
+POST /subscription/harmony/v1/application/purchase/shipped/confirmContent-Type: application/json;charset=UTF-8Authorization: Bearer ***.***.***Accept: application/json{ "purchaseToken": "***.*.***", "purchaseOrderId": "***.***"}
+```
+ 
+## 响应参数
+ 
+### Response Header
+ 展开
+| 参数 | 是否必选 | 参数类型 | 描述 |
+| --- | --- | --- | --- |
+| Content-Type | 是 | String | 取值为：application/json;charset=UTF-8 |
+
+ 
+### Response Body
+ 展开
+| 参数 | 是否必选 | 参数类型 | 描述 |
+| --- | --- | --- | --- |
+| responseCode | 是 | String | 返回码。 0：成功。 其他：失败，具体请参见错误码。 |
+| responseMessage | 否 | String | 响应描述。 |
+
+ 
+## 响应示例
+ 收起自动换行深色代码主题复制
+```
+HTTP/1.2 200 OKContent-Type: application/json;charset=UTF-8{ "responseCode": "0"}
+```

@@ -1,0 +1,55 @@
+# [telephony_data.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-telephony-data-h)
+
+## 目录
+- [概述](#概述)
+- [汇总](#汇总)
+  - [函数](#函数)
+- [函数说明](#函数说明)
+  - [OH_Telephony_GetDefaultCellularDataSlotId()](#oh_telephony_getdefaultcellulardataslotid)
+
+## 概述
+PhoneTabletWearable为电话蜂窝数据定义C接口。
+
+ **引用文件：** <telephony/cellular_data/telephony_data.h>
+
+ **库：** libtelephony_data.so
+
+ **系统能力：** SystemCapability.Telephony.CellularData
+
+ **起始版本：** 13
+
+ **相关模块：** [Telephony](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-telephony)
+
+ 
+## 汇总
+PhoneTabletWearable 
+### 函数
+ PhoneTabletWearable展开
+| |
+| |
+| |
+| int32_t OH_Telephony_GetDefaultCellularDataSlotId(void) | 获取默认移动数据的SIM卡接口。 |
+
+ 
+## 函数说明
+PhoneTabletWearable 
+### OH_Telephony_GetDefaultCellularDataSlotId()
+PhoneTabletWearable收起自动换行深色代码主题复制
+```
+int32_t OH_Telephony_GetDefaultCellularDataSlotId(void)
+```
+ **描述**
+
+ 获取默认移动数据的SIM卡接口。
+
+ **系统能力：** SystemCapability.Telephony.CellularData
+
+ **起始版本：** 13
+
+ **返回：**
+
+ 展开
+| |
+| |
+| |
+| int32_t | 默认移动数据的SIM卡接口 (0 表示卡槽1, 1 表示卡槽2)。 |

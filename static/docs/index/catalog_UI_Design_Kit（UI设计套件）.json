@@ -1508,7 +1508,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ui-design-arkts",
     "path": "",
-    "rel_path": "api/UI Design Kit（UI设计套件）/UI Design Kit（UI设计套件）-ArkTS API.txt",
+    "rel_path": "api/应用框架/UI Design Kit（UI设计套件）/UI Design Kit（UI设计套件）-ArkTS API.txt",
     "catalog": "UI Design Kit（UI设计套件）",
     "objectId": "ui-design-kit-ui-arkts-api",
     "nodeName": "document",
@@ -1529,7 +1529,8 @@
       "UI",
       "Design",
       "Kit",
-      "设计套件"
+      "设计套件",
+      "应用框架"
     ]
   },
   "ui-design-kit-ui-arkts-api-arkts-api": {
@@ -1548,7 +1549,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ui-design-error-code",
     "path": "",
-    "rel_path": "api/UI Design Kit（UI设计套件）/UI Design Kit（UI设计套件）-ArkTS API-ArkTS API错误码.txt",
+    "rel_path": "api/应用框架/UI Design Kit（UI设计套件）/UI Design Kit（UI设计套件）-ArkTS API-ArkTS API错误码.txt",
     "catalog": "UI Design Kit（UI设计套件）",
     "objectId": "ui-design-kit-ui-arkts-api-arkts-api",
     "nodeName": "document",
@@ -1571,7 +1572,8 @@
       "UI",
       "Design",
       "Kit",
-      "设计套件"
+      "设计套件",
+      "应用框架"
     ]
   },
   "ui-design-kit-ui-arkts": {
@@ -1584,7 +1586,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ui-design-arkts-component",
     "path": "",
-    "rel_path": "api/UI Design Kit（UI设计套件）/UI Design Kit（UI设计套件）-ArkTS组件.txt",
+    "rel_path": "api/应用框架/UI Design Kit（UI设计套件）/UI Design Kit（UI设计套件）-ArkTS组件.txt",
     "catalog": "UI Design Kit（UI设计套件）",
     "objectId": "ui-design-kit-ui-arkts",
     "nodeName": "document",
@@ -1607,7 +1609,8 @@
       "UI",
       "Design",
       "Kit",
-      "设计套件"
+      "设计套件",
+      "应用框架"
     ]
   },
   "ui-design-kit-ui-arkts-hdsactionbar": {
@@ -1632,7 +1635,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ui-design-hdsactionbar",
     "path": "",
-    "rel_path": "api/UI Design Kit（UI设计套件）/UI Design Kit（UI设计套件）-ArkTS组件-HdsActionBar.txt",
+    "rel_path": "api/应用框架/UI Design Kit（UI设计套件）/UI Design Kit（UI设计套件）-ArkTS组件-HdsActionBar.txt",
     "catalog": "UI Design Kit（UI设计套件）",
     "objectId": "ui-design-kit-ui-arkts-hdsactionbar",
     "nodeName": "document",
@@ -1656,6 +1659,7 @@
       "Design",
       "Kit",
       "设计套件",
+      "应用框架",
       "组件"
     ]
   },
@@ -1681,7 +1685,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ui-design-hdsdrawable",
     "path": "",
-    "rel_path": "api/UI Design Kit（UI设计套件）/UI Design Kit（UI设计套件）-ArkTS API-hdsDrawable.txt",
+    "rel_path": "api/应用框架/UI Design Kit（UI设计套件）/UI Design Kit（UI设计套件）-ArkTS API-hdsDrawable.txt",
     "catalog": "UI Design Kit（UI设计套件）",
     "objectId": "ui-design-kit-ui-arkts-api-hdsdrawable",
     "nodeName": "document",
@@ -1704,7 +1708,8 @@
       "UI",
       "Design",
       "Kit",
-      "设计套件"
+      "设计套件",
+      "应用框架"
     ]
   },
   "ui-design-kit-ui-arkts-api-hdseffect": {
@@ -1731,7 +1736,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ui-design-hdseffect",
     "path": "",
-    "rel_path": "api/UI Design Kit（UI设计套件）/UI Design Kit（UI设计套件）-ArkTS API-hdsEffect.txt",
+    "rel_path": "api/应用框架/UI Design Kit（UI设计套件）/UI Design Kit（UI设计套件）-ArkTS API-hdsEffect.txt",
     "catalog": "UI Design Kit（UI设计套件）",
     "objectId": "ui-design-kit-ui-arkts-api-hdseffect",
     "nodeName": "document",
@@ -1754,7 +1759,8 @@
       "UI",
       "Design",
       "Kit",
-      "设计套件"
+      "设计套件",
+      "应用框架"
     ]
   },
   "ui-design-kit-ui-arkts-hdslistitem": {
@@ -1778,7 +1784,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ui-design-hdslistitem",
     "path": "",
-    "rel_path": "api/UI Design Kit（UI设计套件）/UI Design Kit（UI设计套件）-ArkTS组件-HdsListItem.txt",
+    "rel_path": "api/应用框架/UI Design Kit（UI设计套件）/UI Design Kit（UI设计套件）-ArkTS组件-HdsListItem.txt",
     "catalog": "UI Design Kit（UI设计套件）",
     "objectId": "ui-design-kit-ui-arkts-hdslistitem",
     "nodeName": "document",
@@ -1802,6 +1808,7 @@
       "Design",
       "Kit",
       "设计套件",
+      "应用框架",
       "组件"
     ]
   },
@@ -1829,7 +1836,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ui-design-hdslistitemcard",
     "path": "",
-    "rel_path": "api/UI Design Kit（UI设计套件）/UI Design Kit（UI设计套件）-ArkTS组件-HdsListItemCard.txt",
+    "rel_path": "api/应用框架/UI Design Kit（UI设计套件）/UI Design Kit（UI设计套件）-ArkTS组件-HdsListItemCard.txt",
     "catalog": "UI Design Kit（UI设计套件）",
     "objectId": "ui-design-kit-ui-arkts-hdslistitemcard",
     "nodeName": "document",
@@ -1853,6 +1860,7 @@
       "Design",
       "Kit",
       "设计套件",
+      "应用框架",
       "组件"
     ]
   },
@@ -1880,7 +1888,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ui-design-hdsnavdestination",
     "path": "",
-    "rel_path": "api/UI Design Kit（UI设计套件）/UI Design Kit（UI设计套件）-ArkTS组件-HdsNavDestination.txt",
+    "rel_path": "api/应用框架/UI Design Kit（UI设计套件）/UI Design Kit（UI设计套件）-ArkTS组件-HdsNavDestination.txt",
     "catalog": "UI Design Kit（UI设计套件）",
     "objectId": "ui-design-kit-ui-arkts-hdsnavdestination",
     "nodeName": "document",
@@ -1904,6 +1912,7 @@
       "Design",
       "Kit",
       "设计套件",
+      "应用框架",
       "组件"
     ]
   },
@@ -1931,7 +1940,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ui-design-hdsnavigation",
     "path": "",
-    "rel_path": "api/UI Design Kit（UI设计套件）/UI Design Kit（UI设计套件）-ArkTS组件-HdsNavigation.txt",
+    "rel_path": "api/应用框架/UI Design Kit（UI设计套件）/UI Design Kit（UI设计套件）-ArkTS组件-HdsNavigation.txt",
     "catalog": "UI Design Kit（UI设计套件）",
     "objectId": "ui-design-kit-ui-arkts-hdsnavigation",
     "nodeName": "document",
@@ -1955,6 +1964,7 @@
       "Design",
       "Kit",
       "设计套件",
+      "应用框架",
       "组件"
     ]
   },
@@ -1973,7 +1983,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ui-design-hdssidebar",
     "path": "",
-    "rel_path": "api/UI Design Kit（UI设计套件）/UI Design Kit（UI设计套件）-ArkTS组件-HdsSideBar.txt",
+    "rel_path": "api/应用框架/UI Design Kit（UI设计套件）/UI Design Kit（UI设计套件）-ArkTS组件-HdsSideBar.txt",
     "catalog": "UI Design Kit（UI设计套件）",
     "objectId": "ui-design-kit-ui-arkts-hdssidebar",
     "nodeName": "document",
@@ -1997,6 +2007,7 @@
       "Design",
       "Kit",
       "设计套件",
+      "应用框架",
       "组件"
     ]
   },
@@ -2024,7 +2035,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ui-design-hdssidemenu",
     "path": "",
-    "rel_path": "api/UI Design Kit（UI设计套件）/UI Design Kit（UI设计套件）-ArkTS组件-HdsSideMenu.txt",
+    "rel_path": "api/应用框架/UI Design Kit（UI设计套件）/UI Design Kit（UI设计套件）-ArkTS组件-HdsSideMenu.txt",
     "catalog": "UI Design Kit（UI设计套件）",
     "objectId": "ui-design-kit-ui-arkts-hdssidemenu",
     "nodeName": "document",
@@ -2048,6 +2059,7 @@
       "Design",
       "Kit",
       "设计套件",
+      "应用框架",
       "组件"
     ]
   },
@@ -2074,7 +2086,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ui-design-hdssnackbar",
     "path": "",
-    "rel_path": "api/UI Design Kit（UI设计套件）/UI Design Kit（UI设计套件）-ArkTS组件-HdsSnackBar.txt",
+    "rel_path": "api/应用框架/UI Design Kit（UI设计套件）/UI Design Kit（UI设计套件）-ArkTS组件-HdsSnackBar.txt",
     "catalog": "UI Design Kit（UI设计套件）",
     "objectId": "ui-design-kit-ui-arkts-hdssnackbar",
     "nodeName": "document",
@@ -2098,6 +2110,7 @@
       "Design",
       "Kit",
       "设计套件",
+      "应用框架",
       "组件"
     ]
   },
@@ -2125,7 +2138,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ui-design-hdstabs",
     "path": "",
-    "rel_path": "api/UI Design Kit（UI设计套件）/UI Design Kit（UI设计套件）-ArkTS组件-HdsTabs.txt",
+    "rel_path": "api/应用框架/UI Design Kit（UI设计套件）/UI Design Kit（UI设计套件）-ArkTS组件-HdsTabs.txt",
     "catalog": "UI Design Kit（UI设计套件）",
     "objectId": "ui-design-kit-ui-arkts-hdstabs",
     "nodeName": "document",
@@ -2149,6 +2162,7 @@
       "Design",
       "Kit",
       "设计套件",
+      "应用框架",
       "组件"
     ]
   },
@@ -2176,7 +2190,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ui-design-hds-visual-component",
     "path": "",
-    "rel_path": "api/UI Design Kit（UI设计套件）/UI Design Kit（UI设计套件）-ArkTS组件-HdsVisualComponent.txt",
+    "rel_path": "api/应用框架/UI Design Kit（UI设计套件）/UI Design Kit（UI设计套件）-ArkTS组件-HdsVisualComponent.txt",
     "catalog": "UI Design Kit（UI设计套件）",
     "objectId": "ui-design-kit-ui-arkts-hdsvisualcomponent",
     "nodeName": "document",
@@ -2200,6 +2214,7 @@
       "Design",
       "Kit",
       "设计套件",
+      "应用框架",
       "组件"
     ]
   },
@@ -2224,7 +2239,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ui-design-multiwindowentryinapp-api",
     "path": "",
-    "rel_path": "api/UI Design Kit（UI设计套件）/UI Design Kit（UI设计套件）-ArkTS组件-MultiWindowEntryInAPP.txt",
+    "rel_path": "api/应用框架/UI Design Kit（UI设计套件）/UI Design Kit（UI设计套件）-ArkTS组件-MultiWindowEntryInAPP.txt",
     "catalog": "UI Design Kit（UI设计套件）",
     "objectId": "ui-design-kit-ui-arkts-multiwindowentryinapp",
     "nodeName": "document",
@@ -2248,6 +2263,7 @@
       "Design",
       "Kit",
       "设计套件",
+      "应用框架",
       "组件"
     ]
   },
@@ -2301,7 +2317,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ui-design-symbolregister",
     "path": "",
-    "rel_path": "api/UI Design Kit（UI设计套件）/UI Design Kit（UI设计套件）-ArkTS API-symbolRegister.txt",
+    "rel_path": "api/应用框架/UI Design Kit（UI设计套件）/UI Design Kit（UI设计套件）-ArkTS API-symbolRegister.txt",
     "catalog": "UI Design Kit（UI设计套件）",
     "objectId": "ui-design-kit-ui-arkts-api-symbolregister",
     "nodeName": "document",
@@ -2324,7 +2340,8 @@
       "UI",
       "Design",
       "Kit",
-      "设计套件"
+      "设计套件",
+      "应用框架"
     ]
   },
   "ui-design-kit-ui": {
@@ -2337,7 +2354,7 @@
     "image_count": 0,
     "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ui-design-api",
     "path": "",
-    "rel_path": "api/UI Design Kit（UI设计套件）/UI Design Kit（UI设计套件）.txt",
+    "rel_path": "api/应用框架/UI Design Kit（UI设计套件）/UI Design Kit（UI设计套件）.txt",
     "catalog": "UI Design Kit（UI设计套件）",
     "objectId": "ui-design-kit-ui",
     "nodeName": "document",
@@ -2349,7 +2366,8 @@
       "component",
       "references",
       "design",
-      "组件"
+      "组件",
+      "应用框架"
     ]
   },
   "ui-design-kit-1": {

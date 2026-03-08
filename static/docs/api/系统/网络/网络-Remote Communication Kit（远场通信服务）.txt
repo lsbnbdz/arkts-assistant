@@ -1,0 +1,4 @@
+# [Remote Communication Kit（远场通信服务）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-api)
+
+- **[ArkTS API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-arkts)**
+ - **[C API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-c)**

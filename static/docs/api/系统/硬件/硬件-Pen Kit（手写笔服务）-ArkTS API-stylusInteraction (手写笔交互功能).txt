@@ -1,0 +1,147 @@
+# [stylusInteraction (手写笔交互功能)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/pen-stylusinteraction)
+
+## 目录
+- [导入模块](#section978743772111)
+- [stylusInteraction.on('squeeze')](#section98913119599)
+- [stylusInteraction.off('squeeze')](#section137391712323)
+- [stylusInteraction.on('doubleTap')](#section450110191857)
+- [stylusInteraction.off('doubleTap')](#section9865271579)
+- [SqueezeEvent](#section10272152161111)
+- [DoubleTapEvent](#section4950173171415)
+
+手写笔交互功能入口类，当前包含手写笔笔身轻捏事件和手写笔笔身双击事件。
+
+ **系统能力：**SystemCapability.Stylus.StylusService
+
+ **起始版本：**5.1.1(19)
+
+ 
+## 导入模块
+PhonePC/2in1Tablet收起自动换行深色代码主题复制
+```
+import { stylusInteraction } from '@kit.Penkit';
+```
+ 
+## stylusInteraction.on('squeeze')
+PhonePC/2in1Tableton(type: 'squeeze', receiver: Callback<SqueezeEvent>): void
+
+ 监听手写笔笔身轻捏事件。
+
+ **系统能力：**SystemCapability.Stylus.StylusService
+
+ **起始版本：**5.1.1(19)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | string | 是 | 固定填写"squeeze"字符串，表示手写笔笔身轻捏事件。 |
+| receiver | Callback | 是 | 回调函数，返回手写笔笔身轻捏事件的详细信息。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+import { BusinessError } from '@kit.BasicServicesKit';
+try { stylusInteraction.on('squeeze', (event: stylusInteraction.SqueezeEvent) => { console.info(`got squeeze event, time: ${event.timestamp}`); });} catch (err) { console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);}
+```
+ 
+## stylusInteraction.off('squeeze')
+PhonePC/2in1Tabletoff(type: 'squeeze', receiver?: Callback<SqueezeEvent>): void
+
+ 取消监听手写笔笔身轻捏事件。
+
+ **系统能力：**SystemCapability.Stylus.StylusService
+
+ **起始版本：**5.1.1(19)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | string | 是 | 固定填写"squeeze"字符串，表示手写笔笔身轻捏事件。 |
+| receiver | Callback | 否 | 需要取消注册的回调函数，需与订阅时传入的回调函数是同一个。若无此参数，则取消注册所有的轻捏事件。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+import { BusinessError } from '@kit.BasicServicesKit';try { stylusInteraction.off('squeeze', (event: stylusInteraction.SqueezeEvent) => { console.info(`off squeeze event, time: ${event.timestamp}`); });} catch (err) { console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);}
+```
+ 
+## stylusInteraction.on('doubleTap')
+PhonePC/2in1Tableton(type: 'doubleTap', receiver: Callback<DoubleTapEvent>): void
+
+ 监听手写笔笔身双击事件。
+
+ **系统能力：**SystemCapability.Stylus.StylusService
+
+ **起始版本：**5.1.1(19)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | string | 是 | 固定填写"doubleTap"字符串，表示手写笔笔身双击事件。 |
+| receiver | Callback | 是 | 回调函数，返回手写笔笔身双击事件的详细信息。 |
+
+ **示例：**收起自动换行深色代码主题复制
+```
+import { BusinessError } from '@kit.BasicServicesKit';try { stylusInteraction.on('doubleTap', (event: stylusInteraction.DoubleTapEvent) => { console.info(`got doubleTap event, time: ${event.timestamp}`); });} catch (err) { console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);}
+```
+ 
+## stylusInteraction.off('doubleTap')
+PhonePC/2in1Tabletoff(type: 'doubleTap', receiver?: Callback<DoubleTapEvent>): void
+
+ 取消监听手写笔笔身双击事件。
+
+ **系统能力：**SystemCapability.Stylus.StylusService
+
+ **起始版本：**5.1.1(19)
+
+ **参数：****：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | string | 是 | 固定填写"doubleTap"字符串，表示手写笔笔身双击事件。 |
+| receiver | Callback | 否 | 需要取消注册的回调函数，需与订阅时传入的回调函数是同一个。若无此参数，则取消注册所有的双击事件。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+import { BusinessError } from '@kit.BasicServicesKit';try { stylusInteraction.off('doubleTap', (event: stylusInteraction.DoubleTapEvent) => { console.info(`off doubleTap event, time: ${event.timestamp}`); });} catch (err) { console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);}
+```
+ 
+## SqueezeEvent
+PhonePC/2in1Tablet 手写笔笔身轻捏事件信息。
+
+ **系统能力：**SystemCapability.Stylus.StylusService
+
+ **起始版本：**5.1.1(19)
+
+ **参数：**
+
+ 展开
+| 名称 | 类型 | 只读 | 可选 | 说明 |
+| --- | --- | --- | --- | --- |
+| timestamp | number | 否 | 否 | 时间戳，自系统启动以来经过的时间，单位：ms。 |
+
+ 
+## DoubleTapEvent
+PhonePC/2in1Tablet 手写笔笔身双击事件信息。
+
+ **系统能力：**SystemCapability.Stylus.StylusService
+
+ **起始版本：**5.1.1(19)
+
+ **参数：**
+
+ 展开
+| 名称 | 类型 | 只读 | 可选 | 说明 |
+| --- | --- | --- | --- | --- |
+| timestamp | number | 否 | 否 | 时间戳，自系统启动以来经过的时间，单位：ms。 |

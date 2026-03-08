@@ -1,0 +1,73 @@
+# [Rcp_SecurityConfiguration](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___security_configuration)
+
+## 目录
+- [概述](#section1551092747094053)
+- [汇总](#section1822182044094053)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section424635584094053)
+  - [certificate](#aed7e691dbb64dcfbd4935eced4099de6)
+  - [certificateAuthority](#a341651044da2a76bbb5eb9126b49b709)
+  - [remoteValidationType](#a2b5f2905c3e2f904ec9b2820ae39f367)
+  - [serverAuthentication](#a9e6d74aa37d2118852bf780075d466c0)
+
+## 概述
+PhonePC/2in1TabletTVWearable请求的安全配置。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [RemoteCommunication](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| Rcp_RemoteValidationType remoteValidationType | 远端认证方法类型。 |
+| Rcp_CertificateAuthority certificateAuthority | 用于验证远程服务器标识的证书颁发机构（CA）。默认值为“system”，如果未设置此字段，将使用system CA验证远程服务器的标识。 |
+| Rcp_ClientCertificate certificate | 发送到远程服务器的客户端证书，远程服务器将使用它来验证客户端的标识。 |
+| Rcp_ServerAuthentication serverAuthentication | 服务器身份验证设置。默认情况下不进行身份验证。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTVWearable 
+### certificate
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_ClientCertificate Rcp_SecurityConfiguration::certificate
+```
+ **描述**
+
+ 发送到远程服务器的客户端证书，远程服务器将使用它来验证客户端的标识。
+
+ 
+### certificateAuthority
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_CertificateAuthority Rcp_SecurityConfiguration::certificateAuthority
+```
+ **描述**
+
+ 用于验证远程服务器标识的证书颁发机构（CA）。默认值为“system”，如果未设置此字段，将使用system CA验证远程服务器的标识。
+
+ 
+### remoteValidationType
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_RemoteValidationType Rcp_SecurityConfiguration::remoteValidationType
+```
+ **描述**
+
+ 远端认证方法类型。
+
+ 
+### serverAuthentication
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_ServerAuthentication Rcp_SecurityConfiguration::serverAuthentication
+```
+ **描述**
+
+ 服务器身份验证设置。默认情况下不进行身份验证。

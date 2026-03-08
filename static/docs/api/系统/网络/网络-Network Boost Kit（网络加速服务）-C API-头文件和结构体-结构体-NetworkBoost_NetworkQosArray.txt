@@ -1,0 +1,49 @@
+# [NetworkBoost_NetworkQosArray](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/network-boost-c-struct-network_qos_array)
+
+## 目录
+- [概述](#section912334662162158)
+- [汇总](#section2059910731162158)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section1972044194162158)
+  - [networkQos](#a85ba381b3f959459d2a832ab2b5e13ff)
+  - [pathNum](#a7881dde170513e4e1eb2f6030d224837)
+
+## 概述
+PhonePC/2in1Tablet网络质量变化的详细信息。
+
+ **起始版本：** 5.1.0(18)
+
+ **相关模块：** [NetworkBoost](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/network-boost-c-overview)
+
+ 
+## 汇总
+PhonePC/2in1Tablet 
+### 成员变量
+ PhonePC/2in1Tablet展开
+| |
+| |
+| |
+| uint32_t pathNum | 网络质量信息中的路径数量，取值范围 [1, 4]。 |
+| NetworkBoost_NetworkQos networkQos [NETBOOST_MAX_PATH_NUM] | 多条路径的网络质量信息，每一项为一条路径的网络质量信息，取值范围 [0, pathNum-1]。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1Tablet 
+### networkQos
+PhonePC/2in1Tablet收起自动换行深色代码主题复制
+```
+NetworkBoost_NetworkQos NetworkBoost_NetworkQosArray::networkQos[NETBOOST_MAX_PATH_NUM]
+```
+ **描述**
+
+ 多条路径的网络质量信息，每一项为一条路径的网络质量信息，取值范围 [0, pathNum-1]。
+
+ 
+### pathNum
+PhonePC/2in1Tablet收起自动换行深色代码主题复制
+```
+uint32_t NetworkBoost_NetworkQosArray::pathNum
+```
+ **描述**
+
+ 网络质量信息中的路径数量，取值范围 [1, 4]。

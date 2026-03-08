@@ -1,0 +1,111 @@
+# [Rcp_FormFieldValue](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___form_field_value)
+
+## 目录
+- [概述](#section19753869094052)
+- [汇总](#section1565989181094052)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section88169138094052)
+  - [next](#a3ceed646c6f06c8249ff962782da0068)
+  - [type](#aa2f5ee901ec18d3a45a3a4b32ce648a0)
+  - [varBool](#adfd646a1efd2853ce64eee38cc1f2cc2)
+  - [varDouble](#ae1dd3fa224b13f7a3daefddffda41721)
+  - [varInt32](#ad63df8004b42c748ea9e43e33dc63f6d)
+  - [varInt64](#a5392f4cacec7a90c59c5e857f022da4b)
+  - [varStr](#a0e38aaf495895692510bc46b36acf4ad)
+
+## 概述
+PhonePC/2in1TabletTVWearable简单表单数据字段值，参见[Rcp_Form](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview#ga40787f67faf4ea7111e4cda03f3f16be)和[Rcp_MultipartFormFieldValue](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___multipart_form_field_value)。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [RemoteCommunication](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| Rcp_FormValueType type | 表示union中使用的数据类型。 |
+| union { | union结构。 |
+| uint8_t varBool | bool类型。 |
+| int32_t varInt32 | int32类型。 |
+| int64_t varInt64 | int64类型。 |
+| double varDouble | double类型。 |
+| Rcp_Buffer varStr | string类型。 |
+| } data | data中使用的数据由type进行区分。 |
+| struct Rcp_FormFieldValue * next | 指向下一个Rcp_FormFieldValue。链式存储。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTVWearable 
+### next
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+struct Rcp_FormFieldValue* Rcp_FormFieldValue::next
+```
+ **描述**
+
+ 指向下一个[Rcp_FormFieldValue](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___form_field_value)。链式存储。
+
+ 
+### type
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_FormValueType Rcp_FormFieldValue::type
+```
+ **描述**
+
+ 表示union中使用的数据类型。
+
+ 
+### varBool
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+uint8_t Rcp_FormFieldValue::varBool
+```
+ **描述**
+
+ bool。
+
+ 
+### varDouble
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+double Rcp_FormFieldValue::varDouble
+```
+ **描述**
+
+ double。
+
+ 
+### varInt32
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+int32_t Rcp_FormFieldValue::varInt32
+```
+ **描述**
+
+ int32。
+
+ 
+### varInt64
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+int64_t Rcp_FormFieldValue::varInt64
+```
+ **描述**
+
+ int64。
+
+ 
+### varStr
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_Buffer Rcp_FormFieldValue::varStr
+```
+ **描述**
+
+ string。

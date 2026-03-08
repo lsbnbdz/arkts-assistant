@@ -753,7 +753,7 @@
       "调测调优"
     ]
   },
-  "hilog": {
+  "hilog-1": {
     "title": "hilog",
     "headings": [
       "hilog",
@@ -779,7 +779,7 @@
     "path": "",
     "rel_path": "guide/系统/调测调优/调试命令/调试命令-hilog.txt",
     "catalog": "调试命令",
-    "objectId": "hilog",
+    "objectId": "hilog-1",
     "nodeName": "document",
     "keywords": [
       "hilog",
@@ -943,7 +943,7 @@
       "调测调优"
     ]
   },
-  "hitrace": {
+  "hitrace-1": {
     "title": "hitrace",
     "headings": [
       "hitrace",
@@ -969,7 +969,7 @@
     "path": "",
     "rel_path": "guide/系统/调测调优/调试命令/调试命令-hitrace.txt",
     "catalog": "调试命令",
-    "objectId": "hitrace",
+    "objectId": "hitrace-1",
     "nodeName": "document",
     "keywords": [
       "trace",

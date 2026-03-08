@@ -1,0 +1,5 @@
+# [头文件](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/fast-kit-files)
+
+- **[fast_ads_segment_map.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/fast-kit-fast-ads-segment-map-8h)**
+ - **[fast_common_def.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/fast-kit-fast-common-def-8h)**
+ - **[fast_solver_rect_partition.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/fast-kit-fast-solver-rect-partition-8h)**

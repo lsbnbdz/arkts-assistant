@@ -1,0 +1,49 @@
+# [Rcp_ServerAuthentication](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___server_authentication)
+
+## 目录
+- [概述](#section1619874534094053)
+- [汇总](#section1329886710094053)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section1848178577094053)
+  - [authenticationType](#accd28314a33f1ded057b40e33322292a)
+  - [credential](#a01fbe231a7a2302e66e9582d617ef73b)
+
+## 概述
+PhonePC/2in1TabletTVWearable服务器身份验证。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [RemoteCommunication](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| Rcp_Credential credential | 服务器的凭据。 |
+| Rcp_AuthenticationType authenticationType | 服务器的身份验证类型。如果未设置，请与服务器协商。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTVWearable 
+### authenticationType
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_AuthenticationType Rcp_ServerAuthentication::authenticationType
+```
+ **描述**
+
+ 服务器的身份验证类型。如果未设置，请与服务器协商。
+
+ 
+### credential
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_Credential Rcp_ServerAuthentication::credential
+```
+ **描述**
+
+ 服务器的凭据。

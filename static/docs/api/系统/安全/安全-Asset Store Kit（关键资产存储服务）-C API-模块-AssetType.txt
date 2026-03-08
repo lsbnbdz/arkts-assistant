@@ -1,0 +1,14 @@
+# [AssetType](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-assettype)
+
+## 概述
+PhonePC/2in1TabletTVWearable提供关键资产存储服务中通用的枚举值、数据结构和错误码。
+
+ **起始版本：** 11
+
+ 
+## 文件汇总
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| asset_type.h | 定义关键资产存储服务中通用的枚举值、数据结构和错误码。 |

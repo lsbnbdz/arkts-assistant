@@ -1,0 +1,19 @@
+# [NetConnection](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-netconnection)
+
+## 目录
+- [概述](#概述)
+- [文件汇总](#文件汇总)
+
+## 概述
+PhonePC/2in1TabletTVWearable为网络管理数据网络连接模块提供C接口。
+
+ **起始版本：** 11
+
+ 
+## 文件汇总
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| net_connection.h | 为网络管理数据网络连接模块提供C接口。 |
+| net_connection_type.h | 为网络管理数据网络连接模块提供C接口。 |

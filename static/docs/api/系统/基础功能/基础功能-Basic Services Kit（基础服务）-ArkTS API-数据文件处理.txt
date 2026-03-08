@@ -1,0 +1,9 @@
+# [数据文件处理](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/data-file-processing-arkts)
+
+- **[@ohos.app.ability.PrintExtensionAbility (打印扩展能力)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-app-ability-printextensionability)**
+ - **[@ohos.pasteboard (剪贴板)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-pasteboard)**
+ - **[@ohos.print (打印)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-print)**
+ - **[@ohos.scan (扫描)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-scan)**
+ - **[@ohos.request (上传下载)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-request)**
+ - **[@ohos.request.cacheDownload (缓存下载)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-request-cachedownload)**
+ - **[@ohos.zlib (Zip模块)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-zlib)**

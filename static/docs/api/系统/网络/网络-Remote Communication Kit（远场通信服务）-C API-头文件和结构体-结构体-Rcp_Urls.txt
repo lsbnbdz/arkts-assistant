@@ -1,0 +1,49 @@
+# [Rcp_Urls](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___urls)
+
+## 目录
+- [概述](#section969508747094053)
+- [汇总](#section1844481277094053)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section1052827790094053)
+  - [next](#ab15dafafb47202da262f9bbb2f1c23bd)
+  - [url](#affd57b9b241b419c449bd85b6e881be2)
+
+## 概述
+PhonePC/2in1TabletTVWearableURLs，用于确定主机是否正在使用代理。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [RemoteCommunication](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| const char * url | 匹配的URL。 |
+| struct Rcp_Urls * next | 链式存储。指向下一个Rcp_Urls的指针。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTVWearable 
+### next
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+struct Rcp_Urls* Rcp_Urls::next
+```
+ **描述**
+
+ 链式存储。指向下一个[Rcp_Urls](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___urls)的指针。
+
+ 
+### url
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+const char* Rcp_Urls::url
+```
+ **描述**
+
+ 匹配的URL。

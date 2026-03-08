@@ -1,0 +1,30 @@
+# [AuthenticationExtensionsClientOutputs](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_authentication_extensions_client_outputs)
+
+## 概述
+PhonePC/2in1Tablet身份认证扩展输出。
+
+ **起始版本：** 6.0.0(20)
+
+ **相关模块：** [FIDO2](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/passkey)
+
+ 
+## 汇总
+PhonePC/2in1Tablet 
+### 成员变量
+ PhonePC/2in1Tablet展开
+| |
+| |
+| |
+| char * placeholder | 占位符，表示返回的JSON消息中包含key clientExtensionResults。默认返回NULL。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1Tablet 
+### placeholder
+PhonePC/2in1Tablet收起自动换行深色代码主题复制
+```
+char* AuthenticationExtensionsClientOutputs::placeholder
+```
+ **描述**
+
+ 占位符，表示返回的JSON消息中包含"clientExtensionResults"这个key值。总是返回NULL。

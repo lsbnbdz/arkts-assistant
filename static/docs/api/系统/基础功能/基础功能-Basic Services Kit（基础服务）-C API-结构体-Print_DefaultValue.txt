@@ -1,0 +1,40 @@
+# [Print_DefaultValue](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-print-print-defaultvalue)
+
+## 目录
+- [概述](#概述)
+- [汇总](#汇总)
+  - [成员变量](#成员变量)
+
+收起自动换行深色代码主题复制
+```
+typedef struct {...} Print_DefaultValue
+```
+ 
+## 概述
+PhonePC/2in1Tablet表示当前属性。
+
+ **起始版本：** 12
+
+ **相关模块：** [OH_Print](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-print)
+
+ **所在头文件：** [ohprint.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-ohprint-h)
+
+ 
+## 汇总
+PhonePC/2in1Tablet 
+### 成员变量
+ PhonePC/2in1Tablet展开
+| |
+| |
+| |
+| Print_ColorMode defaultColorMode | 默认色彩模式。 |
+| Print_DuplexMode defaultDuplexMode | 默认双面模式。 |
+| char *defaultMediaType | 默认介质类型。 |
+| char *defaultPageSizeId | 默认纸张尺寸 ID。 |
+| Print_Margin defaultMargin | 默认边距。 |
+| char *defaultPaperSource | 默认纸张来源。 |
+| Print_Quality defaultPrintQuality | 默认打印质量。 |
+| uint32_t defaultCopies | 默认份数。 |
+| Print_Resolution defaultResolution | 默认打印机分辨率。 |
+| Print_OrientationMode defaultOrientation | 默认方向。 |
+| char *otherDefaultValues | JSON 格式的其他默认值。 |

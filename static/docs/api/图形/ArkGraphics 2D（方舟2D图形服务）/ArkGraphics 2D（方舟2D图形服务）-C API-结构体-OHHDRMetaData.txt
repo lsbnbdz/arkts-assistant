@@ -1,0 +1,33 @@
+# [OHHDRMetaData](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-nativewindow-ohhdrmetadata)
+
+## 目录
+- [概述](#概述)
+- [汇总](#汇总)
+  - [成员变量](#成员变量)
+
+收起自动换行深色代码主题复制
+```
+typedef struct {...} OHHDRMetaData
+```
+ 
+## 概述
+PhonePC/2in1TabletTVWearableHDR元数据结构体定义。
+
+ **起始版本：** 9
+
+ **废弃版本：** 10
+
+ **相关模块：** [NativeWindow](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-nativewindow)
+
+ **所在头文件：** [external_window.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-external-window-h)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| OHHDRMetadataKey key | HDR元数据关键字。 |
+| float value | 关键字对应的值。 |

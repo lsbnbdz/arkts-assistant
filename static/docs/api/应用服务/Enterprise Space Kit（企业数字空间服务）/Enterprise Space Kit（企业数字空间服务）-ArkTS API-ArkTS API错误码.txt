@@ -1,0 +1,160 @@
+# [ArkTS API错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/enterprisespace-error-code)
+
+## 目录
+- [1020300001 系统服务异常](#zh-cn_topic_0000002020017417_section264120318115)
+- [1020300002 请求参数无效](#section1596993714592)
+- [1020400001 系统服务异常](#section12151148241)
+- [1020400002 请求参数无效](#section13844114920276)
+- [1020400003 工作空间无效](#section134751310289)
+- [1020400005 配置信息未设置](#section890005655714)
+- [1020400006 SA进程异常退出，导致连接中断](#section075131464816)
+- [1020400007 企业空间未开启](#section16939612144817)
+
+说明以下仅介绍本模块特有错误码，通用错误码请参考[通用错误码说明文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-universal)。若您的问题仍无法解决，请通过[在线提单](https://developer.huawei.com/consumer/cn/support/feedback/#/)提交问题，华为支持人员会及时处理。
+
+ 
+## 1020300001 系统服务异常
+PC/2in1**错误信息**
+
+ System service exception.
+
+ **错误描述**
+
+ 系统服务异常。
+
+ **可能原因**
+
+ 无效空间ID，或者未知文件处理类型。
+
+ **处理步骤**
+
+ 尝试重试操作或请通过[在线提单](https://developer.huawei.com/consumer/cn/support/feedback/#/)提交问题。
+
+ 
+## 1020300002 请求参数无效
+PC/2in1**错误信息**
+
+ Parameter error.
+
+ **错误描述**
+
+ 请求参数无效。
+
+ **可能原因**
+
+ 必填参数为空或者参数类型错误。
+
+ **处理步骤**
+
+ 请确认参数符合要求。
+
+ 
+## 1020400001 系统服务异常
+PC/2in1**错误信息**
+
+ System service exception.
+
+ **错误描述**
+
+ 系统服务异常。
+
+ **可能原因**
+
+ 系统服务繁忙，或者网络异常。
+
+ **处理步骤**
+
+ 尝试重试操作或请通过[在线提单](https://developer.huawei.com/consumer/cn/support/feedback/#/)提交问题。
+
+ 
+## 1020400002 请求参数无效
+PC/2in1**错误信息**
+
+ Parameter error.
+
+ **错误描述**
+
+ 请求参数无效。
+
+ **可能原因**
+
+ 必填参数为空或者参数类型错误。
+
+ **处理步骤**
+
+ 请确认参数符合要求。
+
+ 
+## 1020400003 工作空间无效
+PC/2in1**错误信息**
+
+ Invalid workspace.
+
+ **错误描述**
+
+ 工作空间无效。
+
+ **可能原因**
+
+ 1. 工作空间不存在。
+2. 工作空间已存在。
+3. 工作空间类型不支持。
+4. 工作空间数量已达限制。
+
+ **处理步骤**
+
+ 请按照[WorkspaceInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/enterprisespace-spacemanager#section1528202625516)确认工作空间信息符合要求。
+
+ 
+## 1020400005 配置信息未设置
+PC/2in1**错误信息**
+
+ Configuration not set.
+
+ **错误描述**
+
+ 配置信息未设置。
+
+ **可能原因**
+
+ 查询配置信息时，配置信息未设置。
+
+ **处理步骤**
+
+ 确认配置信息已设置。
+
+ 
+## 1020400006 SA进程异常退出，导致连接中断
+PC/2in1**错误信息**
+
+ Session disconnected.
+
+ **错误描述**
+
+ SA进程异常退出，导致连接中断。
+
+ **可能原因**
+
+ 当存在应用订阅了空间事件时，服务进程异常退出。
+
+ **处理步骤**
+
+ 应用重新订阅空间相关事件。
+
+ 
+## 1020400007 企业空间未开启
+PC/2in1**错误信息**
+
+ Enterprise workspace not enabled.
+
+ **错误描述**
+
+ 企业空间未开启。
+
+ **可能原因**
+
+ 企业管理员未使能企业空间功能。
+
+ **处理步骤**
+
+ 企业管理员使能企业空间功能。

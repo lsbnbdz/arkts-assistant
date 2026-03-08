@@ -1,0 +1,10 @@
+# [头文件](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/network-headerfile)
+
+- **[net_connection.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-net-connection-h)**
+ - **[net_connection_type.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-net-connection-type-h)**
+ - **[net_ssl_c.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-net-ssl-c-h)**
+ - **[net_ssl_c_type.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-net-ssl-c-type-h)**
+ - **[net_websocket.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-net-websocket-h)**
+ - **[net_websocket_type.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-net-websocket-type-h)**
+ - **[net_http.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-net-http-h)**
+ - **[net_http_type.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-net-http-type-h)**

@@ -1,0 +1,53 @@
+# [Rcp_Interceptor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___interceptor)
+
+## 目录
+- [概述](#section757445813094052)
+- [汇总](#section1312181739094052)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section1902282230094052)
+  - [intercept](#a479e39838d2b1c2792ee0152d2735cf6)
+
+## 概述
+PhonePC/2in1TabletTVWearable异步拦截器。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [RemoteCommunication](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| uint32_t(* intercept )(Rcp_Request *request, const Rcp_RequestHandler *next, const Rcp_ResponseCallbackObject *responseCallback) | 指向异步拦截器函数的指针。用户若需要使用拦截器，需实现该函数。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTVWearable 
+### intercept
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+uint32_t(* Rcp_Interceptor::intercept) (Rcp_Request *request, const Rcp_RequestHandler *next, const Rcp_ResponseCallbackObject *responseCallback)
+```
+ **描述**
+
+ 指向异步拦截器函数的指针。用户若需要使用拦截器，需实现该函数。
+
+ **起始版本：** 5.0.0(12)
+
+ **参数:**
+
+ 展开
+| |
+| |
+| |
+| request | 指向Rcp_Request的指针。 |
+| next | 指向下一个异步处理器的指针Rcp_RequestHandler。 |
+| responseCallback | 指向Rcp_ResponseCallbackObject的指针。 |
+
+ **返回：**
+
+ uint32_t 返回表示拦截器的返回值。

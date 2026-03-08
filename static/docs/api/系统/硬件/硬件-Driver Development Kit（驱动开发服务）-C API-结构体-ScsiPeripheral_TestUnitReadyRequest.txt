@@ -1,0 +1,31 @@
+# [ScsiPeripheral_TestUnitReadyRequest](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/iperipheralddk-scsiperipheral-testunitreadyrequest)
+
+## 目录
+- [概述](#概述)
+- [汇总](#汇总)
+  - [成员变量](#成员变量)
+
+收起自动换行深色代码主题复制
+```
+typedef struct ScsiPeripheral_TestUnitReadyRequest {...} ScsiPeripheral_TestUnitReadyRequest
+```
+ 
+## 概述
+PC/2in1命令（test unit ready）的请求结构体。
+
+ **起始版本：** 18
+
+ **相关模块：** [SCSIPeripheralDDK](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-scsiperipheralddk)
+
+ **所在头文件：** [scsi_peripheral_types.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-scsi-peripheral-types-h)
+
+ 
+## 汇总
+PC/2in1 
+### 成员变量
+ PC/2in1展开
+| |
+| |
+| |
+| uint8_t control | Control字段，用于指定一些控制信息。 |
+| uint32_t timeout | 超时时间(单位: 毫秒)。 |

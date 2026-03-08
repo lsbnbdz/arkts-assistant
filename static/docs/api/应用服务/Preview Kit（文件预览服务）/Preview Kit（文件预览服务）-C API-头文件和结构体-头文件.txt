@@ -1,0 +1,4 @@
+# [头文件](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/openfileboost-files)
+
+- **[open_file_boost.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/openfileboost-open__file__boost_8h)**
+ - **[preview_kit.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/openfileboost-preview__kit_8h)**

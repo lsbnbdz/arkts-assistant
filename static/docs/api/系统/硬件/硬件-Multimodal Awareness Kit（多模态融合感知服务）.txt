@@ -1,0 +1,4 @@
+# [Multimodal Awareness Kit（多模态融合感知服务）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/multimodal-awareness-api)
+
+- **[ArkTS API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/multimodal-awareness-arkts)**
+ - **[错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ultimodal-awareness-arkts-errcode)**

@@ -1,0 +1,29 @@
+# [TimeGuardExtensionContext（屏幕时间守护扩展Context）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/screentimeguard-timeguardextensioncontext)
+
+## 目录
+- [导入模块](#section176341257121218)
+- [TimeGuardExtensionContext](#section4636115714125)
+
+TimeGuardExtensionContext是TimeGuardExtensionAbility的上下文环境，继承自[ExtensionContext](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-inner-application-extensioncontext)。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **系统能力：**SystemCapability.ScreenTimeGuard.GuardService
+
+ **起始版本：**6.0.0(20)
+
+ 
+## 导入模块
+PhoneTablet收起自动换行深色代码主题复制
+```
+import { TimeGuardExtensionContext } from '@kit.ScreenTimeGuardKit';
+```
+ 
+## TimeGuardExtensionContext
+PhoneTablet**模型约束：**此接口仅可在Stage模型下使用。
+
+ **系统能力：**SystemCapability.ScreenTimeGuard.GuardService
+
+ **起始版本：**6.0.0(20)
+
+ 本类继承自[ExtensionContext](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-inner-application-extensioncontext)，未新增内容。

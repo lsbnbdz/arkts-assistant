@@ -1,0 +1,59 @@
+# [oh_pasteboard_err_code.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-pasteboard-err-code-h)
+
+## 目录
+- [概述](#概述)
+- [汇总](#汇总)
+  - [枚举](#枚举)
+- [枚举类型说明](#枚举类型说明)
+  - [PASTEBOARD_ErrCode](#pasteboard_errcode)
+
+## 概述
+PhonePC/2in1TabletTVWearable声明剪贴板框架错误码信息。
+
+ **引用文件：** <database/pasteboard/oh_pasteboard_err_code.h>
+
+ **库：** libpasteboard.so
+
+ **系统能力：** SystemCapability.MiscServices.Pasteboard
+
+ **起始版本：** 13
+
+ **相关模块：** [Pasteboard](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-pasteboard)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 枚举
+ PhonePC/2in1TabletTVWearable展开
+| 名称 | typedef关键字 | 描述 |
+| --- | --- | --- |
+| PASTEBOARD_ErrCode | PASTEBOARD_ErrCode | 错误码信息。 |
+
+ 
+## 枚举类型说明
+PhonePC/2in1TabletTVWearable 
+### PASTEBOARD_ErrCode
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+enum PASTEBOARD_ErrCode
+```
+ **描述：**
+
+ 错误码信息。
+
+ **起始版本：** 13
+
+ 展开
+| |
+| |
+| |
+| ERR_OK = 0 | 执行成功。 |
+| ERR_PERMISSION_ERROR = 201 | 权限校验失败。 |
+| ERR_INVALID_PARAMETER = 401 | 非法参数。 |
+| ERR_DEVICE_NOT_SUPPORTED = 801 | 设备能力不支持。 |
+| ERR_INNER_ERROR = 12900000 | 内部错误。 |
+| ERR_BUSY = 12900003 | 系统忙。 |
+| ERR_PASTEBOARD_COPY_FILE_ERROR = 12900007 | 文件拷贝失败。 起始版本: 15 |
+| ERR_PASTEBOARD_PROGRESS_START_ERROR = 12900008 | 拉起进度显示失败。 起始版本: 15 |
+| ERR_PASTEBOARD_PROGRESS_ABNORMAL = 12900009 | 进度显示异常。 起始版本: 15 |
+| ERR_PASTEBOARD_GET_DATA_FAILED = 12900010 | 获取剪贴数据失败。 起始版本: 15 |

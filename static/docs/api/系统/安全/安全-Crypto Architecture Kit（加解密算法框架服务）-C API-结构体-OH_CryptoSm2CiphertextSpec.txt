@@ -1,0 +1,15 @@
+# [OH_CryptoSm2CiphertextSpec](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/api-cryptoasymcipherapi-oh-cryptosm2ciphertextspec)
+
+收起自动换行深色代码主题复制
+```
+typedef struct OH_CryptoSm2CiphertextSpec OH_CryptoSm2CiphertextSpec
+```
+ 
+## 概述
+PhonePC/2in1TabletTVWearable定义SM2密文规格结构。
+
+ **起始版本：** 20
+
+ **相关模块：** [CryptoAsymCipherApi](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-cryptoasymcipherapi)
+
+ **所在头文件：** [crypto_asym_cipher.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-crypto-asym-cipher-h)

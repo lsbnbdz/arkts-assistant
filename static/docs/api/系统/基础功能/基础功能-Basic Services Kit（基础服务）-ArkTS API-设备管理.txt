@@ -1,0 +1,9 @@
+# [设备管理](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/device-management-arkts)
+
+- **[@ohos.batteryInfo (电量信息)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-battery-info)**
+ - **[@ohos.deviceInfo (设备信息)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-device-info)**
+ - **[@ohos.power (系统电源管理)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-power)**
+ - **[@ohos.runningLock (RunningLock锁)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-runninglock)**
+ - **[@ohos.thermal (热管理)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-thermal)**
+ - **[@ohos.usbManager (USB管理)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-usbmanager)**
+ - **[@ohos.usbManager.serial (串口管理)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-serialmanager)**

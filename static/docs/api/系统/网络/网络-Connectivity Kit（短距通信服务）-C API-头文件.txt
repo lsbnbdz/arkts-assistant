@@ -1,0 +1,4 @@
+# [头文件](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/connectivity-headerfile)
+
+- **[oh_bluetooth.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-bluetooth-h)**
+ - **[oh_wifi.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-wifi-h)**

@@ -1,0 +1,49 @@
+# [Rcp_InterceptorArray](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___interceptor_array)
+
+## 目录
+- [概述](#section786415005094052)
+- [汇总](#section1237884973094052)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section2017023577094052)
+  - [interceptors](#afad433183a8947b6f582ecaf831c117c)
+  - [size](#a9cdf6bf32e32408cd812e669f21848b0)
+
+## 概述
+PhonePC/2in1TabletTVWearable异步拦截器数组。
+
+ **起始版本：** 5.0.0(12)
+
+ **相关模块：** [RemoteCommunication](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-overview)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| Rcp_Interceptor * interceptors | 异步拦截器数组。 Rcp_Interceptor[]。 |
+| int size | 数组大小。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1TabletTVWearable 
+### interceptors
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+Rcp_Interceptor* Rcp_InterceptorArray::interceptors
+```
+ **描述**
+
+ 异步拦截器数组。 [Rcp_Interceptor](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_rcp___interceptor)[]。
+
+ 
+### size
+PhonePC/2in1TabletTVWearable收起自动换行深色代码主题复制
+```
+int Rcp_InterceptorArray::size
+```
+ **描述**
+
+ 数组大小。

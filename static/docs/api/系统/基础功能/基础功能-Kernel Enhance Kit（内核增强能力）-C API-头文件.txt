@@ -1,0 +1,3 @@
+# [头文件](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/kernel-headerfile)
+
+- **[qos.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-qos-h)**

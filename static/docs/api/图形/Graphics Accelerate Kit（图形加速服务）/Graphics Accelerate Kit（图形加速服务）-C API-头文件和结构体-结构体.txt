@@ -1,0 +1,24 @@
+# [结构体](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/annotated)
+
+- **[ABR_CameraData](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_a_b_r___camera_data)**
+ - **[ABR_Vector3](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_a_b_r___vector3)**
+ - **[FG_AlgorithmModeInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_g___algorithm_mode_info)**
+ - **[FG_ContextDescription_VK](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_g___context_description___v_k)**
+ - **[FG_Dimension2D](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_g___dimension2_d)**
+ - **[FG_DispatchDescription_GLES](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_g___dispatch_description___g_l_e_s)**
+ - **[FG_DispatchDescription_VK](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_g___dispatch_description___v_k)**
+ - **[FG_ImageFormat_VK](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_g___image_format___v_k)**
+ - **[FG_ImageInfo_VK](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_g___image_info___v_k)**
+ - **[FG_ImageSync_VK](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_g___image_sync___v_k)**
+ - **[FG_Mat4x4](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_g___mat4x4)**
+ - **[FG_ResolutionInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_g___resolution_info)**
+ - **[FG_Vec3D](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_g___vec3_d)**
+ - **[FG_PerFrameExtendedCameraInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_g___per_frame_extended_camera_info)**
+ - **[FG_IntegrationInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_f_g___intergration_info)**
+ - **[OpenGTX_ConfigDescription](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_open_g_t_x___config_description)**
+ - **[OpenGTX_FrameRenderInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_open_g_t_x___frame_render_info)**
+ - **[OpenGTX_GameSceneInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_open_g_t_x___game_scene_info)**
+ - **[OpenGTX_NetworkInfo](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_open_g_t_x___network_info)**
+ - **[OpenGTX_NetworkLatency](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_open_g_t_x___network_latency)**
+ - **[OpenGTX_ResolutionValue](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_open_g_t_x___resolution_value)**
+ - **[OpenGTX_Vector3](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/_open_g_t_x___vector3)**

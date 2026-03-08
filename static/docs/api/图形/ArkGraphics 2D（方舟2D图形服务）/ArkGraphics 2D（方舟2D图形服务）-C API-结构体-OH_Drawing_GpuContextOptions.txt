@@ -1,0 +1,32 @@
+# [OH_Drawing_GpuContextOptions](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-drawing-oh-drawing-gpucontextoptions)
+
+## 目录
+- [概述](#概述)
+- [汇总](#汇总)
+  - [成员变量](#成员变量)
+
+收起自动换行深色代码主题复制
+```
+typedef struct {...} OH_Drawing_GpuContextOptions
+```
+ 
+## 概述
+PhonePC/2in1TabletTVWearable定义有关图形处理器上下文的选项。
+
+ **起始版本：** 12
+
+ **废弃版本：** 18
+
+ **相关模块：** [Drawing](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-drawing)
+
+ **所在头文件：** [drawing_gpu_context.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-drawing-gpu-context-h)
+
+ 
+## 汇总
+PhonePC/2in1TabletTVWearable 
+### 成员变量
+ PhonePC/2in1TabletTVWearable展开
+| |
+| |
+| |
+| bool allowPathMaskCaching | 用于控制是否启用路径蒙版缓存，如果为true，则允许缓存路径蒙版纹理，如果为false，则不允许。 |

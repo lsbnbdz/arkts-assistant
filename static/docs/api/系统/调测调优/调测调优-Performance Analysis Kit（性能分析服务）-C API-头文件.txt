@@ -1,0 +1,11 @@
+# [头文件](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/performance-analysis-headerfile)
+
+- **[hiappevent.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hiappevent-h)**
+ - **[hiappevent_cfg.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hiappevent-cfg-h)**
+ - **[hiappevent_event.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hiappevent-event-h)**
+ - **[hiappevent_param.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hiappevent-param-h)**
+ - **[hicollie.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hicollie-h)**
+ - **[hidebug.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hidebug-h)**
+ - **[hidebug_type.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hidebug-type-h)**
+ - **[log.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-log-h)**
+ - **[trace.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-trace-h)**

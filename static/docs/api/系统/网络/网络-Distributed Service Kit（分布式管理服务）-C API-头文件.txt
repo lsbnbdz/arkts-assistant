@@ -1,0 +1,4 @@
+# [头文件](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/distributed-service-headerfile)
+
+- **[oh_device_manager.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-device-manager-h)**
+ - **[oh_device_manager_err_code.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-device-manager-err-code-h)**

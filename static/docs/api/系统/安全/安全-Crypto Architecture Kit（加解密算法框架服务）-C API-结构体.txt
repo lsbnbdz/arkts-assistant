@@ -1,0 +1,26 @@
+# [结构体](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/crypto-architecture-struct)
+
+- **[Crypto_DataBlob](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-cryptocommonapi-crypto-datablob)**
+ - **[OH_CryptoAsymCipher](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-cryptoasymcipherapi-oh-cryptoasymcipher)**
+ - **[OH_CryptoSm2CiphertextSpec](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/api-cryptoasymcipherapi-oh-cryptosm2ciphertextspec)**
+ - **[OH_CryptoKeyPair](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-cryptoasymkeyapi-oh-cryptokeypair)**
+ - **[OH_CryptoPubKey](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-cryptoasymkeyapi-oh-cryptopubkey)**
+ - **[OH_CryptoPrivKey](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-cryptoasymkeyapi-oh-cryptoprivkey)**
+ - **[OH_CryptoAsymKeyGenerator](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-cryptoasymkeyapi-oh-cryptoasymkeygenerator)**
+ - **[OH_CryptoPrivKeyEncodingParams](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/pi-cryptoasymkeyapi-oh-cryptoprivkeyencodingparams)**
+ - **[OH_CryptoAsymKeySpec](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-cryptoasymkeyapi-oh-cryptoasymkeyspec)**
+ - **[OH_CryptoAsymKeyGeneratorWithSpec](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/cryptoasymkeyapi-oh-cryptoasymkeygeneratorwithspec)**
+ - **[OH_CryptoEcPoint](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-cryptoasymkeyapi-oh-cryptoecpoint)**
+ - **[OH_CryptoDigest](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-cryptodigestapi-oh-cryptodigest)**
+ - **[OH_CryptoKdf](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-cryptokdfapi-oh-cryptokdf)**
+ - **[OH_CryptoKdfParams](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-cryptokdfapi-oh-cryptokdfparams)**
+ - **[OH_CryptoKeyAgreement](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-cryptokeyagreementapi-oh-cryptokeyagreement)**
+ - **[OH_CryptoMac](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-cryptomacapi-oh-cryptomac)**
+ - **[OH_CryptoRand](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-cryptorandapi-oh-cryptorand)**
+ - **[OH_CryptoVerify](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-cryptosignatureapi-oh-cryptoverify)**
+ - **[OH_CryptoSign](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-cryptosignatureapi-oh-cryptosign)**
+ - **[OH_CryptoEccSignatureSpec](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-cryptosignatureapi-oh-cryptoeccsignaturespec)**
+ - **[OH_CryptoSymCipher](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-cryptosymcipherapi-oh-cryptosymcipher)**
+ - **[OH_CryptoSymCipherParams](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-cryptosymcipherapi-oh-cryptosymcipherparams)**
+ - **[OH_CryptoSymKey](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-cryptosymkeyapi-oh-cryptosymkey)**
+ - **[OH_CryptoSymKeyGenerator](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-cryptosymkeyapi-oh-cryptosymkeygenerator)**

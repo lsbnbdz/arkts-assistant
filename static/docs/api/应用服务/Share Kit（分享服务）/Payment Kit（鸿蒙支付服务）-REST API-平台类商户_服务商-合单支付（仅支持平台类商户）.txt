@@ -1,0 +1,9 @@
+# [合单支付（仅支持平台类商户）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-partner-combined-pay)
+
+- **[预下单](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-partner-combined-app-prepay)**
+ - **[关闭合单支付订单](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-partner-combined-orders-close)**
+ - **[合单支付结果回调通知](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-partner-combined-notify)**
+ - **[查询合单支付订单](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-partner-combined-query-order)**
+ - **[申请退款](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-partner-combined-refund)**
+ - **[退款结果回调通知](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-partner-combined-refund-notify)**
+ - **[查询退款订单](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/payment-partner-combined-query-refund)**

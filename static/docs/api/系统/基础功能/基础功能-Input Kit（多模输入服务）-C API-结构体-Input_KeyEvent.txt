@@ -1,0 +1,27 @@
+# [Input_KeyEvent](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-input-input-keyevent)
+
+## 目录
+- [概述](#概述)
+
+收起自动换行深色代码主题复制
+```
+typedef struct Input_KeyEvent Input_KeyEvent
+```
+ 
+## 概述
+PhonePC/2in1TabletTVWearable按键事件对象。
+
+ **起始版本：** 12
+
+ **相关模块：** [input](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-input)
+
+ **所在头文件：** [oh_input_manager.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-oh-input-manager-h)
+
+ **相关接口：**
+
+ 展开
+| |
+| |
+| |
+| OH_Input_CreateKeyEvent | 创建按键事件对象。通过调用 OH_Input_DestroyKeyEvent 销毁按键事件对象。 |
+| OH_Input_DestroyKeyEvent | 销毁按键事件对象。 |

@@ -1,0 +1,18 @@
+# [NativeWindow](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-nativewindow-nativewindow)
+
+## 目录
+- [概述](#概述)
+
+收起自动换行深色代码主题复制
+```
+typedef struct NativeWindow OHNativeWindow
+```
+ 
+## 概述
+PhonePC/2in1TabletTVWearable提供对OHNativeWindow的访问功能。
+
+ **起始版本：** 8
+
+ **相关模块：** [NativeWindow](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-nativewindow)
+
+ **所在头文件：** [external_window.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-external-window-h)

@@ -1,0 +1,61 @@
+# [NetworkBoost_DataSpeedAction](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/network-boost-c-struct-data_speed_action)
+
+## 目录
+- [概述](#section1663676774162158)
+- [汇总](#section1914001643162158)
+  - [成员变量](#pub-attribs)
+- [结构体成员变量说明](#section1444837265162158)
+  - [dataSpeedSimpleAction](#a353fd22525c6131a7023e32793279ba1)
+  - [linkDownBandwidth](#a8043821dc58bdee4d152e3d1c4d463e9)
+  - [linkUpBandwidth](#adc2fd85ca090dafbf77344ffe9b0b190)
+
+## 概述
+PhonePC/2in1Tablet发包速率建议。
+
+ **起始版本：** 5.1.0(18)
+
+ **相关模块：** [NetworkBoost](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/network-boost-c-overview)
+
+ 
+## 汇总
+PhonePC/2in1Tablet 
+### 成员变量
+ PhonePC/2in1Tablet展开
+| |
+| |
+| |
+| NetworkBoost_DataSpeedSimpleAction dataSpeedSimpleAction | 应用发包策略的简单建议。 |
+| uint64_t linkUpBandwidth | 上行带宽。 |
+| uint64_t linkDownBandwidth | 下行带宽。 |
+
+ 
+## 结构体成员变量说明
+PhonePC/2in1Tablet 
+### dataSpeedSimpleAction
+PhonePC/2in1Tablet收起自动换行深色代码主题复制
+```
+NetworkBoost_DataSpeedSimpleAction NetworkBoost_DataSpeedAction::dataSpeedSimpleAction
+```
+ **描述**
+
+ 应用发包策略的简单建议。
+
+ 
+### linkDownBandwidth
+PhonePC/2in1Tablet收起自动换行深色代码主题复制
+```
+uint64_t NetworkBoost_DataSpeedAction::linkDownBandwidth
+```
+ **描述**
+
+ 下行带宽。
+
+ 
+### linkUpBandwidth
+PhonePC/2in1Tablet收起自动换行深色代码主题复制
+```
+uint64_t NetworkBoost_DataSpeedAction::linkUpBandwidth
+```
+ **描述**
+
+ 上行带宽。

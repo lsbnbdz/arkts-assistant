@@ -1,0 +1,171 @@
+{
+  "contacts-kit-arkts-api-ohos-contact": {
+    "title": "@ohos.contact (联系人)",
+    "headings": [
+      "@ohos.contact (联系人)",
+      "目录",
+      "导入模块",
+      "contact.addContact10+",
+      "contact.addContact(deprecated)",
+      "contact.addContact10+",
+      "contact.addContact(deprecated)",
+      "contact.deleteContact10+",
+      "contact.deleteContact(deprecated)",
+      "contact.deleteContact10+",
+      "contact.deleteContact(deprecated)",
+      "contact.updateContact10+",
+      "contact.updateContact(deprecated)",
+      "contact.updateContact10+",
+      "contact.updateContact(deprecated)"
+    ],
+    "preview": "@ohos.contact (联系人) 本模块提供联系人管理能力，包括添加联系人、删除联系人、更新联系人等。 说明 本模块首批接口从API version 7开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。 导入模块 PhonePC/2in1TabletWearable收起自动换行深色代码主题复制 contact.addContact10+ PhonePC/2in1TabletWearableaddContact(context: Context, contact: Contact, callback: AsyncCallback<number>): void 添加联系人。",
+    "char_count": 160295,
+    "image_count": 0,
+    "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-contact",
+    "path": "",
+    "rel_path": "api/应用服务/Contacts Kit（联系人服务）/Contacts Kit（联系人服务）-ArkTS API-@ohos.contact (联系人).txt",
+    "catalog": "Contacts Kit（联系人服务）",
+    "objectId": "contacts-kit-arkts-api-ohos-contact",
+    "nodeName": "document",
+    "keywords": [
+      "contact",
+      "@ohos.contact",
+      "Contact",
+      "ohos",
+      "deprecated",
+      "联系人",
+      "My",
+      "Card",
+      "update",
+      "query",
+      "add",
+      "callback",
+      "Async",
+      "Callback",
+      "delete",
+      "Contacts",
+      "Kit",
+      "联系人服务",
+      "应用服务"
+    ]
+  },
+  "contacts-kit": {
+    "title": "错误码",
+    "headings": [
+      "错误码"
+    ],
+    "preview": "错误码 - **Contacts错误码**",
+    "char_count": 204,
+    "image_count": 0,
+    "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/contacts-arkts-errcode",
+    "path": "",
+    "rel_path": "api/应用服务/Contacts Kit（联系人服务）/Contacts Kit（联系人服务）-错误码.txt",
+    "catalog": "Contacts Kit（联系人服务）",
+    "objectId": "contacts-kit",
+    "nodeName": "document",
+    "keywords": [
+      "错误码",
+      "Contacts",
+      "references",
+      "contacts",
+      "errcode",
+      "errorcode",
+      "Kit",
+      "联系人服务",
+      "应用服务"
+    ]
+  },
+  "contacts-kit-arkts-api": {
+    "title": "ArkTS API",
+    "headings": [
+      "ArkTS API"
+    ],
+    "preview": "ArkTS API - **@ohos.contact (联系人)**",
+    "char_count": 207,
+    "image_count": 0,
+    "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/contacts-arkts",
+    "path": "",
+    "rel_path": "api/应用服务/Contacts Kit（联系人服务）/Contacts Kit（联系人服务）-ArkTS API.txt",
+    "catalog": "Contacts Kit（联系人服务）",
+    "objectId": "contacts-kit-arkts-api",
+    "nodeName": "document",
+    "keywords": [
+      "@ohos.contact",
+      "ohos",
+      "contact",
+      "references",
+      "联系人",
+      "contacts",
+      "Contacts",
+      "Kit",
+      "联系人服务",
+      "应用服务"
+    ]
+  },
+  "contacts-kit-1": {
+    "title": "Contacts Kit（联系人服务）",
+    "headings": [
+      "Contacts Kit（联系人服务）"
+    ],
+    "preview": "Contacts Kit（联系人服务） - **ArkTS API** - **错误码**",
+    "char_count": 307,
+    "image_count": 0,
+    "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/contacts-api",
+    "path": "",
+    "rel_path": "api/应用服务/Contacts Kit（联系人服务）/Contacts Kit（联系人服务）.txt",
+    "catalog": "Contacts Kit（联系人服务）",
+    "objectId": "contacts-kit-1",
+    "nodeName": "document",
+    "keywords": [
+      "Contacts",
+      "Kit",
+      "联系人服务",
+      "references",
+      "contacts",
+      "联系人服",
+      "错误码",
+      "errcode",
+      "应用服务"
+    ]
+  },
+  "contacts-kit-contacts": {
+    "title": "Contacts错误码",
+    "headings": [
+      "Contacts错误码",
+      "目录",
+      "16700001 系统内部错误",
+      "16700101 查询数据库失败",
+      "16700102 增删改数据库失败",
+      "16700103 用户取消"
+    ],
+    "preview": "Contacts错误码 说明 以下仅介绍本模块特有错误码，通用错误码请参考通用错误码说明文档。 16700001 系统内部错误 PhonePC/2in1TabletWearable**错误信息** general error. **错误描述** 系统内部错误。 **可能原因** 系统内部处理异常。 **处理步骤** 系统异常，请稍后重试。 16700101 查询数据库失败 PhonePC/2in1Tablet**错误信息** Failed to get value from contacts data. **错误描述** 查询数据库失败。 **可能原因** 数据库操作失败。",
+    "char_count": 1032,
+    "image_count": 0,
+    "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-references/errorcode-contacts",
+    "path": "",
+    "rel_path": "api/应用服务/Contacts Kit（联系人服务）/Contacts Kit（联系人服务）-错误码-Contacts错误码.txt",
+    "catalog": "Contacts Kit（联系人服务）",
+    "objectId": "contacts-kit-contacts",
+    "nodeName": "document",
+    "keywords": [
+      "Contacts",
+      "错误码",
+      "系统内部",
+      "错误",
+      "错误信息",
+      "错误描述",
+      "可能原因",
+      "查询数据",
+      "库失败",
+      "处理步骤",
+      "请稍后重",
+      "用户取消",
+      "contacts",
+      "通用错误",
+      "增删改数",
+      "Kit",
+      "联系人服务",
+      "应用服务"
+    ]
+  }
+}

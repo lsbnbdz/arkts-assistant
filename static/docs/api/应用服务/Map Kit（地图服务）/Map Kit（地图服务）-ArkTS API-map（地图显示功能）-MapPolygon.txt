@@ -1,0 +1,544 @@
+# [MapPolygon](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-mappolygon)
+
+## 目录
+- [导入模块](#section164051883419)
+- [MapPolygon](#section18835114674413)
+  - [getFillColor](#section6924162792520)
+  - [getHoles](#section14515138102717)
+  - [getPoints](#section1190151211275)
+  - [getStrokeColor](#section16491141662720)
+  - [getJointType](#section19481151702716)
+  - [getPatterns](#section106931186277)
+  - [getStrokeWidth](#section1864461915274)
+  - [isClickable](#section3449132511278)
+  - [isGeodesic](#section144371262271)
+  - [setClickable](#section14692444183011)
+  - [setFillColor](#section9819135415321)
+  - [setGeodesic](#section322513263313)
+  - [setHoles](#section117185433314)
+  - [setPoints](#section11826173319)
+  - [setStrokeColor](#section85152819337)
+  - [setJointType](#section7797811173320)
+  - [setPatterns](#section44081312331)
+  - [setStrokeWidth](#section619111145333)
+
+## 导入模块
+PhonePC/2in1TabletWearable收起自动换行深色代码主题复制
+```
+import { map, mapCommon } from '@kit.MapKit';
+```
+ 
+## MapPolygon
+PhonePC/2in1TabletWearable多边形，继承[BaseOverlay](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-baseoverlay)。多边形可以是凸面或凹面，它可以跨越180子午线并且可以具有未填充的孔。在调用map.[MapComponentController](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-mapcomponentcontroller)类的[addPolygon](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/map-map-mapcomponentcontroller#section1825517119280)方法时会返回该类型的实例。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let polygonOptions: mapCommon.MapPolygonOptions = { points: [ { latitude: 31.9844102, longitude: 118.7662 }, { latitude: 31.9844102, longitude: 123.7662 }, { latitude: 36.9844102, longitude: 123.7662 }, { latitude: 36.9844102, longitude: 118.7662 } ]};let mapPolygon = await this.mapController.addPolygon(polygonOptions);
+```
+ 
+### getFillColor
+PhonePC/2in1TabletWearablegetFillColor(): number
+
+ 获取ARGB格式的多边形的填充色值。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| number | ARGB格式的颜色值。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let fillColor: number = mapPolygon.getFillColor();
+```
+ 
+### getHoles
+PhonePC/2in1TabletWearablegetHoles(): Array<Array<mapCommon.LatLng>>
+
+ 获取多边形的空心洞。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| Array> | 多边形的空心洞数组，其中空心洞是LatLng数组。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let holes: Array> = mapPolygon.getHoles();
+```
+ 
+### getPoints
+PhonePC/2in1TabletWearablegetPoints(): Array<mapCommon.LatLng>
+
+ 获取多边形的顶点坐标。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| Array | 多边形的顶点坐标。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let points: Array = mapPolygon.getPoints();
+```
+ 
+### getStrokeColor
+PhonePC/2in1TabletWearablegetStrokeColor(): number
+
+ 获取多边形的边框颜色。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| number | ARGB格式颜色值，默认值为黑色（0xff000000）。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let strokeColor: number = mapPolygon.getStrokeColor();
+```
+ 
+### getJointType
+PhonePC/2in1TabletWearablegetJointType(): mapCommon.JointType
+
+ 获取多边形的顶点样式。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| mapCommon.JointType | 多边形的顶点样式。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let jointType: mapCommon.JointType = mapPolygon.getJointType();
+```
+ 
+### getPatterns
+PhonePC/2in1TabletWearablegetPatterns(): Array<mapCommon.PatternItem>
+
+ 获取多边形的边框样式。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| Array | 多边形的边框样式。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let patterns: Array = mapPolygon.getPatterns();
+```
+ 
+### getStrokeWidth
+PhonePC/2in1TabletWearablegetStrokeWidth(): number
+
+ 获取多边形的边框宽度。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| number | 多边形的边框宽度，单位：px。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let strokeWidth: number = mapPolygon.getStrokeWidth();
+```
+ 
+### isClickable
+PhonePC/2in1TabletWearableisClickable(): boolean
+
+ 获取多边形的可点击性。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| boolean | 多边形的可点击性。 true：可点击false：不可点击 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let clickable: boolean = mapPolygon.isClickable();
+```
+ 
+### isGeodesic
+PhonePC/2in1TabletWearableisGeodesic(): boolean
+
+ 获取多边形的每个线段是否为大地线。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **返回值：**
+
+ 展开
+| |
+| |
+| |
+| boolean | 多边形的每个线段是否为大地线。 true：大地线false：非大地线 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let geodesic: boolean = mapPolygon.isGeodesic();
+```
+ 
+### setClickable
+PhonePC/2in1TabletWearablesetClickable(clickable: boolean): void
+
+ 设置多边形的可点击性。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| clickable | boolean | 是 | 多边形的可点击性，默认是false。 true：可点击false：不可点击 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+mapPolygon.setClickable(true);
+```
+ 
+### setFillColor
+PhonePC/2in1TabletWearablesetFillColor(color: number): void
+
+ 设置多边形的填充色。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| color | number | 是 | ARGB格式颜色值，默认值为0x00000000（透明）。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+mapPolygon.setFillColor(0xff000FFF);
+```
+ 
+### setGeodesic
+PhonePC/2in1TabletWearablesetGeodesic(geodesic: boolean): void
+
+ 设置是否将多边形的每个线段绘制为大地线。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| geodesic | boolean | 是 | 将多边形的每个线段绘制为大地线，默认值为false。 true：每段绘制为大地线false：不是大地线 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+mapPolygon.setGeodesic(true);
+```
+ 
+### setHoles
+PhonePC/2in1TabletWearablesetHoles(holes: Array<Array<mapCommon.LatLng>>): void
+
+ 设置多边形的空心洞。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| holes | Array> | 是 | 空心洞数组，其中空心洞是LatLng数组。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let holes: Array> = [ [ { latitude: 31.98, longitude: 115.76 }, { latitude: 31.98, longitude: 118.76 }, { latitude: 35.98, longitude: 118.76 }, { latitude: 35.98, longitude: 118.76 } ]];mapPolygon.setHoles(holes);
+```
+ 说明当空心洞的坐标贴合多边形边缘时，会导致渲染出现异常，渲染多余的空心区域。
+
+ 
+### setPoints
+PhonePC/2in1TabletWearablesetPoints(points: Array<mapCommon.LatLng>): void
+
+ 重新设置多边形的顶点坐标。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| points | Array | 是 | 顶点坐标数组。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let points: Array = [ { latitude: 31.98, longitude: 115.76 }, { latitude: 31.98, longitude: 118.76 }, { latitude: 35.98, longitude: 118.76 }, { latitude: 35.98, longitude: 118.76 }];mapPolygon.setPoints(points);
+```
+ 
+### setStrokeColor
+PhonePC/2in1TabletWearablesetStrokeColor(color: number): void
+
+ 设置多边形的边框颜色。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| color | number | 是 | ARGB格式颜色值，默认值为黑色（0xff000000）。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+mapPolygon.setStrokeColor(0xff00DB93);
+```
+ 
+### setJointType
+PhonePC/2in1TabletWearablesetJointType(jointType: mapCommon.JointType): void
+
+ 设置多边形的顶点样式。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| jointType | mapCommon.JointType | 是 | 顶点样式，默认值为JointType.DEFAULT。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+mapPolygon.setJointType(mapCommon.JointType.ROUND);
+```
+ 
+### setPatterns
+PhonePC/2in1TabletWearablesetPatterns(patterns: Array<mapCommon.PatternItem>): void
+
+ 设置多边形的边框样式。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| patterns | Array | 是 | PatternItem对象的数组。默认的边框样式为实心。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+let linePatterns: Array = [ { type: mapCommon.PatternItemType.DASH, length: 100 }, { type: mapCommon.PatternItemType.DOT, length: 100 }, { type: mapCommon.PatternItemType.GAP, length: 100 }];mapPolygon.setPatterns(linePatterns);
+```
+ 
+### setStrokeWidth
+PhonePC/2in1TabletWearablesetStrokeWidth(width: number): void
+
+ 设置多边形的边框宽度。
+
+ **模型约束：**此接口仅可在Stage模型下使用。
+
+ **元服务API：**从版本4.1.0(11)开始，该接口支持在元服务中使用。
+
+ **系统能力：**SystemCapability.Map.Core
+
+ **起始版本：**4.1.0(11)
+
+ **参数：**
+
+ 展开
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| width | number | 是 | 边框的宽度，单位：px，默认值为10，取值范围：大于等于0，异常值不处理。 |
+
+ **示例：**
+
+ 收起自动换行深色代码主题复制
+```
+mapPolygon.setStrokeWidth(30);
+```

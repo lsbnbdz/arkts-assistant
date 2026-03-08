@@ -1,0 +1,7 @@
+# [模块](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/driver-development-module)
+
+- **[BaseDdk](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-baseddk)**
+ - **[HidDdk](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-hidddk)**
+ - **[SCSIPeripheralDDK](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-scsiperipheralddk)**
+ - **[UsbDDK](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-usbddk)**
+ - **[USBSerialDdk](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-serialddk)**

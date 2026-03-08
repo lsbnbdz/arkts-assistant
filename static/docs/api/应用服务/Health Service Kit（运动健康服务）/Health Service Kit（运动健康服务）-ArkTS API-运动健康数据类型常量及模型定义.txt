@@ -1,0 +1,8 @@
+# [运动健康数据类型常量及模型定义](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-constants-and-models)
+
+- **[healthDataTypes(运动健康数据类型常量)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-healthdatatypes)**
+ - **[healthFields(运动健康数据字段)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-healthfields)**
+ - **[healthModels(运动健康数据模型)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-healthmodels)**
+ - **[samplePointHelper(采样数据类型常量)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-samplepointhelper)**
+ - **[healthSequenceHelper(健康记录类型常量)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-healthsequencehelper)**
+ - **[exerciseSequenceHelper(锻炼记录类型常量)](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/health-api-exercisedequencehelper)**

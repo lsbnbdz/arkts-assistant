@@ -1,0 +1,31 @@
+# [OH_AI_TensorHandleArray](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-mindspore-oh-ai-tensorhandlearray)
+
+## 目录
+- [概述](#概述)
+- [汇总](#汇总)
+  - [成员变量](#成员变量)
+
+收起自动换行深色代码主题复制
+```
+typedef struct OH_AI_TensorHandleArray {...} OH_AI_TensorHandleArray
+```
+ 
+## 概述
+PhonePC/2in1TabletTV张量数组结构体，用于存储张量数组指针和张量数组长度。
+
+ **起始版本：** 9
+
+ **相关模块：** [MindSpore](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-mindspore)
+
+ **所在头文件：** [model.h](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/capi-model-h)
+
+ 
+## 汇总
+PhonePC/2in1TabletTV 
+### 成员变量
+ PhonePC/2in1TabletTV展开
+| |
+| |
+| |
+| size_t handle_num | 张量数组长度。 |
+| OH_AI_TensorHandle * handle_list | 指向张量数组的指针。 |

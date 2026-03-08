@@ -1,0 +1,4 @@
+# [Mechanic Kit（机械设备管理服务）](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/mechanic-kit-api)
+
+- **[ArkTS API](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/mechanic-arkts)**
+ - **[错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/mechanic-arkts-errcode)**
