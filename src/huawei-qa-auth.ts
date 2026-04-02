@@ -70,13 +70,21 @@ const loadConfig = (): Config => {
  * 保存配置
  */
 const saveConfig = (config: Config): void => {
+  console.error('[huawei-qa-auth] Attempting to save config...');
+  console.error('[huawei-qa-auth] CONFIG_DIR:', CONFIG_DIR);
+  console.error('[huawei-qa-auth] CONFIG_FILE:', CONFIG_FILE);
+
   try {
     if (!fs.existsSync(CONFIG_DIR)) {
+      console.error('[huawei-qa-auth] Creating directory:', CONFIG_DIR);
       fs.mkdirSync(CONFIG_DIR, { recursive: true });
     }
+    console.error('[huawei-qa-auth] Writing file:', CONFIG_FILE);
     fs.writeFileSync(CONFIG_FILE, JSON.stringify(config, null, 2));
+    console.error('[huawei-qa-auth] File written successfully');
   } catch (e) {
     console.error('[huawei-qa-auth] Failed to save config:', e);
+    throw e; // 抛出错误，让调用者知道失败了
   }
 };
 
@@ -90,13 +98,14 @@ export const getCookie = (): string | null => {
 
 /**
  * 设置 Cookie
+ * @returns 配置文件路径
  */
-export const setCookie = (cookie: string): void => {
+export const setCookie = (cookie: string): string => {
   const config = loadConfig();
   config.cookie = cookie;
   config.lastUpdated = new Date().toISOString();
   saveConfig(config);
-  console.error('[huawei-qa-auth] Cookie saved successfully');
+  return CONFIG_FILE;
 };
 
 export const getConfigFilePath = (): string => {
